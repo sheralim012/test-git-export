@@ -1,0 +1,46 @@
+{
+    "course/2021_T1": {
+        "cert_html_view_enabled": true,
+        "discussion_topics": {
+            "General": {
+                "id": "course"
+            }
+        },
+        "display_name": "Test Course 01",
+        "giturl": "https://sheralim012:1ae1e959ecad81b17448c9680dd591d4524f7fe4@github.com/sheralim012/test-git-export.git",
+        "language": "en",
+        "start": "2030-01-01T00:00:00Z",
+        "tabs": [
+            {
+                "course_staff_only": false,
+                "name": "Home",
+                "type": "course_info"
+            },
+            {
+                "course_staff_only": false,
+                "name": "Course",
+                "type": "courseware"
+            },
+            {
+                "course_staff_only": false,
+                "name": "Textbooks",
+                "type": "textbooks"
+            },
+            {
+                "course_staff_only": false,
+                "name": "Discussion",
+                "type": "discussion"
+            },
+            {
+                "course_staff_only": false,
+                "name": "Wiki",
+                "type": "wiki"
+            },
+            {
+                "course_staff_only": false,
+                "name": "Progress",
+                "type": "progress"
+            }
+        ]
+    }
+}

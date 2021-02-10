@@ -41,6 +41,12 @@
                 "name": "Progress",
                 "type": "progress"
             }
-        ]
+        ],
+        "xml_attributes": {
+            "filename": [
+                "course/2021_T1.xml",
+                "course/2021_T1.xml"
+            ]
+        }
     }
 }

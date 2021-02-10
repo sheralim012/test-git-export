@@ -7,7 +7,7 @@
             }
         },
         "display_name": "Test Course 01",
-        "giturl": "https://sheralim012:1ae1e959ecad81b17448c9680dd591d4524f7fe4@github.com/sheralim012/test-git-export.git",
+        "giturl": "git@github.com:sheralim012/test-git-export.git",
         "language": "en",
         "start": "2030-01-01T00:00:00Z",
         "tabs": [

@@ -1,4 +1,4 @@
-<sequential display_name="Lectures M1.2b: Quantum norms and distances" due="&quot;2918-06-15T23:57:00+00:00&quot;" format="Concept" graceperiod="18000 seconds" graded="true" showanswer="closed" start="&quot;2017-09-06T00:00:00+00:00&quot;" attempts="10" tex_filename="./week2_lectures2b.tex" linenum="3" refnum="2">
+<sequential display_name="Lectures M1.2b: Quantum norms and distances" due="&quot;2918-06-15T23:57:00+00:00&quot;" format="Concept" graceperiod="18000 seconds" graded="true" showanswer="closed" start="&quot;2017-09-06T00:00:00+00:00&quot;" attempts="10" tex_filename="./week2_lectures2b.tex" refnum="2" linenum="3">
   <vertical url_name="Norms_and_distance_metrics_for_quantum_states"/>
   <vertical url_name="CQ_Definition_of_a_norm"/>
   <vertical url_name="Schatten_p-norms"/>

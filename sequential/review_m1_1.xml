@@ -1,4 +1,4 @@
-<sequential display_name="Review material: density matrices" due="&quot;2918-06-15T23:57:00+00:00&quot;" format="Concept" graceperiod="18000 seconds" graded="true" showanswer="closed" start="&quot;2017-09-06T00:00:00+00:00&quot;" attempts="10" tex_filename="./week1_review1.tex" linenum="3" refnum="2">
+<sequential display_name="Review material: density matrices" due="&quot;2918-06-15T23:57:00+00:00&quot;" format="Concept" graceperiod="18000 seconds" graded="true" showanswer="closed" start="&quot;2017-09-06T00:00:00+00:00&quot;" attempts="10" tex_filename="./week1_review1.tex" refnum="2" linenum="3">
   <vertical url_name="Density_matrices_review_material_overview"/>
   <vertical url_name="What_is_a_noisy_quantum_state__Introduction_to_density_matrices"/>
   <vertical url_name="Indistinguishability_of_density_matrix_ensemble_unravelings"/>

@@ -1,4 +1,4 @@
-<sequential display_name="Review material: quantum error correction" due="&quot;2918-06-15T23:57:00+00:00&quot;" format="Concept" graceperiod="18000 seconds" graded="true" showanswer="closed" start="&quot;2017-09-06T00:00:00+00:00&quot;" attempts="10" tex_filename="./week3_review1.tex" linenum="3" refnum="3">
+<sequential display_name="Review material: quantum error correction" due="&quot;2918-06-15T23:57:00+00:00&quot;" format="Concept" graceperiod="18000 seconds" graded="true" showanswer="closed" start="&quot;2017-09-06T00:00:00+00:00&quot;" attempts="10" tex_filename="./week3_review1.tex" refnum="3" linenum="3">
   <vertical url_name="QEC_review_material_overview"/>
   <vertical url_name="Quantum_channels_-_simplified_the_dephasing_channel"/>
   <vertical url_name="The_dephasing_channel_as_depicted_on_the_Bloch_sphere"/>

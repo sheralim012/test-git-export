@@ -1,0 +1,280 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:10,000
+I claim that tpcp maps have Kraus decompositions.
+
+2
+00:00:10,000 --> 00:00:12,000
+In other words, this picture of quantum channels
+
+3
+00:00:12,000 --> 00:00:14,000
+is not more general than what we've
+
+4
+00:00:14,000 --> 00:00:16,000
+done before, it's equivalent.
+
+5
+00:00:16,000 --> 00:00:18,000
+The channels you've done before, this-- the way
+
+6
+00:00:18,000 --> 00:00:21,000
+we have to find channel so far, we have given two definitions.
+
+7
+00:00:21,000 --> 00:00:23,000
+One, isometry partial trace.
+
+8
+00:00:23,000 --> 00:00:24,000
+Two, cross decomposition.
+
+9
+00:00:24,000 --> 00:00:26,000
+We've shown those are equivalent.
+
+10
+00:00:26,000 --> 00:00:28,000
+This is a third definition.
+
+11
+00:00:28,000 --> 00:00:29,000
+Also, equivalent.
+
+12
+00:00:29,000 --> 00:00:32,000
+
+
+13
+00:00:32,000 --> 00:00:35,000
+And I will not fully prove that in lecture, I'll
+
+14
+00:00:35,000 --> 00:00:36,000
+just prove one direction of it, kind
+
+15
+00:00:36,000 --> 00:00:38,000
+of the easy direction of it.
+
+16
+00:00:38,000 --> 00:00:41,000
+And I'll leave the other direction for the homework.
+
+17
+00:00:41,000 --> 00:00:50,000
+So the easy direction is that if n of RHO has the Kraus form,
+
+18
+00:00:50,000 --> 00:00:56,000
+then n is trace-preserving and completely positive.
+
+19
+00:00:56,000 --> 00:01:01,000
+
+
+20
+00:01:01,000 --> 00:01:07,000
+So, first off, we should check, of course, clearly, n
+
+21
+00:01:07,000 --> 00:01:14,000
+is linear, and hermiticy-- hermiticity preserving
+
+22
+00:01:14,000 --> 00:01:16,000
+is also not too hard.
+
+23
+00:01:16,000 --> 00:01:23,000
+So if we take n of RHO dagger, then this is sum over e.
+
+24
+00:01:23,000 --> 00:01:25,000
+We just reverse this and dagger every term.
+
+25
+00:01:25,000 --> 00:01:30,000
+So we do ve dagger, dagger, which gives us just ve.
+
+26
+00:01:30,000 --> 00:01:37,000
+We have RHO dagger, and then we have ve dagger.
+
+27
+00:01:37,000 --> 00:01:41,000
+But if RHO is Hermitian, then RHO is equal to RHO dagger,
+
+28
+00:01:41,000 --> 00:01:45,000
+and so now this is just ve RHO, ve dagger,
+
+29
+00:01:45,000 --> 00:01:47,000
+which is the same as what we started with.
+
+30
+00:01:47,000 --> 00:01:50,000
+This is just end of RHO.
+
+31
+00:01:50,000 --> 00:01:54,000
+This is if RHO equals RHO dagger.
+
+32
+00:01:54,000 --> 00:01:57,000
+So you put in Hermitian input, you get a Hermitian output.
+
+33
+00:01:57,000 --> 00:02:01,000
+
+
+34
+00:02:01,000 --> 00:02:06,000
+So what about trace-preserving and completely positive?
+
+35
+00:02:06,000 --> 00:02:08,000
+You'll notice so far we've used no properties of Kraus
+
+36
+00:02:08,000 --> 00:02:09,000
+operators, right?
+
+37
+00:02:09,000 --> 00:02:12,000
+We have these Kraus operator conditions,
+
+38
+00:02:12,000 --> 00:02:13,000
+those haven't been used.
+
+39
+00:02:13,000 --> 00:02:15,000
+So we should expect them to be used at some point.
+
+40
+00:02:15,000 --> 00:02:18,000
+
+
+41
+00:02:18,000 --> 00:02:26,000
+So for trace-preserving, let's compute the trace of n of RHO.
+
+42
+00:02:26,000 --> 00:02:29,000
+So this is the sum over e--
+
+43
+00:02:29,000 --> 00:02:35,000
+sorry, trace of the sum over e of ve RHO, ve dagger.
+
+44
+00:02:35,000 --> 00:02:39,000
+
+
+45
+00:02:39,000 --> 00:02:43,000
+So what should you do whenever you see a trace of things?
+
+46
+00:02:43,000 --> 00:02:45,000
+If it's not obvious how to proceed, which-- what should
+
+47
+00:02:45,000 --> 00:02:46,000
+you try doing?
+
+48
+00:02:46,000 --> 00:02:48,000
+
+
+49
+00:02:48,000 --> 00:02:50,000
+Well, actually there are two things you could try.
+
+50
+00:02:50,000 --> 00:02:52,000
+One of them is try a different-- try a basis.
+
+51
+00:02:52,000 --> 00:02:56,000
+The other one is cyclic property of the trace.
+
+52
+00:02:56,000 --> 00:03:00,000
+So, here, I don't know what to do about the basis
+
+53
+00:03:00,000 --> 00:03:02,000
+so let's try the other one.
+
+54
+00:03:02,000 --> 00:03:05,000
+This is trace sum over e.
+
+55
+00:03:05,000 --> 00:03:08,000
+And you could cycle the ve over there
+
+56
+00:03:08,000 --> 00:03:11,000
+or the ve dagger over here.
+
+57
+00:03:11,000 --> 00:03:14,000
+Doesn't make a big difference.
+
+58
+00:03:14,000 --> 00:03:19,000
+The purpose of doing this is now the ve terms are together,
+
+59
+00:03:19,000 --> 00:03:22,000
+along with the sum, I group them together,
+
+60
+00:03:22,000 --> 00:03:25,000
+and what's this thing in the parenthesis?
+
+61
+00:03:25,000 --> 00:03:27,000
+What's that?
+
+62
+00:03:27,000 --> 00:03:28,000
+Identity one, yes.
+
+63
+00:03:28,000 --> 00:03:30,000
+So because of the cross operative condition.
+
+64
+00:03:30,000 --> 00:03:31,000
+So, finally, I used them.
+
+65
+00:03:31,000 --> 00:03:35,000
+That should reassure me that I had to use them somewhere.
+
+66
+00:03:35,000 --> 00:03:38,000
+And I get trace RHO.
+
+67
+00:03:38,000 --> 00:03:40,000
+And that's what trace-preserving means, trace of the output
+
+68
+00:03:40,000 --> 00:03:42,000
+equals trace of the input.
+
+69
+00:03:42,000 --> 00:03:43,000
+
+

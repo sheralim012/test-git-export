@@ -1,0 +1,28 @@
+<problem linenum="49" tex_filename="./week1_1_ps0.tex" attempts="10" display_name="Probability I" max_attempts="10">
+  <p>
+Suppose that [mathjaxinline]A,B[/mathjaxinline] are events such that [mathjaxinline]\Pr [A]=1/2[/mathjaxinline] and [mathjaxinline]\Pr [B]=1/3[/mathjaxinline]. Based on this we know that [mathjaxinline]\Pr [A\cup B][/mathjaxinline] is in some range, i.e. </p>
+  <table id="a0000000003" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto">
+    <tr>
+      <td class="equation" style="width:80%; border:none">[mathjax]x \leq \Pr [A\cup B] \leq y.[/mathjax]</td>
+      <td class="eqnnum" style="width:20%; border:none"> </td>
+    </tr>
+  </table>
+  <p>
+What are [mathjaxinline]x,y[/mathjaxinline]? </p>
+  <script>
+from sympy_check import *
+
+</script>
+  <p>
+    <p style="display:inline">[mathjaxinline]x =[/mathjaxinline]</p>
+    <customresponse cfn="sympy_check_quantum" inline="1" expect="1/2">
+      <textline correct_answer="1/2" inline="1"/>
+    </customresponse>
+  </p>
+  <p>
+    <p style="display:inline">[mathjaxinline]y =[/mathjaxinline]</p>
+    <customresponse cfn="sympy_check_quantum" inline="1" expect="5/6">
+      <textline correct_answer="5/6" inline="1"/>
+    </customresponse>
+  </p>
+</problem>

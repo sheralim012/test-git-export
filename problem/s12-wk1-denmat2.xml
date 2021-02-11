@@ -1,0 +1,56 @@
+<problem linenum="95" tex_filename="./week1_3_denmat.tex" attempts="10" display_name="Density matrices and unravelings (2 of 3)" max_attempts="10">
+  <p>
+Now suppose that Bob did the measurement of his qubit in a different basis, say by first applying a Hadamard gate then measuring in the computational basis. We may depict this with the quantum circuit (recall [mathjaxinline]|\psi _{AB}\rangle  = \sqrt{\frac{3}{4}} |00\rangle  + \sqrt{\frac{1}{4}} |11\rangle[/mathjaxinline]): </p>
+  <p>
+    <center>
+      <img src="/static/images/denmat-measure-basis2.png" width="420"/>
+    </center>
+  </p>
+  <p>
+What state does Alice have? Again, answer this by writing down Alice's state [mathjaxinline]|\psi "_{A,k}\rangle[/mathjaxinline] (after Bob's measurement) conditioned on Bob obtaining result [mathjaxinline]k[/mathjaxinline] (either [mathjaxinline]k=0[/mathjaxinline] or [mathjaxinline]k=1[/mathjaxinline]) from his measurement; include the probability of this result occuring. Be sure that [mathjaxinline]|\psi "_{A,k}\rangle[/mathjaxinline] is properly normalized: </p>
+  <script>
+from sympy_check import *
+
+</script>
+  <script linenum="117" filename="./week1_3_denmat.tex" type="text/python" system_path="python_lib">
+
+myhints = [ {'eval': "not symbol('g')", 'hint': "Shouldn't your answer depend on g?"},
+            {'eval': "not string('sqrt')", 'hint': "What should the answer be for g=0 and g=1?"},
+          ]
+  
+</script>
+  <ul class="itemize">
+    <li>
+      <p>
+        <p style="display:inline">Alice's state [mathjaxinline]|\psi "_{A,0}\rangle[/mathjaxinline] when Bob measures [mathjaxinline]k=0[/mathjaxinline]:</p>
+        <customresponse cfn="sympy_check_quantum" inline="1" expect="(sqrt(3)*|0&amp;gt;+|1&amp;gt;)/2" options="phase_ambiguity" cfn_extra_args="options">
+          <textline size="60" correct_answer="(sqrt(3)*|0&amp;gt;+|1&amp;gt;)/2" inline="1" math="1" preprocessorClassName="MathjaxPreprocessorForQM" preprocessorSrc="/static/mathjax_preprocessor_for_QM_H.js"/>
+        </customresponse>
+      </p>
+    </li>
+    <li>
+      <p>
+        <p style="display:inline">Probability of Bob measuring [mathjaxinline]k=0[/mathjaxinline]:</p>
+        <customresponse cfn="sympy_formula_check" inline="1" expect="1/2">
+          <textline size="10" correct_answer="1/2" inline="1"/>
+        </customresponse>
+      </p>
+    </li>
+    <li>
+      <p>
+        <p style="display:inline">Alice's state [mathjaxinline]|\psi "_{A,1}\rangle[/mathjaxinline] when Bob measures [mathjaxinline]k=1[/mathjaxinline]:</p>
+        <customresponse cfn="sympy_check_quantum" inline="1" expect="(sqrt(3)*|0&amp;gt;-|1&amp;gt;)/2" options="phase_ambiguity" cfn_extra_args="options">
+          <textline size="60" correct_answer="(sqrt(3)*|0&amp;gt;-|1&amp;gt;)/2" inline="1" math="1" preprocessorClassName="MathjaxPreprocessorForQM" preprocessorSrc="/static/mathjax_preprocessor_for_QM_H.js"/>
+        </customresponse>
+      </p>
+    </li>
+    <li>
+      <p>
+        <p style="display:inline">Probability of Bob measuring [mathjaxinline]k=1[/mathjaxinline]:</p>
+        <customresponse cfn="sympy_formula_check" inline="1" expect="1/2">
+          <textline size="10" correct_answer="1/2" inline="1"/>
+        </customresponse>
+      </p>
+    </li>
+  </ul>
+</problem>

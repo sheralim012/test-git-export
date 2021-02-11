@@ -1,0 +1,552 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:01,000
+Let me give you a second application
+
+2
+00:00:01,000 --> 00:00:09,000
+of this, which is to detecting errors and logical operators.
+
+3
+00:00:09,000 --> 00:00:16,000
+
+
+4
+00:00:16,000 --> 00:00:20,000
+So I've so far told you how you can just
+
+5
+00:00:20,000 --> 00:00:24,000
+define the code subspace, which is nice,
+
+6
+00:00:24,000 --> 00:00:28,000
+but the point of a code is to correct errors.
+
+7
+00:00:28,000 --> 00:00:29,000
+And then even further, you might want
+
+8
+00:00:29,000 --> 00:00:32,000
+to manipulate your encoded information at some point.
+
+9
+00:00:32,000 --> 00:00:37,000
+So how can we understand these in terms of the stabilizers--
+
+10
+00:00:37,000 --> 00:00:42,000
+I'm sorry-- in terms of the linear algebra perspective.
+
+11
+00:00:42,000 --> 00:00:46,000
+Remember, for classical codes, we had the check matrix.
+
+12
+00:00:46,000 --> 00:00:50,000
+And the check matrix, you can apply it to your vector,
+
+13
+00:00:50,000 --> 00:00:51,000
+to your codeword.
+
+14
+00:00:51,000 --> 00:00:53,000
+And if you've got 0, then that meant
+
+15
+00:00:53,000 --> 00:00:57,000
+that you were in the code.
+
+16
+00:00:57,000 --> 00:00:59,000
+And if you got something non-0 it
+
+17
+00:00:59,000 --> 00:01:00,000
+meant that you were out of the code.
+
+18
+00:01:00,000 --> 00:01:01,000
+So maybe I'll write this down.
+
+19
+00:01:01,000 --> 00:01:11,000
+So recall the classical check matrix h.
+
+20
+00:01:11,000 --> 00:01:19,000
+x is in the code if and only if hx is 0.
+
+21
+00:01:19,000 --> 00:01:26,000
+And if you have some error, x plus e is in the code if
+
+22
+00:01:26,000 --> 00:01:32,000
+and only if h x plus e is equal to 0.
+
+23
+00:01:32,000 --> 00:01:40,000
+But if x was already in the code,
+
+24
+00:01:40,000 --> 00:01:46,000
+this meant that you would be fooled by the error
+
+25
+00:01:46,000 --> 00:01:49,000
+only if he was zero.
+
+26
+00:01:49,000 --> 00:01:52,000
+So the undetected errors are precisely
+
+27
+00:01:52,000 --> 00:01:56,000
+the codewords, the things that pass,
+
+28
+00:01:56,000 --> 00:01:58,000
+that satisfy the check matrix.
+
+29
+00:01:58,000 --> 00:02:01,000
+
+
+30
+00:02:01,000 --> 00:02:04,000
+So what about in the quantum for stabilizer codes?
+
+31
+00:02:04,000 --> 00:02:10,000
+
+
+32
+00:02:10,000 --> 00:02:25,000
+So let's consider some polyerror sigma e.
+
+33
+00:02:25,000 --> 00:02:27,000
+So I'm going to use this notation where
+
+34
+00:02:27,000 --> 00:02:35,000
+e is a vector in f2 to the 2n.
+
+35
+00:02:35,000 --> 00:02:41,000
+And I want to know does my code detect this or not?
+
+36
+00:02:41,000 --> 00:02:48,000
+So does this error take me out of the code space or not?
+
+37
+00:02:48,000 --> 00:02:56,000
+So I might ask is sigma e vs, what does this look like?
+
+38
+00:02:56,000 --> 00:02:59,000
+Does this intersect vs?
+
+39
+00:02:59,000 --> 00:03:04,000
+Is it-- yeah, maybe I'll write intersect vs.
+
+40
+00:03:04,000 --> 00:03:09,000
+Is this just equal to the 0 vector
+
+41
+00:03:09,000 --> 00:03:11,000
+or is it bigger than that?
+
+42
+00:03:11,000 --> 00:03:12,000
+Are there some vectors--
+
+43
+00:03:12,000 --> 00:03:19,000
+
+
+44
+00:03:19,000 --> 00:03:22,000
+so if I have my code space and I apply some error to it--
+
+45
+00:03:22,000 --> 00:03:25,000
+sorry, this should be sigma superscript e--
+
+46
+00:03:25,000 --> 00:03:28,000
+if I have a code space and I apply an error to it,
+
+47
+00:03:28,000 --> 00:03:32,000
+and I require that I'm back in the code space,
+
+48
+00:03:32,000 --> 00:03:36,000
+if it's the 0 vector, then that means that I've basically
+
+49
+00:03:36,000 --> 00:03:38,000
+taken myself to an orthogonal space,
+
+50
+00:03:38,000 --> 00:03:39,000
+something completely distinguishable
+
+51
+00:03:39,000 --> 00:03:43,000
+from the original code space, and I can detect this error.
+
+52
+00:03:43,000 --> 00:03:46,000
+If it's equal to vs, that means I've just
+
+53
+00:03:46,000 --> 00:03:50,000
+done a rotation within the code space, some kind of operation
+
+54
+00:03:50,000 --> 00:03:53,000
+on the encoded data, and there's no way
+
+55
+00:03:53,000 --> 00:03:56,000
+I could ever detect an error because I'm
+
+56
+00:03:56,000 --> 00:03:59,000
+left with a completely legal code word.
+
+57
+00:03:59,000 --> 00:04:01,000
+There's other things that are possible as well
+
+58
+00:04:01,000 --> 00:04:04,000
+in between these two extremes, although it turns out
+
+59
+00:04:04,000 --> 00:04:07,000
+thanks to the magic of poly matrices, for stabilizer codes,
+
+60
+00:04:07,000 --> 00:04:10,000
+you only get these two extremes.
+
+61
+00:04:10,000 --> 00:04:12,000
+So again, general codes, it might not be this nice,
+
+62
+00:04:12,000 --> 00:04:15,000
+but for polycodes, for stabilizer codes,
+
+63
+00:04:15,000 --> 00:04:17,000
+it turns out to be.
+
+64
+00:04:17,000 --> 00:04:22,000
+So how can we figure out which of these is the case.
+
+65
+00:04:22,000 --> 00:04:28,000
+Let's let s be generated by s1 through sl.
+
+66
+00:04:28,000 --> 00:04:33,000
+
+
+67
+00:04:33,000 --> 00:04:38,000
+And so thanks to the fact that these are all polys,
+
+68
+00:04:38,000 --> 00:04:46,000
+we know that each si and sigma e--
+
+69
+00:04:46,000 --> 00:04:57,000
+I'll write it as math-- si and sigma e either commute
+
+70
+00:04:57,000 --> 00:05:02,000
+or anticommute, OK?
+
+71
+00:05:02,000 --> 00:05:13,000
+And we start with some psi that's in the code space,
+
+72
+00:05:13,000 --> 00:05:20,000
+so si psi e equals psi for all i.
+
+73
+00:05:20,000 --> 00:05:23,000
+And then suppose we apply some error to it, sigma e.
+
+74
+00:05:23,000 --> 00:05:26,000
+
+
+75
+00:05:26,000 --> 00:05:30,000
+What's going to happen in terms of the action
+
+76
+00:05:30,000 --> 00:05:31,000
+of these stabilizers?
+
+77
+00:05:31,000 --> 00:05:33,000
+Are we going to be left with something that's still
+
+78
+00:05:33,000 --> 00:05:35,000
+in the code space, or is it going
+
+79
+00:05:35,000 --> 00:05:38,000
+to no longer be a plus 1 eigenstate of one
+
+80
+00:05:38,000 --> 00:05:41,000
+of these stabilizers.
+
+81
+00:05:41,000 --> 00:05:49,000
+So if si sigma e equals sigma e--
+
+82
+00:05:49,000 --> 00:06:02,000
+sorry, superscript-- sigma e si, then
+
+83
+00:06:02,000 --> 00:06:07,000
+when we apply si sigma e to this state, they commute.
+
+84
+00:06:07,000 --> 00:06:13,000
+So this is sigma e si psi.
+
+85
+00:06:13,000 --> 00:06:18,000
+Si acts trivially, so we get sigma e psi.
+
+86
+00:06:18,000 --> 00:06:26,000
+And we find that sigma e is also a plus 1 eigenstate of si.
+
+87
+00:06:26,000 --> 00:06:29,000
+So in other words, if the error--
+
+88
+00:06:29,000 --> 00:06:32,000
+boy, I have a really hard time writing this superscript--
+
+89
+00:06:32,000 --> 00:06:39,000
+if the error commutes with si, then it fools si.
+
+90
+00:06:39,000 --> 00:06:42,000
+It will not be detected by si.
+
+91
+00:06:42,000 --> 00:06:47,000
+If it anticommutes, then it antifools si.
+
+92
+00:06:47,000 --> 00:06:49,000
+It is detected by it.
+
+93
+00:06:49,000 --> 00:06:59,000
+So if si sigma e equals minus sigma e, si--
+
+94
+00:06:59,000 --> 00:07:05,000
+let's do the same calculation-- we get si sigma e psi.
+
+95
+00:07:05,000 --> 00:07:07,000
+When we reverse it, we get a minus sign.
+
+96
+00:07:07,000 --> 00:07:18,000
+Minus sigma e si psi is equal to minus sigma e psi.
+
+97
+00:07:18,000 --> 00:07:24,000
+So now sigma e psi is a minus 1 eigenstate of si.
+
+98
+00:07:24,000 --> 00:07:28,000
+So it's completely outside of the stabilizer subgroup.
+
+99
+00:07:28,000 --> 00:07:30,000
+Remember, the stabilizer subgroup we projected
+
+100
+00:07:30,000 --> 00:07:32,000
+onto the plus one eigenspace.
+
+101
+00:07:32,000 --> 00:07:34,000
+Now I'm completely within the minus 1 eigenspace.
+
+102
+00:07:34,000 --> 00:07:39,000
+So it is detected by the stabilizer.
+
+103
+00:07:39,000 --> 00:07:50,000
+So what that means is that the undetected errors equal
+
+104
+00:07:50,000 --> 00:07:52,000
+the things that commute with the stabilizer.
+
+105
+00:07:52,000 --> 00:07:54,000
+And this, there is a math term for this.
+
+106
+00:07:54,000 --> 00:07:56,000
+It's called the normalizable subgroup.
+
+107
+00:07:56,000 --> 00:08:01,000
+So n or s just means a set of all g such
+
+108
+00:08:01,000 --> 00:08:09,000
+that they commute with everything in the stabilizer
+
+109
+00:08:09,000 --> 00:08:10,000
+subgroup.
+
+110
+00:08:10,000 --> 00:08:13,000
+
+
+111
+00:08:13,000 --> 00:08:19,000
+And since s is a Boolean, this includes s, but in general will
+
+112
+00:08:19,000 --> 00:08:22,000
+be bigger, not always, but generally will be bigger.
+
+113
+00:08:22,000 --> 00:08:29,000
+
+
+114
+00:08:29,000 --> 00:08:38,000
+And in linear algebra terms, if let's say that si are sigma vi,
+
+115
+00:08:38,000 --> 00:08:42,000
+so they correspond to these vectors,
+
+116
+00:08:42,000 --> 00:08:49,000
+then this is saying that e should be perpendicular to v1
+
+117
+00:08:49,000 --> 00:08:52,000
+through vl.
+
+118
+00:08:52,000 --> 00:08:58,000
+So the space of errors, which is undetected,
+
+119
+00:08:58,000 --> 00:09:00,000
+is basically the subspace, which is
+
+120
+00:09:00,000 --> 00:09:09,000
+perpendicular to all of these vectors in the symplectic,
+
+121
+00:09:09,000 --> 00:09:10,000
+in our product.
+
+122
+00:09:10,000 --> 00:09:13,000
+
+
+123
+00:09:13,000 --> 00:09:21,000
+And so what I'll talk more about this next time,
+
+124
+00:09:21,000 --> 00:09:23,000
+but what I want you to see, is here
+
+125
+00:09:23,000 --> 00:09:25,000
+we have an explanation in terms of group theory.
+
+126
+00:09:25,000 --> 00:09:26,000
+It's a nice math formula.
+
+127
+00:09:26,000 --> 00:09:30,000
+It Says the undetected errors are all the things that commute
+
+128
+00:09:30,000 --> 00:09:32,000
+with all the stabilizers.
+
+129
+00:09:32,000 --> 00:09:35,000
+But it's not obvious a priori how to compute that.
+
+130
+00:09:35,000 --> 00:09:37,000
+When you turn it into linear algebra language,
+
+131
+00:09:37,000 --> 00:09:40,000
+this is taking an orthogonal subspace to another subspace.
+
+132
+00:09:40,000 --> 00:09:43,000
+It's just the same idea translated into slightly
+
+133
+00:09:43,000 --> 00:09:44,000
+different language.
+
+134
+00:09:44,000 --> 00:09:46,000
+And this all of a sudden is something
+
+135
+00:09:46,000 --> 00:09:48,000
+that you can compute much more easily.
+
+136
+00:09:48,000 --> 00:09:50,000
+You can think about it in terms of dimensions of subspaces,
+
+137
+00:09:50,000 --> 00:09:53,000
+
+

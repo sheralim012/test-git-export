@@ -1,0 +1,388 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:04,000
+Today, I'm going to tell you about quantum states
+
+2
+00:00:04,000 --> 00:00:07,000
+and operations.
+
+3
+00:00:07,000 --> 00:00:11,000
+And some of this you may have seen before.
+
+4
+00:00:11,000 --> 00:00:15,000
+I know that density matrices were introduced in 8.370.
+
+5
+00:00:15,000 --> 00:00:18,000
+So there'll be an element of review to this,
+
+6
+00:00:18,000 --> 00:00:22,000
+but I hope also some aspects that are new for everyone.
+
+7
+00:00:22,000 --> 00:00:27,000
+So the basic object of our theory, as I mentioned,
+
+8
+00:00:27,000 --> 00:00:28,000
+is a qubit.
+
+9
+00:00:28,000 --> 00:00:31,000
+And so what is the state of a qubit?
+
+10
+00:00:31,000 --> 00:00:37,000
+In-- to see this, we'll begin, actually,
+
+11
+00:00:37,000 --> 00:00:40,000
+with bits, or with deterministic classical information,
+
+12
+00:00:40,000 --> 00:00:42,000
+and then I'll show you how you can
+
+13
+00:00:42,000 --> 00:00:46,000
+think of quantum information as generalizing bits
+
+14
+00:00:46,000 --> 00:00:48,000
+in a way that's analogous, but not equivalent,
+
+15
+00:00:48,000 --> 00:00:50,000
+to the way the probability theory generalizes
+
+16
+00:00:50,000 --> 00:00:53,000
+deterministic classical theories.
+
+17
+00:00:53,000 --> 00:00:56,000
+So when you think about the state space, you can--
+
+18
+00:00:56,000 --> 00:01:11,000
+we can divide it up into classical, or quantum,
+
+19
+00:01:11,000 --> 00:01:14,000
+and we can think of a classical state space
+
+20
+00:01:14,000 --> 00:01:17,000
+as being like a bit, which is zero or one,
+
+21
+00:01:17,000 --> 00:01:19,000
+and I'll generalize that slightly to say it's
+
+22
+00:01:19,000 --> 00:01:24,000
+an object which can take on some finite number of values.
+
+23
+00:01:24,000 --> 00:01:27,000
+So let's say it can take on d different values.
+
+24
+00:01:27,000 --> 00:01:32,000
+So a classical object we might describe
+
+25
+00:01:32,000 --> 00:01:34,000
+by a number between one and d.
+
+26
+00:01:34,000 --> 00:01:35,000
+OK.
+
+27
+00:01:35,000 --> 00:01:40,000
+And then quantum-- puristic quantum mechanics
+
+28
+00:01:40,000 --> 00:01:45,000
+generalized this and, it says, the quantum analog of such a
+
+29
+00:01:45,000 --> 00:01:49,000
+deed level system is a d dimensional complex vector.
+
+30
+00:01:49,000 --> 00:01:53,000
+So, for example, classically, we might think of a electron
+
+31
+00:01:53,000 --> 00:01:55,000
+as being either in the ground state or an excited state.
+
+32
+00:01:55,000 --> 00:01:57,000
+Quantumly, we would describe that by a vector space
+
+33
+00:01:57,000 --> 00:01:59,000
+with some amplitude for each of these--
+
+34
+00:01:59,000 --> 00:02:01,000
+for each of these cases.
+
+35
+00:02:01,000 --> 00:02:11,000
+So, quantumly, we would say that we have a vector si in c d
+
+36
+00:02:11,000 --> 00:02:12,000
+with two norm equal to one.
+
+37
+00:02:12,000 --> 00:02:14,000
+
+
+38
+00:02:14,000 --> 00:02:17,000
+So this is kind of the standard picture
+
+39
+00:02:17,000 --> 00:02:18,000
+that you see in quantum mechanics.
+
+40
+00:02:18,000 --> 00:02:20,000
+That you have a classical system that can
+
+41
+00:02:20,000 --> 00:02:22,000
+be in some number of states.
+
+42
+00:02:22,000 --> 00:02:26,000
+The quantum analog of this is to add superposition.
+
+43
+00:02:26,000 --> 00:02:28,000
+And when you hear descriptions of this,
+
+44
+00:02:28,000 --> 00:02:29,000
+you often hear things like the electron
+
+45
+00:02:29,000 --> 00:02:33,000
+is in a cloud around the nucleus, and if you measure it,
+
+46
+00:02:33,000 --> 00:02:35,000
+it turns out to be in a random location.
+
+47
+00:02:35,000 --> 00:02:38,000
+These descriptions often sound a lot like probability.
+
+48
+00:02:38,000 --> 00:02:40,000
+And this kind of looks like probability.
+
+49
+00:02:40,000 --> 00:02:42,000
+You have some wave function, which,
+
+50
+00:02:42,000 --> 00:02:44,000
+if you take the absolute value square,
+
+51
+00:02:44,000 --> 00:02:46,000
+it gives you something normalized,
+
+52
+00:02:46,000 --> 00:02:48,000
+that something analogous but different than probability.
+
+53
+00:02:48,000 --> 00:02:50,000
+Where probabilities, you just have
+
+54
+00:02:50,000 --> 00:02:53,000
+a bunch of non-negative real numbers that add up to one.
+
+55
+00:02:53,000 --> 00:02:56,000
+And-- and you realize that these probability
+
+56
+00:02:56,000 --> 00:02:59,000
+is a sort of incomparable generalization
+
+57
+00:02:59,000 --> 00:03:02,000
+of the classical deterministic theory.
+
+58
+00:03:02,000 --> 00:03:06,000
+So let me add another access to this graph.
+
+59
+00:03:06,000 --> 00:03:16,000
+Let me write deterministic and random.
+
+60
+00:03:16,000 --> 00:03:21,000
+So if you have a classical theory with randomness,
+
+61
+00:03:21,000 --> 00:03:23,000
+this gives you something that's like superposition,
+
+62
+00:03:23,000 --> 00:03:24,000
+but instead is--
+
+63
+00:03:24,000 --> 00:03:25,000
+is called probability.
+
+64
+00:03:25,000 --> 00:03:30,000
+You have a probability distribution p, which
+
+65
+00:03:30,000 --> 00:03:31,000
+is a list of d real numbers.
+
+66
+00:03:31,000 --> 00:03:36,000
+
+
+67
+00:03:36,000 --> 00:03:36,000
+They add up to one.
+
+68
+00:03:36,000 --> 00:03:39,000
+
+
+69
+00:03:39,000 --> 00:03:42,000
+And they're each non-negative, right?
+
+70
+00:03:42,000 --> 00:03:45,000
+So you have d non-negative real numbers that add up to one.
+
+71
+00:03:45,000 --> 00:03:49,000
+And you can see this is analogous to quantum states.
+
+72
+00:03:49,000 --> 00:03:51,000
+But it's not-- it's definitely not equivalent.
+
+73
+00:03:51,000 --> 00:03:53,000
+You can-- if you measure a quantum state,
+
+74
+00:03:53,000 --> 00:03:56,000
+you get a probability distribution,
+
+75
+00:03:56,000 --> 00:03:57,000
+but you don't have to.
+
+76
+00:03:57,000 --> 00:04:00,000
+Those are kind of-- they're different things.
+
+77
+00:04:00,000 --> 00:04:04,000
+And they're, in a sense, incomparable because I
+
+78
+00:04:04,000 --> 00:04:06,000
+could have a probability distribution over quantum
+
+79
+00:04:06,000 --> 00:04:07,000
+states, right?
+
+80
+00:04:07,000 --> 00:04:10,000
+Nothing stops me from saying, with probability of one-half,
+
+81
+00:04:10,000 --> 00:04:12,000
+the quantum state is like this.
+
+82
+00:04:12,000 --> 00:04:13,000
+With probability of one-third, it's like this.
+
+83
+00:04:13,000 --> 00:04:16,000
+With probability of one-sixth, it's something else.
+
+84
+00:04:16,000 --> 00:04:20,000
+And so you realize that either of these theories by themselves
+
+85
+00:04:20,000 --> 00:04:21,000
+are incomplete.
+
+86
+00:04:21,000 --> 00:04:24,000
+The world is not always in a known quantum state,
+
+87
+00:04:24,000 --> 00:04:26,000
+it could be in an unknown quantum state.
+
+88
+00:04:26,000 --> 00:04:28,000
+And so to really have a complete picture,
+
+89
+00:04:28,000 --> 00:04:32,000
+we need a common generalization of both probability and quantum
+
+90
+00:04:32,000 --> 00:04:32,000
+mechanics.
+
+91
+00:04:32,000 --> 00:04:36,000
+We need to talk about random quantum states.
+
+92
+00:04:36,000 --> 00:04:41,000
+And here is where we have density matrices.
+
+93
+00:04:41,000 --> 00:04:43,000
+And there-- there are two ways of thinking about it.
+
+94
+00:04:43,000 --> 00:04:52,000
+So I'll write here density matrices,
+
+95
+00:04:52,000 --> 00:04:55,000
+and then we'll unpack that a little bit further.
+
+96
+00:04:55,000 --> 00:04:55,000
+
+

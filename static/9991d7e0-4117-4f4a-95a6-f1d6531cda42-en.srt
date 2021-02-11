@@ -1,0 +1,372 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:01,000
+Before I mention the properties, let
+
+2
+00:00:01,000 --> 00:00:04,000
+me introduce another stabilizer-related notion,
+
+3
+00:00:04,000 --> 00:00:06,000
+which is a stabilizer subspace.
+
+4
+00:00:06,000 --> 00:00:13,000
+
+
+5
+00:00:13,000 --> 00:00:19,000
+So the stabilizer subspace, V sub S
+
+6
+00:00:19,000 --> 00:00:23,000
+is the set of simultaneous plus 1 eigenvalues of all
+
+7
+00:00:23,000 --> 00:00:25,000
+of the elements of S. So the set of psi,
+
+8
+00:00:25,000 --> 00:00:33,000
+such that g psi is equal to psi for all g in S. OK,
+
+9
+00:00:33,000 --> 00:00:35,000
+so we saw a bit of this in the last lecture.
+
+10
+00:00:35,000 --> 00:00:39,000
+We have these codes where you could define them--
+
+11
+00:00:39,000 --> 00:00:42,000
+we saw it, you know, for a classical linear code--
+
+12
+00:00:42,000 --> 00:00:44,000
+you could define them as the simultaneous
+
+13
+00:00:44,000 --> 00:00:49,000
+plus 1 eigenspace of a bunch of commuting products of Pauli z
+
+14
+00:00:49,000 --> 00:00:51,000
+operators.
+
+15
+00:00:51,000 --> 00:00:52,000
+Now I'm going to generalize this.
+
+16
+00:00:52,000 --> 00:00:57,000
+I'm going to say let S be any subgroup of the Paulis.
+
+17
+00:00:57,000 --> 00:01:00,000
+And let me define the corresponding subspace V sub
+
+18
+00:01:00,000 --> 00:01:04,000
+S to be the simultaneous plus 1 eigenspace of all
+
+19
+00:01:04,000 --> 00:01:06,000
+of these Paulis.
+
+20
+00:01:06,000 --> 00:01:06,000
+OK?
+
+21
+00:01:06,000 --> 00:01:11,000
+
+
+22
+00:01:11,000 --> 00:01:18,000
+And in math notation or in math, usually the term stabilizer
+
+23
+00:01:18,000 --> 00:01:22,000
+means the set of group elements that
+
+24
+00:01:22,000 --> 00:01:24,000
+acts trivially on all of the elements of some space.
+
+25
+00:01:24,000 --> 00:01:26,000
+So you would start with V. And you
+
+26
+00:01:26,000 --> 00:01:29,000
+would say that S is the stabilizer of that.
+
+27
+00:01:29,000 --> 00:01:32,000
+And it usually means something much more general than being
+
+28
+00:01:32,000 --> 00:01:34,000
+a subgroup of Paulis.
+
+29
+00:01:34,000 --> 00:01:37,000
+However, in quantum information, when we say stabilizer,
+
+30
+00:01:37,000 --> 00:01:39,000
+we generally mean just a subgroup of Paulis.
+
+31
+00:01:39,000 --> 00:01:42,000
+So I'm going to use stabilizer always in that setting.
+
+32
+00:01:42,000 --> 00:01:44,000
+But you should be aware that in math, people
+
+33
+00:01:44,000 --> 00:01:48,000
+use it in a different-- a more general way.
+
+34
+00:01:48,000 --> 00:01:54,000
+So this is a general way of describing codes,
+
+35
+00:01:54,000 --> 00:01:56,000
+or, even more generally, a large class
+
+36
+00:01:56,000 --> 00:02:00,000
+of quantum states and subspaces.
+
+37
+00:02:00,000 --> 00:02:04,000
+And they can be defined for any subgroup S.
+
+38
+00:02:04,000 --> 00:02:08,000
+However, to make it interesting, we often
+
+39
+00:02:08,000 --> 00:02:10,000
+want to impose certain conditions.
+
+40
+00:02:10,000 --> 00:02:20,000
+So we usually will require that S does not
+
+41
+00:02:20,000 --> 00:02:24,000
+contain minus the identity.
+
+42
+00:02:24,000 --> 00:02:25,000
+S will always contain the identity.
+
+43
+00:02:25,000 --> 00:02:28,000
+We don't want it to contain minus the identity.
+
+44
+00:02:28,000 --> 00:02:30,000
+Can anyone see what the problem would
+
+45
+00:02:30,000 --> 00:02:35,000
+be if we allowed S to contain minus the identity?
+
+46
+00:02:35,000 --> 00:02:35,000
+So right.
+
+47
+00:02:35,000 --> 00:02:38,000
+So no non-zero vector would satisfy it.
+
+48
+00:02:38,000 --> 00:02:40,000
+If minus I were an S, the subspace
+
+49
+00:02:40,000 --> 00:02:42,000
+would be only the 0 vector.
+
+50
+00:02:42,000 --> 00:02:45,000
+Mathematically well-defined, but not interesting.
+
+51
+00:02:45,000 --> 00:02:48,000
+So we exclude this case.
+
+52
+00:02:48,000 --> 00:02:51,000
+Now, you get an interesting consequence of this.
+
+53
+00:02:51,000 --> 00:02:53,000
+Because we're talking about the Pauli matrices.
+
+54
+00:02:53,000 --> 00:02:56,000
+So there are a number of really nice things about the Pauli
+
+55
+00:02:56,000 --> 00:02:57,000
+matrices.
+
+56
+00:02:57,000 --> 00:03:05,000
+So if you have two Pauli matrices,
+
+57
+00:03:05,000 --> 00:03:08,000
+then sometimes they commute.
+
+58
+00:03:08,000 --> 00:03:11,000
+And when I say Pauli matrix, I actually
+
+59
+00:03:11,000 --> 00:03:14,000
+mean something of this form-- a tensor product
+
+60
+00:03:14,000 --> 00:03:16,000
+of the single qubit Pauli matrices.
+
+61
+00:03:16,000 --> 00:03:21,000
+I'm going to use Pauli matrices to also include the n qubit
+
+62
+00:03:21,000 --> 00:03:22,000
+version.
+
+63
+00:03:22,000 --> 00:03:25,000
+The n qubit version, like the 1 qubit version,
+
+64
+00:03:25,000 --> 00:03:37,000
+have the property that the product of two Pauli matrices,
+
+65
+00:03:37,000 --> 00:03:39,000
+basically, they either commute or anti-commute.
+
+66
+00:03:39,000 --> 00:03:43,000
+So gh is either hg or minus hg.
+
+67
+00:03:43,000 --> 00:03:45,000
+This is not true in general.
+
+68
+00:03:45,000 --> 00:03:47,000
+It is a particular fact of Pauli matrices.
+
+69
+00:03:47,000 --> 00:03:50,000
+
+
+70
+00:03:50,000 --> 00:03:55,000
+And we get a lot of leverage out of this.
+
+71
+00:03:55,000 --> 00:03:59,000
+So one thing that we get from this is
+
+72
+00:03:59,000 --> 00:04:09,000
+suppose we have two elements of S that don't commute--
+
+73
+00:04:09,000 --> 00:04:15,000
+so gh not equal to hg.
+
+74
+00:04:15,000 --> 00:04:23,000
+Then that means that gh is equal to minus hg.
+
+75
+00:04:23,000 --> 00:04:23,000
+Right?
+
+76
+00:04:23,000 --> 00:04:25,000
+Because that's the only other option.
+
+77
+00:04:25,000 --> 00:04:41,000
+And because S is a group, if I multiply gh times gh,
+
+78
+00:04:41,000 --> 00:04:45,000
+that will also be an element of the group.
+
+79
+00:04:45,000 --> 00:04:48,000
+But I can replace the second gh with minus hg.
+
+80
+00:04:48,000 --> 00:04:49,000
+So I get minus ghhg.
+
+81
+00:04:49,000 --> 00:04:54,000
+
+
+82
+00:04:54,000 --> 00:04:57,000
+But g and h are Pauli, so they each square to identity.
+
+83
+00:04:57,000 --> 00:04:59,000
+So h squared is equal to identity.
+
+84
+00:04:59,000 --> 00:05:03,000
+g squared is equal to identity.
+
+85
+00:05:03,000 --> 00:05:07,000
+And I'm left with minus identity.
+
+86
+00:05:07,000 --> 00:05:11,000
+So if I start with any pair that belongs to S, and anti-commute
+
+87
+00:05:11,000 --> 00:05:14,000
+or even fail to commute, then I have that minus identity
+
+88
+00:05:14,000 --> 00:05:21,000
+belongs in S. So just imposing this requirement
+
+89
+00:05:21,000 --> 00:05:24,000
+that minus identity's not contained in S,
+
+90
+00:05:24,000 --> 00:05:31,000
+we obtain that S is abelian.
+
+91
+00:05:31,000 --> 00:05:35,000
+In other words, everything in S commutes.
+
+92
+00:05:35,000 --> 00:05:36,000
+
+

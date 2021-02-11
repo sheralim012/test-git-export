@@ -1,0 +1,148 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:02,000
+OK, so what do we get from the symplectic inner product?
+
+2
+00:00:02,000 --> 00:00:06,000
+So a stabilizer subgroup corresponds
+
+3
+00:00:06,000 --> 00:00:18,000
+to some set of vectors in F2 to the 2n
+
+4
+00:00:18,000 --> 00:00:23,000
+that are all orthogonal with respect to this inner product.
+
+5
+00:00:23,000 --> 00:00:38,000
+So Vi transposed lambda Vj equals 0.
+
+6
+00:00:38,000 --> 00:00:42,000
+So before I said that a stabilizer subgroup
+
+7
+00:00:42,000 --> 00:00:45,000
+is a bunch of commuting [? polys. ?]
+
+8
+00:00:45,000 --> 00:00:49,000
+And now we have kind of a linear algebraic way of putting it.
+
+9
+00:00:49,000 --> 00:00:51,000
+It's just a bunch of vectors that are all
+
+10
+00:00:51,000 --> 00:00:54,000
+orthogonal to each other.
+
+11
+00:00:54,000 --> 00:00:57,000
+And they should also be linearly independent.
+
+12
+00:00:57,000 --> 00:01:00,000
+So this is basically like the symplectic version
+
+13
+00:01:00,000 --> 00:01:03,000
+of an orthonormal basis.
+
+14
+00:01:03,000 --> 00:01:05,000
+Maybe I should say orthogonal basis.
+
+15
+00:01:05,000 --> 00:01:09,000
+I don't actually care if the vector is orthogonal to itself.
+
+16
+00:01:09,000 --> 00:01:14,000
+So it's for i not equal to j.
+
+17
+00:01:14,000 --> 00:01:15,000
+Yeah.
+
+18
+00:01:15,000 --> 00:01:16,000
+[INAUDIBLE]
+
+19
+00:01:16,000 --> 00:01:17,000
+That was your question.
+
+20
+00:01:17,000 --> 00:01:18,000
+Yeah.
+
+21
+00:01:18,000 --> 00:01:25,000
+So let me say this maybe a little bit more formally.
+
+22
+00:01:25,000 --> 00:01:26,000
+Let me say that--
+
+23
+00:01:26,000 --> 00:01:30,000
+
+
+24
+00:01:30,000 --> 00:01:31,000
+so let me define sigma.
+
+25
+00:01:31,000 --> 00:01:36,000
+
+
+26
+00:01:36,000 --> 00:01:46,000
+So let's suppose that V is equal to the vector bc, and sigma
+
+27
+00:01:46,000 --> 00:01:48,000
+superscript V means sigma sub b--
+
+28
+00:01:48,000 --> 00:01:54,000
+sorry, x to the b, z to the c.
+
+29
+00:01:54,000 --> 00:02:14,000
+Then sigma V1 through sigma Vl is a stabilizer group
+
+30
+00:02:14,000 --> 00:02:22,000
+if and only if V1 through Vl is an orthogonal--
+
+31
+00:02:22,000 --> 00:02:25,000
+
+
+32
+00:02:25,000 --> 00:02:33,000
+sorry, let me say they are orthogonal and linearly
+
+33
+00:02:33,000 --> 00:02:34,000
+independent.
+
+34
+00:02:34,000 --> 00:02:38,000
+
+
+35
+00:02:38,000 --> 00:02:42,000
+So this puts it into kind of a more familiar linear algebra
+
+36
+00:02:42,000 --> 00:02:43,000
+
+

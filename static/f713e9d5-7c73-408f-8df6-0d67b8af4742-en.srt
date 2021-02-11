@@ -1,0 +1,212 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:05,000
+OK, so what kinds of matrices can be density matrices?
+
+2
+00:00:05,000 --> 00:00:27,000
+A density matrix is trace 1 positive semidefinite
+
+3
+00:00:27,000 --> 00:00:29,000
+and Hermitian.
+
+4
+00:00:29,000 --> 00:00:32,000
+
+
+5
+00:00:32,000 --> 00:00:36,000
+And, in, fact all Hermitian positive semidefinite trace 1
+
+6
+00:00:36,000 --> 00:00:37,000
+matrices are density matrices.
+
+7
+00:00:37,000 --> 00:00:40,000
+
+
+8
+00:00:40,000 --> 00:00:47,000
+So summation p's of i, psi of i, psi of i, tracing this.
+
+9
+00:00:47,000 --> 00:00:50,000
+
+
+10
+00:00:50,000 --> 00:00:55,000
+This matrix, psi i, psi i, has trace 1
+
+11
+00:00:55,000 --> 00:01:00,000
+because the normal psi is 1.
+
+12
+00:01:00,000 --> 00:01:07,000
+So this is equal to sum p of i trace psi i, psi
+
+13
+00:01:07,000 --> 00:01:11,000
+i equals sum pi equals 1.
+
+14
+00:01:11,000 --> 00:01:14,000
+
+
+15
+00:01:14,000 --> 00:01:19,000
+OK, positive semidefinite.
+
+16
+00:01:19,000 --> 00:01:20,000
+OK, so here you need to know something
+
+17
+00:01:20,000 --> 00:01:23,000
+about positive semidefinite matrices, which
+
+18
+00:01:23,000 --> 00:01:25,000
+I don't know if I have proved, but I'm not going to.
+
+19
+00:01:25,000 --> 00:01:27,000
+I'm just going to tell you.
+
+20
+00:01:27,000 --> 00:01:29,000
+So if you have two positives semidefinite matrices
+
+21
+00:01:29,000 --> 00:01:33,000
+and you add them, you get another positive semidefinite
+
+22
+00:01:33,000 --> 00:01:34,000
+matrix.
+
+23
+00:01:34,000 --> 00:01:45,000
+So positive semidefinite permission
+
+24
+00:01:45,000 --> 00:01:56,000
+means all eigenvalues are greater than or equal to 0.
+
+25
+00:01:56,000 --> 00:02:00,000
+
+
+26
+00:02:00,000 --> 00:02:04,000
+So this matrix has one eigenvalue of 1
+
+27
+00:02:04,000 --> 00:02:07,000
+and all the rest are 0, and the eigenvalue
+
+28
+00:02:07,000 --> 00:02:10,000
+is, of course, psi of i.
+
+29
+00:02:10,000 --> 00:02:14,000
+So it's positive semidefinite.
+
+30
+00:02:14,000 --> 00:02:18,000
+So its sum, and you're adding a bunch of them--
+
+31
+00:02:18,000 --> 00:02:20,000
+so the sum is also positive semidefinite.
+
+32
+00:02:20,000 --> 00:02:22,000
+It's Hermitian, which means its conjugate is
+
+33
+00:02:22,000 --> 00:02:26,000
+its transpose, because each of these is Hermitian.
+
+34
+00:02:26,000 --> 00:02:31,000
+So we've shown that any density matrix
+
+35
+00:02:31,000 --> 00:02:34,000
+is trace 1 positive semidefinite permission.
+
+36
+00:02:34,000 --> 00:02:37,000
+But the other way around holds as well.
+
+37
+00:02:37,000 --> 00:02:48,000
+
+
+38
+00:02:48,000 --> 00:03:00,000
+If m is Hermitian, then m is equal to summation lambda i
+
+39
+00:03:00,000 --> 00:03:08,000
+equals 1 through d, lambda i vi vi, where the v's of i
+
+40
+00:03:08,000 --> 00:03:10,000
+are eigenvectors.
+
+41
+00:03:10,000 --> 00:03:20,000
+
+
+42
+00:03:20,000 --> 00:03:25,000
+First, all the vi's are perpendicular,
+
+43
+00:03:25,000 --> 00:03:30,000
+so you can easily see that vi is an eigenvalue of this matrix
+
+44
+00:03:30,000 --> 00:03:31,000
+with--
+
+45
+00:03:31,000 --> 00:03:33,000
+eigenvalue of lambda i.
+
+46
+00:03:33,000 --> 00:03:36,000
+And, in fact, that's the unique matrix,
+
+47
+00:03:36,000 --> 00:03:43,000
+which has eigenvectors v's of i with eigenvalues lambda i.
+
+48
+00:03:43,000 --> 00:03:44,000
+Eigenvalues.
+
+49
+00:03:44,000 --> 00:03:53,000
+
+
+50
+00:03:53,000 --> 00:04:02,000
+So a matrix is a density matrix if, and only if, it's
+
+51
+00:04:02,000 --> 00:04:05,000
+positive semidefinite permission trace 1.
+
+52
+00:04:05,000 --> 00:04:07,000
+
+

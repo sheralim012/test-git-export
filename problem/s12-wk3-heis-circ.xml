@@ -1,0 +1,62 @@
+<problem linenum="676" tex_filename="./week3_4_ps2a.tex" attempts="10" display_name="Action of quantum gates on stabilizer states" max_attempts="10">
+  <script>
+import qpython4
+qpython4.define_qpython4_globals(globals())
+
+
+</script>
+  <p>
+Suppose [mathjaxinline]|\psi \rangle[/mathjaxinline] is stabilized by [mathjaxinline]{\cal S}[/mathjaxinline], such that [mathjaxinline]g|\psi \rangle  = |\psi \rangle[/mathjaxinline] for all [mathjaxinline]g\in {\cal S}[/mathjaxinline]. Then [mathjaxinline]|\phi \rangle  = U|\psi \rangle[/mathjaxinline] is stabilized by [mathjaxinline]{\cal S}' = U{\cal S}U^\dagger = \{ UgU^\dagger | g\in {\cal S}\}[/mathjaxinline], since </p>
+  <table id="a0000000015" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto">
+    <tr>
+      <td class="equation" style="width:80%; border:none">[mathjax]UgU^\dagger |\phi \rangle  = UgU^\dagger U|\psi \rangle  = U |\psi \rangle  = |\phi \rangle  \, .[/mathjax]</td>
+      <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.11)</td>
+    </tr>
+  </table>
+  <p>
+Thus, we may often gain deep appreciation into the operation of a quantum circuit [mathjaxinline]U[/mathjaxinline] by studying how it transforms stabilizer sets (by conjugation), rather than how it transforms general quantum states (by multiplication). This is analogous to the difference between the Heisenberg and Schrödinger pictures of quantum mechanics. </p>
+  <p>
+Consider the vector space [mathjaxinline]V = \{ |01\rangle +|10\rangle ,|00\rangle +|11\rangle \}[/mathjaxinline] stabilized by the generator set [mathjaxinline]{\cal S} = \langle XX\rangle[/mathjaxinline]. Give the new stabilizer [mathjaxinline]{\cal S}'[/mathjaxinline] resulting from operating on this two-qubit vector space with the following unitary gates. If the result is <em>not</em> a stabilizer space, enter <tt class="tt">None</tt>. Otherwise, enter the stabilizer as a list of generators, eg <tt class="tt">[IX,XI]</tt>. </p>
+  <ul class="itemize">
+    <li>
+      <p>
+        <p style="display:inline">[mathjaxinline]U = H^{\otimes 2} = H\otimes H[/mathjaxinline]:</p>
+        <customresponse cfn="check_stabilizer_equality" inline="1" expect="[ZZ]">
+          <textline size="20" correct_answer="[ZZ]" inline="1"/>
+        </customresponse>
+      </p>
+    </li>
+    <li>
+      <p>
+        <p style="display:inline">[mathjaxinline]U = S^{\otimes 2} = S\otimes S[/mathjaxinline]:</p>
+        <customresponse cfn="check_stabilizer_equality" inline="1" expect="[YY]">
+          <textline size="20" correct_answer="[YY]" inline="1"/>
+        </customresponse>
+      </p>
+    </li>
+    <li>
+      <p>
+        <p style="display:inline">[mathjaxinline]U = T^{\otimes 2} = T\otimes T[/mathjaxinline]:</p>
+        <customresponse cfn="sympy_formula_check" inline="1" expect="None" options="check_none=1" cfn_extra_args="options">
+          <textline size="20" correct_answer="None" inline="1"/>
+        </customresponse>
+      </p>
+    </li>
+    <li>
+      <p>
+        <p style="display:inline">[mathjaxinline]U = Z^{\otimes 2} = Z\otimes Z[/mathjaxinline]:</p>
+        <customresponse cfn="check_stabilizer_equality" inline="1" expect="[XX]">
+          <textline size="20" correct_answer="[XX]" inline="1"/>
+        </customresponse>
+      </p>
+    </li>
+    <li>
+      <p>
+        <p style="display:inline">[mathjaxinline]U = {\rm cnot} = ((I+Z)\otimes I + (I-Z)\otimes X)/2[/mathjaxinline]:</p>
+        <customresponse cfn="check_stabilizer_equality" inline="1" expect="[XI]">
+          <textline size="20" correct_answer="[XI]" inline="1"/>
+        </customresponse>
+      </p>
+    </li>
+  </ul>
+</problem>

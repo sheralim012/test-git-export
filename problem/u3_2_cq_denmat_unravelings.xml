@@ -1,0 +1,30 @@
+<problem linenum="69" tex_filename="./week1_review1.tex" attempts="1" display_name="Density matrix unravelings" max_attempts="1">
+  <p>
+This is a concept question, provided to check your understanding of the previous video clip. </p>
+  <p>
+Which of the following statements about <a href="https://en.wikipedia.org/wiki/Density_matrix" target="_blank">density matrices</a>, and their unravelings into ensembles of pure states, are correct? Check all that apply </p>
+  <p>
+    <choiceresponse>
+      <checkboxgroup>
+        <choice correct="false" name="1">
+          <text>Every density matrix has an infinite number of unravelings into different probabilistic ensembles of pure states.</text>
+        </choice>
+        <choice correct="true" name="2">
+          <text>Only mixed state density matrices have an infinite number of unravelings into different probabilistic ensembles of pure states.</text>
+        </choice>
+        <choice correct="false" name="3">
+          <text>Two different unravelings of a density matrix can be distinguished by an appropriate experiment, in principle.</text>
+        </choice>
+        <choice correct="true" name="4">
+          <text>Different unravelings of a density matrix can never be distinguished by an appropriate experiment.</text>
+        </choice>
+        <choice correct="true" name="5">
+          <text>Pure states can be represented by density matrices.</text>
+        </choice>
+        <choice correct="false" name="6">
+          <text>Density matrices only represent mixed states.</text>
+        </choice>
+      </checkboxgroup>
+    </choiceresponse>
+  </p>
+</problem>

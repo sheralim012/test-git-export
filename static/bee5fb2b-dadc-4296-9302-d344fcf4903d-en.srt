@@ -1,0 +1,204 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:04,000
+I want to say a little bit more about logical operators
+
+2
+00:00:04,000 --> 00:00:05,000
+in general.
+
+3
+00:00:05,000 --> 00:00:14,000
+So in general, if we have an n, k, d code,
+
+4
+00:00:14,000 --> 00:00:20,000
+then the normalizer is going to be generated
+
+5
+00:00:20,000 --> 00:00:32,000
+by S and two K more operators which
+
+6
+00:00:32,000 --> 00:00:36,000
+we could call logical X1, logical X2, et cetera.
+
+7
+00:00:36,000 --> 00:00:41,000
+Logical Z1, Z2, up to a logical Zk.
+
+8
+00:00:41,000 --> 00:00:53,000
+So these operators we can call the logical operators,
+
+9
+00:00:53,000 --> 00:00:58,000
+and you can also think of them as the uncorrectable errors.
+
+10
+00:00:58,000 --> 00:01:05,000
+
+
+11
+00:01:05,000 --> 00:01:08,000
+In each case, they represent the transformations
+
+12
+00:01:08,000 --> 00:01:10,000
+that you can make of the encoded data that
+
+13
+00:01:10,000 --> 00:01:12,000
+leave it within the subspace, the code subspace.
+
+14
+00:01:12,000 --> 00:01:17,000
+
+
+15
+00:01:17,000 --> 00:01:19,000
+So S is like the transformations that you
+
+16
+00:01:19,000 --> 00:01:21,000
+can make of the encoded data that leave it
+
+17
+00:01:21,000 --> 00:01:23,000
+in the code subspace and do nothing
+
+18
+00:01:23,000 --> 00:01:25,000
+to it, that act trivially.
+
+19
+00:01:25,000 --> 00:01:29,000
+These X's and Z's leave you within the subspace--
+
+20
+00:01:29,000 --> 00:01:32,000
+so they don't cause any stabilizers to change--
+
+21
+00:01:32,000 --> 00:01:34,000
+but they actually change your data.
+
+22
+00:01:34,000 --> 00:01:36,000
+And these two different terms for them
+
+23
+00:01:36,000 --> 00:01:37,000
+correspond to whether that's considered
+
+24
+00:01:37,000 --> 00:01:39,000
+a good or a bad thing.
+
+25
+00:01:39,000 --> 00:01:41,000
+If the environment does it, then that's
+
+26
+00:01:41,000 --> 00:01:43,000
+called an uncorrectable error, and I'm
+
+27
+00:01:43,000 --> 00:01:44,000
+unhappy that that happened.
+
+28
+00:01:44,000 --> 00:01:47,000
+If I do it deliberately, then it's
+
+29
+00:01:47,000 --> 00:01:48,000
+called a logical operation.
+
+30
+00:01:48,000 --> 00:01:51,000
+And that's what I expect to do in the course of running
+
+31
+00:01:51,000 --> 00:01:54,000
+my quantum computer, is manipulate my encoded data.
+
+32
+00:01:54,000 --> 00:01:59,000
+So I want the encoded data to change, just on my terms.
+
+33
+00:01:59,000 --> 00:02:01,000
+So then I call it a logical operation.
+
+34
+00:02:01,000 --> 00:02:07,000
+
+
+35
+00:02:07,000 --> 00:02:16,000
+So we saw an example where there was just one logical operator.
+
+36
+00:02:16,000 --> 00:02:18,000
+But in general, if you have K encoded cubits,
+
+37
+00:02:18,000 --> 00:02:22,000
+then you'll have K X's and K Z's.
+
+38
+00:02:22,000 --> 00:02:27,000
+And in the example we saw, the X and Z anti-commuted.
+
+39
+00:02:27,000 --> 00:02:38,000
+Here, we should have that Xi bar Zj bar is equal to minus 1
+
+40
+00:02:38,000 --> 00:02:44,000
+to the delta ij Zj bar Xi bar.
+
+41
+00:02:44,000 --> 00:02:46,000
+In other words, they anti-commute only
+
+42
+00:02:46,000 --> 00:02:47,000
+on the same position.
+
+43
+00:02:47,000 --> 00:02:49,000
+Otherwise, they commute.
+
+44
+00:02:49,000 --> 00:02:57,000
+And of course, all of the X's commute with each other,
+
+45
+00:02:57,000 --> 00:02:59,000
+and all of the Z's commute with each other.
+
+46
+00:02:59,000 --> 00:03:03,000
+This is what it means to be a set of operators
+
+47
+00:03:03,000 --> 00:03:06,000
+that have the commutation relations as the polys.
+
+48
+00:03:06,000 --> 00:03:07,000
+They have this.
+
+49
+00:03:07,000 --> 00:03:10,000
+Then I can say that these are like the poly matrices.
+
+50
+00:03:10,000 --> 00:03:11,000
+
+

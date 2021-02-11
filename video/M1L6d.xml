@@ -1,0 +1,8 @@
+<video youtube="1.00:KG4bBad4yxA" url_name="M1L6d" sub="" transcripts="{&quot;en&quot;: &quot;da03ee46-3249-4a90-afc7-bab36888f578-en.srt&quot;}" display_name="The five-qubit code - error correction" edx_video_id="da03ee46-3249-4a90-afc7-bab36888f578" youtube_id_1_0="KG4bBad4yxA">
+  <video_asset client_video_id="External Video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="da03ee46-3249-4a90-afc7-bab36888f578-en.srt"/>
+</video>

@@ -1,0 +1,572 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:05,000
+For classical codes, we had that a code, let's say, C classical,
+
+2
+00:00:05,000 --> 00:00:10,000
+is a subset of 0, 1 to the n.
+
+3
+00:00:10,000 --> 00:00:13,000
+A quantum code, I'll call it C, is
+
+4
+00:00:13,000 --> 00:00:21,000
+a subspace of the space of all n qubit states.
+
+5
+00:00:21,000 --> 00:00:23,000
+And when I write less than or equal to here,
+
+6
+00:00:23,000 --> 00:00:26,000
+it really depends on context.
+
+7
+00:00:26,000 --> 00:00:27,000
+But what I'm talking about vector spaces,
+
+8
+00:00:27,000 --> 00:00:38,000
+this means that we have a linear subspace.
+
+9
+00:00:38,000 --> 00:00:45,000
+And this is already, you could say, a non-trivial assumption.
+
+10
+00:00:45,000 --> 00:00:51,000
+I've already ruled out some kind of nonlinear encoding,
+
+11
+00:00:51,000 --> 00:00:53,000
+like the encoding--
+
+12
+00:00:53,000 --> 00:00:56,000
+
+
+13
+00:00:56,000 --> 00:01:05,000
+let's say I have an encoding map that takes psi tensor psi.
+
+14
+00:01:05,000 --> 00:01:07,000
+This is not a linear encoding.
+
+15
+00:01:07,000 --> 00:01:11,000
+The image of this is not a linear vector space.
+
+16
+00:01:11,000 --> 00:01:15,000
+So this is not an allowable quantum code.
+
+17
+00:01:15,000 --> 00:01:16,000
+By the standard definition.
+
+18
+00:01:16,000 --> 00:01:20,000
+
+
+19
+00:01:20,000 --> 00:01:21,000
+You could imagine things like this
+
+20
+00:01:21,000 --> 00:01:24,000
+might be useful for detecting quantum information.
+
+21
+00:01:24,000 --> 00:01:26,000
+But they also present a lot of problems.
+
+22
+00:01:26,000 --> 00:01:30,000
+And so I'm generally not going to explore them in this class.
+
+23
+00:01:30,000 --> 00:01:31,000
+OK.
+
+24
+00:01:31,000 --> 00:01:36,000
+So that's our first key assumption about them.
+
+25
+00:01:36,000 --> 00:01:38,000
+
+
+26
+00:01:38,000 --> 00:01:45,000
+And then-- once you have a linear subspace, then, just
+
+27
+00:01:45,000 --> 00:01:46,000
+like in classical codes, we can talk
+
+28
+00:01:46,000 --> 00:01:50,000
+about encoding and decoding maps.
+
+29
+00:01:50,000 --> 00:01:51,000
+So the encoding map--
+
+30
+00:01:51,000 --> 00:01:56,000
+
+
+31
+00:01:56,000 --> 00:01:58,000
+in general, it could be a quantum operation,
+
+32
+00:01:58,000 --> 00:02:03,000
+but we might as well just think of it as an isometry.
+
+33
+00:02:03,000 --> 00:02:14,000
+So an isometry, call it E, that maps a k qubit space
+
+34
+00:02:14,000 --> 00:02:16,000
+to an n qubit space.
+
+35
+00:02:16,000 --> 00:02:25,000
+So we say that C encodes k qubits.
+
+36
+00:02:25,000 --> 00:02:29,000
+So since our-- and we can write, C, of course,
+
+37
+00:02:29,000 --> 00:02:35,000
+is the image of the encoding map.
+
+38
+00:02:35,000 --> 00:02:40,000
+Because our code is linear, we can also specify it this way.
+
+39
+00:02:40,000 --> 00:02:42,000
+Of course, just like in the classical case,
+
+40
+00:02:42,000 --> 00:02:45,000
+we would like that E can be done efficiently,
+
+41
+00:02:45,000 --> 00:02:48,000
+but mathematically, we can still define codes even if it's hard
+
+42
+00:02:48,000 --> 00:02:52,000
+to implement these E's.
+
+43
+00:02:52,000 --> 00:02:54,000
+For example, in the classical case, we talked about--
+
+44
+00:02:54,000 --> 00:02:57,000
+you could imagine a code that's just a random set.
+
+45
+00:02:57,000 --> 00:02:59,000
+In the quantum case, you can get pretty far
+
+46
+00:02:59,000 --> 00:03:02,000
+by imagining a code that's a random subspace.
+
+47
+00:03:02,000 --> 00:03:05,000
+They have very nice information theoretic properties,
+
+48
+00:03:05,000 --> 00:03:06,000
+even if they're hard to construct.
+
+49
+00:03:06,000 --> 00:03:12,000
+
+
+50
+00:03:12,000 --> 00:03:14,000
+So we have an encoding map.
+
+51
+00:03:14,000 --> 00:03:21,000
+We should also have a decoding map.
+
+52
+00:03:21,000 --> 00:03:24,000
+
+
+53
+00:03:24,000 --> 00:03:25,000
+And it's sort of conventional to refer
+
+54
+00:03:25,000 --> 00:03:33,000
+to this not as D but as R, so we could call it a recovery map.
+
+55
+00:03:33,000 --> 00:03:34,000
+There's nothing special about the term,
+
+56
+00:03:34,000 --> 00:03:36,000
+it's just conventional.
+
+57
+00:03:36,000 --> 00:03:54,000
+And so R is a quantum operation that
+
+58
+00:03:54,000 --> 00:03:56,000
+takes in a density matrix on your code space
+
+59
+00:03:56,000 --> 00:04:07,000
+and outputs the density matrix on your original--
+
+60
+00:04:07,000 --> 00:04:10,000
+
+
+61
+00:04:10,000 --> 00:04:11,000
+actually, I'm sorry.
+
+62
+00:04:11,000 --> 00:04:15,000
+I think I-- sorry, let me change this.
+
+63
+00:04:15,000 --> 00:04:19,000
+Let me use the term recovery to mean something else.
+
+64
+00:04:19,000 --> 00:04:22,000
+And I will use D for decoding map.
+
+65
+00:04:22,000 --> 00:04:27,000
+
+
+66
+00:04:27,000 --> 00:04:30,000
+Since I've introduced recovery, let me now mention what I--
+
+67
+00:04:30,000 --> 00:04:32,000
+the way that I want to use recovery.
+
+68
+00:04:32,000 --> 00:04:36,000
+So we can also define the recovery map
+
+69
+00:04:36,000 --> 00:04:42,000
+R that keeps your space the same dimension.
+
+70
+00:04:42,000 --> 00:04:45,000
+
+
+71
+00:04:45,000 --> 00:04:49,000
+And where the goal is to take some encoded data that
+
+72
+00:04:49,000 --> 00:04:52,000
+has had noise applied to it and get rid of the noise,
+
+73
+00:04:52,000 --> 00:04:55,000
+while leaving the data encoded.
+
+74
+00:04:55,000 --> 00:05:06,000
+So-- I'll say in a minute how those should apply.
+
+75
+00:05:06,000 --> 00:05:09,000
+
+
+76
+00:05:09,000 --> 00:05:12,000
+To talk about how the decoding and recovery
+
+77
+00:05:12,000 --> 00:05:16,000
+maps should operate, I have to talk about noise.
+
+78
+00:05:16,000 --> 00:05:18,000
+So the idea of both of these is that they
+
+79
+00:05:18,000 --> 00:05:27,000
+should correct some noise N, which,
+
+80
+00:05:27,000 --> 00:05:31,000
+of course, is a quantum operation that
+
+81
+00:05:31,000 --> 00:05:32,000
+acts on the encoded data.
+
+82
+00:05:32,000 --> 00:05:36,000
+
+
+83
+00:05:36,000 --> 00:05:39,000
+And in the classical case, we've said, you take k bits,
+
+84
+00:05:39,000 --> 00:05:42,000
+you map them to n bits, you do some noise on the n bits,
+
+85
+00:05:42,000 --> 00:05:44,000
+and then you can correctly map them back
+
+86
+00:05:44,000 --> 00:05:46,000
+to the original k bits.
+
+87
+00:05:46,000 --> 00:05:53,000
+And so that-- the same condition for quantum codes, so quantum--
+
+88
+00:05:53,000 --> 00:06:00,000
+
+
+89
+00:06:00,000 --> 00:06:02,000
+What quantum error correction looks
+
+90
+00:06:02,000 --> 00:06:11,000
+like is that, if I start with the state rho, I encode it.
+
+91
+00:06:11,000 --> 00:06:12,000
+Actually, let me just--
+
+92
+00:06:12,000 --> 00:06:17,000
+
+
+93
+00:06:17,000 --> 00:06:20,000
+hope this doesn't abuse notation too much.
+
+94
+00:06:20,000 --> 00:06:24,000
+Maybe I'll use a script E to mean
+
+95
+00:06:24,000 --> 00:06:28,000
+the encoding super operator, whereas just regular capital
+
+96
+00:06:28,000 --> 00:06:30,000
+E is the isometry.
+
+97
+00:06:30,000 --> 00:06:36,000
+So if I encode rho, then apply noise to it,
+
+98
+00:06:36,000 --> 00:06:43,000
+and then decode it, I should recover my original state rho.
+
+99
+00:06:43,000 --> 00:06:43,000
+OK.
+
+100
+00:06:43,000 --> 00:06:47,000
+So that's the quantum analog of what
+
+101
+00:06:47,000 --> 00:06:48,000
+we saw for classical error correcting code,
+
+102
+00:06:48,000 --> 00:06:50,000
+to be able to correct a set of errors.
+
+103
+00:06:50,000 --> 00:06:52,000
+This is what it means for quantum code
+
+104
+00:06:52,000 --> 00:06:53,000
+to be able to correct a set of errors.
+
+105
+00:06:53,000 --> 00:06:56,000
+
+
+106
+00:06:56,000 --> 00:06:59,000
+And the difference between the decoding and recovery map
+
+107
+00:06:59,000 --> 00:07:04,000
+is the decoding is supposed to spit out the original state.
+
+108
+00:07:04,000 --> 00:07:07,000
+And the recovery map is supposed to output the encoded state
+
+109
+00:07:07,000 --> 00:07:09,000
+without noise.
+
+110
+00:07:09,000 --> 00:07:09,000
+So the recovery map--
+
+111
+00:07:09,000 --> 00:07:12,000
+
+
+112
+00:07:12,000 --> 00:07:15,000
+again, you apply it to the encoding
+
+113
+00:07:15,000 --> 00:07:17,000
+of the state followed by noise.
+
+114
+00:07:17,000 --> 00:07:22,000
+But now, it's supposed to spit out the encoded state.
+
+115
+00:07:22,000 --> 00:07:25,000
+
+
+116
+00:07:25,000 --> 00:07:27,000
+Can anyone think of an example why this would be preferable?
+
+117
+00:07:27,000 --> 00:07:31,000
+Why do you prefer the recovery map over the decoding map?
+
+118
+00:07:31,000 --> 00:07:37,000
+Because after all, you want to operate on the original data.
+
+119
+00:07:37,000 --> 00:07:40,000
+Why would I want to not go all the way there and just
+
+120
+00:07:40,000 --> 00:07:42,000
+recover, not actually decode?
+
+121
+00:07:42,000 --> 00:07:42,000
+That's right.
+
+122
+00:07:42,000 --> 00:07:45,000
+So if you think you're going to incur further noise,
+
+123
+00:07:45,000 --> 00:07:47,000
+you don't want to go all the way to this unprotected state,
+
+124
+00:07:47,000 --> 00:07:50,000
+you want to keep it protected, like in the relaying signal
+
+125
+00:07:50,000 --> 00:07:51,000
+example.
+
+126
+00:07:51,000 --> 00:07:55,000
+And a closely related example is computing.
+
+127
+00:07:55,000 --> 00:07:59,000
+So if I'm doing fault tolerant quantum computing,
+
+128
+00:07:59,000 --> 00:08:01,000
+I want to work with encoded data.
+
+129
+00:08:01,000 --> 00:08:05,000
+And that's going to protect it against noise.
+
+130
+00:08:05,000 --> 00:08:08,000
+Once some noise occurs, I want to get rid of the noise,
+
+131
+00:08:08,000 --> 00:08:10,000
+but unless I'm at the end of the computation,
+
+132
+00:08:10,000 --> 00:08:12,000
+I don't want to actually decode.
+
+133
+00:08:12,000 --> 00:08:15,000
+I want to keep it encoded, just get rid of the noise,
+
+134
+00:08:15,000 --> 00:08:18,000
+and so just do a recovery map.
+
+135
+00:08:18,000 --> 00:08:20,000
+In fact, it turns out, in fault tolerant quantum computing,
+
+136
+00:08:20,000 --> 00:08:23,000
+you'll never decode.
+
+137
+00:08:23,000 --> 00:08:25,000
+At the end, when you are ready to measure it,
+
+138
+00:08:25,000 --> 00:08:28,000
+you'll do a measurement directly on the encoded state.
+
+139
+00:08:28,000 --> 00:08:30,000
+We'll talk a bit later how that works.
+
+140
+00:08:30,000 --> 00:08:35,000
+And you'll only do recovery maps.
+
+141
+00:08:35,000 --> 00:08:37,000
+In fact, in some cases, you don't even encode either.
+
+142
+00:08:37,000 --> 00:08:40,000
+
+

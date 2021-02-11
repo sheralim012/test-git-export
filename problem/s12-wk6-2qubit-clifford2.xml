@@ -1,0 +1,72 @@
+<problem linenum="83" tex_filename="./week4_5_ps2b.tex" attempts="10" display_name="Two-qubit Clifford circuits II" max_attempts="10">
+  <script>
+import qpython4
+qpython4.define_qpython4_globals(globals())
+
+
+</script>
+  <ol class="enumerate">
+    <li value="1">
+      <p>
+All Clifford circuits may be constructed from just three gates: [mathjaxinline]H[/mathjaxinline], [mathjaxinline]S[/mathjaxinline], and CNOT. Let [mathjaxinline]C(U)[/mathjaxinline] denote a two-qubit controlled [mathjaxinline]U[/mathjaxinline] operation, with qubit [mathjaxinline]0[/mathjaxinline] being the target and qubit [mathjaxinline]1[/mathjaxinline] being the control, which acts as </p>
+      <table id="a0000000002" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto">
+        <tr>
+          <td class="equation" style="width:80%; border:none">[mathjax]C(U) = \left[ \begin{array}{cc}{I}&amp; {0}\\ {0}&amp; {U}\end{array}\right] \, ,[/mathjax]</td>
+          <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.1)</td>
+        </tr>
+      </table>
+      <p>
+where [mathjaxinline]U[/mathjaxinline] is a single-qubit gate, and the entries in this matrix are each [mathjaxinline]2\times 2[/mathjaxinline] matrices, acting on qubit 0. Thus, for example, [mathjaxinline]C(X)[/mathjaxinline] is the CNOT gate <tt class="tt">CNOT(1,0)</tt>. </p>
+      <ul class="itemize">
+        <li>
+          <p>
+Give a Clifford circuit for [mathjaxinline]C(Z)[/mathjaxinline]. Input your answer as a list of gates, eg <tt class="tt">[H(1),CNOT(1,0)]</tt>, where the gates in the circuit are applied in the order listed, from left to right. You may use <tt class="tt">X</tt>, <tt class="tt">Y</tt>, <tt class="tt">Z</tt>, <tt class="tt">H</tt>, <tt class="tt">S</tt>, and <tt class="tt">CNOT</tt> gates. For <tt class="tt">CNOT(1,0)</tt>, qubit [mathjaxinline]1[/mathjaxinline] is the control, and qubit [mathjaxinline]0[/mathjaxinline] is the target. </p>
+          <p>
+            <p style="display:inline">[mathjaxinline]C(Z) =[/mathjaxinline]</p>
+            <span>
+              <customresponse cfn="cfn_wrap_6df8bacb4e" inline="1" expect="$expect_wrap_6df8bacb4e" options="nqubits=2;SKIPMAT=1" cfn_extra_args="options">
+                <textline size="60" correct_answer="$ans_6df8bacb4e_1" inline="1"/>
+              </customresponse>
+              <script type="text/python" system_path="python_lib">
+
+import subtext2
+wrap_6df8bacb4e = subtext2.Subtext(debug=True,sanitize_allow_lists=False)
+ans_6df8bacb4e_1 = wrap_6df8bacb4e.answer('''[H(0),CNOT(1,0),H(0)]''')
+expect_wrap_6df8bacb4e = wrap_6df8bacb4e.answer('''[H(0),CNOT(1,0),H(0)]''')
+
+@wrap_6df8bacb4e.grader
+def cfn_wrap_6df8bacb4e(expect, ans, **kwargs):
+    return check_clifford_circuit_eq(expect, ans, **kwargs)
+
+</script>
+            </span>
+          </p>
+        </li>
+        <li>
+          <p>
+Give a Clifford circuit for [mathjaxinline]C(Y)[/mathjaxinline]: </p>
+          <p>
+            <p style="display:inline">[mathjaxinline]C(Y) =[/mathjaxinline]</p>
+            <span>
+              <customresponse cfn="cfn_wrap_5d908e6787" inline="1" expect="$expect_wrap_5d908e6787" options="nqubits=2;SKIPMAT=1" cfn_extra_args="options">
+                <textline size="60" correct_answer="$ans_5d908e6787_1" inline="1"/>
+              </customresponse>
+              <script type="text/python" system_path="python_lib">
+
+import subtext2
+wrap_5d908e6787 = subtext2.Subtext(debug=True,sanitize_allow_lists=False)
+ans_5d908e6787_1 = wrap_5d908e6787.answer('''[S(0),S(0),S(0),CNOT(1,0),S(0)]''')
+expect_wrap_5d908e6787 = wrap_5d908e6787.answer('''[S(0),S(0),S(0),CNOT(1,0),S(0)]''')
+
+@wrap_5d908e6787.grader
+def cfn_wrap_5d908e6787(expect, ans, **kwargs):
+    return check_clifford_circuit_eq(expect, ans, **kwargs)
+
+</script>
+            </span>
+          </p>
+        </li>
+      </ul>
+    </li>
+  </ol>
+</problem>

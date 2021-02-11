@@ -1,0 +1,82 @@
+<problem linenum="717" tex_filename="./week3_4_ps2a.tex" attempts="10" display_name="Action of quantum gates on stabilizer states II" max_attempts="10">
+  <script>
+import qpython4
+qpython4.define_qpython4_globals(globals())
+
+
+</script>
+  <p>
+Consider the vector space [mathjaxinline]V[/mathjaxinline] stabilized by [mathjaxinline]{\cal S} = \langle g_1,g_2,g_3\rangle[/mathjaxinline], where </p>
+  <table id="a0000000016" class="eqnarray" cellspacing="0" cellpadding="7" width="100%" style="table-layout:auto">
+    <tr id="a0000000017">
+      <td style="width:40%; border:none"> </td>
+      <td style="vertical-align:middle;                                    text-align:right; border:none">
+	    [mathjaxinline]\displaystyle g_1[/mathjaxinline]
+        </td>
+      <td style="vertical-align:middle;                                    text-align:center; border:none">
+	    [mathjaxinline]\displaystyle =[/mathjaxinline]
+        </td>
+      <td style="vertical-align:middle;                                    text-align:left; border:none">
+	    [mathjaxinline]\displaystyle  {\tt IIZZ}[/mathjaxinline]
+        </td>
+      <td style="width:40%; border:none"> </td>
+      <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.12)</td>
+    </tr>
+    <tr id="a0000000018">
+      <td style="width:40%; border:none"> </td>
+      <td style="vertical-align:middle;                                    text-align:right; border:none">
+	    [mathjaxinline]\displaystyle g_2[/mathjaxinline]
+        </td>
+      <td style="vertical-align:middle;                                    text-align:center; border:none">
+	    [mathjaxinline]\displaystyle =[/mathjaxinline]
+        </td>
+      <td style="vertical-align:middle;                                    text-align:left; border:none">
+	    [mathjaxinline]\displaystyle  {\tt ZZII}[/mathjaxinline]
+        </td>
+      <td style="width:40%; border:none"> </td>
+      <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.13)</td>
+    </tr>
+    <tr id="a0000000019">
+      <td style="width:40%; border:none"> </td>
+      <td style="vertical-align:middle;                                    text-align:right; border:none">
+	    [mathjaxinline]\displaystyle g_3[/mathjaxinline]
+        </td>
+      <td style="vertical-align:middle;                                    text-align:center; border:none">
+	    [mathjaxinline]\displaystyle =[/mathjaxinline]
+        </td>
+      <td style="vertical-align:middle;                                    text-align:left; border:none">
+	    [mathjaxinline]\displaystyle  {\tt XXXX} \, .[/mathjaxinline]
+        </td>
+      <td style="width:40%; border:none"> </td>
+      <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.14)</td>
+    </tr>
+  </table>
+  <p>
+Give the new stabilizer [mathjaxinline]{\cal S}'[/mathjaxinline] resulting from operating on this four qubit vector space with the following unitary gates. If the result is <em>not</em> a stabilizer space, enter <tt class="tt">None</tt>. Otherwise, enter the stabilizer as a list of generators, eg <tt class="tt">[IX,XI]</tt>. </p>
+  <ul class="itemize">
+    <li>
+      <p>
+        <p style="display:inline">[mathjaxinline]U_1 = H^{\otimes 4}[/mathjaxinline]:</p>
+        <customresponse cfn="check_stabilizer_equality" inline="1" expect="[IIXX,XXII,ZZZZ]">
+          <textline size="60" correct_answer="[IIXX,XXII,ZZZZ]" inline="1"/>
+        </customresponse>
+      </p>
+    </li>
+    <li>
+      <p>
+        <p style="display:inline">[mathjaxinline]U_2 = S^{\otimes 4}[/mathjaxinline]:</p>
+        <customresponse cfn="check_stabilizer_equality" inline="1" expect="[ZZII,IIZZ,YYYY]">
+          <textline size="60" correct_answer="[ZZII,IIZZ,YYYY]" inline="1"/>
+        </customresponse>
+      </p>
+    </li>
+    <li>
+      <p>
+        <p style="display:inline">[mathjaxinline]U_3 = Z^{\otimes 4} = Z\otimes Z \otimes Z \otimes Z[/mathjaxinline]:</p>
+        <customresponse cfn="check_stabilizer_equality" inline="1" expect="[ZZII,IIZZ,XXXX]">
+          <textline size="60" correct_answer="[ZZII,IIZZ,XXXX]" inline="1"/>
+        </customresponse>
+      </p>
+    </li>
+  </ul>
+</problem>

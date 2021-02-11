@@ -1,0 +1,7 @@
+<sequential display_name="PS#2 - Bipartite states and quantum channels" due="&quot;2918-06-15T23:57:00+00:00&quot;" format="PS" graceperiod="18000 seconds" graded="true" showanswer="closed" start="&quot;2017-09-06T00:00:00+00:00&quot;" attempts="10" tex_filename="./week2_ps2.tex" linenum="5" refnum="3">
+  <vertical url_name="Schmidt_decomposition"/>
+  <vertical url_name="Trace_distance"/>
+  <vertical url_name="TPCP_maps_are_quantum_operations"/>
+  <vertical url_name="Quantum_channels"/>
+  <vertical url_name="Introduction_to_amplitude_damping"/>
+</sequential>

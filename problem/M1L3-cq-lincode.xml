@@ -1,0 +1,27 @@
+<problem linenum="149" tex_filename="./week3_lectures3.tex" attempts="1" display_name="Linear codes" max_attempts="1">
+  <p>
+This is a concept question, provided to check your understanding of the previous video clip. </p>
+  <p>
+Check all the following which are true about [mathjaxinline][n, k, d][/mathjaxinline] <a href="https://en.wikipedia.org/wiki/Linear_code" target="_blank">classical linear codes</a>: </p>
+  <p>
+    <choiceresponse>
+      <checkboxgroup>
+        <choice correct="false" name="1">
+          <text>[mathjaxinline]k[/mathjaxinline] is the number of bits used to encode the [mathjaxinline]n[/mathjaxinline] bits of information.</text>
+        </choice>
+        <choice correct="true" name="2">
+          <text>[mathjaxinline]n[/mathjaxinline] is the number of bits used to encode [mathjaxinline]k[/mathjaxinline] bits of information.</text>
+        </choice>
+        <choice correct="false" name="3">
+          <text>[mathjaxinline]d[/mathjaxinline] is the number of errors which the code can correct.</text>
+        </choice>
+        <choice correct="true" name="4">
+          <text>[mathjaxinline]t=\lfloor (d-1)/2 \rfloor[/mathjaxinline] is the number of errors which the code can correct.</text>
+        </choice>
+        <choice correct="true" name="5">
+          <text>When the generator matrix [mathjaxinline]G[/mathjaxinline] is expressed as an [mathjaxinline]n\times k[/mathjaxinline] matrix, each column is a codeword.</text>
+        </choice>
+      </checkboxgroup>
+    </choiceresponse>
+  </p>
+</problem>

@@ -1,0 +1,156 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:04,000
+The term stabilizer is used in quantum information
+
+2
+00:00:04,000 --> 00:00:08,000
+in sometimes a slightly misleading way.
+
+3
+00:00:08,000 --> 00:00:11,000
+And let me-- I'll show you how that is in a minute.
+
+4
+00:00:11,000 --> 00:00:16,000
+It's often used to mean two things,
+
+5
+00:00:16,000 --> 00:00:18,000
+but the first is, it's often used to mean
+
+6
+00:00:18,000 --> 00:00:20,000
+a subgroup of the poly group.
+
+7
+00:00:20,000 --> 00:00:21,000
+So let me begin by defining.
+
+8
+00:00:21,000 --> 00:00:24,000
+
+
+9
+00:00:24,000 --> 00:00:40,000
+P sub n will be the real-valued Paulis on n qubits.
+
+10
+00:00:40,000 --> 00:00:42,000
+So what do I mean by that?
+
+11
+00:00:42,000 --> 00:00:53,000
+What I mean is, plus or minus identity, X, iY, and Z,
+
+12
+00:00:53,000 --> 00:00:57,000
+then the n-fold tensor power of this.
+
+13
+00:00:57,000 --> 00:00:58,000
+So I have n qubits.
+
+14
+00:00:58,000 --> 00:01:03,000
+I can have, on each qubit, either identity, X, iY, or Z.
+
+15
+00:01:03,000 --> 00:01:07,000
+And I can also have an overall phase of plus or minus.
+
+16
+00:01:07,000 --> 00:01:12,000
+I'm putting the iY here because I want to deal only
+
+17
+00:01:12,000 --> 00:01:16,000
+with real-valued matrices.
+
+18
+00:01:16,000 --> 00:01:19,000
+And you can check that this is a closed group, right?
+
+19
+00:01:19,000 --> 00:01:23,000
+If I multiply X times Z, I get iY.
+
+20
+00:01:23,000 --> 00:01:29,000
+If I multiply x times iY, I get minus
+
+21
+00:01:29,000 --> 00:01:33,000
+Z. So I never-- if I multiply two real-valued Pauli matrices,
+
+22
+00:01:33,000 --> 00:01:35,000
+I get something else which is real.
+
+23
+00:01:35,000 --> 00:01:37,000
+
+
+24
+00:01:37,000 --> 00:01:41,000
+And this avoids me having to deal with imaginary numbers.
+
+25
+00:01:41,000 --> 00:01:43,000
+Which is not really a big deal-- all of this stuff could go
+
+26
+00:01:43,000 --> 00:01:46,000
+through with imaginaries--
+
+27
+00:01:46,000 --> 00:01:49,000
+it's just slightly simpler to not use them.
+
+28
+00:01:49,000 --> 00:02:06,000
+So this is a group, meaning it's closed under multiplication
+
+29
+00:02:06,000 --> 00:02:12,000
+and contains inverses.
+
+30
+00:02:12,000 --> 00:02:17,000
+In fact, every element of this group is its own inverse.
+
+31
+00:02:17,000 --> 00:02:19,000
+And it's, of course, not a commuting group-- you know,
+
+32
+00:02:19,000 --> 00:02:21,000
+the Paulis do not commute with each other.
+
+33
+00:02:21,000 --> 00:02:30,000
+And what a stabilizer--
+
+34
+00:02:30,000 --> 00:02:35,000
+
+
+35
+00:02:35,000 --> 00:02:37,000
+so we'll talk about many stabilizer-related things.
+
+36
+00:02:37,000 --> 00:02:48,000
+A stabilizer subgroup is a subgroup of the Pauli matrices
+
+37
+00:02:48,000 --> 00:02:51,000
+with various properties.
+
+38
+00:02:51,000 --> 00:02:56,000
+
+

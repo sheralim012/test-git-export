@@ -1,0 +1,380 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:01,000
+So let me just summarize.
+
+2
+00:00:01,000 --> 00:00:03,000
+Sometimes called generalized measurements,
+
+3
+00:00:03,000 --> 00:00:05,000
+as opposed to the von Neumann measure in a basis.
+
+4
+00:00:05,000 --> 00:00:17,000
+Our collection is M1 through Mn, that sum to identity
+
+5
+00:00:17,000 --> 00:00:20,000
+at our positive semi-definite.
+
+6
+00:00:20,000 --> 00:00:22,000
+I mention these in part because they're
+
+7
+00:00:22,000 --> 00:00:24,000
+are an application of the quantum operation formalism.
+
+8
+00:00:24,000 --> 00:00:28,000
+But you could also think of them as taking you
+
+9
+00:00:28,000 --> 00:00:29,000
+outside of quantum states.
+
+10
+00:00:29,000 --> 00:00:32,000
+So if you have a view of the world in which some things are
+
+11
+00:00:32,000 --> 00:00:34,000
+classical, like things we can see and manipulate,
+
+12
+00:00:34,000 --> 00:00:37,000
+and some things are quantum, and to get out,
+
+13
+00:00:37,000 --> 00:00:40,000
+you need to get a classical answer out of the lab
+
+14
+00:00:40,000 --> 00:00:42,000
+by making a measurement, then you could ask,
+
+15
+00:00:42,000 --> 00:00:44,000
+what is the most general measurement formalism
+
+16
+00:00:44,000 --> 00:00:45,000
+we could have?
+
+17
+00:00:45,000 --> 00:00:48,000
+And this is it, a nice application of the quantum
+
+18
+00:00:48,000 --> 00:00:52,000
+operations formalism.
+
+19
+00:00:52,000 --> 00:00:52,000
+Yeah?
+
+20
+00:00:52,000 --> 00:00:53,000
+[INAUDIBLE]
+
+21
+00:00:53,000 --> 00:00:53,000
+Right.
+
+22
+00:00:53,000 --> 00:00:56,000
+So in case you couldn't hear the question,
+
+23
+00:00:56,000 --> 00:00:58,000
+I'll paraphrase by saying, what about
+
+24
+00:00:58,000 --> 00:00:59,000
+the post-measurement state.
+
+25
+00:00:59,000 --> 00:01:02,000
+So one feature of measurement you've learned in quantum
+
+26
+00:01:02,000 --> 00:01:03,000
+mechanics is collapse.
+
+27
+00:01:03,000 --> 00:01:07,000
+Not only do you get an outcome, but the state is modified.
+
+28
+00:01:07,000 --> 00:01:10,000
+So I have, in a sense, given an answer
+
+29
+00:01:10,000 --> 00:01:12,000
+to how this state is modified here.
+
+30
+00:01:12,000 --> 00:01:16,000
+And the answer is that the state is completely destroyed.
+
+31
+00:01:16,000 --> 00:01:20,000
+The output of this thing is not a residual quantum state
+
+32
+00:01:20,000 --> 00:01:21,000
+and a measurement outcome.
+
+33
+00:01:21,000 --> 00:01:24,000
+The output of this thing is just the classical measurement
+
+34
+00:01:24,000 --> 00:01:25,000
+outcome.
+
+35
+00:01:25,000 --> 00:01:27,000
+This corresponds to the type of measurement
+
+36
+00:01:27,000 --> 00:01:30,000
+that, let's say, a photon detector does.
+
+37
+00:01:30,000 --> 00:01:32,000
+After the photon detector figures out
+
+38
+00:01:32,000 --> 00:01:36,000
+if there's a photon there or not, the photon is gone.
+
+39
+00:01:36,000 --> 00:01:39,000
+If you had more questions about its polarization,
+
+40
+00:01:39,000 --> 00:01:41,000
+it's too late.
+
+41
+00:01:41,000 --> 00:01:44,000
+But you could also ask about a non-demolition measurement, one
+
+42
+00:01:44,000 --> 00:01:47,000
+that extracts the information, but leaves as much
+
+43
+00:01:47,000 --> 00:01:49,000
+of the quantum state behind as possible.
+
+44
+00:01:49,000 --> 00:02:09,000
+And this actually is a nice consequence of the Kraus
+
+45
+00:02:09,000 --> 00:02:10,000
+operator conditions.
+
+46
+00:02:10,000 --> 00:02:15,000
+Make sure I'm not fully erasing.
+
+47
+00:02:15,000 --> 00:02:21,000
+And you can write a non-demolition measurement
+
+48
+00:02:21,000 --> 00:02:26,000
+as follows, as a mixture of these two pictures.
+
+49
+00:02:26,000 --> 00:02:38,000
+So it'll be sum over e Ve rho Ve dagger tensor e.
+
+50
+00:02:38,000 --> 00:02:41,000
+So this is the residual quantum state,
+
+51
+00:02:41,000 --> 00:02:44,000
+and this is the measurement outcome.
+
+52
+00:02:44,000 --> 00:02:46,000
+And if you want to get probabilities into this,
+
+53
+00:02:46,000 --> 00:02:48,000
+we can write this as follows.
+
+54
+00:02:48,000 --> 00:02:56,000
+Sum over e Ve rho Ve dagger divided by trace Ve rho Ve
+
+55
+00:02:56,000 --> 00:03:11,000
+dagger tensor trace Ve rho Ve dagger times cat e.
+
+56
+00:03:11,000 --> 00:03:14,000
+Now, this is the normalized state.
+
+57
+00:03:14,000 --> 00:03:17,000
+Let's leave aside-- some of the probabilities are 0.
+
+58
+00:03:17,000 --> 00:03:19,000
+Let's say they don't appear in the sum.
+
+59
+00:03:19,000 --> 00:03:22,000
+Now I'm left with a normalized quantum state,
+
+60
+00:03:22,000 --> 00:03:26,000
+and these are now numbers, real numbers.
+
+61
+00:03:26,000 --> 00:03:31,000
+And in fact, if you look at what these numbers are,
+
+62
+00:03:31,000 --> 00:03:39,000
+trace Ve rho Ve dagger is equal to trace Ve dagger Ve rho.
+
+63
+00:03:39,000 --> 00:03:43,000
+
+
+64
+00:03:43,000 --> 00:03:51,000
+And this quantity here, you could call Me
+
+65
+00:03:51,000 --> 00:03:53,000
+And you'll see that the Kraus operator condition
+
+66
+00:03:53,000 --> 00:03:56,000
+that these sum to identity is the same as the condition
+
+67
+00:03:56,000 --> 00:04:00,000
+that these Me sum to the identity.
+
+68
+00:04:00,000 --> 00:04:04,000
+And so you asked about a more complicated version
+
+69
+00:04:04,000 --> 00:04:05,000
+on measurement in which you consider
+
+70
+00:04:05,000 --> 00:04:09,000
+both the probability of the output and the residual state.
+
+71
+00:04:09,000 --> 00:04:12,000
+And this is how you do that, how you bridge between the Kraus
+
+72
+00:04:12,000 --> 00:04:16,000
+operators and this more complicated form
+
+73
+00:04:16,000 --> 00:04:18,000
+of measurement.
+
+74
+00:04:18,000 --> 00:04:20,000
+And so I'll mention one more thing.
+
+75
+00:04:20,000 --> 00:04:21,000
+So the way you relate them is you
+
+76
+00:04:21,000 --> 00:04:28,000
+say Me is equal to Ve dagger Ve.
+
+77
+00:04:28,000 --> 00:04:30,000
+This is like taking a square root,
+
+78
+00:04:30,000 --> 00:04:32,000
+but not necessarily the positive square root.
+
+79
+00:04:32,000 --> 00:04:36,000
+And so if you know the Kraus operator, there's a unique Me.
+
+80
+00:04:36,000 --> 00:04:39,000
+But in the reverse direction, it's not unique.
+
+81
+00:04:39,000 --> 00:04:41,000
+And so that's like saying there are
+
+82
+00:04:41,000 --> 00:04:43,000
+many different residual states that you
+
+83
+00:04:43,000 --> 00:04:44,000
+could get that would be compatible
+
+84
+00:04:44,000 --> 00:04:46,000
+with this measurement.
+
+85
+00:04:46,000 --> 00:04:48,000
+For example, after you get the measurement outcome,
+
+86
+00:04:48,000 --> 00:04:50,000
+you could just do some unitary on the state.
+
+87
+00:04:50,000 --> 00:04:53,000
+Even one that depends on the measurement outcome.
+
+88
+00:04:53,000 --> 00:04:55,000
+All that is totally legal, and would
+
+89
+00:04:55,000 --> 00:04:57,000
+be of a legal form of quantum collapse.
+
+90
+00:04:57,000 --> 00:05:01,000
+And so if you're just given this form of measurement,
+
+91
+00:05:01,000 --> 00:05:05,000
+it's not uniquely determined what kind of collapse you get.
+
+92
+00:05:05,000 --> 00:05:07,000
+And so if you want to talk about that,
+
+93
+00:05:07,000 --> 00:05:10,000
+you have to really generalize it in this way.
+
+94
+00:05:10,000 --> 00:05:10,000
+
+

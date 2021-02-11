@@ -1,0 +1,396 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:03,000
+So F2 is a field.
+
+2
+00:00:03,000 --> 00:00:06,000
+The main consequence we want is that linear algebra works.
+
+3
+00:00:06,000 --> 00:00:10,000
+
+
+4
+00:00:10,000 --> 00:00:14,000
+So we can define a vector space over F2, matrices over F2.
+
+5
+00:00:14,000 --> 00:00:17,000
+We conduct with the kernel and the image of those vector
+
+6
+00:00:17,000 --> 00:00:18,000
+spaces.
+
+7
+00:00:18,000 --> 00:00:21,000
+And most of the theorems that you're
+
+8
+00:00:21,000 --> 00:00:24,000
+used to from linear algebra over the reals and the complex
+
+9
+00:00:24,000 --> 00:00:28,000
+is, not all, but most of them will carry through.
+
+10
+00:00:28,000 --> 00:00:30,000
+So, for example, the dimension of the kernel
+
+11
+00:00:30,000 --> 00:00:32,000
+plus the dimension of the image add up
+
+12
+00:00:32,000 --> 00:00:33,000
+to the overall dimension.
+
+13
+00:00:33,000 --> 00:00:36,000
+That that type of theorem goes through when
+
+14
+00:00:36,000 --> 00:00:37,000
+we have a field like F2.
+
+15
+00:00:37,000 --> 00:00:40,000
+
+
+16
+00:00:40,000 --> 00:00:43,000
+OK, so how are we going to use this for codes?
+
+17
+00:00:43,000 --> 00:00:57,000
+So a linear code, before, I said C is
+
+18
+00:00:57,000 --> 00:01:00,000
+a subset of the n bit strings.
+
+19
+00:01:00,000 --> 00:01:05,000
+Now I want it to be a subspace of F2 to the n.
+
+20
+00:01:05,000 --> 00:01:09,000
+So F2 to the n, what I mean by this,
+
+21
+00:01:09,000 --> 00:01:22,000
+is 0, 1 to the n with mod 2 arithmetic.
+
+22
+00:01:22,000 --> 00:01:27,000
+And what I mean by less than or equal to
+
+23
+00:01:27,000 --> 00:01:30,000
+is that this is a linear subspace.
+
+24
+00:01:30,000 --> 00:01:33,000
+
+
+25
+00:01:33,000 --> 00:01:36,000
+Meaning, if I take two points, points
+
+26
+00:01:36,000 --> 00:01:39,000
+in this thing I think of as now as vector as in F2 to the n.
+
+27
+00:01:39,000 --> 00:01:41,000
+If I take two of them and I add them together,
+
+28
+00:01:41,000 --> 00:01:43,000
+I get something else in the subspaces,
+
+29
+00:01:43,000 --> 00:01:44,000
+closed under addition.
+
+30
+00:01:44,000 --> 00:01:48,000
+It should also be closed under multiplication by F2,
+
+31
+00:01:48,000 --> 00:01:50,000
+but that doesn't do too much because multiplying by zero
+
+32
+00:01:50,000 --> 00:01:52,000
+just give you the 0 vector.
+
+33
+00:01:52,000 --> 00:01:54,000
+Multiplying by 1, you're back where you started.
+
+34
+00:01:54,000 --> 00:01:56,000
+Technically,, I have that condition too,
+
+35
+00:01:56,000 --> 00:02:00,000
+but it's really addition, and that's the one that matters.
+
+36
+00:02:00,000 --> 00:02:03,000
+So, the fact it's a linear subspace now
+
+37
+00:02:03,000 --> 00:02:06,000
+means I can describe with a very small number of parameters.
+
+38
+00:02:06,000 --> 00:02:09,000
+I just have to specify a basis for this subspace,
+
+39
+00:02:09,000 --> 00:02:12,000
+and I've specified all of the points in it.
+
+40
+00:02:12,000 --> 00:02:21,000
+So I can wright C is the span of vectors g1
+
+41
+00:02:21,000 --> 00:02:29,000
+through gk, which are called generators,
+
+42
+00:02:29,000 --> 00:02:31,000
+the generators of the code.
+
+43
+00:02:31,000 --> 00:02:34,000
+So I have these vectors, which I should
+
+44
+00:02:34,000 --> 00:02:41,000
+say g1 gk are elements of F2 to the n.
+
+45
+00:02:41,000 --> 00:02:46,000
+
+
+46
+00:02:46,000 --> 00:02:49,000
+And what I mean by span is the usual linear algebra
+
+47
+00:02:49,000 --> 00:02:53,000
+definition, all of the near combinations of these vectors.
+
+48
+00:02:53,000 --> 00:02:55,000
+With coefficients, now, not in the reals or the complexes,
+
+49
+00:02:55,000 --> 00:02:58,000
+but in the field we're using, which is F2.
+
+50
+00:02:58,000 --> 00:03:12,000
+So this is the set of all a1 g1 plus ak gk, where a1 through ak
+
+51
+00:03:12,000 --> 00:03:13,000
+are elements of F2.
+
+52
+00:03:13,000 --> 00:03:22,000
+
+
+53
+00:03:22,000 --> 00:03:26,000
+And, in general, I should take these generators
+
+54
+00:03:26,000 --> 00:03:28,000
+to be linearly independent.
+
+55
+00:03:28,000 --> 00:03:31,000
+If I didn't, I could just remove one and have the same code.
+
+56
+00:03:31,000 --> 00:03:33,000
+So might as well do that.
+
+57
+00:03:33,000 --> 00:03:39,000
+And in that case, this tells me that the size of the code
+
+58
+00:03:39,000 --> 00:03:41,000
+is 2 to the k.
+
+59
+00:03:41,000 --> 00:03:45,000
+Because for every distinct set of a1 through ak,
+
+60
+00:03:45,000 --> 00:03:47,000
+I get a different code vector.
+
+61
+00:03:47,000 --> 00:03:54,000
+
+
+62
+00:03:54,000 --> 00:03:58,000
+So, there's another way of writing, so I have a linear--
+
+63
+00:03:58,000 --> 00:04:01,000
+I have these k vectors, right?
+
+64
+00:04:01,000 --> 00:04:02,000
+Each of length n.
+
+65
+00:04:02,000 --> 00:04:04,000
+Let's think of them as column vectors,
+
+66
+00:04:04,000 --> 00:04:06,000
+and I want to talk about linear combinations
+
+67
+00:04:06,000 --> 00:04:09,000
+of a bunch of columns.
+
+68
+00:04:09,000 --> 00:04:11,000
+Linear algebra gives us a compact way of doing it,
+
+69
+00:04:11,000 --> 00:04:14,000
+it's called matrix vector multiplication.
+
+70
+00:04:14,000 --> 00:04:23,000
+So I could also write this as g times a over all vectors a
+
+71
+00:04:23,000 --> 00:04:25,000
+in F2 to the k.
+
+72
+00:04:25,000 --> 00:04:28,000
+Where now I've defined a matrix G whose columns
+
+73
+00:04:28,000 --> 00:04:30,000
+are these generators.
+
+74
+00:04:30,000 --> 00:04:40,000
+
+
+75
+00:04:40,000 --> 00:04:41,000
+OK?
+
+76
+00:04:41,000 --> 00:04:49,000
+So G is an n by k matrix, height and width k,
+
+77
+00:04:49,000 --> 00:04:52,000
+with these generators as their columns,
+
+78
+00:04:52,000 --> 00:04:54,000
+and I'm going to multiply it by a vector a,
+
+79
+00:04:54,000 --> 00:04:58,000
+and a ranges over all vectors in F2 to the k.
+
+80
+00:04:58,000 --> 00:05:00,000
+
+
+81
+00:05:00,000 --> 00:05:05,000
+So this can be further simplified, right?
+
+82
+00:05:05,000 --> 00:05:07,000
+I have a matrix, and I'm multiplying
+
+83
+00:05:07,000 --> 00:05:09,000
+by all possible inputs.
+
+84
+00:05:09,000 --> 00:05:12,000
+I want this set that I get from doing this.
+
+85
+00:05:12,000 --> 00:05:14,000
+This is just called the image.
+
+86
+00:05:14,000 --> 00:05:22,000
+So this is the image of G. So before, to specify a code,
+
+87
+00:05:22,000 --> 00:05:25,000
+I had to write down 2 to the k strings.
+
+88
+00:05:25,000 --> 00:05:26,000
+Could be quite a lot.
+
+89
+00:05:26,000 --> 00:05:30,000
+Now, I just write down a matrix and the code
+
+90
+00:05:30,000 --> 00:05:33,000
+is the image of that matrix using F2 linear algebra.
+
+91
+00:05:33,000 --> 00:05:38,000
+
+
+92
+00:05:38,000 --> 00:05:42,000
+So, there are significant savings
+
+93
+00:05:42,000 --> 00:05:45,000
+in terms of description complexity
+
+94
+00:05:45,000 --> 00:05:47,000
+as well as in coding complexity.
+
+95
+00:05:47,000 --> 00:05:51,000
+So I can think of a as a vector I want to encode.
+
+96
+00:05:51,000 --> 00:05:54,000
+To encode it now, I just do a matrix and vector multiply.
+
+97
+00:05:54,000 --> 00:05:57,000
+So it gives me a natural encoding map.
+
+98
+00:05:57,000 --> 00:05:58,000
+
+

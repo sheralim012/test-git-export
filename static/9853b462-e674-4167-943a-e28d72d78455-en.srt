@@ -1,0 +1,404 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:07,000
+Finally, we can begin talking about this last corner
+
+2
+00:00:07,000 --> 00:00:08,000
+of quantum operations.
+
+3
+00:00:08,000 --> 00:00:11,000
+
+
+4
+00:00:11,000 --> 00:00:18,000
+And in 8.370, Peter Shor introduced one notion
+
+5
+00:00:18,000 --> 00:00:21,000
+of quantum operations, which is, I think,
+
+6
+00:00:21,000 --> 00:00:28,000
+a very tempting generalization, which is to say you do some
+
+7
+00:00:28,000 --> 00:00:33,000
+unitary but with some probability distributions over
+
+8
+00:00:33,000 --> 00:00:35,000
+unitaries.
+
+9
+00:00:35,000 --> 00:00:42,000
+So let's talk now briefly about quantum operations.
+
+10
+00:00:42,000 --> 00:00:45,000
+
+
+11
+00:00:45,000 --> 00:00:50,000
+Maybe I should say intro to quantum operations,
+
+12
+00:00:50,000 --> 00:00:52,000
+because we'll talk in much more detail
+
+13
+00:00:52,000 --> 00:00:55,000
+next lecture about these.
+
+14
+00:00:55,000 --> 00:01:05,000
+So one possibility, one case, are called random unitaries.
+
+15
+00:01:05,000 --> 00:01:11,000
+
+
+16
+00:01:11,000 --> 00:01:19,000
+So the way that if we have a state psi,
+
+17
+00:01:19,000 --> 00:01:24,000
+we have a unitary acting on it, it goes to U times ket psi.
+
+18
+00:01:24,000 --> 00:01:30,000
+For a density matrix, the ket psi part gets multiplied by U,
+
+19
+00:01:30,000 --> 00:01:33,000
+and the bra psi gets multiplied by U dagger on the right.
+
+20
+00:01:33,000 --> 00:01:36,000
+
+
+21
+00:01:36,000 --> 00:01:38,000
+So the way a density matrix evolves under time evolution
+
+22
+00:01:38,000 --> 00:01:42,000
+is it goes to U rho U dagger.
+
+23
+00:01:42,000 --> 00:01:46,000
+But this U, and now here's an advantage
+
+24
+00:01:46,000 --> 00:01:49,000
+of using density matrices instead of pure quantum states,
+
+25
+00:01:49,000 --> 00:01:52,000
+this U can itself be random.
+
+26
+00:01:52,000 --> 00:01:55,000
+So let's say our particle is going through a magnetic field,
+
+27
+00:01:55,000 --> 00:01:57,000
+and we don't know exactly what that field is.
+
+28
+00:01:57,000 --> 00:01:59,000
+Different fields will lead to different time evolutions.
+
+29
+00:01:59,000 --> 00:02:01,000
+When you average over our uncertainty,
+
+30
+00:02:01,000 --> 00:02:05,000
+you get a distribution over the final states.
+
+31
+00:02:05,000 --> 00:02:12,000
+So if we have an ensemble where U sub i occurs with probability
+
+32
+00:02:12,000 --> 00:02:26,000
+p sub i, then rho will be mapped to this final state.
+
+33
+00:02:26,000 --> 00:02:31,000
+So with some probability we get Ui rho Ui dagger,
+
+34
+00:02:31,000 --> 00:02:33,000
+and then we average over all those probabilities.
+
+35
+00:02:33,000 --> 00:02:36,000
+
+
+36
+00:02:36,000 --> 00:02:38,000
+This is a special case of quantum operations.
+
+37
+00:02:38,000 --> 00:02:40,000
+These are called random unitary operations.
+
+38
+00:02:40,000 --> 00:02:45,000
+
+
+39
+00:02:45,000 --> 00:02:48,000
+And it seems like a common generalization
+
+40
+00:02:48,000 --> 00:02:49,000
+of these two boxes, right?
+
+41
+00:02:49,000 --> 00:02:51,000
+Here, we do unitaries.
+
+42
+00:02:51,000 --> 00:02:54,000
+We can further add random unitaries.
+
+43
+00:02:54,000 --> 00:02:56,000
+
+
+44
+00:02:56,000 --> 00:03:00,000
+However, this does not fully express everything
+
+45
+00:03:00,000 --> 00:03:02,000
+that we can do with quantum states.
+
+46
+00:03:02,000 --> 00:03:05,000
+And so we'll talk a little bit more about that next time.
+
+47
+00:03:05,000 --> 00:03:24,000
+
+
+48
+00:03:24,000 --> 00:03:26,000
+Well, are there any questions about random unitary
+
+49
+00:03:26,000 --> 00:03:27,000
+before I do?
+
+50
+00:03:27,000 --> 00:03:29,000
+
+
+51
+00:03:29,000 --> 00:03:41,000
+So some other quantum operations that don't necessarily
+
+52
+00:03:41,000 --> 00:03:46,000
+fit into this framework are, we can take our quantum state
+
+53
+00:03:46,000 --> 00:03:48,000
+and add another system.
+
+54
+00:03:48,000 --> 00:03:56,000
+So we can take rho and map it to rho tensor sigma.
+
+55
+00:03:56,000 --> 00:04:01,000
+So I have an atom in my ion trap, let's say.
+
+56
+00:04:01,000 --> 00:04:02,000
+I bring in another one, right?
+
+57
+00:04:02,000 --> 00:04:05,000
+And now I consider the joint state.
+
+58
+00:04:05,000 --> 00:04:07,000
+This is, in a sense, only a mathematical operation.
+
+59
+00:04:07,000 --> 00:04:10,000
+Maybe the other system already existed.
+
+60
+00:04:10,000 --> 00:04:12,000
+I'm just expanding the scope of what
+
+61
+00:04:12,000 --> 00:04:14,000
+I think about to include it.
+
+62
+00:04:14,000 --> 00:04:18,000
+Still, it's a valid mathematical operation,
+
+63
+00:04:18,000 --> 00:04:22,000
+and it's one that we do all the time in real systems.
+
+64
+00:04:22,000 --> 00:04:24,000
+We bring in maybe a fresh qubit and we
+
+65
+00:04:24,000 --> 00:04:28,000
+interact with our system, so our formalism should include this.
+
+66
+00:04:28,000 --> 00:04:30,000
+We might also throw away a subsystem.
+
+67
+00:04:30,000 --> 00:04:34,000
+So if we have a system rho AB, we
+
+68
+00:04:34,000 --> 00:04:48,000
+might trace out the second part and be left with a state rho A.
+
+69
+00:04:48,000 --> 00:04:51,000
+Or if we have, let's say, an atom
+
+70
+00:04:51,000 --> 00:04:54,000
+that's in a superposition of ground and excited.
+
+71
+00:04:54,000 --> 00:04:57,000
+After some time, it decays into the ground state.
+
+72
+00:04:57,000 --> 00:04:59,000
+That corresponds to just forgetting
+
+73
+00:04:59,000 --> 00:05:03,000
+what your original state was and reinitializing it
+
+74
+00:05:03,000 --> 00:05:04,000
+with some known state.
+
+75
+00:05:04,000 --> 00:05:09,000
+So we could just have rho that let's say always
+
+76
+00:05:09,000 --> 00:05:10,000
+goes to the state 0.
+
+77
+00:05:10,000 --> 00:05:13,000
+
+
+78
+00:05:13,000 --> 00:05:15,000
+All of these are other valid quantum operations
+
+79
+00:05:15,000 --> 00:05:18,000
+that don't look like this random unitary picture.
+
+80
+00:05:18,000 --> 00:05:22,000
+And so in the next lecture, we will
+
+81
+00:05:22,000 --> 00:05:24,000
+come to terms with these types of operations
+
+82
+00:05:24,000 --> 00:05:27,000
+and give a generalized framework.
+
+83
+00:05:27,000 --> 00:05:30,000
+And just to frame what we're going to do,
+
+84
+00:05:30,000 --> 00:05:32,000
+we can think about this.
+
+85
+00:05:32,000 --> 00:05:34,000
+For density matrices, we have this way
+
+86
+00:05:34,000 --> 00:05:36,000
+of thinking about it that was either operational or
+
+87
+00:05:36,000 --> 00:05:37,000
+mathematical.
+
+88
+00:05:37,000 --> 00:05:41,000
+The kind of operational one was an ensemble of quantum states,
+
+89
+00:05:41,000 --> 00:05:42,000
+each with some probability.
+
+90
+00:05:42,000 --> 00:05:45,000
+That was nice to think about conceptually,
+
+91
+00:05:45,000 --> 00:05:47,000
+but, mathematically, the trace rho 1
+
+92
+00:05:47,000 --> 00:05:50,000
+equals 1 rho positive semidefinite was nicer.
+
+93
+00:05:50,000 --> 00:05:52,000
+For quantum operations, we'll see something similar.
+
+94
+00:05:52,000 --> 00:05:54,000
+There's an operational way of thinking
+
+95
+00:05:54,000 --> 00:05:55,000
+about it, which is natural.
+
+96
+00:05:55,000 --> 00:05:57,000
+Which is maybe you would join some system,
+
+97
+00:05:57,000 --> 00:05:59,000
+you evolve according to the Schrodinger evolution,
+
+98
+00:05:59,000 --> 00:06:01,000
+and you throw away some system.
+
+99
+00:06:01,000 --> 00:06:05,000
+And then we'll also see a crisper, more mathematical way
+
+100
+00:06:05,000 --> 00:06:09,000
+
+

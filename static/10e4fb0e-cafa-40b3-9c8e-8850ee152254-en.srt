@@ -1,0 +1,504 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:02,000
+You know, I should probably call this the trace distance
+
+2
+00:00:02,000 --> 00:00:04,000
+or the trace norm.
+
+3
+00:00:04,000 --> 00:00:08,000
+It's called the trace norm because if the matrix is PSD
+
+4
+00:00:08,000 --> 00:00:11,000
+then it corresponds to the trace.
+
+5
+00:00:11,000 --> 00:00:13,000
+There's another way you can think about this.
+
+6
+00:00:13,000 --> 00:00:18,000
+You can also write this as one half the trace
+
+7
+00:00:18,000 --> 00:00:21,000
+of the absolute value of rho minus sigma.
+
+8
+00:00:21,000 --> 00:00:23,000
+And what I mean by the absolute value of rho minus sigma
+
+9
+00:00:23,000 --> 00:00:26,000
+is take the spectral decomposition
+
+10
+00:00:26,000 --> 00:00:30,000
+and replace all the eigenvalues with their absolute values.
+
+11
+00:00:30,000 --> 00:00:34,000
+So that's another way you can define this.
+
+12
+00:00:34,000 --> 00:00:36,000
+This is also called the nuclear norm.
+
+13
+00:00:36,000 --> 00:00:38,000
+I don't know where that one comes from,
+
+14
+00:00:38,000 --> 00:00:40,000
+but it goes by a few different names.
+
+15
+00:00:40,000 --> 00:00:43,000
+So if you've seen compressed sensing for matrices,
+
+16
+00:00:43,000 --> 00:00:47,000
+they also use S1 they just have a different name for it.
+
+17
+00:00:47,000 --> 00:00:50,000
+And they use it for rectangular matrices.
+
+18
+00:00:50,000 --> 00:00:53,000
+OK so on the p set you'll show actually
+
+19
+00:00:53,000 --> 00:00:59,000
+a tighter version of this, which is the t of rho sigma
+
+20
+00:00:59,000 --> 00:01:09,000
+is the maximum over m of this difference.
+
+21
+00:01:09,000 --> 00:01:10,000
+So I just gave an upper bound.
+
+22
+00:01:10,000 --> 00:01:13,000
+On the p set you'll show this is actually tight.
+
+23
+00:01:13,000 --> 00:01:16,000
+So the trace distance actually corresponds
+
+24
+00:01:16,000 --> 00:01:22,000
+to the best- To how distinguishable
+
+25
+00:01:22,000 --> 00:01:27,000
+these are by any measurement.
+
+26
+00:01:27,000 --> 00:01:33,000
+And what this means is it gives an operational meaning
+
+27
+00:01:33,000 --> 00:01:35,000
+of this distance.
+
+28
+00:01:35,000 --> 00:01:37,000
+And there's one very nice consequence
+
+29
+00:01:37,000 --> 00:01:41,000
+of this, which is it lets you imagine
+
+30
+00:01:41,000 --> 00:01:44,000
+this includes any kind of measurement scenario.
+
+31
+00:01:44,000 --> 00:01:48,000
+So in particular, suppose my measurement scenario is, here
+
+32
+00:01:48,000 --> 00:01:50,000
+it is do the optimum measure, but suppose
+
+33
+00:01:50,000 --> 00:01:54,000
+instead I apply some channel, some noisy quantum operation,
+
+34
+00:01:54,000 --> 00:01:56,000
+and then I do the optimal quantum
+
+35
+00:01:56,000 --> 00:01:59,000
+measurement on those states.
+
+36
+00:01:59,000 --> 00:02:04,000
+So then the distinguishability would
+
+37
+00:02:04,000 --> 00:02:06,000
+look like the trace distance between end
+
+38
+00:02:06,000 --> 00:02:08,000
+of rho and n of sigma.
+
+39
+00:02:08,000 --> 00:02:11,000
+So I do n and then I apply the optimal measurement
+
+40
+00:02:11,000 --> 00:02:14,000
+for those states, n of rho and n of sigma.
+
+41
+00:02:14,000 --> 00:02:17,000
+So this will give me some distinguishability.
+
+42
+00:02:17,000 --> 00:02:20,000
+And since it is among the menu of options
+
+43
+00:02:20,000 --> 00:02:23,000
+that I already had for rho and sigma,
+
+44
+00:02:23,000 --> 00:02:27,000
+it's got to be covered by this maximum, right.
+
+45
+00:02:27,000 --> 00:02:29,000
+If I could do this, that's one of the things
+
+46
+00:02:29,000 --> 00:02:30,000
+I'm maximizing over.
+
+47
+00:02:30,000 --> 00:02:33,000
+So it would be no better than the original optimal
+
+48
+00:02:33,000 --> 00:02:35,000
+measurement for rho and sigma.
+
+49
+00:02:35,000 --> 00:02:41,000
+So this is less than or equal to t of rho and sigma.
+
+50
+00:02:41,000 --> 00:02:46,000
+In other words, if I have two states with some distance,
+
+51
+00:02:46,000 --> 00:02:47,000
+doing a quantum operation to them
+
+52
+00:02:47,000 --> 00:02:49,000
+can never make them further apart.
+
+53
+00:02:49,000 --> 00:02:52,000
+It might leave a distance the same
+
+54
+00:02:52,000 --> 00:02:54,000
+or it might bring them closer together.
+
+55
+00:02:54,000 --> 00:02:55,000
+In an extreme case, I can have a channel that
+
+56
+00:02:55,000 --> 00:02:57,000
+always outputs the same thing.
+
+57
+00:02:57,000 --> 00:03:00,000
+In which case it drops the distance down to zero.
+
+58
+00:03:00,000 --> 00:03:02,000
+Or I could do unitary, which would leave them equally far
+
+59
+00:03:02,000 --> 00:03:05,000
+apart, or something else that leaves them equally far apart,
+
+60
+00:03:05,000 --> 00:03:08,000
+or something in the middle that reduces their distance,
+
+61
+00:03:08,000 --> 00:03:09,000
+but doesn't drop it to zero.
+
+62
+00:03:09,000 --> 00:03:12,000
+But I'll never increase the distance.
+
+63
+00:03:12,000 --> 00:03:13,000
+This is another feature of the not- Sorry,
+
+64
+00:03:13,000 --> 00:03:15,000
+of the linearity of quantum mechanics.
+
+65
+00:03:15,000 --> 00:03:18,000
+If I could increase the distance of two states,
+
+66
+00:03:18,000 --> 00:03:21,000
+it turns out all the crazy consequences
+
+67
+00:03:21,000 --> 00:03:24,000
+of non-linear quantum mechanics already come from that.
+
+68
+00:03:24,000 --> 00:03:27,000
+
+
+69
+00:03:27,000 --> 00:03:31,000
+And so geometrically I can think of,
+
+70
+00:03:31,000 --> 00:03:35,000
+let's say here is my block ball, let's just think about cubits
+
+71
+00:03:35,000 --> 00:03:36,000
+where I can draw it.
+
+72
+00:03:36,000 --> 00:03:39,000
+
+
+73
+00:03:39,000 --> 00:03:40,000
+Yeah?
+
+74
+00:03:40,000 --> 00:03:46,000
+
+
+75
+00:03:46,000 --> 00:03:46,000
+Exactly.
+
+76
+00:03:46,000 --> 00:03:49,000
+
+
+77
+00:03:49,000 --> 00:03:52,000
+This is for n of quantum operation.
+
+78
+00:03:52,000 --> 00:03:59,000
+So if I have the block ball and I act with n,
+
+79
+00:03:59,000 --> 00:04:02,000
+in general it's going to squash it down.
+
+80
+00:04:02,000 --> 00:04:16,000
+So we say that trace distance is contractive under quantum
+
+81
+00:04:16,000 --> 00:04:18,000
+operations.
+
+82
+00:04:18,000 --> 00:04:19,000
+There are other measures we'll later
+
+83
+00:04:19,000 --> 00:04:21,000
+see that are also contractive.
+
+84
+00:04:21,000 --> 00:04:24,000
+Anything with a kind of operational significance to it
+
+85
+00:04:24,000 --> 00:04:26,000
+should have this contractive property.
+
+86
+00:04:26,000 --> 00:04:29,000
+
+
+87
+00:04:29,000 --> 00:04:31,000
+Yeah?
+
+88
+00:04:31,000 --> 00:04:33,000
+[INAUDIBLE]
+
+89
+00:04:33,000 --> 00:04:34,000
+Yeah.
+
+90
+00:04:34,000 --> 00:04:37,000
+[INAUDIBLE]
+
+91
+00:04:37,000 --> 00:04:42,000
+
+
+92
+00:04:42,000 --> 00:04:45,000
+Yes, so let's say, the question was about,
+
+93
+00:04:45,000 --> 00:04:51,000
+suppose you have identity over two and then some pure state.
+
+94
+00:04:51,000 --> 00:04:53,000
+You're asking can we distinguish them?
+
+95
+00:04:53,000 --> 00:05:01,000
+
+
+96
+00:05:01,000 --> 00:05:02,000
+OK.
+
+97
+00:05:02,000 --> 00:05:03,000
+Tell me the state.
+
+98
+00:05:03,000 --> 00:05:05,000
+You want super position of zero and one?
+
+99
+00:05:05,000 --> 00:05:11,000
+So that super position is just another pure state out here.
+
+100
+00:05:11,000 --> 00:05:17,000
+So in all these cases, we can distinguish them with,
+
+101
+00:05:17,000 --> 00:05:20,000
+not with probability one, but with some bias.
+
+102
+00:05:20,000 --> 00:05:22,000
+So whenever you're distinguishing,
+
+103
+00:05:22,000 --> 00:05:25,000
+you have to choose the sort of type one and type two errors.
+
+104
+00:05:25,000 --> 00:05:27,000
+Maybe you guess that it's I over two,
+
+105
+00:05:27,000 --> 00:05:30,000
+but it was actually the other state or vise versa.
+
+106
+00:05:30,000 --> 00:05:33,000
+And if you want to balance these errors,
+
+107
+00:05:33,000 --> 00:05:35,000
+you could be right three quarters
+
+108
+00:05:35,000 --> 00:05:37,000
+of the time in this case.
+
+109
+00:05:37,000 --> 00:05:48,000
+So you can measure- So you get some distinguishing ability.
+
+110
+00:05:48,000 --> 00:05:50,000
+It's not perfect, but it's better than nothing.
+
+111
+00:05:50,000 --> 00:05:56,000
+
+
+112
+00:05:56,000 --> 00:05:56,000
+Good.
+
+113
+00:05:56,000 --> 00:05:58,000
+Any other questions about trace distance?
+
+114
+00:05:58,000 --> 00:06:02,000
+
+
+115
+00:06:02,000 --> 00:06:05,000
+So the key thing I want you to take away from this
+
+116
+00:06:05,000 --> 00:06:10,000
+is that the distinguishability will shrink.
+
+117
+00:06:10,000 --> 00:06:12,000
+It will never increase.
+
+118
+00:06:12,000 --> 00:06:18,000
+And so, when we want to protect against noise, all we're doing
+
+119
+00:06:18,000 --> 00:06:20,000
+is slowing down the rate of noise.
+
+120
+00:06:20,000 --> 00:06:20,000
+Right.
+
+121
+00:06:20,000 --> 00:06:22,000
+We can never reverse noise.
+
+122
+00:06:22,000 --> 00:06:26,000
+We're just slowing down the rate at which our states move closer
+
+123
+00:06:26,000 --> 00:06:27,000
+to each other.
+
+124
+00:06:27,000 --> 00:06:31,000
+However, sometimes we can slow it down quite a lot.
+
+125
+00:06:31,000 --> 00:06:35,000
+
+

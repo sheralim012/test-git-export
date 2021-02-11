@@ -1,0 +1,63 @@
+<problem linenum="75" tex_filename="./week2_ps2.tex" attempts="10" display_name="S2. Schmidt decomposition (2 of 2)" max_attempts="10">
+  <p>
+Two bipartite entangled states [mathjaxinline]|{\alpha }\rangle[/mathjaxinline] and [mathjaxinline]|{\beta }\rangle[/mathjaxinline] are equivalent under local unitaries if there exist unitaries [mathjaxinline]U, V[/mathjaxinline] such that [mathjaxinline]|{\alpha }\rangle  = (U \otimes V) |{\beta }\rangle[/mathjaxinline]. </p>
+  <p>
+Complete the following sequence of logic to prove that [mathjaxinline]|{\alpha }\rangle[/mathjaxinline] and [mathjaxinline]|{\beta }\rangle[/mathjaxinline] are equivalent under local unitaries if and only if they have the same Schmidt coefficients. </p>
+  <span>
+    <customresponse>
+      <drag_and_drop_input img="/static/images/alt_schmidt3b/alt_schmidt3b_dnd.png" target_outline="false" one_per_target="true" no_labels="true" label_bg_color="rgb(222, 139, 238)">
+        <draggable id="alphaAi" icon="/static/images/alt_schmidt3b/alt_schmidt3b_dnd_label1.png" can_reuse="true"/>
+        <draggable id="alphaBi" icon="/static/images/alt_schmidt3b/alt_schmidt3b_dnd_label2.png" can_reuse="true"/>
+        <draggable id="betaAi" icon="/static/images/alt_schmidt3b/alt_schmidt3b_dnd_label3.png" can_reuse="true"/>
+        <draggable id="betaBi" icon="/static/images/alt_schmidt3b/alt_schmidt3b_dnd_label4.png" can_reuse="true"/>
+        <draggable id="alphaAix" icon="/static/images/alt_schmidt3b/alt_schmidt3b_dnd_label5.png" can_reuse="true"/>
+        <draggable id="alphaBix" icon="/static/images/alt_schmidt3b/alt_schmidt3b_dnd_label6.png" can_reuse="true"/>
+        <draggable id="betaAix" icon="/static/images/alt_schmidt3b/alt_schmidt3b_dnd_label7.png" can_reuse="true"/>
+        <draggable id="betaBix" icon="/static/images/alt_schmidt3b/alt_schmidt3b_dnd_label8.png" can_reuse="true"/>
+        <draggable id="U" icon="/static/images/alt_schmidt3b/alt_schmidt3b_dnd_label9.png" can_reuse="true"/>
+        <draggable id="V" icon="/static/images/alt_schmidt3b/alt_schmidt3b_dnd_label10.png" can_reuse="true"/>
+        <draggable id="Udag" icon="/static/images/alt_schmidt3b/alt_schmidt3b_dnd_label11.png" can_reuse="true"/>
+        <draggable id="Vdag" icon="/static/images/alt_schmidt3b/alt_schmidt3b_dnd_label12.png" can_reuse="true"/>
+        <draggable id="rmSchmidt" icon="/static/images/alt_schmidt3b/alt_schmidt3b_dnd_label13.png" can_reuse="true"/>
+        <draggable id="rmsingularvalue" icon="/static/images/alt_schmidt3b/alt_schmidt3b_dnd_label14.png" can_reuse="true"/>
+        <draggable id="rmsingularvalues" icon="/static/images/alt_schmidt3b/alt_schmidt3b_dnd_label15.png" can_reuse="true"/>
+        <target id="1" x="288" y="186" w="120" h="42"/>
+        <target id="6" x="419" y="186" w="119" h="42"/>
+        <target id="2" x="288" y="251" w="120" h="42"/>
+        <target id="7" x="419" y="251" w="119" h="42"/>
+        <target id="3" x="276" y="443" w="120" h="42"/>
+        <target id="4" x="428" y="443" w="119" h="42"/>
+        <target id="19" x="282" y="545" w="119" h="42"/>
+        <target id="20" x="413" y="545" w="119" h="42"/>
+        <target id="12" x="44" y="618" w="120" h="42"/>
+        <target id="8" x="128" y="705" w="119" h="42"/>
+        <target id="16" x="258" y="705" w="120" h="42"/>
+        <target id="10" x="424" y="705" w="119" h="42"/>
+        <target id="18" x="555" y="705" w="119" h="42"/>
+        <target id="21" x="142" y="808" w="119" h="42"/>
+        <target id="17" x="273" y="808" w="119" h="42"/>
+        <target id="5" x="417" y="808" w="119" h="42"/>
+        <target id="9" x="548" y="808" w="119" h="42"/>
+        <target id="11" x="193" y="880" w="119" h="43"/>
+        <target id="22" x="515" y="880" w="120" h="43"/>
+      </drag_and_drop_input>
+      <answer>
+caset = [{'alphaAi': '1'}, {'betaAix': '6'}, {'alphaBi': '2'}, {'betaBix': '7'}, {'betaAi': '3'}, {'betaBi': '4'}, {'betaAi': '19'}, {'betaBix': '20'}, {'rmsingularvalues': '12'}, {'Udag': '8'}, {'alphaAi': '16'}, {'Vdag': '10'}, {'alphaBi': '18'}, {'Udag': '21'}, {'alphaAi': '17'}, {'alphaBix': '5'}, {'V': '9'}, {'rmsingularvalue': '11'}, {'rmsingularvalues': '22'}]
+# custom checking for reusable labels - assumes all targets get some label
+import json
+ans = json.loads(submission[0])
+correct = ['correct']
+for rule in caset:
+    if rule not in ans:
+        correct = ['incorrect']
+        break
+
+# use this for debugging
+# messages = ['ans=%s' % submission[0]]
+</answer>
+    </customresponse>
+    <solution>
+      <img src="/static/images/alt_schmidt3b/alt_schmidt3b_dnd_sol_PBJOZJ.png"/>
+    </solution>
+  </span>
+</problem>

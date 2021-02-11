@@ -1,0 +1,30 @@
+<problem linenum="131" tex_filename="./week1_review1.tex" attempts="1" display_name="Measurement and density matrices" max_attempts="1">
+  <p>
+This is a concept question, provided to check your understanding of the previous video clip. </p>
+  <p>
+Which of the following statements about <ref/>quantum measurement and density matrices are correct? Check all that apply: </p>
+  <p>
+    <choiceresponse>
+      <checkboxgroup>
+        <choice correct="false" name="1">
+          <text>After a quantum measurement on a density matrix state, the post-measurement state is always a pure state.</text>
+        </choice>
+        <choice correct="false" name="2">
+          <text>The post-measurement state is always a mixed state.</text>
+        </choice>
+        <choice correct="false" name="3">
+          <text>After quantum measurement on a pure state, the post-measurement state is always a mixed state.</text>
+        </choice>
+        <choice correct="true" name="4">
+          <text>After quantum measurement on a pure state, if the measurement result is known, the post-measurement state is always a pure state.</text>
+        </choice>
+        <choice correct="false" name="5">
+          <text>Measurement on a density matrix represented by a specific ensemble of pure states, always simply projects into one of the ensemble of states.</text>
+        </choice>
+        <choice correct="true" name="6">
+          <text>Measurement on a density matrix state sometimes results in a pure state, but may also result in a mixed state.</text>
+        </choice>
+      </checkboxgroup>
+    </choiceresponse>
+  </p>
+</problem>

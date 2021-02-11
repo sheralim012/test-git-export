@@ -1,0 +1,40 @@
+<problem linenum="755" tex_filename="./week3_4_ps2a.tex" attempts="1" display_name="Action of quantum gates on stabilizer states III" max_attempts="1">
+  <script>
+import qpython4
+qpython4.define_qpython4_globals(globals())
+
+
+</script>
+  <p>
+Two stabilizer sets [mathjaxinline]{\cal S}[/mathjaxinline] and [mathjaxinline]{\cal S}'[/mathjaxinline] are equal if they contain the same stabilizer elements, ie if their generators generate the same sets. </p>
+  <p>
+For the above definitions of [mathjaxinline]U_1[/mathjaxinline], [mathjaxinline]U_2[/mathjaxinline], and [mathjaxinline]U_3[/mathjaxinline] and [mathjaxinline]{\cal S} = \langle g_1,g_2,g_3\rangle[/mathjaxinline], consider the statements below and check the adjoining box if the statement is true: </p>
+  <p>
+Note you get only <span style="color:#FF0000"><em>one</em> attempt</span>! </p>
+  <ul class="itemize">
+    <li>
+      <p>
+        <p style="display:inline">[mathjaxinline]U_1 {\cal S} U_1^\dagger = {\cal S}[/mathjaxinline]: True? </p>
+        <optionresponse inline="1">
+          <optioninput options="('true','false')" correct="false" inline="1"/>
+        </optionresponse>
+      </p>
+    </li>
+    <li>
+      <p>
+        <p style="display:inline">[mathjaxinline]U_2 {\cal S} U_2^\dagger = {\cal S}[/mathjaxinline]: True? </p>
+        <optionresponse inline="1">
+          <optioninput options="('true','false')" correct="true" inline="1"/>
+        </optionresponse>
+      </p>
+    </li>
+    <li>
+      <p>
+        <p style="display:inline">[mathjaxinline]U_3 {\cal S} U_3^\dagger = {\cal S}[/mathjaxinline]: True? </p>
+        <optionresponse inline="1">
+          <optioninput options="('true','false')" correct="true" inline="1"/>
+        </optionresponse>
+      </p>
+    </li>
+  </ul>
+</problem>

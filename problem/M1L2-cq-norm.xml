@@ -1,0 +1,41 @@
+<problem linenum="21" tex_filename="./week2_lectures2b.tex" attempts="1" display_name="Definition of a norm" max_attempts="1">
+  <p>
+This is a concept question, provided to check your understanding of the previous video clip. </p>
+  <p>
+Check all the following which must be true, regarding the definition of a norm [mathjaxinline]\| {x}\|[/mathjaxinline] of [mathjaxinline]x[/mathjaxinline]. Here [mathjaxinline]x,y[/mathjaxinline] can be thought of as vectors or operators. </p>
+  <p>
+    <choiceresponse>
+      <checkboxgroup>
+        <choice correct="true" name="1">
+          <text>[mathjaxinline]\| {x}\| =0[/mathjaxinline] if and only if [mathjaxinline]x=0[/mathjaxinline].</text>
+        </choice>
+        <choice correct="true" name="2">
+          <text>[mathjaxinline]\| {x}\| \geq 0[/mathjaxinline] for all [mathjaxinline]x[/mathjaxinline].</text>
+        </choice>
+        <choice correct="true" name="3">
+          <text>[mathjaxinline]\| {c x}\|  = |c| \| {x}\|[/mathjaxinline] for [mathjaxinline]c\in \mathbb {C}[/mathjaxinline], for any [mathjaxinline]x[/mathjaxinline].</text>
+        </choice>
+        <choice correct="true" name="4">
+          <text>[mathjaxinline]\| {x+y}\|  \leq \| {x}\|  + \| {y}\|[/mathjaxinline] for any [mathjaxinline]x[/mathjaxinline] and [mathjaxinline]y[/mathjaxinline].</text>
+        </choice>
+        <choice correct="true" name="5">
+          <text>[mathjaxinline]\| {x-y}\|  \geq \| {x}\|  - \| {y}\|[/mathjaxinline] for any [mathjaxinline]x[/mathjaxinline] and [mathjaxinline]y[/mathjaxinline].</text>
+        </choice>
+        <choice correct="true" name="6">
+          <text>[mathjaxinline]\| { - x}\|  = \| {x}\|[/mathjaxinline] for all [mathjaxinline]x[/mathjaxinline].</text>
+        </choice>
+      </checkboxgroup>
+    </choiceresponse>
+  </p>
+  <p>
+    <solution>
+      <p>
+        <b>Solution:</b>
+      </p>
+      <span>
+        <p>
+See <a href="https://en.wikipedia.org/wiki/Norm_(mathematics)" target="_blank">Wikipedia page on norms</a>. </p>
+      </span>
+    </solution>
+  </p>
+</problem>

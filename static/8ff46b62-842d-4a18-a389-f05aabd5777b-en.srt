@@ -1,0 +1,436 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:03,000
+Let's see what quantum error correction in the Steinspring
+
+2
+00:00:03,000 --> 00:00:04,000
+picture looks like.
+
+3
+00:00:04,000 --> 00:00:09,000
+Suppose I have some state and system Q.
+
+4
+00:00:09,000 --> 00:00:18,000
+And it experiences this noise map N. Then the way
+
+5
+00:00:18,000 --> 00:00:21,000
+we can think about this noise happening in a pure state
+
+6
+00:00:21,000 --> 00:00:22,000
+picture--
+
+7
+00:00:22,000 --> 00:00:23,000
+remember, we can think of the channel
+
+8
+00:00:23,000 --> 00:00:27,000
+as an isometry, followed by a partial trace.
+
+9
+00:00:27,000 --> 00:00:30,000
+And so, if we just don't do the partial trace,
+
+10
+00:00:30,000 --> 00:00:32,000
+think in our mind, there's an environment system
+
+11
+00:00:32,000 --> 00:00:34,000
+that we're never going to touch again,
+
+12
+00:00:34,000 --> 00:00:35,000
+but I'm not going to mathematically carry out
+
+13
+00:00:35,000 --> 00:00:37,000
+the partial trace.
+
+14
+00:00:37,000 --> 00:00:39,000
+Then I just have an isometry.
+
+15
+00:00:39,000 --> 00:00:48,000
+And so what the noise does is it maps me to a sum over i,
+
+16
+00:00:48,000 --> 00:00:57,000
+E_i psi, on system Q, and the label I on the environment.
+
+17
+00:00:57,000 --> 00:01:00,000
+Think of E as an environment which is inaccessible.
+
+18
+00:01:00,000 --> 00:01:03,000
+If I trace it out, I get back the action
+
+19
+00:01:03,000 --> 00:01:05,000
+of the quantum channel.
+
+20
+00:01:05,000 --> 00:01:07,000
+I'm never going to touch it again.
+
+21
+00:01:07,000 --> 00:01:10,000
+But I don't need to carry out a partial trace.
+
+22
+00:01:10,000 --> 00:01:13,000
+I'm within my rights to describe this as a pure state.
+
+23
+00:01:13,000 --> 00:01:16,000
+This is that church of the larger Hilbert space
+
+24
+00:01:16,000 --> 00:01:18,000
+perspective I mentioned before.
+
+25
+00:01:18,000 --> 00:01:20,000
+Without loss of generality, I can describe things
+
+26
+00:01:20,000 --> 00:01:21,000
+as a pure state.
+
+27
+00:01:21,000 --> 00:01:26,000
+
+
+28
+00:01:26,000 --> 00:01:30,000
+So now, let me do the same thing for--
+
+29
+00:01:30,000 --> 00:01:33,000
+
+
+30
+00:01:33,000 --> 00:01:39,000
+let's say the decoding map.
+
+31
+00:01:39,000 --> 00:01:42,000
+So let's suppose this has some Kraus operators as well.
+
+32
+00:01:42,000 --> 00:01:50,000
+Let's say it as Kraus operators D_j.
+
+33
+00:01:50,000 --> 00:02:01,000
+So then I'll map to sum over i, j, D_j E_i psi, that we keep
+
+34
+00:02:01,000 --> 00:02:07,000
+around this label I from the environment, and J,
+
+35
+00:02:07,000 --> 00:02:10,000
+from another system R, which is the one we have in the recovery
+
+36
+00:02:10,000 --> 00:02:11,000
+map.
+
+37
+00:02:11,000 --> 00:02:14,000
+So our recovery map is also a quantum operation.
+
+38
+00:02:14,000 --> 00:02:16,000
+Going to discard some information.
+
+39
+00:02:16,000 --> 00:02:18,000
+This is a system under our control.
+
+40
+00:02:18,000 --> 00:02:20,000
+So we could, if we wanted to, measure it
+
+41
+00:02:20,000 --> 00:02:22,000
+before discarding it.
+
+42
+00:02:22,000 --> 00:02:23,000
+Or not.
+
+43
+00:02:23,000 --> 00:02:24,000
+We could just discard it.
+
+44
+00:02:24,000 --> 00:02:26,000
+The recovery map should work--
+
+45
+00:02:26,000 --> 00:02:29,000
+it's designed to work if we just discard it.
+
+46
+00:02:29,000 --> 00:02:31,000
+So this is the full state, but imagine
+
+47
+00:02:31,000 --> 00:02:34,000
+that we're never going to touch these two systems again--
+
+48
+00:02:34,000 --> 00:02:36,000
+Q and R. Sorry, E and R, we're going
+
+49
+00:02:36,000 --> 00:02:39,000
+to just throw in the garbage.
+
+50
+00:02:39,000 --> 00:02:43,000
+And we're going to be left with system Q.
+
+51
+00:02:43,000 --> 00:02:50,000
+So if we've done this and this recovery map works,
+
+52
+00:02:50,000 --> 00:03:02,000
+then this should equal psi tensor some other state gamma,
+
+53
+00:03:02,000 --> 00:03:13,000
+on systems E and R. This is if the decoding works.
+
+54
+00:03:13,000 --> 00:03:16,000
+Then we should have recovered back our original state.
+
+55
+00:03:16,000 --> 00:03:19,000
+And the system that we don't want, they're in some state
+
+56
+00:03:19,000 --> 00:03:20,000
+that we don't care about.
+
+57
+00:03:20,000 --> 00:03:24,000
+They're not entangled with the state of interest.
+
+58
+00:03:24,000 --> 00:03:32,000
+So what that means is that applying any Kraus operator
+
+59
+00:03:32,000 --> 00:03:35,000
+from the noise--
+
+60
+00:03:35,000 --> 00:03:39,000
+any Kraus operator from the decoding
+
+61
+00:03:39,000 --> 00:03:42,000
+give us something proportional to our original state.
+
+62
+00:03:42,000 --> 00:03:44,000
+Now, proportional could mean zero.
+
+63
+00:03:44,000 --> 00:03:48,000
+So it could mean these noise take you
+
+64
+00:03:48,000 --> 00:03:49,000
+all over the place and the decoding map
+
+65
+00:03:49,000 --> 00:03:53,000
+contains many Kraus operators, some of which
+
+66
+00:03:53,000 --> 00:03:56,000
+will act given a given noise--
+
+67
+00:03:56,000 --> 00:03:59,000
+some of them will apply given to a particular noise operation.
+
+68
+00:03:59,000 --> 00:04:01,000
+Some of them will not.
+
+69
+00:04:01,000 --> 00:04:03,000
+For a Kraus operator to not apply,
+
+70
+00:04:03,000 --> 00:04:06,000
+that's kind of like the state being mapped to zero.
+
+71
+00:04:06,000 --> 00:04:08,000
+But it should at least be proportional.
+
+72
+00:04:08,000 --> 00:04:13,000
+So zero or this time some nonzero scalar.
+
+73
+00:04:13,000 --> 00:04:16,000
+And this should be true for all i and j.
+
+74
+00:04:16,000 --> 00:04:20,000
+
+
+75
+00:04:20,000 --> 00:04:22,000
+So that's just another way of saying what successful decoding
+
+76
+00:04:22,000 --> 00:04:23,000
+looks like.
+
+77
+00:04:23,000 --> 00:04:27,000
+
+
+78
+00:04:27,000 --> 00:04:31,000
+And there's one-- this is very general.
+
+79
+00:04:31,000 --> 00:04:34,000
+I said almost nothing about the particular code,
+
+80
+00:04:34,000 --> 00:04:36,000
+about what the nature of the decoding
+
+81
+00:04:36,000 --> 00:04:39,000
+map other than that's a quantum operation.
+
+82
+00:04:39,000 --> 00:04:42,000
+The nature of the noise, other than it's a quantum operation.
+
+83
+00:04:42,000 --> 00:04:46,000
+But already there's one consequence
+
+84
+00:04:46,000 --> 00:04:48,000
+you immediately get from this.
+
+85
+00:04:48,000 --> 00:04:51,000
+Which is something I said before but didn't justify.
+
+86
+00:04:51,000 --> 00:04:53,000
+I said, it's nice to have this property,
+
+87
+00:04:53,000 --> 00:04:57,000
+but I didn't justify why we should have this property.
+
+88
+00:04:57,000 --> 00:04:58,000
+So the consequence we get--
+
+89
+00:04:58,000 --> 00:05:06,000
+
+
+90
+00:05:06,000 --> 00:05:09,000
+actually, does anyone see a nice consequence of this?
+
+91
+00:05:09,000 --> 00:05:12,000
+Maybe there are others I haven't thought of.
+
+92
+00:05:12,000 --> 00:05:14,000
+The fact that successful decoding
+
+93
+00:05:14,000 --> 00:05:16,000
+gives you this condition?
+
+94
+00:05:16,000 --> 00:05:18,000
+Does that suggest anything good?
+
+95
+00:05:18,000 --> 00:05:26,000
+
+
+96
+00:05:26,000 --> 00:05:30,000
+The one that I think comes out of this that's nice
+
+97
+00:05:30,000 --> 00:05:36,000
+is if I take a linear combination of two
+
+98
+00:05:36,000 --> 00:05:39,000
+different E_i's that satisfies this condition,
+
+99
+00:05:39,000 --> 00:05:42,000
+they're also going to satisfy this condition.
+
+100
+00:05:42,000 --> 00:05:42,000
+Right?
+
+101
+00:05:42,000 --> 00:05:46,000
+If I have E_i and E_i prime, and they both
+
+102
+00:05:46,000 --> 00:05:50,000
+have the property that D_j E_i or E_i prime times psi
+
+103
+00:05:50,000 --> 00:05:54,000
+is proportional to psi for all choices of j, then
+
+104
+00:05:54,000 --> 00:05:57,000
+their linear combinations will also have that property.
+
+105
+00:05:57,000 --> 00:06:06,000
+And so what that means is that S is a linear subspace.
+
+106
+00:06:06,000 --> 00:06:09,000
+If I can correct two different Kraus operators,
+
+107
+00:06:09,000 --> 00:06:13,000
+then I can also correct linear combinations of them.
+
+108
+00:06:13,000 --> 00:06:13,000
+
+

@@ -1,0 +1,508 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:02,000
+These, you can see already are gonna
+
+2
+00:00:02,000 --> 00:00:05,000
+define a class of code transformations.
+
+3
+00:00:05,000 --> 00:00:09,000
+So if I act with H, for example, I turn these into X's.
+
+4
+00:00:09,000 --> 00:00:11,000
+And this is something we already found
+
+5
+00:00:11,000 --> 00:00:14,000
+useful in talking about the nine qubit shore code.
+
+6
+00:00:14,000 --> 00:00:18,000
+It was useful to turn the 3-bit repetition code, whose
+
+7
+00:00:18,000 --> 00:00:24,000
+stabilizers were Z1Z2 and Z2 Z3 into a code that was repetition
+
+8
+00:00:24,000 --> 00:00:29,000
+in a different basis, where the stabilizers were X1X2 and X2X3.
+
+9
+00:00:29,000 --> 00:00:33,000
+That was just done by transforming with the Hadamard.
+
+10
+00:00:33,000 --> 00:00:37,000
+And s will also give us code transformations
+
+11
+00:00:37,000 --> 00:00:39,000
+that are of that nature.
+
+12
+00:00:39,000 --> 00:00:41,000
+Where you're really just rotating
+
+13
+00:00:41,000 --> 00:00:45,000
+the single qubit bases.
+
+14
+00:00:45,000 --> 00:00:46,000
+And actually, already you can see
+
+15
+00:00:46,000 --> 00:00:49,000
+it will change the error correcting properties.
+
+16
+00:00:49,000 --> 00:00:51,000
+So if I have a code that corrects a z error,
+
+17
+00:00:51,000 --> 00:00:55,000
+and I do a Hadamard, it will instead correct an x error.
+
+18
+00:00:55,000 --> 00:00:59,000
+So there can be some kind of non-trivial changes there.
+
+19
+00:00:59,000 --> 00:01:02,000
+But these are limited, of course,
+
+20
+00:01:02,000 --> 00:01:04,000
+in that they're single cubic gates.
+
+21
+00:01:04,000 --> 00:01:06,000
+So they're not going to do any kind of entangling
+
+22
+00:01:06,000 --> 00:01:07,000
+transformation.
+
+23
+00:01:07,000 --> 00:01:09,000
+And, in particular, it's not going
+
+24
+00:01:09,000 --> 00:01:11,000
+to make things look like the trivial code.
+
+25
+00:01:11,000 --> 00:01:14,000
+Because, in the trivial code, the first and midas k qubits
+
+26
+00:01:14,000 --> 00:01:16,000
+are not entangled with the rest.
+
+27
+00:01:16,000 --> 00:01:21,000
+But with a general code, things should all be entangled.
+
+28
+00:01:21,000 --> 00:01:24,000
+For single qubits, this is all there is.
+
+29
+00:01:24,000 --> 00:01:31,000
+But we know that end qubit Clifford group does not just
+
+30
+00:01:31,000 --> 00:01:33,000
+look like tensor copies of the single qubit.
+
+31
+00:01:33,000 --> 00:01:38,000
+There have to be more gates in there, entangling gates.
+
+32
+00:01:38,000 --> 00:01:41,000
+So let's try and, as we move beyond single qubit Clifford,
+
+33
+00:01:41,000 --> 00:01:42,000
+let's try and think of some more examples.
+
+34
+00:01:42,000 --> 00:01:48,000
+
+
+35
+00:01:48,000 --> 00:01:55,000
+So one example, which is maybe a little unsatisfactory,
+
+36
+00:01:55,000 --> 00:01:56,000
+is the swap gate.
+
+37
+00:01:56,000 --> 00:01:59,000
+
+
+38
+00:01:59,000 --> 00:02:03,000
+So if I have a string of polies and I conjugate it by swap,
+
+39
+00:02:03,000 --> 00:02:07,000
+it will just swap the polies in positions i and j.
+
+40
+00:02:07,000 --> 00:02:11,000
+So that's gonna map any poly to another poly.
+
+41
+00:02:11,000 --> 00:02:15,000
+And this is a funny gate, because, in some ways
+
+42
+00:02:15,000 --> 00:02:19,000
+it can create entanglement.
+
+43
+00:02:19,000 --> 00:02:24,000
+If I have, well, depending on how you define entanglement,
+
+44
+00:02:24,000 --> 00:02:27,000
+it can be used to create entanglement.
+
+45
+00:02:27,000 --> 00:02:29,000
+But if I start with a totally product state,
+
+46
+00:02:29,000 --> 00:02:34,000
+it will not map that to non-product state.
+
+47
+00:02:34,000 --> 00:02:38,000
+So this alone will, again, not take us to the trivial code.
+
+48
+00:02:38,000 --> 00:02:40,000
+There's one more transformation we need.
+
+49
+00:02:40,000 --> 00:02:43,000
+And this is, I think, what makes the Clifford
+
+50
+00:02:43,000 --> 00:02:46,000
+group so non-trivial and interesting,
+
+51
+00:02:46,000 --> 00:02:48,000
+and that is the control knot
+
+52
+00:02:48,000 --> 00:02:51,000
+Turns out, the control knot is also
+
+53
+00:02:51,000 --> 00:02:55,000
+a member of the Clifford group.
+
+54
+00:02:55,000 --> 00:02:59,000
+And let me let me try to argue this with pictures.
+
+55
+00:02:59,000 --> 00:03:04,000
+So suppose we have, so you know this
+
+56
+00:03:04,000 --> 00:03:06,000
+is what a c-knot looks like.
+
+57
+00:03:06,000 --> 00:03:09,000
+
+
+58
+00:03:09,000 --> 00:03:09,000
+We do a c-knot.
+
+59
+00:03:09,000 --> 00:03:17,000
+
+
+60
+00:03:17,000 --> 00:03:19,000
+Then we do an x and then another c-knot.
+
+61
+00:03:19,000 --> 00:03:21,000
+C-knot is equal to its own dagger,
+
+62
+00:03:21,000 --> 00:03:23,000
+so I don't need to put the dagger in here.
+
+63
+00:03:23,000 --> 00:03:24,000
+What does this mean?
+
+64
+00:03:24,000 --> 00:03:29,000
+I look at the first bit, if it's set to one,
+
+65
+00:03:29,000 --> 00:03:30,000
+I flip the second bit.
+
+66
+00:03:30,000 --> 00:03:34,000
+Then I do an x and I do another c-knot.
+
+67
+00:03:34,000 --> 00:03:39,000
+So what we find is that if the first bit was zero,
+
+68
+00:03:39,000 --> 00:03:41,000
+sorry the first was originally one,
+
+69
+00:03:41,000 --> 00:03:43,000
+then it'll do a bit flip down here.
+
+70
+00:03:43,000 --> 00:03:46,000
+Then it will get set to zero, and then it will knot act.
+
+71
+00:03:46,000 --> 00:03:49,000
+Or if it was zero, it won't do a bit flip here,
+
+72
+00:03:49,000 --> 00:03:51,000
+but it will do one here.
+
+73
+00:03:51,000 --> 00:03:55,000
+Either way, the second bit gets flipped exactly once.
+
+74
+00:03:55,000 --> 00:04:02,000
+So this is just equal to doing an x on both lines.
+
+75
+00:04:02,000 --> 00:04:09,000
+
+
+76
+00:04:09,000 --> 00:04:18,000
+So in equations, what this means is
+
+77
+00:04:18,000 --> 00:04:28,000
+that c-knot i j x i and c-knot i j dagger is equal to x j.
+
+78
+00:04:28,000 --> 00:04:32,000
+
+
+79
+00:04:32,000 --> 00:04:34,000
+And, in fact, we can make a little table.
+
+80
+00:04:34,000 --> 00:04:37,000
+So let's just actually call the qubits one and two.
+
+81
+00:04:37,000 --> 00:04:43,000
+
+
+82
+00:04:43,000 --> 00:04:44,000
+So if you keep doing this calculation
+
+83
+00:04:44,000 --> 00:04:46,000
+for each of these four.
+
+84
+00:04:46,000 --> 00:04:56,000
+Let's look at c-knot one two, p c-knot one two dagger.
+
+85
+00:04:56,000 --> 00:04:59,000
+Then so x1 gets mapped to x1 x2.
+
+86
+00:04:59,000 --> 00:05:03,000
+
+
+87
+00:05:03,000 --> 00:05:06,000
+It turns out x2 gets left alone.
+
+88
+00:05:06,000 --> 00:05:11,000
+Because if I have a x on this line,
+
+89
+00:05:11,000 --> 00:05:13,000
+it just commutes with the c-knot.
+
+90
+00:05:13,000 --> 00:05:19,000
+
+
+91
+00:05:19,000 --> 00:05:21,000
+Z1 one on the first line, what would
+
+92
+00:05:21,000 --> 00:05:23,000
+happen to z1 if I conjugate it by controlled knot.
+
+93
+00:05:23,000 --> 00:05:30,000
+
+
+94
+00:05:30,000 --> 00:05:35,000
+Nothing, right, z1 just commutes with controlled knot.
+
+95
+00:05:35,000 --> 00:05:38,000
+And then this last one is a little bit not obvious,
+
+96
+00:05:38,000 --> 00:05:42,000
+but it turns out that a z2 will kind of move
+
+97
+00:05:42,000 --> 00:05:43,000
+backwards through a c-knot.
+
+98
+00:05:43,000 --> 00:05:48,000
+
+
+99
+00:05:48,000 --> 00:05:51,000
+This kind of had to be true to preserve the commutation
+
+100
+00:05:51,000 --> 00:05:53,000
+relations.
+
+101
+00:05:53,000 --> 00:05:56,000
+You can also see it by direct calculation
+
+102
+00:05:56,000 --> 00:05:58,000
+or by using the fact that if you had
+
+103
+00:05:58,000 --> 00:05:59,000
+a margin on both sides of a c-knot,
+
+104
+00:05:59,000 --> 00:06:02,000
+it reverses the direction of the c-knot.
+
+105
+00:06:02,000 --> 00:06:05,000
+So the key takeaway is that these
+
+106
+00:06:05,000 --> 00:06:07,000
+are all in the poly group.
+
+107
+00:06:07,000 --> 00:06:09,000
+So that means that the c-knot is also an element
+
+108
+00:06:09,000 --> 00:06:12,000
+of the Clifford's.
+
+109
+00:06:12,000 --> 00:06:18,000
+And, again, I claim that this is it.
+
+110
+00:06:18,000 --> 00:06:19,000
+I mean there are things you can get
+
+111
+00:06:19,000 --> 00:06:22,000
+by multiplying these together, but this generates everything.
+
+112
+00:06:22,000 --> 00:06:27,000
+So I claim that the end qubit Clifford's are
+
+113
+00:06:27,000 --> 00:06:34,000
+generated by the Hadamard phases and c-knots.
+
+114
+00:06:34,000 --> 00:06:39,000
+Just these are enough to generate the entire Clifford.
+
+115
+00:06:39,000 --> 00:06:43,000
+
+
+116
+00:06:43,000 --> 00:06:47,000
+So these are the set of transformations
+
+117
+00:06:47,000 --> 00:06:49,000
+of unitary transformations that will take polies
+
+118
+00:06:49,000 --> 00:06:51,000
+to other polies.
+
+119
+00:06:51,000 --> 00:06:53,000
+And therefore, they will take stabilizer codes
+
+120
+00:06:53,000 --> 00:06:56,000
+to other stabilizer codes.
+
+121
+00:06:56,000 --> 00:06:59,000
+And I've described everything in kind of a group notation.
+
+122
+00:06:59,000 --> 00:07:02,000
+Next time, I'm going to talk about it in vector language.
+
+123
+00:07:02,000 --> 00:07:05,000
+And so we can see some justification of this fact
+
+124
+00:07:05,000 --> 00:07:06,000
+that whatever the inner products are,
+
+125
+00:07:06,000 --> 00:07:10,000
+there's some transformation that will take you
+
+126
+00:07:10,000 --> 00:07:13,000
+
+

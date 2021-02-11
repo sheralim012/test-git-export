@@ -1,0 +1,472 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:00,000
+OK.
+
+2
+00:00:00,000 --> 00:00:02,000
+So what about the classical random maps?
+
+3
+00:00:02,000 --> 00:00:05,000
+So here we have some of the constraints
+
+4
+00:00:05,000 --> 00:00:07,000
+of quantum mechanics.
+
+5
+00:00:07,000 --> 00:00:09,000
+In particular, if you're going to act
+
+6
+00:00:09,000 --> 00:00:15,000
+on probability distributions, the math should be linear.
+
+7
+00:00:15,000 --> 00:00:19,000
+And so we're going to map a vector
+
+8
+00:00:19,000 --> 00:00:28,000
+T to some other vector, which is a linear function of P.
+
+9
+00:00:28,000 --> 00:00:33,000
+And so we can write that in terms of a matrix, T.
+
+10
+00:00:33,000 --> 00:00:41,000
+And not any just any matrix will if possible here.
+
+11
+00:00:41,000 --> 00:00:44,000
+
+
+12
+00:00:44,000 --> 00:00:48,000
+The output has to still be a probability distribution.
+
+13
+00:00:48,000 --> 00:00:50,000
+In particular, it has to have non-negative entries,
+
+14
+00:00:50,000 --> 00:00:52,000
+and it has to be normalized.
+
+15
+00:00:52,000 --> 00:00:55,000
+And that has to be true regardless of the input vector
+
+16
+00:00:55,000 --> 00:00:57,000
+P, just like we saw for unitaries.
+
+17
+00:00:57,000 --> 00:00:59,000
+You know, unitaries are something
+
+18
+00:00:59,000 --> 00:01:00,000
+that preserves the length of all vectors.
+
+19
+00:01:00,000 --> 00:01:02,000
+It's not enough to have a matrix that preserves
+
+20
+00:01:02,000 --> 00:01:04,000
+the length of some vectors.
+
+21
+00:01:04,000 --> 00:01:08,000
+You need a matrix that preserves the length of any unit vector.
+
+22
+00:01:08,000 --> 00:01:10,000
+Likewise, for these matrices, t.
+
+23
+00:01:10,000 --> 00:01:12,000
+And the ones that satisfy this are called stochastic.
+
+24
+00:01:12,000 --> 00:01:21,000
+
+
+25
+00:01:21,000 --> 00:01:26,000
+So let's talk briefly about the properties
+
+26
+00:01:26,000 --> 00:01:27,000
+of stochastic matrices.
+
+27
+00:01:27,000 --> 00:01:32,000
+
+
+28
+00:01:32,000 --> 00:01:35,000
+It's important that we're going to
+
+29
+00:01:35,000 --> 00:01:38,000
+a simultaneous generalization soon of stochastic and unitary.
+
+30
+00:01:38,000 --> 00:01:39,000
+So we should make sure that we're
+
+31
+00:01:39,000 --> 00:01:42,000
+rock solid on both of these corners
+
+32
+00:01:42,000 --> 00:01:45,000
+before we move into this final box.
+
+33
+00:01:45,000 --> 00:01:50,000
+So what does a stochastic matrix look like?
+
+34
+00:01:50,000 --> 00:01:53,000
+Let's think about what it comes from.
+
+35
+00:01:53,000 --> 00:01:56,000
+So in a deterministic theory, if you're in state x,
+
+36
+00:01:56,000 --> 00:01:58,000
+you have to transition deterministically
+
+37
+00:01:58,000 --> 00:02:00,000
+to some other state.
+
+38
+00:02:00,000 --> 00:02:03,000
+But in a random theory, if you're in state x,
+
+39
+00:02:03,000 --> 00:02:07,000
+you could transition with some probabilities
+
+40
+00:02:07,000 --> 00:02:09,000
+to many different output states.
+
+41
+00:02:09,000 --> 00:02:19,000
+So let's say that the probability of seeing output y
+
+42
+00:02:19,000 --> 00:02:22,000
+conditioned on input x.
+
+43
+00:02:22,000 --> 00:02:23,000
+I can write that out a little more,
+
+44
+00:02:23,000 --> 00:02:37,000
+probability of final state y given initial state x.
+
+45
+00:02:37,000 --> 00:02:44,000
+
+
+46
+00:02:44,000 --> 00:02:45,000
+So these are a bunch of numbers.
+
+47
+00:02:45,000 --> 00:02:48,000
+Let me put them into this matrix, T.
+
+48
+00:02:48,000 --> 00:02:52,000
+So once I have this matrix, T, you
+
+49
+00:02:52,000 --> 00:03:00,000
+can see that the probability of output y
+
+50
+00:03:00,000 --> 00:03:05,000
+is the sum over x of the probability of input
+
+51
+00:03:05,000 --> 00:03:13,000
+x and the probability of this transition.
+
+52
+00:03:13,000 --> 00:03:19,000
+This first one is P sub x.
+
+53
+00:03:19,000 --> 00:03:22,000
+The second one is T sub yx.
+
+54
+00:03:22,000 --> 00:03:31,000
+And so what we have is the y entry of this vector T times p.
+
+55
+00:03:31,000 --> 00:03:36,000
+So this is justifying why matrix multiplication
+
+56
+00:03:36,000 --> 00:03:42,000
+is the right way of doing probabilistic transitions.
+
+57
+00:03:42,000 --> 00:03:45,000
+I haven't said anything about the form of the matrix T yet,
+
+58
+00:03:45,000 --> 00:03:49,000
+but this is how we derive that randomized maps should
+
+59
+00:03:49,000 --> 00:03:50,000
+look like.
+
+60
+00:03:50,000 --> 00:03:55,000
+This probabilities go to a matrix times that vector
+
+61
+00:03:55,000 --> 00:03:58,000
+of probabilities.
+
+62
+00:03:58,000 --> 00:04:03,000
+So let me let me leave up this set of boxes.
+
+63
+00:04:03,000 --> 00:04:13,000
+
+
+64
+00:04:13,000 --> 00:04:14,000
+Right.
+
+65
+00:04:14,000 --> 00:04:21,000
+So the operation is linear, and so that's
+
+66
+00:04:21,000 --> 00:04:24,000
+how we get a matrix t in the first place.
+
+67
+00:04:24,000 --> 00:04:27,000
+But as you said, the entries of t
+
+68
+00:04:27,000 --> 00:04:29,000
+we can say a little bit more about.
+
+69
+00:04:29,000 --> 00:04:32,000
+The entries of t correspond to probabilities
+
+70
+00:04:32,000 --> 00:04:34,000
+of some event happening.
+
+71
+00:04:34,000 --> 00:04:41,000
+And so from this derivation we get that each individual entry
+
+72
+00:04:41,000 --> 00:04:42,000
+is non-negative.
+
+73
+00:04:42,000 --> 00:04:45,000
+
+
+74
+00:04:45,000 --> 00:04:46,000
+Be careful, by the way, I use greater than
+
+75
+00:04:46,000 --> 00:04:48,000
+or equal than to mean--
+
+76
+00:04:48,000 --> 00:04:50,000
+if I'm using it as a matrix, I mean the matrix
+
+77
+00:04:50,000 --> 00:04:52,000
+is positive semidefinite.
+
+78
+00:04:52,000 --> 00:04:54,000
+Here I'm just talking about the number,
+
+79
+00:04:54,000 --> 00:04:59,000
+that yx entry of the matrix t is a non-negative number.
+
+80
+00:04:59,000 --> 00:05:01,000
+It should always be clear from context
+
+81
+00:05:01,000 --> 00:05:04,000
+if there's a matrix or a number on the left hand side,
+
+82
+00:05:04,000 --> 00:05:07,000
+but beware that it's the same symbol.
+
+83
+00:05:07,000 --> 00:05:11,000
+So we have that constraint.
+
+84
+00:05:11,000 --> 00:05:12,000
+You can derive this from the fact
+
+85
+00:05:12,000 --> 00:05:15,000
+that this came from probabilities,
+
+86
+00:05:15,000 --> 00:05:17,000
+but you can also derive it a little more axiomatically.
+
+87
+00:05:17,000 --> 00:05:21,000
+If I'm going to map random states to random states,
+
+88
+00:05:21,000 --> 00:05:23,000
+I better have this, or I'm going to leave
+
+89
+00:05:23,000 --> 00:05:26,000
+my set of valid probability distributions, right?
+
+90
+00:05:26,000 --> 00:05:31,000
+Because if I have T, and I act on--
+
+91
+00:05:31,000 --> 00:05:38,000
+let me define e sub x to be 001 where the 1 is in the x
+
+92
+00:05:38,000 --> 00:05:41,000
+position.
+
+93
+00:05:41,000 --> 00:05:45,000
+This is kind of like the classical version of cat x.
+
+94
+00:05:45,000 --> 00:05:54,000
+Then Tex is sum over y Tyx ey.
+
+95
+00:05:54,000 --> 00:05:57,000
+e sub x is a valid probability distribution, corresponds
+
+96
+00:05:57,000 --> 00:06:01,000
+to just deterministically being in state x.
+
+97
+00:06:01,000 --> 00:06:05,000
+T times e sub x should be also a valid probability distribution,
+
+98
+00:06:05,000 --> 00:06:08,000
+so all of these had better be non-negative.
+
+99
+00:06:08,000 --> 00:06:11,000
+And so that implies that every single entry of the matrix
+
+100
+00:06:11,000 --> 00:06:13,000
+should be a non-negative real number.
+
+101
+00:06:13,000 --> 00:06:14,000
+OK.
+
+102
+00:06:14,000 --> 00:06:17,000
+So that gives us a constraint.
+
+103
+00:06:17,000 --> 00:06:19,000
+But there is another constraint that we also get from that.
+
+104
+00:06:19,000 --> 00:06:21,000
+What's the other constraint we get?
+
+105
+00:06:21,000 --> 00:06:24,000
+
+
+106
+00:06:24,000 --> 00:06:25,000
+This sums to 1.
+
+107
+00:06:25,000 --> 00:06:32,000
+So we also get that for all x, the sum over y of Tyx
+
+108
+00:06:32,000 --> 00:06:34,000
+is equal to 1.
+
+109
+00:06:34,000 --> 00:06:37,000
+So the columns of the matrix sum to 1.
+
+110
+00:06:37,000 --> 00:06:39,000
+So when we say stochastic, that's what we mean.
+
+111
+00:06:39,000 --> 00:06:40,000
+We mean the entries are non-negative,
+
+112
+00:06:40,000 --> 00:06:42,000
+and the column sum to 1.
+
+113
+00:06:42,000 --> 00:06:50,000
+
+
+114
+00:06:50,000 --> 00:06:53,000
+And these operations can also destroy information.
+
+115
+00:06:53,000 --> 00:07:00,000
+So unitarians do not.
+
+116
+00:07:00,000 --> 00:07:03,000
+That's a unique feature of unitary time evolution.
+
+117
+00:07:03,000 --> 00:07:07,000
+
+

@@ -1,0 +1,8 @@
+<video youtube="1.00:CpaiSU5zGUk" url_name="M1L2b" sub="" transcripts="{&quot;en&quot;: &quot;ec5a7ee8-401a-40a9-bbba-4d5e40b064b8-en.srt&quot;}" display_name="Steinspring representation of quantum operations" edx_video_id="ec5a7ee8-401a-40a9-bbba-4d5e40b064b8" youtube_id_1_0="CpaiSU5zGUk">
+  <video_asset client_video_id="External Video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="ec5a7ee8-401a-40a9-bbba-4d5e40b064b8-en.srt"/>
+</video>

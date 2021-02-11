@@ -1,0 +1,166 @@
+<problem linenum="136" tex_filename="./week1_1_ps0.tex" attempts="10" display_name="Quantum states and matrices" max_attempts="10">
+  <p>
+Complete the following sequence of logic to show that the following are all equivalent, for matrices [mathjaxinline]A[/mathjaxinline] and [mathjaxinline]B[/mathjaxinline], and quantum states [mathjaxinline]|x\rangle[/mathjaxinline]: </p>
+  <ul class="itemize">
+    <li>
+      <p>
+(1) [mathjaxinline]A[/mathjaxinline] has nonnegative eigenvalues, </p>
+    </li>
+    <li>
+      <p>
+(2) [mathjaxinline]A = B^\dagger B[/mathjaxinline], </p>
+    </li>
+    <li>
+      <p>
+(3) [mathjaxinline]\langle x|A|x\rangle  \geq 0[/mathjaxinline] for all [mathjaxinline]|x\rangle[/mathjaxinline] </p>
+    </li>
+  </ul>
+  <span>
+    <customresponse>
+      <drag_and_drop_input img="/static/images/ps0_p6a/ps0_p6a_dnd.png" target_outline="false" one_per_target="true" no_labels="true" label_bg_color="rgb(222, 139, 238)">
+        <draggable id="rmunitary" icon="/static/images/ps0_p6a/ps0_p6a_dnd_label1.png" can_reuse="true"/>
+        <draggable id="rmpolar" icon="/static/images/ps0_p6a/ps0_p6a_dnd_label2.png" can_reuse="true"/>
+        <draggable id="rmsingularvalue" icon="/static/images/ps0_p6a/ps0_p6a_dnd_label3.png" can_reuse="true"/>
+        <draggable id="rmsignificant" icon="/static/images/ps0_p6a/ps0_p6a_dnd_label4.png" can_reuse="true"/>
+        <draggable id="rmspectral" icon="/static/images/ps0_p6a/ps0_p6a_dnd_label5.png" can_reuse="true"/>
+        <draggable id="rmdiagonal" icon="/static/images/ps0_p6a/ps0_p6a_dnd_label6.png" can_reuse="true"/>
+        <draggable id="VdaggerV" icon="/static/images/ps0_p6a/ps0_p6a_dnd_label7.png" can_reuse="true"/>
+        <draggable id="UdaggerU" icon="/static/images/ps0_p6a/ps0_p6a_dnd_label8.png" can_reuse="true"/>
+        <draggable id="U" icon="/static/images/ps0_p6a/ps0_p6a_dnd_label9.png" can_reuse="true"/>
+        <draggable id="D" icon="/static/images/ps0_p6a/ps0_p6a_dnd_label10.png" can_reuse="true"/>
+        <draggable id="UdaggerDU" icon="/static/images/ps0_p6a/ps0_p6a_dnd_label11.png" can_reuse="true"/>
+        <draggable id="leq" icon="/static/images/ps0_p6a/ps0_p6a_dnd_label12.png" can_reuse="true"/>
+        <draggable id="" icon="/static/images/ps0_p6a/ps0_p6a_dnd_label13.png" can_reuse="true"/>
+        <draggable id="geq" icon="/static/images/ps0_p6a/ps0_p6a_dnd_label14.png" can_reuse="true"/>
+        <target id="1" x="277" y="0" w="141" h="54"/>
+        <target id="2" x="6" y="70" w="142" h="54"/>
+        <target id="3" x="319" y="70" w="141" h="54"/>
+        <target id="4" x="364" y="163" w="142" h="53"/>
+        <target id="16" x="661" y="336" w="141" h="53"/>
+        <target id="5" x="254" y="406" w="142" h="54"/>
+        <target id="15" x="535" y="406" w="142" h="54"/>
+        <target id="17" x="442" y="520" w="142" h="53"/>
+        <target id="6" x="237" y="597" w="142" h="53"/>
+        <target id="7" x="237" y="674" w="142" h="53"/>
+      </drag_and_drop_input>
+      <answer>
+caset = [{'rmsingularvalue': '1'}, {'rmdiagonal': '2'}, {'rmunitary': '3'}, {'UdaggerU': '4'}, {'rmunitary': '16'}, {'UdaggerDU': '5'}, {'rmdiagonal': '15'}, {'UdaggerDU': '17'}, {'': '6'}, {'geq': '7'}]
+# custom checking for reusable labels - assumes all targets get some label
+import json
+ans = json.loads(submission[0])
+correct = ['correct']
+for rule in caset:
+    if rule not in ans:
+        correct = ['incorrect']
+        break
+
+# use this for debugging
+# messages = ['ans=%s' % submission[0]]
+</answer>
+    </customresponse>
+    <solution>
+      <img src="/static/images/ps0_p6a/ps0_p6a_dnd_sol_NGH1KY.png"/>
+    </solution>
+  </span>
+  <p>
+    <solution>
+      <p>
+        <b>Solution:</b>
+      </p>
+      <span>
+        <p>
+Let [mathjaxinline]B = U\Lambda V[/mathjaxinline] be the spectral decomposition of [mathjaxinline]B[/mathjaxinline], where [mathjaxinline]\Lambda[/mathjaxinline] is diagonal, and [mathjaxinline]U[/mathjaxinline], [mathjaxinline]V[/mathjaxinline] are unitary. Then </p>
+        <table id="a0000000004" class="eqnarray" cellspacing="0" cellpadding="7" width="100%" style="table-layout:auto">
+          <tr id="a0000000005">
+            <td style="width:40%; border:none"> </td>
+            <td style="vertical-align:middle;                                    text-align:right; border:none">
+	    [mathjaxinline]\displaystyle B^\dagger B[/mathjaxinline]
+        </td>
+            <td style="vertical-align:middle;                                    text-align:center; border:none">
+	    [mathjaxinline]\displaystyle =[/mathjaxinline]
+        </td>
+            <td style="vertical-align:middle;                                    text-align:left; border:none">
+	    [mathjaxinline]\displaystyle  V^\dagger \Lambda U^\dagger U \Lambda V \nonumber[/mathjaxinline]
+        </td>
+            <td style="width:40%; border:none"> </td>
+            <td class="eqnnum" style="width:20%; border:none"> </td>
+          </tr>
+          <tr id="a0000000006">
+            <td style="width:40%; border:none"> </td>
+            <td style="vertical-align:middle;                                    text-align:right; border:none">
+	     
+        </td>
+            <td style="vertical-align:middle;                                    text-align:center; border:none">
+	    [mathjaxinline]\displaystyle =[/mathjaxinline]
+        </td>
+            <td style="vertical-align:middle;                                    text-align:left; border:none">
+	    [mathjaxinline]\displaystyle  V^\dagger \Lambda ^2 V \nonumber[/mathjaxinline]
+        </td>
+            <td style="width:40%; border:none"> </td>
+            <td class="eqnnum" style="width:20%; border:none"> </td>
+          </tr>
+        </table>
+        <p>
+where [mathjaxinline]\Lambda ^2[/mathjaxinline] is a diagonal matrix with nonegative entries, giving the eigenvalues of [mathjaxinline]A= B^\dagger B[/mathjaxinline]. </p>
+        <p>
+If [mathjaxinline]A[/mathjaxinline] has nonnegative eigenvalues, then it may be diagonalized by a unitary matrix [mathjaxinline]U[/mathjaxinline], such that [mathjaxinline]A = U^\dagger D U[/mathjaxinline], and [mathjaxinline]D[/mathjaxinline] is a diagonal matrix with nonnegative entries. Thus </p>
+        <table id="a0000000007" class="eqnarray" cellspacing="0" cellpadding="7" width="100%" style="table-layout:auto">
+          <tr id="a0000000008">
+            <td style="width:40%; border:none"> </td>
+            <td style="vertical-align:middle;                                    text-align:right; border:none">
+	    [mathjaxinline]\displaystyle \langle x| A |x\rangle[/mathjaxinline]
+        </td>
+            <td style="vertical-align:middle;                                    text-align:center; border:none">
+	    [mathjaxinline]\displaystyle =[/mathjaxinline]
+        </td>
+            <td style="vertical-align:middle;                                    text-align:left; border:none">
+	    [mathjaxinline]\displaystyle  \langle x| U^\dagger D U |x\rangle  \nonumber[/mathjaxinline]
+        </td>
+            <td style="width:40%; border:none"> </td>
+            <td class="eqnnum" style="width:20%; border:none"> </td>
+          </tr>
+          <tr id="a0000000009">
+            <td style="width:40%; border:none"> </td>
+            <td style="vertical-align:middle;                                    text-align:right; border:none">
+	     
+        </td>
+            <td style="vertical-align:middle;                                    text-align:center; border:none">
+	    [mathjaxinline]\displaystyle  =[/mathjaxinline]
+        </td>
+            <td style="vertical-align:middle;                                    text-align:left; border:none">
+	    [mathjaxinline]\displaystyle  \langle y| D |y\rangle  \nonumber[/mathjaxinline]
+        </td>
+            <td style="width:40%; border:none"> </td>
+            <td class="eqnnum" style="width:20%; border:none"> </td>
+          </tr>
+          <tr id="a0000000010">
+            <td style="width:40%; border:none"> </td>
+            <td style="vertical-align:middle;                                    text-align:right; border:none">
+	     
+        </td>
+            <td style="vertical-align:middle;                                    text-align:center; border:none">
+	    [mathjaxinline]\displaystyle  \geq[/mathjaxinline]
+        </td>
+            <td style="vertical-align:middle;                                    text-align:left; border:none">
+	    [mathjaxinline]\displaystyle  0 \nonumber[/mathjaxinline]
+        </td>
+            <td style="width:40%; border:none"> </td>
+            <td class="eqnnum" style="width:20%; border:none"> </td>
+          </tr>
+        </table>
+        <p>
+where </p>
+        <table id="a0000000011" class="eqnarray" cellspacing="0" cellpadding="7" width="100%" style="table-layout:auto">
+          <tr id="a0000000012">
+            <td style="width:40%; border:none"> </td>
+            <td style="vertical-align:middle;                                    text-align:right; border:none">
+	    [mathjaxinline]\displaystyle |y\rangle  = U |x\rangle  \nonumber[/mathjaxinline]
+        </td>
+            <td style="width:40%; border:none"> </td>
+            <td class="eqnnum" style="width:20%; border:none"> </td>
+          </tr>
+        </table>
+      </span>
+    </solution>
+  </p>
+</problem>

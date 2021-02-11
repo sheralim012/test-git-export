@@ -1,0 +1,74 @@
+<problem linenum="13" tex_filename="./week2_ps2.tex" attempts="10" display_name="S1. Schmidt decomposition (1 of 2)" max_attempts="10">
+  <p>
+Complete the following sequence of logic, to derive the <em>Schmidt decomposition</em> of a pure entangled state [mathjaxinline]|{\Psi }\rangle  \in \mathbb {C}^{d_ A} \otimes \mathbb {C}^{d_ B}[/mathjaxinline]: </p>
+  <table id="a0000000002" class="eqnarray" cellspacing="0" cellpadding="7" width="100%" style="table-layout:auto">
+    <tr id="a0000000003">
+      <td style="width:40%; border:none"> </td>
+      <td style="vertical-align:middle;                                    text-align:right; border:none">
+	    [mathjaxinline]\displaystyle |{\Psi }\rangle  = \sum _{j=1}^{n} \sigma _{j} |{\alpha _ j}\rangle  \otimes |{\beta _ j}\rangle ,[/mathjaxinline]
+        </td>
+      <td style="width:40%; border:none"> </td>
+      <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.1)</td>
+    </tr>
+  </table>
+  <p>
+where [mathjaxinline]n = \min (d_ A, d_ B)[/mathjaxinline], and the sets of vectors [mathjaxinline]\{ \alpha _ j\}[/mathjaxinline] and [mathjaxinline]\{ \beta _ j\}[/mathjaxinline] are orthogonal. </p>
+  <p>
+    <div class="hideshowbox">
+      <h4 onclick="hideshow(this);" style="margin: 0px">Hint<span class="icon-caret-down toggleimage"/></h4>
+      <div class="hideshowcontent">Recall the <a href="https://en.wikipedia.org/wiki/Singular-value_decomposition" target="_blank">singular value decomposition</a> of a matrix [mathjaxinline]X[/mathjaxinline]: <table id="a0000000004" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto"><tr><td class="equation" style="width:80%; border:none">[mathjax]X = U \Sigma V^\dagger[/mathjax]</td><td class="eqnnum" style="width:20%; border:none"> </td></tr></table> where [mathjaxinline]U[/mathjaxinline] and [mathjaxinline]V[/mathjaxinline] are unitaries and [mathjaxinline]\Sigma[/mathjaxinline] is diagonal, with real nonnegative entries. </div>
+      <p class="hideshowbottom" onclick="hideshow(this);" style="margin: 0px">
+        <a href="javascript: {return false;}">Show</a>
+      </p>
+    </div>
+  </p>
+  <span>
+    <customresponse>
+      <drag_and_drop_input img="/static/images/ps1a_schmidt1/ps1a_schmidt1_dnd.png" target_outline="false" one_per_target="true" no_labels="true" label_bg_color="rgb(222, 139, 238)">
+        <draggable id="sumkVkj" icon="/static/images/ps1a_schmidt1/ps1a_schmidt1_dnd_label1.png" can_reuse="true"/>
+        <draggable id="sumiUij" icon="/static/images/ps1a_schmidt1/ps1a_schmidt1_dnd_label2.png" can_reuse="true"/>
+        <draggable id="rmrows" icon="/static/images/ps1a_schmidt1/ps1a_schmidt1_dnd_label3.png" can_reuse="true"/>
+        <draggable id="rmcolumns" icon="/static/images/ps1a_schmidt1/ps1a_schmidt1_dnd_label4.png" can_reuse="true"/>
+        <draggable id="rmunitarity" icon="/static/images/ps1a_schmidt1/ps1a_schmidt1_dnd_label5.png" can_reuse="true"/>
+        <draggable id="rmorthogonal" icon="/static/images/ps1a_schmidt1/ps1a_schmidt1_dnd_label6.png" can_reuse="true"/>
+        <draggable id="rmpolar" icon="/static/images/ps1a_schmidt1/ps1a_schmidt1_dnd_label7.png" can_reuse="true"/>
+        <draggable id="rmeigenvalue" icon="/static/images/ps1a_schmidt1/ps1a_schmidt1_dnd_label8.png" can_reuse="true"/>
+        <draggable id="rmeigenvalues" icon="/static/images/ps1a_schmidt1/ps1a_schmidt1_dnd_label9.png" can_reuse="true"/>
+        <draggable id="rmsingularvalue" icon="/static/images/ps1a_schmidt1/ps1a_schmidt1_dnd_label10.png" can_reuse="true"/>
+        <draggable id="rmsingularvalues" icon="/static/images/ps1a_schmidt1/ps1a_schmidt1_dnd_label11.png" can_reuse="true"/>
+        <draggable id="Uij" icon="/static/images/ps1a_schmidt1/ps1a_schmidt1_dnd_label12.png" can_reuse="true"/>
+        <draggable id="Uji" icon="/static/images/ps1a_schmidt1/ps1a_schmidt1_dnd_label13.png" can_reuse="true"/>
+        <draggable id="Vjk" icon="/static/images/ps1a_schmidt1/ps1a_schmidt1_dnd_label14.png" can_reuse="true"/>
+        <draggable id="Vkj" icon="/static/images/ps1a_schmidt1/ps1a_schmidt1_dnd_label15.png" can_reuse="true"/>
+        <target id="1" x="245" y="86" w="149" h="53"/>
+        <target id="2" x="86" y="156" w="149" h="52"/>
+        <target id="3" x="151" y="290" w="149" h="53"/>
+        <target id="4" x="365" y="290" w="149" h="53"/>
+        <target id="16" x="158" y="455" w="149" h="53"/>
+        <target id="18" x="372" y="455" w="149" h="53"/>
+        <target id="8" x="244" y="691" w="149" h="53"/>
+        <target id="9" x="548" y="691" w="149" h="53"/>
+        <target id="7" x="51" y="785" w="149" h="53"/>
+      </drag_and_drop_input>
+      <answer>
+caset = [{'rmsingularvalue': '1'}, {'rmsingularvalues': '2'}, {'Uij': '3'}, {'Vkj': '4'}, {'Uij': '16'}, {'Vkj': '18'}, {'sumiUij': '8'}, {'sumkVkj': '9'}, {'rmcolumns': '7'}]
+# custom checking for reusable labels - assumes all targets get some label
+import json
+ans = json.loads(submission[0])
+correct = ['correct']
+for rule in caset:
+    if rule not in ans:
+        correct = ['incorrect']
+        break
+
+# use this for debugging
+# messages = ['ans=%s' % submission[0]]
+</answer>
+    </customresponse>
+    <solution>
+      <img src="/static/images/ps1a_schmidt1/ps1a_schmidt1_dnd_sol_3RU6NU.png"/>
+    </solution>
+  </span>
+  <SCRIPT type="text/javascript" src="/static/latex2edx.js"/>
+  <LINK type="text/css" rel="stylesheet" href="/static/latex2edx.css"/>
+</problem>

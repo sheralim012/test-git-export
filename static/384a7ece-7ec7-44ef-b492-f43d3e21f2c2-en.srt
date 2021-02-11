@@ -1,0 +1,100 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:01,000
+So next, I want to tell you about what
+
+2
+00:00:01,000 --> 00:00:03,000
+happens to the dephasing channel when you
+
+3
+00:00:03,000 --> 00:00:05,000
+look at it in the Bloch sphere.
+
+4
+00:00:05,000 --> 00:00:12,000
+So let's go back and draw the Bloch sphere.
+
+5
+00:00:12,000 --> 00:00:23,000
+So the Bloch sphere looked like 0, 1, plus minus--
+
+6
+00:00:23,000 --> 00:00:25,000
+
+
+7
+00:00:25,000 --> 00:00:42,000
+well, when you multiply the off-diagonal elements by q,
+
+8
+00:00:42,000 --> 00:00:51,000
+you get 1, 1, 1, 1, that's 1/2, goes to 1/2 1, 1 minus q,
+
+9
+00:00:51,000 --> 00:00:54,000
+1 minus q, 1.
+
+10
+00:00:54,000 --> 00:01:00,000
+And with that, you're just moving the Bloch sphere
+
+11
+00:01:00,000 --> 00:01:03,000
+into the middle, because you're taking this,
+
+12
+00:01:03,000 --> 00:01:06,000
+you're multiplying it by 1 minus q,
+
+13
+00:01:06,000 --> 00:01:09,000
+and you're adding q amount of diagonal.
+
+14
+00:01:09,000 --> 00:01:12,000
+Or q amount of the identity.
+
+15
+00:01:12,000 --> 00:01:15,000
+So that goes here.
+
+16
+00:01:15,000 --> 00:01:18,000
+And in general, this is going to go to an ellipsoid.
+
+17
+00:01:18,000 --> 00:01:19,000
+This is still zero.
+
+18
+00:01:19,000 --> 00:01:21,000
+This is still 1.
+
+19
+00:01:21,000 --> 00:01:29,000
+And this is 1, 1 minus q, 1 minus q, 1, et cetera.
+
+20
+00:01:29,000 --> 00:01:35,000
+So you shrink the Bloch sphere into an ellipsoid
+
+21
+00:01:35,000 --> 00:01:40,000
+with the vertical axis stays the same and everything else
+
+22
+00:01:40,000 --> 00:01:42,000
+shrinks by the same factor.
+
+23
+00:01:42,000 --> 00:01:50,000
+So this is the phasing in Bloch picture.
+
+24
+00:01:50,000 --> 00:01:59,000
+
+

@@ -1,0 +1,22 @@
+<problem linenum="117" tex_filename="./week1_1_ps0.tex" attempts="3" display_name="Positive semi-definite operators" max_attempts="3">
+  <p>
+[mathjaxinline]X[/mathjaxinline] and [mathjaxinline]Y[/mathjaxinline] are Hermitian and positive semi-definite (PSD). Which expressions are always PSD? </p>
+  <p>
+    <choiceresponse>
+      <checkboxgroup>
+        <choice correct="true" name="1">
+          <text>[mathjaxinline]X^2[/mathjaxinline]</text>
+        </choice>
+        <choice correct="false" name="2">
+          <text>[mathjaxinline]XY[/mathjaxinline]</text>
+        </choice>
+        <choice correct="true" name="3">
+          <text>[mathjaxinline]XYX[/mathjaxinline]</text>
+        </choice>
+        <choice correct="true" name="4">
+          <text>[mathjaxinline]X+Y[/mathjaxinline]</text>
+        </choice>
+      </checkboxgroup>
+    </choiceresponse>
+  </p>
+</problem>

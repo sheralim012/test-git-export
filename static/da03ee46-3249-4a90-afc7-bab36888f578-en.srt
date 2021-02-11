@@ -1,0 +1,1032 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:02,000
+So I've encoded one qubit into this code.
+
+2
+00:00:02,000 --> 00:00:06,000
+I can act on it by doing these five X and five Z operators.
+
+3
+00:00:06,000 --> 00:00:07,000
+And by the way, this should give you
+
+4
+00:00:07,000 --> 00:00:14,000
+a hint of why it's possible to protect quantum data in a code
+
+5
+00:00:14,000 --> 00:00:17,000
+and still act on it with your quantum computer.
+
+6
+00:00:17,000 --> 00:00:19,000
+Because in order to actually manipulate
+
+7
+00:00:19,000 --> 00:00:22,000
+the logical information, I need to hit all five qubits.
+
+8
+00:00:22,000 --> 00:00:24,000
+Let's say I want to do a logical Z or a logical X.
+
+9
+00:00:24,000 --> 00:00:27,000
+I need to do X or Z to all five qubits.
+
+10
+00:00:27,000 --> 00:00:29,000
+I can do that on my quantum computer.
+
+11
+00:00:29,000 --> 00:00:34,000
+I could just, in parallel, shine a laser beam on each ion,
+
+12
+00:00:34,000 --> 00:00:35,000
+for example.
+
+13
+00:00:35,000 --> 00:00:38,000
+Or send a microwave pulse in parallel
+
+14
+00:00:38,000 --> 00:00:40,000
+to each superconducting qubit.
+
+15
+00:00:40,000 --> 00:00:44,000
+But the environment is unlikely to coordinate in this way.
+
+16
+00:00:44,000 --> 00:00:47,000
+So this is kind of why I can use a quantum error-correcting code
+
+17
+00:00:47,000 --> 00:00:49,000
+and still manipulate the information while it
+
+18
+00:00:49,000 --> 00:00:52,000
+gets protected from error.
+
+19
+00:00:52,000 --> 00:00:53,000
+Or so I claim it's protected from error.
+
+20
+00:00:53,000 --> 00:00:56,000
+I haven't actually demonstrated that yet.
+
+21
+00:00:56,000 --> 00:00:59,000
+So let me now justify that.
+
+22
+00:00:59,000 --> 00:01:12,000
+So when we talk about error correction of the five qubit
+
+23
+00:01:12,000 --> 00:01:13,000
+code.
+
+24
+00:01:13,000 --> 00:01:27,000
+So I claim that each single qubit Pauli error
+
+25
+00:01:27,000 --> 00:01:34,000
+leads to a distinct syndrome.
+
+26
+00:01:34,000 --> 00:01:37,000
+
+
+27
+00:01:37,000 --> 00:01:50,000
+And what I mean by syndrome is I'm given some state
+
+28
+00:01:50,000 --> 00:01:54,000
+Psi which is in the code space.
+
+29
+00:01:54,000 --> 00:01:58,000
+
+
+30
+00:01:58,000 --> 00:02:02,000
+Some noise happens, and it gets mapped to a mixed state Rho.
+
+31
+00:02:02,000 --> 00:02:11,000
+And then I measure these four stabilizer generators.
+
+32
+00:02:11,000 --> 00:02:18,000
+So let me just call these little S1, little S2, little S3,
+
+33
+00:02:18,000 --> 00:02:19,000
+little S4.
+
+34
+00:02:19,000 --> 00:02:24,000
+
+
+35
+00:02:24,000 --> 00:02:32,000
+And I obtain outcomes.
+
+36
+00:02:32,000 --> 00:02:39,000
+Let's say minus 1 to the B1, through minus 1
+
+37
+00:02:39,000 --> 00:02:46,000
+to the B4, where B1 through B4 are in 0, 1.
+
+38
+00:02:46,000 --> 00:02:54,000
+This B1 through B4, I'm calling the syndrome.
+
+39
+00:02:54,000 --> 00:02:56,000
+Just like for linear code, classically we
+
+40
+00:02:56,000 --> 00:02:59,000
+do these parity checks that tell us
+
+41
+00:02:59,000 --> 00:03:02,000
+whether we're in the code space or out of the code space.
+
+42
+00:03:02,000 --> 00:03:04,000
+Here we measure the stabilizers.
+
+43
+00:03:04,000 --> 00:03:06,000
+If we're in the code space all of them
+
+44
+00:03:06,000 --> 00:03:08,000
+will be plus one eigenstates.
+
+45
+00:03:08,000 --> 00:03:12,000
+So here I can say, this is minus 1 to the 0 or 1.
+
+46
+00:03:12,000 --> 00:03:16,000
+Then all of these B1 through B4 would be 0.
+
+47
+00:03:16,000 --> 00:03:25,000
+So no error means that B is equal to 0000.
+
+48
+00:03:25,000 --> 00:03:29,000
+And it's not a priori obvious but I
+
+49
+00:03:29,000 --> 00:03:33,000
+claim that any error will lead to B being
+
+50
+00:03:33,000 --> 00:03:37,000
+not only non-zero but even distinct for different errors.
+
+51
+00:03:37,000 --> 00:03:54,000
+So I claim different errors lead to distinct non-zero B.
+
+52
+00:03:54,000 --> 00:04:01,000
+So before I justify this, let me try and argue why
+
+53
+00:04:01,000 --> 00:04:03,000
+that is the right thing to do.
+
+54
+00:04:03,000 --> 00:04:06,000
+Why do I care that these give non-zero B
+
+55
+00:04:06,000 --> 00:04:07,000
+or that they are distinct?
+
+56
+00:04:07,000 --> 00:04:13,000
+
+
+57
+00:04:13,000 --> 00:04:15,000
+Well, actually, let me do it in the other order.
+
+58
+00:04:15,000 --> 00:04:16,000
+Let me prove this is true and then we'll
+
+59
+00:04:16,000 --> 00:04:18,000
+talk about why it's important.
+
+60
+00:04:18,000 --> 00:04:28,000
+
+
+61
+00:04:28,000 --> 00:04:37,000
+Let me actually analyze a slightly different protocol.
+
+62
+00:04:37,000 --> 00:04:50,000
+Suppose we also measure S5, which is a product of S1
+
+63
+00:04:50,000 --> 00:04:52,000
+through S4.
+
+64
+00:04:52,000 --> 00:04:58,000
+In other words, it's this final line here.
+
+65
+00:04:58,000 --> 00:05:08,000
+Of course, the outcome B5 will just B1 plus B4, mod 2.
+
+66
+00:05:08,000 --> 00:05:11,000
+You know, I can interpret these as elements of F2.
+
+67
+00:05:11,000 --> 00:05:14,000
+Because there is no extra information here--
+
+68
+00:05:14,000 --> 00:05:17,000
+these are commuting operators-- so once I've
+
+69
+00:05:17,000 --> 00:05:20,000
+measured these four, I'm in a simultaneous eigenstate
+
+70
+00:05:20,000 --> 00:05:22,000
+of the four of them, I'm not going
+
+71
+00:05:22,000 --> 00:05:24,000
+to get any extra information from S5.
+
+72
+00:05:24,000 --> 00:05:27,000
+So I can sort of assume that I've measured it
+
+73
+00:05:27,000 --> 00:05:28,000
+without loss of generality.
+
+74
+00:05:28,000 --> 00:05:30,000
+It adds or takes away nothing.
+
+75
+00:05:30,000 --> 00:05:33,000
+The only reason to do it is it makes the analysis
+
+76
+00:05:33,000 --> 00:05:35,000
+of what I'm writing down a little bit cleaner
+
+77
+00:05:35,000 --> 00:05:38,000
+and a little more symmetric.
+
+78
+00:05:38,000 --> 00:05:41,000
+OK, so, with that out of the way,
+
+79
+00:05:41,000 --> 00:05:44,000
+let's look at what happens when we have a single qubit error.
+
+80
+00:05:44,000 --> 00:05:55,000
+So suppose the error is X1.
+
+81
+00:05:55,000 --> 00:06:02,000
+So the state is X1 times Psi.
+
+82
+00:06:02,000 --> 00:06:06,000
+
+
+83
+00:06:06,000 --> 00:06:08,000
+What is the syndrome going to be?
+
+84
+00:06:08,000 --> 00:06:11,000
+
+
+85
+00:06:11,000 --> 00:06:13,000
+So in other words, when we measure these stabilizers,
+
+86
+00:06:13,000 --> 00:06:16,000
+when are we going to get plus 1, when are we going at minus 1?
+
+87
+00:06:16,000 --> 00:06:20,000
+If there is no error, then we're in the code space.
+
+88
+00:06:20,000 --> 00:06:22,000
+All of them are plus 1.
+
+89
+00:06:22,000 --> 00:06:28,000
+But this X1 commutes with some of the stabilizers
+
+90
+00:06:28,000 --> 00:06:30,000
+and anti-commutes with others.
+
+91
+00:06:30,000 --> 00:06:33,000
+And so, what happens is, if it commutes with the stabilizer,
+
+92
+00:06:33,000 --> 00:06:36,000
+it leaves a plus 1 eigenstate of that stabilizer.
+
+93
+00:06:36,000 --> 00:06:39,000
+But if it anti-commutes it flips it to minus 1.
+
+94
+00:06:39,000 --> 00:06:40,000
+So to figure out the syndrome, we
+
+95
+00:06:40,000 --> 00:06:42,000
+need to figure out which one of these
+
+96
+00:06:42,000 --> 00:06:46,000
+it commutes and anti-commutes with.
+
+97
+00:06:46,000 --> 00:06:47,000
+So let's go through.
+
+98
+00:06:47,000 --> 00:06:50,000
+For S1, what does it do, commute or anti-commute?
+
+99
+00:06:50,000 --> 00:06:51,000
+[INAUDIBLE]
+
+100
+00:06:51,000 --> 00:06:52,000
+What's that?
+
+101
+00:06:52,000 --> 00:06:53,000
+Anti-commute.
+
+102
+00:06:53,000 --> 00:06:53,000
+Anti-commute.
+
+103
+00:06:53,000 --> 00:06:55,000
+Why is that?
+
+104
+00:06:55,000 --> 00:06:56,000
+[INAUDIBLE]
+
+105
+00:06:56,000 --> 00:06:56,000
+Yeah.
+
+106
+00:06:56,000 --> 00:06:59,000
+You just look at the first position and there's a Z here.
+
+107
+00:06:59,000 --> 00:07:01,000
+What about S2?
+
+108
+00:07:01,000 --> 00:07:01,000
+Commute.
+
+109
+00:07:01,000 --> 00:07:03,000
+S3?
+
+110
+00:07:03,000 --> 00:07:03,000
+Anti.
+
+111
+00:07:03,000 --> 00:07:05,000
+And S4?
+
+112
+00:07:05,000 --> 00:07:05,000
+Commute.
+
+113
+00:07:05,000 --> 00:07:08,000
+And of course, S5 also commutes.
+
+114
+00:07:08,000 --> 00:07:10,000
+So let's write down the little table of syndromes.
+
+115
+00:07:10,000 --> 00:07:14,000
+X1, da da da.
+
+116
+00:07:14,000 --> 00:07:17,000
+1, 0, 1, 0, 0.
+
+117
+00:07:17,000 --> 00:07:23,000
+Say this is B1, B2, B3, B4, B5.
+
+118
+00:07:23,000 --> 00:07:26,000
+Now, something nice happens.
+
+119
+00:07:26,000 --> 00:07:27,000
+I don't need to look over there anymore
+
+120
+00:07:27,000 --> 00:07:29,000
+because of the cyclic symmetry.
+
+121
+00:07:29,000 --> 00:07:37,000
+So I want to figure out X2, X3, X4, X5.
+
+122
+00:07:37,000 --> 00:07:39,000
+I just know what all those rows are.
+
+123
+00:07:39,000 --> 00:07:40,000
+I just rotate.
+
+124
+00:07:40,000 --> 00:07:42,000
+So this next one is--
+
+125
+00:07:42,000 --> 00:07:45,000
+X2 is 0, 1, 0, 1, 0.
+
+126
+00:07:45,000 --> 00:07:49,000
+X3, I rotate again.
+
+127
+00:07:49,000 --> 00:07:50,000
+X4, keep rotating.
+
+128
+00:07:50,000 --> 00:07:53,000
+
+
+129
+00:07:53,000 --> 00:07:54,000
+Et cetera.
+
+130
+00:07:54,000 --> 00:07:58,000
+
+
+131
+00:07:58,000 --> 00:07:59,000
+Did I get that right?
+
+132
+00:07:59,000 --> 00:08:00,000
+No.
+
+133
+00:08:00,000 --> 00:08:08,000
+
+
+134
+00:08:08,000 --> 00:08:09,000
+OK?
+
+135
+00:08:09,000 --> 00:08:12,000
+So once I know the X1 row, I know all the others,
+
+136
+00:08:12,000 --> 00:08:14,000
+because they're just related by cyclic shifts.
+
+137
+00:08:14,000 --> 00:08:21,000
+
+
+138
+00:08:21,000 --> 00:08:22,000
+Any questions about this?
+
+139
+00:08:22,000 --> 00:08:26,000
+
+
+140
+00:08:26,000 --> 00:08:27,000
+OK.
+
+141
+00:08:27,000 --> 00:08:28,000
+What about the Z1?
+
+142
+00:08:28,000 --> 00:08:35,000
+
+
+143
+00:08:35,000 --> 00:08:42,000
+So here, commute, commute, commute, anti, anti.
+
+144
+00:08:42,000 --> 00:08:44,000
+Right?
+
+145
+00:08:44,000 --> 00:08:47,000
+So let's go over here and write it down.
+
+146
+00:08:47,000 --> 00:08:50,000
+0, 0, 0, 1, 1.
+
+147
+00:08:50,000 --> 00:08:54,000
+And then if you go to the other Z's, you're
+
+148
+00:08:54,000 --> 00:08:56,000
+just going to cyclically shift this again.
+
+149
+00:08:56,000 --> 00:09:04,000
+
+
+150
+00:09:04,000 --> 00:09:05,000
+0, 1, 1.
+
+151
+00:09:05,000 --> 00:09:20,000
+
+
+152
+00:09:20,000 --> 00:09:23,000
+So these are all of the patterns you
+
+153
+00:09:23,000 --> 00:09:24,000
+can get from a single Z error.
+
+154
+00:09:24,000 --> 00:09:27,000
+
+
+155
+00:09:27,000 --> 00:09:29,000
+And we're almost done.
+
+156
+00:09:29,000 --> 00:09:35,000
+The other areas we have to consider are the single qubit
+
+157
+00:09:35,000 --> 00:09:35,000
+Y's.
+
+158
+00:09:35,000 --> 00:09:40,000
+
+
+159
+00:09:40,000 --> 00:09:43,000
+Again, I don't want to go back and look at that board.
+
+160
+00:09:43,000 --> 00:09:48,000
+So how can I calculate the row for Y1?
+
+161
+00:09:48,000 --> 00:09:57,000
+
+
+162
+00:09:57,000 --> 00:09:59,000
+I heard an answer but it's-- yeah?
+
+163
+00:09:59,000 --> 00:10:01,000
+[INAUDIBLE]
+
+164
+00:10:01,000 --> 00:10:02,000
+That's right.
+
+165
+00:10:02,000 --> 00:10:07,000
+So up to a phase, Y is a product of X and Z.
+
+166
+00:10:07,000 --> 00:10:09,000
+And that phase does not change the commuting,
+
+167
+00:10:09,000 --> 00:10:10,000
+anti-commuting properties.
+
+168
+00:10:10,000 --> 00:10:13,000
+So I can just add together the top row here
+
+169
+00:10:13,000 --> 00:10:15,000
+and the top row here.
+
+170
+00:10:15,000 --> 00:10:20,000
+And so I get 1, 0, 1, 1, 1.
+
+171
+00:10:20,000 --> 00:10:23,000
+And then I get all the cyclic shifts of this.
+
+172
+00:10:23,000 --> 00:10:28,000
+1, 1, 0, 1, 1.
+
+173
+00:10:28,000 --> 00:10:31,000
+Et cetera.
+
+174
+00:10:31,000 --> 00:10:43,000
+So now I have these patterns of syndromes.
+
+175
+00:10:43,000 --> 00:10:46,000
+
+
+176
+00:10:46,000 --> 00:10:49,000
+And I claim that they're all distinct.
+
+177
+00:10:49,000 --> 00:10:52,000
+And there's no fancy proof.
+
+178
+00:10:52,000 --> 00:10:55,000
+It's just, you know, there's only 16 of them.
+
+179
+00:10:55,000 --> 00:10:58,000
+And you can tell they're all different.
+
+180
+00:10:58,000 --> 00:11:02,000
+The X's, there's two ones with a zero in the middle.
+
+181
+00:11:02,000 --> 00:11:04,000
+The Z's, there are two ones next to each other,
+
+182
+00:11:04,000 --> 00:11:06,000
+and the Y's, they're four ones.
+
+183
+00:11:06,000 --> 00:11:09,000
+I think if you didn't have the fifth column, all of this
+
+184
+00:11:09,000 --> 00:11:10,000
+would be a little less obvious.
+
+185
+00:11:10,000 --> 00:11:13,000
+But with the fifth column it makes the argument
+
+186
+00:11:13,000 --> 00:11:15,000
+a little bit more obvious.
+
+187
+00:11:15,000 --> 00:11:21,000
+So I've proved my claim that different errors give you
+
+188
+00:11:21,000 --> 00:11:25,000
+distinct, and not only distinct, but all nonzero B's.
+
+189
+00:11:25,000 --> 00:11:30,000
+Syndrome vector is B.
+
+190
+00:11:30,000 --> 00:11:32,000
+So why do I care about this?
+
+191
+00:11:32,000 --> 00:11:36,000
+The reason is-- let's go back to the quantum error-correcting
+
+192
+00:11:36,000 --> 00:11:37,000
+conditions.
+
+193
+00:11:37,000 --> 00:11:40,000
+
+
+194
+00:11:40,000 --> 00:11:53,000
+So we want is that if Psi is in the code space, then Psi EB
+
+195
+00:11:53,000 --> 00:11:55,000
+dagger EA Psi--
+
+196
+00:11:55,000 --> 00:12:05,000
+
+
+197
+00:12:05,000 --> 00:12:07,000
+well actually, let me--
+
+198
+00:12:07,000 --> 00:12:07,000
+sorry.
+
+199
+00:12:07,000 --> 00:12:09,000
+Let me do it a different way.
+
+200
+00:12:09,000 --> 00:12:19,000
+So why care about the syndrome?
+
+201
+00:12:19,000 --> 00:12:22,000
+So the first argument is a little more operational,
+
+202
+00:12:22,000 --> 00:12:35,000
+which is, given B, we can correct the error.
+
+203
+00:12:35,000 --> 00:12:39,000
+So suppose what happens is, an unknown poly
+
+204
+00:12:39,000 --> 00:12:40,000
+happens to our code.
+
+205
+00:12:40,000 --> 00:12:42,000
+This gives us a recipe for correcting it
+
+206
+00:12:42,000 --> 00:12:44,000
+because that poly is unitary.
+
+207
+00:12:44,000 --> 00:12:48,000
+So if we knew what the poly was, we could undo that unitary
+
+208
+00:12:48,000 --> 00:12:50,000
+and recover our information.
+
+209
+00:12:50,000 --> 00:12:52,000
+The only problem is, we don't know what it is.
+
+210
+00:12:52,000 --> 00:12:54,000
+So for example, in the depolarizing channel, an I,
+
+211
+00:12:54,000 --> 00:12:56,000
+X, Y or Z gets randomly applied.
+
+212
+00:12:56,000 --> 00:12:57,000
+If you don't know what that is, you
+
+213
+00:12:57,000 --> 00:12:59,000
+don't know how to correct it.
+
+214
+00:12:59,000 --> 00:13:02,000
+But this gives us a way to figure out exactly what it is.
+
+215
+00:13:02,000 --> 00:13:05,000
+You just measure these stabilizers,
+
+216
+00:13:05,000 --> 00:13:09,000
+look up in these little tables which pattern
+
+217
+00:13:09,000 --> 00:13:13,000
+your syndrome corresponds to, and then that
+
+218
+00:13:13,000 --> 00:13:15,000
+will tell you exactly which poly happened.
+
+219
+00:13:15,000 --> 00:13:17,000
+Then that poly is just unitary.
+
+220
+00:13:17,000 --> 00:13:21,000
+You can apply another unitary to undo it.
+
+221
+00:13:21,000 --> 00:13:23,000
+And so this says, in other words,
+
+222
+00:13:23,000 --> 00:13:29,000
+there exists a recovery map.
+
+223
+00:13:29,000 --> 00:13:30,000
+So I think that's the simplest argument why
+
+224
+00:13:30,000 --> 00:13:33,000
+this is sufficient.
+
+225
+00:13:33,000 --> 00:13:35,000
+And by the way, one of the possible errors
+
+226
+00:13:35,000 --> 00:13:37,000
+is no error, right?
+
+227
+00:13:37,000 --> 00:13:40,000
+And that corresponds to the all zero string.
+
+228
+00:13:40,000 --> 00:13:43,000
+And so it's reassuring that that's
+
+229
+00:13:43,000 --> 00:13:44,000
+distinct from all the other ones.
+
+230
+00:13:44,000 --> 00:13:47,000
+If there was some error that looks the same as no error,
+
+231
+00:13:47,000 --> 00:13:49,000
+then we might potentially be in trouble.
+
+232
+00:13:49,000 --> 00:13:51,000
+But that's not actually the case.
+
+233
+00:13:51,000 --> 00:13:54,000
+Every single qubit error is distinguishable
+
+234
+00:13:54,000 --> 00:13:57,000
+from each other, but also distinguishable from no error
+
+235
+00:13:57,000 --> 00:13:57,000
+at all.
+
+236
+00:13:57,000 --> 00:14:00,000
+
+
+237
+00:14:00,000 --> 00:14:03,000
+The second argument is, in terms of the quantum error-correcting
+
+238
+00:14:03,000 --> 00:14:05,000
+conditions.
+
+239
+00:14:05,000 --> 00:14:12,000
+So we said that if Psi 1, Psi 2 are orthogonal,
+
+240
+00:14:12,000 --> 00:14:22,000
+then Psi 1 E1 dagger, E2, Psi 2 should also be orthogonal.
+
+241
+00:14:22,000 --> 00:14:26,000
+And the reason why they are orthogonal
+
+242
+00:14:26,000 --> 00:14:42,000
+is because these lead to distinct eigenspaces of S1
+
+243
+00:14:42,000 --> 00:14:44,000
+through S4.
+
+244
+00:14:44,000 --> 00:14:46,000
+The fact that the measurements come out differently
+
+245
+00:14:46,000 --> 00:14:51,000
+means that E2 will send you into one eigenspace--
+
+246
+00:14:51,000 --> 00:14:53,000
+simultaneous eigenspace of S1, S2, S3, S4.
+
+247
+00:14:53,000 --> 00:14:56,000
+E1 will send you into a different one.
+
+248
+00:14:56,000 --> 00:14:59,000
+And we know that distinct eigenspaces
+
+249
+00:14:59,000 --> 00:15:01,000
+of Hermitian matrices are orthogonal.
+
+250
+00:15:01,000 --> 00:15:05,000
+And so that means that this vector and that vector
+
+251
+00:15:05,000 --> 00:15:07,000
+have to be orthogonal to each other.
+
+252
+00:15:07,000 --> 00:15:11,000
+Unless, of course, E2 and E1 are the same poly, exactly.
+
+253
+00:15:11,000 --> 00:15:12,000
+And then this cancels out.
+
+254
+00:15:12,000 --> 00:15:14,000
+And we use the fact that the states
+
+255
+00:15:14,000 --> 00:15:15,000
+were originally orthogonal.
+
+256
+00:15:15,000 --> 00:15:18,000
+So one way or another, we get that the final states
+
+257
+00:15:18,000 --> 00:15:21,000
+
+

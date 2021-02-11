@@ -1,0 +1,228 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:03,000
+Now I claim that any quantum operation
+
+2
+00:00:03,000 --> 00:00:17,000
+can be written as an isometry, then partial trace.
+
+3
+00:00:17,000 --> 00:00:19,000
+So we started off with quantum operations
+
+4
+00:00:19,000 --> 00:00:25,000
+being an unlimited composition of unitaries,
+
+5
+00:00:25,000 --> 00:00:27,000
+adding systems, and partial trace.
+
+6
+00:00:27,000 --> 00:00:29,000
+Now I'm saying you just need to do
+
+7
+00:00:29,000 --> 00:00:32,000
+one isometry and one partial trace, and then you're done.
+
+8
+00:00:32,000 --> 00:00:35,000
+So this is something that gives us
+
+9
+00:00:35,000 --> 00:00:38,000
+something almost simple enough that we can often
+
+10
+00:00:38,000 --> 00:00:40,000
+use it in calculations.
+
+11
+00:00:40,000 --> 00:00:42,000
+Let me write down what this looks like.
+
+12
+00:00:42,000 --> 00:00:45,000
+
+
+13
+00:00:45,000 --> 00:00:49,000
+So we start off with a system A, and we're
+
+14
+00:00:49,000 --> 00:00:53,000
+going to have an isometry V acting on it.
+
+15
+00:00:53,000 --> 00:00:56,000
+Since we're going to trace out part of the output,
+
+16
+00:00:56,000 --> 00:01:01,000
+let's map this system A to a tensor product of spaces,
+
+17
+00:01:01,000 --> 00:01:02,000
+the part that we're going to keep
+
+18
+00:01:02,000 --> 00:01:04,000
+and the part that we're going to throw away.
+
+19
+00:01:04,000 --> 00:01:07,000
+And now, here's where the channel language comes in.
+
+20
+00:01:07,000 --> 00:01:10,000
+We often think of A as being someone
+
+21
+00:01:10,000 --> 00:01:11,000
+who's sending information.
+
+22
+00:01:11,000 --> 00:01:12,000
+So we'll give her a name.
+
+23
+00:01:12,000 --> 00:01:14,000
+Call her Alice.
+
+24
+00:01:14,000 --> 00:01:16,000
+And she'll send it to someone who is going to get system B.
+
+25
+00:01:16,000 --> 00:01:18,000
+So it's natural to name that person Bob.
+
+26
+00:01:18,000 --> 00:01:22,000
+
+
+27
+00:01:22,000 --> 00:01:27,000
+And then there's another part, a part which will get traced out.
+
+28
+00:01:27,000 --> 00:01:31,000
+So we're going to send Alice's system into the tensor
+
+29
+00:01:31,000 --> 00:01:35,000
+product of Bob's system, and system E, which in some cases
+
+30
+00:01:35,000 --> 00:01:36,000
+can be the environment.
+
+31
+00:01:36,000 --> 00:01:40,000
+Or in cryptography, it corresponds to an eavesdropper,
+
+32
+00:01:40,000 --> 00:01:41,000
+which is convenient.
+
+33
+00:01:41,000 --> 00:01:44,000
+Either way, it's labeled by letter E.
+
+34
+00:01:44,000 --> 00:01:48,000
+And if there's a person involved, it's the person Eve.
+
+35
+00:01:48,000 --> 00:01:51,000
+So you have isometry like this, and then
+
+36
+00:01:51,000 --> 00:01:55,000
+we'll do the partial trace where we trace out system E.
+
+37
+00:01:55,000 --> 00:01:59,000
+So the formula for the quantum operation
+
+38
+00:01:59,000 --> 00:02:10,000
+is, we do the partial trace on system E of V rho V dagger,
+
+39
+00:02:10,000 --> 00:02:15,000
+meaning that we start with a state in system A.
+
+40
+00:02:15,000 --> 00:02:19,000
+This maps it to something on B and E. We trace out E,
+
+41
+00:02:19,000 --> 00:02:21,000
+and we're left with something just in Bob's system.
+
+42
+00:02:21,000 --> 00:02:34,000
+So this is a map from input space A to output space B.
+
+43
+00:02:34,000 --> 00:02:42,000
+
+
+44
+00:02:42,000 --> 00:02:44,000
+So that's a nice, simple form.
+
+45
+00:02:44,000 --> 00:02:46,000
+I don't have to consider an unlimited number of isometries.
+
+46
+00:02:46,000 --> 00:02:49,000
+I just do one isometry, and then a partial trace.
+
+47
+00:02:49,000 --> 00:02:51,000
+And this to give me a quantum channel.
+
+48
+00:02:51,000 --> 00:02:55,000
+
+
+49
+00:02:55,000 --> 00:02:56,000
+But why is it true?
+
+50
+00:02:56,000 --> 00:02:59,000
+So why should it be true that I can always do a quantum
+
+51
+00:02:59,000 --> 00:03:00,000
+operation in this form?
+
+52
+00:03:00,000 --> 00:03:04,000
+I don't have to worry about arbitrary compositions
+
+53
+00:03:04,000 --> 00:03:05,000
+with a 1.
+
+54
+00:03:05,000 --> 00:03:08,000
+So finally, we have Form One of quantum operations,
+
+55
+00:03:08,000 --> 00:03:11,000
+an isometry followed by a partial trace.
+
+56
+00:03:11,000 --> 00:03:11,000
+
+

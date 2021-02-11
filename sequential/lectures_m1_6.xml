@@ -1,0 +1,15 @@
+<sequential display_name="Lectures M1.6: Stabilizer code examples and properties" due="&quot;2918-06-15T23:57:00+00:00&quot;" format="Concept" graceperiod="18000 seconds" graded="true" showanswer="closed" start="&quot;2017-09-06T00:00:00+00:00&quot;" attempts="10" tex_filename="./week4_lectures6.tex" linenum="3" refnum="2">
+  <vertical url_name="The_five-qubit_code_-_stabilizers"/>
+  <vertical url_name="The_five-qubit_code_-_normalizers"/>
+  <vertical url_name="CQ_Five_qubit_code_I"/>
+  <vertical url_name="The_five-qubit_code_-_error_correction"/>
+  <vertical url_name="The_five-qubit_code_is_a_non-degenerate_code"/>
+  <vertical url_name="CQ_Five_qubit_code_II"/>
+  <vertical url_name="Logical_operators_on_quantum_codes"/>
+  <vertical url_name="CQ_General_error_correction"/>
+  <vertical url_name="A_trivial_quantum_stabilizer_code"/>
+  <vertical url_name="Any_stabilizer_code_can_be_mapped_to_the_trivial_code_towards_the_Clifford_group"/>
+  <vertical url_name="CQ_Trivial_code"/>
+  <vertical url_name="The_Clifford_group_-_definition_and_single-qubit_case"/>
+  <vertical url_name="The_multi-qubit_Clifford_group"/>
+</sequential>

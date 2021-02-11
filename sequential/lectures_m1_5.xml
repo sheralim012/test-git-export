@@ -1,0 +1,12 @@
+<sequential display_name="Lectures M1.5: Stabilizer codes" start="&quot;2017-09-06T00:00:00+00:00&quot;" tex_filename="./week4_lectures5.tex" linenum="3" refnum="1">
+  <vertical url_name="Introduction_to_stabilizer_codes"/>
+  <vertical url_name="Stabilizer_groups_and_the_Pauli_group"/>
+  <vertical url_name="Stabilizer_subspace"/>
+  <vertical url_name="Six_stabilizer_group_examples"/>
+  <vertical url_name="Stabilizer_subspace_projectors_I"/>
+  <vertical url_name="Stabilizer_subspace_projectors_II_size_of_the_stabilizer_group"/>
+  <vertical url_name="Alternate_formula_for_the_projector_into_the_stabilizer_subspace"/>
+  <vertical url_name="F2_perspective_on_stabilizers_-_binary_symplectic_form"/>
+  <vertical url_name="F2_representation_of_stabilizers_-_linear_algebraic_properties"/>
+  <vertical url_name="F2_representation_of_stabilizers_-_error_detection_and_logical_operators"/>
+</sequential>

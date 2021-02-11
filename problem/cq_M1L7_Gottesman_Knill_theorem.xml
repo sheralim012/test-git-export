@@ -1,0 +1,24 @@
+<problem linenum="238" tex_filename="./week4_lectures7.tex" attempts="1" display_name="Gottesman Knill theorem" max_attempts="1">
+  <p>
+This is a concept question, provided to check your understanding of the previous lecture video clips. </p>
+  <p>
+Which of the following are true? </p>
+  <p>
+    <choiceresponse>
+      <checkboxgroup>
+        <choice correct="false" name="1">
+          <text>The Gottesman-Knill theorem works because the amount of entanglement created by a Clifford operation is small.</text>
+        </choice>
+        <choice correct="false" name="2">
+          <text>The Gottesman-Knill theorem works because the number of possible Pauli operations on [mathjaxinline]n[/mathjaxinline] qubits is a polynomial in [mathjaxinline]n[/mathjaxinline].</text>
+        </choice>
+        <choice correct="true" name="3">
+          <text>In the Gottesman-Knill theorem for a Clifford circuit of size [mathjaxinline]T[/mathjaxinline] on [mathjaxinline]n[/mathjaxinline] qubits we can keep track of stabilizer generators by [mathjaxinline]O(nT)[/mathjaxinline] number of operations.</text>
+        </choice>
+        <choice correct="true" name="4">
+          <text>In order to simulate the measurement outcome of all [mathjaxinline]n[/mathjaxinline] qubits we need [mathjaxinline]O(n^2)[/mathjaxinline] classical operations.</text>
+        </choice>
+      </checkboxgroup>
+    </choiceresponse>
+  </p>
+</problem>

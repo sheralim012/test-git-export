@@ -1,0 +1,1310 @@
+<problem linenum="6" tex_filename="./week1_3_adamp.tex" attempts="10" display_name="Introduction to amplitude damping" max_attempts="10">
+  <p>
+Amplitude damping is an important process in real physical systems; it models spontaneous emission, inelastic scattering, thermalization of spins to the lattice, and many other microscopic processes where energy is exchanged between the system and environment. In this problem, we study the properties of amplitude damping acting on a single qubit, using the operator sum representation of the process. </p>
+  <p>
+The ampltiude damping channel for a single qubit is described by [mathjaxinline]{\cal E}(\rho ) = \sum _ k E_ k \rho E_ k^\dagger[/mathjaxinline], where the Kraus operators are </p>
+  <table id="a0000000015" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto">
+    <tr>
+      <td class="equation" style="width:80%; border:none">[mathjax]E_0 = \left[ \begin{array}{cc} {1} &amp;  {0}\\ {0} &amp;  \sqrt{1-g} \end{array} \right] ~ ~ ~ ~ ~ ~ ~ ~  E_1 = \left[ \begin{array}{cc} {0} &amp;  {\sqrt{g}}\\ {0} &amp;  {0} \end{array} \right] \, .[/mathjax]</td>
+      <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.8)</td>
+    </tr>
+  </table>
+  <p>
+Let [mathjaxinline]g= 1-e^{-t/T_1}[/mathjaxinline], where [mathjaxinline]t[/mathjaxinline] is time and [mathjaxinline]T_1[/mathjaxinline] is the amplitude-damping time constant. </p>
+  <ol class="enumerate">
+    <li value="1">
+      <p>
+Let [mathjaxinline]|\psi \rangle  = (|0\rangle  + |1\rangle )/\sqrt{2}[/mathjaxinline], and [mathjaxinline]\rho = {\cal E}(|\psi \rangle \langle \psi |) = \sum _ k E_ k |\psi \rangle \langle \psi | E_ k^\dagger[/mathjaxinline] be the density matrix obtained for the qubit after amplitude damping. Compute the fidelity of [mathjaxinline]\rho[/mathjaxinline] with respect to [mathjaxinline]|\psi \rangle[/mathjaxinline], [mathjaxinline]F(t) = F(|\psi \rangle ,\rho ) = \sqrt{\langle \psi |\rho |\psi \rangle }[/mathjaxinline]. </p>
+      <p>
+You may wish to plot this as a function of [mathjaxinline]t[/mathjaxinline] or [mathjaxinline]g[/mathjaxinline], for your own appreciation of what amplitude damping can do to a qubit superposition state. </p>
+      <p>
+Please give your answer as a function of [mathjaxinline]g[/mathjaxinline]. </p>
+      <script>
+#
+# operator sum representation tests
+# I. Chuang &lt;ichuang@mit.edu&gt;
+# 06-Mar-2014
+
+import re
+import json
+import numbers
+import numpy
+import sympy
+import mpmath
+import random
+from sympy import Matrix, I
+
+#-----------------------------------------------------------------------------
+# global sympy assumptions
+#
+# These don't work in older versions of sympy (0.7.1, the one on edX?)
+
+from sympy.assumptions.assume import global_assumptions
+import sympy.abc as abc
+from functools import reduce
+global_assumptions.add(sympy.Q.real(abc.p))
+global_assumptions.add(sympy.Q.real(abc.g))
+global_assumptions.add(sympy.Q.real(sympy.Symbol('g')))
+global_assumptions.add(sympy.Q.real(sympy.Symbol('p')))
+
+#-----------------------------------------------------------------------------
+
+def to_latex(x):
+    xs = sympy.latex(x)
+    if xs[0]=='$':
+        return '[mathjax]%s[/mathjax]&lt;br&gt;' % (xs[1:-1])	# for sympy v6
+    return '[mathjax]%s[/mathjax]&lt;br&gt;' % (xs)		# for sympy v7
+    
+    
+special_vars = {
+    'p':sympy.Symbol('p',real=True, positive=True),
+    'g':sympy.Symbol('g',real=True),
+}
+
+
+varset = {#'p':sympy.Symbol('p'),
+          #'g':sympy.Symbol('g'),
+          'e':sympy.E,			# for exp
+          'i':sympy.sympify('I'),		# lowercase i is also sqrt(-1)
+          'X':sympy.sympify('Matrix([[0,1],[1,0]])'),
+          'Y':sympy.sympify('Matrix([[0,-I],[I,0]])'),
+          'Z':sympy.sympify('Matrix([[1,0],[0,-1]])'),
+}
+
+varset.update(special_vars)
+
+def parse_input(ein):
+    esub = re.sub('\[\s*\[([^\]]+)]\s*,\s*\[([^\]]+)\]\s*\]', 'Matrix([[\\1],[\\2]])', ein)
+    esub = esub.replace('^','**')
+
+    esub = esub.replace('I','eye(2)')
+
+    try:
+        r = sympy.sympify(esub, locals=varset)
+        return r
+    except Exception as err:
+        r = sympy.sympify('Matrix(%s)' % esub,locals=varset)
+        return r
+
+#-----------------------------------------------------------------------------
+# formula comparison
+
+def sympy_evaluator(variables, functions, math_expr, case_sensitive=False):
+    '''
+    Return numerical expression for sympy symbolic expression "expr".
+
+    variables = dict of variable name, numerical value.
+
+    Use the "subs" method provided by sympy.
+    '''
+
+    # In sympy, Symbols with assumptions (like real=True) are different
+    # from Symbols without them, even if they have the same name.
+    #
+    # In order to have nice expression simplification, we need to declare some
+    # symbols as being real, e.g. g and p.  These are defined in the special_vars
+    # dict.
+    #
+    # To be able to evaluate them with evalf() and subs(), we need to specify
+    # those variables using the right Symbol object, i.e. those with the
+    # assumptions specified.   
+    #
+    # Thus, for variables with names matching those in special_vars, we add 
+    # additional entries to the variables dict, to make the symbols match.
+
+    nvarset = {}
+    for vname, vval in list(variables.items()):
+        nvarset[sympy.Symbol(vname)] = vval
+        if vname in special_vars:
+            nvarset[special_vars[vname]] = vval
+            # print("[check_osr2] variable %s is special!" % vname)
+        else:
+            # print("[check_osr2] variable %s not declared to be special" % vname)
+            pass
+
+    if isinstance(math_expr, str):		# tolerances are provided as strings - sympify them
+        math_expr = sympy.sympify(math_expr)
+    try:
+        ret = math_expr.evalf(subs=nvarset)
+        return ret
+    except Exception as err:
+        raise Exception("[sympy_evaluator] Failed to evaluate expression %s err=%s" % (math_expr, err))
+    
+
+def sympy_is_matrix(m):
+    '''
+    return True if m is a sympy matrix (mutable or immutable)
+    '''
+    if hasattr(sympy, 'ImmutableMatrix'):
+        return isinstance(m, sympy.Matrix) or isinstance(m, sympy.ImmutableMatrix)
+    return isinstance(m, sympy.Matrix)
+
+default_tolerance = '0.01%'
+
+def sympy_compare_with_tolerance(complex1, complex2, tolerance=default_tolerance, relative_tolerance=False):
+    """
+    Compare complex1 to complex2 with maximum tolerance tol.
+
+    If tolerance is type string, then it is counted as relative if it ends in %; otherwise, it is absolute.
+
+     - complex1    :  student result (float complex number)
+     - complex2    :  instructor result (float complex number)
+     - tolerance   :  string representing a number or float
+     - relative_tolerance: bool, used when`tolerance` is float to explicitly use passed tolerance as relative.
+
+     Default tolerance of 1e-3% is added to compare two floats for
+     near-equality (to handle machine representation errors).
+     Default tolerance is relative, as the acceptable difference between two
+     floats depends on the magnitude of the floats.
+     (http://randomascii.wordpress.com/2012/02/25/comparing-floating-point-numbers-2012-edition/)
+     Examples:
+        In [183]: 0.000016 - 1.6*10**-5
+        Out[183]: -3.3881317890172014e-21
+        In [212]: 1.9e24 - 1.9*10**24
+        Out[212]: 268435456.0
+    """
+    def myabs(elem):
+        if isinstance(elem, numpy.matrix):
+            return numpy.sum(abs(elem))
+        elif sympy_is_matrix(elem):
+            return sum(abs(elem))
+        return abs(elem)
+
+    if isinstance(tolerance, numbers.Number):
+        tolerance = str(tolerance)
+    if relative_tolerance:
+        tolerance = tolerance * max(myabs(complex1), myabs(complex2))
+    elif tolerance.endswith('%'):
+        tolerance = sympy.sympify(tolerance[:-1]) * 0.01
+        tolerance = tolerance * max(myabs(complex1), myabs(complex2))
+    else:
+        tolerance = sympy_evaluator(dict(), dict(), tolerance)
+
+    if sympy_is_matrix(complex1) and not sympy_is_matrix(complex2):
+        print("Oops, cannot compare sympy Matrix %s with non-sympy matrix %s" % (complex1, complex2))
+        print("types = %s, %s" % (type(complex1), type(complex2)))
+        raise
+
+    if sympy_is_matrix(complex2) and not sympy_is_matrix(complex1):
+        print("Oops, cannot compare sympy Matrix %s with non-sympy matrix %s" % (complex1, complex2))
+        print("types = %s, %s" % (type(complex1), type(complex2)))
+        raise
+
+    try:
+        if sympy_is_matrix(complex1) and sympy_is_matrix(complex2):
+            diff = complex1 - complex2
+            return diff.norm() &lt;= tolerance            
+    except Exception as err:
+        print("failure in matrix comparison, complex1=%s, complex2=%s" % (complex1, complex2))
+        print("err = ", err)
+        raise
+
+    try:
+        if mpmath.isinf(complex1) or mpmath.isinf(complex2):
+            # If an input is infinite, we can end up with `abs(complex1-complex2)` and
+            # `tolerance` both equal to infinity. Then, below we would have
+            # `inf &lt;= inf` which is a fail. Instead, compare directly.
+            cmp = (complex1 == complex2)
+            if isinstance(cmp, numpy.matrix):
+                return cmp.all()
+            if sympy_is_matrix(cmp):
+                return cmp.all()
+            return cmp
+        else:
+            # v1 and v2 are, in general, complex numbers:
+            # there are some notes about backward compatibility issue: see responsetypes.get_staff_ans()).
+            # return abs(complex1 - complex2) &lt;= tolerance
+            #
+            # sum() used to handle matrix comparisons
+            return numpy.sum(abs(complex1 - complex2)) &lt;= tolerance
+    except Exception as err:
+        print("failure in comparison, complex1=%s, complex2=%s" % (complex1, complex2))
+        print("err = ", err)
+        raise
+
+
+def sympy_make_samples(expr, rmin='0', rmax='0.999', nsamples=20):
+    '''
+    Make a "samples" sampling string, from a symbolic expression, for 
+    random numerical checking.  Sample every variable between 0 and 1
+    (exclusive).
+    '''
+    def gfs(ex):
+        if sympy_is_matrix(ex):		# get free symbols from matrix elements one element at a time
+            return sympy.flatten(list(map(gfs, list(ex))), 1)
+        try:
+            return ex.free_symbols	# constant-valued matrices will raise exception on free_symbols
+        except:
+            return []
+    if isinstance(expr, list):
+        variables = sympy.flatten(list(map(gfs, expr)), 1)
+    else:
+        variables = gfs(expr)
+    variables = list(map(str, variables))
+
+    if not variables:		# no free vaiables?  use a dummy one
+        variables = 'p'
+        
+    nvar = len(variables)
+    samples = ','.join(variables) + '@' + ','.join([rmin]*nvar) + ":" + ','.join([rmax]*nvar)
+    samples += '#%d' % nsamples
+    return samples
+
+
+def sympy_is_formula_equal(expected, given, samples=None, cs=True, tolerance='0.01', evalfun=None, cmpfun=None, debug=False, nsamples=20):
+    '''
+    Check for equality of two symbolic expressions.  Do this first using 
+    symbolic comparison, then, failing that, try random numerical sampling.
+
+    expected = instructor's expression
+    given = student's expression
+    samples = sample string for numerical checking (see below)
+    cs = case_sensitive flag
+    tolerance = tolerance specification string
+    evalfun = function for doing evaluation (defaults to using evaluator from calc2)
+    cmpfun = comparison function for testing equality (defaults to compare_with_tolerance)
+    debug = flag for verbosity of debugging output
+    
+        format of samples:  &lt;variables&gt;@&lt;lower_bounds&gt;:&lt;upper_bound&gt;#&lt;num_samples
+
+        * variables    - a set of variables that are allowed as student input
+        * lower_bounds - for every variable defined in variables, a lower
+                         bound on the numerical tests to use for that variable
+        * upper_bounds - for every variable defined in variables, an upper
+                         bound on the numerical tests to use for that variable
+    
+    If samples is not specified, then sample every variable in the range [0,1)
+    with nsamples samples chosen uniformly randomly.
+
+    '''
+    if (expected==given):
+        return True
+
+    if evalfun is None:
+        evalfun = sympy_evaluator
+    if cmpfun is None:
+        cmpfun = sympy_compare_with_tolerance
+    if samples is None:
+        samples = sympy_make_samples([expected, given])
+        
+    try:
+        variables = samples.split('@')[0].split(',')
+        numsamples = int(samples.split('@')[1].split('#')[1])
+    except Exception as err:
+        raise Exception("bad samples specification %s, cannot get variables or number of samples; err=%s" % (samples, err))
+    
+    def to_math_atom(sstr):
+        '''
+        Convert sample range atom to float or to matrix
+        '''
+        if '[' in sstr:
+            try:
+                return numpy.matrix(sstr.replace('|',' '))
+            except Exception as err:
+                raise Exception("Cannot generate matrix from %s; err=%s" % (sstr, err))
+        elif 'j' in sstr:
+            return complex(sstr)
+        else:
+            return float(sstr)
+    
+    try:
+        sranges = list(zip(*[list(map(to_math_atom, x.split(","))) for x in samples.split('@')[1].split('#')[0].split(':')]))
+        ranges = dict(list(zip(variables, sranges)))
+    except Exception as err:
+        raise Exception("bad samples specification %s, cannot get ranges; err=%s" % (samples, err))
+
+    if debug:
+        print("ranges = ", ranges)
+
+    for i in range(numsamples):
+        vvariables = {}
+        for var in ranges:
+            value = random.uniform(*ranges[var])
+            vvariables[str(var)] = value
+        if debug:
+            print("vvariables = ", vvariables)
+        try:
+            instructor_result = evalfun(vvariables, dict(), expected, case_sensitive=cs)
+        except Exception as err:
+            #raise Exception("is_formula_eq: vvariables=%s, err=%s" % (vvariables, str(err)))
+            #raise Exception("-- %s " % str(err))
+            raise Exception("Error evaluating instructor result, expected=%s, vv=%s -- %s " % (expected, vvariables, str(err)))
+        try:
+            student_result = evalfun(vvariables, dict(), given, case_sensitive=cs)
+        except Exception as err:
+            if debug:
+                raise Exception("is_formula_eq: given=%s, vvariables=%s, err=%s" % (given, vvariables, str(err)))
+            raise Exception("-- %s " % str(err))
+            # raise Exception("Error evaluating your input, given=%s, vv=%s -- %s " % (given, vvariables, str(err)))
+        #print "instructor=%s, student=%s" % (instructor_result, student_result)
+        cfret = cmpfun(instructor_result, student_result, tolerance)
+        if debug:
+            print("comparison result = %s" % cfret)
+        if not cfret:
+            return False
+    return True
+    
+#-----------------------------------------------------------------------------
+# sympy formula check
+
+def sympy_formula_check(expect, ans, options=None):
+    '''
+    expect and ans are math expression strings.
+    Check for equality using random sampling.
+
+    The strings are turned into math expressions using sympy.
+
+    options should be like samples="m_I,m_J,I_z,J_z@1,1,1,1:20,20,20,20#50"!tolerance=0.3
+    i.e. a sampling range for the equality testing, in the same
+    format as used in formularesponse.
+
+    options may also include altanswer, an alternate acceptable answer.  Example:
+
+    options="samples='X,Y,i@[1|2;3|4],[0|2;4|6],0+1j:[5|5;5|5],[8|8;8|8],0+1j#50'!altanswer='-Y*X'"
+
+    note that the different parts of the options string are to be spearated by a bang (!).
+    '''
+    samples = None
+    tolerance = '0.1%'
+    acceptable_answers = [expect]
+    if options is not None:
+        for optstr in options.split('!'):
+            if 'samples=' in optstr:
+                samples = eval(optstr.split('samples=')[1])
+            elif 'tolerance=' in optstr:
+                tolerance = eval(optstr.split('tolerance=')[1])
+            elif 'altanswer=' in optstr:
+                altanswer = eval(optstr.split('altanswer=')[1])
+                acceptable_answers.append(altanswer)
+
+    try:
+        ans = parse_input(ans)
+    except Exception as err:
+        return {'ok': False, 'msg': 'Oops, your input could not be parsed, err=%s' % err}
+
+    for acceptable_str in acceptable_answers:
+        acceptable = parse_input(acceptable_str)
+        try:
+            ok = sympy_is_formula_equal(acceptable, ans, samples, tolerance=tolerance)
+        except Exception as err:
+            return {'ok': False, 'msg': "Sorry, could not evaluate your expression.  Error %s" % str(err)}
+        if ok:
+            return {'ok':ok, 'msg': ''}
+
+    return {'ok':ok, 'msg': ''}
+
+
+#-----------------------------------------------------------------------------
+# OSR functions
+
+def osrx(oelem,rho_in):
+    '''
+    Compute OSR transform of a given input density matrix
+    '''
+    rho_out = reduce(sympy.Matrix.add,[ (E * rho_in * E.H) for E in oelem])
+    # rho_out = sympy.simplify(rho_out)
+    return rho_out
+
+def osr_norm(oelem):
+    '''
+    Compute norm \sum_k E_k^\dagger E_k of an operation element set
+    '''
+    on = reduce(sympy.Matrix.add,[ (E.H * E) for E in oelem])
+    try:
+        on = sympy.simplify(on)		# some older versions of sympy won't do this?
+    except:
+        pass
+    return on
+
+def check_osr_norm(oelem):
+    '''
+    Return True if osr_norm = I
+    Fix this to do more than just qubit operators.
+    '''
+    return sympy_is_formula_equal(osr_norm(oelem), sympy.sympify('Matrix([[1,0],[0,1]])'))
+
+#-----------------------------------------------------------------------------
+# OSR expression checking
+
+def check_osr(expect_in, ans, options=None):
+    '''
+    Test OSR to see if it matches expected superoperator.
+    Do this by sending in a generic density matrix and seeing
+    if the result is the same as that expected.
+
+    Uses sympy.
+    '''
+
+    expect = expect_in
+
+    oeset_expect_str = None
+    if 'zdamp' in expect:
+        oeset_expect_str = '[ Matrix([[1,0],[0,0]]), Matrix([[0,1],[0,0]])]'
+    elif ('crx' in expect):
+        oeset_expect_str = '[ Matrix([[1,0],[0,g]]), Matrix([[0,0],[0,-I*sqrt(1-g**2)]])]'
+    elif ('cz' in expect):
+        oeset_expect_str = '[ Matrix([[sqrt(p),0],[0,sqrt(p)]]), Matrix([[1,0],[0,-1]])*sqrt(1-p)]'
+    elif 'erase' in expect:
+        oeset_expect_str = '[ Matrix([[1,0],[0,1]])/2, Matrix([[0,1],[1,0]])/2, Matrix([[0,-I],[I,0]])/2, Matrix([[1,0],[0,-1]])/2, ]'
+    elif 'depol' in expect:
+        oeset_expect_str = '[ Matrix([[1,0],[0,1]])*sqrt(1-3*p/4), Matrix([[0,1],[1,0]])*sqrt(p/4), Matrix([[0,-I],[I,0]])*sqrt(p/4), Matrix([[1,0],[0,-1]])*sqrt(p/4), ]'
+
+    oeset_given_str = ans
+
+    # In [14]: syms = myexpr.atoms(Symbol)
+    # In [17]: symdict = dict((i.name, Symbol(i.name, positive=True)) for i in syms)
+
+    try:
+        oeset_expect = sympy.sympify(oeset_expect_str,locals=varset)
+    except Exception as err:
+        return {'ok':False,'msg':'&lt;br&gt;Error %s evaluating OUR expression %s' % (err,oeset_expect_str)}
+        
+    try:
+        oeset_given = [ parse_input(E) for E in oeset_given_str]
+    except Exception as err:
+        msg = '&lt;br&gt;Error %s evaluating your expressions "%s"' % (err,oeset_expect_str)
+        msg += "&lt;p/&gt;Please enter each operation element as a matrix, in the form [ [0.9, 0.2], [0.3, 0.1] ]&lt;p/&gt;"
+        return {'ok':False,'msg':msg}
+    
+    # check for complete positivity
+    try:
+        oeset_norm = osr_norm(oeset_given)
+        if not check_osr_norm(oeset_given):	# fixme: do more than just qubit operators
+            print("[check_osr2] not normalized?  oeset_given_str = %s" % oeset_given_str)
+            msg = "&lt;br&gt;Your OSR elements evaluated as {E}=%s" % (to_latex(oeset_given))
+            msg += "&lt;br&gt;They are not completely positive: [mathjax]\sum_k E_k^\dagger E_k[/mathjax] = " + to_latex(oeset_norm)
+            return {'ok':False,'msg':msg}
+    except Exception as err:
+        msg = '&lt;br&gt;Error %s checking norm of your expressions "%s"' % (err,oeset_expect_str)
+        msg += "&lt;p/&gt;Please enter each operation element as a matrix, in the form [ [0.9, 0.2], [0.3, 0.1] ]&lt;p/&gt;"
+        return {'ok':False,'msg':msg}
+
+    rho_in = sympy.sympify('Matrix([[a,b],[c,d]])')
+    ro_expect = osrx(oeset_expect,rho_in)
+    ro_expect = ro_expect.applyfunc(sympy.simplify)	# may break
+
+    ro_given = osrx(oeset_given,rho_in)
+    ro_given = ro_given.applyfunc(sympy.simplify)	# may break
+
+    msg = "&lt;br&gt;Your OSR elements evaluated as {E}=%s" % (to_latex(oeset_given))
+    msg += "Acting on an input density matrix %s they produce %s" % (to_latex(rho_in),to_latex(ro_given))
+
+    #print "ro_expect: ",ro_expect
+    #print "ro_given: ",ro_given
+    ok = sympy_is_formula_equal(ro_expect, ro_given)
+
+    return {'ok':ok, 'msg': msg}
+    
+check_osr2 = check_osr
+check_osr4 = check_osr
+
+#-----------------------------------------------------------------------------
+# catsoop
+
+def catsoop_check_osr(sub, soln):
+    '''
+    sub is json of a dict with {"0": first box submission, "1": second box submission, ...}
+    '''
+    expect = soln
+    print("[catsoop_check_osr] sub=%s" % sub)
+    print("[catsoop_check_osr] soln=%s" % soln)
+    # subdict = json.loads(sub)
+    subdict = sub
+    ans = [ subdict[str(x)] for x  in range(len(sub)) ]
+    ret = check_osr(expect, ans)
+    print("[catsoop_check_osr] ret=%s" % ret)
+    msg = ret['msg']
+    msg = catsoop_setup_math_for_display(msg)
+    return ret['ok']*1, msg
+
+def catsoop_sympy_formula_check(sub, soln):
+    '''
+    sub is the student submission
+    soln is the staff-produced expected solution
+    '''
+    expect = soln
+    ans = sub['0']
+    print("[catsoop_sympy_formula_check] sub=%s" % sub)
+    print("[catsoop_sympy_formula_check] soln=%s" % soln)
+    ret = sympy_formula_check(expect, ans)
+    print("[catsoop_sympy_formula_check] ret=%s" % ret)
+    msg = ret['msg']
+    msg = catsoop_setup_math_for_display(msg)
+    return ret['ok']*1, msg
+
+def catsoop_setup_math_for_display(msg):
+    '''
+    catsoop uses katex to render math, so each math expression needs to be marked for rendering.
+    '''
+    msg = msg.replace("[mathjaxinline]", '&lt;math&gt;')
+    msg = msg.replace("[/mathjaxinline]", "&lt;/math&gt;")
+    msg = msg.replace("[mathjax]", '&lt;displaymath&gt;')
+    msg = msg.replace("[/mathjax]", "&lt;/displaymath&gt;")
+    return msg
+
+#-----------------------------------------------------------------------------
+# unit tests
+
+def test_osr_norm():
+    E0 = sympy.sympify("Matrix([[1,0],[0,0]])")
+    E1 = sympy.sympify("Matrix([[0,1],[0,0]])")
+    print(E0)
+    con = check_osr_norm([E0, E1])
+    assert(con==True)
+
+def test_osr_norm2():
+    E0 = parse_input("[[1,0],[0,1]]*sqrt(p)")
+    E1 = parse_input("X*sqrt(1-p)")
+    print(osr_norm([E0,E1]))
+    con = check_osr_norm([E0, E1])
+    assert(con==True)
+
+def test_osr_norm3():
+    E0 = parse_input("[[1,0],[0,1]]*sqrt(p)")
+    E1 = parse_input("X*sqrt(0.99-p)")
+    print(osr_norm([E0,E1]))
+    con = check_osr_norm([E0, E1])
+    assert(con==False)
+
+def test_osr_norm4():
+    ans = ["[[1,0],[0,1]]*sqrt(1-3*p/4)", "sqrt(p/4)*X", "sqrt(p/4)*Y", "sqrt(p/4)*Z"]
+    ans = list(map(parse_input, ans))
+    con = check_osr_norm(ans)
+    assert(con==True)
+
+def test_osr_norm5():
+    ans = ["[[1,0],[0,g]]", "[[0,0],[0,-i*sqrt(1-g^2)]]"]
+    ans = list(map(parse_input, ans))
+    con = check_osr_norm(ans)
+    assert(con==True)
+
+
+def test_osr_zdamp():
+    ans = ["[[1,0],[0,0]]", "[[0,1],[0,0]]"]
+    ret = check_osr('zdamp', ans)
+    print(ret['msg'])
+    assert(ret['ok']==True)
+
+def test_osr_crx():
+    ans = ["[[1,0],[0,g]]", "[[0,0],[0,-i*sqrt(1-g^2)]]"]
+    ret = check_osr('crx', ans)
+    print(ret['msg'])
+    assert(ret['ok']==True)
+
+def test_osr_crx2():
+    ans = ["[[1.0,0],[0,g]]", "[[0,0],[0,-i*sqrt(1-g^2)]]"]
+    ret = check_osr('crx', ans)
+    print(ret['msg'])
+    assert(ret['ok']==True)
+
+def test_osr_crx3():
+    ans = ["[[1.0,0],[0,g]]", "[[0,0],[0,-i*sqrt(1-g^2)]]"]
+    ret = check_osr('crx', ans)
+    print(ret['msg'])
+    assert(not 'overline' in ret['msg'])
+
+def test_osr_erase():
+    ans = ["X/2", "Y/2", "Z/2", "(Z*Z)/2"]
+    ret = check_osr('erase', ans)
+    print(ret['msg'])
+    assert(ret['ok']==True)
+
+def test_osr_erase2():
+    ans = ["X*0.5", "Y/2", "Z/2", "(Z*Z)/2"]
+    ret = check_osr('erase', ans)
+    print(ret['msg'])
+    assert(ret['ok']==True)
+
+def test_parse1():
+    ans = 'X/2'
+    r = parse_input(ans)
+    print(r)
+    assert(r==sympy.sympify("Matrix([[0,1],[1,0]])/2"))
+
+def test_parse2():
+    ans = '[[0,1],[1,0]]/2'
+    r = parse_input(ans)
+    print(r)
+    assert(r==sympy.sympify("Matrix([[0,1],[1,0]])/2"))
+
+def test_osr_depol():
+    ans = ["[[1,0],[0,1]]*sqrt(1-3*p/4)", "sqrt(p/4)*X", "sqrt(p/4)*Y", "sqrt(p/4)*Z"]
+    # ans = [ 'Matrix([[1,0],[0,1]])*sqrt(1-3*p/4)', 'Matrix([[0,1],[1,0]])*sqrt(p/4)', 'Matrix([[0,-I],[I,0]])*sqrt(p/4)', 'Matrix([[1,0],[0,-1]])*sqrt(p/4)' ]
+    ret = check_osr('depol', ans)
+    print(ret['msg'])
+    assert(ret['ok']==True)
+
+def test_osr_depol2():
+    ans = ["sqrt(1-3*p/4) * I", "sqrt(p/4)*X", "sqrt(p/4)*Y", "sqrt(p/4)*Z"]
+    ans2 = list(map(parse_input, ans))
+    norm = check_osr_norm(ans2)
+    print("norm=%s" % norm)
+    assert norm
+    # ans = [ 'Matrix([[1,0],[0,1]])*sqrt(1-3*p/4)', 'Matrix([[0,1],[1,0]])*sqrt(p/4)', 'Matrix([[0,-I],[I,0]])*sqrt(p/4)', 'Matrix([[1,0],[0,-1]])*sqrt(p/4)' ]
+    ret = check_osr('depol', ans)
+    print(ret['msg'])
+    assert(ret['ok']==True)
+
+def test_make_samples():
+    r = sympy.sympify('exp(1-p)')
+    s = sympy.sympify('cos(1-g)')
+    samples = sympy_make_samples([r,s])
+    assert(samples=='p,g@0,0:0.999,0.999#20')
+
+def test_form_eq1():
+    r = sympy.sympify('exp(1-p)')
+    s = sympy.sympify('cos(1-g)')
+    eq = sympy_is_formula_equal(r, s)
+    assert(eq==False)
+
+def test_form_eq2():
+    r = parse_input('sqrt(1-sin(1-p)^2)')
+    s = sympy.sympify('cos(1-p)')
+    eq = sympy_is_formula_equal(r, s)
+    assert(eq==True)
+
+def test_sfc1():
+    ans = 'sqrt(1-sin(1-p)^2)'
+    exp = 'cos(1-p)'
+    ret = sympy_formula_check(exp, ans)
+    print(ret['msg'])
+    assert(ret['ok']==True)
+
+def test_sfc2():
+    ans = 'qux(1-sin(1-p)^2)'
+    exp = 'cos(1-p)'
+    ret = sympy_formula_check(exp, ans)
+    print(ret['msg'])
+    assert(ret['ok']==False)
+
+if __name__=="__main__":
+    print("depol2")
+    test_osr_depol2()
+    print()
+    # print("crx3")
+    # test_osr_crx3()
+    
+
+</script>
+      <script linenum="55" filename="./week1_3_adamp.tex" type="text/python" system_path="python_lib">
+
+myhints = [ {'eval': "not symbol('g')", 'hint': "Shouldn't your answer depend on g?"},
+            {'eval': "not string('sqrt')", 'hint': "What should the answer be for g=0 and g=1?"},
+          ]
+  
+</script>
+      <p>
+        <p style="display:inline">[mathjaxinline]F(g) =[/mathjaxinline]</p>
+        <script>
+# 
+# General hint system for edX
+#
+# Hints are specified by defining a list of hint dicts.
+# Each hint dict should contain the following key/value pairs:
+#
+#    hint    - value = hint string to display if any matches found
+#
+#    string  - match on string present for in the student's answer
+#    symbol  - match on math symbol in the answer
+#    func    - match on math function in the answer
+#    isnum   - match on answer being numerical (value ignored)
+#    val     - match on numerical value of student's answer
+#              value = number ...or
+#              value = {'expect': number, 'tolerance': tolerance}
+#    magdif  - match on difference in magnitude between given and expected numerical values being too large
+#              value = expected number ...or
+#              value = {'expect': number, 'max': maximum_magnitude_difference_in_log10}
+#    range   - match on numerical answer being within a certain range
+#              value = [min, max]
+#    formula - match on formula equality (via numerical sampling);
+#              value = as &lt;expr&gt;!&lt;variables&gt;@&lt;lower_range&gt;:&lt;upper_range&gt;#&lt;num_samples&gt;
+#    parens  - match on un-balanced parentheses
+#              value = ignored (anything ok)
+#    eval    - match on evaluated expression, which may contain calls to other hint functions
+#              value = expression to evaluate, e.g. "not string('*') and string('x')"
+#
+# Examples:
+#
+#         hints = [ {'parens': '', 'hint': 'Missing parenthesis?'},
+#                   {'eval': 'not string("*")',
+#                    'hint': 'Please indicate multiplication explicitly using *'},
+#                   {'symbol': 'L', 'hint': 'Should your answer depend on L?'},
+#                   {'string': 'D^2_eg', 'hint': 'Enter D_eg^2 and not D^2_eg'},
+#                   {'symbol': 'D', 'hint': 'Enter D_eg and not D'},
+#                   {'eval': 'not string("hbar")', 'hint': "Are your units correct?"},
+#                   {'eval': 'string("-")', 'hint': "Are your sign(s) correct?"},
+#                  ]
+# 
+#         ch0 = HintSystem(anum=0, hints=hints2).check_hint
+#
+#  &lt;hintgroup hintfn="ch0"/&gt;
+#
+# Usage:
+#
+# Simple case, for a single input field: define the global variable "hints" with list of hint dicts
+# use "check_hint" as the hintfn in the edX capa problem.
+#
+# Advanced case: for multiple input fields
+#
+# Instantiate HintSystem with configuration parameters anum=answer number, hints = list of hint dicts
+# 
+#        ch1 = HintSystem(anum=0, hints=hints1).check_hint
+#        ch2 = HintSystem(anum=1, hints=hints2).check_hint
+#
+# then use ch1 and ch2 as the hintfn in the edX capa problem.
+
+import re
+import numpy
+import numbers
+import random
+
+from math import log10
+from functools import partial
+
+from calc import evaluator
+from calc import ParseAugmenter
+
+#-----------------------------------------------------------------------------
+# provide compare_with_tolerance and formula_test (for equation property checking)
+
+class HintFormulaCheck(object):
+
+    default_tolerance = '0.01%'
+
+    def __init__(self, tolerance=None, evalfun=None):
+        if tolerance is not None:
+            self.default_tolerance = tolerance
+        self.evalfun = evalfun or evaluator
+        return
+    
+    def compare_with_tolerance(self, complex1, complex2, tolerance=None, relative_tolerance=False):
+        """
+        Compare complex1 to complex2 with maximum tolerance tol.
+    
+        If tolerance is type string, then it is counted as relative if it ends in %; otherwise, it is absolute.
+    
+         - complex1    :  student result (float complex number)
+         - complex2    :  instructor result (float complex number)
+         - tolerance   :  string representing a number or float
+         - relative_tolerance: bool, used when`tolerance` is float to explicitly use passed tolerance as relative.
+    
+         Default tolerance of 1e-3% is added to compare two floats for
+         near-equality (to handle machine representation errors).
+         Default tolerance is relative, as the acceptable difference between two
+         floats depends on the magnitude of the floats.
+         (http://randomascii.wordpress.com/2012/02/25/comparing-floating-point-numbers-2012-edition/)
+         Examples:
+            In [183]: 0.000016 - 1.6*10**-5
+            Out[183]: -3.3881317890172014e-21
+            In [212]: 1.9e24 - 1.9*10**24
+            Out[212]: 268435456.0
+        """
+        if tolerance is None:
+            tolerance = self.default_tolerance
+
+        def myabs(elem):
+            if isinstance(elem, numpy.matrix):
+                return numpy.sum(abs(elem))
+            return abs(elem)
+    
+        if isinstance(tolerance, numbers.Number):
+            tolerance = str(tolerance)
+        if relative_tolerance:
+            tolerance = tolerance * max(myabs(complex1), myabs(complex2))
+        elif tolerance.endswith('%'):
+            tolerance = self.evalfun(dict(), dict(), tolerance[:-1]) * 0.01
+            tolerance = tolerance * max(myabs(complex1), myabs(complex2))
+        else:
+            tolerance = self.evalfun(dict(), dict(), tolerance)
+    
+        try:
+            if numpy.isinf(complex1).any() or numpy.isinf(complex2).any():
+                # If an input is infinite, we can end up with `abs(complex1-complex2)` and
+                # `tolerance` both equal to infinity. Then, below we would have
+                # `inf &lt;= inf` which is a fail. Instead, compare directly.
+                cmp = (complex1 == complex2)
+                if isinstance(cmp, numpy.matrix):
+                    return cmp.all()
+                return cmp
+            else:
+                # v1 and v2 are, in general, complex numbers:
+                # there are some notes about backward compatibility issue: see responsetypes.get_staff_ans()).
+                # return abs(complex1 - complex2) &lt;= tolerance
+                #
+                # sum() used to handle matrix comparisons
+                return numpy.sum(abs(complex1 - complex2)) &lt;= tolerance
+        except Exception as err:
+            print("failure in comparison, complex1=%s, complex2=%s" % (complex1, complex2))
+            print("err = ", err)
+            raise
+    
+    def is_formula_equal(self, expected, given, samples, cs=True, tolerance='0.01', evalfun=None,
+                         cmpfun=None, debug=False):
+        '''
+        expected = expression expected by instructor
+        given = expression entered by student
+        samples = sample string for numerical checking (see below)
+        cs = case_sensitive flag
+        tolerance = tolerance specification string
+        evalfun = function for doing evaluation (defaults to using self.evalfun from calc2)
+        cmpfun = comparison function for testing equality (defaults to compare_with_tolerance)
+        debug = flag for verbosity of debugging output
+    
+        samples examples:
+    
+        samples="m_I,m_J,I_z,J_z@1,1,1,1:20,20,20,20#50"
+        samples="J,m,Delta,a,h,x,mu_0,g_I,B_z@0.5,1,1,1,1,1,1,1,1:0.5,20,20,20,20,20,20,20,20#50" 
+    
+        matrix sampling:
+    
+        samples="x,y@[1|2;3|4],[0|2;4|6]:[5|5;5|5],[8|8;8|8]#50"
+    
+        complex numbers:
+    
+        "x,y,i@[1|2;3|4],[0|2;4|6],0+1j:[5|5;5|5],[8|8;8|8],0+1j#50"
+        '''
+        
+        if evalfun is None:
+            evalfun = self.evalfun
+        if cmpfun is None:
+            def cmpfun(a, b, tol):
+                return self.compare_with_tolerance(a, b, tol)
+            
+        variables = samples.split('@')[0].split(',')
+        numsamples = int(samples.split('@')[1].split('#')[1])
+    
+        def to_math_atom(sstr):
+            '''
+            Convert sample range atom to float or to matrix
+            '''
+            if '[' in sstr:
+                return numpy.matrix(sstr.replace('|',' '))
+            elif 'j' in sstr:
+                return complex(sstr)
+            else:
+                return float(sstr)
+    
+        sranges = list(zip(*[list(map(to_math_atom, x.split(","))) for x in samples.split('@')[1].split('#')[0].split(':')]))
+        ranges = dict(list(zip(variables, sranges)))
+    
+        if debug:
+            print("ranges = ", ranges)
+    
+        for i in range(numsamples):
+            vvariables = {}
+            for var in ranges:
+                value = random.uniform(*ranges[var])
+                vvariables[str(var)] = value
+            if debug:
+                print("vvariables = ", vvariables)
+            try:
+                instructor_result = evalfun(vvariables, dict(), expected, case_sensitive=cs)
+            except Exception as err:
+                #raise Exception("is_formula_eq: vvariables=%s, err=%s" % (vvariables, str(err)))
+                #raise Exception("-- %s " % str(err))
+                raise Exception("Error evaluating instructor result, expected=%s, vv=%s -- %s " % (expected, vvariables, str(err)))
+            try:
+                student_result = evalfun(vvariables, dict(), given, case_sensitive=cs)
+            except Exception as err:
+                #raise Exception("is_formula_eq: vvariables=%s, err=%s" % (vvariables, str(err)))
+                raise Exception("-- %s " % str(err))
+                # raise Exception("Error evaluating your input, given=%s, vv=%s -- %s " % (given, vvariables, str(err)))
+            #print "instructor=%s, student=%s" % (instructor_result, student_result)
+            cfret = cmpfun(instructor_result, student_result, tolerance)
+            if debug:
+                print("comparison result = %s" % cfret)
+            if not cfret:
+                return False
+        return True
+    
+    def check_formula(self, expect, ans, options=None):
+        '''
+        expect and ans are math expression strings.
+        Check for equality using random sampling.
+        options should be like samples="m_I,m_J,I_z,J_z@1,1,1,1:20,20,20,20#50"!tolerance=0.3
+        i.e. a sampling range for the equality testing, in the same
+        format as used in formularesponse.
+    
+        options may also include altanswer, an alternate acceptable answer.  Example:
+    
+        options="samples='X,Y,i@[1|2;3|4],[0|2;4|6],0+1j:[5|5;5|5],[8|8;8|8],0+1j#50'!altanswer='-Y*X'"
+    
+        note that the different parts of the options string are to be spearated by a bang (!).
+        '''
+        #'''
+        samples = None
+        tolerance = '0.1%'
+        acceptable_answers = [expect]
+        for optstr in options.split('!'):
+            if 'samples=' in optstr:
+                samples = eval(optstr.split('samples=')[1])
+            elif 'tolerance=' in optstr:
+                tolerance = eval(optstr.split('tolerance=')[1])
+            elif 'altanswer=' in optstr:
+                altanswer = eval(optstr.split('altanswer=')[1])
+                acceptable_answers.append(altanswer)
+        if samples is None:
+            return {'ok': False, 'msg': 'Oops, problem authoring error, samples=None'}
+    
+        # for debugging
+        # return {'ok': False, 'msg': 'altanswer=%s' % altanswer}
+    
+        # filter the answer if the global function "ans_filter" is defined
+        if 'ans_filter' in globals() or 'ans_filter' in locals():
+            try:
+                global ans_filter
+                ans = ans_filter(ans)
+            except Exception as err:
+                #raise
+                pass
+    
+        # for debuging
+        # return {'ok': False, 'msg': 'ans=%s' % ans}
+    
+        for acceptable in acceptable_answers:
+            try:
+                ok = self.is_formula_equal(acceptable, ans, samples, cs=True, tolerance=tolerance,
+                                           evalfun=self.evalfun, debug=False)
+            except Exception as err:
+                return {'ok': False, 'msg': "Sorry, could not evaluate your expression.  Error %s" % str(err)}
+            if ok:
+                return {'ok':True, 'msg': ''}
+    
+        return {'ok':ok, 'msg': ''}
+    
+#-----------------------------------------------------------------------------
+
+class HintSystem(object):
+
+    def __init__(self, anum=0, hints=None, verbose_fail=False, 
+                 extra_hint_functions=None, color="orange",
+                 do_not_catch_exceptions=False,
+                 tolerance=None,
+                 evalfun=None,
+                 ):
+        '''
+        anum = answer_id index number, to base hint off of
+        verbose_fail = flag for verbose error messages (bool)
+        extra_hint_functions = None, or dict of extra hint functions and hint types
+        the_hints = hints to use (defaults to global variable "hints")
+        color = color to use for hints
+        '''
+        
+        self.anum = anum
+        self.verbose_fail = verbose_fail
+        self.extra_hint_functions = extra_hint_functions
+        self.hints = hints
+        self.color = color
+        self.do_not_catch_exceptions = do_not_catch_exceptions
+        self.hfc = HintFormulaCheck(tolerance=tolerance, evalfun=evalfun)
+
+    @staticmethod
+    def hint_check_unbalanced_parens(ans, term):
+        '''
+        ans = student answer
+        term = ignored
+    
+        Returns True if parentheses are unbalanced
+        '''
+        stack = []
+        pushChars, popChars = "({[", ")}]"
+        for c in ans :
+            if c in pushChars :
+                stack.append(c)
+            elif c in popChars :
+                if not len(stack) :
+                    return True
+                else:
+                    stackTop = stack.pop()
+                    balancingBracket = pushChars[popChars.index(c)]
+                    if stackTop != balancingBracket:
+                        return True
+        return len(stack)&gt;0
+    
+    def hint_check_formula(self, ans, term):
+        '''
+        ans = student answer
+        term = formula to check equality with, as &lt;expr&gt;!&lt;variables&gt;@&lt;lower_range&gt;:&lt;upper_range&gt;#&lt;num_samples&gt;
+    
+        Returns True if answer equals formula
+        '''
+        expect, samples = term.split('!')
+        options = "samples='%s'" % samples
+        ret = self.hfc.check_formula(expect, ans, options=options)
+        return ret['ok']
+    
+    @staticmethod
+    def hint_check_numerical(ans, term):
+        '''
+        return True if ans is numerical
+        '''
+        try:
+            x = float(ans)
+            return True
+        except Exception as err:
+            return False
+        return False
+
+    def hint_check_val(self, ans, term):
+        '''
+        ans = student answer
+        term = search term to look for
+    
+        val: check for numerical value of answer matching "term"
+    
+        do not worry about errors: those are caught by the caller
+        '''
+        if isinstance(term, dict):
+            expect = term['expect']
+            tolerance = term['tolerance']
+        else:
+            expect = term
+            tolerance = '5%'
+        if not type(expect)==float:
+            expect = float(eval(expect))
+    
+        nans = float(eval(ans))
+        ok = self.hfc.compare_with_tolerance(expect, nans, tolerance=tolerance)
+        if ok:
+            return True
+        return False
+    
+    
+    @staticmethod
+    def hint_check_magdif(ans, term):
+        # compute difference of ans and expected, in terms of order of magnitude
+        if isinstance(term, dict):
+            expect = term['expect']
+            max_magdif = term['max']
+        else:
+            expect = term
+            max_magdif = 2
+        try:
+            magdif = abs( log10(abs(float(ans)))-log10(abs(expect)) )
+        except Exception as err:
+            return False
+        if magdif &gt; max_magdif:
+            return True
+        return False
+    
+    
+    @staticmethod
+    def hint_check_string(ans, term):
+        '''
+        string: search for string in ans
+
+        ans = student answer
+        term = search term to look for
+
+        if term is a dict, it can contain these keys:
+           
+           - regexp: value = regular expression to match
+           - nospaces: value = string to look for in answer (after all spaces removed from ans)
+    
+        don't worry about errors: those are caught by the caller
+        '''
+        if isinstance(term, dict):
+            if 'regexp' in term:
+                return (re.search(term['regexp'], ans) is not None)
+            elif 'nospaces' in term:
+                return (term['nospaces'] in ans.replace(' ',''))
+        return ans.count(term)
+    
+    
+    @staticmethod
+    def hint_check_symbol(ans, term):
+        '''
+        ans = student answer
+        term = search term to look for
+    
+        sym: search for math symbol in ans
+    
+        don't worry about errors: those are caught by the caller
+        '''
+        case_sensitive = True
+        # parse expression
+        math_interpreter = ParseAugmenter(ans, case_sensitive)
+        math_interpreter.parse_algebra()
+        found = term in math_interpreter.variables_used
+        # for debugging
+        # print 'for %s, found=%s, variables = %s' % (ans, found, math_interpreter.variables_used)
+        return found
+        
+    
+    @staticmethod
+    def hint_check_function_used(ans, term):
+        '''
+        ans = student answer
+        term = search term to look for
+    
+        search for function used in ans
+    
+        don not worry about errors: those are caught by the caller
+        '''
+        case_sensitive = True
+        # parse expression
+        math_interpreter = ParseAugmenter(ans, case_sensitive)
+        math_interpreter.parse_algebra()
+        found = term in math_interpreter.functions_used
+        # for debugging
+        # print 'for %s, found=%s, variables = %s' % (ans, found, math_interpreter.variables_used)
+        return found
+        
+    
+    @staticmethod
+    def hint_check_range(ans, term):
+        '''
+        ans = student answer
+        term = list [bot, top] giving numerical range to check to see if answer is within
+        '''
+        nans = float(eval(ans))
+        [bot, top] = term
+        if nans &lt; bot:
+            return False
+        if nans &gt; top:
+            return False
+        return True
+    
+    
+    def check_hint(self, answer_ids, student_answers, new_cmap, old_cmap, anum=None, the_hints=None):
+        '''
+        answer_ids = list of indexes into student_answers
+        student_answers = dict of student answers
+        new_cmap = new correct_map object (see capa package)
+        old_cmap = old correct_map object (see capa package)
+        '''
+    
+        if the_hints is None:
+            if self.hints is None:
+                global hints
+                the_hints = hints
+            else:
+                the_hints = self.hints
+    
+        # hints should be a list of dicts.  If it's a dict, then the keys give the answer number
+        # and each of those dict elements should be called one at a time.
+        if isinstance(the_hints, dict):
+            for anum, hint in list(the_hints.items()):
+                self.check_hint(answer_ids, student_answers, new_cmap, old_cmap, anum=anum, the_hints=hint)
+                # print "--&gt; anum=%s, hint=%s, ncm=%s" % (anum, hint, new_cmap.hints)	# for debugging
+            return
+
+        if anum is None:
+            anum = self.anum
+        try:
+            aid = answer_ids[anum]
+        except Exception as err:
+            raise Exception('cannot get answer_ids[%d], answer_ids=%s, new_cmap=%s, err=%s' % (self.anum, answer_ids, new_cmap, err))
+    
+        ans = student_answers[aid]
+    
+        # for debugging
+        #new_cmap.set_hint_and_mode(aid, "hello world", 'always')
+        #return
+    
+        htypes = {'val': partial(self.hint_check_val, ans),
+                  'range': partial(self.hint_check_range, ans),
+                  'magdif': partial(self.hint_check_magdif, ans),
+                  'string': partial(self.hint_check_string, ans),
+                  'symbol': partial(self.hint_check_symbol, ans),
+                  'func': partial(self.hint_check_function_used, ans),
+                  'formula': partial(self.hint_check_formula, ans),
+                  'parens': partial(self.hint_check_unbalanced_parens, ans),
+                  'isnum': partial(self.hint_check_numerical, ans),
+                  'debug': None,
+                  'eval': None,
+              }
+        if self.extra_hint_functions is not None:
+            for key, ehf in list(self.extra_hint_functions.items()):
+                htypes[key] = partial(ehf, ans)
+    
+        # print "using the_hints = %s" % the_hints
+        the_hint = None
+        for hintinfo in the_hints:
+            for htype, hfun in list(htypes.items()):
+                if htype in hintinfo:
+                    try:
+                        term = hintinfo[htype]
+                        if htype=='eval':
+                            ret = eval(term, htypes)	# evaluate the expression - can have function calls in it!
+                        elif htype=='debug':
+                            ret = True
+                        else:
+                            ret = hfun(term)
+                        if htype=='debug':
+                            hintinfo['hint'] = "Answer submitted=%s" % ans
+                        if ret:
+                            the_hint = hintinfo['hint']
+                            if '&lt;font' not in the_hint:
+                                the_hint = ('&lt;font color="%s"&gt;' % self.color) + the_hint + '&lt;/font&gt;'
+                            # return on first matching hint
+                            new_cmap.set_hint_and_mode(aid, the_hint, 'always')
+                            return
+                    except Exception as err:
+                        if self.do_not_catch_exceptions:
+                            raise
+                        if self.verbose_fail:
+                            raise Exception("Error %s checking hint %s ans=%s, term=%s" % (err, htype, ans, term))
+
+
+
+</script>
+        <script type="text/python">
+do_hints_for_myhints = HintSystem(hints=myhints).check_hint
+</script>
+        <customresponse cfn="sympy_formula_check" inline="1" expect="sqrt(1+sqrt(1-g))/sqrt(2)">
+          <textline size="60" correct_answer="sqrt(1+sqrt(1-g))/sqrt(2)" inline="1" math="1"/>
+          <hintgroup hintfn="do_hints_for_myhints"/>
+        </customresponse>
+      </p>
+      <p>
+        <solution>
+          <p>
+            <b>Solution:</b>
+          </p>
+          <span>
+            <p>
+For an input state [mathjaxinline]\mbox{$|\psi \rangle $}=a\mbox{$|0\rangle $}+b\mbox{$|1\rangle $}[/mathjaxinline] we have </p>
+            <table id="a0000000016" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto">
+              <tr>
+                <td class="equation" style="width:80%; border:none">[mathjax]E_0 = \left[ \begin{array}{cc}{1}&amp; {0}\\ {0}&amp; {\sqrt{1-g}}\end{array}\right], \quad E_1 = \left[ \begin{array}{cc}{0}&amp; {\sqrt{g}}\\ {0}&amp; {0}\end{array}\right], \quad \rho = \cal E\left(\mbox{$|\psi \rangle $}\mbox{$\langle \psi |$}\right) = \left[ \begin{array}{cc}{a^2}&amp; {ab}\\ {ab}&amp; {b^2}\end{array}\right],[/mathjax]</td>
+                <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.9)</td>
+              </tr>
+            </table>
+            <p>
+to make things simpler, we take [mathjaxinline]a[/mathjaxinline] and [mathjaxinline]b[/mathjaxinline] to be real. The fidelity of [mathjaxinline]\rho[/mathjaxinline] state with respect to [mathjaxinline]\psi[/mathjaxinline] is </p>
+            <table id="a0000000017" class="eqnarray" cellspacing="0" cellpadding="7" width="100%" style="table-layout:auto">
+              <tr id="a0000000018">
+                <td style="width:40%; border:none"> </td>
+                <td style="vertical-align:middle;                                    text-align:right; border:none">
+	    [mathjaxinline]\displaystyle F\left(\mbox{$|\psi \rangle $},\rho \right) = \sqrt{\mbox{$\langle \psi |$}\rho \mbox{$|\psi \rangle $}}[/mathjaxinline]
+        </td>
+                <td style="vertical-align:middle;                                    text-align:center; border:none">
+	    [mathjaxinline]\displaystyle =[/mathjaxinline]
+        </td>
+                <td style="vertical-align:middle;                                    text-align:left; border:none">
+	    [mathjaxinline]\displaystyle  \sqrt{a^4 + a^2 b^2 \left(g+ 2\sqrt{1-g}\right) + b^4(1-g)}.[/mathjaxinline]
+        </td>
+                <td style="width:40%; border:none"> </td>
+                <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.10)</td>
+              </tr>
+            </table>
+            <p>
+Specifically for [mathjaxinline]\mbox{$|\psi \rangle $}=\left(\mbox{$|0\rangle $}+\mbox{$|1\rangle $}\right)/\sqrt{2}[/mathjaxinline], </p>
+            <table id="a0000000019" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto">
+              <tr>
+                <td class="equation" style="width:80%; border:none">[mathjax]F\left(\mbox{$|\psi \rangle $},\rho \right) = \frac{1}{\sqrt{2}}\sqrt{1+\sqrt{1-g}}.[/mathjax]</td>
+                <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.11)</td>
+              </tr>
+            </table>
+            <p>
+We plot this as a function of time for [mathjaxinline]g= 1- e^{-\frac{t}{T}}[/mathjaxinline]. It asymptotically aproaches [mathjaxinline]1/\sqrt{2}[/mathjaxinline]. </p>
+            <p>
+              <img src="/static/images/qis-pss1-2006-fidelity.png" width="400"/>
+            </p>
+          </span>
+        </solution>
+      </p>
+    </li>
+  </ol>
+</problem>

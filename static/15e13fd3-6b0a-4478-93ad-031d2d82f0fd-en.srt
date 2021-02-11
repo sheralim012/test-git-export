@@ -1,0 +1,160 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:03,000
+The repetition code is also an example of a linear code.
+
+2
+00:00:03,000 --> 00:00:13,000
+So let's say my code is just all zero
+
+3
+00:00:13,000 --> 00:00:15,000
+string and the all one string.
+
+4
+00:00:15,000 --> 00:00:20,000
+Of course, this is a subset of F2 to the n.
+
+5
+00:00:20,000 --> 00:00:22,000
+Let's see what these objects look like.
+
+6
+00:00:22,000 --> 00:00:26,000
+
+
+7
+00:00:26,000 --> 00:00:30,000
+So my generator matrix just consists
+
+8
+00:00:30,000 --> 00:00:34,000
+of a single column of all 1s.
+
+9
+00:00:34,000 --> 00:00:39,000
+This is also equal to my sole generator, G1.
+
+10
+00:00:39,000 --> 00:00:46,000
+And so my code is just the span of this G1, namely,
+
+11
+00:00:46,000 --> 00:00:49,000
+the one-dimensional vector space that contains it.
+
+12
+00:00:49,000 --> 00:00:53,000
+So it just has the 0 vector and this vector G1.
+
+13
+00:00:53,000 --> 00:00:58,000
+So this is a very simple subspace of F2 to the n,
+
+14
+00:00:58,000 --> 00:01:01,000
+of dimension 1.
+
+15
+00:01:01,000 --> 00:01:02,000
+And it suggests there's another way
+
+16
+00:01:02,000 --> 00:01:04,000
+I can describe this as well.
+
+17
+00:01:04,000 --> 00:01:11,000
+
+
+18
+00:01:11,000 --> 00:01:14,000
+I can describe it by linear equations over F2.
+
+19
+00:01:14,000 --> 00:01:18,000
+So these linear equations looks like, I
+
+20
+00:01:18,000 --> 00:01:23,000
+have X1 through Xn in the code.
+
+21
+00:01:23,000 --> 00:01:28,000
+This is true if and only if X1 equals X2,
+
+22
+00:01:28,000 --> 00:01:34,000
+X2 equals X3, and so on, down to Xn minus 1 equals Xn.
+
+23
+00:01:34,000 --> 00:01:36,000
+
+
+24
+00:01:36,000 --> 00:01:37,000
+OK?
+
+25
+00:01:37,000 --> 00:01:39,000
+In other words, all of the entries should be equal.
+
+26
+00:01:39,000 --> 00:01:41,000
+
+
+27
+00:01:41,000 --> 00:01:46,000
+And then I can rewrite that in a more standard form.
+
+28
+00:01:46,000 --> 00:01:54,000
+Instead of X2 equals X2, I can write X1 plus X2 equals 0.
+
+29
+00:01:54,000 --> 00:01:58,000
+And here, your instinct would be X1 minus X2 equals 0.
+
+30
+00:01:58,000 --> 00:02:01,000
+But over F2, plus and minus are the same.
+
+31
+00:02:01,000 --> 00:02:04,000
+So, easier just write plus.
+
+32
+00:02:04,000 --> 00:02:13,000
+I get X2 plus X3 equals 0, down to Xn minus 1 plus Xn equals 0.
+
+33
+00:02:13,000 --> 00:02:16,000
+And now, this looks like a linear system of equations
+
+34
+00:02:16,000 --> 00:02:18,000
+in a standard form.
+
+35
+00:02:18,000 --> 00:02:22,000
+I can write this as some matrix H times x
+
+36
+00:02:22,000 --> 00:02:32,000
+equals 0, where H is this matrix 1, 1, all 0s, 1, 1,
+
+37
+00:02:32,000 --> 00:02:36,000
+all 0s, and so on.
+
+38
+00:02:36,000 --> 00:02:42,000
+It just has two 1s per row and they wrap around.
+
+39
+00:02:42,000 --> 00:02:43,000
+
+

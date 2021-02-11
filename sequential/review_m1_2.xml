@@ -1,0 +1,24 @@
+<sequential display_name="Review material: quantum error correction" due="&quot;2918-06-15T23:57:00+00:00&quot;" format="Concept" graceperiod="18000 seconds" graded="true" showanswer="closed" start="&quot;2017-09-06T00:00:00+00:00&quot;" attempts="10" tex_filename="./week3_review1.tex" linenum="3" refnum="3">
+  <vertical url_name="QEC_review_material_overview"/>
+  <vertical url_name="Quantum_channels_-_simplified_the_dephasing_channel"/>
+  <vertical url_name="The_dephasing_channel_as_depicted_on_the_Bloch_sphere"/>
+  <vertical url_name="The_depolarizing_channel"/>
+  <vertical url_name="CQ_The_dephasing_and_depolarizing_channels"/>
+  <vertical url_name="Quantum_version_of_the_classical_repetition_code_-_three_qubit_bit_flip_code"/>
+  <vertical url_name="The_three-qubit_phase_flip_error_correction_code"/>
+  <vertical url_name="CQ_Three-qubit_quantum_code_versus_three-bit_classical_code"/>
+  <vertical url_name="The_nine-qubit_quantum_error_correction_code"/>
+  <vertical url_name="Effect_of_single_qubit_rotation_errors_on_the_quantum_code"/>
+  <vertical url_name="Effect_of_depolarizing_channel_on_the_quantum_code"/>
+  <vertical url_name="CQ_The_nine-qubit_quantum_error_correction_code"/>
+  <vertical url_name="Review_classical_and_quantum_coding"/>
+  <vertical url_name="Three_conceptual_challenges_faced_by_quantum_error_correction"/>
+  <vertical url_name="Quantum_codes_-_definition_and_review"/>
+  <vertical url_name="CQ_Quantum_versus_classical_error_correction"/>
+  <vertical url_name="Operator_measurement"/>
+  <vertical url_name="Syndrome_measurement_and_recovery_operators"/>
+  <vertical url_name="CQ_Syndrome_measurement_for_the_three-qubit_bit-flip_code"/>
+  <vertical url_name="Syndrome_operators_-_phase_flip_code_and_Shor_9-qubit_code"/>
+  <vertical url_name="Quantum_error_correction_criteria"/>
+  <vertical url_name="CQ_Ideas_behind_the_quantum_error_correction_criteria"/>
+</sequential>

@@ -1,0 +1,600 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:04,000
+Peter Shor came out with his algorithm for factoring numbers
+
+2
+00:00:04,000 --> 00:00:08,000
+and the whole community was really floored and surprised
+
+3
+00:00:08,000 --> 00:00:12,000
+by this discovery, but immediately reacted
+
+4
+00:00:12,000 --> 00:00:15,000
+by saying it's a beautiful theoretical discovery that
+
+5
+00:00:15,000 --> 00:00:16,000
+will never be practical and never
+
+6
+00:00:16,000 --> 00:00:19,000
+be implemented because quantum systems are
+
+7
+00:00:19,000 --> 00:00:21,000
+so susceptible to noise.
+
+8
+00:00:21,000 --> 00:00:24,000
+There are three things that were pointed out about this.
+
+9
+00:00:24,000 --> 00:00:33,000
+So if I start summarizing quantum coding, as of 1995,
+
+10
+00:00:33,000 --> 00:00:38,000
+quantum coding-- the analog of quantum to classical codes--
+
+11
+00:00:38,000 --> 00:00:47,000
+were considered impossible because of three major reasons.
+
+12
+00:00:47,000 --> 00:00:58,000
+First, states collapse when measured.
+
+13
+00:00:58,000 --> 00:01:01,000
+
+
+14
+00:01:01,000 --> 00:01:07,000
+Remember a0 plus b1, when measured,
+
+15
+00:01:07,000 --> 00:01:11,000
+just give you 0 and 1 with some probabilities.
+
+16
+00:01:11,000 --> 00:01:13,000
+So you lose that information about a
+
+17
+00:01:13,000 --> 00:01:16,000
+and b for a single instance of it.
+
+18
+00:01:16,000 --> 00:01:20,000
+And you only have a and b when you have an ensemble.
+
+19
+00:01:20,000 --> 00:01:23,000
+You don't actually get a and b from a single instance
+
+20
+00:01:23,000 --> 00:01:25,000
+of a message, in contrast to what you might
+
+21
+00:01:25,000 --> 00:01:29,000
+get from a classical system.
+
+22
+00:01:29,000 --> 00:01:32,000
+So this also means that you can't just
+
+23
+00:01:32,000 --> 00:01:37,000
+measure by seeing what message you got
+
+24
+00:01:37,000 --> 00:01:39,000
+and then doing a majority vote on it.
+
+25
+00:01:39,000 --> 00:01:42,000
+So if I'm doing a classical code, I might say,
+
+26
+00:01:42,000 --> 00:01:45,000
+if I'm doing a classicals code, I might say,
+
+27
+00:01:45,000 --> 00:01:49,000
+if I'm doing a classical code, I might say something three times
+
+28
+00:01:49,000 --> 00:01:51,000
+to make sure that you understand it.
+
+29
+00:01:51,000 --> 00:01:53,000
+I'll say it three times so that you
+
+30
+00:01:53,000 --> 00:01:55,000
+make sure you understand it.
+
+31
+00:01:55,000 --> 00:01:58,000
+I'll say it two times to make sure that you understand it.
+
+32
+00:01:58,000 --> 00:01:59,000
+Of course, you can do a majority vote
+
+33
+00:01:59,000 --> 00:02:01,000
+and figure out what I actually meant,
+
+34
+00:02:01,000 --> 00:02:04,000
+even though I screw up once.
+
+35
+00:02:04,000 --> 00:02:08,000
+But that's because you listened to and deciphered the message.
+
+36
+00:02:08,000 --> 00:02:12,000
+If I'm doing it quantum mechanically, I cannot do that.
+
+37
+00:02:12,000 --> 00:02:15,000
+So people said that's one reason why
+
+38
+00:02:15,000 --> 00:02:17,000
+there's going to be no such thing as quantum error
+
+39
+00:02:17,000 --> 00:02:18,000
+correction codes.
+
+40
+00:02:18,000 --> 00:02:22,000
+You can't build a quantum repetition code.
+
+41
+00:02:22,000 --> 00:02:25,000
+The second thing is that we have this model
+
+42
+00:02:25,000 --> 00:02:28,000
+for errors over here, the binary symmetric channel.
+
+43
+00:02:28,000 --> 00:02:31,000
+So you either have an error or you did not have an error.
+
+44
+00:02:31,000 --> 00:02:37,000
+But in the quantum realm, errors aren't so nice to you.
+
+45
+00:02:37,000 --> 00:02:38,000
+Errors are continuous.
+
+46
+00:02:38,000 --> 00:02:42,000
+
+
+47
+00:02:42,000 --> 00:02:44,000
+For example, rotations-- a qubit could
+
+48
+00:02:44,000 --> 00:02:48,000
+move just an infinitesimal amount on the block sphere.
+
+49
+00:02:48,000 --> 00:02:50,000
+Is that an error or not an error,
+
+50
+00:02:50,000 --> 00:02:54,000
+if you just rotated by an epsilon amount?
+
+51
+00:02:54,000 --> 00:02:57,000
+It's very different from this binary symmetric channel.
+
+52
+00:02:57,000 --> 00:03:03,000
+So it is also well known that analog signals don't really
+
+53
+00:03:03,000 --> 00:03:04,000
+have error correction.
+
+54
+00:03:04,000 --> 00:03:07,000
+You have to move into the world of digital signal
+
+55
+00:03:07,000 --> 00:03:09,000
+processing and digital signals to get
+
+56
+00:03:09,000 --> 00:03:12,000
+this kind of correction code.
+
+57
+00:03:12,000 --> 00:03:16,000
+So a great analogy was made between analog computation
+
+58
+00:03:16,000 --> 00:03:20,000
+and quantum computation saying that, just
+
+59
+00:03:20,000 --> 00:03:22,000
+as analog computation is unstable,
+
+60
+00:03:22,000 --> 00:03:24,000
+quantum computers will also be unstable,
+
+61
+00:03:24,000 --> 00:03:27,000
+and therefore, quantum algorithms like Shor's
+
+62
+00:03:27,000 --> 00:03:30,000
+algorithm will be impractical.
+
+63
+00:03:30,000 --> 00:03:34,000
+The third objection was the fact that, even
+
+64
+00:03:34,000 --> 00:03:38,000
+if you did want to build a quantum repetition code,
+
+65
+00:03:38,000 --> 00:03:40,000
+there's something that prohibits this.
+
+66
+00:03:40,000 --> 00:03:44,000
+Remember we went into this very early on in the class
+
+67
+00:03:44,000 --> 00:03:47,000
+right away, and that is the no cloning theorem.
+
+68
+00:03:47,000 --> 00:03:51,000
+
+
+69
+00:03:51,000 --> 00:03:57,000
+Quantum states, if they are unknown, cannot be copied.
+
+70
+00:03:57,000 --> 00:04:02,000
+
+
+71
+00:04:02,000 --> 00:04:08,000
+So three major constraints, three major objections
+
+72
+00:04:08,000 --> 00:04:10,000
+to the existence of quantum error correction,
+
+73
+00:04:10,000 --> 00:04:12,000
+even in principle--
+
+74
+00:04:12,000 --> 00:04:16,000
+and one of the neat things is that Peter Shor did not
+
+75
+00:04:16,000 --> 00:04:19,000
+mention these three objections because it
+
+76
+00:04:19,000 --> 00:04:23,000
+was so obvious to him, perhaps, how to overcome them.
+
+77
+00:04:23,000 --> 00:04:25,000
+But for the rest of us in the community
+
+78
+00:04:25,000 --> 00:04:27,000
+for whom it wasn't so obvious, it
+
+79
+00:04:27,000 --> 00:04:30,000
+was remarkable to see how they were overcome.
+
+80
+00:04:30,000 --> 00:04:32,000
+And in fact, a little bit of history
+
+81
+00:04:32,000 --> 00:04:35,000
+is that they were overcome by Peter Shor.
+
+82
+00:04:35,000 --> 00:04:39,000
+So Peter Shor wrote a second paper after his factoring paper
+
+83
+00:04:39,000 --> 00:04:44,000
+showing how quantum error correction could be done.
+
+84
+00:04:44,000 --> 00:04:46,000
+By the way, just in terms of the history,
+
+85
+00:04:46,000 --> 00:04:50,000
+after error correction, the next objection
+
+86
+00:04:50,000 --> 00:04:52,000
+that people came up with was that there's
+
+87
+00:04:52,000 --> 00:04:57,000
+no way to make it resilient against failures in gates.
+
+88
+00:04:57,000 --> 00:04:59,000
+So this is resiliency against errors
+
+89
+00:04:59,000 --> 00:05:03,000
+in states and in communication, but not about resiliency
+
+90
+00:05:03,000 --> 00:05:06,000
+in, like, if the unitary operator is slightly wrong
+
+91
+00:05:06,000 --> 00:05:09,000
+and rotates slightly more or slightly less
+
+92
+00:05:09,000 --> 00:05:11,000
+or around the wrong axis.
+
+93
+00:05:11,000 --> 00:05:14,000
+That is a concept known as fault tolerance.
+
+94
+00:05:14,000 --> 00:05:17,000
+So even though error correction was
+
+95
+00:05:17,000 --> 00:05:19,000
+shown to be possible by Peter Shor in a manner
+
+96
+00:05:19,000 --> 00:05:22,000
+that I'll review more about in just a moment,
+
+97
+00:05:22,000 --> 00:05:25,000
+the next piece of the story, the next missing piece of this,
+
+98
+00:05:25,000 --> 00:05:27,000
+was fault tolerance.
+
+99
+00:05:27,000 --> 00:05:30,000
+So Peter Shor went and wrote a third paper
+
+100
+00:05:30,000 --> 00:05:33,000
+showing how one could present and construct
+
+101
+00:05:33,000 --> 00:05:35,000
+fault-tolerant quantum computation.
+
+102
+00:05:35,000 --> 00:05:37,000
+And it took the rest of the better
+
+103
+00:05:37,000 --> 00:05:40,000
+of part of maybe a decade to unravel all of those results
+
+104
+00:05:40,000 --> 00:05:42,000
+and understand them.
+
+105
+00:05:42,000 --> 00:05:47,000
+And so it is because of those three incredible pieces of work
+
+106
+00:05:47,000 --> 00:05:52,000
+that Peter Shor is known as such a master of the field today.
+
+107
+00:05:52,000 --> 00:05:54,000
+And I'm only going to show you part of it.
+
+108
+00:05:54,000 --> 00:05:56,000
+And the thing I want to show you now
+
+109
+00:05:56,000 --> 00:06:00,000
+is how these three objections are overcome.
+
+110
+00:06:00,000 --> 00:06:03,000
+The first of these objections is overcome
+
+111
+00:06:03,000 --> 00:06:09,000
+by realizing that you don't need to measure the state.
+
+112
+00:06:09,000 --> 00:06:13,000
+So instead of measuring the state, what we will do
+
+113
+00:06:13,000 --> 00:06:15,000
+is to employ two strategies.
+
+114
+00:06:15,000 --> 00:06:23,000
+
+
+115
+00:06:23,000 --> 00:06:30,000
+The first is never to measure the state,
+
+116
+00:06:30,000 --> 00:06:39,000
+and only measure the environment and its effect--
+
+117
+00:06:39,000 --> 00:06:46,000
+
+
+118
+00:06:46,000 --> 00:06:50,000
+that is, the error.
+
+119
+00:06:50,000 --> 00:06:54,000
+
+
+120
+00:06:54,000 --> 00:06:57,000
+All you want to do is find out what the error was.
+
+121
+00:06:57,000 --> 00:07:00,000
+You don't necessarily care what state was encoded,
+
+122
+00:07:00,000 --> 00:07:03,000
+and in fact you don't want to figure that out.
+
+123
+00:07:03,000 --> 00:07:05,000
+Because then you would lose the quantum information
+
+124
+00:07:05,000 --> 00:07:07,000
+that you're trying to protect.
+
+125
+00:07:07,000 --> 00:07:09,000
+But the whole concept of measuring
+
+126
+00:07:09,000 --> 00:07:11,000
+the effect of the environment separate
+
+127
+00:07:11,000 --> 00:07:16,000
+from measuring the state that's encoded was a novel one.
+
+128
+00:07:16,000 --> 00:07:19,000
+So this fixes objection number one.
+
+129
+00:07:19,000 --> 00:07:26,000
+The second idea, which now we use routinely in quantum error
+
+130
+00:07:26,000 --> 00:07:28,000
+correction but was not conceptualized yet
+
+131
+00:07:28,000 --> 00:07:31,000
+at the time of Peter Shor's first article
+
+132
+00:07:31,000 --> 00:07:34,000
+about error correction, is two orthogonalize errors.
+
+133
+00:07:34,000 --> 00:07:51,000
+
+
+134
+00:07:51,000 --> 00:07:57,000
+Such that if you have a small rotation, you can either think
+
+135
+00:07:57,000 --> 00:08:01,000
+of it as being a complete flip or no flip at all.
+
+136
+00:08:01,000 --> 00:08:06,000
+And you're able to do this if you employ entanglement.
+
+137
+00:08:06,000 --> 00:08:12,000
+
+
+138
+00:08:12,000 --> 00:08:16,000
+And I'm not going to describe the formalism behind this
+
+139
+00:08:16,000 --> 00:08:19,000
+to you, but I will try to post on the class site
+
+140
+00:08:19,000 --> 00:08:22,000
+a beautiful paper by John Preskill titled
+
+141
+00:08:22,000 --> 00:08:26,000
+"How to Fight Entanglement with Entanglement."
+
+142
+00:08:26,000 --> 00:08:28,000
+You fight the entanglement caused
+
+143
+00:08:28,000 --> 00:08:32,000
+by the environment that's making errors on the quantum state
+
+144
+00:08:32,000 --> 00:08:34,000
+with a different kind of entanglement, which
+
+145
+00:08:34,000 --> 00:08:36,000
+is the entanglement that exists within the codewords
+
+146
+00:08:36,000 --> 00:08:39,000
+and inside the code space.
+
+147
+00:08:39,000 --> 00:08:40,000
+So it's a beautiful concept, and I
+
+148
+00:08:40,000 --> 00:08:45,000
+hope you'll be able to see where it arises as I go forward.
+
+149
+00:08:45,000 --> 00:08:45,000
+
+

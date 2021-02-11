@@ -1,0 +1,24 @@
+<problem linenum="86" tex_filename="./week4_lectures7.tex" attempts="1" display_name="General linear algebra formalism" max_attempts="1">
+  <p>
+This is a concept question, provided to check your understanding of the previous lecture video clips. </p>
+  <p>
+Which of the following are true? </p>
+  <p>
+    <choiceresponse>
+      <checkboxgroup>
+        <choice correct="false" name="1">
+          <text>Any Pauli element may be represented by a [mathjaxinline]\mathbb {Z}_2[/mathjaxinline] vector of size n.</text>
+        </choice>
+        <choice correct="true" name="2">
+          <text>The symplectic group is the group of matrices over [mathjaxinline]\mathbb {Z}_2[/mathjaxinline] that preserve the symplectic inner product.</text>
+        </choice>
+        <choice correct="false" name="3">
+          <text>In the linear algebra perspective the conjugation of a Pauli element with a Clifford unitary is captured by two linear forms.</text>
+        </choice>
+        <choice correct="false" name="4">
+          <text>Any permutation matrix is a member of the symplectic group.</text>
+        </choice>
+      </checkboxgroup>
+    </choiceresponse>
+  </p>
+</problem>

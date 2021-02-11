@@ -1,0 +1,564 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:03,000
+We have a code that corrects bit errors,
+
+2
+00:00:03,000 --> 00:00:07,000
+corrects sigma x errors, and makes sigma z errors
+
+3
+00:00:07,000 --> 00:00:08,000
+three times as likely.
+
+4
+00:00:08,000 --> 00:00:11,000
+We have a code that corrects sigma z errors,
+
+5
+00:00:11,000 --> 00:00:14,000
+and make sigma x errors three times less likely.
+
+6
+00:00:14,000 --> 00:00:17,000
+You can easily check if you have a sigma x error.
+
+7
+00:00:17,000 --> 00:00:21,000
+It takes a logical 0 to a logical 1, and vice versa.
+
+8
+00:00:21,000 --> 00:00:25,000
+So, a sigma x error on any of the three bit qubits
+
+9
+00:00:25,000 --> 00:00:28,000
+flips the logical 0 and logical 1,
+
+10
+00:00:28,000 --> 00:00:33,000
+so it applies the sigma x to the logical qubit.
+
+11
+00:00:33,000 --> 00:00:36,000
+So, I mean, this is you know, you
+
+12
+00:00:36,000 --> 00:00:40,000
+squeeze on the phase errors.
+
+13
+00:00:40,000 --> 00:00:42,000
+Your bit errors blow up.
+
+14
+00:00:42,000 --> 00:00:45,000
+You squeeze on the bit error, the phase errors blow up.
+
+15
+00:00:45,000 --> 00:00:46,000
+So how do you fix this?
+
+16
+00:00:46,000 --> 00:00:52,000
+
+
+17
+00:00:52,000 --> 00:00:58,000
+Well, what you do is what is called concatenation.
+
+18
+00:00:58,000 --> 00:01:00,000
+Well, what you do is you combine the two codes
+
+19
+00:01:00,000 --> 00:01:07,000
+so that they fix both bit errors and phase errors.
+
+20
+00:01:07,000 --> 00:01:09,000
+And in classical coding theory, it's
+
+21
+00:01:09,000 --> 00:01:12,000
+called concatenating with two codes.
+
+22
+00:01:12,000 --> 00:01:17,000
+So first, what you do is you encode the code
+
+23
+00:01:17,000 --> 00:01:19,000
+with one of these codes.
+
+24
+00:01:19,000 --> 00:01:22,000
+And then we encode each of the qubits
+
+25
+00:01:22,000 --> 00:01:24,000
+in the remaining code with the other.
+
+26
+00:01:24,000 --> 00:01:26,000
+So, I have zero--
+
+27
+00:01:26,000 --> 00:01:27,000
+I'll just write it down--
+
+28
+00:01:27,000 --> 00:01:38,000
+do one over 2, 3, 9/2 000 plus 111 Is 9/2,
+
+29
+00:01:38,000 --> 00:01:41,000
+I'd 9/2 is the wrong number.
+
+30
+00:01:41,000 --> 00:01:58,000
+1 over square of 8 000 plus 1 1 1 000 plus 111.
+
+31
+00:01:58,000 --> 00:02:03,000
+So, you're encoding 1 qubit into 9 qubits.
+
+32
+00:02:03,000 --> 00:02:21,000
+And 1 goes to 1 over root 8 000 minus 111 000 minus 111 000
+
+33
+00:02:21,000 --> 00:02:41,000
+minus 111.
+
+34
+00:02:41,000 --> 00:02:52,000
+So, to correct, first correct inner code.
+
+35
+00:02:52,000 --> 00:02:58,000
+
+
+36
+00:02:58,000 --> 00:03:02,000
+Well, the inner code is just our bit error
+
+37
+00:03:02,000 --> 00:03:06,000
+correcting code, which means if there's a bit error,
+
+38
+00:03:06,000 --> 00:03:07,000
+you correct it.
+
+39
+00:03:07,000 --> 00:03:13,000
+
+
+40
+00:03:13,000 --> 00:03:17,000
+So let's say we have a sigma x error.
+
+41
+00:03:17,000 --> 00:03:20,000
+
+
+42
+00:03:20,000 --> 00:03:23,000
+What happens?
+
+43
+00:03:23,000 --> 00:03:31,000
+On, let's say, the fifth qubit, you had 0, 0, 0.
+
+44
+00:03:31,000 --> 00:03:38,000
+You had the first of these, then zeros--
+
+45
+00:03:38,000 --> 00:03:49,000
+1, 0, plus or minus 1, 0, 1, and then the third piece,
+
+46
+00:03:49,000 --> 00:03:54,000
+the plus or minus depending on whether you
+
+47
+00:03:54,000 --> 00:03:57,000
+have a logical 0 or logical 1.
+
+48
+00:03:57,000 --> 00:03:59,000
+And we know how to correct this.
+
+49
+00:03:59,000 --> 00:04:03,000
+We ask which bit is different, and then we flip that bit.
+
+50
+00:04:03,000 --> 00:04:09,000
+
+
+51
+00:04:09,000 --> 00:04:12,000
+Bit is different.
+
+52
+00:04:12,000 --> 00:04:17,000
+
+
+53
+00:04:17,000 --> 00:04:19,000
+flip that bit.
+
+54
+00:04:19,000 --> 00:04:27,000
+
+
+55
+00:04:27,000 --> 00:04:29,000
+OK.
+
+56
+00:04:29,000 --> 00:04:33,000
+Let's save that.
+
+57
+00:04:33,000 --> 00:04:33,000
+OK.
+
+58
+00:04:33,000 --> 00:04:44,000
+Sigma z error, 5 error, 0, 0, 0, plus 1, 1, 1.
+
+59
+00:04:44,000 --> 00:04:47,000
+So these are, I want to say, the fourth, fifth, and sixth bits.
+
+60
+00:04:47,000 --> 00:04:50,000
+
+
+61
+00:04:50,000 --> 00:05:04,000
+Goes to 0, 0, 0, minus 1, 1, 1 on the fourth and six bits.
+
+62
+00:05:04,000 --> 00:05:13,000
+Well this is a logical 0, and this is a logical 1.
+
+63
+00:05:13,000 --> 00:05:20,000
+So really, it's a logical error in the code.
+
+64
+00:05:20,000 --> 00:05:24,000
+
+
+65
+00:05:24,000 --> 00:05:38,000
+Or, rather-- well, not really, but I mean, OK.
+
+66
+00:05:38,000 --> 00:05:47,000
+Let's say this is 0 x and this is 1 x.
+
+67
+00:05:47,000 --> 00:05:52,000
+
+
+68
+00:05:52,000 --> 00:05:55,000
+So you can think of a code that encodes a 0 as this,
+
+69
+00:05:55,000 --> 00:05:57,000
+and a code that encodes a 1 as this.
+
+70
+00:05:57,000 --> 00:06:05,000
+
+
+71
+00:06:05,000 --> 00:06:07,000
+Now, what we've done is we've--
+
+72
+00:06:07,000 --> 00:06:11,000
+
+
+73
+00:06:11,000 --> 00:06:14,000
+x goes to 0.
+
+74
+00:06:14,000 --> 00:06:19,000
+x, 1 x, 0 x.
+
+75
+00:06:19,000 --> 00:06:26,000
+Because we took the middle of these three triplets of qubits,
+
+76
+00:06:26,000 --> 00:06:29,000
+and we took it with this other thing,
+
+77
+00:06:29,000 --> 00:06:32,000
+and if we call this 0 x and 1 x, this
+
+78
+00:06:32,000 --> 00:06:39,000
+is just a bit error on the middle qubit.
+
+79
+00:06:39,000 --> 00:06:41,000
+So we can correct it.
+
+80
+00:06:41,000 --> 00:06:43,000
+We correct it exactly the same way,
+
+81
+00:06:43,000 --> 00:06:49,000
+and we compare this state, this state, and this state,
+
+82
+00:06:49,000 --> 00:06:51,000
+and take the majority of them, whether they
+
+83
+00:06:51,000 --> 00:06:54,000
+have a plus or minus.
+
+84
+00:06:54,000 --> 00:06:59,000
+And you can write down a circuit for that,
+
+85
+00:06:59,000 --> 00:07:04,000
+but I'm not going to, because it's rather complicated,
+
+86
+00:07:04,000 --> 00:07:08,000
+and I'm not entirely sure how illuminating it is.
+
+87
+00:07:08,000 --> 00:07:11,000
+But maybe we'll make you do it on the homework.
+
+88
+00:07:11,000 --> 00:07:17,000
+
+
+89
+00:07:17,000 --> 00:07:20,000
+So that's the nine-qubit code.
+
+90
+00:07:20,000 --> 00:07:24,000
+
+
+91
+00:07:24,000 --> 00:07:28,000
+So far, we've shown that the nine-qubit code can
+
+92
+00:07:28,000 --> 00:07:33,000
+correct a sigma x error, and it can correct a sigma z error.
+
+93
+00:07:33,000 --> 00:07:35,000
+And in fact, it can correct a sigma y error,
+
+94
+00:07:35,000 --> 00:07:39,000
+because a sigma y error is just a simultaneous sigma x error
+
+95
+00:07:39,000 --> 00:07:41,000
+and sigma z error.
+
+96
+00:07:41,000 --> 00:07:47,000
+And correcting the sigma x error here
+
+97
+00:07:47,000 --> 00:07:50,000
+does not interfere with the sigma z error.
+
+98
+00:07:50,000 --> 00:07:51,000
+So you can correct that later.
+
+99
+00:07:51,000 --> 00:07:56,000
+
+
+100
+00:07:56,000 --> 00:08:02,000
+So the nine-qubit code corrects one error of any--
+
+101
+00:08:02,000 --> 00:08:05,000
+well, of sigma x sigma y, sigma z.
+
+102
+00:08:05,000 --> 00:08:07,000
+But of course, there's lots and lots
+
+103
+00:08:07,000 --> 00:08:11,000
+of errors that aren't sigma x, sigma y, or sigma z.
+
+104
+00:08:11,000 --> 00:08:14,000
+I mean, you could apply a Hadamard gate
+
+105
+00:08:14,000 --> 00:08:16,000
+to one of the qubits.
+
+106
+00:08:16,000 --> 00:08:17,000
+Does it correct that as well?
+
+107
+00:08:17,000 --> 00:08:20,000
+
+
+108
+00:08:20,000 --> 00:08:25,000
+Well, there is a theorem.
+
+109
+00:08:25,000 --> 00:08:31,000
+And I don't want to get rid of the base code.
+
+110
+00:08:31,000 --> 00:08:34,000
+So let's erase this.
+
+111
+00:08:34,000 --> 00:08:34,000
+Theorem.
+
+112
+00:08:34,000 --> 00:08:38,000
+
+
+113
+00:08:38,000 --> 00:08:45,000
+If you can correct identity--
+
+114
+00:08:45,000 --> 00:08:50,000
+OK, so any code had better be able to correct
+
+115
+00:08:50,000 --> 00:09:00,000
+the no error, sigma x, sigma y, sigma z, on any qubit.
+
+116
+00:09:00,000 --> 00:09:02,000
+Actually, we shouldn't say the identity.
+
+117
+00:09:02,000 --> 00:09:04,000
+It's the identity on all the qubits.
+
+118
+00:09:04,000 --> 00:09:06,000
+If you can correct sigma x, sigma y, or signal z
+
+119
+00:09:06,000 --> 00:09:11,000
+on any single qubit, you can correct any one-qubit error.
+
+120
+00:09:11,000 --> 00:09:21,000
+
+
+121
+00:09:21,000 --> 00:09:26,000
+I mean, you can take your qubit and just remove it and add 1
+
+122
+00:09:26,000 --> 00:09:29,000
+in its place, and that gets corrected.
+
+123
+00:09:29,000 --> 00:09:31,000
+Or you can make a Hadamard gate on it,
+
+124
+00:09:31,000 --> 00:09:34,000
+or a rotation of any kind, or measure it,
+
+125
+00:09:34,000 --> 00:09:36,000
+and they all get corrected.
+
+126
+00:09:36,000 --> 00:09:39,000
+So you only need to correct sigma x, sigma y, sigma z
+
+127
+00:09:39,000 --> 00:09:41,000
+errors.
+
+128
+00:09:41,000 --> 00:09:47,000
+And I am going to demonstrate this for the phase code
+
+129
+00:09:47,000 --> 00:09:53,000
+where it's basically-- if you can correct the identity,
+
+130
+00:09:53,000 --> 00:09:55,000
+or if you can correct no errors, and if you
+
+131
+00:09:55,000 --> 00:09:59,000
+can correct a phase error on any qubit,
+
+132
+00:09:59,000 --> 00:10:03,000
+you can correct any phase error.
+
+133
+00:10:03,000 --> 00:10:05,000
+I mean, if you can correct the sigma z on any qubit,
+
+134
+00:10:05,000 --> 00:10:07,000
+you can correct any phase error on any given.
+
+135
+00:10:07,000 --> 00:10:10,000
+
+
+136
+00:10:10,000 --> 00:10:11,000
+And this is very much related to the fact
+
+137
+00:10:11,000 --> 00:10:17,000
+that this de-phasing channel could also
+
+138
+00:10:17,000 --> 00:10:24,000
+be done by having a small phase error with probability 1/2,
+
+139
+00:10:24,000 --> 00:10:28,000
+and the opposite phase error with probability of 1/2.
+
+140
+00:10:28,000 --> 00:10:29,000
+
+

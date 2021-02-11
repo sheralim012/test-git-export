@@ -1,0 +1,13 @@
+<problem linenum="417" tex_filename="./week3_4_ps2a.tex" attempts="10" display_name="Groups and generators III" max_attempts="10">
+  <script>
+from sympy_check import *
+
+</script>
+  <p>
+If [mathjaxinline]{\cal S}[/mathjaxinline] acts on an [mathjaxinline]n[/mathjaxinline]-qubit space, and the minimal generator set for [mathjaxinline]{\cal S}[/mathjaxinline] has [mathjaxinline]d[/mathjaxinline] elements, then what is the dimension of the vector space which is stabilized by [mathjaxinline]{\cal S}[/mathjaxinline]?  <br/> <br/>Give your answer in terms of [mathjaxinline]n[/mathjaxinline] and [mathjaxinline]d[/mathjaxinline]. If necessary, remember to use <tt class="tt">^</tt> to indicate exponentiation. </p>
+  <p>
+    <customresponse cfn="sympy_formula_check" expect="2^(n-d)">
+      <textline size="30" correct_answer="2^(n-d)"/>
+    </customresponse>
+  </p>
+</problem>

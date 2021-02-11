@@ -1,0 +1,49 @@
+<problem linenum="399" tex_filename="./week3_4_ps2a.tex" attempts="10" display_name="Groups and generators II" max_attempts="10">
+  <script>
+import qpython4
+qpython4.define_qpython4_globals(globals())
+
+
+</script>
+  <script>
+#-----------------------------------------------------------------------------
+# symbolic quantum circuit checking using sympy.physics.quantum
+
+#import tutor.python_lib.qpython as qpython
+# from tutor.python_lib.qpython import check_stabilizer_state
+# from tutor.python_lib.qpython import check_stabilizer_equality
+# from tutor.python_lib.qpython import check_stabilizer_generators
+# from tutor.python_lib.qpython import check_graph_state_stabilizer
+# from tutor.python_lib.qpython import check_graph_state_stabilizer_given_amat
+# from tutor.python_lib.qpython import test_state_orthogonality
+# from tutor.python_lib.qpython import compare_stabilizer_set
+# from tutor.python_lib.qpython import check_stabilizer_equality_and_minimal
+# from tutor.python_lib.qpython import check_graph_isomorphism_amat
+# from tutor.python_lib.qpython import check_stabilizer_code_bad_error
+# from tutor.python_lib.qpython import check_stabilizer_normalizer
+# from tutor.python_lib.qpython import check_stabilizer_one_normalizer
+# from tutor.python_lib.qpython import check_stabilizer_bad_clifford
+# from tutor.python_lib.qpython import check_clifford_group_equivalence
+
+def test_stab_and_ortho(expect,ans,adict):
+    ret = check_stabilizer_state(expect,ans)
+    if not ret['ok']:
+        return ret
+    try:
+        s1s = adict['state1']
+    except Exception as err:
+        msg = '&lt;p&gt;Error %s' % err
+        msg += '&lt;br&gt;Failed to get your input for the state [mathjaxinline]|0_L\rangle[mathjaxinline] which should have been above'
+        return {'ok':False,'msg':msg}
+
+    return test_state_orthogonality(s1s,ans)
+
+</script>
+  <p>
+You are given that [mathjaxinline]\{ {\tt XIX},{\tt ZIY}\}[/mathjaxinline] generate [mathjaxinline]{\cal S}[/mathjaxinline]. Give a list of additional operators which are also in [mathjaxinline]{\cal S}[/mathjaxinline]. Your input should be a list of operators, eg of the form <tt class="tt">[XXX,YYY]</tt>: </p>
+  <p>
+    <customresponse cfn="compare_stabilizer_set" expect="[III,YIZ]">
+      <textline size="60" correct_answer="[III,YIZ]"/>
+    </customresponse>
+  </p>
+</problem>

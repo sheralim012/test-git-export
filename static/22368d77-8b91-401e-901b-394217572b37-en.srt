@@ -1,0 +1,452 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:01,000
+So this is a great simplification,
+
+2
+00:00:01,000 --> 00:00:03,000
+because an ensemble has an infinite number
+
+3
+00:00:03,000 --> 00:00:05,000
+of degrees of freedom.
+
+4
+00:00:05,000 --> 00:00:11,000
+A density matrix has only d-- is only d square numbers.
+
+5
+00:00:11,000 --> 00:00:15,000
+And so if it's qubits, then that's
+
+6
+00:00:15,000 --> 00:00:16,000
+just a two by two matrix.
+
+7
+00:00:16,000 --> 00:00:17,000
+That's much simpler.
+
+8
+00:00:17,000 --> 00:00:21,000
+
+
+9
+00:00:21,000 --> 00:00:22,000
+On the other hand, there's something
+
+10
+00:00:22,000 --> 00:00:25,000
+a little bit unsatisfactory about the definition of density
+
+11
+00:00:25,000 --> 00:00:29,000
+matrices that I've given.
+
+12
+00:00:29,000 --> 00:00:31,000
+So what we would like is we would
+
+13
+00:00:31,000 --> 00:00:44,000
+like a more mathematical definition of density matrices.
+
+14
+00:00:44,000 --> 00:00:49,000
+
+
+15
+00:00:49,000 --> 00:00:51,000
+You could say that this definition here
+
+16
+00:00:51,000 --> 00:00:55,000
+is a little bit like an operational definition, right?
+
+17
+00:00:55,000 --> 00:00:59,000
+If I ask you what is a density matrix, you would say,
+
+18
+00:00:59,000 --> 00:01:03,000
+well, it's a matrix of this form,
+
+19
+00:01:03,000 --> 00:01:07,000
+meaning RHO is the density matrix,
+
+20
+00:01:07,000 --> 00:01:10,000
+if there exists an ensemble of quantum states,
+
+21
+00:01:10,000 --> 00:01:12,000
+with probability px and states si
+
+22
+00:01:12,000 --> 00:01:16,000
+x, such that if I write out this expression, I get RHO.
+
+23
+00:01:16,000 --> 00:01:20,000
+So that's a perfectly valid way of defining density matrices,
+
+24
+00:01:20,000 --> 00:01:21,000
+but it's a little bit cumbersome, right?
+
+25
+00:01:21,000 --> 00:01:25,000
+If I just write down a square full of numbers,
+
+26
+00:01:25,000 --> 00:01:27,000
+how can you tell me if that's a density matrix?
+
+27
+00:01:27,000 --> 00:01:29,000
+You know, how do I know if there's some ensemble that
+
+28
+00:01:29,000 --> 00:01:29,000
+corresponds to that?
+
+29
+00:01:29,000 --> 00:01:31,000
+It's not immediately obvious just
+
+30
+00:01:31,000 --> 00:01:34,000
+from looking at a matrix, whether it's of the right form.
+
+31
+00:01:34,000 --> 00:01:37,000
+Whereas, if you go back to the other entries of this table,
+
+32
+00:01:37,000 --> 00:01:42,000
+if I give you a vector, you can check is the norm equal to one,
+
+33
+00:01:42,000 --> 00:01:43,000
+or a bunch of probabilities.
+
+34
+00:01:43,000 --> 00:01:44,000
+Do they add up to one?
+
+35
+00:01:44,000 --> 00:01:46,000
+Are they nonnegative?
+
+36
+00:01:46,000 --> 00:01:49,000
+We would like a similarly mathematically easy to check
+
+37
+00:01:49,000 --> 00:01:52,000
+definition of density matrices.
+
+38
+00:01:52,000 --> 00:01:56,000
+And one-- the usual definition is the following.
+
+39
+00:01:56,000 --> 00:02:05,000
+We say that RHO is a density matrix
+
+40
+00:02:05,000 --> 00:02:13,000
+if trace RHO is equal to one, and RHO
+
+41
+00:02:13,000 --> 00:02:15,000
+is positive semidefinite.
+
+42
+00:02:15,000 --> 00:02:16,000
+So--
+
+43
+00:02:16,000 --> 00:02:30,000
+
+
+44
+00:02:30,000 --> 00:02:32,000
+So this greater than or equal to zero
+
+45
+00:02:32,000 --> 00:02:35,000
+notation, or PSD, means that the matrix
+
+46
+00:02:35,000 --> 00:02:38,000
+is positive semidefinite.
+
+47
+00:02:38,000 --> 00:02:44,000
+And this is something which there--
+
+48
+00:02:44,000 --> 00:02:44,000
+OK.
+
+49
+00:02:44,000 --> 00:02:46,000
+So what does positive semidefinite mean?
+
+50
+00:02:46,000 --> 00:02:48,000
+There are three equivalent definitions of this.
+
+51
+00:02:48,000 --> 00:02:50,000
+
+
+52
+00:02:50,000 --> 00:02:58,000
+So PSD means either that the eigenvalues--
+
+53
+00:02:58,000 --> 00:03:03,000
+
+
+54
+00:03:03,000 --> 00:03:05,000
+sorry, let me--
+
+55
+00:03:05,000 --> 00:03:09,000
+PSD means that RHO is Hermitian.
+
+56
+00:03:09,000 --> 00:03:13,000
+And there are three more conditions, all of which
+
+57
+00:03:13,000 --> 00:03:14,000
+are equivalent.
+
+58
+00:03:14,000 --> 00:03:21,000
+So you can either ask that the eigenvalues are all
+
+59
+00:03:21,000 --> 00:03:22,000
+created equal to zero.
+
+60
+00:03:22,000 --> 00:03:26,000
+
+
+61
+00:03:26,000 --> 00:03:31,000
+You can ask that if you take any expectation of RHO,
+
+62
+00:03:31,000 --> 00:03:35,000
+or if you think of it as a quadratic form,
+
+63
+00:03:35,000 --> 00:03:38,000
+you always get something which is nonnegative.
+
+64
+00:03:38,000 --> 00:03:46,000
+So x RHO x is greater than zero for all states x.
+
+65
+00:03:46,000 --> 00:03:51,000
+And there's a third more mathematical definition,
+
+66
+00:03:51,000 --> 00:03:58,000
+which says that RHO 10 factorize as the product of a matrix
+
+67
+00:03:58,000 --> 00:04:01,000
+A times it's dagger.
+
+68
+00:04:01,000 --> 00:04:03,000
+One way to think about these is in terms
+
+69
+00:04:03,000 --> 00:04:06,000
+of getting to think of why these are naturals to think
+
+70
+00:04:06,000 --> 00:04:08,000
+about the case when the dimension is one,
+
+71
+00:04:08,000 --> 00:04:10,000
+and you have a one by one matrix.
+
+72
+00:04:10,000 --> 00:04:14,000
+And then this is-- you just have a number, saying that Hermitian
+
+73
+00:04:14,000 --> 00:04:15,000
+means that it's a real number.
+
+74
+00:04:15,000 --> 00:04:17,000
+And then saying that it's positive
+
+75
+00:04:17,000 --> 00:04:19,000
+semidefinite, in each case corresponds
+
+76
+00:04:19,000 --> 00:04:21,000
+to the number being nonnegative, right?
+
+77
+00:04:21,000 --> 00:04:24,000
+If it's one by one, the matrix is--
+
+78
+00:04:24,000 --> 00:04:25,000
+that number is the eigenvalues.
+
+79
+00:04:25,000 --> 00:04:28,000
+So that should be greater than or equal to zero.
+
+80
+00:04:28,000 --> 00:04:32,000
+This property right here is also equivalent to that
+
+81
+00:04:32,000 --> 00:04:34,000
+being a nonnegative number.
+
+82
+00:04:34,000 --> 00:04:36,000
+And, finally, this says that the number
+
+83
+00:04:36,000 --> 00:04:38,000
+can be written as a complex number
+
+84
+00:04:38,000 --> 00:04:41,000
+times a complex conjugate which, again, is true if
+
+85
+00:04:41,000 --> 00:04:45,000
+and only if the number is not negative.
+
+86
+00:04:45,000 --> 00:04:48,000
+But, of course, PSD generalizes this to matrices.
+
+87
+00:04:48,000 --> 00:04:52,000
+So this is a mathematical characterization
+
+88
+00:04:52,000 --> 00:04:53,000
+of density matrices.
+
+89
+00:04:53,000 --> 00:04:55,000
+Above, I gave an operational one,
+
+90
+00:04:55,000 --> 00:04:58,000
+and I claim that those are equivalent.
+
+91
+00:04:58,000 --> 00:05:00,000
+In other words, if you have a density matrix,
+
+92
+00:05:00,000 --> 00:05:02,000
+it can be written in this way.
+
+93
+00:05:02,000 --> 00:05:03,000
+It satisfies these properties.
+
+94
+00:05:03,000 --> 00:05:05,000
+Treyf RHO is one.
+
+95
+00:05:05,000 --> 00:05:07,000
+RHO is positive semidefinite.
+
+96
+00:05:07,000 --> 00:05:08,000
+And vice-versa.
+
+97
+00:05:08,000 --> 00:05:11,000
+If I have a matrix RHO that satisfies these properties,
+
+98
+00:05:11,000 --> 00:05:13,000
+there exists a corresponding ensemble.
+
+99
+00:05:13,000 --> 00:05:16,000
+
+
+100
+00:05:16,000 --> 00:05:18,000
+That's a nontrivial statement, so
+
+101
+00:05:18,000 --> 00:05:20,000
+to prove that takes a little bit of work.
+
+102
+00:05:20,000 --> 00:05:24,000
+And that's something I'm going to skip right here, because I
+
+103
+00:05:24,000 --> 00:05:28,000
+assume either you've seen it or, if not, that you'll review it.
+
+104
+00:05:28,000 --> 00:05:30,000
+So if you haven't seen it before,
+
+105
+00:05:30,000 --> 00:05:32,000
+I just wanted to highlight that it's not obvious
+
+106
+00:05:32,000 --> 00:05:34,000
+that that's true.
+
+107
+00:05:34,000 --> 00:05:35,000
+However, it is true.
+
+108
+00:05:35,000 --> 00:05:38,000
+So these are two ways of thinking about this lower right
+
+109
+00:05:38,000 --> 00:05:42,000
+box can be either an ensemble, which has a density matrix,
+
+110
+00:05:42,000 --> 00:05:45,000
+or you can just define density matrices directly
+
+111
+00:05:45,000 --> 00:05:48,000
+without the need for ensemble.
+
+112
+00:05:48,000 --> 00:05:49,000
+
+

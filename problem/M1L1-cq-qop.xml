@@ -1,0 +1,24 @@
+<problem linenum="253" tex_filename="./week1_lectures1.tex" attempts="1" display_name="Quantum operations" max_attempts="1">
+  <p>
+This is a concept question, provided to check your understanding of the previous video clip. </p>
+  <p>
+Check all the following which are true, regarding quantum operations: </p>
+  <p>
+    <choiceresponse>
+      <checkboxgroup>
+        <choice correct="true" name="1">
+          <text>Unitary operations are an example of quantum operations.</text>
+        </choice>
+        <choice correct="true" name="2">
+          <text>Random substitution of a qubit by [mathjaxinline]|0\rangle \langle 0|[/mathjaxinline] can be described by a quantum operation.</text>
+        </choice>
+        <choice correct="true" name="3">
+          <text>Projective measurement of a quantum state can be represented by a quantum operation.</text>
+        </choice>
+        <choice correct="true" name="4">
+          <text>Measurement of two of the three qubits in a three-qubit state, can be represented by a quantum operation.</text>
+        </choice>
+      </checkboxgroup>
+    </choiceresponse>
+  </p>
+</problem>

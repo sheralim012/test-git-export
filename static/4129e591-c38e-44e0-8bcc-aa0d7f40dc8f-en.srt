@@ -1,0 +1,216 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:03,000
+Mathematically, a norm is a way of measuring
+
+2
+00:00:03,000 --> 00:00:09,000
+the length of something, and it should have the property
+
+3
+00:00:09,000 --> 00:00:19,000
+that it's homogeneous.
+
+4
+00:00:19,000 --> 00:00:27,000
+So if C is a complex number, and I multiply my vector
+
+5
+00:00:27,000 --> 00:00:30,000
+by that number, it should scale the norm of the vector
+
+6
+00:00:30,000 --> 00:00:32,000
+appropriately.
+
+7
+00:00:32,000 --> 00:00:35,000
+
+
+8
+00:00:35,000 --> 00:00:38,000
+It should satisfy the triangle inequality.
+
+9
+00:00:38,000 --> 00:00:41,000
+
+
+10
+00:00:41,000 --> 00:00:46,000
+It's called the triangle inequality.
+
+11
+00:00:46,000 --> 00:00:54,000
+And a further property of norms is
+
+12
+00:00:54,000 --> 00:00:56,000
+that it should be separating.
+
+13
+00:00:56,000 --> 00:00:58,000
+Something should have norm 0 if and only
+
+14
+00:00:58,000 --> 00:01:01,000
+if the vector is itself 0.
+
+15
+00:01:01,000 --> 00:01:02,000
+And so that means we can use it as a distance.
+
+16
+00:01:02,000 --> 00:01:05,000
+We can say the distance between two vectors
+
+17
+00:01:05,000 --> 00:01:08,000
+is the norm of one vector minus the other one,
+
+18
+00:01:08,000 --> 00:01:09,000
+and then two vectors have distance 0
+
+19
+00:01:09,000 --> 00:01:12,000
+only if they are indeed the exact same vector.
+
+20
+00:01:12,000 --> 00:01:14,000
+
+
+21
+00:01:14,000 --> 00:01:22,000
+So the usual norm for vectors that we have
+
+22
+00:01:22,000 --> 00:01:23,000
+is the Euclidean norm.
+
+23
+00:01:23,000 --> 00:01:30,000
+
+
+24
+00:01:30,000 --> 00:01:34,000
+You take all the entries' absolute value,
+
+25
+00:01:34,000 --> 00:01:39,000
+square them, add them up, and then square root that sum.
+
+26
+00:01:39,000 --> 00:01:43,000
+And this can be generalized a little bit.
+
+27
+00:01:43,000 --> 00:01:46,000
+So let's say that V is a d dimensional vector.
+
+28
+00:01:46,000 --> 00:01:49,000
+
+
+29
+00:01:49,000 --> 00:01:53,000
+There's something called the lp norm of V, which says
+
+30
+00:01:53,000 --> 00:01:54,000
+do what you did for Euclidean.
+
+31
+00:01:54,000 --> 00:01:57,000
+But instead of two, just use some other number.
+
+32
+00:01:57,000 --> 00:01:59,000
+Let's say p.
+
+33
+00:01:59,000 --> 00:02:07,000
+So this is sum over i absolute value of Vi to the p-th power,
+
+34
+00:02:07,000 --> 00:02:09,000
+and take the 1 over p-th root of the whole thing.
+
+35
+00:02:09,000 --> 00:02:12,000
+
+
+36
+00:02:12,000 --> 00:02:15,000
+You need that 1 over p-th root so that it's homogeneous,
+
+37
+00:02:15,000 --> 00:02:19,000
+and in some cases for the triangle inequality.
+
+38
+00:02:19,000 --> 00:02:22,000
+So these are also norms.
+
+39
+00:02:22,000 --> 00:02:26,000
+So l2 is the Euclidean norm.
+
+40
+00:02:26,000 --> 00:02:29,000
+
+
+41
+00:02:29,000 --> 00:02:31,000
+But the other ones are also natural.
+
+42
+00:02:31,000 --> 00:02:40,000
+l1 is just this sum of the entries of the vector.
+
+43
+00:02:40,000 --> 00:02:42,000
+Sometimes, it's called the Manhattan distance,
+
+44
+00:02:42,000 --> 00:02:45,000
+because if you're walking on a grid,
+
+45
+00:02:45,000 --> 00:02:48,000
+and you have to go over three blocks and up two blocks,
+
+46
+00:02:48,000 --> 00:02:49,000
+you have to walk five blocks.
+
+47
+00:02:49,000 --> 00:02:51,000
+You can't just go on hypotenuse.
+
+48
+00:02:51,000 --> 00:02:53,000
+
+
+49
+00:02:53,000 --> 00:02:57,000
+And in general, as you increase p,
+
+50
+00:02:57,000 --> 00:03:02,000
+this becomes more biased towards the larger entries.
+
+51
+00:03:02,000 --> 00:03:05,000
+So in the extreme, the l infinity norm
+
+52
+00:03:05,000 --> 00:03:11,000
+is just the maximum entry of Vi.
+
+53
+00:03:11,000 --> 00:03:14,000
+
+

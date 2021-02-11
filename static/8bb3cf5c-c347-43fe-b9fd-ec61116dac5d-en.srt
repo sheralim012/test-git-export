@@ -1,0 +1,156 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:03,000
+So in general I said that C with an image
+
+2
+00:00:03,000 --> 00:00:05,000
+of the generator matrix.
+
+3
+00:00:05,000 --> 00:00:17,000
+I can also define to be the kernel of this other matrix, H,
+
+4
+00:00:17,000 --> 00:00:19,000
+which is called the check matrix.
+
+5
+00:00:19,000 --> 00:00:23,000
+So G, let me just write the dimensions.
+
+6
+00:00:23,000 --> 00:00:28,000
+G is n by k.
+
+7
+00:00:28,000 --> 00:00:32,000
+H is n by n minus k.
+
+8
+00:00:32,000 --> 00:00:35,000
+
+
+9
+00:00:35,000 --> 00:00:38,000
+And the generator, if you think of it as I--
+
+10
+00:00:38,000 --> 00:00:41,000
+this kind of corresponds to my encoding map.
+
+11
+00:00:41,000 --> 00:00:44,000
+The check matrix does not directly
+
+12
+00:00:44,000 --> 00:00:46,000
+give me my decoding map, but it's something
+
+13
+00:00:46,000 --> 00:00:48,000
+in the direction of decoding.
+
+14
+00:00:48,000 --> 00:00:50,000
+It says I take my string.
+
+15
+00:00:50,000 --> 00:00:52,000
+I multiply it by the check matrix.
+
+16
+00:00:52,000 --> 00:00:54,000
+If I just get out zero, zero, zero, zero, zero,
+
+17
+00:00:54,000 --> 00:00:56,000
+I know I'm in the code.
+
+18
+00:00:56,000 --> 00:01:00,000
+If I get out something non-zero I know I'm not in the code.
+
+19
+00:01:00,000 --> 00:01:03,000
+Now decoding can still be hard.
+
+20
+00:01:03,000 --> 00:01:05,000
+In fact, in general it's np hard.
+
+21
+00:01:05,000 --> 00:01:07,000
+And there's a cryptosystem, the McEliece cryptosystem,
+
+22
+00:01:07,000 --> 00:01:10,000
+based on this hardness of decoding linear codes.
+
+23
+00:01:10,000 --> 00:01:14,000
+So it's-- this does not take you all the way home-- far from it.
+
+24
+00:01:14,000 --> 00:01:16,000
+But it tells you--
+
+25
+00:01:16,000 --> 00:01:18,000
+it takes you in the direction of decoding.
+
+26
+00:01:18,000 --> 00:01:20,000
+And a lot of decoding schemes start
+
+27
+00:01:20,000 --> 00:01:24,000
+by applying a check matrix and then looking at the string
+
+28
+00:01:24,000 --> 00:01:25,000
+that you get.
+
+29
+00:01:25,000 --> 00:01:27,000
+The string, by the way, is called the syndrome,
+
+30
+00:01:27,000 --> 00:01:29,000
+because it sort of is, you know, it's
+
+31
+00:01:29,000 --> 00:01:31,000
+like the disease is the error.
+
+32
+00:01:31,000 --> 00:01:33,000
+And you don't get to see it directly.
+
+33
+00:01:33,000 --> 00:01:35,000
+You get to diagnose it via the syndrome.
+
+34
+00:01:35,000 --> 00:01:38,000
+And the syndrome is I failed some of those checks.
+
+35
+00:01:38,000 --> 00:01:39,000
+I should have x3 equals x4.
+
+36
+00:01:39,000 --> 00:01:40,000
+I don't.
+
+37
+00:01:40,000 --> 00:01:42,000
+I violate a parity check.
+
+38
+00:01:42,000 --> 00:01:45,000
+
+

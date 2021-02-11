@@ -1,0 +1,340 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:02,000
+There's one more application I want
+
+2
+00:00:02,000 --> 00:00:05,000
+to describe of the symplectic picture, which
+
+3
+00:00:05,000 --> 00:00:08,000
+is a way of simulating a quantum circuit
+
+4
+00:00:08,000 --> 00:00:11,000
+on a classical computer.
+
+5
+00:00:11,000 --> 00:00:13,000
+Normally, you would think that if I have a quantum
+
+6
+00:00:13,000 --> 00:00:16,000
+circuit on n qubits, I just have to write down
+
+7
+00:00:16,000 --> 00:00:20,000
+a state of dimension 2 to the n, and that's
+
+8
+00:00:20,000 --> 00:00:22,000
+going to take me time 2 to the n,
+
+9
+00:00:22,000 --> 00:00:24,000
+and every step is going to take time 2 to the n.
+
+10
+00:00:24,000 --> 00:00:27,000
+And my memory requirements are also large.
+
+11
+00:00:27,000 --> 00:00:29,000
+It's just really hard, and this is, of course,
+
+12
+00:00:29,000 --> 00:00:34,000
+the early motivation for building quantum computers.
+
+13
+00:00:34,000 --> 00:00:37,000
+And then you might say, well, there
+
+14
+00:00:37,000 --> 00:00:38,000
+are special classes of computation
+
+15
+00:00:38,000 --> 00:00:39,000
+where this is not true.
+
+16
+00:00:39,000 --> 00:00:42,000
+For example, if I only have single cubic gates,
+
+17
+00:00:42,000 --> 00:00:44,000
+I just need to write down the state of each qubit.
+
+18
+00:00:44,000 --> 00:00:46,000
+I don't have to worry about entanglement,
+
+19
+00:00:46,000 --> 00:00:49,000
+and that's going to be a much smaller amount of memory
+
+20
+00:00:49,000 --> 00:00:50,000
+and time.
+
+21
+00:00:50,000 --> 00:00:53,000
+But then you might say, well, looks
+
+22
+00:00:53,000 --> 00:00:55,000
+like entanglement is responsible for the power of quantum
+
+23
+00:00:55,000 --> 00:00:56,000
+computing.
+
+24
+00:00:56,000 --> 00:00:58,000
+Entanglement is what gives us these 2
+
+25
+00:00:58,000 --> 00:01:00,000
+to the n dimensional vectors, and that
+
+26
+00:01:00,000 --> 00:01:04,000
+is where the hardness of stimulation comes from.
+
+27
+00:01:04,000 --> 00:01:09,000
+And that intuition, I think, has a large inner product
+
+28
+00:01:09,000 --> 00:01:12,000
+with the truth, but it's not quite true.
+
+29
+00:01:12,000 --> 00:01:16,000
+Because the Gottesman-Knill theorem describes a large class
+
+30
+00:01:16,000 --> 00:01:20,000
+of non-trivial computations that you can do,
+
+31
+00:01:20,000 --> 00:01:23,000
+which can, nevertheless, be totally simulated classically,
+
+32
+00:01:23,000 --> 00:01:26,000
+and these are the Clifford's circuits.
+
+33
+00:01:26,000 --> 00:01:28,000
+And technically, to talk about a simulation,
+
+34
+00:01:28,000 --> 00:01:31,000
+I have to also talk about how you initialize it and measure.
+
+35
+00:01:31,000 --> 00:01:33,000
+So Gottesman-Knill says, let's say
+
+36
+00:01:33,000 --> 00:01:40,000
+I start with the all zero string.
+
+37
+00:01:40,000 --> 00:01:47,000
+I apply some Clifford unitary.
+
+38
+00:01:47,000 --> 00:01:56,000
+I measure, let's say, the first qubit in the v basis.
+
+39
+00:01:56,000 --> 00:02:02,000
+And then I repeat.
+
+40
+00:02:02,000 --> 00:02:06,000
+So I go back to this step, and now under my remaining qubits,
+
+41
+00:02:06,000 --> 00:02:09,000
+I do some other unitary, and then I do another measurement,
+
+42
+00:02:09,000 --> 00:02:14,000
+and I do what are called even an adaptive computation.
+
+43
+00:02:14,000 --> 00:02:18,000
+So I measure one qubit, but I still have many qubits left
+
+44
+00:02:18,000 --> 00:02:19,000
+that are uncollapsed.
+
+45
+00:02:19,000 --> 00:02:21,000
+I can do further Cliffords on those,
+
+46
+00:02:21,000 --> 00:02:24,000
+and all this I claim can be simulated.
+
+47
+00:02:24,000 --> 00:02:34,000
+So all this there exists an efficient classical simulation.
+
+48
+00:02:34,000 --> 00:02:40,000
+By efficient I mean time that's less than n,
+
+49
+00:02:40,000 --> 00:02:46,000
+that's less than some polynomial of n.
+
+50
+00:02:46,000 --> 00:02:48,000
+So this is interesting for a few reasons.
+
+51
+00:02:48,000 --> 00:02:50,000
+First, just conceptually, the Clifford group
+
+52
+00:02:50,000 --> 00:02:52,000
+can make a lot of entanglement.
+
+53
+00:02:52,000 --> 00:02:55,000
+You can do a zero then Hadamard and then control not,
+
+54
+00:02:55,000 --> 00:02:57,000
+then you have a bell pair.
+
+55
+00:02:57,000 --> 00:03:00,000
+And you can get GHC states and many body entangled states.
+
+56
+00:03:00,000 --> 00:03:03,000
+Pretty complicated states that are definitely very entangled
+
+57
+00:03:03,000 --> 00:03:06,000
+can come out of Clifford circuits.
+
+58
+00:03:06,000 --> 00:03:09,000
+And so this argues, it's not just the entanglement.
+
+59
+00:03:09,000 --> 00:03:12,000
+
+
+60
+00:03:12,000 --> 00:03:14,000
+What is exactly the secret ingredient
+
+61
+00:03:14,000 --> 00:03:15,000
+behind quantum speed up?
+
+62
+00:03:15,000 --> 00:03:17,000
+
+
+63
+00:03:17,000 --> 00:03:19,000
+It's something which I don't think
+
+64
+00:03:19,000 --> 00:03:22,000
+we have a short answer to, and definitely Gottesman-Knill
+
+65
+00:03:22,000 --> 00:03:24,000
+is part of what makes the question complicated.
+
+66
+00:03:24,000 --> 00:03:27,000
+So on a conceptual level about the power of quantum
+
+67
+00:03:27,000 --> 00:03:28,000
+computing is interesting.
+
+68
+00:03:28,000 --> 00:03:31,000
+It's also always nice of efficient algorithms.
+
+69
+00:03:31,000 --> 00:03:33,000
+Now, the Clifford circuits are not
+
+70
+00:03:33,000 --> 00:03:36,000
+universal for quantum computing, so we can't use this
+
+71
+00:03:36,000 --> 00:03:37,000
+to simulate Shor's algorithm.
+
+72
+00:03:37,000 --> 00:03:40,000
+We probably would have heard about it by now.
+
+73
+00:03:40,000 --> 00:03:42,000
+But you can use it to simulate Clifford's circuits
+
+74
+00:03:42,000 --> 00:03:45,000
+and those are useful, as we'll see in the next section,
+
+75
+00:03:45,000 --> 00:03:47,000
+for fault tolerant quantum computing.
+
+76
+00:03:47,000 --> 00:03:50,000
+And so if you want to know how does your error correction
+
+77
+00:03:50,000 --> 00:03:53,000
+scheme work in the presence of poly errors,
+
+78
+00:03:53,000 --> 00:03:56,000
+and your error correction is based on Clifford gates,
+
+79
+00:03:56,000 --> 00:03:59,000
+can simulate that on hundreds of qubits
+
+80
+00:03:59,000 --> 00:04:00,000
+using a classical computer.
+
+81
+00:04:00,000 --> 00:04:02,000
+And so that's pretty useful to be
+
+82
+00:04:02,000 --> 00:04:06,000
+able to go beyond to have something that's
+
+83
+00:04:06,000 --> 00:04:09,000
+more efficient than just full simulation of the wave vector.
+
+84
+00:04:09,000 --> 00:04:10,000
+
+

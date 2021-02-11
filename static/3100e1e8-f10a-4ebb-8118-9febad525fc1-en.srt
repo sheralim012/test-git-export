@@ -1,0 +1,300 @@
+0
+00:00:00,000 --> 00:00:04,000
+
+
+1
+00:00:04,000 --> 00:00:07,000
+If you're in this class, you've probably already taken
+
+2
+00:00:07,000 --> 00:00:08,000
+an introductory class.
+
+3
+00:00:08,000 --> 00:00:10,000
+You probably have an idea of what quantum information
+
+4
+00:00:10,000 --> 00:00:12,000
+science is, but let me give you anyway
+
+5
+00:00:12,000 --> 00:00:14,000
+my perspective on it, which starts from the way
+
+6
+00:00:14,000 --> 00:00:18,000
+that classical computer science abstracts away
+
+7
+00:00:18,000 --> 00:00:21,000
+device independent fundamentals to come up
+
+8
+00:00:21,000 --> 00:00:22,000
+with the notion of bits.
+
+9
+00:00:22,000 --> 00:00:25,000
+So for classical information, we have
+
+10
+00:00:25,000 --> 00:00:34,000
+things like RAM, magnetic tape, beads on an abacus,
+
+11
+00:00:34,000 --> 00:00:38,000
+and the idea of classical computer
+
+12
+00:00:38,000 --> 00:00:43,000
+science at a very, very high level as we abstract all these
+
+13
+00:00:43,000 --> 00:00:44,000
+away to the notion of bits.
+
+14
+00:00:44,000 --> 00:00:47,000
+Right?
+
+15
+00:00:47,000 --> 00:00:49,000
+You can reason about bits without caring
+
+16
+00:00:49,000 --> 00:00:51,000
+about the physical substrate.
+
+17
+00:00:51,000 --> 00:00:54,000
+Of course, if you want to know how to build it,
+
+18
+00:00:54,000 --> 00:00:57,000
+or how easy it is to manipulate, some
+
+19
+00:00:57,000 --> 00:01:01,000
+of these physical substrates are more convenient than others.
+
+20
+00:01:01,000 --> 00:01:04,000
+But you can reason about things like how multiplication gates
+
+21
+00:01:04,000 --> 00:01:08,000
+work, without having to know about which physical substrate
+
+22
+00:01:08,000 --> 00:01:09,000
+you're talking about.
+
+23
+00:01:09,000 --> 00:01:13,000
+And so, there was an idea for a long time
+
+24
+00:01:13,000 --> 00:01:14,000
+that this is all there was to it.
+
+25
+00:01:14,000 --> 00:01:18,000
+If you just reasoned about bits, or about Turing machines, then
+
+26
+00:01:18,000 --> 00:01:20,000
+this captured the computation that
+
+27
+00:01:20,000 --> 00:01:22,000
+was possible in the physical world, and any model
+
+28
+00:01:22,000 --> 00:01:24,000
+of computation that people came up with,
+
+29
+00:01:24,000 --> 00:01:27,000
+DNA computers, whatever, always could be
+
+30
+00:01:27,000 --> 00:01:29,000
+described by manipulating bits.
+
+31
+00:01:29,000 --> 00:01:31,000
+Quantum mechanics came along, and we
+
+32
+00:01:31,000 --> 00:01:32,000
+realized that wasn't true.
+
+33
+00:01:32,000 --> 00:01:37,000
+But still it wasn't completely open either.
+
+34
+00:01:37,000 --> 00:01:39,000
+So there was something new that came along
+
+35
+00:01:39,000 --> 00:01:41,000
+with quantum mechanics, but still we
+
+36
+00:01:41,000 --> 00:01:43,000
+found that we could abstract away
+
+37
+00:01:43,000 --> 00:01:46,000
+from the different types of quantum information
+
+38
+00:01:46,000 --> 00:01:47,000
+that appear.
+
+39
+00:01:47,000 --> 00:02:00,000
+So in quantum information, we might have spins,
+
+40
+00:02:00,000 --> 00:02:13,000
+photons, orbitals of an electron,
+
+41
+00:02:13,000 --> 00:02:18,000
+the degrees of freedom of a superconducting circuit,
+
+42
+00:02:18,000 --> 00:02:27,000
+and all of these we can abstract away into talking about qubits.
+
+43
+00:02:27,000 --> 00:02:29,000
+This level of abstraction leaves behind some of the physics,
+
+44
+00:02:29,000 --> 00:02:30,000
+right?
+
+45
+00:02:30,000 --> 00:02:31,000
+If you know about qubits, that doesn't
+
+46
+00:02:31,000 --> 00:02:34,000
+mean that you know everything about how photons work.
+
+47
+00:02:34,000 --> 00:02:37,000
+But it does mean that you can talk about their information,
+
+48
+00:02:37,000 --> 00:02:41,000
+storing, carrying, and processing characteristics.
+
+49
+00:02:41,000 --> 00:02:45,000
+And if you understand qubits, then that's
+
+50
+00:02:45,000 --> 00:02:47,000
+a common feature of all these different forms
+
+51
+00:02:47,000 --> 00:02:49,000
+of quantum information.
+
+52
+00:02:49,000 --> 00:02:52,000
+And so the fact that quantum mechanics describes
+
+53
+00:02:52,000 --> 00:02:56,000
+many different kinds of systems doesn't change,
+
+54
+00:02:56,000 --> 00:03:00,000
+it doesn't mean that you can't summarize it computationally
+
+55
+00:03:00,000 --> 00:03:02,000
+just with the notion of qubits.
+
+56
+00:03:02,000 --> 00:03:03,000
+And so, just like these different forms
+
+57
+00:03:03,000 --> 00:03:06,000
+of classical information are all abstract into bits,
+
+58
+00:03:06,000 --> 00:03:08,000
+these different forms of quantum information
+
+59
+00:03:08,000 --> 00:03:11,000
+are all abstracted into qubits.
+
+60
+00:03:11,000 --> 00:03:14,000
+And so again, we find that we can abstract away
+
+61
+00:03:14,000 --> 00:03:15,000
+from the specific devices.
+
+62
+00:03:15,000 --> 00:03:17,000
+We still have to take account physics,
+
+63
+00:03:17,000 --> 00:03:19,000
+in order to have qubits rather than bits,
+
+64
+00:03:19,000 --> 00:03:22,000
+but we don't need to know further detail in order
+
+65
+00:03:22,000 --> 00:03:25,000
+to know what kind of information processing is possible.
+
+66
+00:03:25,000 --> 00:03:28,000
+
+
+67
+00:03:28,000 --> 00:03:30,000
+So what can we do with qubits?
+
+68
+00:03:30,000 --> 00:03:42,000
+If you took a 8.370, then you saw kind of the basics
+
+69
+00:03:42,000 --> 00:03:43,000
+of quantum information.
+
+70
+00:03:43,000 --> 00:03:46,000
+
+
+71
+00:03:46,000 --> 00:03:55,000
+You saw some quantum algorithms, some quantum error correction,
+
+72
+00:03:55,000 --> 00:04:06,000
+and other models of computation, such as the adiabatic
+
+73
+00:04:06,000 --> 00:04:08,000
+or measurement-based models.
+
+74
+00:04:08,000 --> 00:04:09,000
+
+

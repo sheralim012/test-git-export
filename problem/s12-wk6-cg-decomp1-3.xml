@@ -1,0 +1,74 @@
+<problem linenum="570" tex_filename="./week4_5_ps2b.tex" attempts="10" display_name="Decomposition exercise: 2-qubit Clifford circuit III" max_attempts="10">
+  <script>
+import qpython4
+qpython4.define_qpython4_globals(globals())
+
+
+</script>
+  <p>
+There remains at most a single qubit Clifford circuit operation [mathjaxinline]W_2[/mathjaxinline], which is needed to complete the transformation such that for [mathjaxinline]U_3 = W_2 U_2[/mathjaxinline], </p>
+  <table id="a0000000022" class="eqnarray" cellspacing="0" cellpadding="7" width="100%" style="table-layout:auto">
+    <tr id="a0000000023">
+      <td style="width:40%; border:none"> </td>
+      <td style="vertical-align:middle;                                    text-align:right; border:none">
+	    [mathjaxinline]\displaystyle U_3 {\tt XI}\,  U_3^\dagger[/mathjaxinline]
+        </td>
+      <td style="vertical-align:middle;                                    text-align:center; border:none">
+	    [mathjaxinline]\displaystyle =[/mathjaxinline]
+        </td>
+      <td style="vertical-align:middle;                                    text-align:left; border:none">
+	    [mathjaxinline]\displaystyle  {\tt XI}[/mathjaxinline]
+        </td>
+      <td style="width:40%; border:none"> </td>
+      <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.17)</td>
+    </tr>
+    <tr id="a0000000024">
+      <td style="width:40%; border:none"> </td>
+      <td style="vertical-align:middle;                                    text-align:right; border:none">
+	    [mathjaxinline]\displaystyle U_3 {\tt ZI}\,  U_3^\dagger[/mathjaxinline]
+        </td>
+      <td style="vertical-align:middle;                                    text-align:center; border:none">
+	    [mathjaxinline]\displaystyle =[/mathjaxinline]
+        </td>
+      <td style="vertical-align:middle;                                    text-align:left; border:none">
+	    [mathjaxinline]\displaystyle  {\tt ZI} \, .[/mathjaxinline]
+        </td>
+      <td style="width:40%; border:none"> </td>
+      <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.18)</td>
+    </tr>
+  </table>
+  <p>
+Enter your answer as a list of gates, in the form <big class="xlarge"><tt class="tt">[H(0),SWAP(0,1)]</tt></big>. You may use CNOT, SWAP, [mathjaxinline]H[/mathjaxinline], and [mathjaxinline]S[/mathjaxinline]: </p>
+  <p>
+    <p style="display:inline">[mathjaxinline]W_2 =[/mathjaxinline]</p>
+    <span>
+      <customresponse cfn="cfn_wrap_ff40c7f1d9" inline="1" expect="$expect_wrap_ff40c7f1d9" options="nqubits=2;precirc=[SWAP(1,0),S(0), H(0), H(0), S(1), S(1), S(1), CNOT(0,1), S(1)];pset='-YY,IX:ZI,IZ:ZZ,XI:ZX,ZI'" cfn_extra_args="options">
+        <textline size="50" correct_answer="$ans_ff40c7f1d9_1" inline="1"/>
+      </customresponse>
+      <script type="text/python" system_path="python_lib">
+
+import subtext2
+wrap_ff40c7f1d9 = subtext2.Subtext(debug=True,sanitize_allow_lists=False)
+ans_ff40c7f1d9_1 = wrap_ff40c7f1d9.answer('''See solution''')
+expect_wrap_ff40c7f1d9 = wrap_ff40c7f1d9.answer('''See solution''')
+
+@wrap_ff40c7f1d9.grader
+def cfn_wrap_ff40c7f1d9(expect, ans, **kwargs):
+    return check_clifford_paulis(expect, ans, **kwargs)
+
+</script>
+    </span>
+  </p>
+  <p>
+    <solution>
+      <p>
+        <b>Solution:</b>
+      </p>
+      <span>An acceptable answer is <tt class="tt">[H(1)]</tt>, which maps <table id="a0000000025" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto"><tr><td class="equation" style="width:80%; border:none">[mathjax]{\tt [IX, IZ, ZI, XI]} \longrightarrow {\tt [IX, IZ, XI, ZI]} \, .[/mathjax]</td><td class="eqnnum" style="width:20%; border:none;text-align:right">(1.19)</td></tr></table></span>
+    </solution>
+  </p>
+  <p>
+As a result, [mathjaxinline]W_2 V W_1 U = I[/mathjaxinline], (you may wish to prove for yourself that any unitary operation which maps [mathjaxinline]{\tt [IX,IZ,XI,ZI]} \longrightarrow {\tt [IX,IZ,XI,ZI]}[/mathjaxinline] must be identity). </p>
+  <p>
+And thus you now have a Clifford circuit for [mathjaxinline]U[/mathjaxinline], namely [mathjaxinline]W_1^\dagger V^\dagger W_2^\dagger = U[/mathjaxinline]. </p>
+</problem>

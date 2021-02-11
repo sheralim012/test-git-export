@@ -1,0 +1,8 @@
+<video youtube="1.00:s3pBm5n0oH0" url_name="M1L1o" sub="" transcripts="{&quot;en&quot;: &quot;9853b462-e674-4167-943a-e28d72d78455-en.srt&quot;}" display_name="Introduction to quantum operations" edx_video_id="9853b462-e674-4167-943a-e28d72d78455" youtube_id_1_0="s3pBm5n0oH0">
+  <video_asset client_video_id="External Video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="9853b462-e674-4167-943a-e28d72d78455-en.srt"/>
+</video>

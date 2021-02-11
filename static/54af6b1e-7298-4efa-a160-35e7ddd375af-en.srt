@@ -1,0 +1,248 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:03,000
+Last time, we talked about the states of quantum information.
+
+2
+00:00:03,000 --> 00:00:05,000
+And we can view density matrices as
+
+3
+00:00:05,000 --> 00:00:09,000
+a simultaneous generalization of both pure-state quantum
+
+4
+00:00:09,000 --> 00:00:12,000
+mechanics and classical probability theory.
+
+5
+00:00:12,000 --> 00:00:15,000
+Today, I want to talk about dynamics.
+
+6
+00:00:15,000 --> 00:00:17,000
+We saw that there were these, in the different models,
+
+7
+00:00:17,000 --> 00:00:19,000
+there's various versions of dynamics.
+
+8
+00:00:19,000 --> 00:00:23,000
+In probability theory, you have stochastic maps.
+
+9
+00:00:23,000 --> 00:00:24,000
+In pure-state quantum mechanics, you
+
+10
+00:00:24,000 --> 00:00:27,000
+have unitary transformations.
+
+11
+00:00:27,000 --> 00:00:30,000
+And today, we'll talk about quantum operations, which
+
+12
+00:00:30,000 --> 00:00:33,000
+are the ones that apply to density matrices, this most
+
+13
+00:00:33,000 --> 00:00:36,000
+general of the possible states, once you take both quantum
+
+14
+00:00:36,000 --> 00:00:39,000
+mechanics and probability into account.
+
+15
+00:00:39,000 --> 00:00:41,000
+So at the end of last lecture, I gave you a few examples.
+
+16
+00:00:41,000 --> 00:00:43,000
+Today, I want to give a complete characterization.
+
+17
+00:00:43,000 --> 00:00:46,000
+Actually, I want to have three complete characterizations.
+
+18
+00:00:46,000 --> 00:00:50,000
+So I'll begin with the first one that's known as the Stinespring
+
+19
+00:00:50,000 --> 00:00:52,000
+representation of a channel.
+
+20
+00:00:52,000 --> 00:00:53,000
+That's just a name.
+
+21
+00:00:53,000 --> 00:00:56,000
+What's significant about this one is that it's operational.
+
+22
+00:00:56,000 --> 00:00:59,000
+So this first one corresponds to the way
+
+23
+00:00:59,000 --> 00:01:02,000
+you may think of a quantum operation actually happening
+
+24
+00:01:02,000 --> 00:01:03,000
+in the world.
+
+25
+00:01:03,000 --> 00:01:05,000
+Especially if you're used to the Schrodinger equation,
+
+26
+00:01:05,000 --> 00:01:08,000
+this will be the one that is the most natural.
+
+27
+00:01:08,000 --> 00:01:10,000
+It's the most natural physically in some ways,
+
+28
+00:01:10,000 --> 00:01:13,000
+but it's not always the most natural to calculate with.
+
+29
+00:01:13,000 --> 00:01:15,000
+So the second definition I'll mention,
+
+30
+00:01:15,000 --> 00:01:17,000
+which follows naturally from the first one,
+
+31
+00:01:17,000 --> 00:01:21,000
+is called the Kraus operator representation.
+
+32
+00:01:21,000 --> 00:01:23,000
+And this one has the advantage of being the simplest
+
+33
+00:01:23,000 --> 00:01:24,000
+to write down.
+
+34
+00:01:24,000 --> 00:01:27,000
+And in calculations, it's often the first one
+
+35
+00:01:27,000 --> 00:01:29,000
+that you want to use.
+
+36
+00:01:29,000 --> 00:01:33,000
+Once we're armed with this, I'll be able to give some examples
+
+37
+00:01:33,000 --> 00:01:36,000
+of quantum channels, both some that you've seen before in this
+
+38
+00:01:36,000 --> 00:01:38,000
+formalism, as well as some that you haven't.
+
+39
+00:01:38,000 --> 00:01:42,000
+
+
+40
+00:01:42,000 --> 00:01:44,000
+Finally, I'll give a third definition,
+
+41
+00:01:44,000 --> 00:01:45,000
+which is a more axiomatic one.
+
+42
+00:01:45,000 --> 00:01:48,000
+So we're used to--
+
+43
+00:01:48,000 --> 00:01:50,000
+for stochastic matrices, you can think of them
+
+44
+00:01:50,000 --> 00:01:53,000
+as these are the linear maps that keep things
+
+45
+00:01:53,000 --> 00:01:55,000
+non-negative and summing to 1.
+
+46
+00:01:55,000 --> 00:01:58,000
+For unitary matrices, these are the linear maps
+
+47
+00:01:58,000 --> 00:02:03,000
+that preserve the Euclidean length of a vector.
+
+48
+00:02:03,000 --> 00:02:06,000
+So we can similarly taken axiomatic approach
+
+49
+00:02:06,000 --> 00:02:10,000
+to quantum channels, and this describes quantum operations
+
+50
+00:02:10,000 --> 00:02:15,000
+as TCPC maps, trace-preserving completely positive maps.
+
+51
+00:02:15,000 --> 00:02:18,000
+I'll say more about what that means later.
+
+52
+00:02:18,000 --> 00:02:22,000
+Finally, I'll talk about one very important special case
+
+53
+00:02:22,000 --> 00:02:23,000
+of quantum operations, which are ones
+
+54
+00:02:23,000 --> 00:02:26,000
+have a quantum input and a classical output,
+
+55
+00:02:26,000 --> 00:02:28,000
+otherwise known as measurements.
+
+56
+00:02:28,000 --> 00:02:30,000
+And I'll use this way of describing
+
+57
+00:02:30,000 --> 00:02:33,000
+them to explain a little bit more
+
+58
+00:02:33,000 --> 00:02:35,000
+about the geometry of quantum states and measurements
+
+59
+00:02:35,000 --> 00:02:37,000
+in terms of various matrix norms.
+
+60
+00:02:37,000 --> 00:02:40,000
+Any questions before I begin?
+
+61
+00:02:40,000 --> 00:02:40,000
+
+

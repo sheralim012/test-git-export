@@ -1,0 +1,232 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:01,000
+There's another channel.
+
+2
+00:00:01,000 --> 00:00:03,000
+I'd like to discuss--
+
+3
+00:00:03,000 --> 00:00:05,000
+the depolarizing channel.
+
+4
+00:00:05,000 --> 00:00:11,000
+Rho goes to rho plus--
+
+5
+00:00:11,000 --> 00:00:19,000
+actually, let's make it 1 minus p rho plus p over 3 sigma
+
+6
+00:00:19,000 --> 00:00:29,000
+x rho sigma plus p over 3 sigma y rho sigma y plus p over 3
+
+7
+00:00:29,000 --> 00:00:33,000
+sigma z rho sigma z.
+
+8
+00:00:33,000 --> 00:00:36,000
+So with 1 minus p, you do nothing.
+
+9
+00:00:36,000 --> 00:00:37,000
+You apply the identity matrix.
+
+10
+00:00:37,000 --> 00:00:41,000
+
+
+11
+00:00:41,000 --> 00:00:44,000
+Probability of p over 3, you apply each of the three Pauli
+
+12
+00:00:44,000 --> 00:00:44,000
+matrices.
+
+13
+00:00:44,000 --> 00:00:51,000
+
+
+14
+00:00:51,000 --> 00:00:54,000
+So is there an easier formula for this?
+
+15
+00:00:54,000 --> 00:00:55,000
+Yeah.
+
+16
+00:00:55,000 --> 00:01:06,000
+Rho goes to, I guess, 1 minus 4/3 p rho plus identity.
+
+17
+00:01:06,000 --> 00:01:09,000
+
+
+18
+00:01:09,000 --> 00:01:12,000
+And the reason for this is--
+
+19
+00:01:12,000 --> 00:01:19,000
+
+
+20
+00:01:19,000 --> 00:01:21,000
+Why?
+
+21
+00:01:21,000 --> 00:01:34,000
+For any density matrix, rho plus sigma x rho sigma x plus sigma
+
+22
+00:01:34,000 --> 00:01:41,000
+y rho sigma y plus sigma z rho sigma z equals--
+
+23
+00:01:41,000 --> 00:01:46,000
+
+
+24
+00:01:46,000 --> 00:01:49,000
+OK, so this is completely unnormalized.
+
+25
+00:01:49,000 --> 00:01:52,000
+So we want this to be I over 2.
+
+26
+00:01:52,000 --> 00:01:53,000
+And we want this to be 1/4.
+
+27
+00:01:53,000 --> 00:01:57,000
+
+
+28
+00:01:57,000 --> 00:02:02,000
+So with probability 1/4, we do nothing.
+
+29
+00:02:02,000 --> 00:02:04,000
+And probability 1/4, we apply sigma x.
+
+30
+00:02:04,000 --> 00:02:07,000
+1/4, we apply segment y.
+
+31
+00:02:07,000 --> 00:02:09,000
+1/4, we apply sigma z.
+
+32
+00:02:09,000 --> 00:02:12,000
+We get I over 2.
+
+33
+00:02:12,000 --> 00:02:26,000
+Proof-- well, let's call this thing sigma.
+
+34
+00:02:26,000 --> 00:02:29,000
+
+
+35
+00:02:29,000 --> 00:02:33,000
+No, sigma is a bad--
+
+36
+00:02:33,000 --> 00:02:33,000
+Let's do tau.
+
+37
+00:02:33,000 --> 00:02:39,000
+Sigma x tau sigma x equals sigma y tau sigma y equals
+
+38
+00:02:39,000 --> 00:02:46,000
+sigma z tau sigma z equals tau.
+
+39
+00:02:46,000 --> 00:02:49,000
+
+
+40
+00:02:49,000 --> 00:02:50,000
+Why is that?
+
+41
+00:02:50,000 --> 00:02:57,000
+Well, if we multiply this by sigma y in front and sigma y
+
+42
+00:02:57,000 --> 00:03:02,000
+behind, this gets taken to this sigma y.
+
+43
+00:03:02,000 --> 00:03:04,000
+This gets taken to rho.
+
+44
+00:03:04,000 --> 00:03:08,000
+Sigma x rho sigma x gets taken to sigma z rho signal z.
+
+45
+00:03:08,000 --> 00:03:10,000
+And this gets taken to this.
+
+46
+00:03:10,000 --> 00:03:12,000
+So it's invariant.
+
+47
+00:03:12,000 --> 00:03:20,000
+
+
+48
+00:03:20,000 --> 00:03:24,000
+So this is true of tau.
+
+49
+00:03:24,000 --> 00:03:29,000
+And now the only density matrix tau which has this property
+
+50
+00:03:29,000 --> 00:03:30,000
+is I over 2.
+
+51
+00:03:30,000 --> 00:03:36,000
+
+
+52
+00:03:36,000 --> 00:03:47,000
+OK, because let's say tau equals a, b, c, d.
+
+53
+00:03:47,000 --> 00:03:49,000
+
+
+54
+00:03:49,000 --> 00:04:00,000
+Sigma x tau sigma x equals b, d, a, c.
+
+55
+00:04:00,000 --> 00:04:03,000
+So a has to be equal to b.
+
+56
+00:04:03,000 --> 00:04:12,000
+Sigma z tau sigma z equals a minus c minus d b.
+
+57
+00:04:12,000 --> 00:04:15,000
+
+

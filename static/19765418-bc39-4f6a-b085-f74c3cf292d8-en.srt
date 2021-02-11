@@ -1,0 +1,76 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:02,000
+If you've taken physics classes with special relativity,
+
+2
+00:00:02,000 --> 00:00:05,000
+you've probably seen another example
+
+3
+00:00:05,000 --> 00:00:08,000
+of transformations that preserve a non-euclidian inner product.
+
+4
+00:00:08,000 --> 00:00:10,000
+And those are the Lorentz transformations.
+
+5
+00:00:10,000 --> 00:00:14,000
+So there, the inner product--
+
+6
+00:00:14,000 --> 00:00:19,000
+instead of this lambda matrix, you put in 1, 1, 1, minus 1.
+
+7
+00:00:19,000 --> 00:00:21,000
+And then you ask, what are transformations that
+
+8
+00:00:21,000 --> 00:00:22,000
+preserve that inner product?
+
+9
+00:00:22,000 --> 00:00:24,000
+And those are called Lorentz transformations,
+
+10
+00:00:24,000 --> 00:00:28,000
+and they correspond to rotations and boost,
+
+11
+00:00:28,000 --> 00:00:31,000
+the things you get from special relativity.
+
+12
+00:00:31,000 --> 00:00:35,000
+And the corresponding group is called the Lorentz group.
+
+13
+00:00:35,000 --> 00:00:37,000
+And so for any inner product, you
+
+14
+00:00:37,000 --> 00:00:40,000
+can talk about the group of matrices that preserve it.
+
+15
+00:00:40,000 --> 00:00:42,000
+And the Lorentz group is a little
+
+16
+00:00:42,000 --> 00:00:44,000
+different than the symplectic group,
+
+17
+00:00:44,000 --> 00:00:48,000
+but it's all kind of in the same spirit.
+
+18
+00:00:48,000 --> 00:00:49,000
+
+

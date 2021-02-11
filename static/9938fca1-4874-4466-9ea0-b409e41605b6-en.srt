@@ -1,0 +1,316 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:03,000
+I claim that if phi has distance d,
+
+2
+00:00:03,000 --> 00:00:15,000
+it can correct up to d minus 1 over 2 errors
+
+3
+00:00:15,000 --> 00:00:23,000
+and detect up to d minus 1 errors.
+
+4
+00:00:23,000 --> 00:00:27,000
+
+
+5
+00:00:27,000 --> 00:00:28,000
+So-- one sec.
+
+6
+00:00:28,000 --> 00:00:34,000
+So what I mean by correct is in the usual sense of I encode it,
+
+7
+00:00:34,000 --> 00:00:36,000
+there's noise, which means worst case
+
+8
+00:00:36,000 --> 00:00:38,000
+errors on that many positions, and then I decode,
+
+9
+00:00:38,000 --> 00:00:40,000
+and I get the right answer.
+
+10
+00:00:40,000 --> 00:00:41,000
+Worse case, there's no probabilities.
+
+11
+00:00:41,000 --> 00:00:43,000
+I always get the right answer.
+
+12
+00:00:43,000 --> 00:00:46,000
+Detecting is something I've not formally defined.
+
+13
+00:00:46,000 --> 00:00:50,000
+But it just means I can't answer yes or no,
+
+14
+00:00:50,000 --> 00:00:53,000
+did any noise happen.
+
+15
+00:00:53,000 --> 00:00:58,000
+And that just means is my thing no longer a code word.
+
+16
+00:00:58,000 --> 00:01:08,000
+For this claim, so detecting I'm just given,
+
+17
+00:01:08,000 --> 00:01:14,000
+let's say x tilde, which is x plus e.
+
+18
+00:01:14,000 --> 00:01:16,000
+x is a code word.
+
+19
+00:01:16,000 --> 00:01:18,000
+e is an error.
+
+20
+00:01:18,000 --> 00:01:24,000
+
+
+21
+00:01:24,000 --> 00:01:30,000
+And I guess I should have said this.
+
+22
+00:01:30,000 --> 00:01:34,000
+
+
+23
+00:01:34,000 --> 00:01:39,000
+We'll take all of this mod 2, so I can use a--
+
+24
+00:01:39,000 --> 00:01:45,000
+I can say that if I start with bit one, and I have a 0--
+
+25
+00:01:45,000 --> 00:01:47,000
+the errors are either 0 or 1.
+
+26
+00:01:47,000 --> 00:01:49,000
+0 means no error in that location.
+
+27
+00:01:49,000 --> 00:01:51,000
+1 means I do have an error in that location.
+
+28
+00:01:51,000 --> 00:01:55,000
+
+
+29
+00:01:55,000 --> 00:02:10,000
+So given this, I just want to know is e equal to 0 or not.
+
+30
+00:02:10,000 --> 00:02:14,000
+Did an error happen, or did no error happen?
+
+31
+00:02:14,000 --> 00:02:22,000
+And if I'm promised that the hamming weight of e
+
+32
+00:02:22,000 --> 00:02:27,000
+is at most d minus 1, then what that means is
+
+33
+00:02:27,000 --> 00:02:30,000
+if I start from one of these code words,
+
+34
+00:02:30,000 --> 00:02:34,000
+I'm going to be within a ball that doesn't
+
+35
+00:02:34,000 --> 00:02:36,000
+include any other code word.
+
+36
+00:02:36,000 --> 00:02:38,000
+To go from one code word to another one,
+
+37
+00:02:38,000 --> 00:02:39,000
+I need to move a distance d, but I'm
+
+38
+00:02:39,000 --> 00:02:42,000
+promised I'm going to have some number of errors.
+
+39
+00:02:42,000 --> 00:02:43,000
+It could be 0.
+
+40
+00:02:43,000 --> 00:02:44,000
+It could be 1.
+
+41
+00:02:44,000 --> 00:02:48,000
+It could be 2, up to d minus 1, but it will not be d or more.
+
+42
+00:02:48,000 --> 00:02:50,000
+So that means if I start from one code word,
+
+43
+00:02:50,000 --> 00:02:53,000
+I cannot reach any other code word.
+
+44
+00:02:53,000 --> 00:02:56,000
+So to detect if an error happens,
+
+45
+00:02:56,000 --> 00:02:58,000
+I could just say if I'm at a code word,
+
+46
+00:02:58,000 --> 00:03:01,000
+I know that no error happened.
+
+47
+00:03:01,000 --> 00:03:03,000
+If I'm not at a code word, I, of course,
+
+48
+00:03:03,000 --> 00:03:06,000
+know that an error did happen.
+
+49
+00:03:06,000 --> 00:03:12,000
+So I can argue that I can detect up to d minus 1 errors.
+
+50
+00:03:12,000 --> 00:03:15,000
+If I have more errors, so if I have d bit flips,
+
+51
+00:03:15,000 --> 00:03:18,000
+then I can go from one valid code over to another one.
+
+52
+00:03:18,000 --> 00:03:21,000
+And then, I have no idea which one I started with.
+
+53
+00:03:21,000 --> 00:03:23,000
+So in that case, I cannot detect.
+
+54
+00:03:23,000 --> 00:03:25,000
+There can be undetectable errors.
+
+55
+00:03:25,000 --> 00:03:41,000
+So I can detect up to d minus 1, and d is undetectable.
+
+56
+00:03:41,000 --> 00:03:44,000
+And then a subtlety here I want you to appreciate,
+
+57
+00:03:44,000 --> 00:03:51,000
+which is I'm saying I will detect up to d minus 1 errors.
+
+58
+00:03:51,000 --> 00:03:54,000
+But really my detection scheme, the way
+
+59
+00:03:54,000 --> 00:03:56,000
+it works is I choose a family of errors,
+
+60
+00:03:56,000 --> 00:03:59,000
+say everything up to d minus 1, and then I
+
+61
+00:03:59,000 --> 00:04:01,000
+have a detection scheme, and then
+
+62
+00:04:01,000 --> 00:04:03,000
+I argue that it works for all errors.
+
+63
+00:04:03,000 --> 00:04:18,000
+So given a family of errors, say less than d minus 1 locations,
+
+64
+00:04:18,000 --> 00:04:27,000
+there exists a detection scheme, which is check
+
+65
+00:04:27,000 --> 00:04:31,000
+if x tilde is a code word.
+
+66
+00:04:31,000 --> 00:04:45,000
+And then I argue that this works for all errors in that family.
+
+67
+00:04:45,000 --> 00:04:49,000
+
+
+68
+00:04:49,000 --> 00:04:52,000
+So it's just important to keep in mind
+
+69
+00:04:52,000 --> 00:04:55,000
+what it means to detect or correct some errors.
+
+70
+00:04:55,000 --> 00:04:58,000
+There's always implicitly some family of errors.
+
+71
+00:04:58,000 --> 00:05:01,000
+And I'm designing my recovery or detection scheme
+
+72
+00:05:01,000 --> 00:05:03,000
+against that family of errors, and then I
+
+73
+00:05:03,000 --> 00:05:06,000
+argue that it works for all areas in that family.
+
+74
+00:05:06,000 --> 00:05:08,000
+And the reason I'm kind of belaboring this
+
+75
+00:05:08,000 --> 00:05:11,000
+is because we'll go through the same thing for quantum codes,
+
+76
+00:05:11,000 --> 00:05:15,000
+and it will look strange if you don't map it back
+
+77
+00:05:15,000 --> 00:05:18,000
+to the analog for classical codes.
+
+78
+00:05:18,000 --> 00:05:19,000
+
+

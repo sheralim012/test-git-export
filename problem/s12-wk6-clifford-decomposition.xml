@@ -1,0 +1,198 @@
+<problem linenum="304" tex_filename="./week4_5_ps2b.tex" attempts="10" display_name="Decomposing Clifford operations" max_attempts="10">
+  <script>
+import qpython4
+qpython4.define_qpython4_globals(globals())
+
+
+</script>
+  <script>
+from sympy_check import *
+
+</script>
+  <p>
+Recall that [mathjaxinline]P_ n[/mathjaxinline] is the group of [mathjaxinline]n[/mathjaxinline]-qubit Pauli operations. The set of unitary transforms [mathjaxinline]U[/mathjaxinline] such that [mathjaxinline]U P_ n U^{\dagger } = P_ n[/mathjaxinline] is the <em>normalizer</em> of [mathjaxinline]P_ n[/mathjaxinline] in [mathjaxinline]SU(2^ n)[/mathjaxinline], denoted by [mathjaxinline]N(P_ n)[/mathjaxinline]. [mathjaxinline]N(P_ n)[/mathjaxinline] is known as the Clifford group. </p>
+  <p>
+In this problem, we shall prove the following theorem about Clifford group operations: </p>
+  <blockquote class="quote"> Suppose [mathjaxinline]U[/mathjaxinline] is any unitary operator on [mathjaxinline]n[/mathjaxinline] qubits with the property that if [mathjaxinline]g \in P_ n[/mathjaxinline] then [mathjaxinline]U g U^{\dagger } \in P_ n[/mathjaxinline]. Then up to a global phase [mathjaxinline]U[/mathjaxinline] may be composed from [mathjaxinline]O(n^2)[/mathjaxinline] Hadamard, phase and CNOT gates. </blockquote>
+  <p>
+Let us prove the theorem in a few steps, below. </p>
+  <ol class="enumerate">
+    <li value="1">
+      <p>
+Suppose that the [mathjaxinline]n[/mathjaxinline]-qubit Clifford operation [mathjaxinline]U[/mathjaxinline] satisfies these two equations: </p>
+      <table id="a0000000008" class="eqnarray" cellspacing="0" cellpadding="7" width="100%" style="table-layout:auto">
+        <tr id="eqn1p6">
+          <td style="width:40%; border:none"> </td>
+          <td style="vertical-align:middle;                                    text-align:right; border:none">
+	    [mathjaxinline]\displaystyle U \left[ Z\otimes I_{n-1} \right] U^\dagger[/mathjaxinline]
+        </td>
+          <td style="vertical-align:middle;                                    text-align:center; border:none">
+	    [mathjaxinline]\displaystyle =[/mathjaxinline]
+        </td>
+          <td style="vertical-align:middle;                                    text-align:left; border:none">
+	    [mathjaxinline]\displaystyle  X\otimes g [/mathjaxinline]
+        </td>
+          <td style="width:40%; border:none"> </td>
+          <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.6)</td>
+        </tr>
+        <tr id="eqn1p7">
+          <td style="width:40%; border:none"> </td>
+          <td style="vertical-align:middle;                                    text-align:right; border:none">
+	    [mathjaxinline]\displaystyle U \left[ X\otimes I_{n-1} \right] U^\dagger[/mathjaxinline]
+        </td>
+          <td style="vertical-align:middle;                                    text-align:center; border:none">
+	    [mathjaxinline]\displaystyle =[/mathjaxinline]
+        </td>
+          <td style="vertical-align:middle;                                    text-align:left; border:none">
+	    [mathjaxinline]\displaystyle  Z\otimes h  \, .[/mathjaxinline]
+        </td>
+          <td style="width:40%; border:none"> </td>
+          <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.7)</td>
+        </tr>
+      </table>
+      <p>
+Note that one can always arrange for this to be true (except in trivial cases) by replacing [mathjaxinline]U[/mathjaxinline] with [mathjaxinline]U_ r U[/mathjaxinline], where [mathjaxinline]U_ r[/mathjaxinline] involves at most swap gates and local Clifford gates. This is because [mathjaxinline]U[/mathjaxinline] must map [mathjaxinline]X[/mathjaxinline] and [mathjaxinline]Z[/mathjaxinline] on the [mathjaxinline]n^{th}[/mathjaxinline] qubit to some nontrivial Pauli operations on at least one other qubit, and these can be turned into [mathjaxinline]X[/mathjaxinline] and [mathjaxinline]Z[/mathjaxinline] using [mathjaxinline]H[/mathjaxinline] and [mathjaxinline]S[/mathjaxinline] operations (which permute among [mathjaxinline]X[/mathjaxinline], [mathjaxinline]Y[/mathjaxinline], and [mathjaxinline]Z[/mathjaxinline]). </p>
+      <p>
+Let us express [mathjaxinline]U[/mathjaxinline] in block matrix form, as </p>
+      <table id="a0000000011" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto">
+        <tr>
+          <td class="equation" style="width:80%; border:none">[mathjax]U = \frac{1}{\sqrt{2}} \left[ \begin{array}{cc}{A}&amp; {B}\\ {C}&amp; {D}\end{array}\right] \, ,[/mathjax]</td>
+          <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.8)</td>
+        </tr>
+      </table>
+      <p>
+where [mathjaxinline]A[/mathjaxinline], [mathjaxinline]B[/mathjaxinline], [mathjaxinline]C[/mathjaxinline], and [mathjaxinline]D[/mathjaxinline] are operators on the right-most [mathjaxinline]n-1[/mathjaxinline] qubits. Using the constraints of Eq.(1.6–1.7), and the unitarity of [mathjaxinline]U[/mathjaxinline], express [mathjaxinline]B[/mathjaxinline], [mathjaxinline]C[/mathjaxinline], and [mathjaxinline]D[/mathjaxinline] in terms of [mathjaxinline]g[/mathjaxinline], [mathjaxinline]h[/mathjaxinline], and [mathjaxinline]A[/mathjaxinline]. Keep in mind that the order of symbols in your expressions matters: </p>
+      <ul class="itemize">
+        <li>
+          <p>
+            <p style="display:inline">[mathjaxinline]B =[/mathjaxinline]</p>
+            <span>
+              <customresponse cfn="cfn_wrap_c40b6d4167" inline="1" expect="$expect_wrap_c40b6d4167">
+                <textline size="20" correct_answer="$ans_c40b6d4167_1" inline="1"/>
+              </customresponse>
+              <script type="text/python" system_path="python_lib">
+
+import subtext2
+wrap_c40b6d4167 = subtext2.Subtext(debug=True,sanitize_allow_lists=False)
+ans_c40b6d4167_1 = wrap_c40b6d4167.answer('''h*A''')
+expect_wrap_c40b6d4167 = wrap_c40b6d4167.answer('''h*A''')
+
+@wrap_c40b6d4167.grader
+def cfn_wrap_c40b6d4167(expect, ans, **kwargs):
+    return sympy_check_nocomm(expect, ans, **kwargs)
+
+</script>
+            </span>
+          </p>
+        </li>
+        <li>
+          <p>
+            <p style="display:inline">[mathjaxinline]C =[/mathjaxinline]</p>
+            <span>
+              <customresponse cfn="cfn_wrap_72f4310f6e" inline="1" expect="$expect_wrap_72f4310f6e">
+                <textline size="20" correct_answer="$ans_72f4310f6e_1" inline="1"/>
+              </customresponse>
+              <script type="text/python" system_path="python_lib">
+
+import subtext2
+wrap_72f4310f6e = subtext2.Subtext(debug=True,sanitize_allow_lists=False)
+ans_72f4310f6e_1 = wrap_72f4310f6e.answer('''g*A''')
+expect_wrap_72f4310f6e = wrap_72f4310f6e.answer('''g*A''')
+
+@wrap_72f4310f6e.grader
+def cfn_wrap_72f4310f6e(expect, ans, **kwargs):
+    return sympy_check_nocomm(expect, ans, **kwargs)
+
+</script>
+            </span>
+          </p>
+        </li>
+        <li>
+          <p>
+            <p style="display:inline">[mathjaxinline]D =[/mathjaxinline]</p>
+            <span>
+              <customresponse cfn="cfn_wrap_09d8d6cca4" inline="1" expect="$expect_wrap_09d8d6cca4">
+                <textline size="20" correct_answer="$ans_09d8d6cca4_1" inline="1"/>
+              </customresponse>
+              <script type="text/python" system_path="python_lib">
+
+import subtext2
+wrap_09d8d6cca4 = subtext2.Subtext(debug=True,sanitize_allow_lists=False)
+ans_09d8d6cca4_1 = wrap_09d8d6cca4.answer('''-g*h*A''')
+expect_wrap_09d8d6cca4 = wrap_09d8d6cca4.answer('''-g*h*A''')
+
+@wrap_09d8d6cca4.grader
+def cfn_wrap_09d8d6cca4(expect, ans, **kwargs):
+    return sympy_check_nocomm(expect, ans, **kwargs)
+
+</script>
+            </span>
+          </p>
+        </li>
+      </ul>
+    </li>
+    <li value="2">
+      <p>
+        <p style="display:inline">What is [mathjaxinline]A^\dagger A[/mathjaxinline]?  </p>
+        <stringresponse answer="I" type="" inline="1">
+          <textline inline="1"/>
+        </stringresponse>
+      </p>
+      <p>
+        <solution>
+          <p>
+            <b>Solution:</b>
+          </p>
+          <span>[mathjaxinline]A[/mathjaxinline] is unitary. </span>
+        </solution>
+      </p>
+    </li>
+    <li value="3">
+      <p>
+Recall the [mathjaxinline]n[/mathjaxinline] qubit Clifford circuit </p>
+      <table id="a0000000012" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto">
+        <tr>
+          <td class="equation" style="width:80%; border:none">[mathjax]V = C(h) \left[ H\otimes I_{n-1}\right] C(g) \, ,[/mathjax]</td>
+          <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.9)</td>
+        </tr>
+      </table>
+      <p>
+where [mathjaxinline]h,g\in P_{n-1}[/mathjaxinline], [mathjaxinline]I_{n-1}[/mathjaxinline] is the identity operation in [mathjaxinline]P_{n-1}[/mathjaxinline], and [mathjaxinline]H[/mathjaxinline] acts on the control qubit of [mathjaxinline]C(h)[/mathjaxinline] and [mathjaxinline]C(g)[/mathjaxinline]. This is the circuit <center><img src="/static/images/clifford-circuit-reduction-v1a.png" width="400" style="size:300px"/></center> </p>
+      <p>
+Give the block matrix for [mathjaxinline]U' = VU[/mathjaxinline] (in terms of [mathjaxinline]A[/mathjaxinline], [mathjaxinline]B[/mathjaxinline], [mathjaxinline]C[/mathjaxinline], [mathjaxinline]D[/mathjaxinline] and any necessary constants): </p>
+      <p>
+        <p style="display:inline">[mathjaxinline]U' =[/mathjaxinline]</p>
+        <span>
+          <customresponse cfn="cfn_wrap_4dd441d2f8" inline="1" expect="$expect_wrap_4dd441d2f8">
+            <textline size="50" correct_answer="$ans_4dd441d2f8_1" inline="1" math="1" preprocessorClassName="MathjaxPreprocessorForQM" preprocessorSrc="/static/mathjax_preprocessor_for_QM_subtext.js"/>
+          </customresponse>
+          <script type="text/python" system_path="python_lib">
+
+import subtext2
+wrap_4dd441d2f8 = subtext2.Subtext(debug=True,sanitize_allow_lists=False)
+ans_4dd441d2f8_1 = wrap_4dd441d2f8.answer('''[[A,0],[0,A]]''')
+expect_wrap_4dd441d2f8 = wrap_4dd441d2f8.answer('''[[A,0],[0,A]]''')
+
+@wrap_4dd441d2f8.grader
+def cfn_wrap_4dd441d2f8(expect, ans, **kwargs):
+    return sympy_check_nocomm(expect, ans, **kwargs)
+
+</script>
+        </span>
+      </p>
+      <p>
+        <solution>
+          <p>
+            <b>Solution:</b>
+          </p>
+          <span>
+            <p>
+Note that [mathjaxinline]A[/mathjaxinline] is a [mathjaxinline]n-1[/mathjaxinline] qubit Clifford operation. This construction thus reduces a [mathjaxinline]n[/mathjaxinline] qubit Clifford operation to a [mathjaxinline]n-1[/mathjaxinline] qubit Clifford operation, together with CNOT, [mathjaxinline]H[/mathjaxinline], and [mathjaxinline]S[/mathjaxinline] gates. </p>
+            <p>
+Since [mathjaxinline]C(g)[/mathjaxinline] in [mathjaxinline]V[/mathjaxinline] in general requires [mathjaxinline]O(n)[/mathjaxinline] gates, and there are [mathjaxinline]O(n)[/mathjaxinline] steps in this reduction, the total number of gates required is [mathjaxinline]O(n^2)[/mathjaxinline]. </p>
+          </span>
+        </solution>
+      </p>
+    </li>
+  </ol>
+</problem>

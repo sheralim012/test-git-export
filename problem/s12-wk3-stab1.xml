@@ -1,0 +1,57 @@
+<problem linenum="599" tex_filename="./week3_4_ps2a.tex" attempts="10" display_name="Four-qubit stabilizer state" max_attempts="10">
+  <p>
+Consider the stabilizer generator set </p>
+  <table id="a0000000008" class="eqnarray" cellspacing="0" cellpadding="7" width="100%" style="table-layout:auto">
+    <tr id="a0000000009">
+      <td style="width:40%; border:none"> </td>
+      <td style="vertical-align:middle;                                    text-align:right; border:none">
+	    [mathjaxinline]\displaystyle g_1[/mathjaxinline]
+        </td>
+      <td style="vertical-align:middle;                                    text-align:center; border:none">
+	    [mathjaxinline]\displaystyle =[/mathjaxinline]
+        </td>
+      <td style="vertical-align:middle;                                    text-align:left; border:none">
+	    [mathjaxinline]\displaystyle  {\tt IIZZ}[/mathjaxinline]
+        </td>
+      <td style="width:40%; border:none"> </td>
+      <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.6)</td>
+    </tr>
+    <tr id="a0000000010">
+      <td style="width:40%; border:none"> </td>
+      <td style="vertical-align:middle;                                    text-align:right; border:none">
+	    [mathjaxinline]\displaystyle g_2[/mathjaxinline]
+        </td>
+      <td style="vertical-align:middle;                                    text-align:center; border:none">
+	    [mathjaxinline]\displaystyle =[/mathjaxinline]
+        </td>
+      <td style="vertical-align:middle;                                    text-align:left; border:none">
+	    [mathjaxinline]\displaystyle  {\tt ZZII}[/mathjaxinline]
+        </td>
+      <td style="width:40%; border:none"> </td>
+      <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.7)</td>
+    </tr>
+    <tr id="a0000000011">
+      <td style="width:40%; border:none"> </td>
+      <td style="vertical-align:middle;                                    text-align:right; border:none">
+	    [mathjaxinline]\displaystyle g_3[/mathjaxinline]
+        </td>
+      <td style="vertical-align:middle;                                    text-align:center; border:none">
+	    [mathjaxinline]\displaystyle =[/mathjaxinline]
+        </td>
+      <td style="vertical-align:middle;                                    text-align:left; border:none">
+	    [mathjaxinline]\displaystyle  {\tt XXXX} \, .[/mathjaxinline]
+        </td>
+      <td style="width:40%; border:none"> </td>
+      <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.8)</td>
+    </tr>
+  </table>
+  <p>
+Note that these stabilizers act on a Hilbert space of four qubits. </p>
+  <p>
+What is the dimension of the space stabilized by [mathjaxinline]S=\langle g_1,g_2,g_3\rangle[/mathjaxinline]? </p>
+  <p>
+    <symbolicresponse expect="2">
+      <textline correct_answer="2" math="1"/>
+    </symbolicresponse>
+  </p>
+</problem>

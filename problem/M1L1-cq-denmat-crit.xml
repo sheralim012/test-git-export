@@ -1,0 +1,30 @@
+<problem linenum="83" tex_filename="./week1_lectures1.tex" attempts="1" display_name="Mathematical criteria satisfied by density matrices" max_attempts="1">
+  <p>
+This is a concept question, provided to check your understanding of the previous video clip. </p>
+  <p>
+Which of the following mathematical criteria must be satisfied for a matrix [mathjaxinline]\rho[/mathjaxinline] to be a density matrix? </p>
+  <p>
+    <choiceresponse>
+      <checkboxgroup>
+        <choice correct="true" name="1">
+          <text>[mathjaxinline]\rho[/mathjaxinline] must be a square matrix</text>
+        </choice>
+        <choice correct="false" name="2">
+          <text>[mathjaxinline]\rho[/mathjaxinline] may have complex eignvalues, but they must have unit magnitude</text>
+        </choice>
+        <choice correct="false" name="3">
+          <text>[mathjaxinline]\rho[/mathjaxinline] cannot have eigenvalues equal to zero</text>
+        </choice>
+        <choice correct="true" name="4">
+          <text>[mathjaxinline]\rho[/mathjaxinline] must have non-negative eigenvalues</text>
+        </choice>
+        <choice correct="true" name="5">
+          <text>The sum of the eigenvalues of [mathjaxinline]\rho[/mathjaxinline] must equal one</text>
+        </choice>
+        <choice correct="false" name="6">
+          <text>[mathjaxinline]\rho[/mathjaxinline] must be traceless</text>
+        </choice>
+      </checkboxgroup>
+    </choiceresponse>
+  </p>
+</problem>

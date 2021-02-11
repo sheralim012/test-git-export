@@ -1,0 +1,332 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:04,000
+Just an example, suppose M is equal to the identity matrix.
+
+2
+00:00:04,000 --> 00:00:11,000
+In other words, g of v is equal to v. In other words,
+
+3
+00:00:11,000 --> 00:00:18,000
+u sigma v u dagger is minus 1 to the f of v
+
+4
+00:00:18,000 --> 00:00:41,000
+sigma v. Then this quadratic part should basically be 0.
+
+5
+00:00:41,000 --> 00:00:44,000
+And in this case, f would only be a linear function.
+
+6
+00:00:44,000 --> 00:00:46,000
+So it would have the form--
+
+7
+00:00:46,000 --> 00:00:48,000
+and now the output is a single bit.
+
+8
+00:00:48,000 --> 00:00:51,000
+So it would look like--
+
+9
+00:00:51,000 --> 00:00:53,000
+some arbitrary linear function would
+
+10
+00:00:53,000 --> 00:00:55,000
+looks like the inner product of v with some other vector.
+
+11
+00:00:55,000 --> 00:00:58,000
+
+
+12
+00:00:58,000 --> 00:00:58,000
+Let's call it alpha.
+
+13
+00:00:58,000 --> 00:01:03,000
+
+
+14
+00:01:03,000 --> 00:01:09,000
+And can anyone say what unitary u corresponds to this?
+
+15
+00:01:09,000 --> 00:01:18,000
+
+
+16
+00:01:18,000 --> 00:01:20,000
+Maybe don't tell me the exact unitary,
+
+17
+00:01:20,000 --> 00:01:22,000
+but what can you say about the unitary u?
+
+18
+00:01:22,000 --> 00:01:25,000
+Like what kind of Clifford is it?
+
+19
+00:01:25,000 --> 00:01:26,000
+So I've said--
+
+20
+00:01:26,000 --> 00:01:27,000
+I've narrowed it down.
+
+21
+00:01:27,000 --> 00:01:32,000
+I've said, look, in general, the type of poly
+
+22
+00:01:32,000 --> 00:01:33,000
+can change for the Clifford.
+
+23
+00:01:33,000 --> 00:01:34,000
+Right?
+
+24
+00:01:34,000 --> 00:01:36,000
+So you conjugate by a Hadamard, it turns x's into z's.
+
+25
+00:01:36,000 --> 00:01:39,000
+You conjugate by a CNOT, it'll take an x in one qubit
+
+26
+00:01:39,000 --> 00:01:42,000
+and spread it to other qubits.
+
+27
+00:01:42,000 --> 00:01:44,000
+But I'm saying, well, let's consider the kind where
+
+28
+00:01:44,000 --> 00:01:46,000
+the type of poly does not change.
+
+29
+00:01:46,000 --> 00:01:48,000
+The only thing that changes is the sign.
+
+30
+00:01:48,000 --> 00:01:50,000
+So you conjugate by it.
+
+31
+00:01:50,000 --> 00:01:54,000
+You get back the same poly, up to a plus or minus.
+
+32
+00:01:54,000 --> 00:01:54,000
+Right.
+
+33
+00:01:54,000 --> 00:01:58,000
+So one option is that u is itself a product of polys,
+
+34
+00:01:58,000 --> 00:02:02,000
+or you can just say a poly matrix itself.
+
+35
+00:02:02,000 --> 00:02:05,000
+And then was there another option for what u could be?
+
+36
+00:02:05,000 --> 00:02:08,000
+If this is true for a specific sigma v,
+
+37
+00:02:08,000 --> 00:02:09,000
+then you might be able to have some freedom
+
+38
+00:02:09,000 --> 00:02:11,000
+with the [INAUDIBLE].
+
+39
+00:02:11,000 --> 00:02:13,000
+But if this is true for all sigma v--
+
+40
+00:02:13,000 --> 00:02:15,000
+it turns out the only way for that to happen
+
+41
+00:02:15,000 --> 00:02:18,000
+is for u itself to be a poly.
+
+42
+00:02:18,000 --> 00:02:22,000
+And now this is like the familiar commuting
+
+43
+00:02:22,000 --> 00:02:24,000
+or anti-commuting relation.
+
+44
+00:02:24,000 --> 00:02:25,000
+So when I move--
+
+45
+00:02:25,000 --> 00:02:27,000
+if u is a poly, when I move it past sigma v,
+
+46
+00:02:27,000 --> 00:02:29,000
+I pick up either a plus or minus sign.
+
+47
+00:02:29,000 --> 00:02:34,000
+And so here, if u--
+
+48
+00:02:34,000 --> 00:02:35,000
+it's a little tricky.
+
+49
+00:02:35,000 --> 00:02:41,000
+If u is sigma to the lambda alpha,
+
+50
+00:02:41,000 --> 00:02:47,000
+then u sigma v u dagger is going to be minus 1
+
+51
+00:02:47,000 --> 00:03:00,000
+to the alpha transpose lambda transpose lambda v sigma
+
+52
+00:03:00,000 --> 00:03:01,000
+v. Right?
+
+53
+00:03:01,000 --> 00:03:02,000
+Because that's what happens when we
+
+54
+00:03:02,000 --> 00:03:08,000
+move this poly past this other poly, is we pick up this phase.
+
+55
+00:03:08,000 --> 00:03:10,000
+And the phase looks like--
+
+56
+00:03:10,000 --> 00:03:12,000
+you have this symplectic inner product with v on one side,
+
+57
+00:03:12,000 --> 00:03:15,000
+and the transpose of this vector on the other side.
+
+58
+00:03:15,000 --> 00:03:20,000
+
+
+59
+00:03:20,000 --> 00:03:22,000
+So in this case, where you just have--
+
+60
+00:03:22,000 --> 00:03:26,000
+
+
+61
+00:03:26,000 --> 00:03:29,000
+where the only action is a phase corresponds
+
+62
+00:03:29,000 --> 00:03:34,000
+to this very special subset of Cliffords, which are the polys.
+
+63
+00:03:34,000 --> 00:03:36,000
+
+
+64
+00:03:36,000 --> 00:03:40,000
+And when you go beyond polys, then you actually change--
+
+65
+00:03:40,000 --> 00:03:44,000
+then you do more than just pick up a phase.
+
+66
+00:03:44,000 --> 00:03:48,000
+But this sort of behavior here is
+
+67
+00:03:48,000 --> 00:03:50,000
+kind of another way of stating the fact that polys
+
+68
+00:03:50,000 --> 00:03:53,000
+either commute or anti-commute.
+
+69
+00:03:53,000 --> 00:03:56,000
+And in fact, they're the only things that
+
+70
+00:03:56,000 --> 00:03:59,000
+only commute or anti-commute with other polys.
+
+71
+00:03:59,000 --> 00:04:02,000
+So in this special case, g of v is
+
+72
+00:04:02,000 --> 00:04:07,000
+equal to v. So that means that this term and this term
+
+73
+00:04:07,000 --> 00:04:10,000
+are the same.
+
+74
+00:04:10,000 --> 00:04:11,000
+And everything is mod 2.
+
+75
+00:04:11,000 --> 00:04:14,000
+So then if you have the same term plus itself,
+
+76
+00:04:14,000 --> 00:04:15,000
+then you get 0.
+
+77
+00:04:15,000 --> 00:04:15,000
+Right.
+
+78
+00:04:15,000 --> 00:04:18,000
+So in general, it will not be that simple.
+
+79
+00:04:18,000 --> 00:04:20,000
+In general, f is going to have some quadratic term.
+
+80
+00:04:20,000 --> 00:04:22,000
+And so that makes it a little bit
+
+81
+00:04:22,000 --> 00:04:25,000
+tricky to write down in general.
+
+82
+00:04:25,000 --> 00:04:30,000
+
+

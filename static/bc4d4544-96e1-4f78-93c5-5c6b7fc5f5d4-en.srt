@@ -1,0 +1,276 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:07,000
+Partial trace on density matrix rho is--
+
+2
+00:00:07,000 --> 00:00:10,000
+well, you can do the same thing as representing--
+
+3
+00:00:10,000 --> 00:00:13,000
+
+
+4
+00:00:13,000 --> 00:00:19,000
+let's call this trace A psi, psi, A, B.
+
+5
+00:00:19,000 --> 00:00:24,000
+And I really should have done this, because you can only
+
+6
+00:00:24,000 --> 00:00:29,000
+apply partial traces to density matrices, and not pure states,
+
+7
+00:00:29,000 --> 00:00:44,000
+formally, although is summation from i e sub i, rho e sub i.
+
+8
+00:00:44,000 --> 00:00:48,000
+And rho is on a bipartite system,
+
+9
+00:00:48,000 --> 00:00:51,000
+and e sub i's are only for the first [INAUDIBLE]..
+
+10
+00:00:51,000 --> 00:00:55,000
+So here, we have a formula for the trace
+
+11
+00:00:55,000 --> 00:01:04,000
+which uses some basis for the first system.
+
+12
+00:01:04,000 --> 00:01:06,000
+So suppose you have two bases for the first system.
+
+13
+00:01:06,000 --> 00:01:10,000
+
+
+14
+00:01:10,000 --> 00:01:22,000
+We have two bases for system a, e sub i and f sub i--
+
+15
+00:01:22,000 --> 00:01:28,000
+
+
+16
+00:01:28,000 --> 00:01:30,000
+Well, if you have two bases for the same system,
+
+17
+00:01:30,000 --> 00:01:34,000
+there is a unitary matrix, which takes one basis to the other.
+
+18
+00:01:34,000 --> 00:01:45,000
+And we can assume that e sub j is equal to sum ujk f sub k,
+
+19
+00:01:45,000 --> 00:01:52,000
+where ujk, u are the elements of a unitary matrix.
+
+20
+00:01:52,000 --> 00:01:58,000
+
+
+21
+00:01:58,000 --> 00:02:03,000
+So we have a unitary matrix taking e's taking, I guess,
+
+22
+00:02:03,000 --> 00:02:04,000
+f's to the e's.
+
+23
+00:02:04,000 --> 00:02:06,000
+
+
+24
+00:02:06,000 --> 00:02:18,000
+And now, summation j, ej, rho ej is equal to summation.
+
+25
+00:02:18,000 --> 00:02:40,000
+k summation k prime f sub k ujk dagger rho f sub k prime,
+
+26
+00:02:40,000 --> 00:02:42,000
+ujk prime.
+
+27
+00:02:42,000 --> 00:02:48,000
+
+
+28
+00:02:48,000 --> 00:02:49,000
+And that is equal to--
+
+29
+00:02:49,000 --> 00:02:55,000
+
+
+30
+00:02:55,000 --> 00:02:58,000
+I left out the summation for j, so we put it back in.
+
+31
+00:02:58,000 --> 00:03:04,000
+Well, let's put summation for j inside,
+
+32
+00:03:04,000 --> 00:03:19,000
+and we have k k prime summation ujk dagger ujk prime
+
+33
+00:03:19,000 --> 00:03:27,000
+f sub k rho fk prime.
+
+34
+00:03:27,000 --> 00:03:44,000
+Now, this is equal to sum k k prime fk rho fk prime,
+
+35
+00:03:44,000 --> 00:03:50,000
+which is just this formula, where the e is replaced
+
+36
+00:03:50,000 --> 00:03:53,000
+by the f's.
+
+37
+00:03:53,000 --> 00:03:54,000
+And why is this?
+
+38
+00:03:54,000 --> 00:03:57,000
+
+
+39
+00:03:57,000 --> 00:04:10,000
+ujk is a unitary matrix, which means
+
+40
+00:04:10,000 --> 00:04:13,000
+any two different rows are orthogonal
+
+41
+00:04:13,000 --> 00:04:16,000
+and the inner product of rho with itself is 1.
+
+42
+00:04:16,000 --> 00:04:18,000
+And this is just the inner product
+
+43
+00:04:18,000 --> 00:04:21,000
+of a row k with row k prime.
+
+44
+00:04:21,000 --> 00:04:25,000
+
+
+45
+00:04:25,000 --> 00:04:29,000
+Wait, am I saying rows when I should be saying columns?
+
+46
+00:04:29,000 --> 00:04:31,000
+Let's see, jk.
+
+47
+00:04:31,000 --> 00:04:32,000
+Yeah, this is just the inner product
+
+48
+00:04:32,000 --> 00:04:36,000
+of column k with column k prime.
+
+49
+00:04:36,000 --> 00:04:46,000
+And that means that if k equals k prime, then this is 1.
+
+50
+00:04:46,000 --> 00:04:48,000
+If k is different from k prime, it's
+
+51
+00:04:48,000 --> 00:04:52,000
+0, which gives you the Kronecker delta, function,
+
+52
+00:04:52,000 --> 00:04:55,000
+which gives you that.
+
+53
+00:04:55,000 --> 00:04:57,000
+So it doesn't matter which bases for system
+
+54
+00:04:57,000 --> 00:05:01,000
+that you use in this formula, you get the same partial trace.
+
+55
+00:05:01,000 --> 00:05:03,000
+
+
+56
+00:05:03,000 --> 00:05:07,000
+And why is it called partial trace?
+
+57
+00:05:07,000 --> 00:05:14,000
+Trace of psi a, or rather, suppose
+
+58
+00:05:14,000 --> 00:05:20,000
+you have two different matrices, sigma sub a tensor sigma sub b
+
+59
+00:05:20,000 --> 00:05:30,000
+is equal to trace sigma a times sigma b.
+
+60
+00:05:30,000 --> 00:05:33,000
+So if you have a tensor product of two matrices,
+
+61
+00:05:33,000 --> 00:05:36,000
+the partial trace just takes the trace of the first one.
+
+62
+00:05:36,000 --> 00:05:39,000
+And if you have something that's not the tensor product of two
+
+63
+00:05:39,000 --> 00:05:43,000
+matrices, you can break it up into a sum
+
+64
+00:05:43,000 --> 00:05:49,000
+of tensor products of the two matrices and use this formula.
+
+65
+00:05:49,000 --> 00:05:52,000
+So this is why it's called partial trace,
+
+66
+00:05:52,000 --> 00:05:58,000
+because it's just the, I guess, linearization of the operator
+
+67
+00:05:58,000 --> 00:06:02,000
+trace of sigma a times sigma b.
+
+68
+00:06:02,000 --> 00:06:03,000
+
+

@@ -1,0 +1,51 @@
+<problem linenum="641" tex_filename="./week4_5_ps2b.tex" attempts="10" display_name="Decomposition exercise: 3-qubit Clifford circuit" max_attempts="10">
+  <script>
+import qpython4
+# qpython4.define_qpython4_globals(globals())
+
+
+</script>
+  <script linenum="653" filename="./week4_5_ps2b.tex" type="text/python" system_path="python_lib">
+
+check_clifford_circuit_eq = qpython4.check_clifford_circuit_eq
+
+</script>
+  <p>
+[mathjaxinline]U[/mathjaxinline] is a three-qubit Clifford circuit which maps these Pauli operators: </p>
+  <table id="a0000000026" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto">
+    <tr>
+      <td class="equation" style="width:80%; border:none">[mathjax]{\tt [IIX, IIZ, IXI, IZI, XII, ZII]} \longrightarrow {\tt [IZX, IIZ, ZYZ, IZI, ZII, XZI]} \, .[/mathjax]</td>
+      <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.20)</td>
+    </tr>
+  </table>
+  <p>
+Construct a circuit for [mathjaxinline]U[/mathjaxinline] using CNOT, SWAP, [mathjaxinline]H[/mathjaxinline], and [mathjaxinline]S[/mathjaxinline]. You may use the procedure from <a href="/course/jump_to_id/s12-wk6-clifford-decomposition" target="_blank">the previous problem on decomposing Clifford operations</a>, or any other method you wish. </p>
+  <p>
+    <p style="display:inline">[mathjaxinline]U =[/mathjaxinline]</p>
+    <span>
+      <customresponse cfn="cfn_wrap_0479d896c6" inline="1" expect="$expect_wrap_0479d896c6" options="nqubits=3;GIVEPM=1;SKIPMAT=1" cfn_extra_args="options">
+        <textline size="60" correct_answer="$ans_0479d896c6_1" inline="1"/>
+      </customresponse>
+      <script type="text/python" system_path="python_lib">
+
+import subtext2
+wrap_0479d896c6 = subtext2.Subtext(debug=True,sanitize_allow_lists=False)
+ans_0479d896c6_1 = wrap_0479d896c6.answer('''[CNOT(1,2), H(2), S(1), H(1), CNOT(0,1), H(1)]''')
+expect_wrap_0479d896c6 = wrap_0479d896c6.answer('''[CNOT(1,2), H(2), S(1), H(1), CNOT(0,1), H(1)]''')
+
+@wrap_0479d896c6.grader
+def cfn_wrap_0479d896c6(expect, ans, **kwargs):
+    return check_clifford_circuit_eq(expect, ans, **kwargs)
+
+</script>
+    </span>
+  </p>
+  <p>
+    <solution>
+      <p>
+        <b>Solution:</b>
+      </p>
+      <span>An acceptable answer is: [mathjaxinline]{\tt [CNOT(1,2), H(2), S(1), H(1), CNOT(0,1), H(1)]}[/mathjaxinline]. </span>
+    </solution>
+  </p>
+</problem>

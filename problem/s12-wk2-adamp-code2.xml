@@ -1,0 +1,54 @@
+<problem linenum="96" tex_filename="./week3_4_ps2a.tex" attempts="10" display_name="Two-qubit amplitude damping code II" max_attempts="10">
+  <script>
+from sympy_check import *
+
+</script>
+  <script>
+import sympy
+
+# sympy_check.py should be included before this
+
+def sympy_check_dfs(expect,ans):
+    stab = {'II':sympy.Symbol('II'),
+            'IZ':sympy.Symbol('IZ'),
+            'ZI':sympy.Symbol('ZI'),
+            'ZZ':sympy.Symbol('ZZ')
+            }
+    sfc = SympyFormulaChecker(extra_symbols = stab)
+    try:
+        ret = sfc.sympy_formula_check(expect, ans)
+    except Exception as err:
+        return {'ok': False,
+                'msg': 'Error %s&lt;br&gt;Failed in evaluating check(%s,%s)' % (err,expect,ans)
+                }
+    return ret
+
+def sympy_check_state_or_zero(expect, ans):
+    if ans=='0':
+        return {'ok': True}
+    sfc = SympyFormulaChecker(extra_symbols = stab)
+    return sfc.sympy_formula_check(expect, ans)
+
+# sfc = SympyFormulaChecker()
+# sympy_formula_check = sfc.sympy_formula_check
+
+</script>
+  <p>
+In class we saw that distance between states could be measured by the trace distance. An alternate is the <em>fidelity</em>, which is equal to 1 for two states that are equal and 0 for two orthogonal states. In this way, it generalizes the inner product to density matrices. More information (not needed to complete this problem) on fidelity can be found <a href="https://en.wikipedia.org/wiki/Fidelity_of_quantum_states" target="_blank">here</a>. </p>
+  <p>
+Compute the fidelity [mathjaxinline]F(|\psi \rangle ,\rho ') = \sqrt{\langle \psi |\rho '|\psi \rangle }[/mathjaxinline] of [mathjaxinline]\rho '[/mathjaxinline] with respect to [mathjaxinline]|\psi \rangle[/mathjaxinline]. Express the result as a function of [mathjaxinline]g[/mathjaxinline]. </p>
+  <p>
+    <p style="display:inline">[mathjaxinline]F(|\psi \rangle ,\rho ') =[/mathjaxinline]</p>
+    <customresponse cfn="sympy_formula_check" inline="1" expect="sqrt(1-g)">
+      <textline size="50" correct_answer="sqrt(1-g)" inline="1" math="1"/>
+    </customresponse>
+  </p>
+  <p>
+    <solution>
+      <p>
+        <b>Solution:</b>
+      </p>
+      <span>The fidelity of [mathjaxinline]\rho '[/mathjaxinline] with respect to [mathjaxinline]\psi[/mathjaxinline] is simply <table id="a0000000007" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto"><tr><td class="equation" style="width:80%; border:none">[mathjax]F\left(\rho ',|{\psi }\rangle \right) = \sqrt{1-g} = e^{-\frac{t}{2T}},[/mathjax]</td><td class="eqnnum" style="width:20%; border:none;text-align:right">(1.5)</td></tr></table></span>
+    </solution>
+  </p>
+</problem>

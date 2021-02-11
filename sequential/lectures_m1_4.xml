@@ -1,0 +1,14 @@
+<sequential display_name="Lectures M1.4: Quantum Codes" start="&quot;2017-09-06T00:00:00+00:00&quot;" tex_filename="./week3_lectures4.tex" linenum="3" refnum="2">
+  <vertical url_name="Fundamental_building_blocks_for_quantum_error_correction_codes_encoding__decoding__recovery"/>
+  <vertical url_name="The_key_idea_of_quantum_error_correction_-_utilizing_linearity"/>
+  <vertical url_name="Quantum_error_correction_in_the_Steinspring_picture"/>
+  <vertical url_name="Very_important_fact_about_QEC_difference_from_analog_computation"/>
+  <vertical url_name="Space_of_low-weight_quantum_errors"/>
+  <vertical url_name="The_quantum_error_correction_conditions"/>
+  <vertical url_name="Equivalent_version_of_the_quantum_error_correction_conditions"/>
+  <vertical url_name="QEC_example_1_classical_codes"/>
+  <vertical url_name="QEC_example_1_corrects_more_than_just_discrete_bit_flip_errors"/>
+  <vertical url_name="QEC_example_2_classical_code_in_the_Hadamard_basis"/>
+  <vertical url_name="Error_rate_reduction_by_combining_codes_to_get_Shor_9-qubit_code"/>
+  <vertical url_name="Concatenated_quantum_error_correction_codes"/>
+</sequential>

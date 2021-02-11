@@ -1,0 +1,8 @@
+<video youtube="1.00:bseVgvMZVFI" url_name="M1L1a" sub="" transcripts="{&quot;en&quot;: &quot;3100e1e8-f10a-4ebb-8118-9febad525fc1-en.srt&quot;}" display_name="Introduction to quantum information science" edx_video_id="3100e1e8-f10a-4ebb-8118-9febad525fc1" youtube_id_1_0="bseVgvMZVFI">
+  <video_asset client_video_id="External Video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="3100e1e8-f10a-4ebb-8118-9febad525fc1-en.srt"/>
+</video>

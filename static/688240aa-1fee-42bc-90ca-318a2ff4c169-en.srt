@@ -1,0 +1,336 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:01,000
+It's worth pointing out that these
+
+2
+00:00:01,000 --> 00:00:04,000
+do more than just correct sort of discrete bit flip errors.
+
+3
+00:00:04,000 --> 00:00:10,000
+Suppose we have the repetition code
+
+4
+00:00:10,000 --> 00:00:15,000
+and we have an error that looks like e to the i theta x3.
+
+5
+00:00:15,000 --> 00:00:18,000
+Right, so this repetition code--
+
+6
+00:00:18,000 --> 00:00:21,000
+so this is on let's say the 3-bit repetition code.
+
+7
+00:00:21,000 --> 00:00:32,000
+
+
+8
+00:00:32,000 --> 00:00:37,000
+This code can correct any single bit flip.
+
+9
+00:00:37,000 --> 00:00:53,000
+So c can correct the span of i x1, x2, x3.
+
+10
+00:00:53,000 --> 00:00:59,000
+And so this continuous range of errors, e to the i theta x3,
+
+11
+00:00:59,000 --> 00:01:01,000
+we do not have to worry about because I
+
+12
+00:01:01,000 --> 00:01:09,000
+can write it as a linear combination of these operators.
+
+13
+00:01:09,000 --> 00:01:18,000
+In other words, this contains e to the i theta x3.
+
+14
+00:01:18,000 --> 00:01:21,000
+OK, so that's an example of how continuous errors
+
+15
+00:01:21,000 --> 00:01:27,000
+with no extra effort are corrected by this code.
+
+16
+00:01:27,000 --> 00:01:31,000
+And the reason-- I'll answer in one second--
+
+17
+00:01:31,000 --> 00:01:34,000
+the reason why this happens is that when we measure--
+
+18
+00:01:34,000 --> 00:01:36,000
+So correcting the code will involve making a measurement
+
+19
+00:01:36,000 --> 00:01:39,000
+to see which error happened.
+
+20
+00:01:39,000 --> 00:01:42,000
+And before we do that measurement,
+
+21
+00:01:42,000 --> 00:01:44,000
+we'll see that the state is in a superposition.
+
+22
+00:01:44,000 --> 00:01:48,000
+You could say a superposition of i and x3.
+
+23
+00:01:48,000 --> 00:01:51,000
+Of course, superposition is just a term
+
+24
+00:01:51,000 --> 00:01:53,000
+that we use because we have a preferred basis.
+
+25
+00:01:53,000 --> 00:01:56,000
+But if our preferred basis of errors is identity and x3,
+
+26
+00:01:56,000 --> 00:01:59,000
+our state is in a superposition of those two.
+
+27
+00:01:59,000 --> 00:02:02,000
+And so if we measure to figure out which error happens,
+
+28
+00:02:02,000 --> 00:02:05,000
+that measurement will have a random answer.
+
+29
+00:02:05,000 --> 00:02:08,000
+Sometimes we'll find that there was no error,
+
+30
+00:02:08,000 --> 00:02:09,000
+that we can have I, and sometimes you'll
+
+31
+00:02:09,000 --> 00:02:12,000
+find that there was x3.
+
+32
+00:02:12,000 --> 00:02:13,000
+And so that will--
+
+33
+00:02:13,000 --> 00:02:16,000
+when you make a measurement, it will collapse the superposition
+
+34
+00:02:16,000 --> 00:02:18,000
+to one of those two possibilities.
+
+35
+00:02:18,000 --> 00:02:21,000
+And that measurement collapse will
+
+36
+00:02:21,000 --> 00:02:24,000
+take care of this continuous range of outcomes.
+
+37
+00:02:24,000 --> 00:02:27,000
+So we have this continuous range of outcomes-- sorry--
+
+38
+00:02:27,000 --> 00:02:31,000
+continuous range of parameters here and that gets
+
+39
+00:02:31,000 --> 00:02:32,000
+collapsed once we do the measurement,
+
+40
+00:02:32,000 --> 00:02:34,000
+that sort of measurement collapse
+
+41
+00:02:34,000 --> 00:02:36,000
+here is working in our favor.
+
+42
+00:02:36,000 --> 00:02:38,000
+Uh, you had a question?
+
+43
+00:02:38,000 --> 00:02:46,000
+[INAUDIBLE] between two patterns, it becomes scalar?
+
+44
+00:02:46,000 --> 00:02:48,000
+Maybe I didn't catch what you said in--
+
+45
+00:02:48,000 --> 00:02:49,000
+So this is a definition.
+
+46
+00:02:49,000 --> 00:02:52,000
+Yeah, so you think of inner product
+
+47
+00:02:52,000 --> 00:02:55,000
+as taking in two vectors and outputting a number?
+
+48
+00:02:55,000 --> 00:02:56,000
+Yes.
+
+49
+00:02:56,000 --> 00:03:00,000
+In general, it could take in two objects.
+
+50
+00:03:00,000 --> 00:03:04,000
+They can be matrices, vectors, any kind of object
+
+51
+00:03:04,000 --> 00:03:06,000
+where linear combinations are well-defined
+
+52
+00:03:06,000 --> 00:03:08,000
+and output a number.
+
+53
+00:03:08,000 --> 00:03:11,000
+And the reason why I call it a bio-linear form,
+
+54
+00:03:11,000 --> 00:03:13,000
+or maybe I should say a [INAUDIBLE] linear form,
+
+55
+00:03:13,000 --> 00:03:16,000
+is that it's linear in the second argument and conjugate
+
+56
+00:03:16,000 --> 00:03:18,000
+linear in the first argument.
+
+57
+00:03:18,000 --> 00:03:23,000
+So in other words, if I replace e1 there with e1 plus e1 prime,
+
+58
+00:03:23,000 --> 00:03:25,000
+then the corresponding numbers just add.
+
+59
+00:03:25,000 --> 00:03:29,000
+Or if I take e2, and I multiply that by a scalar,
+
+60
+00:03:29,000 --> 00:03:31,000
+the number there gets multiplied by the complex conjugate
+
+61
+00:03:31,000 --> 00:03:31,000
+of that skill.
+
+62
+00:03:31,000 --> 00:03:34,000
+
+
+63
+00:03:34,000 --> 00:03:36,000
+Did we see that [INAUDIBLE]?
+
+64
+00:03:36,000 --> 00:03:43,000
+
+
+65
+00:03:43,000 --> 00:03:52,000
+So in this case--
+
+66
+00:03:52,000 --> 00:03:56,000
+
+
+67
+00:03:56,000 --> 00:03:57,000
+yeah, I think I don't want to--
+
+68
+00:03:57,000 --> 00:04:00,000
+I think it would take me too far afield to work it out.
+
+69
+00:04:00,000 --> 00:04:03,000
+But in this case, basically, these
+
+70
+00:04:03,000 --> 00:04:07,000
+would all be orthonormal, or--
+
+71
+00:04:07,000 --> 00:04:09,000
+yeah, orthonormal in that inner product.
+
+72
+00:04:09,000 --> 00:04:11,000
+So what the inner product would be
+
+73
+00:04:11,000 --> 00:04:21,000
+is basically if you call these operators a0, a1, through a3,
+
+74
+00:04:21,000 --> 00:04:28,000
+then the inner product would look like ai, aj is delta ij.
+
+75
+00:04:28,000 --> 00:04:33,000
+
+
+76
+00:04:33,000 --> 00:04:38,000
+So that part is not so obvious.
+
+77
+00:04:38,000 --> 00:04:40,000
+What I think is more obvious is seeing
+
+78
+00:04:40,000 --> 00:04:41,000
+that this condition holds.
+
+79
+00:04:41,000 --> 00:04:45,000
+You know, 0 0 0 and 1 0 1 are orthogonal,
+
+80
+00:04:45,000 --> 00:04:48,000
+and they remain so even after applying a single poleaxe.
+
+81
+00:04:48,000 --> 00:04:50,000
+I think that's more obvious and intuitive.
+
+82
+00:04:50,000 --> 00:04:52,000
+This is I think not so obvious.
+
+83
+00:04:52,000 --> 00:04:56,000
+
+

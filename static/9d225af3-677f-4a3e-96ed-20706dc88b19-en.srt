@@ -1,0 +1,488 @@
+0
+00:00:00,000 --> 00:00:01,000
+
+
+1
+00:00:01,000 --> 00:00:05,000
+I'll describe a third special case.
+
+2
+00:00:05,000 --> 00:00:08,000
+All this has been a little bit abstract with general D.
+
+3
+00:00:08,000 --> 00:00:11,000
+I think for cubits, you can make things a little bit more
+
+4
+00:00:11,000 --> 00:00:11,000
+concrete.
+
+5
+00:00:11,000 --> 00:00:19,000
+
+
+6
+00:00:19,000 --> 00:00:21,000
+So in the case when d equals 2, we
+
+7
+00:00:21,000 --> 00:00:24,000
+can say a lot more about what density matrices are.
+
+8
+00:00:24,000 --> 00:00:28,000
+And I'm going to slightly change the notation for the basis
+
+9
+00:00:28,000 --> 00:00:28,000
+state.
+
+10
+00:00:28,000 --> 00:00:32,000
+So if d is general, I like to refer to the states as 1, 2,
+
+11
+00:00:32,000 --> 00:00:34,000
+through d.
+
+12
+00:00:34,000 --> 00:00:43,000
+When d is 2, I want to call the basis 0 and 1.
+
+13
+00:00:43,000 --> 00:00:45,000
+OK?
+
+14
+00:00:45,000 --> 00:00:50,000
+Usually you can tell from context what's going on.
+
+15
+00:00:50,000 --> 00:00:56,000
+So what can we say about the qubit density matrix?
+
+16
+00:00:56,000 --> 00:01:01,000
+So we know that rho is Hermitian,
+
+17
+00:01:01,000 --> 00:01:03,000
+and that it's 2 by 2.
+
+18
+00:01:03,000 --> 00:01:05,000
+And so that really is going to restrict the number of degrees
+
+19
+00:01:05,000 --> 00:01:08,000
+of freedom a lot, because there are just not
+
+20
+00:01:08,000 --> 00:01:11,000
+that many different 2 by 2 matrices.
+
+21
+00:01:11,000 --> 00:01:16,000
+And in fact, the space of Hermitian--
+
+22
+00:01:16,000 --> 00:01:19,000
+well in general, of Hermitian d by d matrices--
+
+23
+00:01:19,000 --> 00:01:22,000
+is just a d squared dimensional real vector space.
+
+24
+00:01:22,000 --> 00:01:26,000
+So for 2 by 2, that's four dimensional.
+
+25
+00:01:26,000 --> 00:01:31,000
+And so I can write RHO as some linear combination
+
+26
+00:01:31,000 --> 00:01:34,000
+of four different matrices.
+
+27
+00:01:34,000 --> 00:01:38,000
+And one very common choice are the Pauli matrices, generalized
+
+28
+00:01:38,000 --> 00:01:39,000
+to include identity.
+
+29
+00:01:39,000 --> 00:01:47,000
+So let me write a0 times identity plus a1 sigma one
+
+30
+00:01:47,000 --> 00:01:54,000
+a2 sigma 2 plus a3 sigma 3.
+
+31
+00:01:54,000 --> 00:02:01,000
+And these a's are just arbitrary real numbers.
+
+32
+00:02:01,000 --> 00:02:04,000
+So nothing stops me from changing my convention slightly
+
+33
+00:02:04,000 --> 00:02:05,000
+and dividing it all by 2.
+
+34
+00:02:05,000 --> 00:02:08,000
+You'll see in a minute why that makes it a little bit more
+
+35
+00:02:08,000 --> 00:02:08,000
+convenient.
+
+36
+00:02:08,000 --> 00:02:19,000
+
+
+37
+00:02:19,000 --> 00:02:23,000
+And, just to remind you, these Pauli matrices--
+
+38
+00:02:23,000 --> 00:02:36,000
+sigma 1 is sigma x, sigma 2 is sigma y, sigma 3 is sigma z.
+
+39
+00:02:36,000 --> 00:02:41,000
+And this i, you could also think of as sigma 0.
+
+40
+00:02:41,000 --> 00:02:44,000
+OK, so, so far I've just used the fact
+
+41
+00:02:44,000 --> 00:02:47,000
+that it's Hermitian to write it in this form.
+
+42
+00:02:47,000 --> 00:02:49,000
+But we have more information that we can
+
+43
+00:02:49,000 --> 00:02:51,000
+use to narrow down what rho is.
+
+44
+00:02:51,000 --> 00:02:55,000
+
+
+45
+00:02:55,000 --> 00:02:59,000
+So we know that the trace of rho is equal to 1.
+
+46
+00:02:59,000 --> 00:03:03,000
+What can you say about the trace of the Pauli matrices?
+
+47
+00:03:03,000 --> 00:03:04,000
+They're all zero.
+
+48
+00:03:04,000 --> 00:03:07,000
+So when you evaluate the trace of the right hand side,
+
+49
+00:03:07,000 --> 00:03:09,000
+the a1 a2 a3 go away.
+
+50
+00:03:09,000 --> 00:03:12,000
+What's trace of the identity?
+
+51
+00:03:12,000 --> 00:03:15,000
+2 divided by 2, so maybe you can see a little but why
+
+52
+00:03:15,000 --> 00:03:17,000
+the normalization is helpful.
+
+53
+00:03:17,000 --> 00:03:18,000
+And we're left just with a0.
+
+54
+00:03:18,000 --> 00:03:21,000
+
+
+55
+00:03:21,000 --> 00:03:22,000
+So we've learned, since trace rho
+
+56
+00:03:22,000 --> 00:03:25,000
+is 1, that tells us that is a0 is equal to 1.
+
+57
+00:03:25,000 --> 00:03:30,000
+
+
+58
+00:03:30,000 --> 00:03:32,000
+So let me rewrite rho here.
+
+59
+00:03:32,000 --> 00:03:41,000
+So rho is identity plus sum from i equals 1 to 3
+
+60
+00:03:41,000 --> 00:03:46,000
+a i sigma i over 2.
+
+61
+00:03:46,000 --> 00:03:56,000
+
+
+62
+00:03:56,000 --> 00:03:59,000
+So we still don't know anything about the a1 a2 a3.
+
+63
+00:03:59,000 --> 00:04:02,000
+
+
+64
+00:04:02,000 --> 00:04:04,000
+But there's one condition we haven't used--
+
+65
+00:04:04,000 --> 00:04:05,000
+I'm about to erase it.
+
+66
+00:04:05,000 --> 00:04:07,000
+It's the positive sum indefinite condition.
+
+67
+00:04:07,000 --> 00:04:14,000
+
+
+68
+00:04:14,000 --> 00:04:19,000
+And as often happens with the PSD condition,
+
+69
+00:04:19,000 --> 00:04:22,000
+there are three equivalent ways you can use it, right?
+
+70
+00:04:22,000 --> 00:04:25,000
+There is this quadratic form way--
+
+71
+00:04:25,000 --> 00:04:26,000
+that doesn't seem so helpful.
+
+72
+00:04:26,000 --> 00:04:29,000
+There's writing rho as a dagger times a--
+
+73
+00:04:29,000 --> 00:04:30,000
+doesn't seem so helpful.
+
+74
+00:04:30,000 --> 00:04:32,000
+And then there's the eigenvalue way.
+
+75
+00:04:32,000 --> 00:04:35,000
+Usually, one of these is good, and the others are not so good.
+
+76
+00:04:35,000 --> 00:04:37,000
+In this case, the eigenvalues are the helpful way
+
+77
+00:04:37,000 --> 00:04:38,000
+to look at it.
+
+78
+00:04:38,000 --> 00:04:43,000
+So let's calculate the eigenvalues of rho.
+
+79
+00:04:43,000 --> 00:04:46,000
+
+
+80
+00:04:46,000 --> 00:04:47,000
+There's actually a nice calculation
+
+81
+00:04:47,000 --> 00:04:50,000
+which I'm going to skip, so I'm going
+
+82
+00:04:50,000 --> 00:04:53,000
+to assume that you've seen it before.
+
+83
+00:04:53,000 --> 00:04:56,000
+If you haven't seen it before--
+
+84
+00:04:56,000 --> 00:04:58,000
+nothing depends on this type of calculation,
+
+85
+00:04:58,000 --> 00:05:00,000
+so you can just trust me for the answer.
+
+86
+00:05:00,000 --> 00:05:07,000
+But derive it in the privacy of your own home later on.
+
+87
+00:05:07,000 --> 00:05:10,000
+What are the eigenvalues?
+
+88
+00:05:10,000 --> 00:05:12,000
+Well actually, sorry-- let me write it like this.
+
+89
+00:05:12,000 --> 00:05:18,000
+The eigenvalues of just the traceless part, sum over i 1
+
+90
+00:05:18,000 --> 00:05:25,000
+through 3 of a i sigma i so it's a 2 by 2 matrix.
+
+91
+00:05:25,000 --> 00:05:29,000
+It's traceless, so the eigenvalues sum up to 0.
+
+92
+00:05:29,000 --> 00:05:31,000
+So it's plus or minus something.
+
+93
+00:05:31,000 --> 00:05:41,000
+And it turns out to be plus or minus sum of the a i
+
+94
+00:05:41,000 --> 00:05:44,000
+squared, square root.
+
+95
+00:05:44,000 --> 00:05:47,000
+
+
+96
+00:05:47,000 --> 00:05:49,000
+So in other words, take the Euclidean length
+
+97
+00:05:49,000 --> 00:05:55,000
+of the vector of a's, and that tells you the eigenvectors.
+
+98
+00:05:55,000 --> 00:06:02,000
+So when we take the eigenvectors of rho,
+
+99
+00:06:02,000 --> 00:06:06,000
+it's just going to be 1 plus or minus this number.
+
+100
+00:06:06,000 --> 00:06:08,000
+
+
+101
+00:06:08,000 --> 00:06:11,000
+And let me just abbreviate it as the norm
+
+102
+00:06:11,000 --> 00:06:14,000
+of the vector a divided by 2.
+
+103
+00:06:14,000 --> 00:06:17,000
+
+
+104
+00:06:17,000 --> 00:06:20,000
+So those are the two eigenvalues--
+
+105
+00:06:20,000 --> 00:06:25,000
+1 plus the norm, 1 minus the norm, all over 2.
+
+106
+00:06:25,000 --> 00:06:27,000
+And the reason we're asking about the eigenvalues
+
+107
+00:06:27,000 --> 00:06:31,000
+is because we want to know if rho is positive semidefinite.
+
+108
+00:06:31,000 --> 00:06:36,000
+So these are greater than or equal to zero,
+
+109
+00:06:36,000 --> 00:06:40,000
+since rho is PSD.
+
+110
+00:06:40,000 --> 00:06:43,000
+The plus branch of the plus or minus
+
+111
+00:06:43,000 --> 00:06:46,000
+is always greater or equal is 0, but the minus gives us
+
+112
+00:06:46,000 --> 00:06:48,000
+a non-trivial constraint.
+
+113
+00:06:48,000 --> 00:06:53,000
+This is equivalent to demanding that the norm of a be less than
+
+114
+00:06:53,000 --> 00:06:55,000
+or equal to 1.
+
+115
+00:06:55,000 --> 00:06:58,000
+And so this gives us, now, necessary and sufficient
+
+116
+00:06:58,000 --> 00:07:02,000
+conditions for rho to be a qubit density matrix.
+
+117
+00:07:02,000 --> 00:07:17,000
+So just to summarize, rho is a valid density matrix
+
+118
+00:07:17,000 --> 00:07:23,000
+if and only if rho is i plus--
+
+119
+00:07:23,000 --> 00:07:35,000
+let me write this as a dot sigma over 2,
+
+120
+00:07:35,000 --> 00:07:39,000
+with the norm of a less than or equal to 1.
+
+121
+00:07:39,000 --> 00:07:39,000
+
+

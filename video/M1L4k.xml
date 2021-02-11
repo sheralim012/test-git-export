@@ -1,0 +1,8 @@
+<video youtube="1.00:hCOALqvCwBM" url_name="M1L4k" sub="" transcripts="{&quot;en&quot;: &quot;c4b10143-ac86-49b6-9542-c09ba09516b6-en.srt&quot;}" display_name="QEC example 2: classical code in the Hadamard basis" edx_video_id="c4b10143-ac86-49b6-9542-c09ba09516b6" youtube_id_1_0="hCOALqvCwBM">
+  <video_asset client_video_id="External Video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="c4b10143-ac86-49b6-9542-c09ba09516b6-en.srt"/>
+</video>

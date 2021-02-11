@@ -1,0 +1,148 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:02,000
+Before I give examples, I want to prove one more thing
+
+2
+00:00:02,000 --> 00:00:03,000
+about them.
+
+3
+00:00:03,000 --> 00:00:07,000
+So what I've derived is that if you have an isometry--
+
+4
+00:00:07,000 --> 00:00:08,000
+sorry.
+
+5
+00:00:08,000 --> 00:00:09,000
+If you have a quantum channel defined
+
+6
+00:00:09,000 --> 00:00:12,000
+by an isometry, and then a partial trace,
+
+7
+00:00:12,000 --> 00:00:15,000
+then there exists also a Kraus operator description of it.
+
+8
+00:00:15,000 --> 00:00:18,000
+To be complete, we should go in the other direction as well.
+
+9
+00:00:18,000 --> 00:00:21,000
+We should say if I have a quantum channel described
+
+10
+00:00:21,000 --> 00:00:26,000
+by Kraus operators, satisfying the Kraus operator condition,
+
+11
+00:00:26,000 --> 00:00:28,000
+then that's equivalent to one of that form,
+
+12
+00:00:28,000 --> 00:00:30,000
+that there exists an isometry.
+
+13
+00:00:30,000 --> 00:01:01,000
+So conversely, given a set of Kraus operators, and of rho,
+
+14
+00:01:01,000 --> 00:01:04,000
+this map should be a valid quantum operation.
+
+15
+00:01:04,000 --> 00:01:09,000
+
+
+16
+00:01:09,000 --> 00:01:12,000
+Does anyone see why that should be true?
+
+17
+00:01:12,000 --> 00:01:14,000
+If I satisfy these conditions, why
+
+18
+00:01:14,000 --> 00:01:18,000
+should that imply that I can also write it in this form?
+
+19
+00:01:18,000 --> 00:01:26,000
+
+
+20
+00:01:26,000 --> 00:01:30,000
+So, right.
+
+21
+00:01:30,000 --> 00:01:34,000
+The comment was, I can construct V as follows,
+
+22
+00:01:34,000 --> 00:01:35,000
+I'm given these Ve.
+
+23
+00:01:35,000 --> 00:01:40,000
+I could just write down the corresponding V.
+
+24
+00:01:40,000 --> 00:01:43,000
+And then I claim this is an isometry.
+
+25
+00:01:43,000 --> 00:01:44,000
+Why is that?
+
+26
+00:01:44,000 --> 00:01:46,000
+Well, I'm just running the same argument backwards
+
+27
+00:01:46,000 --> 00:01:48,000
+that I had over here.
+
+28
+00:01:48,000 --> 00:01:53,000
+So I start with this condition, and then this
+
+29
+00:01:53,000 --> 00:01:54,000
+is the Kraus operator condition.
+
+30
+00:01:54,000 --> 00:01:57,000
+This is also equal to what I get from V dagger V.
+
+31
+00:01:57,000 --> 00:01:59,000
+So if I satisfy the Kraus operator conditions,
+
+32
+00:01:59,000 --> 00:02:03,000
+then the V I've written down over there must be an isometry,
+
+33
+00:02:03,000 --> 00:02:05,000
+and it also corresponds to this quantum channel.
+
+34
+00:02:05,000 --> 00:02:08,000
+So everything I did, basically, you could run either forward
+
+35
+00:02:08,000 --> 00:02:11,000
+or backwards to map between these two different pictures.
+
+36
+00:02:11,000 --> 00:02:12,000
+
+

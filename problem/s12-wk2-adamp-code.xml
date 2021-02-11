@@ -1,0 +1,107 @@
+<problem linenum="9" tex_filename="./week3_4_ps2a.tex" attempts="10" display_name="Two-qubit amplitude damping code" max_attempts="10">
+  <p>
+Amplitude damping is an important process in real physical systems; it models spontaneous emission, inelastic scattering, thermalization of spins to the lattice, and many other microscopic processes where energy is exchanged between the system and environment. In this problem, we study a quantum code adapted for this error mechanism. </p>
+  <p>
+Recall that the amplitude damping channel for a single qubit is described by [mathjaxinline]{\cal E}(\rho ) = \sum _ k E_ k \rho E_ k^\dagger[/mathjaxinline], where the operation elements are </p>
+  <table id="a0000000002" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto">
+    <tr>
+      <td class="equation" style="width:80%; border:none">[mathjax]E_0 = \left[ \begin{array}{cc} {1} &amp;  {0}\\ {0} &amp;  \sqrt{1-g} \end{array} \right] ~ ~ ~ ~ ~ ~ ~ ~  E_1 = \left[ \begin{array}{cc} {0} &amp;  {\sqrt{g}}\\ {0} &amp;  {0} \end{array} \right] \, .[/mathjax]</td>
+      <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.1)</td>
+    </tr>
+  </table>
+  <p>
+You may think of [mathjaxinline]g[/mathjaxinline] as being [mathjaxinline]g = 1-e^{-t/T_1}[/mathjaxinline], where [mathjaxinline]t[/mathjaxinline] is time and [mathjaxinline]T_1[/mathjaxinline] is the amplitude damping time constant. </p>
+  <p>
+Let [mathjaxinline]|0_ L\rangle  = |01\rangle[/mathjaxinline] and [mathjaxinline]|1_ L\rangle  = |10\rangle[/mathjaxinline] be a quantum code encoding one logical qubit using two physical qubits. Define [mathjaxinline]|\psi \rangle  = a|0_ L\rangle  + b |1_ L\rangle[/mathjaxinline]. Compute the output state </p>
+  <table id="a0000000003" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto">
+    <tr>
+      <td class="equation" style="width:80%; border:none">[mathjax]\rho ' = {\cal E}(|\psi \rangle ) = \sum _{j,k=\{ 0,1\} } (E_ j \otimes E_ k)\,  |\psi \rangle \langle \psi | \,  (E_ j\otimes E_ k)^\dagger[/mathjax]</td>
+      <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.2)</td>
+    </tr>
+  </table>
+  <p>
+which results when each physical qubit is subject to amplitude damping.  <br/></p>
+  <p>
+Please enter your answer as a matrix, ie a list of lists, of this form <tt class="tt">[ [ 1,0,0,0 ], [0,1,0,0], [0,0,1,0], [0,0,0,1] ]</tt>. Assume that [mathjaxinline]a[/mathjaxinline] and [mathjaxinline]b[/mathjaxinline] are real-valued. Use <tt class="tt">^</tt> for exponents, and explicitly include the multiplication operator <tt class="tt">*</tt>. You may use standard functions like <tt class="tt">sqrt</tt>. Express the results in terms of [mathjaxinline]g[/mathjaxinline], [mathjaxinline]a[/mathjaxinline], and [mathjaxinline]b[/mathjaxinline]. </p>
+  <script>
+from sympy_check import *
+
+</script>
+  <script>
+import sympy
+
+# sympy_check.py should be included before this
+
+def sympy_check_dfs(expect,ans):
+    stab = {'II':sympy.Symbol('II'),
+            'IZ':sympy.Symbol('IZ'),
+            'ZI':sympy.Symbol('ZI'),
+            'ZZ':sympy.Symbol('ZZ')
+            }
+    sfc = SympyFormulaChecker(extra_symbols = stab)
+    try:
+        ret = sfc.sympy_formula_check(expect, ans)
+    except Exception as err:
+        return {'ok': False,
+                'msg': 'Error %s&lt;br&gt;Failed in evaluating check(%s,%s)' % (err,expect,ans)
+                }
+    return ret
+
+def sympy_check_state_or_zero(expect, ans):
+    if ans=='0':
+        return {'ok': True}
+    sfc = SympyFormulaChecker(extra_symbols = stab)
+    return sfc.sympy_formula_check(expect, ans)
+
+# sfc = SympyFormulaChecker()
+# sympy_formula_check = sfc.sympy_formula_check
+
+</script>
+  <p>
+    <p style="display:inline">[mathjaxinline]\rho ' =[/mathjaxinline]</p>
+    <customresponse cfn="sympy_formula_check" inline="1" expect="[[g,0,0,0],[0,(1-g)*a**2,(1-g)*a*b,0],[0,(1-g)*a*b,(1-g)*b**2,0],[0,0,0,0]]">
+      <textline size="80" correct_answer="[[g,0,0,0],[0,(1-g)*a**2,(1-g)*a*b,0],[0,(1-g)*a*b,(1-g)*b**2,0],[0,0,0,0]]" inline="1" math="1"/>
+    </customresponse>
+  </p>
+  <p>
+    <solution>
+      <p>
+        <b>Solution:</b>
+      </p>
+      <span>
+        <p>
+The output of the amplitude damping channel on this two-qubit state is </p>
+        <table id="a0000000004" class="eqnarray" cellspacing="0" cellpadding="7" width="100%" style="table-layout:auto">
+          <tr id="a0000000005">
+            <td style="width:40%; border:none"> </td>
+            <td style="vertical-align:middle;                                    text-align:right; border:none">
+	    [mathjaxinline]\displaystyle \rho '[/mathjaxinline]
+        </td>
+            <td style="vertical-align:middle;                                    text-align:center; border:none">
+	    [mathjaxinline]\displaystyle =[/mathjaxinline]
+        </td>
+            <td style="vertical-align:middle;                                    text-align:left; border:none">
+	    [mathjaxinline]\displaystyle  {\cal E}(|{\psi }\rangle ) = \sum _{j,k=\{ 0,1\} } (E_ j \otimes E_ k)\,  |{\psi }\rangle \langle {\psi }| \,  (E_ j\otimes E_ k)^\dagger[/mathjaxinline]
+        </td>
+            <td style="width:40%; border:none"> </td>
+            <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.3)</td>
+          </tr>
+          <tr id="a0000000006">
+            <td style="width:40%; border:none"> </td>
+            <td style="vertical-align:middle;                                    text-align:right; border:none">
+	     
+        </td>
+            <td style="vertical-align:middle;                                    text-align:center; border:none">
+	    [mathjaxinline]\displaystyle =[/mathjaxinline]
+        </td>
+            <td style="vertical-align:middle;                                    text-align:left; border:none">
+	    [mathjaxinline]\displaystyle  \left[\begin{array}{rrrr} g&amp;  0 &amp;  0 &amp;  0 \\ 0 &amp;  (1-g) a^2 &amp;  (1-g) ab &amp;  0 \\ 0 &amp;  (1-g) ab &amp;  (1-g) b^2 &amp;  0 \\ 0 &amp;  0 &amp;  0 &amp;  0 \end{array} \right] = g|{00}\rangle \langle {00}|+(1-g)|{\psi }\rangle \langle {\psi }|.[/mathjaxinline]
+        </td>
+            <td style="width:40%; border:none"> </td>
+            <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.4)</td>
+          </tr>
+        </table>
+      </span>
+    </solution>
+  </p>
+</problem>

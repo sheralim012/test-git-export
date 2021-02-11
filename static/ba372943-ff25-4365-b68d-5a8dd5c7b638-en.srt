@@ -1,0 +1,504 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:03,000
+Suppose we have a dephasing channel.
+
+2
+00:00:03,000 --> 00:00:06,000
+And let's say that's 1 minus q, you apply
+
+3
+00:00:06,000 --> 00:00:09,000
+a sigma z, and probability q.
+
+4
+00:00:09,000 --> 00:00:11,000
+1 minus qu applied nothing.
+
+5
+00:00:11,000 --> 00:00:14,000
+Probability q, you apply to sigma z.
+
+6
+00:00:14,000 --> 00:00:20,000
+
+
+7
+00:00:20,000 --> 00:00:26,000
+Probability of error is--
+
+8
+00:00:26,000 --> 00:00:33,000
+well, you get an error if you apply a sigma z to any qubit.
+
+9
+00:00:33,000 --> 00:00:37,000
+
+
+10
+00:00:37,000 --> 00:00:43,000
+And you don't get an error if you apply sigma z
+
+11
+00:00:43,000 --> 00:00:45,000
+to an even number of qubits.
+
+12
+00:00:45,000 --> 00:00:51,000
+So it's 3q plus q cubed.
+
+13
+00:00:51,000 --> 00:00:54,000
+
+
+14
+00:00:54,000 --> 00:00:58,000
+3q 1 minus q plus q cubed.
+
+15
+00:00:58,000 --> 00:01:04,000
+3q 1 minus q squared plus q cubed.
+
+16
+00:01:04,000 --> 00:01:10,000
+
+
+17
+00:01:10,000 --> 00:01:19,000
+Around 3 times the chance of error, of unencoded error.
+
+18
+00:01:19,000 --> 00:01:26,000
+
+
+19
+00:01:26,000 --> 00:01:27,000
+Sigma z.
+
+20
+00:01:27,000 --> 00:01:30,000
+
+
+21
+00:01:30,000 --> 00:01:31,000
+I want to say this.
+
+22
+00:01:31,000 --> 00:01:32,000
+So three times the chance of sigma
+
+23
+00:01:32,000 --> 00:01:37,000
+z error on an unencoded qubit.
+
+24
+00:01:37,000 --> 00:01:41,000
+But if you have a debiting channel--
+
+25
+00:01:41,000 --> 00:01:50,000
+if you have a channel 1 minus q sigma x.
+
+26
+00:01:50,000 --> 00:01:56,000
+Wait, 1 minus q identity and q sigma x.
+
+27
+00:01:56,000 --> 00:02:03,000
+Probability of error, well, you need at least two
+
+28
+00:02:03,000 --> 00:02:07,000
+of these qubits to be wrong, to have
+
+29
+00:02:07,000 --> 00:02:11,000
+an error in the original and encoded qubit.
+
+30
+00:02:11,000 --> 00:02:15,000
+So the probability of error is q 3q
+
+31
+00:02:15,000 --> 00:02:21,000
+squared 1 minus q plus q cubed.
+
+32
+00:02:21,000 --> 00:02:25,000
+So this is quadratically small if q is small,
+
+33
+00:02:25,000 --> 00:02:30,000
+and this is 3 times, 3q, if q is small.
+
+34
+00:02:30,000 --> 00:02:35,000
+So we've corrected the bit errors
+
+35
+00:02:35,000 --> 00:02:37,000
+and we've made the phase errors even worse.
+
+36
+00:02:37,000 --> 00:02:43,000
+
+
+37
+00:02:43,000 --> 00:02:50,000
+Now, you probably know that Hadamard interchange
+
+38
+00:02:50,000 --> 00:02:52,000
+phase errors and bit errors.
+
+39
+00:02:52,000 --> 00:03:34,000
+
+
+40
+00:03:34,000 --> 00:03:42,000
+So intuitively, this should mean that you can take this code
+
+41
+00:03:42,000 --> 00:03:49,000
+and Hadamard it and get a code that corrects phase errors,
+
+42
+00:03:49,000 --> 00:03:52,000
+but makes bit errors three times as worse.
+
+43
+00:03:52,000 --> 00:03:55,000
+So let's do it.
+
+44
+00:03:55,000 --> 00:04:05,000
+The bit code, or the bit correcting code,
+
+45
+00:04:05,000 --> 00:04:09,000
+was 0, goes to 0, 0, 0.
+
+46
+00:04:09,000 --> 00:04:12,000
+1 goes to 1, 1, 1.
+
+47
+00:04:12,000 --> 00:04:17,000
+
+
+48
+00:04:17,000 --> 00:04:20,000
+So let's say this is the phase code.
+
+49
+00:04:20,000 --> 00:04:27,000
+It's going to take H0 to H cubed 0, 0, 0.
+
+50
+00:04:27,000 --> 00:04:33,000
+H1 to H cubed 1, 1, 1.
+
+51
+00:04:33,000 --> 00:04:37,000
+
+
+52
+00:04:37,000 --> 00:04:47,000
+And this is just 0 plus 1, 1 over 2 goes to 1 over root
+
+53
+00:04:47,000 --> 00:04:58,000
+8 0, 0, 0 plus 0, 0, 1 plus dot dot dot plus 1, 1, 1.
+
+54
+00:04:58,000 --> 00:05:09,000
+And 1 over root 2 0 minus 1 goes to 1 over root
+
+55
+00:05:09,000 --> 00:05:18,000
+8 0, 0, 0 minus 0, 0, 1 through minus 1, 1, 1.
+
+56
+00:05:18,000 --> 00:05:22,000
+
+
+57
+00:05:22,000 --> 00:05:32,000
+And this is minus 1 the number of 1s in this state.
+
+58
+00:05:32,000 --> 00:05:38,000
+So we work this out for Simon's algorithm.
+
+59
+00:05:38,000 --> 00:05:42,000
+And this is what Hadamard cubed does.
+
+60
+00:05:42,000 --> 00:05:47,000
+It puts a minus 1 any state with an odd number of 1s.
+
+61
+00:05:47,000 --> 00:05:50,000
+
+
+62
+00:05:50,000 --> 00:05:54,000
+We can add these and we can subtract these to get
+
+63
+00:05:54,000 --> 00:05:57,000
+what our code does to 0 and 1.
+
+64
+00:05:57,000 --> 00:06:12,000
+So phase code 0 goes to 0, 0, 0 plus 0, 1, 1 plus 1,
+
+65
+00:06:12,000 --> 00:06:18,000
+0, 1 plus 1, 1, 0.
+
+66
+00:06:18,000 --> 00:06:25,000
+1 goes to 1/2 0, 0, 0--
+
+67
+00:06:25,000 --> 00:06:38,000
+sorry-- 0, 0, 1 plus 0, 1, 0 plus 1, 0, 0 minus 1, 1 plus 1,
+
+68
+00:06:38,000 --> 00:06:41,000
+1, 1.
+
+69
+00:06:41,000 --> 00:06:43,000
+So you take 0 to the superposition
+
+70
+00:06:43,000 --> 00:06:47,000
+of states with an even number of 1s,
+
+71
+00:06:47,000 --> 00:06:49,000
+and 1 to a superposition of states
+
+72
+00:06:49,000 --> 00:06:51,000
+with an odd number of 1s.
+
+73
+00:06:51,000 --> 00:06:54,000
+
+
+74
+00:06:54,000 --> 00:06:57,000
+Because when you subtract this from this,
+
+75
+00:06:57,000 --> 00:07:00,000
+you only get states with an odd number of 1s.
+
+76
+00:07:00,000 --> 00:07:02,000
+And when you add these, you only get states
+
+77
+00:07:02,000 --> 00:07:04,000
+with an even number of 1s.
+
+78
+00:07:04,000 --> 00:07:07,000
+
+
+79
+00:07:07,000 --> 00:07:10,000
+So you can correct this.
+
+80
+00:07:10,000 --> 00:07:12,000
+And actually, it should be obvious
+
+81
+00:07:12,000 --> 00:07:15,000
+that you can correct this, because all we did
+
+82
+00:07:15,000 --> 00:07:18,000
+was we put a Hadamard in front of everything.
+
+83
+00:07:18,000 --> 00:07:21,000
+So just take your old correction circuit
+
+84
+00:07:21,000 --> 00:07:22,000
+and add a whole bunch of Hadamards
+
+85
+00:07:22,000 --> 00:07:26,000
+and you get a new correction circuit for the phase code.
+
+86
+00:07:26,000 --> 00:07:28,000
+But I want to explain it a different way.
+
+87
+00:07:28,000 --> 00:07:35,000
+
+
+88
+00:07:35,000 --> 00:07:39,000
+Let's call this a logical 0, and this a logical 1.
+
+89
+00:07:39,000 --> 00:07:44,000
+
+
+90
+00:07:44,000 --> 00:07:53,000
+So logical 0, logical 1.
+
+91
+00:07:53,000 --> 00:07:57,000
+Sigma z on the first qubit, logical 0.
+
+92
+00:07:57,000 --> 00:08:04,000
+Sigma z on the first qubit, logical 1.
+
+93
+00:08:04,000 --> 00:08:10,000
+Sigma z on the second qubit, logical 0, et cetera--
+
+94
+00:08:10,000 --> 00:08:12,000
+are all orthogonal.
+
+95
+00:08:12,000 --> 00:08:19,000
+
+
+96
+00:08:19,000 --> 00:08:21,000
+Well, we can see that up here--
+
+97
+00:08:21,000 --> 00:08:26,000
+I mean, we can know first, clearly, 0 and 1 are
+
+98
+00:08:26,000 --> 00:08:30,000
+orthogonal, because none of these basis
+
+99
+00:08:30,000 --> 00:08:35,000
+states in the supervision of 1 appears in supervision of 0.
+
+100
+00:08:35,000 --> 00:08:39,000
+And when you apply a sigma z to any of the bits,
+
+101
+00:08:39,000 --> 00:08:40,000
+this is still true.
+
+102
+00:08:40,000 --> 00:08:46,000
+So any sigma z error on 1 is orthogonal to any other sigma z
+
+103
+00:08:46,000 --> 00:08:50,000
+error on 0.
+
+104
+00:08:50,000 --> 00:08:57,000
+And further, if you apply sigma z error to 0,
+
+105
+00:08:57,000 --> 00:09:03,000
+so sigma z on the first qubit of 0, logical 0,
+
+106
+00:09:03,000 --> 00:09:13,000
+is equal to 1 over 2 0, 0, 0 plus 0, 1, 1 minus 1,
+
+107
+00:09:13,000 --> 00:09:18,000
+0, 1 minus 1, 1, 0.
+
+108
+00:09:18,000 --> 00:09:22,000
+So half the terms here are plus, half the term here are minus.
+
+109
+00:09:22,000 --> 00:09:27,000
+So this is orthogonal to that.
+
+110
+00:09:27,000 --> 00:09:36,000
+And it's easy to check that all of these are orthogonal.
+
+111
+00:09:36,000 --> 00:10:08,000
+So project onto subspaces 0L 1L sigma z 1 0L sigma z 1 1L,
+
+112
+00:10:08,000 --> 00:10:11,000
+et cetera.
+
+113
+00:10:11,000 --> 00:10:15,000
+So these are four orthogonal subspaces.
+
+114
+00:10:15,000 --> 00:10:17,000
+So this is a measurement that projects the state onto one
+
+115
+00:10:17,000 --> 00:10:19,000
+of these four subspaces.
+
+116
+00:10:19,000 --> 00:10:22,000
+
+
+117
+00:10:22,000 --> 00:10:25,000
+And in this case, if you get this subspace, you do nothing.
+
+118
+00:10:25,000 --> 00:10:28,000
+
+
+119
+00:10:28,000 --> 00:10:32,000
+If you get this subspace, you apply
+
+120
+00:10:32,000 --> 00:10:35,000
+sigma z for the first qubit.
+
+121
+00:10:35,000 --> 00:10:37,000
+If you get the next subspace, you apply sigma z
+
+122
+00:10:37,000 --> 00:10:39,000
+to the second qubit, et cetera.
+
+123
+00:10:39,000 --> 00:10:42,000
+
+
+124
+00:10:42,000 --> 00:10:49,000
+So this shows you how to correct these errors.
+
+125
+00:10:49,000 --> 00:10:50,000
+
+

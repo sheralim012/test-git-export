@@ -1,0 +1,408 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:04,000
+So let me give you two very high level descriptions of how
+
+2
+00:00:04,000 --> 00:00:08,000
+people do efficient decoding.
+
+3
+00:00:08,000 --> 00:00:17,000
+So one approach-- and this is one of the older ones--
+
+4
+00:00:17,000 --> 00:00:21,000
+is to do what are called CSS codes.
+
+5
+00:00:21,000 --> 00:00:26,000
+This is named after Calderbank, Shor, and Steane,
+
+6
+00:00:26,000 --> 00:00:29,000
+who invented them in the mid-'90s.
+
+7
+00:00:29,000 --> 00:00:33,000
+And these are a special class of stabilizer codes
+
+8
+00:00:33,000 --> 00:00:45,000
+where the stabilizer generators are of the form x to the a or z
+
+9
+00:00:45,000 --> 00:00:48,000
+to the b.
+
+10
+00:00:48,000 --> 00:00:50,000
+So this is a special case because in general,
+
+11
+00:00:50,000 --> 00:00:53,000
+stabilizers can have some x's and some z's.
+
+12
+00:00:53,000 --> 00:00:56,000
+They [INAUDIBLE] same qubit, in which case they have y's.
+
+13
+00:00:56,000 --> 00:01:01,000
+Here we're saying, there exists a set of generators,
+
+14
+00:01:01,000 --> 00:01:03,000
+of which some of them are x-type--
+
+15
+00:01:03,000 --> 00:01:04,000
+meaning they're just products of x's--
+
+16
+00:01:04,000 --> 00:01:05,000
+some of them are z-type--
+
+17
+00:01:05,000 --> 00:01:07,000
+they're just products of z's.
+
+18
+00:01:07,000 --> 00:01:11,000
+We can just separate the generators in this way.
+
+19
+00:01:11,000 --> 00:01:14,000
+Of course, products of those generators will mix x and z,
+
+20
+00:01:14,000 --> 00:01:15,000
+but at least we have some generators
+
+21
+00:01:15,000 --> 00:01:19,000
+that are purely x and purely z.
+
+22
+00:01:19,000 --> 00:01:21,000
+And the reason why this is helpful
+
+23
+00:01:21,000 --> 00:01:24,000
+is because this lets us think about the quantum code in terms
+
+24
+00:01:24,000 --> 00:01:26,000
+of classical codes.
+
+25
+00:01:26,000 --> 00:01:29,000
+If you just look at the z generators by themselves,
+
+26
+00:01:29,000 --> 00:01:30,000
+that corresponds to a classical code.
+
+27
+00:01:30,000 --> 00:01:33,000
+And if you just look at the x generators by themselves,
+
+28
+00:01:33,000 --> 00:01:36,000
+that also corresponds to a different classical code.
+
+29
+00:01:36,000 --> 00:01:40,000
+And so you can, in some cases, decode each of those
+
+30
+00:01:40,000 --> 00:01:45,000
+separately, and that will give you a quantum decoding.
+
+31
+00:01:45,000 --> 00:01:55,000
+So corresponds to two classical linear codes.
+
+32
+00:01:55,000 --> 00:01:57,000
+Now, of course, the general decoding problem
+
+33
+00:01:57,000 --> 00:02:00,000
+for classical linear codes is also MP hard.
+
+34
+00:02:00,000 --> 00:02:03,000
+But here we have a vast library of codes that we already know.
+
+35
+00:02:03,000 --> 00:02:06,000
+And so not all codes work.
+
+36
+00:02:06,000 --> 00:02:07,000
+There are some additional properties
+
+37
+00:02:07,000 --> 00:02:11,000
+for the kind of the x-code and the z-code to be compatible.
+
+38
+00:02:11,000 --> 00:02:14,000
+But once you have these sort of pair of compatible codes,
+
+39
+00:02:14,000 --> 00:02:18,000
+you can just import your classical decoding scheme
+
+40
+00:02:18,000 --> 00:02:19,000
+to the quantum case.
+
+41
+00:02:19,000 --> 00:02:22,000
+So this lets you get an efficient decoding algorithm
+
+42
+00:02:22,000 --> 00:02:24,000
+just by importing the one you already
+
+43
+00:02:24,000 --> 00:02:27,000
+had for classical codes.
+
+44
+00:02:27,000 --> 00:02:29,000
+There are things you have to be careful about.
+
+45
+00:02:29,000 --> 00:02:31,000
+But in general, this is an effective strategy.
+
+46
+00:02:31,000 --> 00:02:34,000
+
+
+47
+00:02:34,000 --> 00:02:36,000
+And I'm not going to talk about this in too much more
+
+48
+00:02:36,000 --> 00:02:39,000
+detail, because if you took 8370 last year, then
+
+49
+00:02:39,000 --> 00:02:42,000
+I think Peter Shor talked about CSS codes a lot.
+
+50
+00:02:42,000 --> 00:02:46,000
+I just want to give you this high level description.
+
+51
+00:02:46,000 --> 00:02:49,000
+Another approach, which has been very recently
+
+52
+00:02:49,000 --> 00:02:53,000
+found to be effective, is called iterative decoding.
+
+53
+00:02:53,000 --> 00:02:56,000
+
+
+54
+00:02:56,000 --> 00:03:02,000
+And it attacks an MP hard problem the way
+
+55
+00:03:02,000 --> 00:03:05,000
+that a lot of us would attack a Sudoku puzzle.
+
+56
+00:03:05,000 --> 00:03:07,000
+Try something here.
+
+57
+00:03:07,000 --> 00:03:09,000
+If it makes it better, keep going.
+
+58
+00:03:09,000 --> 00:03:12,000
+If not, erase it and write something else there.
+
+59
+00:03:12,000 --> 00:03:13,000
+Hopefully you keep making progress
+
+60
+00:03:13,000 --> 00:03:16,000
+and don't get yourself stuck.
+
+61
+00:03:16,000 --> 00:03:19,000
+And in some cases, you can prove that an approach like this
+
+62
+00:03:19,000 --> 00:03:20,000
+will work.
+
+63
+00:03:20,000 --> 00:03:25,000
+Namely, you have a syndrome which represents a bunch of--
+
+64
+00:03:25,000 --> 00:03:27,000
+you could think of it as unsatisfied checks.
+
+65
+00:03:27,000 --> 00:03:32,000
+Every time there's a 1 here in this syndrome vector,
+
+66
+00:03:32,000 --> 00:03:34,000
+something went wrong, and you want to fix that.
+
+67
+00:03:34,000 --> 00:03:37,000
+And you can fix it by applying an x or a z
+
+68
+00:03:37,000 --> 00:03:42,000
+to any of the qubits that are touched by that check.
+
+69
+00:03:42,000 --> 00:03:44,000
+So if that stabilizer had an x in some position,
+
+70
+00:03:44,000 --> 00:03:46,000
+you could apply a z there, and you
+
+71
+00:03:46,000 --> 00:03:48,000
+would flip the syndrome value.
+
+72
+00:03:48,000 --> 00:03:52,000
+Of course, in doing so, you might mess up other syndromes.
+
+73
+00:03:52,000 --> 00:03:55,000
+Maybe you fix one bit, but you mess up five.
+
+74
+00:03:55,000 --> 00:03:57,000
+So that wouldn't be good.
+
+75
+00:03:57,000 --> 00:03:59,000
+But what you can do is you could just look at every position,
+
+76
+00:03:59,000 --> 00:04:02,000
+and you could say, if I flip this one,
+
+77
+00:04:02,000 --> 00:04:05,000
+will I make more progress than I will undo?
+
+78
+00:04:05,000 --> 00:04:08,000
+In other words, will I correct--
+
+79
+00:04:08,000 --> 00:04:14,000
+will I take more syndrome bits from 1 to 0 than from 0 to 1?
+
+80
+00:04:14,000 --> 00:04:17,000
+And if so, I do that.
+
+81
+00:04:17,000 --> 00:04:19,000
+This approach is not guaranteed to work.
+
+82
+00:04:19,000 --> 00:04:22,000
+You can definitely get stuck in local minima, where there's
+
+83
+00:04:22,000 --> 00:04:24,000
+no kind of local improvement, but you're
+
+84
+00:04:24,000 --> 00:04:28,000
+very far from a codeword.
+
+85
+00:04:28,000 --> 00:04:31,000
+It was a huge breakthrough 20 years ago
+
+86
+00:04:31,000 --> 00:04:37,000
+when Dan Spielman and Mike Sipser--
+
+87
+00:04:37,000 --> 00:04:38,000
+they were both at MIT then.
+
+88
+00:04:38,000 --> 00:04:41,000
+Sipser's still here, and is the Dean of Science--
+
+89
+00:04:41,000 --> 00:04:45,000
+showed that for certain classes of classical linear codes,
+
+90
+00:04:45,000 --> 00:04:45,000
+this worked.
+
+91
+00:04:45,000 --> 00:04:48,000
+You could just do this iterative decoding scheme, where you're
+
+92
+00:04:48,000 --> 00:04:50,000
+kind of doing things greedily and locally,
+
+93
+00:04:50,000 --> 00:04:53,000
+and you'll rapidly converge to a codeword,
+
+94
+00:04:53,000 --> 00:04:55,000
+if there's not too many errors.
+
+95
+00:04:55,000 --> 00:04:59,000
+And very recently, people like [INAUDIBLE] and [INAUDIBLE]
+
+96
+00:04:59,000 --> 00:05:03,000
+and [INAUDIBLE] have showed that quantum versions of this work
+
+97
+00:05:03,000 --> 00:05:08,000
+for a kind of quantum analog of these LTPC codes.
+
+98
+00:05:08,000 --> 00:05:14,000
+So this is another class of strategies,
+
+99
+00:05:14,000 --> 00:05:17,000
+which does not look like just importing classical decoding,
+
+100
+00:05:17,000 --> 00:05:20,000
+but which can also be effective.
+
+101
+00:05:20,000 --> 00:05:20,000
+
+

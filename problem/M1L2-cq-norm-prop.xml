@@ -1,0 +1,30 @@
+<problem linenum="117" tex_filename="./week2_lectures2b.tex" attempts="1" display_name="Properties of common norms" max_attempts="1">
+  <p>
+This is a concept question, provided to check your understanding of the previous video clip. </p>
+  <p>
+Check all the following which are true, regarding the properties of <a href="https://en.wikipedia.org/wiki/Norm_(mathematics)#Examples" target="_blank">common norms</a>. </p>
+  <p>
+    <choiceresponse>
+      <checkboxgroup>
+        <choice correct="true" name="1">
+          <text>The dual of the [mathjaxinline]L_{\infty }[/mathjaxinline] norm is the [mathjaxinline]L_1[/mathjaxinline] norm.</text>
+        </choice>
+        <choice correct="true" name="2">
+          <text>The [mathjaxinline]L_1[/mathjaxinline] norm of a vector is the sum of the absolute values of the vector elements.</text>
+        </choice>
+        <choice correct="false" name="3">
+          <text>The [mathjaxinline]L_2[/mathjaxinline] norm of a vector is the sum of the squares of the absolute values of the vector elements</text>
+        </choice>
+        <choice correct="true" name="4">
+          <text>The [mathjaxinline]L_2[/mathjaxinline] norm of a vector is the square root of the sum of the squares of the absolute values of the vector elements.</text>
+        </choice>
+        <choice correct="false" name="5">
+          <text>The trace norm is a measure of distance between two vectors.</text>
+        </choice>
+        <choice correct="true" name="6">
+          <text>The trace norm is a measure of distance between two matrices.</text>
+        </choice>
+      </checkboxgroup>
+    </choiceresponse>
+  </p>
+</problem>

@@ -1,0 +1,27 @@
+<problem linenum="201" tex_filename="./week1_review1.tex" attempts="1" display_name="The partial trace" max_attempts="1">
+  <p>
+This is a concept question, provided to check your understanding of the previous video clip. </p>
+  <p>
+Which of the following statements about the <a href="https://en.wikipedia.org/wiki/Partial_trace" target="_blank">partial trace</a> operation are correct? Check all that apply: </p>
+  <p>
+    <choiceresponse>
+      <checkboxgroup>
+        <choice correct="true" name="1">
+          <text>The partial trace operation represents what happens when part of a system is discarded, or forgotten about.</text>
+        </choice>
+        <choice correct="false" name="2">
+          <text>The patial trace operation represents what happens when part of a system is measured, and the measurement result is known.</text>
+        </choice>
+        <choice correct="false" name="3">
+          <text>The partial trace operation on [mathjaxinline]\rho _{AB}[/mathjaxinline] can be implemented by a unitary transform on the [mathjaxinline]AB[/mathjaxinline] system.</text>
+        </choice>
+        <choice correct="false" name="4">
+          <text>The result after a partial trace depends on the basis in which the trace is computed.</text>
+        </choice>
+        <choice correct="true" name="5">
+          <text>The result after a partial trace is independent of the basis in which the trace is computed.</text>
+        </choice>
+      </checkboxgroup>
+    </choiceresponse>
+  </p>
+</problem>

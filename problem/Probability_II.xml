@@ -1,0 +1,67 @@
+<problem linenum="79" tex_filename="./week1_1_ps0.tex" attempts="10" display_name="Probability II" max_attempts="10">
+  <p>
+[mathjaxinline]X[/mathjaxinline] is a real-valued random variable with [mathjaxinline]\mathbb {E} [X]=5[/mathjaxinline] and [mathjaxinline]X \geq 0[/mathjaxinline]. </p>
+  <ul class="itemize">
+    <li>
+      <p>
+What is the best (among choices given) you can say about [mathjaxinline]\Pr [X\geq 3][/mathjaxinline]? </p>
+      <span>
+        <customresponse>
+          <drag_and_drop_input img="/static/images/ps0_p4/ps0_p4_dnd.png" target_outline="false" one_per_target="true" no_labels="true" label_bg_color="rgb(222, 139, 238)">
+            <draggable id="minusfive" icon="/static/images/ps0_p4/ps0_p4_dnd_label1.png"/>
+            <draggable id="minusthree" icon="/static/images/ps0_p4/ps0_p4_dnd_label2.png"/>
+            <draggable id="minusone" icon="/static/images/ps0_p4/ps0_p4_dnd_label3.png"/>
+            <draggable id="zero" icon="/static/images/ps0_p4/ps0_p4_dnd_label4.png"/>
+            <draggable id="one" icon="/static/images/ps0_p4/ps0_p4_dnd_label5.png"/>
+            <draggable id="three" icon="/static/images/ps0_p4/ps0_p4_dnd_label6.png"/>
+            <draggable id="five" icon="/static/images/ps0_p4/ps0_p4_dnd_label7.png"/>
+            <target id="1" x="1" y="1" w="120" h="85"/>
+            <target id="2" x="389" y="1" w="120" h="85"/>
+          </drag_and_drop_input>
+          <answer>
+caset = [{'zero': '1'}, {'one': '2'}]
+ca = [ {"draggables": ca.keys(),"targets": ca.values(),"rule":"exact"} for ca in caset ]
+if draganddrop.grade(submission[0], ca):
+    correct = ["correct"]
+else:
+    correct = ["incorrect"]
+</answer>
+        </customresponse>
+        <solution>
+          <img src="/static/images/ps0_p4/ps0_p4_dnd_sol_0YB8BT.png"/>
+        </solution>
+      </span>
+    </li>
+    <li>
+      <p>
+What about [mathjaxinline]\Pr [X\geq 20][/mathjaxinline]? </p>
+      <span>
+        <customresponse>
+          <drag_and_drop_input img="/static/images/ps0_p4b/ps0_p4b_dnd.png" target_outline="false" one_per_target="true" no_labels="true" label_bg_color="rgb(222, 139, 238)">
+            <draggable id="minusone" icon="/static/images/ps0_p4b/ps0_p4b_dnd_label1.png"/>
+            <draggable id="minusonetwo" icon="/static/images/ps0_p4b/ps0_p4b_dnd_label2.png"/>
+            <draggable id="minusonefour" icon="/static/images/ps0_p4b/ps0_p4b_dnd_label3.png"/>
+            <draggable id="zero" icon="/static/images/ps0_p4b/ps0_p4b_dnd_label4.png"/>
+            <draggable id="onefour" icon="/static/images/ps0_p4b/ps0_p4b_dnd_label5.png"/>
+            <draggable id="onetwo" icon="/static/images/ps0_p4b/ps0_p4b_dnd_label6.png"/>
+            <draggable id="one" icon="/static/images/ps0_p4b/ps0_p4b_dnd_label7.png"/>
+            <draggable id="three" icon="/static/images/ps0_p4b/ps0_p4b_dnd_label8.png"/>
+            <target id="1" x="1" y="1" w="120" h="84"/>
+            <target id="2" x="406" y="1" w="120" h="84"/>
+          </drag_and_drop_input>
+          <answer>
+caset = [{'zero': '1'}, {'onefour': '2'}]
+ca = [ {"draggables": ca.keys(),"targets": ca.values(),"rule":"exact"} for ca in caset ]
+if draganddrop.grade(submission[0], ca):
+    correct = ["correct"]
+else:
+    correct = ["incorrect"]
+</answer>
+        </customresponse>
+        <solution>
+          <img src="/static/images/ps0_p4b/ps0_p4b_dnd_sol_4LZY5F.png"/>
+        </solution>
+      </span>
+    </li>
+  </ul>
+</problem>

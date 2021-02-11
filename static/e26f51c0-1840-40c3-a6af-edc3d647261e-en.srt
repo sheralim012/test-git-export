@@ -1,0 +1,208 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:02,000
+With probability distributions, we
+
+2
+00:00:02,000 --> 00:00:03,000
+don't know what the state is.
+
+3
+00:00:03,000 --> 00:00:06,000
+But there is something else we take for granted,
+
+4
+00:00:06,000 --> 00:00:08,000
+which is the basis.
+
+5
+00:00:08,000 --> 00:00:10,000
+So if I have a class system, there's
+
+6
+00:00:10,000 --> 00:00:12,000
+no possibility of superposition.
+
+7
+00:00:12,000 --> 00:00:15,000
+I just have some discrete states, which are all
+
+8
+00:00:15,000 --> 00:00:18,000
+perfectly distinguishable.
+
+9
+00:00:18,000 --> 00:00:21,000
+And I can think about that as being a quantum system where
+
+10
+00:00:21,000 --> 00:00:24,000
+I've just fixed a basis, and I'm only
+
+11
+00:00:24,000 --> 00:00:26,000
+going to consider basis states.
+
+12
+00:00:26,000 --> 00:00:34,000
+So I can say that classical state
+
+13
+00:00:34,000 --> 00:00:43,000
+x corresponds to quantum state ket x, where, let's say,
+
+14
+00:00:43,000 --> 00:00:55,000
+1, 2 through d are some fixed orthonormal basis.
+
+15
+00:00:55,000 --> 00:01:01,000
+
+
+16
+00:01:01,000 --> 00:01:04,000
+So this is a way in which quantum theory
+
+17
+00:01:04,000 --> 00:01:05,000
+can be thought of as generalizing
+
+18
+00:01:05,000 --> 00:01:07,000
+deterministic classical theory.
+
+19
+00:01:07,000 --> 00:01:09,000
+In other words, get rid of the superposition
+
+20
+00:01:09,000 --> 00:01:12,000
+and then it looks classical.
+
+21
+00:01:12,000 --> 00:01:15,000
+I can now take these quantum states
+
+22
+00:01:15,000 --> 00:01:17,000
+and consider probability distributions over them.
+
+23
+00:01:17,000 --> 00:01:20,000
+So suppose I have state x with probability P sub x.
+
+24
+00:01:20,000 --> 00:01:26,000
+
+
+25
+00:01:26,000 --> 00:01:40,000
+So if I have an ensemble where state ket 1 appears
+
+26
+00:01:40,000 --> 00:01:50,000
+with probability P1, ket with probability P2,
+
+27
+00:01:50,000 --> 00:01:53,000
+ket d with probability P sub d, then
+
+28
+00:01:53,000 --> 00:01:55,000
+I can talk about the corresponding density matrix.
+
+29
+00:01:55,000 --> 00:01:59,000
+
+
+30
+00:01:59,000 --> 00:02:04,000
+And it simply looks like rho is sum from x
+
+31
+00:02:04,000 --> 00:02:12,000
+is 1 to d Px ket x bra x.
+
+32
+00:02:12,000 --> 00:02:15,000
+And these are different orthonormal states.
+
+33
+00:02:15,000 --> 00:02:23,000
+So that just looks like writing the probability distribution,
+
+34
+00:02:23,000 --> 00:02:26,000
+the Ps, down the diagonal of some matrix
+
+35
+00:02:26,000 --> 00:02:30,000
+and putting zeros on the off diagonal.
+
+36
+00:02:30,000 --> 00:02:38,000
+We can also write it in Matlab notation which is as diag of p.
+
+37
+00:02:38,000 --> 00:02:43,000
+So if you are not familiar with Matlab, if p is a vector,
+
+38
+00:02:43,000 --> 00:02:47,000
+then diag of p creates a matrix with the entries of that vector
+
+39
+00:02:47,000 --> 00:02:49,000
+along the diagonal.
+
+40
+00:02:49,000 --> 00:02:51,000
+This is actually overloaded and does other things too,
+
+41
+00:02:51,000 --> 00:02:54,000
+but let's not worry about those.
+
+42
+00:02:54,000 --> 00:02:57,000
+OK, so it's a very simple prescription
+
+43
+00:02:57,000 --> 00:02:59,000
+for turning a probability distribution into a density
+
+44
+00:02:59,000 --> 00:03:00,000
+matrix.
+
+45
+00:03:00,000 --> 00:03:04,000
+Just write it along the diagonal and add zeros everywhere else.
+
+46
+00:03:04,000 --> 00:03:06,000
+Just like for pure states, we're kind
+
+47
+00:03:06,000 --> 00:03:09,000
+of adding more degrees of freedom that we're not using.
+
+48
+00:03:09,000 --> 00:03:11,000
+We have all these zeros in the matrix.
+
+49
+00:03:11,000 --> 00:03:13,000
+But that's the price, we pay for embedding
+
+50
+00:03:13,000 --> 00:03:17,000
+into a larger theory that is a simultaneous generalization
+
+51
+00:03:17,000 --> 00:03:20,000
+
+

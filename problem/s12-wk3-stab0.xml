@@ -1,0 +1,128 @@
+<problem linenum="447" tex_filename="./week3_4_ps2a.tex" attempts="10" display_name="Elementary stabilizers" max_attempts="10">
+  <script>
+import qpython4
+qpython4.define_qpython4_globals(globals())
+
+
+</script>
+  <p>
+Stabilizers are one of the most useful way to describe states and transformations in quantum information. In this problem we epxlore some descriptions of basic stabilizer states. </p>
+  <p>
+Recall that if an [mathjaxinline]n[/mathjaxinline]-qubit state [mathjaxinline]|\psi \rangle[/mathjaxinline] is stabilized by [mathjaxinline]S = \langle  g_1, g_2, \ldots , g_ n \rangle[/mathjaxinline], then [mathjaxinline]g|\psi \rangle  = |\psi \rangle[/mathjaxinline] for all [mathjaxinline]g\in S[/mathjaxinline]. Note that [mathjaxinline]g_1, g_2, \ldots , g_ n[/mathjaxinline] are the <em>generators</em> of [mathjaxinline]S[/mathjaxinline]. </p>
+  <p>
+Give stabilizer generator sets for the following states (normalizations suppressed). Enter each set as a list of stabilizers, eg <tt class="tt">[XI,IX]</tt>: </p>
+  <ul class="itemize">
+    <li>
+      <p>
+        <p style="display:inline">[mathjaxinline]|0\rangle +i|1\rangle ~[/mathjaxinline]: </p>
+        <customresponse cfn="check_stabilizer_generators" inline="1" expect="See solutions" options="nq=0;state=|0&amp;gt;+i*|1&amp;gt;" cfn_extra_args="options">
+          <textline size="40" correct_answer="See solutions" inline="1"/>
+        </customresponse>
+      </p>
+      <p>
+        <solution>
+          <p>
+            <b>Solution:</b>
+          </p>
+          <span>[mathjaxinline][Y][/mathjaxinline] </span>
+        </solution>
+      </p>
+    </li>
+    <li>
+      <p>
+        <p style="display:inline">[mathjaxinline]|1\rangle ~[/mathjaxinline]: </p>
+        <customresponse cfn="check_stabilizer_generators" inline="1" expect="See solutions" options="nq=0;state=|1&amp;gt;" cfn_extra_args="options">
+          <textline size="40" correct_answer="See solutions" inline="1"/>
+        </customresponse>
+      </p>
+      <p>
+        <solution>
+          <p>
+            <b>Solution:</b>
+          </p>
+          <span>[mathjaxinline][-Z][/mathjaxinline] </span>
+        </solution>
+      </p>
+    </li>
+    <li>
+      <p>
+        <p style="display:inline">[mathjaxinline]|00\rangle +|11\rangle ~[/mathjaxinline]: </p>
+        <customresponse cfn="check_stabilizer_generators" inline="1" expect="See solutions" options="nq=0;state=|00&amp;gt;+|11&amp;gt;" cfn_extra_args="options">
+          <textline size="40" correct_answer="See solutions" inline="1"/>
+        </customresponse>
+      </p>
+      <p>
+        <solution>
+          <p>
+            <b>Solution:</b>
+          </p>
+          <span>[mathjaxinline][XX,ZZ][/mathjaxinline] </span>
+        </solution>
+      </p>
+    </li>
+    <li>
+      <p>
+        <p style="display:inline">[mathjaxinline]|00\rangle -|11\rangle ~[/mathjaxinline]: </p>
+        <customresponse cfn="check_stabilizer_generators" inline="1" expect="See solutions" options="nq=0;state=|00&amp;gt;-|11&amp;gt;" cfn_extra_args="options">
+          <textline size="40" correct_answer="See solutions" inline="1"/>
+        </customresponse>
+      </p>
+      <p>
+        <solution>
+          <p>
+            <b>Solution:</b>
+          </p>
+          <span>[mathjaxinline][-XX,ZZ][/mathjaxinline] </span>
+        </solution>
+      </p>
+    </li>
+    <li>
+      <p>
+        <p style="display:inline">[mathjaxinline]|01\rangle +|10\rangle ~[/mathjaxinline]: </p>
+        <customresponse cfn="check_stabilizer_generators" inline="1" expect="See solutions" options="nq=0;state=|01&amp;gt;+|10&amp;gt;" cfn_extra_args="options">
+          <textline size="40" correct_answer="See solutions" inline="1"/>
+        </customresponse>
+      </p>
+      <p>
+        <solution>
+          <p>
+            <b>Solution:</b>
+          </p>
+          <span>[mathjaxinline][XX,-ZZ][/mathjaxinline] </span>
+        </solution>
+      </p>
+    </li>
+    <li>
+      <p>
+        <p style="display:inline">[mathjaxinline]|01\rangle -|10\rangle ~[/mathjaxinline]: </p>
+        <customresponse cfn="check_stabilizer_generators" inline="1" expect="See solutions" options="nq=0;state=|01&amp;gt;-|10&amp;gt;" cfn_extra_args="options">
+          <textline size="40" correct_answer="See solutions" inline="1"/>
+        </customresponse>
+      </p>
+      <p>
+        <solution>
+          <p>
+            <b>Solution:</b>
+          </p>
+          <span>[mathjaxinline][-XX,-ZZ][/mathjaxinline] </span>
+        </solution>
+      </p>
+    </li>
+    <li>
+      <p>
+        <p style="display:inline">[mathjaxinline]|000\rangle +|111\rangle ~[/mathjaxinline]: </p>
+        <customresponse cfn="check_stabilizer_generators" inline="1" expect="See solutions" options="nq=0;state=|000&amp;gt;+|111&amp;gt;" cfn_extra_args="options">
+          <textline size="40" correct_answer="See solutions" inline="1"/>
+        </customresponse>
+      </p>
+      <p>
+        <solution>
+          <p>
+            <b>Solution:</b>
+          </p>
+          <span>[mathjaxinline][XXX,ZZI,IZZ][/mathjaxinline] </span>
+        </solution>
+      </p>
+    </li>
+  </ul>
+</problem>

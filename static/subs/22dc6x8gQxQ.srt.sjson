@@ -1,0 +1,38 @@
+{
+    "start": [
+        0, 
+        0, 
+        3000, 
+        7000, 
+        10000, 
+        12000, 
+        15000, 
+        17000, 
+        18000, 
+        22000
+    ], 
+    "end": [
+        0, 
+        3000, 
+        7000, 
+        10000, 
+        12000, 
+        15000, 
+        17000, 
+        18000, 
+        22000, 
+        26000
+    ], 
+    "text": [
+        "", 
+        "This computational capacity idea that I'll describe", 
+        "sets the stage for describing how", 
+        "you can build a classical computer out", 
+        "of noisy components.", 
+        "And we'll describe that in terms of a concept known", 
+        "as a threshold.", 
+        "Then I will describe the principles", 
+        "which make this possible for classical computation.", 
+        ""
+    ]
+}

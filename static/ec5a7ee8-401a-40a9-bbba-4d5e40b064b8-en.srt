@@ -1,0 +1,496 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:03,000
+Let me talk about the Stinespring representation
+
+2
+00:00:03,000 --> 00:00:05,000
+of channels.
+
+3
+00:00:05,000 --> 00:00:07,000
+By the way, I'm writing operations,
+
+4
+00:00:07,000 --> 00:00:09,000
+but I'm saying channels.
+
+5
+00:00:09,000 --> 00:00:13,000
+I mix these up in my head because we often
+
+6
+00:00:13,000 --> 00:00:14,000
+talk about a quantum channel as something that
+
+7
+00:00:14,000 --> 00:00:17,000
+takes an input in one place and maps it
+
+8
+00:00:17,000 --> 00:00:19,000
+as an output to somewhere else.
+
+9
+00:00:19,000 --> 00:00:21,000
+It's exactly the same thing as a quantum operation.
+
+10
+00:00:21,000 --> 00:00:25,000
+The two words that mean the same thing.
+
+11
+00:00:25,000 --> 00:00:29,000
+So one way of thinking about quantum operations
+
+12
+00:00:29,000 --> 00:00:32,000
+is to go back to the Schrodinger equation.
+
+13
+00:00:32,000 --> 00:00:34,000
+And the Schrondinger equation says
+
+14
+00:00:34,000 --> 00:00:37,000
+that all dynamics in the universe are unitary.
+
+15
+00:00:37,000 --> 00:00:41,000
+
+
+16
+00:00:41,000 --> 00:00:50,000
+So physical dynamics are unitary.
+
+17
+00:00:50,000 --> 00:00:53,000
+
+
+18
+00:00:53,000 --> 00:01:00,000
+In other words, if you have a state psi, it evolves to U psi
+
+19
+00:01:00,000 --> 00:01:04,000
+If you have the outer product of psi with itself,
+
+20
+00:01:04,000 --> 00:01:06,000
+the ket evolves with the U acting on it
+
+21
+00:01:06,000 --> 00:01:11,000
+at the left, the bra with a dagger on the right.
+
+22
+00:01:11,000 --> 00:01:20,000
+So a density matrix in general evolves like this.
+
+23
+00:01:20,000 --> 00:01:23,000
+So this is what the Schrodinger equation says.
+
+24
+00:01:23,000 --> 00:01:25,000
+It's a crucial feature of quantum theory
+
+25
+00:01:25,000 --> 00:01:28,000
+that it does not destroy information.
+
+26
+00:01:28,000 --> 00:01:30,000
+There is now-- or create information.
+
+27
+00:01:30,000 --> 00:01:32,000
+The amount of information is preserved.
+
+28
+00:01:32,000 --> 00:01:35,000
+There are people searching for maybe exceptions
+
+29
+00:01:35,000 --> 00:01:37,000
+to this that might arise with general relativity
+
+30
+00:01:37,000 --> 00:01:38,000
+in black holes.
+
+31
+00:01:38,000 --> 00:01:42,000
+But in general, in ordinary circumstances,
+
+32
+00:01:42,000 --> 00:01:44,000
+we think that quantum mechanics does not create or destroy
+
+33
+00:01:44,000 --> 00:01:45,000
+information.
+
+34
+00:01:45,000 --> 00:01:47,000
+So this looks like the end of the story.
+
+35
+00:01:47,000 --> 00:01:49,000
+That's what we have for pure states.
+
+36
+00:01:49,000 --> 00:01:52,000
+Maybe it should be the same for density matrices.
+
+37
+00:01:52,000 --> 00:01:55,000
+But when you're working with physical systems in the lab,
+
+38
+00:01:55,000 --> 00:01:58,000
+or in trying to build a quantum computer,
+
+39
+00:01:58,000 --> 00:02:02,000
+we observe things all the time that do not look unitary.
+
+40
+00:02:02,000 --> 00:02:06,000
+And the reason is, this is true for a closed system.
+
+41
+00:02:06,000 --> 00:02:13,000
+
+
+42
+00:02:13,000 --> 00:02:17,000
+But we often bring in a new system
+
+43
+00:02:17,000 --> 00:02:20,000
+that we haven't previously been considering,
+
+44
+00:02:20,000 --> 00:02:21,000
+or we throw away part of the system
+
+45
+00:02:21,000 --> 00:02:24,000
+that we had been looking at.
+
+46
+00:02:24,000 --> 00:02:33,000
+So if we add a system, this looks
+
+47
+00:02:33,000 --> 00:02:36,000
+like tensoring on a new state.
+
+48
+00:02:36,000 --> 00:02:51,000
+Or if we discard a subsystem, let's say
+
+49
+00:02:51,000 --> 00:02:54,000
+our original state was defined on systems A and B,
+
+50
+00:02:54,000 --> 00:02:56,000
+then we perform the partial trace
+
+51
+00:02:56,000 --> 00:02:59,000
+and discard one of the subsystems.
+
+52
+00:02:59,000 --> 00:03:05,000
+We can write this as rho A. And if you
+
+53
+00:03:05,000 --> 00:03:07,000
+haven't seen the explicit formula for this,
+
+54
+00:03:07,000 --> 00:03:11,000
+it involves applying the trace map just
+
+55
+00:03:11,000 --> 00:03:13,000
+to the second of the two systems.
+
+56
+00:03:13,000 --> 00:03:17,000
+So we could write this as sum over
+
+57
+00:03:17,000 --> 00:03:26,000
+a basis for system B of identity on A, tensor ket B on system B,
+
+58
+00:03:26,000 --> 00:03:35,000
+row AB identity on system A. Sorry, this is bra B
+
+59
+00:03:35,000 --> 00:03:38,000
+and this is ket B on system B. So this
+
+60
+00:03:38,000 --> 00:03:43,000
+corresponds to discarding one of two systems.
+
+61
+00:03:43,000 --> 00:03:48,000
+Another way we can write it is as the identity map
+
+62
+00:03:48,000 --> 00:04:02,000
+on system A, tensor the trace map on system B.
+
+63
+00:04:02,000 --> 00:04:04,000
+So these are all ways of describing
+
+64
+00:04:04,000 --> 00:04:07,000
+what happens when we have a composite system
+
+65
+00:04:07,000 --> 00:04:08,000
+and we throw away part of it.
+
+66
+00:04:08,000 --> 00:04:14,000
+
+
+67
+00:04:14,000 --> 00:04:16,000
+Just a note about the formalism.
+
+68
+00:04:16,000 --> 00:04:22,000
+When I write-- these maps I'm considering are in general maps
+
+69
+00:04:22,000 --> 00:04:27,000
+from density matrices to density matrices.
+
+70
+00:04:27,000 --> 00:04:30,000
+So I'll define a little bit of notation.
+
+71
+00:04:30,000 --> 00:04:33,000
+
+
+72
+00:04:33,000 --> 00:04:40,000
+So let's say that A and B are vector spaces.
+
+73
+00:04:40,000 --> 00:04:42,000
+These are where the states live.
+
+74
+00:04:42,000 --> 00:04:55,000
+Let me define L of A, L of B to be linear operators on A or B.
+
+75
+00:04:55,000 --> 00:04:59,000
+So these are linear operators or matrices on these systems.
+
+76
+00:04:59,000 --> 00:05:06,000
+So a density matrix would live in this space L of A or L of B.
+
+77
+00:05:06,000 --> 00:05:10,000
+And what we're looking at are maps that take density matrices
+
+78
+00:05:10,000 --> 00:05:11,000
+to other density matrices.
+
+79
+00:05:11,000 --> 00:05:13,000
+So you could view these-- actually,
+
+80
+00:05:13,000 --> 00:05:14,000
+I'll define one more thing.
+
+81
+00:05:14,000 --> 00:05:24,000
+So L of A, B is linear operators from A to B.
+
+82
+00:05:24,000 --> 00:05:29,000
+And so if we define L of L of A, L of B,
+
+83
+00:05:29,000 --> 00:05:39,000
+that means linear operators from L of A to L of B.
+
+84
+00:05:39,000 --> 00:05:41,000
+So you take in a matrix on system A,
+
+85
+00:05:41,000 --> 00:05:45,000
+and you output a matrix on system B.
+
+86
+00:05:45,000 --> 00:05:55,000
+These are sometimes called superoperators, a physics
+
+87
+00:05:55,000 --> 00:05:56,000
+versus math perspective.
+
+88
+00:05:56,000 --> 00:05:59,000
+The math perspective is these are all just operators.
+
+89
+00:05:59,000 --> 00:06:01,000
+They just operate on different vector spaces.
+
+90
+00:06:01,000 --> 00:06:03,000
+A more physicist way of saying it
+
+91
+00:06:03,000 --> 00:06:06,000
+is that you have vectors, and then operators,
+
+92
+00:06:06,000 --> 00:06:09,000
+and then superoperators, and there's more of a hierarchy.
+
+93
+00:06:09,000 --> 00:06:11,000
+They're both valid ways of thinking about it
+
+94
+00:06:11,000 --> 00:06:15,000
+that you will encounter in different settings.
+
+95
+00:06:15,000 --> 00:06:22,000
+So with the partial traces is a linear map
+
+96
+00:06:22,000 --> 00:06:30,000
+from density matrices on A tensor B
+
+97
+00:06:30,000 --> 00:06:33,000
+to density matrices only on system A.
+
+98
+00:06:33,000 --> 00:06:37,000
+So the input is a density matrix on systems A and B,
+
+99
+00:06:37,000 --> 00:06:41,000
+the output is a density matrix just on system B.
+
+100
+00:06:41,000 --> 00:06:47,000
+So hopefully, that makes all these equations--
+
+101
+00:06:47,000 --> 00:06:50,000
+makes it clear what systems we're acting on.
+
+102
+00:06:50,000 --> 00:06:52,000
+And so in this final line here, when
+
+103
+00:06:52,000 --> 00:06:55,000
+I write identity sub-A what I mean
+
+104
+00:06:55,000 --> 00:06:59,000
+is the identity superoperator, the identity that
+
+105
+00:06:59,000 --> 00:07:02,000
+takes a matrix on system A and spits out
+
+106
+00:07:02,000 --> 00:07:05,000
+the same matrix on system A.
+
+107
+00:07:05,000 --> 00:07:07,000
+What about the trace map on system B?
+
+108
+00:07:07,000 --> 00:07:11,000
+So the input of this is L of B, operators,
+
+109
+00:07:11,000 --> 00:07:14,000
+matrices on system B. What is the output--
+
+110
+00:07:14,000 --> 00:07:18,000
+what space is in the output of the trace map?
+
+111
+00:07:18,000 --> 00:07:23,000
+
+
+112
+00:07:23,000 --> 00:07:24,000
+I heard some-- yeah?
+
+113
+00:07:24,000 --> 00:07:25,000
+Complex numbers?
+
+114
+00:07:25,000 --> 00:07:26,000
+Complex numbers.
+
+115
+00:07:26,000 --> 00:07:26,000
+Exactly.
+
+116
+00:07:26,000 --> 00:07:30,000
+So the trace takes a matrix here on system B
+
+117
+00:07:30,000 --> 00:07:32,000
+and spits out just a complex number.
+
+118
+00:07:32,000 --> 00:07:35,000
+And so I don't write L of A tensor product complex numbers,
+
+119
+00:07:35,000 --> 00:07:38,000
+because tensoring on just a one-dimensional space
+
+120
+00:07:38,000 --> 00:07:39,000
+doesn't do anything.
+
+121
+00:07:39,000 --> 00:07:41,000
+But that's effectively what I have here.
+
+122
+00:07:41,000 --> 00:07:44,000
+And so we have this part leaves A alone.
+
+123
+00:07:44,000 --> 00:07:48,000
+
+

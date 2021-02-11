@@ -1,0 +1,536 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:02,000
+The proof of this law will take us a little while,
+
+2
+00:00:02,000 --> 00:00:04,000
+but in the course of it we'll learn about the Clifford group
+
+3
+00:00:04,000 --> 00:00:07,000
+and about code transformations in general.
+
+4
+00:00:07,000 --> 00:00:10,000
+So before I get into all of that,
+
+5
+00:00:10,000 --> 00:00:13,000
+let me just argue about this point here.
+
+6
+00:00:13,000 --> 00:00:16,000
+That if I multiply the code space by a unitary,
+
+7
+00:00:16,000 --> 00:00:21,000
+that's the same as rotating the stabilizer group in this way.
+
+8
+00:00:21,000 --> 00:00:31,000
+So let's remember we have Vs is a set of all psi such
+
+9
+00:00:31,000 --> 00:00:39,000
+that g psi equals psi for all g in s.
+
+10
+00:00:39,000 --> 00:00:40,000
+So suppose we have UVs.
+
+11
+00:00:40,000 --> 00:00:44,000
+
+
+12
+00:00:44,000 --> 00:00:47,000
+What can we say about this?
+
+13
+00:00:47,000 --> 00:00:51,000
+So this is the set of all U psi such that g
+
+14
+00:00:51,000 --> 00:00:57,000
+psi equals psi for all g in s.
+
+15
+00:00:57,000 --> 00:00:58,000
+So we just take everything in the code space
+
+16
+00:00:58,000 --> 00:01:03,000
+and multiply it by a unitary.
+
+17
+00:01:03,000 --> 00:01:17,000
+And now if we act on U psi with Ug U dagger,
+
+18
+00:01:17,000 --> 00:01:18,000
+what's going to happen?
+
+19
+00:01:18,000 --> 00:01:20,000
+The U dagger U will cancel out.
+
+20
+00:01:20,000 --> 00:01:23,000
+g acts trivially on psi.
+
+21
+00:01:23,000 --> 00:01:27,000
+So we're left with Ug psi, which is just equal to U psi.
+
+22
+00:01:27,000 --> 00:01:32,000
+
+
+23
+00:01:32,000 --> 00:01:45,000
+So what this means is that UVs is stabilized by Ug U dagger
+
+24
+00:01:45,000 --> 00:01:48,000
+for all g in s.
+
+25
+00:01:48,000 --> 00:01:54,000
+
+
+26
+00:01:54,000 --> 00:01:56,000
+And in fact, you can run the argument backwards,
+
+27
+00:01:56,000 --> 00:01:59,000
+and you can argue that not only is this stabilized
+
+28
+00:01:59,000 --> 00:02:03,000
+by all of these elements, this is in fact
+
+29
+00:02:03,000 --> 00:02:05,000
+the set of vectors which is stabilized
+
+30
+00:02:05,000 --> 00:02:07,000
+by all of these elements.
+
+31
+00:02:07,000 --> 00:02:12,000
+So UVs is equal to U--
+
+32
+00:02:12,000 --> 00:02:16,000
+sorry, V us u dagger.
+
+33
+00:02:16,000 --> 00:02:21,000
+
+
+34
+00:02:21,000 --> 00:02:33,000
+So this gives us a powerful way of understanding
+
+35
+00:02:33,000 --> 00:02:36,000
+code transformations.
+
+36
+00:02:36,000 --> 00:02:48,000
+So to understand code transformations,
+
+37
+00:02:48,000 --> 00:02:58,000
+we can just act on S by conjugation.
+
+38
+00:02:58,000 --> 00:03:01,000
+Map S to Us U dagger.
+
+39
+00:03:01,000 --> 00:03:04,000
+I hope it's clear, this kind of set notation.
+
+40
+00:03:04,000 --> 00:03:07,000
+U is a matrix, S is a set.
+
+41
+00:03:07,000 --> 00:03:09,000
+So what I mean by this is take every element of the set
+
+42
+00:03:09,000 --> 00:03:12,000
+and multiply on the left by U and on the right by U dagger.
+
+43
+00:03:12,000 --> 00:03:19,000
+
+
+44
+00:03:19,000 --> 00:03:36,000
+So my claim boils down to saying that for any stabilizer group
+
+45
+00:03:36,000 --> 00:03:46,000
+S, there exists U such that Us U dagger
+
+46
+00:03:46,000 --> 00:03:48,000
+is equal to Z1 through Z n minus k.
+
+47
+00:03:48,000 --> 00:03:51,000
+
+
+48
+00:03:51,000 --> 00:03:57,000
+And before I prove this, let me argue
+
+49
+00:03:57,000 --> 00:04:01,000
+why this should be plausible.
+
+50
+00:04:01,000 --> 00:04:06,000
+Or maybe another way of saying it is let me give you
+
+51
+00:04:06,000 --> 00:04:10,000
+a good way, a quick check, to make sure the statement is not
+
+52
+00:04:10,000 --> 00:04:12,000
+immediately absurd.
+
+53
+00:04:12,000 --> 00:04:20,000
+So one thing to know about when you conjugate by a unitary
+
+54
+00:04:20,000 --> 00:04:22,000
+is a lot of things can change when
+
+55
+00:04:22,000 --> 00:04:23,000
+you conjugate by a unitary.
+
+56
+00:04:23,000 --> 00:04:25,000
+But some things don't.
+
+57
+00:04:25,000 --> 00:04:28,000
+The eigen basis does not change.
+
+58
+00:04:28,000 --> 00:04:30,000
+I'm sorry, the eigenvalues do not change.
+
+59
+00:04:30,000 --> 00:04:32,000
+The eigen basis will change.
+
+60
+00:04:32,000 --> 00:04:34,000
+The eigenvalues will remain the same.
+
+61
+00:04:34,000 --> 00:04:37,000
+So S is a group of polys.
+
+62
+00:04:37,000 --> 00:04:39,000
+Eigenvalues are all plus or minus 1.
+
+63
+00:04:39,000 --> 00:04:41,000
+Over here, eigenvalues are all plus or minus 1.
+
+64
+00:04:41,000 --> 00:04:42,000
+Good for that.
+
+65
+00:04:42,000 --> 00:04:44,000
+That should reassure us.
+
+66
+00:04:44,000 --> 00:04:47,000
+But the other thing which is a little more complicated
+
+67
+00:04:47,000 --> 00:04:50,000
+that conjugation will not change is whether two vectors--
+
+68
+00:04:50,000 --> 00:04:54,000
+sorry, two matrices commute or anti-commute.
+
+69
+00:04:54,000 --> 00:04:58,000
+So if gh is equal to plus or minus hg,
+
+70
+00:04:58,000 --> 00:05:06,000
+then Ug U dagger Uh U dagger will equal plus or minus Uh U
+
+71
+00:05:06,000 --> 00:05:09,000
+dagger Uh U dagger.
+
+72
+00:05:09,000 --> 00:05:13,000
+
+
+73
+00:05:13,000 --> 00:05:19,000
+So commutation relations should be preserved by this map.
+
+74
+00:05:19,000 --> 00:05:24,000
+S contains all commuting operators.
+
+75
+00:05:24,000 --> 00:05:26,000
+The right hand side, also everything commutes.
+
+76
+00:05:26,000 --> 00:05:30,000
+So that's not sufficient necessarily,
+
+77
+00:05:30,000 --> 00:05:32,000
+but it should reassure us.
+
+78
+00:05:32,000 --> 00:05:33,000
+If that failed, then that would already
+
+79
+00:05:33,000 --> 00:05:38,000
+mean that such a transformation is impossible.
+
+80
+00:05:38,000 --> 00:05:45,000
+And so doing these sanity checks can convince us
+
+81
+00:05:45,000 --> 00:05:48,000
+that this claim is at least not immediately ruled out.
+
+82
+00:05:48,000 --> 00:05:51,000
+
+
+83
+00:05:51,000 --> 00:05:54,000
+And what's surprising-- or I shouldn't tell you
+
+84
+00:05:54,000 --> 00:05:55,000
+what's surprising--
+
+85
+00:05:55,000 --> 00:05:57,000
+what may surprise you, which is, I think,
+
+86
+00:05:57,000 --> 00:06:01,000
+interesting, is that for polys, this is enough.
+
+87
+00:06:01,000 --> 00:06:13,000
+So it turns out that if I have some collection of polys,
+
+88
+00:06:13,000 --> 00:06:26,000
+P1 through Pk and Q1 through Qk have the same commutation
+
+89
+00:06:26,000 --> 00:06:27,000
+relations.
+
+90
+00:06:27,000 --> 00:06:32,000
+
+
+91
+00:06:32,000 --> 00:06:35,000
+Then there exists some U such that Qi
+
+92
+00:06:35,000 --> 00:06:39,000
+is equal to U Pi U dagger.
+
+93
+00:06:39,000 --> 00:06:45,000
+
+
+94
+00:06:45,000 --> 00:06:48,000
+So in other words, this is actually a generalization
+
+95
+00:06:48,000 --> 00:06:49,000
+of what I said.
+
+96
+00:06:49,000 --> 00:06:52,000
+What I said here is if I have a bunch of commuting polys,
+
+97
+00:06:52,000 --> 00:06:54,000
+then I can map them to whatever other set of commuting polys
+
+98
+00:06:54,000 --> 00:06:55,000
+I please.
+
+99
+00:06:55,000 --> 00:06:57,000
+Here, I'm saying, actually, even if some of them
+
+100
+00:06:57,000 --> 00:06:59,000
+commute and some of them anti-commute,
+
+101
+00:06:59,000 --> 00:07:02,000
+as long as the new set has the same pattern of commuting
+
+102
+00:07:02,000 --> 00:07:04,000
+and anti-commuting, then I can do this mapping.
+
+103
+00:07:04,000 --> 00:07:09,000
+
+
+104
+00:07:09,000 --> 00:07:12,000
+And I'm going to come back to this more formally later.
+
+105
+00:07:12,000 --> 00:07:14,000
+But it's worth thinking about what
+
+106
+00:07:14,000 --> 00:07:16,000
+this means in vector language.
+
+107
+00:07:16,000 --> 00:07:20,000
+So in the F2 picture, commuting or anti-commuting
+
+108
+00:07:20,000 --> 00:07:22,000
+just refers to their inner products.
+
+109
+00:07:22,000 --> 00:07:24,000
+So this says if I have a bunch of vectors
+
+110
+00:07:24,000 --> 00:07:27,000
+and I know all their inner products
+
+111
+00:07:27,000 --> 00:07:30,000
+and I have some other vectors and their inner products
+
+112
+00:07:30,000 --> 00:07:32,000
+all are the same--
+
+113
+00:07:32,000 --> 00:07:35,000
+vector 3 with vector 7, the inner product
+
+114
+00:07:35,000 --> 00:07:38,000
+is the same in the first set or the second set.
+
+115
+00:07:38,000 --> 00:07:40,000
+Then there is a transformation that
+
+116
+00:07:40,000 --> 00:07:42,000
+will map from one to the other.
+
+117
+00:07:42,000 --> 00:07:45,000
+So for real or complex vectors, this just
+
+118
+00:07:45,000 --> 00:07:46,000
+says if I have a bunch of vectors
+
+119
+00:07:46,000 --> 00:07:49,000
+and their angles are such and such,
+
+120
+00:07:49,000 --> 00:07:52,000
+if I have two such sets there is a unitary
+
+121
+00:07:52,000 --> 00:07:54,000
+or an orthogonal matrix that will map me
+
+122
+00:07:54,000 --> 00:07:55,000
+from one to the other.
+
+123
+00:07:55,000 --> 00:08:00,000
+This is a basic fact about real and complex geometry.
+
+124
+00:08:00,000 --> 00:08:03,000
+And I'm just arguing the same thing is true for F2.
+
+125
+00:08:03,000 --> 00:08:08,000
+If I have a bunch of vectors with prescribed inner products,
+
+126
+00:08:08,000 --> 00:08:11,000
+I can map them to any other set of vectors with the same set
+
+127
+00:08:11,000 --> 00:08:13,000
+of inner products.
+
+128
+00:08:13,000 --> 00:08:16,000
+And the way we'll do that math is with the Clifford group.
+
+129
+00:08:16,000 --> 00:08:17,000
+So that's the last thing I want to talk
+
+130
+00:08:17,000 --> 00:08:21,000
+about today is this set of transformations that map polys
+
+131
+00:08:21,000 --> 00:08:23,000
+to polys.
+
+132
+00:08:23,000 --> 00:08:27,000
+And I'll build up towards arguing that this is true.
+
+133
+00:08:27,000 --> 00:08:28,000
+
+

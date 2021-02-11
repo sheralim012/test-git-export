@@ -1,0 +1,332 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:04,000
+The second application, which is a pretty vast area of quantum
+
+2
+00:00:04,000 --> 00:00:10,000
+error correction, which I will barely do justice to,
+
+3
+00:00:10,000 --> 00:00:12,000
+shows you, I think, how the symplectic picture
+
+4
+00:00:12,000 --> 00:00:13,000
+can be helpful--
+
+5
+00:00:13,000 --> 00:00:16,000
+is to decoding.
+
+6
+00:00:16,000 --> 00:00:22,000
+And here, I'm really using just a symplectic picture
+
+7
+00:00:22,000 --> 00:00:24,000
+of Pauli commutation relations.
+
+8
+00:00:24,000 --> 00:00:27,000
+Here, I'm not using the Clifford group so much.
+
+9
+00:00:27,000 --> 00:00:31,000
+But I thought it fit well in this sequence.
+
+10
+00:00:31,000 --> 00:00:37,000
+So we've talked about how to define
+
+11
+00:00:37,000 --> 00:00:40,000
+an error-correcting code.
+
+12
+00:00:40,000 --> 00:00:47,000
+And then we've argued that there exists a decoding map when
+
+13
+00:00:47,000 --> 00:00:48,000
+certain conditions are met.
+
+14
+00:00:48,000 --> 00:00:53,000
+But that existence proof was not always very constructive.
+
+15
+00:00:53,000 --> 00:00:55,000
+So it didn't actually always yield
+
+16
+00:00:55,000 --> 00:00:57,000
+an algorithm for the decoding.
+
+17
+00:00:57,000 --> 00:01:01,000
+And I'm going to describe something which will bring us
+
+18
+00:01:01,000 --> 00:01:02,000
+closer to an algorithm.
+
+19
+00:01:02,000 --> 00:01:04,000
+In some cases, it'll be enough to bring us
+
+20
+00:01:04,000 --> 00:01:07,000
+to an efficient algorithm for decoding.
+
+21
+00:01:07,000 --> 00:01:10,000
+So in other words, you should be able to find the recovery
+
+22
+00:01:10,000 --> 00:01:13,000
+Pauli relatively quickly.
+
+23
+00:01:13,000 --> 00:01:17,000
+OK, so what's that going to look like?
+
+24
+00:01:17,000 --> 00:01:27,000
+Suppose I have a stabilizer code with generators given
+
+25
+00:01:27,000 --> 00:01:29,000
+by-- it's n minus k generators.
+
+26
+00:01:29,000 --> 00:01:32,000
+So it encodes k logical qubits.
+
+27
+00:01:32,000 --> 00:01:35,000
+And they're given by these strings of bits.
+
+28
+00:01:35,000 --> 00:01:43,000
+And suppose an error, sigma e occurs.
+
+29
+00:01:43,000 --> 00:01:46,000
+Or if a superposition of error occurs, and we measure,
+
+30
+00:01:46,000 --> 00:01:50,000
+then suppose we collapse onto this one.
+
+31
+00:01:50,000 --> 00:01:53,000
+So what do we do to decode it?
+
+32
+00:01:53,000 --> 00:01:56,000
+So remember I said that we measure all the stabilizers.
+
+33
+00:01:56,000 --> 00:01:59,000
+And we get a string of measurement outcomes,
+
+34
+00:01:59,000 --> 00:02:03,000
+plus or minus 1, that we call "the syndrome."
+
+35
+00:02:03,000 --> 00:02:10,000
+So we measure the stabilizer generators.
+
+36
+00:02:10,000 --> 00:02:12,000
+They commute, so we can measure them in any order.
+
+37
+00:02:12,000 --> 00:02:15,000
+
+
+38
+00:02:15,000 --> 00:02:18,000
+And we get outcomes--
+
+39
+00:02:18,000 --> 00:02:26,000
+minus 1 to the b q through minus 1 to the b and minus k.
+
+40
+00:02:26,000 --> 00:02:33,000
+And we can think of b as a vector in f 2 to the n minus k.
+
+41
+00:02:33,000 --> 00:02:37,000
+
+
+42
+00:02:37,000 --> 00:02:41,000
+OK so these outcomes, plus or minus 1,
+
+43
+00:02:41,000 --> 00:02:43,000
+will be determined by what the error is
+
+44
+00:02:43,000 --> 00:02:48,000
+and what the corresponding stabilizer generator is.
+
+45
+00:02:48,000 --> 00:02:50,000
+So let's look at the i-th outcome.
+
+46
+00:02:50,000 --> 00:02:54,000
+b sub i tells us if the i-th measurement, the measurement
+
+47
+00:02:54,000 --> 00:02:59,000
+of si, came out plus 1 or minus 1.
+
+48
+00:02:59,000 --> 00:03:01,000
+So how can we tell if this is going to be plus 1 or minus 1?
+
+49
+00:03:01,000 --> 00:03:05,000
+
+
+50
+00:03:05,000 --> 00:03:07,000
+What about e and s--
+
+51
+00:03:07,000 --> 00:03:08,000
+I'm sorry.
+
+52
+00:03:08,000 --> 00:03:08,000
+I'm saying, "si."
+
+53
+00:03:08,000 --> 00:03:10,000
+I should be saying, "vi".
+
+54
+00:03:10,000 --> 00:03:16,000
+What about e and vi will tell us whether this bit is 0 or 1?
+
+55
+00:03:16,000 --> 00:03:22,000
+
+
+56
+00:03:22,000 --> 00:03:24,000
+Or what about the corresponding Paulies will tell us
+
+57
+00:03:24,000 --> 00:03:25,000
+if this bit is 0 or 1?
+
+58
+00:03:25,000 --> 00:03:30,000
+
+
+59
+00:03:30,000 --> 00:03:33,000
+I think I heard the answer in various fragments.
+
+60
+00:03:33,000 --> 00:03:35,000
+Some one say it again.
+
+61
+00:03:35,000 --> 00:03:36,000
+[INAUDIBLE]
+
+62
+00:03:36,000 --> 00:03:37,000
+Right.
+
+63
+00:03:37,000 --> 00:03:42,000
+If sigma e and sigma v sub i anti-commute,
+
+64
+00:03:42,000 --> 00:03:44,000
+then what about bi?
+
+65
+00:03:44,000 --> 00:03:46,000
+[INAUDIBLE]
+
+66
+00:03:46,000 --> 00:03:48,000
+Then the measurement outcome will be negative 1.
+
+67
+00:03:48,000 --> 00:03:49,000
+Exactly.
+
+68
+00:03:49,000 --> 00:03:50,000
+And I've done it so the measurement
+
+69
+00:03:50,000 --> 00:03:52,000
+outcomes are plus or minus 1.
+
+70
+00:03:52,000 --> 00:03:54,000
+And so the exponents would be 0 or 1.
+
+71
+00:03:54,000 --> 00:03:55,000
+So in that case, bi would be 1.
+
+72
+00:03:55,000 --> 00:04:04,000
+So in this case, it would be 0 if sigma e sigma vi commute, 1
+
+73
+00:04:04,000 --> 00:04:10,000
+if they anti-commute.
+
+74
+00:04:10,000 --> 00:04:10,000
+OK good.
+
+75
+00:04:10,000 --> 00:04:15,000
+So there's a formula for this in terms of the vectors e and vi.
+
+76
+00:04:15,000 --> 00:04:20,000
+And that formula is just vi transpose lambda e.
+
+77
+00:04:20,000 --> 00:04:23,000
+
+
+78
+00:04:23,000 --> 00:04:26,000
+So this syndrome bit can be written
+
+79
+00:04:26,000 --> 00:04:29,000
+in terms of the symplectic inner product.
+
+80
+00:04:29,000 --> 00:04:31,000
+It's basically just a symplectic inner product
+
+81
+00:04:31,000 --> 00:04:36,000
+of your error vector e with your stabilizer vector vi.
+
+82
+00:04:36,000 --> 00:04:37,000
+
+

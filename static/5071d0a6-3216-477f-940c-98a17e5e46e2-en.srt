@@ -1,0 +1,536 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:03,000
+There's something that we did here where we kind of-- it
+
+2
+00:00:03,000 --> 00:00:06,000
+looked more beautiful than we needed, in a sense.
+
+3
+00:00:06,000 --> 00:00:09,000
+So what we needed is, when there's an error,
+
+4
+00:00:09,000 --> 00:00:11,000
+you can figure it out and correct the error.
+
+5
+00:00:11,000 --> 00:00:16,000
+But what we got is every error you can figure out
+
+6
+00:00:16,000 --> 00:00:19,000
+exactly which one it is, and each one
+
+7
+00:00:19,000 --> 00:00:21,000
+leads to a distinct syndrome.
+
+8
+00:00:21,000 --> 00:00:24,000
+And this property is called being non-degenerate.
+
+9
+00:00:24,000 --> 00:00:37,000
+So a non-degenerate code means that any correctable error
+
+10
+00:00:37,000 --> 00:00:44,000
+leads to a distinct syndrome.
+
+11
+00:00:44,000 --> 00:00:48,000
+And from what I've argued, that seems pretty necessary, right?
+
+12
+00:00:48,000 --> 00:00:53,000
+Because if there are two errors that lead to the same syndrome,
+
+13
+00:00:53,000 --> 00:00:54,000
+I cannot distinguish them.
+
+14
+00:00:54,000 --> 00:00:58,000
+So my recovery cannot do anything different.
+
+15
+00:00:58,000 --> 00:01:00,000
+And yet-- so let me just define a degenerate code--
+
+16
+00:01:00,000 --> 00:01:08,000
+
+
+17
+00:01:08,000 --> 00:01:18,000
+sometimes different errors have the same syndrome.
+
+18
+00:01:18,000 --> 00:01:23,000
+
+
+19
+00:01:23,000 --> 00:01:27,000
+So at its face, that does not sound good,
+
+20
+00:01:27,000 --> 00:01:29,000
+because I cannot distinguish these errors.
+
+21
+00:01:29,000 --> 00:01:32,000
+
+
+22
+00:01:32,000 --> 00:01:33,000
+And that is true, right?
+
+23
+00:01:33,000 --> 00:01:35,000
+If I have two errors, E1 and E2, they
+
+24
+00:01:35,000 --> 00:01:37,000
+give rise to the same syndrome.
+
+25
+00:01:37,000 --> 00:01:40,000
+When I correct it, maybe I'm undoing E1,
+
+26
+00:01:40,000 --> 00:01:42,000
+or maybe I'm undoing E2.
+
+27
+00:01:42,000 --> 00:01:45,000
+So let's suppose this happens.
+
+28
+00:01:45,000 --> 00:01:53,000
+So suppose E1 and E2 are different,
+
+29
+00:01:53,000 --> 00:02:00,000
+and they have the same syndrome.
+
+30
+00:02:00,000 --> 00:02:03,000
+Then when I correct--
+
+31
+00:02:03,000 --> 00:02:17,000
+and suppose E1 happens, and I apply E2.
+
+32
+00:02:17,000 --> 00:02:20,000
+Let's say E2 done.
+
+33
+00:02:20,000 --> 00:02:26,000
+So what happens is psi gets mapped to E1 psi, and in turn
+
+34
+00:02:26,000 --> 00:02:29,000
+to E2 dagger, e1 psi.
+
+35
+00:02:29,000 --> 00:02:32,000
+
+
+36
+00:02:32,000 --> 00:02:36,000
+So it sounds like I'm laying out the problem
+
+37
+00:02:36,000 --> 00:02:38,000
+with degenerate codes.
+
+38
+00:02:38,000 --> 00:02:46,000
+Can anyone see in a reason why this might still be OK?
+
+39
+00:02:46,000 --> 00:02:47,000
+[INAUDIBLE]
+
+40
+00:02:47,000 --> 00:02:51,000
+
+
+41
+00:02:51,000 --> 00:02:52,000
+He said use the error correcting criteria,
+
+42
+00:02:52,000 --> 00:02:55,000
+which is on the right track.
+
+43
+00:02:55,000 --> 00:02:59,000
+But can you say more about that, or what you get from that?
+
+44
+00:02:59,000 --> 00:03:00,000
+[INAUDIBLE]
+
+45
+00:03:00,000 --> 00:03:10,000
+
+
+46
+00:03:10,000 --> 00:03:12,000
+Well, yes.
+
+47
+00:03:12,000 --> 00:03:15,000
+But in that case, you would want to get to zero.
+
+48
+00:03:15,000 --> 00:03:17,000
+But why you get zero is not totally obvious in this case.
+
+49
+00:03:17,000 --> 00:03:22,000
+
+
+50
+00:03:22,000 --> 00:03:28,000
+So let's just see what happens when a Pauli acts on your code.
+
+51
+00:03:28,000 --> 00:03:33,000
+That Pauli it could cause a logical error, right?
+
+52
+00:03:33,000 --> 00:03:35,000
+And then this would be a catastrophe.
+
+53
+00:03:35,000 --> 00:03:37,000
+Then this little noise happened, I
+
+54
+00:03:37,000 --> 00:03:39,000
+would have corrected it with what I thought
+
+55
+00:03:39,000 --> 00:03:41,000
+was doing the right thing.
+
+56
+00:03:41,000 --> 00:03:42,000
+But the noise plus my correction has actually
+
+57
+00:03:42,000 --> 00:03:44,000
+changed the encoded data.
+
+58
+00:03:44,000 --> 00:03:46,000
+That would be a failure of the code.
+
+59
+00:03:46,000 --> 00:03:49,000
+
+
+60
+00:03:49,000 --> 00:03:53,000
+It could in principle lead to a detectable error.
+
+61
+00:03:53,000 --> 00:03:55,000
+But it won't, because I've fixed the syndrome.
+
+62
+00:03:55,000 --> 00:03:57,000
+At the end of this process, I've restored the syndrome
+
+63
+00:03:57,000 --> 00:03:58,000
+to being all plus one.
+
+64
+00:03:58,000 --> 00:04:01,000
+So this thing right here is not going
+
+65
+00:04:01,000 --> 00:04:04,000
+to lead to some detectable error that's going
+
+66
+00:04:04,000 --> 00:04:07,000
+to violate some syndrome bits.
+
+67
+00:04:07,000 --> 00:04:10,000
+But there's another possibility which would not
+
+68
+00:04:10,000 --> 00:04:17,000
+be a failure, which is we could have E2 dagger
+
+69
+00:04:17,000 --> 00:04:20,000
+E1 in the stabilizer group.
+
+70
+00:04:20,000 --> 00:04:24,000
+So it could be that yes, I made the wrong correction.
+
+71
+00:04:24,000 --> 00:04:29,000
+But it was wrong only up to multiplying by a stabilizer.
+
+72
+00:04:29,000 --> 00:04:32,000
+And we know that these are nontrivial operators that
+
+73
+00:04:32,000 --> 00:04:36,000
+still act trivially on the code space.
+
+74
+00:04:36,000 --> 00:04:42,000
+So if I make a mistake that's off by a stabilizer generator,
+
+75
+00:04:42,000 --> 00:04:43,000
+it doesn't matter.
+
+76
+00:04:43,000 --> 00:04:48,000
+I still am essentially applying the right correction
+
+77
+00:04:48,000 --> 00:04:49,000
+for my database.
+
+78
+00:04:49,000 --> 00:04:55,000
+
+
+79
+00:04:55,000 --> 00:04:58,000
+So the five-qubit code does not have that property.
+
+80
+00:04:58,000 --> 00:05:00,000
+In fact, there's something kind of perfect
+
+81
+00:05:00,000 --> 00:05:00,000
+about the dimensions.
+
+82
+00:05:00,000 --> 00:05:03,000
+The code set space is two-dimensional.
+
+83
+00:05:03,000 --> 00:05:06,000
+The number of single-qubit errors,
+
+84
+00:05:06,000 --> 00:05:09,000
+there's three Pauli's times five qubits is 15, plus one
+
+85
+00:05:09,000 --> 00:05:11,000
+for the possibility of no error.
+
+86
+00:05:11,000 --> 00:05:13,000
+So there are 16 possible errors.
+
+87
+00:05:13,000 --> 00:05:15,000
+And so that two-dimensional space
+
+88
+00:05:15,000 --> 00:05:17,000
+just gets mapped to 16 different copies
+
+89
+00:05:17,000 --> 00:05:21,000
+for the 16 different possible errors or no error.
+
+90
+00:05:21,000 --> 00:05:23,000
+Two times 16 is 32.
+
+91
+00:05:23,000 --> 00:05:24,000
+We have five qubits.
+
+92
+00:05:24,000 --> 00:05:27,000
+So that's like a perfect non-degenerate code.
+
+93
+00:05:27,000 --> 00:05:30,000
+But degenerate codes can also be valuable,
+
+94
+00:05:30,000 --> 00:05:32,000
+because you're kind of taking advantage of the fact
+
+95
+00:05:32,000 --> 00:05:36,000
+that your stabilizer generators are sort of corrected for free.
+
+96
+00:05:36,000 --> 00:05:38,000
+If your error happens to be a stabilizer generator,
+
+97
+00:05:38,000 --> 00:05:43,000
+then just nothing happens, and you don't have to worry.
+
+98
+00:05:43,000 --> 00:05:49,000
+So let me just mention, this is five-qubit code.
+
+99
+00:05:49,000 --> 00:06:00,000
+An example of degenerate code is the nine-qubit Shor code,
+
+100
+00:06:00,000 --> 00:06:07,000
+as well as something that we'll see soon called the Toric code.
+
+101
+00:06:07,000 --> 00:06:16,000
+And in fact, it's almost necessary in a certain sense
+
+102
+00:06:16,000 --> 00:06:20,000
+for a class of code called LDPC codes.
+
+103
+00:06:20,000 --> 00:06:24,000
+OK, so LDPC is an acronym that comes from the classical coding
+
+104
+00:06:24,000 --> 00:06:24,000
+literature.
+
+105
+00:06:24,000 --> 00:06:28,000
+It means low-density parity check.
+
+106
+00:06:28,000 --> 00:06:32,000
+And what it means in the quantum case
+
+107
+00:06:32,000 --> 00:06:34,000
+is that your stabilizer generators each involve
+
+108
+00:06:34,000 --> 00:06:37,000
+a small number of qubits.
+
+109
+00:06:37,000 --> 00:06:41,000
+So imagine that your code corrects tons of errors,
+
+110
+00:06:41,000 --> 00:06:42,000
+but your stabilizers just look at--
+
+111
+00:06:42,000 --> 00:06:45,000
+I don't know, two or three or four qubits.
+
+112
+00:06:45,000 --> 00:06:47,000
+The idea is this is something which
+
+113
+00:06:47,000 --> 00:06:50,000
+is physically a lot easier to measure than something that
+
+114
+00:06:50,000 --> 00:06:52,000
+involves many of the qubits.
+
+115
+00:06:52,000 --> 00:06:55,000
+So it's physically a very desirable property of codes.
+
+116
+00:06:55,000 --> 00:06:58,000
+But if you have low weight stabilizer generators--
+
+117
+00:06:58,000 --> 00:07:00,000
+let's say weight four--
+
+118
+00:07:00,000 --> 00:07:04,000
+then it's very easy to have products of errors
+
+119
+00:07:04,000 --> 00:07:05,000
+in the stabilizer group.
+
+120
+00:07:05,000 --> 00:07:07,000
+Like if I have weight four things here,
+
+121
+00:07:07,000 --> 00:07:10,000
+E1 and E2 are weight two, already
+
+122
+00:07:10,000 --> 00:07:12,000
+I've got stuff that's in the stabilizer group.
+
+123
+00:07:12,000 --> 00:07:15,000
+And for a big enough code, I really
+
+124
+00:07:15,000 --> 00:07:17,000
+hope I can correct two errors.
+
+125
+00:07:17,000 --> 00:07:19,000
+So I can very quickly get into a situation
+
+126
+00:07:19,000 --> 00:07:23,000
+where products of errors and relatively few qubits
+
+127
+00:07:23,000 --> 00:07:25,000
+are in the stabilizer group.
+
+128
+00:07:25,000 --> 00:07:27,000
+And this is basically inevitable when
+
+129
+00:07:27,000 --> 00:07:30,000
+I have quantum LDPC codes, of which we'll see
+
+130
+00:07:30,000 --> 00:07:33,000
+an example is the Toric code.
+
+131
+00:07:33,000 --> 00:07:37,000
+So this degenerate property at first does not sound so good.
+
+132
+00:07:37,000 --> 00:07:41,000
+But later, we see it's almost inevitable if we want codes
+
+133
+00:07:41,000 --> 00:07:44,000
+
+

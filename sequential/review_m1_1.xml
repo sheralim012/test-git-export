@@ -1,0 +1,18 @@
+<sequential display_name="Review material: density matrices" due="&quot;2918-06-15T23:57:00+00:00&quot;" format="Concept" graceperiod="18000 seconds" graded="true" showanswer="closed" start="&quot;2017-09-06T00:00:00+00:00&quot;" attempts="10" tex_filename="./week1_review1.tex" linenum="3" refnum="2">
+  <vertical url_name="Density_matrices_review_material_overview"/>
+  <vertical url_name="What_is_a_noisy_quantum_state__Introduction_to_density_matrices"/>
+  <vertical url_name="Indistinguishability_of_density_matrix_ensemble_unravelings"/>
+  <vertical url_name="CQ_Density_matrix_unravelings"/>
+  <vertical url_name="Measurements_and_density_matrices"/>
+  <vertical url_name="Action_of_unitary_transform_on_density_matrices"/>
+  <vertical url_name="Effect_of_measurement_on_an_ensemble_of_states_"/>
+  <vertical url_name="CQ_Measurement_and_density_matrices"/>
+  <vertical url_name="Density_matrix_properties"/>
+  <vertical url_name="Density_matrices_and_the_partial_trace_-_example"/>
+  <vertical url_name="Density_matrices_and_the_partial_trace_-_definition"/>
+  <vertical url_name="Equivalence_of_density_matrices_to_partial_trace_computed_in_different_bases"/>
+  <vertical url_name="CQ_The_partial_trace"/>
+  <vertical url_name="Bloch_sphere_representation_of_single_qubit_density_matrix_states"/>
+  <vertical url_name="Quantum_mechanics_and_quantum_circuits"/>
+  <vertical url_name="Density_matrices"/>
+</sequential>

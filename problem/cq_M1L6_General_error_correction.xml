@@ -1,0 +1,24 @@
+<problem linenum="131" tex_filename="./week4_lectures6.tex" attempts="1" display_name="General error correction" max_attempts="1">
+  <p>
+This is a concept question, provided to check your understanding of the previous lecture video clips. </p>
+  <p>
+Which of the following are true? </p>
+  <p>
+    <choiceresponse>
+      <checkboxgroup>
+        <choice correct="false" name="1">
+          <text>Each syndrome corresponding to distinct correctable Pauli errors is unique.</text>
+        </choice>
+        <choice correct="false" name="2">
+          <text>The members of a normalizer group always commute with each other.</text>
+        </choice>
+        <choice correct="false" name="3">
+          <text>Suppose in a five-qubit code we correct for a wrong syndrome. It is still possible to to recover the state after the application of another correctable error.</text>
+        </choice>
+        <choice correct="true" name="4">
+          <text>The minimal number of elements generating a normalizer group is [mathjaxinline]n + k[/mathjaxinline] for an [mathjaxinline][[n,k,d]][/mathjaxinline] code.</text>
+        </choice>
+      </checkboxgroup>
+    </choiceresponse>
+  </p>
+</problem>

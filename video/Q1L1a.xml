@@ -1,0 +1,8 @@
+<video youtube="1.00:MxfnYGdVZ5U" url_name="Q1L1a" sub="" transcripts="{&quot;en&quot;: &quot;7fba5a26-8b3d-42f1-8bfd-65125b92ccf0-en.srt&quot;}" display_name="Quantum mechanics and quantum circuits" edx_video_id="7fba5a26-8b3d-42f1-8bfd-65125b92ccf0" youtube_id_1_0="MxfnYGdVZ5U">
+  <video_asset client_video_id="External Video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="7fba5a26-8b3d-42f1-8bfd-65125b92ccf0-en.srt"/>
+</video>

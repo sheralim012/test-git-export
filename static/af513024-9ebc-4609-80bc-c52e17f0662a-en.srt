@@ -1,0 +1,440 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:01,000
+Let me talk about the space of errors
+
+2
+00:00:01,000 --> 00:00:03,000
+that you might want to correct.
+
+3
+00:00:03,000 --> 00:00:06,000
+In classical codes, in principle,
+
+4
+00:00:06,000 --> 00:00:09,000
+you could consider any set of allowable errors.
+
+5
+00:00:09,000 --> 00:00:13,000
+But for simplicity, especially if we
+
+6
+00:00:13,000 --> 00:00:16,000
+want a good theoretical description of them,
+
+7
+00:00:16,000 --> 00:00:21,000
+we start by saying let's just talk about the number of--
+
+8
+00:00:21,000 --> 00:00:24,000
+let's describe errors in terms of how many bits they affect.
+
+9
+00:00:24,000 --> 00:00:26,000
+So let's do the same thing for qubits.
+
+10
+00:00:26,000 --> 00:00:29,000
+Let's say I want to code the correct errors
+
+11
+00:00:29,000 --> 00:00:35,000
+on up to 2 qubits or up to 17 up to some number of qubits
+
+12
+00:00:35,000 --> 00:00:50,000
+So these are called low-weight errors.
+
+13
+00:00:50,000 --> 00:00:58,000
+And so one typical choice of error
+
+14
+00:00:58,000 --> 00:01:14,000
+set s is the set of errors on, let's say, l
+
+15
+00:01:14,000 --> 00:01:18,000
+equals d minus 1 over 2 qubits.
+
+16
+00:01:18,000 --> 00:01:20,000
+So I could say errors on up to--
+
+17
+00:01:20,000 --> 00:01:27,000
+I should say up to l qubits.
+
+18
+00:01:27,000 --> 00:01:29,000
+That's the number I'm introducing.
+
+19
+00:01:29,000 --> 00:01:30,000
+It'll be convenient.
+
+20
+00:01:30,000 --> 00:01:31,000
+Remember, in the classical case, this
+
+21
+00:01:31,000 --> 00:01:33,000
+is corresponding to a distance.
+
+22
+00:01:33,000 --> 00:01:34,000
+I said, if you have distance d, you
+
+23
+00:01:34,000 --> 00:01:37,000
+can correct d minus 1 over 2 errors.
+
+24
+00:01:37,000 --> 00:01:39,000
+So we'll do the same thing in the quantum case.
+
+25
+00:01:39,000 --> 00:01:43,000
+
+
+26
+00:01:43,000 --> 00:01:47,000
+We'll set l equal to some number d minus 1 over 2.
+
+27
+00:01:47,000 --> 00:01:49,000
+So what does that mean in the quantum case?
+
+28
+00:01:49,000 --> 00:01:52,000
+
+
+29
+00:01:52,000 --> 00:01:53,000
+This has to be a linear subspace,
+
+30
+00:01:53,000 --> 00:01:57,000
+so this would be the span of some operators.
+
+31
+00:01:57,000 --> 00:02:00,000
+And one way of doing this is to say,
+
+32
+00:02:00,000 --> 00:02:01,000
+let's just consider our errors.
+
+33
+00:02:01,000 --> 00:02:04,000
+Let's expand our areas in the polybasis.
+
+34
+00:02:04,000 --> 00:02:05,000
+And so this will be--
+
+35
+00:02:05,000 --> 00:02:11,000
+
+
+36
+00:02:11,000 --> 00:02:15,000
+if you want a basis for all operators on n qubits,
+
+37
+00:02:15,000 --> 00:02:18,000
+you can write it as a tensor product
+
+38
+00:02:18,000 --> 00:02:20,000
+of a poly on the first qubit, poly on the second qubit,
+
+39
+00:02:20,000 --> 00:02:22,000
+and so on.
+
+40
+00:02:22,000 --> 00:02:26,000
+We could also just write this as sigma p vector
+
+41
+00:02:26,000 --> 00:02:37,000
+where p vector is a vector of length n with entries
+
+42
+00:02:37,000 --> 00:02:39,000
+that are 0, 1, 2, and 3.
+
+43
+00:02:39,000 --> 00:02:42,000
+So 1, 2, 3 correspond to the x, y, and z polys.
+
+44
+00:02:42,000 --> 00:02:45,000
+0 corresponds to the identity.
+
+45
+00:02:45,000 --> 00:02:47,000
+Oh, sorry, and this should be such
+
+46
+00:02:47,000 --> 00:03:04,000
+that the number of nonzero entries of p is at most l.
+
+47
+00:03:04,000 --> 00:03:07,000
+So the number of non-zero entries
+
+48
+00:03:07,000 --> 00:03:11,000
+is the number of positions where you have a non-identity poly.
+
+49
+00:03:11,000 --> 00:03:14,000
+So these are polys where most of the positions are identity,
+
+50
+00:03:14,000 --> 00:03:19,000
+but in up to all other places you can put x, y, or z.
+
+51
+00:03:19,000 --> 00:03:22,000
+And I should emphasize that there's nothing special
+
+52
+00:03:22,000 --> 00:03:22,000
+about polys here.
+
+53
+00:03:22,000 --> 00:03:25,000
+Polys are just a nice basis for operators.
+
+54
+00:03:25,000 --> 00:03:32,000
+I could also write this as the span of operators A1
+
+55
+00:03:32,000 --> 00:03:35,000
+through An where these are now totally general matrices.
+
+56
+00:03:35,000 --> 00:03:38,000
+
+
+57
+00:03:38,000 --> 00:03:49,000
+But I have the condition that at most, lai
+
+58
+00:03:49,000 --> 00:03:52,000
+are not equal to the identity.
+
+59
+00:03:52,000 --> 00:03:54,000
+So most of these, again, should be identity.
+
+60
+00:03:54,000 --> 00:03:58,000
+
+
+61
+00:03:58,000 --> 00:04:01,000
+This poly picture is a very convenient and common one
+
+62
+00:04:01,000 --> 00:04:03,000
+to use, and it's a very good one to use.
+
+63
+00:04:03,000 --> 00:04:07,000
+But the risk is that it gives you the misleading impression
+
+64
+00:04:07,000 --> 00:04:09,000
+that errors are unitary.
+
+65
+00:04:09,000 --> 00:04:12,000
+And you saw in the problem set this amplitude damping noise,
+
+66
+00:04:12,000 --> 00:04:16,000
+which is a very common type of physical noise you cannot
+
+67
+00:04:16,000 --> 00:04:18,000
+describe it as a mixture of unitaries,
+
+68
+00:04:18,000 --> 00:04:22,000
+and so we have to be able to correct this type of error.
+
+69
+00:04:22,000 --> 00:04:25,000
+However, the polys are also a spanning set.
+
+70
+00:04:25,000 --> 00:04:28,000
+And so we can always expand any kind of noise
+
+71
+00:04:28,000 --> 00:04:30,000
+as a linear combination of unitaries,
+
+72
+00:04:30,000 --> 00:04:33,000
+and that will still be true mathematically.
+
+73
+00:04:33,000 --> 00:04:36,000
+And because of this property, that if I correct,
+
+74
+00:04:36,000 --> 00:04:40,000
+the set of errors I can correct is a linear subspace,
+
+75
+00:04:40,000 --> 00:04:42,000
+if I can correct--
+
+76
+00:04:42,000 --> 00:04:45,000
+it's efficient to correct polys up to weight l.
+
+77
+00:04:45,000 --> 00:04:48,000
+And that will cover any operator that is not
+
+78
+00:04:48,000 --> 00:04:50,000
+identity on up to l positions.
+
+79
+00:04:50,000 --> 00:04:53,000
+So there is something without loss of generality
+
+80
+00:04:53,000 --> 00:04:56,000
+about the polys that does not mean
+
+81
+00:04:56,000 --> 00:04:59,000
+that noise is always unitary.
+
+82
+00:04:59,000 --> 00:05:02,000
+This is because of the linearity of error-correcting codes,
+
+83
+00:05:02,000 --> 00:05:05,000
+let us get away with thinking about things
+
+84
+00:05:05,000 --> 00:05:08,000
+in terms of unitary errors.
+
+85
+00:05:08,000 --> 00:05:10,000
+Of course, it could be more efficient
+
+86
+00:05:10,000 --> 00:05:12,000
+if you have amplitude damping noise,
+
+87
+00:05:12,000 --> 00:05:13,000
+just design your code for that.
+
+88
+00:05:13,000 --> 00:05:16,000
+And then you really don't want to think in terms of polys.
+
+89
+00:05:16,000 --> 00:05:21,000
+But initially, we will just talk about poly errors
+
+90
+00:05:21,000 --> 00:05:24,000
+and about noise that effects up to some number of qubits.
+
+91
+00:05:24,000 --> 00:05:28,000
+
+
+92
+00:05:28,000 --> 00:05:30,000
+So if this happens--
+
+93
+00:05:30,000 --> 00:05:41,000
+so I should say if we correct errors in s,
+
+94
+00:05:41,000 --> 00:05:52,000
+then we say that the code has distance d.
+
+95
+00:05:52,000 --> 00:05:54,000
+And this is really just by analogy
+
+96
+00:05:54,000 --> 00:05:56,000
+with the classical situation, all right?
+
+97
+00:05:56,000 --> 00:05:58,000
+I cannot talk.
+
+98
+00:05:58,000 --> 00:05:59,000
+I could try to--
+
+99
+00:05:59,000 --> 00:06:02,000
+there are ways of talking about codewords being distance
+
+100
+00:06:02,000 --> 00:06:03,000
+d apart of [INAUDIBLE] weight.
+
+101
+00:06:03,000 --> 00:06:05,000
+But that's rather contrived.
+
+102
+00:06:05,000 --> 00:06:07,000
+It's really just saying a classical coded distance
+
+103
+00:06:07,000 --> 00:06:10,000
+d can correct d minus 1 over 2 errors.
+
+104
+00:06:10,000 --> 00:06:13,000
+So we just sort of go the other way quantitatively.
+
+105
+00:06:13,000 --> 00:06:15,000
+We can say if you can correct d minus 1 over 2 errors,
+
+106
+00:06:15,000 --> 00:06:18,000
+then that means that we say that you have distance
+
+107
+00:06:18,000 --> 00:06:23,000
+d because we're very used to saying a distance 3 code can
+
+108
+00:06:23,000 --> 00:06:24,000
+correct 1 error.
+
+109
+00:06:24,000 --> 00:06:28,000
+
+

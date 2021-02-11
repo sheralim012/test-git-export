@@ -1,0 +1,22 @@
+<problem linenum="7" tex_filename="./week1_1_ps0.tex" attempts="10" display_name="Approximation" max_attempts="10">
+  <p>
+[mathjaxinline]\binom {n}{n/3}[/mathjaxinline] is approximately [mathjaxinline]2^{cn}[/mathjaxinline] for some constant [mathjaxinline]0&lt;c&lt;1[/mathjaxinline]. (Here “approximately" means up to factors of at most [mathjaxinline]O(n)[/mathjaxinline].) </p>
+  <p>
+What is [mathjaxinline]c[/mathjaxinline] up to three digits of precision? </p>
+  <script>
+from sympy_check import *
+
+</script>
+  <ul class="itemize">
+    <li>
+      <p>
+        <p style="display:inline">[mathjaxinline]c =[/mathjaxinline]</p>
+        <numericalresponse inline="1" answer="0.918">
+          <textline inline="1">
+            <responseparam type="tolerance" default="0.0005"/>
+          </textline>
+        </numericalresponse>
+      </p>
+    </li>
+  </ul>
+</problem>

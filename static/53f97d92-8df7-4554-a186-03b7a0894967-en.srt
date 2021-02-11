@@ -1,0 +1,396 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:02,000
+More generally the third type of example code,
+
+2
+00:00:02,000 --> 00:00:04,000
+a concatenated code.
+
+3
+00:00:04,000 --> 00:00:07,000
+To explain what a concatenated code is even though we've
+
+4
+00:00:07,000 --> 00:00:10,000
+sort of moved away from using encoding maps
+
+5
+00:00:10,000 --> 00:00:14,000
+I wanted to go back to using them for a minute.
+
+6
+00:00:14,000 --> 00:00:18,000
+I said up here that if a code has distance d,
+
+7
+00:00:18,000 --> 00:00:21,000
+it means that it corrects poly errors up
+
+8
+00:00:21,000 --> 00:00:23,000
+to d-minus 1 over 2 positions.
+
+9
+00:00:23,000 --> 00:00:25,000
+And so just like in the classical case
+
+10
+00:00:25,000 --> 00:00:29,000
+we can talk about codes that have distance d and code k
+
+11
+00:00:29,000 --> 00:00:31,000
+qubits into n qubits.
+
+12
+00:00:31,000 --> 00:00:40,000
+And so we call these n, k, d codes
+
+13
+00:00:40,000 --> 00:00:56,000
+encode k qubits into n qubits and have distance d.
+
+14
+00:00:56,000 --> 00:00:58,000
+You know, distance in this kind of funny sense
+
+15
+00:00:58,000 --> 00:01:00,000
+that I mentioned, you can correct up
+
+16
+00:01:00,000 --> 00:01:03,000
+to d-minus 1 over 2 errors.
+
+17
+00:01:03,000 --> 00:01:05,000
+And classically, we would denote this
+
+18
+00:01:05,000 --> 00:01:08,000
+by putting one set of brackets.
+
+19
+00:01:08,000 --> 00:01:10,000
+Quantumly, it's not a very creative notation.
+
+20
+00:01:10,000 --> 00:01:12,000
+We just do a double bracket.
+
+21
+00:01:12,000 --> 00:01:16,000
+And that means a quantum code with those properties.
+
+22
+00:01:16,000 --> 00:01:20,000
+OK so now let me talk about concatenated codes.
+
+23
+00:01:20,000 --> 00:01:23,000
+Let's suppose that C1--
+
+24
+00:01:23,000 --> 00:01:26,000
+
+
+25
+00:01:26,000 --> 00:01:27,000
+we have two codes.
+
+26
+00:01:27,000 --> 00:01:32,000
+Now C1 is an n1, k1, d1 code.
+
+27
+00:01:32,000 --> 00:01:44,000
+And we'll say within coding map, e1.
+
+28
+00:01:44,000 --> 00:01:47,000
+That's my [INAUDIBLE] that does the encoding.
+
+29
+00:01:47,000 --> 00:01:49,000
+And let's suppose I have another code, C2.
+
+30
+00:01:49,000 --> 00:01:52,000
+
+
+31
+00:01:52,000 --> 00:01:56,000
+And this will be a little less general.
+
+32
+00:01:56,000 --> 00:02:00,000
+It will use n2 qubits but will encode--
+
+33
+00:02:00,000 --> 00:02:04,000
+it will take as input only one qubit.
+
+34
+00:02:04,000 --> 00:02:06,000
+And it will have distance d2.
+
+35
+00:02:06,000 --> 00:02:12,000
+
+
+36
+00:02:12,000 --> 00:02:18,000
+And we'll define its encoding map to be e2.
+
+37
+00:02:18,000 --> 00:02:24,000
+
+
+38
+00:02:24,000 --> 00:02:27,000
+OK, so I have two different codes.
+
+39
+00:02:27,000 --> 00:02:31,000
+And the idea of a concatenated code
+
+40
+00:02:31,000 --> 00:02:38,000
+is, we start with a block of k1 qubits.
+
+41
+00:02:38,000 --> 00:02:43,000
+
+
+42
+00:02:43,000 --> 00:02:54,000
+We encode it into n1 qubits, using map e1.
+
+43
+00:02:54,000 --> 00:02:59,000
+And then maybe I'll draw the single arrow.
+
+44
+00:02:59,000 --> 00:03:02,000
+
+
+45
+00:03:02,000 --> 00:03:07,000
+We take each of these qubits and further encode it using e2.
+
+46
+00:03:07,000 --> 00:03:19,000
+So this qubit, this is a block of n2,
+
+47
+00:03:19,000 --> 00:03:27,000
+this is another block of n2, and so on.
+
+48
+00:03:27,000 --> 00:03:32,000
+So the total is n1, n2 qubits.
+
+49
+00:03:32,000 --> 00:03:35,000
+
+
+50
+00:03:35,000 --> 00:03:44,000
+And so the code that we're left with uses n1, n2 two qubits.
+
+51
+00:03:44,000 --> 00:03:49,000
+It encodes the initial k1.
+
+52
+00:03:49,000 --> 00:03:50,000
+So we have some loss of rate here.
+
+53
+00:03:50,000 --> 00:03:54,000
+
+
+54
+00:03:54,000 --> 00:03:56,000
+And the appeal of these codes is,
+
+55
+00:03:56,000 --> 00:03:59,000
+the distance just multiplies.
+
+56
+00:03:59,000 --> 00:04:04,000
+So if you want to cause an error on the final, after decoding,
+
+57
+00:04:04,000 --> 00:04:10,000
+then you need to screw up d1 minus 1 over 2 positions here.
+
+58
+00:04:10,000 --> 00:04:16,000
+But each position here, you need to damage
+
+59
+00:04:16,000 --> 00:04:20,000
+at least enough positions in each one of these sub-blocks.
+
+60
+00:04:20,000 --> 00:04:22,000
+That by itself is not quite a complete argument
+
+61
+00:04:22,000 --> 00:04:24,000
+but it suggests why the distances roughly
+
+62
+00:04:24,000 --> 00:04:25,000
+should multiply.
+
+63
+00:04:25,000 --> 00:04:30,000
+
+
+64
+00:04:30,000 --> 00:04:33,000
+Actually let me just mention what the combined encoding
+
+65
+00:04:33,000 --> 00:04:33,000
+map is.
+
+66
+00:04:33,000 --> 00:04:37,000
+
+
+67
+00:04:37,000 --> 00:04:42,000
+So the encoding map is e1 followed by n1 copies of e2.
+
+68
+00:04:42,000 --> 00:04:45,000
+
+
+69
+00:04:45,000 --> 00:04:54,000
+And so the distances multiply, although I have not
+
+70
+00:04:54,000 --> 00:04:56,000
+given you an argument for that.
+
+71
+00:04:56,000 --> 00:04:58,000
+But the error correcting properties also
+
+72
+00:04:58,000 --> 00:05:01,000
+combine even if they fall short of distance.
+
+73
+00:05:01,000 --> 00:05:04,000
+So this is the idea of the Shor code,
+
+74
+00:05:04,000 --> 00:05:07,000
+if we want to concatenate this 000111 code,
+
+75
+00:05:07,000 --> 00:05:10,000
+the 3-bit repetition code in the standard basis,
+
+76
+00:05:10,000 --> 00:05:15,000
+with a three bit repetition code in the plus minus basis.
+
+77
+00:05:15,000 --> 00:05:17,000
+Neither of them really has any non-trivial distance
+
+78
+00:05:17,000 --> 00:05:20,000
+in the usual quantum sense.
+
+79
+00:05:20,000 --> 00:05:21,000
+But the first one corrects x errors,
+
+80
+00:05:21,000 --> 00:05:24,000
+the second one corrects z errors.
+
+81
+00:05:24,000 --> 00:05:27,000
+And the concatenation you can verify
+
+82
+00:05:27,000 --> 00:05:29,000
+corrects both types of errors.
+
+83
+00:05:29,000 --> 00:05:33,000
+So the Shor code is an example of a concatenated code.
+
+84
+00:05:33,000 --> 00:05:35,000
+In general there are many other examples.
+
+85
+00:05:35,000 --> 00:05:37,000
+So kind of the first route to fault tolerance
+
+86
+00:05:37,000 --> 00:05:40,000
+that was proposed was based on concatenated codes.
+
+87
+00:05:40,000 --> 00:05:44,000
+You start with a small code, concatenate it with itself,
+
+88
+00:05:44,000 --> 00:05:45,000
+and you can prove things.
+
+89
+00:05:45,000 --> 00:05:47,000
+And you keep on concatenating.
+
+90
+00:05:47,000 --> 00:05:52,000
+And if your error rate is low enough you've reduced errors.
+
+91
+00:05:52,000 --> 00:05:53,000
+You make progress against the errors.
+
+92
+00:05:53,000 --> 00:05:55,000
+As you make the code bigger and bigger,
+
+93
+00:05:55,000 --> 00:05:59,000
+even though there are more places for an error to appear,
+
+94
+00:05:59,000 --> 00:06:03,000
+the overall rate of logical errors should go down.
+
+95
+00:06:03,000 --> 00:06:05,000
+Recently, people have started to believe
+
+96
+00:06:05,000 --> 00:06:07,000
+this might not be the most efficient way of doing things.
+
+97
+00:06:07,000 --> 00:06:09,000
+But it is a nice conceptually simple way
+
+98
+00:06:09,000 --> 00:06:13,000
+
+

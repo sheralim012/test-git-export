@@ -1,0 +1,236 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:03,000
+When you have an ensemble of quantum states,
+
+2
+00:00:03,000 --> 00:00:06,000
+it means that you have some quantum state
+
+3
+00:00:06,000 --> 00:00:08,000
+with some probability, some other state
+
+4
+00:00:08,000 --> 00:00:09,000
+with some other probability.
+
+5
+00:00:09,000 --> 00:00:14,000
+This is really the proper way of combining randomness
+
+6
+00:00:14,000 --> 00:00:18,000
+with quantumness, when you have the generalization
+
+7
+00:00:18,000 --> 00:00:22,000
+of both probability and quantum mechanics.
+
+8
+00:00:22,000 --> 00:00:25,000
+And when you say it like that, it
+
+9
+00:00:25,000 --> 00:00:29,000
+sounds like you have an unimaginably large--
+
+10
+00:00:29,000 --> 00:00:31,000
+in fact, an uncountable number of degrees of freedom.
+
+11
+00:00:31,000 --> 00:00:37,000
+So an ensemble, if I write it out, looks like this.
+
+12
+00:00:37,000 --> 00:00:44,000
+I have some probabilities P sub x and some states.
+
+13
+00:00:44,000 --> 00:00:55,000
+I said x, such that the Px are a valid probability distribution
+
+14
+00:00:55,000 --> 00:01:00,000
+and the psi x are unit vectors.
+
+15
+00:01:00,000 --> 00:01:04,000
+So if you ask about how many ensembles are there,
+
+16
+00:01:04,000 --> 00:01:06,000
+there is a vast number, an uncountable number.
+
+17
+00:01:06,000 --> 00:01:07,000
+We started with bits.
+
+18
+00:01:07,000 --> 00:01:10,000
+If d is 2, we just have bits.
+
+19
+00:01:10,000 --> 00:01:12,000
+For both probabilities or quantum states,
+
+20
+00:01:12,000 --> 00:01:14,000
+we have two dimensional vector spaces.
+
+21
+00:01:14,000 --> 00:01:17,000
+And ensembles, now we have this infinite number
+
+22
+00:01:17,000 --> 00:01:18,000
+of degrees of freedom.
+
+23
+00:01:18,000 --> 00:01:22,000
+So it's in a sense, the right operational way
+
+24
+00:01:22,000 --> 00:01:24,000
+to think about it.
+
+25
+00:01:24,000 --> 00:01:26,000
+But it's somehow over complete.
+
+26
+00:01:26,000 --> 00:01:28,000
+We're using too much information.
+
+27
+00:01:28,000 --> 00:01:32,000
+And so the key idea of density matrices
+
+28
+00:01:32,000 --> 00:01:36,000
+is that this is more information than you need.
+
+29
+00:01:36,000 --> 00:01:40,000
+And the reason is that if you have an observable,
+
+30
+00:01:40,000 --> 00:01:44,000
+it doesn't depend completely generally on psi x.
+
+31
+00:01:44,000 --> 00:01:48,000
+It only depends on it as a linear function of ket
+
+32
+00:01:48,000 --> 00:01:51,000
+psi x and a linear function of bra psi x.
+
+33
+00:01:51,000 --> 00:02:04,000
+So an observable M has expectation bra psi
+
+34
+00:02:04,000 --> 00:02:15,000
+x and ket psi x, which you could write as trace of M ket psi
+
+35
+00:02:15,000 --> 00:02:18,000
+x, bra psi x.
+
+36
+00:02:18,000 --> 00:02:23,000
+And so the dependence of observables on this date
+
+37
+00:02:23,000 --> 00:02:24,000
+is not fully general.
+
+38
+00:02:24,000 --> 00:02:29,000
+They only depend as linear functions of this ket
+
+39
+00:02:29,000 --> 00:02:31,000
+psi x, bra psi x.
+
+40
+00:02:31,000 --> 00:02:34,000
+So if I have an ensemble of quantum states,
+
+41
+00:02:34,000 --> 00:02:38,000
+I don't need to worry about arbitrary moments
+
+42
+00:02:38,000 --> 00:02:39,000
+of that ensemble.
+
+43
+00:02:39,000 --> 00:02:40,000
+In principle, I could have needed
+
+44
+00:02:40,000 --> 00:02:44,000
+to worry about the seventh moment or the 15th moment.
+
+45
+00:02:44,000 --> 00:02:46,000
+This is sort of like the second moment.
+
+46
+00:02:46,000 --> 00:02:50,000
+It's like a degree 2 polynomial of the entries of psi x.
+
+47
+00:02:50,000 --> 00:02:53,000
+Just knowing the expectations of those
+
+48
+00:02:53,000 --> 00:02:56,000
+is enough to tell me about all of the expectations.
+
+49
+00:02:56,000 --> 00:03:03,000
+And so from this ensemble, all I need to know
+
+50
+00:03:03,000 --> 00:03:15,000
+is the density matrix rho equals sum over x Px psi x psi x.
+
+51
+00:03:15,000 --> 00:03:22,000
+
+
+52
+00:03:22,000 --> 00:03:28,000
+So if I have an ensemble of quantum states
+
+53
+00:03:28,000 --> 00:03:31,000
+and I want to know about every possible expectation
+
+54
+00:03:31,000 --> 00:03:35,000
+value of that ensemble, I don't need
+
+55
+00:03:35,000 --> 00:03:37,000
+to write down the infinite number of degrees
+
+56
+00:03:37,000 --> 00:03:39,000
+of freedom of that ensemble.
+
+57
+00:03:39,000 --> 00:03:44,000
+It's enough just to write down this D by D matrix.
+
+58
+00:03:44,000 --> 00:03:45,000
+
+

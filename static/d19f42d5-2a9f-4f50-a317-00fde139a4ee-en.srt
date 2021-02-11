@@ -1,0 +1,284 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:03,000
+This is a very important fact about quantum error correction.
+
+2
+00:00:03,000 --> 00:00:04,000
+In the early days of quantum computing
+
+3
+00:00:04,000 --> 00:00:07,000
+after short factoring algorithm came out,
+
+4
+00:00:07,000 --> 00:00:11,000
+there were arguments on--
+
+5
+00:00:11,000 --> 00:00:12,000
+this may show my age-- but there's
+
+6
+00:00:12,000 --> 00:00:16,000
+something called Usenet, which was like an early Twitter you
+
+7
+00:00:16,000 --> 00:00:16,000
+could say.
+
+8
+00:00:16,000 --> 00:00:18,000
+And there were arguments on Usenet
+
+9
+00:00:18,000 --> 00:00:21,000
+about whether quantum computers could ever
+
+10
+00:00:21,000 --> 00:00:23,000
+be realized because of noise.
+
+11
+00:00:23,000 --> 00:00:26,000
+They said well, these look very powerful,
+
+12
+00:00:26,000 --> 00:00:28,000
+but we've already known that in-theory analog computers are
+
+13
+00:00:28,000 --> 00:00:29,000
+very powerful.
+
+14
+00:00:29,000 --> 00:00:31,000
+These amplitudes of quantum computers,
+
+15
+00:00:31,000 --> 00:00:33,000
+they just look like the real numbers
+
+16
+00:00:33,000 --> 00:00:36,000
+that you see in analog quantum computers.
+
+17
+00:00:36,000 --> 00:00:37,000
+And so we should maybe not be surprised
+
+18
+00:00:37,000 --> 00:00:39,000
+that this model is more powerful.
+
+19
+00:00:39,000 --> 00:00:43,000
+But we know that analog computers cannot be realized
+
+20
+00:00:43,000 --> 00:00:45,000
+at least not to very high precision
+
+21
+00:00:45,000 --> 00:00:47,000
+because if the voltage--
+
+22
+00:00:47,000 --> 00:00:49,000
+if all of the voltages are legal values, right--
+
+23
+00:00:49,000 --> 00:00:53,000
+in a digital computer, it's either 0 volts or 5 volts.
+
+24
+00:00:53,000 --> 00:00:54,000
+Everything else is illegal.
+
+25
+00:00:54,000 --> 00:00:56,000
+So if the computer sees 4.9, it knows
+
+26
+00:00:56,000 --> 00:00:58,000
+it should bump it up to five.
+
+27
+00:00:58,000 --> 00:01:01,000
+But in analog computer, if 3.7 is legal,
+
+28
+00:01:01,000 --> 00:01:07,000
+a legal voltage, and 3.700001 is also legal voltage,
+
+29
+00:01:07,000 --> 00:01:08,000
+there's nothing the computer can do
+
+30
+00:01:08,000 --> 00:01:11,000
+to know if there's a little drift of voltage,
+
+31
+00:01:11,000 --> 00:01:14,000
+if that was supposed to happen, or if it is something
+
+32
+00:01:14,000 --> 00:01:15,000
+that should be corrected.
+
+33
+00:01:15,000 --> 00:01:19,000
+So analog computing is fundamentally not
+
+34
+00:01:19,000 --> 00:01:20,000
+error correctable.
+
+35
+00:01:20,000 --> 00:01:22,000
+In some cases that's OK.
+
+36
+00:01:22,000 --> 00:01:25,000
+If your stereo doesn't produce exactly the right sound then
+
+37
+00:01:25,000 --> 00:01:25,000
+that's fine.
+
+38
+00:01:25,000 --> 00:01:27,000
+But if you want to use these real numbers
+
+39
+00:01:27,000 --> 00:01:30,000
+for some complicated math calculation, it's not so good.
+
+40
+00:01:30,000 --> 00:01:32,000
+And so there was that argument given
+
+41
+00:01:32,000 --> 00:01:35,000
+that quantum computers suffered the same limitation
+
+42
+00:01:35,000 --> 00:01:37,000
+as analog computers, namely you can not
+
+43
+00:01:37,000 --> 00:01:39,000
+error correct amplitudes.
+
+44
+00:01:39,000 --> 00:01:43,000
+And indeed, if you have some error that looks like e
+
+45
+00:01:43,000 --> 00:01:47,000
+to the i faded z--
+
+46
+00:01:47,000 --> 00:01:50,000
+and it just is in notation by the way.
+
+47
+00:01:50,000 --> 00:01:52,000
+Let me-- I'm going to write x equals sigma
+
+48
+00:01:52,000 --> 00:01:58,000
+x, y equals sigma y z.
+
+49
+00:01:58,000 --> 00:02:00,000
+From now on, I'm going to use this kind of quantum computing
+
+50
+00:02:00,000 --> 00:02:03,000
+notation for the Pauli matrices.
+
+51
+00:02:03,000 --> 00:02:06,000
+So I find this error, e to the i fade to z.
+
+52
+00:02:06,000 --> 00:02:07,000
+Data can continuously vary.
+
+53
+00:02:07,000 --> 00:02:09,000
+It could be very, very small.
+
+54
+00:02:09,000 --> 00:02:12,000
+You know, I can't distinguish all those different errors,
+
+55
+00:02:12,000 --> 00:02:13,000
+so how can I correct them?
+
+56
+00:02:13,000 --> 00:02:18,000
+That was a compelling argument against quantum computers
+
+57
+00:02:18,000 --> 00:02:21,000
+before quantum error correcting codes came along.
+
+58
+00:02:21,000 --> 00:02:23,000
+And I think [INAUDIBLE] used that discussion that
+
+59
+00:02:23,000 --> 00:02:27,000
+was part of what pushed Peter Schorr and others to develop
+
+60
+00:02:27,000 --> 00:02:29,000
+quantum error correcting codes.
+
+61
+00:02:29,000 --> 00:02:33,000
+And the answer we have today is that e to the i fade to z
+
+62
+00:02:33,000 --> 00:02:40,000
+is a linear combination of i and z.
+
+63
+00:02:40,000 --> 00:02:44,000
+And so if I have a code that can correct i and z,
+
+64
+00:02:44,000 --> 00:02:48,000
+then I can also correct at no extra cost
+
+65
+00:02:48,000 --> 00:02:50,000
+all linear combinations of them.
+
+66
+00:02:50,000 --> 00:02:53,000
+So I can correct e to the i fade to z for all values of z.
+
+67
+00:02:53,000 --> 00:02:56,000
+
+
+68
+00:02:56,000 --> 00:03:00,000
+So it's a remarkable and crucial feature of quantum error action
+
+69
+00:03:00,000 --> 00:03:06,000
+that the space of errors they corrected is a linear subspace.
+
+70
+00:03:06,000 --> 00:03:06,000
+
+

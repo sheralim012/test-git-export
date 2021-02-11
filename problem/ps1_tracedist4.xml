@@ -1,0 +1,95 @@
+<problem linenum="222" tex_filename="./week2_ps2.tex" attempts="10" display_name="TD4. Trace distance (4 of 4)" max_attempts="10">
+  <p>
+Evaluate [mathjaxinline]P_{\text err,opt}[/mathjaxinline] in the following four cases. Please enter math symbols using <a href="http://asciimath.org/" target="_blank">asciimath-like conventions</a>, e.g. [mathjaxinline]\sigma _1[/mathjaxinline] as [mathjaxinline]{\tt sigma\_ 1}[/mathjaxinline], and [mathjaxinline]\sqrt{1-x}[/mathjaxinline] as [mathjaxinline]{\tt sqrt(1-x)}[/mathjaxinline]; also, please make sure to explicitly denote multiplication operations, e.g. [mathjaxinline]x + 2y[/mathjaxinline] should be entered as [mathjaxinline]{\tt x + 2 * y}[/mathjaxinline], and [mathjaxinline]x(1-y)[/mathjaxinline] should be entered as [mathjaxinline]{\tt x * (1-y)}[/mathjaxinline]. </p>
+  <script>
+from sympy_check import *
+
+</script>
+  <script linenum="233" filename="./week2_ps2.tex" type="text/python" system_path="python_lib">
+
+def ps1a_td4_check(expect, ans, options=None):
+    newans = ans.replace("p_2", "(1-p_1)")
+    return sympy_check_quantum(expect, newans, options)
+
+</script>
+  <ol class="enumerate">
+    <li value="1">
+      <p>
+[mathjaxinline]p_1=1[/mathjaxinline], [mathjaxinline]p_2=0[/mathjaxinline] and [mathjaxinline]\sigma _1,\sigma _2[/mathjaxinline] are arbitrary. </p>
+      <p>
+        <p style="display:inline">[mathjaxinline]P_{err, opt} =[/mathjaxinline]</p>
+        <customresponse cfn="ps1a_td4_check" inline="1" expect="0">
+          <textline correct_answer="0" inline="1" math="1"/>
+        </customresponse>
+      </p>
+      <p>
+        <p style="display:inline">[mathjaxinline]{\rm Best\  state\  to\  guess} =[/mathjaxinline]</p>
+        <customresponse cfn="sympy_check_quantum" inline="1" expect="sigma_1">
+          <textline correct_answer="sigma_1" inline="1" math="1"/>
+        </customresponse>
+      </p>
+      <p>
+        <solution>
+          <p>
+            <b>Solution:</b>
+          </p>
+          <span>In this case, [mathjaxinline]\Delta = - p_1 \sigma _1[/mathjaxinline]. Since [mathjaxinline]\sigma _1[/mathjaxinline] is a normalized state, all of eigenvalues of [mathjaxinline]\Delta[/mathjaxinline] are nonpositive, and their absolute values sum to [mathjaxinline]p_1[/mathjaxinline]. Hence the optimal error probability is [mathjaxinline]p_1 - p_1 = 0[/mathjaxinline]. (Indeed, we will have zero probability of error by always guessing that the state is [mathjaxinline]\sigma _1[/mathjaxinline]!) </span>
+        </solution>
+      </p>
+    </li>
+    <li value="2">
+      <p>
+[mathjaxinline]p_1 \geq p_2 \geq 0[/mathjaxinline] are arbitrary (subject to [mathjaxinline]p_1+p_2=1[/mathjaxinline]) and [mathjaxinline]\sigma _1=\sigma _2[/mathjaxinline]. </p>
+      <p>
+        <p style="display:inline">[mathjaxinline]P_{err, opt} =[/mathjaxinline]</p>
+        <customresponse cfn="ps1a_td4_check" inline="1" expect="1 - p_1">
+          <textline correct_answer="1 - p_1" inline="1" math="1"/>
+        </customresponse>
+      </p>
+      <p>
+        <solution>
+          <p>
+            <b>Solution:</b>
+          </p>
+          <span>In this case, [mathjaxinline]\Delta = (p_2 - p_1)\sigma _1 = (1 - 2p_1)\sigma _1[/mathjaxinline]. Since [mathjaxinline]p_1 \geq 1/2[/mathjaxinline], the eigenvalues of [mathjaxinline]\Delta[/mathjaxinline] are all nonpositive and their absolute values sum to [mathjaxinline](2p_1 - 1)[/mathjaxinline]. Hence the optimal error probability is [mathjaxinline]p_1 - (2p_1 - 1) = 1 - p_1 = p_2[/mathjaxinline]. (Indeed, since [mathjaxinline]\sigma _1[/mathjaxinline] and [mathjaxinline]\sigma _2[/mathjaxinline] are identical, no measurement can give us any information about which state it is, so we just always guess the more likely state [mathjaxinline]\sigma _1[/mathjaxinline]). </span>
+        </solution>
+      </p>
+    </li>
+    <li value="3">
+      <p>
+[mathjaxinline]p_1 = p_2 = 1/2[/mathjaxinline] and [mathjaxinline]\sigma _1,\sigma _2[/mathjaxinline] are arbitrary. Express your answer in terms of [mathjaxinline]x \equiv \| \sigma _1 - \sigma _2\| _1[/mathjaxinline]. </p>
+      <p>
+        <p style="display:inline">[mathjaxinline]P_{err, opt} =[/mathjaxinline]</p>
+        <customresponse cfn="ps1a_td4_check" inline="1" expect="(2-x)/4">
+          <textline correct_answer="(2-x)/4" inline="1" math="1"/>
+        </customresponse>
+      </p>
+      <p>
+        <solution>
+          <p>
+            <b>Solution:</b>
+          </p>
+          <span>In this case, [mathjaxinline]\Delta = \frac{1}{2}(\sigma _2 - \sigma _1)[/mathjaxinline], and [mathjaxinline]{\rm Tr}[\Delta ] = 0[/mathjaxinline]. Hence [mathjaxinline]\sum _{i:\lambda _ i &lt; 0} |\lambda _ i| = \sum _{i:\lambda _ i \geq 0} \lambda _ i[/mathjaxinline], so [mathjaxinline]\| \Delta \| _1 = \sum _{i} \lambda _ i = 2 \sum _{i:\lambda _ i &lt; 0} |\lambda _ i|[/mathjaxinline]. Consequently, the optimal probability of error is [mathjaxinline]\frac{1}{2} - \frac{1}{2} \|  \Delta \| _1 = \frac{1}{2} - \frac{1}{4} \|  \sigma _1 - \sigma _2 \| _1[/mathjaxinline]. </span>
+        </solution>
+      </p>
+    </li>
+    <li value="4">
+      <p>
+[mathjaxinline]p_1=p_2=1/2[/mathjaxinline], [mathjaxinline]\sigma _1 = \left|\psi _1\right\rangle \left\langle \psi _1\right|[/mathjaxinline], [mathjaxinline]\sigma _2=\left|\psi _2\right\rangle \left\langle \psi _2\right|[/mathjaxinline]. Express your answer in terms of [mathjaxinline]y \equiv |\langle {\psi _1}|{\psi _2}\rangle |^2[/mathjaxinline]. </p>
+      <p>
+        <p style="display:inline">[mathjaxinline]P_{err, opt} =[/mathjaxinline]</p>
+        <customresponse cfn="ps1a_td4_check" inline="1" expect="(1-sqrt(1-y))/2">
+          <textline correct_answer="(1-sqrt(1-y))/2" inline="1" math="1"/>
+        </customresponse>
+      </p>
+      <p>
+        <solution>
+          <p>
+            <b>Solution:</b>
+          </p>
+          <span>By the result of the previous part, this reduces to computing [mathjaxinline]\| \left|\psi _1\right\rangle \left\langle \psi _1\right| - \left|\psi _2\right\rangle \left\langle \psi _2\right|\|[/mathjaxinline]. This matrix is supported on the two-dimensional subspace spanned by [mathjaxinline]|{\psi _1}\rangle[/mathjaxinline] and [mathjaxinline]|{\psi _2}\rangle[/mathjaxinline]. Let [mathjaxinline]\{ |{\psi _1}\rangle , |{\phi }\rangle \}[/mathjaxinline] be an orthonormal basis of this subspace, such that we can write [mathjaxinline]|{\psi _2}\rangle  = \alpha |{\psi _1}\rangle  + \beta |{\phi }\rangle[/mathjaxinline]. Then in this basis, <table id="a0000000010" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto"><tr><td class="equation" style="width:80%; border:none">[mathjax]\left|\psi _1\right\rangle \left\langle \psi _1\right| - \left|\psi _2\right\rangle \left\langle \psi _2\right| = \begin{pmatrix}  1 - |\alpha |^2 &amp;  -\alpha \beta ^* \\ -\alpha ^* \beta &amp;  -|\beta |^2 \end{pmatrix}.[/mathjax]</td><td class="eqnnum" style="width:20%; border:none"> </td></tr></table> This matrix is Hermitian, and hence has real eigenvalues. Its trace is [mathjaxinline]0[/mathjaxinline] while the determinant is [mathjaxinline]|\alpha \beta |^2 - |\beta |^2 - |\alpha \beta |^2 = -|\beta |^2[/mathjaxinline]. Hence the two eigenvalues are [mathjaxinline]\pm |\beta |[/mathjaxinline], and its Schatten [mathjaxinline]1[/mathjaxinline]-norm is [mathjaxinline]2|\beta |[/mathjaxinline]. Recalling that [mathjaxinline]|\alpha |^2 +|\beta |^2 = 1[/mathjaxinline] and [mathjaxinline]\alpha = \langle {\psi _1}|{\psi _2}\rangle[/mathjaxinline], we see that [mathjaxinline]|\beta | = \sqrt{1 - |\langle {\psi _1}|{\psi _2}\rangle |^2}[/mathjaxinline]. Substituting into the result of the previous part, we find that the optimal error probability is [mathjaxinline]\frac{1}{2} - \frac{1}{2} \sqrt{1 - |\langle {\psi _1}|{\psi _2}\rangle |^2}[/mathjaxinline]. </span>
+        </solution>
+      </p>
+    </li>
+  </ol>
+</problem>

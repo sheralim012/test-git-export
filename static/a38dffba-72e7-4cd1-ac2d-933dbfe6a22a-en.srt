@@ -1,0 +1,504 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:02,000
+We want to talk about code transformations.
+
+2
+00:00:02,000 --> 00:00:11,000
+So we want unitaries such that UP U dagger, if P is a poly,
+
+3
+00:00:11,000 --> 00:00:18,000
+then UP U dagger should also be a poly for all polys P.
+
+4
+00:00:18,000 --> 00:00:20,000
+And so I'm interested in--
+
+5
+00:00:20,000 --> 00:00:23,000
+I want to know about the set of these U's.
+
+6
+00:00:23,000 --> 00:00:27,000
+And this set is called the Clifford group.
+
+7
+00:00:27,000 --> 00:00:30,000
+So it's the set of U--
+
+8
+00:00:30,000 --> 00:00:33,000
+I can write this line a little more compactly--
+
+9
+00:00:33,000 --> 00:00:41,000
+as U Pn U dagger is contained in Pn.
+
+10
+00:00:41,000 --> 00:00:42,000
+So Pn is a set of polys.
+
+11
+00:00:42,000 --> 00:00:45,000
+If I conjugate them by U, I should
+
+12
+00:00:45,000 --> 00:00:47,000
+remain within the set of polys.
+
+13
+00:00:47,000 --> 00:00:52,000
+In fact, this conjugation does not destroy information.
+
+14
+00:00:52,000 --> 00:00:56,000
+So I could replace this with an equal sign,
+
+15
+00:00:56,000 --> 00:00:57,000
+and it would mean the same thing.
+
+16
+00:00:57,000 --> 00:01:00,000
+
+
+17
+00:01:00,000 --> 00:01:03,000
+So the first thing I want to do is talk
+
+18
+00:01:03,000 --> 00:01:04,000
+about what's in the Cliffords.
+
+19
+00:01:04,000 --> 00:01:07,000
+And then we'll talk about how they act on polys
+
+20
+00:01:07,000 --> 00:01:08,000
+in this vector space language.
+
+21
+00:01:08,000 --> 00:01:14,000
+
+
+22
+00:01:14,000 --> 00:01:16,000
+Is it clear what I mean by the definition of the Clifford
+
+23
+00:01:16,000 --> 00:01:17,000
+group?
+
+24
+00:01:17,000 --> 00:01:21,000
+
+
+25
+00:01:21,000 --> 00:01:26,000
+OK, so let's try to find what the elements of it are.
+
+26
+00:01:26,000 --> 00:01:29,000
+
+
+27
+00:01:29,000 --> 00:01:38,000
+The first thing as we start to populate it is we
+
+28
+00:01:38,000 --> 00:01:41,000
+can certainly put all of the polys inside of it,
+
+29
+00:01:41,000 --> 00:01:44,000
+because the polys form a group.
+
+30
+00:01:44,000 --> 00:01:45,000
+So if I have an element of the polys
+
+31
+00:01:45,000 --> 00:01:48,000
+and I conjugate them by another poly,
+
+32
+00:01:48,000 --> 00:01:51,000
+I get back yet another poly.
+
+33
+00:01:51,000 --> 00:01:55,000
+So one easy thing I can put in it are the other polys.
+
+34
+00:01:55,000 --> 00:01:57,000
+But that's not all.
+
+35
+00:01:57,000 --> 00:01:59,000
+There are also non-polys that are
+
+36
+00:01:59,000 --> 00:02:02,000
+in this group that nevertheless will map polys to polys.
+
+37
+00:02:02,000 --> 00:02:05,000
+
+
+38
+00:02:05,000 --> 00:02:09,000
+So one example of this is the Hadamard gate.
+
+39
+00:02:09,000 --> 00:02:15,000
+So Hadamard-- assuming you've seen it in 8.370--
+
+40
+00:02:15,000 --> 00:02:16,000
+is this matrix.
+
+41
+00:02:16,000 --> 00:02:19,000
+
+
+42
+00:02:19,000 --> 00:02:21,000
+Actually, I used it earlier in the class, even.
+
+43
+00:02:21,000 --> 00:02:27,000
+So it has these properties.
+
+44
+00:02:27,000 --> 00:02:28,000
+I guess I'm not writing the dagger,
+
+45
+00:02:28,000 --> 00:02:34,000
+because it's equal to its own dagger.
+
+46
+00:02:34,000 --> 00:02:41,000
+And so right away, we see that this maps polys to polys
+
+47
+00:02:41,000 --> 00:02:43,000
+when I conjugate.
+
+48
+00:02:43,000 --> 00:02:45,000
+So all of the Hadamards belong to the Clifford group.
+
+49
+00:02:45,000 --> 00:02:52,000
+So let me write H1 through Hn belong to the Clifford group,
+
+50
+00:02:52,000 --> 00:02:55,000
+where Hi means Hadamard acting on the i-th position.
+
+51
+00:02:55,000 --> 00:03:05,000
+
+
+52
+00:03:05,000 --> 00:03:09,000
+So this is a single qubit gate that's not a poly.
+
+53
+00:03:09,000 --> 00:03:12,000
+Nevertheless, it's in the Clifford group.
+
+54
+00:03:12,000 --> 00:03:17,000
+Another example is the phase gate.
+
+55
+00:03:17,000 --> 00:03:23,000
+So let me define S to be the square root of Z.
+
+56
+00:03:23,000 --> 00:03:25,000
+And I guess, it's a little ambiguous what
+
+57
+00:03:25,000 --> 00:03:28,000
+square roots mean, but I'll take the one that looks like 1,
+
+58
+00:03:28,000 --> 00:03:33,000
+0, 0, i.
+
+59
+00:03:33,000 --> 00:03:36,000
+And I claim--
+
+60
+00:03:36,000 --> 00:03:45,000
+I could also write this as e to the i pi over 4 z--
+
+61
+00:03:45,000 --> 00:03:50,000
+
+
+62
+00:03:50,000 --> 00:03:52,000
+or pi over 2?
+
+63
+00:03:52,000 --> 00:03:53,000
+Pi over 4, yeah, pi over 4.
+
+64
+00:03:53,000 --> 00:03:57,000
+
+
+65
+00:03:57,000 --> 00:04:04,000
+So I claim that this is also in the Clifford group.
+
+66
+00:04:04,000 --> 00:04:05,000
+So why is that?
+
+67
+00:04:05,000 --> 00:04:07,000
+Well, if you put a Z here, it's just
+
+68
+00:04:07,000 --> 00:04:08,000
+going to compute with that.
+
+69
+00:04:08,000 --> 00:04:13,000
+So you're going to get back the Z. Then it's definitely a poly.
+
+70
+00:04:13,000 --> 00:04:20,000
+What about if you put an X-- if you do SX S dagger?
+
+71
+00:04:20,000 --> 00:04:25,000
+So here, these do not commute, and S is not a poly.
+
+72
+00:04:25,000 --> 00:04:27,000
+So they don't anti-commute either.
+
+73
+00:04:27,000 --> 00:04:31,000
+So if I try to move the S past the X,
+
+74
+00:04:31,000 --> 00:04:34,000
+I'm not going to just pick up a minus sign.
+
+75
+00:04:34,000 --> 00:04:37,000
+So you have to be a little bit careful here.
+
+76
+00:04:37,000 --> 00:04:42,000
+However, if I write it in this way, then the z in the exponent
+
+77
+00:04:42,000 --> 00:04:44,000
+does pick up a minus sign.
+
+78
+00:04:44,000 --> 00:04:52,000
+So I can write this as X e to the minus i pi over 4
+
+79
+00:04:52,000 --> 00:05:00,000
+z times S dagger, because as I move the e to the i
+
+80
+00:05:00,000 --> 00:05:02,000
+pi over 4 z past it, the z in the exponent
+
+81
+00:05:02,000 --> 00:05:04,000
+picks of a minus sign.
+
+82
+00:05:04,000 --> 00:05:07,000
+And so what's this equal to-- e to the minus i pi over 4 times
+
+83
+00:05:07,000 --> 00:05:08,000
+z?
+
+84
+00:05:08,000 --> 00:05:12,000
+
+
+85
+00:05:12,000 --> 00:05:13,000
+That's equal to S dagger.
+
+86
+00:05:13,000 --> 00:05:18,000
+So this is equal to X S dagger S dagger.
+
+87
+00:05:18,000 --> 00:05:21,000
+What's S dagger squared?
+
+88
+00:05:21,000 --> 00:05:29,000
+Z. So this equal to XZ belongs to the poly group.
+
+89
+00:05:29,000 --> 00:05:30,000
+Good.
+
+90
+00:05:30,000 --> 00:05:36,000
+Now, this argument can only really
+
+91
+00:05:36,000 --> 00:05:38,000
+rely on it being a square root.
+
+92
+00:05:38,000 --> 00:05:42,000
+So one gate which is useful in quantum computing
+
+93
+00:05:42,000 --> 00:05:46,000
+is the T gate, which is the square root of S.
+
+94
+00:05:46,000 --> 00:05:55,000
+So I'm going to define it to be 1, 0, 0, e to the i pi over 4.
+
+95
+00:05:55,000 --> 00:05:57,000
+There's a few different ways of defining it.
+
+96
+00:05:57,000 --> 00:06:01,000
+I can vary the overall phase.
+
+97
+00:06:01,000 --> 00:06:03,000
+So this is e to the i--
+
+98
+00:06:03,000 --> 00:06:06,000
+
+
+99
+00:06:06,000 --> 00:06:09,000
+Yeah, that is--
+
+100
+00:06:09,000 --> 00:06:16,000
+So this is e to the i pi over 8 times z.
+
+101
+00:06:16,000 --> 00:06:22,000
+And it turns out if you do TX T dagger,
+
+102
+00:06:22,000 --> 00:06:30,000
+the same argument will give you X S dagger.
+
+103
+00:06:30,000 --> 00:06:32,000
+You move the T past this, it becomes T dagger.
+
+104
+00:06:32,000 --> 00:06:37,000
+And so this is not in the poly group.
+
+105
+00:06:37,000 --> 00:06:42,000
+So you can't just put any phase you like on the diagonal.
+
+106
+00:06:42,000 --> 00:06:44,000
+It's really only specific values that will work.
+
+107
+00:06:44,000 --> 00:06:50,000
+
+
+108
+00:06:50,000 --> 00:06:54,000
+And it turns out--
+
+109
+00:06:54,000 --> 00:06:56,000
+this is not--
+
+110
+00:06:56,000 --> 00:07:00,000
+I don't know a very easy way of proving this, other than kind
+
+111
+00:07:00,000 --> 00:07:03,000
+of checking a lot of cases--
+
+112
+00:07:03,000 --> 00:07:06,000
+that the single-qubit Cliffords--
+
+113
+00:07:06,000 --> 00:07:08,000
+actually, I guess it will follow from things
+
+114
+00:07:08,000 --> 00:07:10,000
+that we'll show later.
+
+115
+00:07:10,000 --> 00:07:14,000
+But I don't know a totally self-contained way of doing it.
+
+116
+00:07:14,000 --> 00:07:16,000
+The single-qubit Cliffords, it turns out,
+
+117
+00:07:16,000 --> 00:07:24,000
+are generated by the polys, Hadamard, and the phase gate.
+
+118
+00:07:24,000 --> 00:07:27,000
+In fact, I didn't really need the polys in here,
+
+119
+00:07:27,000 --> 00:07:31,000
+because if I take S squared, I get Z. And with Z and H,
+
+120
+00:07:31,000 --> 00:07:33,000
+I can get back the--
+
+121
+00:07:33,000 --> 00:07:36,000
+can get X. So really, just Hadamard and S
+
+122
+00:07:36,000 --> 00:07:39,000
+are enough to generate the single-qubit Cliffords.
+
+123
+00:07:39,000 --> 00:07:41,000
+So these examples I've given, I claim
+
+124
+00:07:41,000 --> 00:07:44,000
+that's all there is for first single qubits.
+
+125
+00:07:44,000 --> 00:07:45,000
+
+

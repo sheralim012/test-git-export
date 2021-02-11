@@ -1,0 +1,8 @@
+<video youtube="1.00:U-WZhq65704" url_name="M1L4j" sub="" transcripts="{&quot;en&quot;: &quot;688240aa-1fee-42bc-90ca-318a2ff4c169-en.srt&quot;}" display_name="QEC example 1 corrects more than just discrete bit flip errors" edx_video_id="688240aa-1fee-42bc-90ca-318a2ff4c169" youtube_id_1_0="U-WZhq65704">
+  <video_asset client_video_id="External Video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="688240aa-1fee-42bc-90ca-318a2ff4c169-en.srt"/>
+</video>

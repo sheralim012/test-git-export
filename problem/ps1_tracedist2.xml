@@ -1,0 +1,119 @@
+<problem linenum="167" tex_filename="./week2_ps2.tex" attempts="10" display_name="TD2. Trace distance (2 of 4)" max_attempts="10">
+  <p>
+This step of the problem is a mathematical interlude. You may consider using the result of the problem (the Schatten norms), and returning to complete the proofs of the norms later. </p>
+  <p>
+Consider Hermitian matrices [mathjaxinline]X,\Lambda[/mathjaxinline]. Let [mathjaxinline]\| X\| _1[/mathjaxinline] denote the Schatten 1-norm, i.e. the sum of the absolute values of the eigenvalues of [mathjaxinline]X[/mathjaxinline], and let [mathjaxinline]\| \Lambda \| _\infty[/mathjaxinline] denote the Schatten [mathjaxinline]\infty[/mathjaxinline]-norm, i.e. the maximum absolute value of the eigenvalues of [mathjaxinline]\Lambda[/mathjaxinline]. </p>
+  <p>
+Complete the following sequences of logic to prove that </p>
+  <table id="a0000000007" class="eqnarray" cellspacing="0" cellpadding="7" width="100%" style="table-layout:auto">
+    <tr id="a0000000008">
+      <td style="width:40%; border:none"> </td>
+      <td style="vertical-align:middle;                                    text-align:right; border:none">
+	    [mathjaxinline]\displaystyle \| X\| _1[/mathjaxinline]
+        </td>
+      <td style="vertical-align:middle;                                    text-align:left; border:none">
+	    [mathjaxinline]\displaystyle  = \max _{ \|  \Lambda \| _\infty \leq 1} {\rm Tr}[X\Lambda ][/mathjaxinline]
+        </td>
+      <td style="width:40%; border:none"> </td>
+      <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.2)</td>
+    </tr>
+    <tr id="a0000000009">
+      <td style="width:40%; border:none"> </td>
+      <td style="vertical-align:middle;                                    text-align:right; border:none">
+	    [mathjaxinline]\displaystyle \| \Lambda \| _\infty[/mathjaxinline]
+        </td>
+      <td style="vertical-align:middle;                                    text-align:left; border:none">
+	    [mathjaxinline]\displaystyle  = \max _{\| X\| _1\leq 1} {\rm Tr}[X\Lambda ][/mathjaxinline]
+        </td>
+      <td style="width:40%; border:none"> </td>
+      <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.3)</td>
+    </tr>
+  </table>
+  <p>
+(These relations say that the Schatten [mathjaxinline]1[/mathjaxinline]-norm and the Schatten [mathjaxinline]\infty[/mathjaxinline]-norm are <em>dual</em> to each other.) </p>
+  <span>
+    <customresponse>
+      <drag_and_drop_input img="/static/images/ps1a_trace2/ps1a_trace2_dnd.png" target_outline="false" one_per_target="true" no_labels="true" label_bg_color="rgb(222, 139, 238)">
+        <draggable id="rmprobabilities" icon="/static/images/ps1a_trace2/ps1a_trace2_dnd_label1.png" can_reuse="true"/>
+        <draggable id="rmeigenvalues" icon="/static/images/ps1a_trace2/ps1a_trace2_dnd_label2.png" can_reuse="true"/>
+        <draggable id="rmorthonormal" icon="/static/images/ps1a_trace2/ps1a_trace2_dnd_label3.png" can_reuse="true"/>
+        <draggable id="rmbases" icon="/static/images/ps1a_trace2/ps1a_trace2_dnd_label4.png" can_reuse="true"/>
+        <draggable id="rmeigenvectors" icon="/static/images/ps1a_trace2/ps1a_trace2_dnd_label5.png" can_reuse="true"/>
+        <draggable id="braketviujtwo" icon="/static/images/ps1a_trace2/ps1a_trace2_dnd_label6.png" can_reuse="true"/>
+        <draggable id="braketuivjtwo" icon="/static/images/ps1a_trace2/ps1a_trace2_dnd_label7.png" can_reuse="true"/>
+        <draggable id="leftsumjlambdajbraketuivjtworight" icon="/static/images/ps1a_trace2/ps1a_trace2_dnd_label8.png" can_reuse="true"/>
+        <draggable id="leftsumjlambdajbraketujvitworight" icon="/static/images/ps1a_trace2/ps1a_trace2_dnd_label9.png" can_reuse="true"/>
+        <draggable id="lambdamax" icon="/static/images/ps1a_trace2/ps1a_trace2_dnd_label10.png" can_reuse="true"/>
+        <draggable id="lambdamin" icon="/static/images/ps1a_trace2/ps1a_trace2_dnd_label11.png" can_reuse="true"/>
+        <draggable id="leq" icon="/static/images/ps1a_trace2/ps1a_trace2_dnd_label12.png" can_reuse="true"/>
+        <draggable id="geq" icon="/static/images/ps1a_trace2/ps1a_trace2_dnd_label13.png" can_reuse="true"/>
+        <draggable id="" icon="/static/images/ps1a_trace2/ps1a_trace2_dnd_label14.png" can_reuse="true"/>
+        <draggable id="lambdai" icon="/static/images/ps1a_trace2/ps1a_trace2_dnd_label15.png" can_reuse="true"/>
+        <draggable id="xi" icon="/static/images/ps1a_trace2/ps1a_trace2_dnd_label16.png" can_reuse="true"/>
+        <target id="1" x="89" y="160" w="154" h="54"/>
+        <target id="2" x="595" y="160" w="155" h="54"/>
+        <target id="3" x="229" y="229" w="155" h="54"/>
+        <target id="4" x="404" y="229" w="154" h="54"/>
+        <target id="9" x="188" y="381" w="155" h="55"/>
+        <target id="5" x="432" y="331" w="155" h="54"/>
+        <target id="6" x="291" y="458" w="154" h="54"/>
+        <target id="17" x="545" y="458" w="155" h="54"/>
+        <target id="7" x="291" y="547" w="154" h="54"/>
+        <target id="8" x="589" y="547" w="155" h="54"/>
+        <target id="18" x="123" y="637" w="155" h="54"/>
+        <target id="11" x="324" y="637" w="155" h="54"/>
+        <target id="10" x="123" y="715" w="155" h="55"/>
+      </drag_and_drop_input>
+      <answer>
+caset = [{'rmeigenvalues': '1'}, {'rmeigenvectors': '2'}, {'rmorthonormal': '3'}, {'rmbases': '4'}, {'leq': '9'}, {'braketuivjtwo': '5'}, {'leftsumjlambdajbraketuivjtworight': '6'}, {'leftsumjlambdajbraketuivjtworight': '17'}, {'lambdamax': '7'}, {'lambdamin': '8'}, {'leq': '18'}, {'xi': '11'}, {'': '10'}]
+# custom checking for reusable labels - assumes all targets get some label
+import json
+ans = json.loads(submission[0])
+correct = ['correct']
+for rule in caset:
+    if rule not in ans:
+        correct = ['incorrect']
+        break
+
+# use this for debugging
+# messages = ['ans=%s' % submission[0]]
+</answer>
+    </customresponse>
+    <solution>
+      <img src="/static/images/ps1a_trace2/ps1a_trace2_dnd_sol_29RBYT.png"/>
+    </solution>
+  </span>
+  <span>
+    <customresponse>
+      <drag_and_drop_input img="/static/images/ps1a_trace2b/ps1a_trace2b_dnd.png" target_outline="false" one_per_target="true" no_labels="true" label_bg_color="rgb(222, 139, 238)">
+        <draggable id="braketuivj" icon="/static/images/ps1a_trace2b/ps1a_trace2b_dnd_label1.png" can_reuse="true"/>
+        <draggable id="braketuivjtwo" icon="/static/images/ps1a_trace2b/ps1a_trace2b_dnd_label2.png" can_reuse="true"/>
+        <draggable id="leftmaxklambdakright" icon="/static/images/ps1a_trace2b/ps1a_trace2b_dnd_label3.png" can_reuse="true"/>
+        <draggable id="leftminklambdakright" icon="/static/images/ps1a_trace2b/ps1a_trace2b_dnd_label4.png" can_reuse="true"/>
+        <target id="1" x="368" y="47" w="166" h="58"/>
+        <target id="5" x="421" y="134" w="166" h="58"/>
+        <target id="2" x="296" y="230" w="166" h="58"/>
+        <target id="6" x="556" y="230" w="166" h="58"/>
+        <target id="7" x="296" y="318" w="166" h="58"/>
+        <target id="8" x="233" y="402" w="166" h="58"/>
+      </drag_and_drop_input>
+      <answer>
+caset = [{'braketuivjtwo': '1'}, {'braketuivjtwo': '5'}, {'leftmaxklambdakright': '2'}, {'braketuivjtwo': '6'}, {'leftmaxklambdakright': '7'}, {'leftmaxklambdakright': '8'}]
+# custom checking for reusable labels - assumes all targets get some label
+import json
+ans = json.loads(submission[0])
+correct = ['correct']
+for rule in caset:
+    if rule not in ans:
+        correct = ['incorrect']
+        break
+
+# use this for debugging
+# messages = ['ans=%s' % submission[0]]
+</answer>
+    </customresponse>
+    <solution>
+      <img src="/static/images/ps1a_trace2b/ps1a_trace2b_dnd_sol_9DD19D.png"/>
+    </solution>
+  </span>
+</problem>

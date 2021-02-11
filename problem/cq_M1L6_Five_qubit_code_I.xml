@@ -1,0 +1,24 @@
+<problem linenum="47" tex_filename="./week4_lectures6.tex" attempts="1" display_name="Five qubit code I" max_attempts="1">
+  <p>
+This is a concept question, provided to check your understanding of the previous lecture video clips. </p>
+  <p>
+Which of the following are true? </p>
+  <p>
+    <choiceresponse>
+      <checkboxgroup>
+        <choice correct="false" name="1">
+          <text>The five-qubit code encodes two logical qubits.</text>
+        </choice>
+        <choice correct="false" name="2">
+          <text>The five-qubit code has five generators.</text>
+        </choice>
+        <choice correct="true" name="3">
+          <text>[mathjaxinline]{XXXXX}[/mathjaxinline] is not in the stabilizer group of the five qubit code.</text>
+        </choice>
+        <choice correct="true" name="4">
+          <text>The logical [mathjaxinline]|1\rangle[/mathjaxinline] qubit in this code is stabilized by [mathjaxinline]-ZZZZZ[/mathjaxinline].</text>
+        </choice>
+      </checkboxgroup>
+    </choiceresponse>
+  </p>
+</problem>

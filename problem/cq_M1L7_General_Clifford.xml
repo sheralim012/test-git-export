@@ -1,0 +1,24 @@
+<problem linenum="201" tex_filename="./week4_lectures7.tex" attempts="1" display_name="General Clifford" max_attempts="1">
+  <p>
+This is a concept question, provided to check your understanding of the previous lecture video clips. </p>
+  <p>
+Which of the following are true? </p>
+  <p>
+    <choiceresponse>
+      <checkboxgroup>
+        <choice correct="true" name="1">
+          <text>The probability of each measurement outcome after applying a Clifford circuit is always one divided by a power of 2.</text>
+        </choice>
+        <choice correct="false" name="2">
+          <text>The normalizer of the stabilizer groups in the construction of Gottesman-Knill theorem have more elements than the stabilizer group itself.</text>
+        </choice>
+        <choice correct="true" name="3">
+          <text>The Gottesman-Knill theorem still holds if we measure the qubits in the [mathjaxinline]X[/mathjaxinline] basis.</text>
+        </choice>
+        <choice correct="true" name="4">
+          <text>An arbitrary code may be transformed to a trivial code using a Clifford operation.</text>
+        </choice>
+      </checkboxgroup>
+    </choiceresponse>
+  </p>
+</problem>

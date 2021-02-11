@@ -1,0 +1,27 @@
+<problem linenum="150" tex_filename="./week2_lectures2.tex" attempts="1" display_name="Kraus operator form of quantum operations" max_attempts="1">
+  <p>
+This is a concept question, provided to check your understanding of the previous video clip. </p>
+  <p>
+Suppose [mathjaxinline]\{  E_1,\ldots ,E_ n \}[/mathjaxinline] is a complete set of [mathjaxinline]n[/mathjaxinline] Kraus operators (also known as <em>operation elements</em>) which define a <a href="https://en.wikipedia.org/wiki/Quantum_operation" target="_blank">quantum operation</a> [mathjaxinline]{\cal E}[/mathjaxinline]. Which of the following statements about these operators must be true? </p>
+  <p>
+    <choiceresponse>
+      <checkboxgroup>
+        <choice correct="true" name="1">
+          <text>[mathjaxinline]\sum _ k E_ k \rho E_ k^\dagger[/mathjaxinline] is a valid density matrix, for all valid density matrices [mathjaxinline]\rho[/mathjaxinline].</text>
+        </choice>
+        <choice correct="false" name="2">
+          <text>[mathjaxinline]\sum _ k E^\dagger _ k E_ k^\dagger = 0[/mathjaxinline]</text>
+        </choice>
+        <choice correct="true" name="3">
+          <text>[mathjaxinline]\sum _ k E_ k^\dagger E_ k = I[/mathjaxinline]</text>
+        </choice>
+        <choice correct="false" name="4">
+          <text>[mathjaxinline]\sum _ k E_ k E_ k^\dagger = I[/mathjaxinline]</text>
+        </choice>
+        <choice correct="false" name="5">
+          <text>There exists a set of unitary operators [mathjaxinline]\{ U_ k\}[/mathjaxinline] and a probability distribution [mathjaxinline]\{ p_ k\}[/mathjaxinline] such that [mathjaxinline]E_ k = \sqrt{p_ k} U_ k[/mathjaxinline].</text>
+        </choice>
+      </checkboxgroup>
+    </choiceresponse>
+  </p>
+</problem>

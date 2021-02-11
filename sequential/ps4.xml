@@ -1,0 +1,8 @@
+<sequential display_name="PS#4 - Clifford circuits" due="&quot;2918-06-15T23:57:00+00:00&quot;" format="PS" graceperiod="18000 seconds" graded="true" showanswer="closed" start="&quot;2017-09-06T00:00:00+00:00&quot;" attempts="10" tex_filename="./week4_5_ps2b.tex" linenum="3" refnum="5">
+  <vertical url_name="Two-qubit_Clifford_circuits"/>
+  <vertical url_name="Multi-qubit_Clifford_circuits"/>
+  <vertical url_name="Multi-qubit_Clifford_circuits_II"/>
+  <vertical url_name="Decomposing_Clifford_operations"/>
+  <vertical url_name="Decomposition_exercise_2-qubit_Clifford_circuit"/>
+  <vertical url_name="Decomposition_exercise_3-qubit_Clifford_circuit"/>
+</sequential>

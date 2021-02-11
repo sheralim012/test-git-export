@@ -1,0 +1,252 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:04,000
+You can ask lots of questions like,
+
+2
+00:00:04,000 --> 00:00:09,000
+why can we use density matrices instead of ensembles.
+
+3
+00:00:09,000 --> 00:00:13,000
+Does it density matrix specify anything ensemble, and things
+
+4
+00:00:13,000 --> 00:00:15,000
+like that.
+
+5
+00:00:15,000 --> 00:00:20,000
+And the answer to this is a therm.
+
+6
+00:00:20,000 --> 00:00:23,000
+
+
+7
+00:00:23,000 --> 00:00:35,000
+You cannot distinguish between two different ensembles
+
+8
+00:00:35,000 --> 00:00:37,000
+of states with the same density matrix.
+
+9
+00:00:37,000 --> 00:00:50,000
+
+
+10
+00:00:50,000 --> 00:00:55,000
+And I will be using rho as a symbol for density matrices
+
+11
+00:00:55,000 --> 00:01:00,000
+because, basically, that's the standard.
+
+12
+00:01:00,000 --> 00:01:07,000
+So, given an ensemble you can compute density matrix rho.
+
+13
+00:01:07,000 --> 00:01:09,000
+And you can not distinguish between two ensembles
+
+14
+00:01:09,000 --> 00:01:12,000
+for the same rho, which means, for any experiment
+
+15
+00:01:12,000 --> 00:01:16,000
+you do on a system, all you need to know the rho
+
+16
+00:01:16,000 --> 00:01:21,000
+and you don't need to know the actual ensembles.
+
+17
+00:01:21,000 --> 00:01:30,000
+So rather than having ensemble, which assigns some probability
+
+18
+00:01:30,000 --> 00:01:33,000
+distribution to every quantum state,
+
+19
+00:01:33,000 --> 00:01:35,000
+it's much easier to work with density matrices
+
+20
+00:01:35,000 --> 00:01:40,000
+which, instead of a potential infinite number of parameters,
+
+21
+00:01:40,000 --> 00:01:43,000
+you only have a finite number of parameters.
+
+22
+00:01:43,000 --> 00:01:48,000
+If the size of the system is d, the number
+
+23
+00:01:48,000 --> 00:01:50,000
+of parameters in the density matrix
+
+24
+00:01:50,000 --> 00:01:54,000
+is just d squared complex numbers.
+
+25
+00:01:54,000 --> 00:01:58,000
+So first I want to convince you that two different ensembles
+
+26
+00:01:58,000 --> 00:02:02,000
+can have the same density matrix.
+
+27
+00:02:02,000 --> 00:02:16,000
+So ensemble A, with probability 1/2, you get 1 over root 3, 0
+
+28
+00:02:16,000 --> 00:02:25,000
+plus root 2 over 3, 1 with probability 1/2.
+
+29
+00:02:25,000 --> 00:02:30,000
+1 over root 3, 0 minus 2 over 3, 1.
+
+30
+00:02:30,000 --> 00:02:34,000
+
+
+31
+00:02:34,000 --> 00:02:57,000
+Ensemble B, you get probability 1/3, 0 and probability 2/3, 1
+
+32
+00:02:57,000 --> 00:03:05,000
+So, rho for A is equal to 1/2.
+
+33
+00:03:05,000 --> 00:03:08,000
+
+
+34
+00:03:08,000 --> 00:03:14,000
+I'll just call that psi plus, plus 1/2 psi minus.
+
+35
+00:03:14,000 --> 00:03:16,000
+
+
+36
+00:03:16,000 --> 00:03:19,000
+What is psi plus?
+
+37
+00:03:19,000 --> 00:03:23,000
+Well it equals 1/2.
+
+38
+00:03:23,000 --> 00:03:27,000
+
+
+39
+00:03:27,000 --> 00:03:36,000
+OK, so, it's just a matrix and up in this corner
+
+40
+00:03:36,000 --> 00:03:41,000
+you get 1 over root 3 times 1 over root 3, which is 1/3.
+
+41
+00:03:41,000 --> 00:03:51,000
+And here you get 2/3, root 2/3, 2/3, plus one half of 1/3,
+
+42
+00:03:51,000 --> 00:03:55,000
+root 2/3, root 2/3.
+
+43
+00:03:55,000 --> 00:03:57,000
+And both of these have minus signs
+
+44
+00:03:57,000 --> 00:04:03,000
+because this was 1 over root 3 times minus root 2/3.
+
+45
+00:04:03,000 --> 00:04:06,000
+And here you have 2/3.
+
+46
+00:04:06,000 --> 00:04:14,000
+It's equal to 1/3, 2/3, 0, 0.
+
+47
+00:04:14,000 --> 00:04:19,000
+
+
+48
+00:04:19,000 --> 00:04:22,000
+Is this clear so far?
+
+49
+00:04:22,000 --> 00:04:24,000
+Any questions?
+
+50
+00:04:24,000 --> 00:04:32,000
+So row B is equal to 1/3 0, 0.
+
+51
+00:04:32,000 --> 00:04:44,000
+Plus 2/3, 1, 1 equals 1/3, 1, 0, 0, 0 plus 2/3 0, 0, 0, 1.
+
+52
+00:04:44,000 --> 00:04:48,000
+
+
+53
+00:04:48,000 --> 00:04:49,000
+OK?
+
+54
+00:04:49,000 --> 00:04:51,000
+It equals the same thing.
+
+55
+00:04:51,000 --> 00:04:55,000
+
+
+56
+00:04:55,000 --> 00:05:00,000
+So here are two different ensembles with the same density
+
+57
+00:05:00,000 --> 00:05:01,000
+matrix.
+
+58
+00:05:01,000 --> 00:05:06,000
+And you can not distinguish these two.
+
+59
+00:05:06,000 --> 00:05:14,000
+So rather than doing an example on this,
+
+60
+00:05:14,000 --> 00:05:20,000
+I want to do a whole bunch of abstract calculations that
+
+61
+00:05:20,000 --> 00:05:24,000
+prove that you cannot distinguish these two.
+
+62
+00:05:24,000 --> 00:05:25,000
+
+

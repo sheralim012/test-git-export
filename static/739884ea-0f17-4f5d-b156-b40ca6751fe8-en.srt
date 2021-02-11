@@ -1,0 +1,548 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:03,000
+So we've made some progress in figuring out what Cliffords do.
+
+2
+00:00:03,000 --> 00:00:06,000
+They change, you could say, the flavor of the poly--
+
+3
+00:00:06,000 --> 00:00:09,000
+whether it's an x or a z, and what qubits--
+
+4
+00:00:09,000 --> 00:00:10,000
+by a linear transformation.
+
+5
+00:00:10,000 --> 00:00:13,000
+And then they do something a little more complicated
+
+6
+00:00:13,000 --> 00:00:15,000
+for the phase.
+
+7
+00:00:15,000 --> 00:00:17,000
+For coding purposes, we're often happy just
+
+8
+00:00:17,000 --> 00:00:20,000
+to figure out what happens to the flavor of the poly.
+
+9
+00:00:20,000 --> 00:00:22,000
+So that's nice.
+
+10
+00:00:22,000 --> 00:00:24,000
+But we haven't finished.
+
+11
+00:00:24,000 --> 00:00:28,000
+Because not all matrices M are possible.
+
+12
+00:00:28,000 --> 00:00:36,000
+So which M are possible.
+
+13
+00:00:36,000 --> 00:00:40,000
+We know-- for example, I argued before--
+
+14
+00:00:40,000 --> 00:00:42,000
+that M equals 0 is impossible.
+
+15
+00:00:42,000 --> 00:00:47,000
+
+
+16
+00:00:47,000 --> 00:00:50,000
+Because if M is 0, that's like saying that g of v
+
+17
+00:00:50,000 --> 00:00:54,000
+is always 0, that you map every poly to the identity--
+
+18
+00:00:54,000 --> 00:00:55,000
+or plus or minus the identity.
+
+19
+00:00:55,000 --> 00:00:57,000
+That would not work.
+
+20
+00:00:57,000 --> 00:01:01,000
+So not all M's are possible.
+
+21
+00:01:01,000 --> 00:01:03,000
+So we need to do a little more work to figure out
+
+22
+00:01:03,000 --> 00:01:05,000
+which M's are possible here.
+
+23
+00:01:05,000 --> 00:01:08,000
+
+
+24
+00:01:08,000 --> 00:01:12,000
+And to do this, I want to go back to that top equation
+
+25
+00:01:12,000 --> 00:01:16,000
+up there, the commutation relations.
+
+26
+00:01:16,000 --> 00:01:25,000
+Sigma v sigma w sigma v sigma w is plus or minus identity,
+
+27
+00:01:25,000 --> 00:01:27,000
+where that plus or minus is described
+
+28
+00:01:27,000 --> 00:01:29,000
+by the symplectic inner product between v and w.
+
+29
+00:01:29,000 --> 00:01:35,000
+
+
+30
+00:01:35,000 --> 00:01:36,000
+You know, I think when I wrote it
+
+31
+00:01:36,000 --> 00:01:43,000
+before, I said sigma v sigma w is minus 1 to this times
+
+32
+00:01:43,000 --> 00:01:49,000
+sigma w sigma v. But multiply both on the right by sigma v,
+
+33
+00:01:49,000 --> 00:01:51,000
+and then both on the right by sigma w,
+
+34
+00:01:51,000 --> 00:01:54,000
+and you get this equation.
+
+35
+00:01:54,000 --> 00:02:00,000
+OK, so now let's use the fact that if I
+
+36
+00:02:00,000 --> 00:02:03,000
+conjugate the right side by u, then nothing happens.
+
+37
+00:02:03,000 --> 00:02:03,000
+Right?
+
+38
+00:02:03,000 --> 00:02:06,000
+If I conjugate the identity by u, I get back the identity.
+
+39
+00:02:06,000 --> 00:02:09,000
+If I conjugate the left hand side by u,
+
+40
+00:02:09,000 --> 00:02:12,000
+that's the same as conjugating every single term.
+
+41
+00:02:12,000 --> 00:02:20,000
+So I could write this as u sigma v u dagger u sigma w u dagger u
+
+42
+00:02:20,000 --> 00:02:26,000
+sigma v u dagger u sigma w u dagger.
+
+43
+00:02:26,000 --> 00:02:34,000
+And now, I can use what we figured out so far--
+
+44
+00:02:34,000 --> 00:02:39,000
+that it turns sigma v into sigma gv, which is sigma Mv--
+
+45
+00:02:39,000 --> 00:02:48,000
+to write this as sigma Mv sigma Mw sigma Mv sigma Mw.
+
+46
+00:02:48,000 --> 00:02:52,000
+
+
+47
+00:02:52,000 --> 00:02:55,000
+And I haven't written any phases.
+
+48
+00:02:55,000 --> 00:02:56,000
+Why is that OK?
+
+49
+00:02:56,000 --> 00:03:01,000
+
+
+50
+00:03:01,000 --> 00:03:03,000
+I said phases are complicated.
+
+51
+00:03:03,000 --> 00:03:04,000
+Yeah.
+
+52
+00:03:04,000 --> 00:03:05,000
+[INAUDIBLE]
+
+53
+00:03:05,000 --> 00:03:06,000
+That's right.
+
+54
+00:03:06,000 --> 00:03:08,000
+So each of these appears twice.
+
+55
+00:03:08,000 --> 00:03:10,000
+So I should've written minus 1 to the something times sigma
+
+56
+00:03:10,000 --> 00:03:11,000
+Mv.
+
+57
+00:03:11,000 --> 00:03:14,000
+And over here, minus 1 to the same thing times sigma Mv.
+
+58
+00:03:14,000 --> 00:03:15,000
+Those are going to cancel out.
+
+59
+00:03:15,000 --> 00:03:21,000
+So I'm lucky that those phases do not trouble us here.
+
+60
+00:03:21,000 --> 00:03:22,000
+I mean, it's not surprising.
+
+61
+00:03:22,000 --> 00:03:22,000
+Right?
+
+62
+00:03:22,000 --> 00:03:24,000
+The phases commute with everything.
+
+63
+00:03:24,000 --> 00:03:26,000
+So if we want to understand commutation relations,
+
+64
+00:03:26,000 --> 00:03:28,000
+phases are not going to affect it.
+
+65
+00:03:28,000 --> 00:03:31,000
+
+
+66
+00:03:31,000 --> 00:03:35,000
+OK, so now we do the same kind of trick,
+
+67
+00:03:35,000 --> 00:03:40,000
+where we use this equation twice, on the original
+
+68
+00:03:40,000 --> 00:03:42,000
+and on the transformed states.
+
+69
+00:03:42,000 --> 00:03:49,000
+So this we can write as minus 1 Mv transpose sigma
+
+70
+00:03:49,000 --> 00:03:52,000
+Mw times identity.
+
+71
+00:03:52,000 --> 00:04:01,000
+
+
+72
+00:04:01,000 --> 00:04:07,000
+So we have identity in both places times different phases.
+
+73
+00:04:07,000 --> 00:04:10,000
+So those must be equal, at least modulo 2.
+
+74
+00:04:10,000 --> 00:04:12,000
+And we're thinking about everything in f2.
+
+75
+00:04:12,000 --> 00:04:15,000
+So they're equal as elements of f2.
+
+76
+00:04:15,000 --> 00:04:19,000
+So we have that v transpose sigma w is equal to--
+
+77
+00:04:19,000 --> 00:04:25,000
+here we can evaluate this as v transpose M transpose lambda
+
+78
+00:04:25,000 --> 00:04:27,000
+Mw.
+
+79
+00:04:27,000 --> 00:04:35,000
+And this is equal in the f2 sense.
+
+80
+00:04:35,000 --> 00:04:41,000
+And this equality is true for all v and w.
+
+81
+00:04:41,000 --> 00:04:45,000
+And so if two matrices are equal,
+
+82
+00:04:45,000 --> 00:04:48,000
+when you sandwich them by any row
+
+83
+00:04:48,000 --> 00:04:51,000
+vector on the left and any column vector on the right,
+
+84
+00:04:51,000 --> 00:04:54,000
+that means that they're equal as matrices.
+
+85
+00:04:54,000 --> 00:04:55,000
+So this is equivalent to just saying
+
+86
+00:04:55,000 --> 00:05:02,000
+that lambda is equal to M transpose lambda M.
+
+87
+00:05:02,000 --> 00:05:05,000
+So we obtain this identity of matrices.
+
+88
+00:05:05,000 --> 00:05:10,000
+
+
+89
+00:05:10,000 --> 00:05:12,000
+And this turns out to be the condition
+
+90
+00:05:12,000 --> 00:05:16,000
+that we'll need on M. We've derived that M should always
+
+91
+00:05:16,000 --> 00:05:17,000
+satisfy this.
+
+92
+00:05:17,000 --> 00:05:20,000
+Conversely, if M does satisfy this,
+
+93
+00:05:20,000 --> 00:05:23,000
+it means that the transformation preserves
+
+94
+00:05:23,000 --> 00:05:24,000
+commutation relations.
+
+95
+00:05:24,000 --> 00:05:28,000
+
+
+96
+00:05:28,000 --> 00:05:33,000
+And this equation here, it might look a little bit funny.
+
+97
+00:05:33,000 --> 00:05:35,000
+To get some perspective on it, you
+
+98
+00:05:35,000 --> 00:05:39,000
+might imagine that we replace lambda with the identity.
+
+99
+00:05:39,000 --> 00:05:44,000
+So if we did that, what would we say about the matrix M?
+
+100
+00:05:44,000 --> 00:05:46,000
+If we replaced lambda with identity,
+
+101
+00:05:46,000 --> 00:05:48,000
+what could you say about M then?
+
+102
+00:05:48,000 --> 00:05:49,000
+It's a rotation?
+
+103
+00:05:49,000 --> 00:05:50,000
+That's right.
+
+104
+00:05:50,000 --> 00:05:51,000
+It's a rotation.
+
+105
+00:05:51,000 --> 00:05:54,000
+It's also called an orthogonal matrix.
+
+106
+00:05:54,000 --> 00:05:58,000
+And I guess it could be a reflection also.
+
+107
+00:05:58,000 --> 00:06:01,000
+But the key property of an orthogonal matrix--
+
+108
+00:06:01,000 --> 00:06:05,000
+which is a product of a rotation and an optional reflection--
+
+109
+00:06:05,000 --> 00:06:07,000
+is that it preserves the length, specifically
+
+110
+00:06:07,000 --> 00:06:10,000
+the Euclidean length, specifically
+
+111
+00:06:10,000 --> 00:06:12,000
+the Euclidean inner product.
+
+112
+00:06:12,000 --> 00:06:13,000
+And the Euclidean inner product is
+
+113
+00:06:13,000 --> 00:06:17,000
+when you take the row vector and then the identity matrix
+
+114
+00:06:17,000 --> 00:06:18,000
+and then the column vector.
+
+115
+00:06:18,000 --> 00:06:20,000
+We're using the symplectic inner product.
+
+116
+00:06:20,000 --> 00:06:22,000
+The symplectic inner product, you
+
+117
+00:06:22,000 --> 00:06:24,000
+put this lambda in the middle.
+
+118
+00:06:24,000 --> 00:06:27,000
+And so these matrices M are precisely
+
+119
+00:06:27,000 --> 00:06:30,000
+the ones that preserve the symplectic inner product.
+
+120
+00:06:30,000 --> 00:06:33,000
+In other words, here the inner product of v and w
+
+121
+00:06:33,000 --> 00:06:37,000
+is the same as the inner product of Mw with Mv.
+
+122
+00:06:37,000 --> 00:06:40,000
+So we say that the set of such matrices--
+
+123
+00:06:40,000 --> 00:06:51,000
+so M is in what's called the symplectic group.
+
+124
+00:06:51,000 --> 00:06:52,000
+It's the set of--
+
+125
+00:06:52,000 --> 00:06:55,000
+the symplectic group is a set of matrices
+
+126
+00:06:55,000 --> 00:06:57,000
+that preserve the symplectic inner product,
+
+127
+00:06:57,000 --> 00:06:58,000
+just like the orthogonal group is
+
+128
+00:06:58,000 --> 00:07:01,000
+what preserves the ordinary Euclidean inner product.
+
+129
+00:07:01,000 --> 00:07:07,000
+
+
+130
+00:07:07,000 --> 00:07:10,000
+And so you can really--
+
+131
+00:07:10,000 --> 00:07:12,000
+except for the fact that it's a funny inner product--
+
+132
+00:07:12,000 --> 00:07:15,000
+you can really think about them kind of geometrically,
+
+133
+00:07:15,000 --> 00:07:17,000
+that these vectors have an inner product,
+
+134
+00:07:17,000 --> 00:07:19,000
+and that allow transformations of the ones that
+
+135
+00:07:19,000 --> 00:07:21,000
+preserve that inner product.
+
+136
+00:07:21,000 --> 00:07:22,000
+
+

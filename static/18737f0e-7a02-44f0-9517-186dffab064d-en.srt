@@ -1,0 +1,808 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:02,000
+We have described quantum mechanics
+
+2
+00:00:02,000 --> 00:00:04,000
+using four postulates.
+
+3
+00:00:04,000 --> 00:00:07,000
+However, for quantum error correction we need more.
+
+4
+00:00:07,000 --> 00:00:09,000
+We need classical statistics.
+
+5
+00:00:09,000 --> 00:00:11,000
+Consider this question.
+
+6
+00:00:11,000 --> 00:00:15,000
+With probability 1/2 you were given either psi or phi.
+
+7
+00:00:15,000 --> 00:00:18,000
+How do you describe this state?
+
+8
+00:00:18,000 --> 00:00:21,000
+It is not a single quantum state, but rather
+
+9
+00:00:21,000 --> 00:00:25,000
+a statistical combination of two possible states
+
+10
+00:00:25,000 --> 00:00:27,000
+with equal probability.
+
+11
+00:00:27,000 --> 00:00:29,000
+You may recall that in quantum mechanics
+
+12
+00:00:29,000 --> 00:00:31,000
+this is described by a density matrix.
+
+13
+00:00:31,000 --> 00:00:34,000
+Here it is the sum of the two outer product
+
+14
+00:00:34,000 --> 00:00:36,000
+vectors of the quantum state.
+
+15
+00:00:36,000 --> 00:00:38,000
+We call this rho.
+
+16
+00:00:38,000 --> 00:00:41,000
+To further appreciate the need for density matrices
+
+17
+00:00:41,000 --> 00:00:44,000
+in describing stochastic combinations of quantum states,
+
+18
+00:00:44,000 --> 00:00:46,000
+consider the following scenario.
+
+19
+00:00:46,000 --> 00:00:50,000
+We have a two-part state-- psi AB--
+
+20
+00:00:50,000 --> 00:00:53,000
+and this state we may draw as this quantum circuit which
+
+21
+00:00:53,000 --> 00:00:55,000
+originates from a single place.
+
+22
+00:00:55,000 --> 00:01:00,000
+The two qubit state will be this particular superposition,
+
+23
+00:01:00,000 --> 00:01:04,000
+and have parts A and B. A will be the first label
+
+24
+00:01:04,000 --> 00:01:09,000
+and B will be the second label in each of the kets.
+
+25
+00:01:09,000 --> 00:01:15,000
+The question is, suppose B measures B's part of the state.
+
+26
+00:01:15,000 --> 00:01:21,000
+What describes A's part of this bipartite quantum state?
+
+27
+00:01:21,000 --> 00:01:24,000
+This state will be a statistical mixture,
+
+28
+00:01:24,000 --> 00:01:28,000
+because what A obtains differs depending
+
+29
+00:01:28,000 --> 00:01:33,000
+on what B's measurement result. If B measures a 0,
+
+30
+00:01:33,000 --> 00:01:35,000
+then A has a 0.
+
+31
+00:01:35,000 --> 00:01:38,000
+If B measures a 1, A has a 1.
+
+32
+00:01:38,000 --> 00:01:41,000
+And each one of these happens with a different amplitude,
+
+33
+00:01:41,000 --> 00:01:44,000
+so we get one or the other of these two states
+
+34
+00:01:44,000 --> 00:01:46,000
+with the two different amplitudes.
+
+35
+00:01:46,000 --> 00:01:52,000
+Let us call this statistical mixture Mixture 1.
+
+36
+00:01:52,000 --> 00:01:56,000
+And now, imagine another separate scenario.
+
+37
+00:01:56,000 --> 00:02:01,000
+In this scenario, B measures, but in a different basis,
+
+38
+00:02:01,000 --> 00:02:06,000
+rather than in this computational 0 and 1 basis
+
+39
+00:02:06,000 --> 00:02:08,000
+as shown above.
+
+40
+00:02:08,000 --> 00:02:11,000
+We have the same bipartite state as an input
+
+41
+00:02:11,000 --> 00:02:13,000
+to this quantum circuit.
+
+42
+00:02:13,000 --> 00:02:16,000
+B, before measurement, let us say,
+
+43
+00:02:16,000 --> 00:02:20,000
+performs a Hadamard transform.
+
+44
+00:02:20,000 --> 00:02:23,000
+The question, again, is what is A's state?
+
+45
+00:02:23,000 --> 00:02:27,000
+A will see something that we may interpret as being different,
+
+46
+00:02:27,000 --> 00:02:31,000
+depending on what B's measurement result is.
+
+47
+00:02:31,000 --> 00:02:34,000
+The state before B's measurement is written here.
+
+48
+00:02:34,000 --> 00:02:38,000
+It is a superposition where the second ket has had a Hadamard
+
+49
+00:02:38,000 --> 00:02:41,000
+operation applied to it.
+
+50
+00:02:41,000 --> 00:02:44,000
+And therefore we can read off from this
+
+51
+00:02:44,000 --> 00:02:46,000
+what A's state is going to be.
+
+52
+00:02:46,000 --> 00:02:52,000
+A will see when B measures a 0 a superposition of root 3 over 4
+
+53
+00:02:52,000 --> 00:02:55,000
+|0> and root 1 over 4 |1>.
+
+54
+00:02:55,000 --> 00:02:59,000
+If B measures a 1 instead, A's state
+
+55
+00:02:59,000 --> 00:03:03,000
+will be different, with a minus sign instead of a plus sign.
+
+56
+00:03:03,000 --> 00:03:07,000
+Now, this is another statistical mixture.
+
+57
+00:03:07,000 --> 00:03:11,000
+And the mixture is of these two states-- one with a plus
+
+58
+00:03:11,000 --> 00:03:14,000
+and one with a minus-- and they are superpositions in contrast
+
+59
+00:03:14,000 --> 00:03:15,000
+to Mixture 1.
+
+60
+00:03:15,000 --> 00:03:18,000
+Let us call this Mixture 2.
+
+61
+00:03:18,000 --> 00:03:22,000
+And, certainly, it looks very different from Mixture 1.
+
+62
+00:03:22,000 --> 00:03:25,000
+
+
+63
+00:03:25,000 --> 00:03:28,000
+The question is, how are these two statistical mixtures
+
+64
+00:03:28,000 --> 00:03:29,000
+different?
+
+65
+00:03:29,000 --> 00:03:32,000
+Or might they be the same mixture in some sense?
+
+66
+00:03:32,000 --> 00:03:35,000
+
+
+67
+00:03:35,000 --> 00:03:37,000
+To answer this question, we will need
+
+68
+00:03:37,000 --> 00:03:40,000
+to turn to the definition of the density matrix.
+
+69
+00:03:40,000 --> 00:03:43,000
+For the statistical mixtures we have written here
+
+70
+00:03:43,000 --> 00:03:47,000
+using this circle plus as an or sign, the density
+
+71
+00:03:47,000 --> 00:03:53,000
+matrix is defined as the sum over the outer product of each
+
+72
+00:03:53,000 --> 00:03:58,000
+of the elements in this statistical mixture,
+
+73
+00:03:58,000 --> 00:03:59,000
+as given here.
+
+74
+00:03:59,000 --> 00:04:02,000
+We call rho the density matrix.
+
+75
+00:04:02,000 --> 00:04:04,000
+
+
+76
+00:04:04,000 --> 00:04:08,000
+Let us explore some sample density matrices.
+
+77
+00:04:08,000 --> 00:04:12,000
+Recall that the state 0 is a two component vector 1 0,
+
+78
+00:04:12,000 --> 00:04:16,000
+and the state 1 is 0 1.
+
+79
+00:04:16,000 --> 00:04:19,000
+The density matrices corresponding to these
+
+80
+00:04:19,000 --> 00:04:22,000
+are given by the outer products, so 0
+
+81
+00:04:22,000 --> 00:04:27,000
+is 1 0 0 0, and 1 is 0 0 0 1.
+
+82
+00:04:27,000 --> 00:04:35,000
+The cross term 0 1 has the 1 in the upper right hand corner.
+
+83
+00:04:35,000 --> 00:04:38,000
+And this is easy to understand by labeling the rows
+
+84
+00:04:38,000 --> 00:04:42,000
+and columns appropriately, with 0 on the left and on the top.
+
+85
+00:04:42,000 --> 00:04:45,000
+
+
+86
+00:04:45,000 --> 00:04:49,000
+You may also explicitly multiply the column and row vector
+
+87
+00:04:49,000 --> 00:04:51,000
+to obtain this matrix form.
+
+88
+00:04:51,000 --> 00:04:53,000
+
+
+89
+00:04:53,000 --> 00:04:56,000
+Using these matrices, we may now write out
+
+90
+00:04:56,000 --> 00:04:59,000
+the density matrices which correspond to the mixtures
+
+91
+00:04:59,000 --> 00:05:01,000
+that we have studied.
+
+92
+00:05:01,000 --> 00:05:02,000
+The first statistical mixture-- let
+
+93
+00:05:02,000 --> 00:05:08,000
+us call it rho 1-- turns out to be the density matrix given
+
+94
+00:05:08,000 --> 00:05:09,000
+by this sum.
+
+95
+00:05:09,000 --> 00:05:17,000
+3/4 of 1 and 1/4 of 1 gives you 1/4 times 3 0 0 1.
+
+96
+00:05:17,000 --> 00:05:19,000
+The second statistical mixture is
+
+97
+00:05:19,000 --> 00:05:22,000
+where we need the cross terms because the states are
+
+98
+00:05:22,000 --> 00:05:23,000
+superpositions.
+
+99
+00:05:23,000 --> 00:05:27,000
+These cross terms give rise to off-diagonal elements
+
+100
+00:05:27,000 --> 00:05:30,000
+in the density matrix.
+
+101
+00:05:30,000 --> 00:05:33,000
+Summing, as before, we find, though,
+
+102
+00:05:33,000 --> 00:05:34,000
+something very interesting.
+
+103
+00:05:34,000 --> 00:05:39,000
+The result is the same density matrix as for Mixture 1.
+
+104
+00:05:39,000 --> 00:05:42,000
+We conclude from this that the two are actually
+
+105
+00:05:42,000 --> 00:05:45,000
+the same state.
+
+106
+00:05:45,000 --> 00:05:48,000
+More about this can be understood
+
+107
+00:05:48,000 --> 00:05:53,000
+by returning to the formalism of density matrices.
+
+108
+00:05:53,000 --> 00:05:57,000
+Let me begin by defining a density matrix.
+
+109
+00:05:57,000 --> 00:06:01,000
+A density matrix is a matrix rho which
+
+110
+00:06:01,000 --> 00:06:04,000
+has two particular properties.
+
+111
+00:06:04,000 --> 00:06:08,000
+First, the trace of rho must equal 1.
+
+112
+00:06:08,000 --> 00:06:12,000
+Second, the density matrix rho must be positive.
+
+113
+00:06:12,000 --> 00:06:16,000
+In other words, for all possible states that one might choose,
+
+114
+00:06:16,000 --> 00:06:21,000
+the expectation value of rho must be real and greater than
+
+115
+00:06:21,000 --> 00:06:23,000
+or equal to 0.
+
+116
+00:06:23,000 --> 00:06:26,000
+How do I construct a density matrix from states?
+
+117
+00:06:26,000 --> 00:06:30,000
+First, let me make this claim, that a density matrix may
+
+118
+00:06:30,000 --> 00:06:33,000
+be constructed from a probabilistic combination
+
+119
+00:06:33,000 --> 00:06:35,000
+of pure states.
+
+120
+00:06:35,000 --> 00:06:38,000
+P, here, is a probability.
+
+121
+00:06:38,000 --> 00:06:44,000
+Psi are states which for now let us take to be orthogonal.
+
+122
+00:06:44,000 --> 00:06:47,000
+We may prove that this statistical combination
+
+123
+00:06:47,000 --> 00:06:50,000
+is a density matrix by checking the two constraints.
+
+124
+00:06:50,000 --> 00:06:52,000
+First, we note that its trace is equal to 1,
+
+125
+00:06:52,000 --> 00:06:55,000
+since Ps are probabilities.
+
+126
+00:06:55,000 --> 00:07:00,000
+And second, it is clear that the matrix is positive.
+
+127
+00:07:00,000 --> 00:07:03,000
+So we can construct density matrices this way.
+
+128
+00:07:03,000 --> 00:07:06,000
+In the reverse direction, given a density matrix,
+
+129
+00:07:06,000 --> 00:07:08,000
+how can we interpret it?
+
+130
+00:07:08,000 --> 00:07:11,000
+Well, I claim that any density matrix
+
+131
+00:07:11,000 --> 00:07:14,000
+rho can be expressed as a stochastic combination
+
+132
+00:07:14,000 --> 00:07:16,000
+of pure states.
+
+133
+00:07:16,000 --> 00:07:18,000
+So that is exactly in the form we
+
+134
+00:07:18,000 --> 00:07:22,000
+have just seen, using a stochastic combination
+
+135
+00:07:22,000 --> 00:07:24,000
+of pure states.
+
+136
+00:07:24,000 --> 00:07:27,000
+Let us prove this claim as follows.
+
+137
+00:07:27,000 --> 00:07:30,000
+A density matrix is positive, and thus it
+
+138
+00:07:30,000 --> 00:07:33,000
+has a spectral decomposition into eigenvalues
+
+139
+00:07:33,000 --> 00:07:35,000
+and eigenvectors.
+
+140
+00:07:35,000 --> 00:07:39,000
+And this spectral decomposition gives us exactly what we want.
+
+141
+00:07:39,000 --> 00:07:42,000
+We may see this straightforwardly
+
+142
+00:07:42,000 --> 00:07:45,000
+by writing out the spectral decomposition with lambda sub k
+
+143
+00:07:45,000 --> 00:07:48,000
+being the eigenvalue for state k.
+
+144
+00:07:48,000 --> 00:07:52,000
+Note that the trace is 1, and thus the eigenvalues
+
+145
+00:07:52,000 --> 00:07:55,000
+must sum to 1, meaning they are a probability distribution.
+
+146
+00:07:55,000 --> 00:07:58,000
+They are also real-valued, and rho
+
+147
+00:07:58,000 --> 00:08:00,000
+is positive by construction.
+
+148
+00:08:00,000 --> 00:08:03,000
+This decomposition-- known as an unraveling--
+
+149
+00:08:03,000 --> 00:08:06,000
+allows us to consider some useful definitions.
+
+150
+00:08:06,000 --> 00:08:11,000
+Rho is known as being pure when its decomposition results
+
+151
+00:08:11,000 --> 00:08:13,000
+in a single pure state alone.
+
+152
+00:08:13,000 --> 00:08:18,000
+Otherwise, rho is known as being a mixed state,
+
+153
+00:08:18,000 --> 00:08:20,000
+meaning that it is a stochastic combination
+
+154
+00:08:20,000 --> 00:08:23,000
+of multiple pure states.
+
+155
+00:08:23,000 --> 00:08:25,000
+OK, given these two constructions
+
+156
+00:08:25,000 --> 00:08:28,000
+let's consider a quick question.
+
+157
+00:08:28,000 --> 00:08:30,000
+How about a stochastic combination of density
+
+158
+00:08:30,000 --> 00:08:34,000
+matrices, given Ps as probabilities and rhos
+
+159
+00:08:34,000 --> 00:08:36,000
+as density matrices.
+
+160
+00:08:36,000 --> 00:08:39,000
+Is this combination a legal density matrix?
+
+161
+00:08:39,000 --> 00:08:41,000
+This is a simple thing to work out.
+
+162
+00:08:41,000 --> 00:08:43,000
+The answer is yes.
+
+163
+00:08:43,000 --> 00:08:47,000
+So try it yourself and see if you can prove this to be true.
+
+164
+00:08:47,000 --> 00:08:50,000
+The concept of unraveling a density matrix
+
+165
+00:08:50,000 --> 00:08:53,000
+into a stochastic combination of pure states
+
+166
+00:08:53,000 --> 00:08:56,000
+was considered by von Neumann and is very interesting.
+
+167
+00:08:56,000 --> 00:09:00,000
+This is an important lemma about unravelings.
+
+168
+00:09:00,000 --> 00:09:05,000
+Let rho be unraveled as a stochastic combination
+
+169
+00:09:05,000 --> 00:09:09,000
+with probabilities P and states psi.
+
+170
+00:09:09,000 --> 00:09:12,000
+It turns out that this unraveling is not unique,
+
+171
+00:09:12,000 --> 00:09:14,000
+in general, for mixed states.
+
+172
+00:09:14,000 --> 00:09:17,000
+For a mixed state the density matrix
+
+173
+00:09:17,000 --> 00:09:22,000
+may also be unraveled with probabilities P and states phi,
+
+174
+00:09:22,000 --> 00:09:24,000
+under the following condition.
+
+175
+00:09:24,000 --> 00:09:27,000
+That is, that the square root-- in a sense--
+
+176
+00:09:27,000 --> 00:09:33,000
+of this decomposition-- square root of P and state psi--
+
+177
+00:09:33,000 --> 00:09:36,000
+is related by a unitary transform
+
+178
+00:09:36,000 --> 00:09:42,000
+to the other decomposition, with square root of q and states phi.
+
+179
+00:09:42,000 --> 00:09:45,000
+The physical origin of this infinity of possibilities
+
+180
+00:09:45,000 --> 00:09:47,000
+of unravelings may be interpreted
+
+181
+00:09:47,000 --> 00:09:50,000
+as arising from the fact that it doesn't matter which
+
+182
+00:09:50,000 --> 00:09:55,000
+basis B measures in, in the original scenario we started
+
+183
+00:09:55,000 --> 00:09:56,000
+out our discussion with today.
+
+184
+00:09:56,000 --> 00:09:57,000
+
+
+185
+00:09:57,000 --> 00:10:00,000
+Let us now turn to another definition.
+
+186
+00:10:00,000 --> 00:10:08,000
+We will say that a purification of a density matrix
+
+187
+00:10:08,000 --> 00:10:13,000
+rho sub A is a state psi sub AB-- a pure state-- such
+
+188
+00:10:13,000 --> 00:10:19,000
+that rho sub A is obtained by taking the partial trace over B
+
+189
+00:10:19,000 --> 00:10:23,000
+of the density matrix given by the pure state.
+
+190
+00:10:23,000 --> 00:10:26,000
+This partial trace operation removes the degrees
+
+191
+00:10:26,000 --> 00:10:29,000
+of freedom associated with B, and can
+
+192
+00:10:29,000 --> 00:10:32,000
+be viewed in terms of the quantum circuit
+
+193
+00:10:32,000 --> 00:10:34,000
+that we started out today with.
+
+194
+00:10:34,000 --> 00:10:37,000
+Namely, that we have a bipartite system,
+
+195
+00:10:37,000 --> 00:10:40,000
+and the B part of the system is measured,
+
+196
+00:10:40,000 --> 00:10:45,000
+leaving rho sub A as the final state.
+
+197
+00:10:45,000 --> 00:10:48,000
+This concept of having infinite unravelings,
+
+198
+00:10:48,000 --> 00:10:52,000
+and the interpretation of density matrices
+
+199
+00:10:52,000 --> 00:10:56,000
+in purified forms will be key ideas
+
+200
+00:10:56,000 --> 00:10:59,000
+in understanding the intuition behind quantum error correction.
+
+201
+00:10:59,000 --> 00:11:00,000
+
+

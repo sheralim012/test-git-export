@@ -1,0 +1,256 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:02,000
+Let me give you an equivalent version of the quantum
+
+2
+00:00:02,000 --> 00:00:04,000
+error correcting condition, which
+
+3
+00:00:04,000 --> 00:00:06,000
+is not obviously equivalent, but maybe gives you
+
+4
+00:00:06,000 --> 00:00:09,000
+a step towards proving it.
+
+5
+00:00:09,000 --> 00:00:19,000
+Let me define pi sub c to be the projector onto the code space
+
+6
+00:00:19,000 --> 00:00:21,000
+c.
+
+7
+00:00:21,000 --> 00:00:23,000
+OK, it's your orthogonal projector, the operator
+
+8
+00:00:23,000 --> 00:00:25,000
+with eigenvalue 0 and 1.
+
+9
+00:00:25,000 --> 00:00:29,000
+On the eigenspace of ones is the subspace c.
+
+10
+00:00:29,000 --> 00:00:37,000
+Then the equivalent condition is that if I
+
+11
+00:00:37,000 --> 00:00:44,000
+take some pair of errors and I sandwich them
+
+12
+00:00:44,000 --> 00:00:46,000
+with the projectors--
+
+13
+00:00:46,000 --> 00:00:48,000
+so notice over there I've sandwiched them with bra psi
+
+14
+00:00:48,000 --> 00:00:50,000
+2 and ket psi 1--
+
+15
+00:00:50,000 --> 00:00:54,000
+here I want to sandwich it with a projector, which basically
+
+16
+00:00:54,000 --> 00:01:00,000
+only looks at the block of the matrix that corresponds
+
+17
+00:01:00,000 --> 00:01:02,000
+to those matrix elements.
+
+18
+00:01:02,000 --> 00:01:04,000
+And so this is a way of making a statement simultaneously
+
+19
+00:01:04,000 --> 00:01:07,000
+about all of those matrix elements.
+
+20
+00:01:07,000 --> 00:01:11,000
+Then it argues that this block should be essentially trivial.
+
+21
+00:01:11,000 --> 00:01:16,000
+This should be some scalar--
+
+22
+00:01:16,000 --> 00:01:17,000
+let me write.
+
+23
+00:01:17,000 --> 00:01:24,000
+
+
+24
+00:01:24,000 --> 00:01:25,000
+It should be basically the projector
+
+25
+00:01:25,000 --> 00:01:27,000
+onto that block, onto the codespace,
+
+26
+00:01:27,000 --> 00:01:30,000
+times something that's going to be in here
+
+27
+00:01:30,000 --> 00:01:32,000
+is a scalar, so just a number.
+
+28
+00:01:32,000 --> 00:01:34,000
+So it might be 0, right?
+
+29
+00:01:34,000 --> 00:01:37,000
+Like, there's nothing that makes these unitaries.
+
+30
+00:01:37,000 --> 00:01:39,000
+They could be orthogonal to each other, right?
+
+31
+00:01:39,000 --> 00:01:44,000
+This could always be 0, but it's some scalar number.
+
+32
+00:01:44,000 --> 00:01:46,000
+In particular it's not going to lead
+
+33
+00:01:46,000 --> 00:01:48,000
+to some rotation within the code space.
+
+34
+00:01:48,000 --> 00:01:52,000
+Doing these errors is not going to map an encoded state
+
+35
+00:01:52,000 --> 00:01:54,000
+to another different encoded state.
+
+36
+00:01:54,000 --> 00:01:56,000
+That would be an uncorrectable error.
+
+37
+00:01:56,000 --> 00:01:58,000
+That is ruled out.
+
+38
+00:01:58,000 --> 00:01:59,000
+And then I can even say a little bit more
+
+39
+00:01:59,000 --> 00:02:00,000
+about what this scalar is.
+
+40
+00:02:00,000 --> 00:02:02,000
+That's why I left a space here.
+
+41
+00:02:02,000 --> 00:02:05,000
+This scalar, you can think of as a kind of inner product
+
+42
+00:02:05,000 --> 00:02:07,000
+between e2 and e1.
+
+43
+00:02:07,000 --> 00:02:15,000
+So let me write e2, e1 parentheses, where this here
+
+44
+00:02:15,000 --> 00:02:25,000
+refers to a bilinear form on matrices.
+
+45
+00:02:25,000 --> 00:02:30,000
+
+
+46
+00:02:30,000 --> 00:02:32,000
+By bilinear form, I just mean like an inner product,
+
+47
+00:02:32,000 --> 00:02:35,000
+something that has all the properties of inner product.
+
+48
+00:02:35,000 --> 00:02:38,000
+Like it's linear in both of the arguments.
+
+49
+00:02:38,000 --> 00:02:40,000
+Actually technically, it's a sesquilinear
+
+50
+00:02:40,000 --> 00:02:43,000
+because it's conjugate linear in the first argument.
+
+51
+00:02:43,000 --> 00:02:46,000
+So it's like a complex inner product basically.
+
+52
+00:02:46,000 --> 00:02:48,000
+
+
+53
+00:02:48,000 --> 00:02:50,000
+If you don't want much detail, you
+
+54
+00:02:50,000 --> 00:02:52,000
+can just say it's a scalar that depends on e2 and e1.
+
+55
+00:02:52,000 --> 00:02:54,000
+Right again, I'm not going to prove this, by the way,
+
+56
+00:02:54,000 --> 00:02:58,000
+that I claim that that condition there
+
+57
+00:02:58,000 --> 00:03:00,000
+is equivalent to the other quantum error correcting
+
+58
+00:03:00,000 --> 00:03:02,000
+condition I gave.
+
+59
+00:03:02,000 --> 00:03:06,000
+I think one direction of that equivalence is easy.
+
+60
+00:03:06,000 --> 00:03:11,000
+Like if this is true, then this should also be true.
+
+61
+00:03:11,000 --> 00:03:15,000
+The other direction is less obvious, but not too hard.
+
+62
+00:03:15,000 --> 00:03:17,000
+And both of those are equivalent to the code
+
+63
+00:03:17,000 --> 00:03:20,000
+
+

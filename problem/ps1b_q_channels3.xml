@@ -1,0 +1,35 @@
+<problem linenum="599" tex_filename="./week2_ps2.tex" attempts="10" display_name="QC3. Quantum channels (3 of 4)" max_attempts="10">
+  <p>
+Define the <em>Hilbert-Schmidt</em> inner product between two matrices to be </p>
+  <table id="a0000000013" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto">
+    <tr>
+      <td class="equation" style="width:80%; border:none">[mathjax]\langle X,Y\rangle := {\rm Tr}[X^\dagger Y].[/mathjax]</td>
+      <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.6)</td>
+    </tr>
+  </table>
+  <p>
+The adjoint of a superoperator [mathjaxinline]T \in L(L(A),L(B))[/mathjaxinline] with respect to this inner product is defined by the expression </p>
+  <table id="a0000000014" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto">
+    <tr>
+      <td class="equation" style="width:80%; border:none">[mathjax]\langle X,T(Y)\rangle = \langle T^\dagger (X), Y\rangle .[/mathjax]</td>
+      <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.7)</td>
+    </tr>
+  </table>
+  <p>
+This is also known as the Heisenberg picture for quantum operations. </p>
+  <p>
+Let [mathjaxinline]T(\rho ) = \sum _{i \in [k]} A_ i \rho A_ i^\dagger[/mathjaxinline], where [mathjaxinline][k] = \{ 1,\ldots ,k\}[/mathjaxinline]. We would like to find the Kraus operators of [mathjaxinline]T^\dagger[/mathjaxinline]. <span><customresponse><drag_and_drop_input img="/static/images/ps1b_qchan3/ps1b_qchan3_dnd.png" target_outline="false" one_per_target="true" no_labels="true" label_bg_color="rgb(222, 139, 238)"><draggable id="Aidag" icon="/static/images/ps1b_qchan3/ps1b_qchan3_dnd_label1.png" can_reuse="true"/><draggable id="Ai" icon="/static/images/ps1b_qchan3/ps1b_qchan3_dnd_label2.png" can_reuse="true"/><draggable id="Xdag" icon="/static/images/ps1b_qchan3/ps1b_qchan3_dnd_label3.png" can_reuse="true"/><draggable id="X" icon="/static/images/ps1b_qchan3/ps1b_qchan3_dnd_label4.png" can_reuse="true"/><target id="3" x="253" y="8" w="117" h="67"/><target id="2" x="445" y="8" w="117" h="67"/><target id="1" x="602" y="8" w="118" h="67"/><target id="5" x="304" y="118" w="118" h="67"/><target id="10" x="440" y="118" w="118" h="67"/><target id="8" x="576" y="118" w="118" h="67"/><target id="6" x="275" y="227" w="118" h="67"/><target id="9" x="436" y="227" w="118" h="67"/><target id="7" x="291" y="414" w="118" h="66"/></drag_and_drop_input><answer>
+caset = [{'Xdag': '3'}, {'Ai': '2'}, {'Aidag': '1'}, {'Aidag': '5'}, {'Xdag': '10'}, {'Ai': '8'}, {'Aidag': '6'}, {'Ai': '9'}, {'Aidag': '7'}]
+# custom checking for reusable labels - assumes all targets get some label
+import json
+ans = json.loads(submission[0])
+correct = ['correct']
+for rule in caset:
+    if rule not in ans:
+        correct = ['incorrect']
+        break
+
+# use this for debugging
+# messages = ['ans=%s' % submission[0]]
+</answer></customresponse><solution><img src="/static/images/ps1b_qchan3/ps1b_qchan3_dnd_sol_KN6ARF.png"/></solution></span></p>
+</problem>

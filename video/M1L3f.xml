@@ -1,0 +1,8 @@
+<video youtube="1.00:hBJ_6TNZg8c" url_name="M1L3f" sub="" transcripts="{&quot;en&quot;: &quot;737fef58-f998-40e2-8089-d80afa422d0e-en.srt&quot;}" display_name="Example - n-bit repetition code" edx_video_id="737fef58-f998-40e2-8089-d80afa422d0e" youtube_id_1_0="hBJ_6TNZg8c">
+  <video_asset client_video_id="External Video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="737fef58-f998-40e2-8089-d80afa422d0e-en.srt"/>
+</video>

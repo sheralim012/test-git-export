@@ -1,0 +1,44 @@
+<problem linenum="545" tex_filename="./week3_4_ps2a.tex" attempts="10" display_name="Elementary stabilizers II" max_attempts="10">
+  <script>
+import qpython4
+qpython4.define_qpython4_globals(globals())
+
+
+</script>
+  <p>
+Give stabilizer generator sets for the following <em>vector spaces</em>, specified by the basis sets given. Enter each stabilizer generator set as a list of stabilizers, eg <tt class="tt">[XI,IX]</tt>. </p>
+  <ul class="itemize">
+    <li>
+      <p>
+        <p style="display:inline">{[mathjaxinline]|001\rangle[/mathjaxinline], [mathjaxinline]|110\rangle[/mathjaxinline]}</p>
+        <customresponse cfn="check_stabilizer_generators" inline="1" expect="See solutions" options="nq=1;state=[|001&amp;gt;,|110&amp;gt;]" cfn_extra_args="options">
+          <textline size="40" correct_answer="See solutions" inline="1"/>
+        </customresponse>
+      </p>
+      <p>
+        <solution>
+          <p>
+            <b>Solution:</b>
+          </p>
+          <span>[mathjaxinline][ZZI,-IZZ][/mathjaxinline] </span>
+        </solution>
+      </p>
+    </li>
+    <li>
+      <p>
+        <p style="display:inline">{[mathjaxinline]|00\rangle +|11\rangle[/mathjaxinline], [mathjaxinline]|01\rangle +|10\rangle[/mathjaxinline]}</p>
+        <customresponse cfn="check_stabilizer_generators" inline="1" expect="See solutions" options="nq=1;state=[|00&amp;gt;+|11&amp;gt;,|01&amp;gt;+|10&amp;gt;]" cfn_extra_args="options">
+          <textline size="40" correct_answer="See solutions" inline="1"/>
+        </customresponse>
+      </p>
+      <p>
+        <solution>
+          <p>
+            <b>Solution:</b>
+          </p>
+          <span>[mathjaxinline][XX][/mathjaxinline] </span>
+        </solution>
+      </p>
+    </li>
+  </ul>
+</problem>

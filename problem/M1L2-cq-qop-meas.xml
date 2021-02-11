@@ -1,0 +1,24 @@
+<problem linenum="244" tex_filename="./week2_lectures2.tex" attempts="1" display_name="Measurements and quantum operations" max_attempts="1">
+  <p>
+This is a concept question, provided to check your understanding of the previous video clip. </p>
+  <p>
+Which of the following statements are true, regarding quantum operations, and quantum measurements (specifically, complete <a href="https://en.wikipedia.org/wiki/POVM" target="_blank">positive operator-valued measures</a>, otherwise known as POVMs)? </p>
+  <p>
+    <choiceresponse>
+      <checkboxgroup>
+        <choice correct="true" name="1">
+          <text>If [mathjaxinline]\{ E_ k\}[/mathjaxinline] are the Kraus operators for a quantum operation, then [mathjaxinline]M_ k = E_ k^\dagger E_ k[/mathjaxinline] are well-defined corresponding POVM operators.</text>
+        </choice>
+        <choice correct="false" name="2">
+          <text>If [mathjaxinline]\{ E_ k\}[/mathjaxinline] are the Kraus operators for a quantum operation, then [mathjaxinline]M_ k = E_ k[/mathjaxinline] are well-defined corresponding POVM operators.</text>
+        </choice>
+        <choice correct="false" name="3">
+          <text>If [mathjaxinline]\{ M_ k\}[/mathjaxinline] are well-defined POVM operators, then [mathjaxinline]\sum _ k M_ k^\dagger M_ k = I[/mathjaxinline].</text>
+        </choice>
+        <choice correct="true" name="4">
+          <text>If [mathjaxinline]\{ M_ k\}[/mathjaxinline] are well-defined POVM operators, then [mathjaxinline]\sum _ k M_ k = I[/mathjaxinline].</text>
+        </choice>
+      </checkboxgroup>
+    </choiceresponse>
+  </p>
+</problem>

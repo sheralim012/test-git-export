@@ -1,0 +1,572 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:03,000
+We now employ the stabilizer formalism
+
+2
+00:00:03,000 --> 00:00:06,000
+to define a family of quantum codes, which
+
+3
+00:00:06,000 --> 00:00:09,000
+is the analog of classical linear codes.
+
+4
+00:00:09,000 --> 00:00:13,000
+The n, k stabilizer code C of S
+
+5
+00:00:13,000 --> 00:00:18,000
+is defined as the k qubit vector subspace of an n qubit Hilbert
+
+6
+00:00:18,000 --> 00:00:22,000
+space, stabilized by the stabilizer
+
+7
+00:00:22,000 --> 00:00:27,000
+S, a subgroup of the n qubit Pauli group where
+
+8
+00:00:27,000 --> 00:00:32,000
+S has the generators g1 through gn minus k.
+
+9
+00:00:32,000 --> 00:00:35,000
+We have previously seen how the nine qubit quantum
+
+10
+00:00:35,000 --> 00:00:40,000
+code is an example of this kind of definition.
+
+11
+00:00:40,000 --> 00:00:43,000
+Stabilizer codes satisfy the quantum error correction
+
+12
+00:00:43,000 --> 00:00:46,000
+criteria in the following way.
+
+13
+00:00:46,000 --> 00:00:49,000
+Given a set of errors, E sub a, which
+
+14
+00:00:49,000 --> 00:00:52,000
+are in the Pauli group on n qubits,
+
+15
+00:00:52,000 --> 00:00:55,000
+if there exists an element g in S,
+
+16
+00:00:55,000 --> 00:00:59,000
+such that g anti-commutes with E,
+
+17
+00:00:59,000 --> 00:01:04,000
+and this is true for all E, which are a product of any two
+
+18
+00:01:04,000 --> 00:01:10,000
+errors, that is e is equal to E sub a times E sub b,
+
+19
+00:01:10,000 --> 00:01:14,000
+then there will exist a recovery operation, namely a syndrome
+
+20
+00:01:14,000 --> 00:01:17,000
+measurement and the recovery operator which
+
+21
+00:01:17,000 --> 00:01:22,000
+corrects all the errors in this set, E sub a, on this code
+
+22
+00:01:22,000 --> 00:01:23,000
+C of S.
+
+23
+00:01:23,000 --> 00:01:25,000
+We prove this theorem by reducing it
+
+24
+00:01:25,000 --> 00:01:28,000
+to the orthogonality and non-deformation criteria
+
+25
+00:01:28,000 --> 00:01:32,000
+of the quantum error correction conditions.
+
+26
+00:01:32,000 --> 00:01:35,000
+First, we note that for all states psi in C of s
+
+27
+00:01:35,000 --> 00:01:42,000
+and for all stabilizers g in S, the matrix element of psi E
+
+28
+00:01:42,000 --> 00:01:48,000
+a, E b psi, is given by psi E times g times psi,
+
+29
+00:01:48,000 --> 00:01:52,000
+because psi is a plus 1 eigenstate of g.
+
+30
+00:01:52,000 --> 00:01:56,000
+Now by the theorem, E and g anti-commute, so
+
+31
+00:01:56,000 --> 00:01:59,000
+this is minus psi gE psi.
+
+32
+00:01:59,000 --> 00:02:03,000
+But again, psi is an eigenstate of g,
+
+33
+00:02:03,000 --> 00:02:06,000
+and note g is Hermitian because g is a Pauli operator,
+
+34
+00:02:06,000 --> 00:02:11,000
+and therefore, this is equal to minus of itself, meaning
+
+35
+00:02:11,000 --> 00:02:13,000
+it must be zero.
+
+36
+00:02:13,000 --> 00:02:16,000
+This proves we satisfy the orthogonality criteria
+
+37
+00:02:16,000 --> 00:02:18,000
+of the quantum error correction conditions,
+
+38
+00:02:18,000 --> 00:02:24,000
+namely that psi l E times any two errors in product
+
+39
+00:02:24,000 --> 00:02:26,000
+must be equal to zero.
+
+40
+00:02:26,000 --> 00:02:31,000
+That is errors do not cause once code word state to transform
+
+41
+00:02:31,000 --> 00:02:33,000
+into another code word state.
+
+42
+00:02:33,000 --> 00:02:36,000
+For the non-deformation criteria, we look at the case
+
+43
+00:02:36,000 --> 00:02:38,000
+when E sub a equals E sub b.
+
+44
+00:02:38,000 --> 00:02:41,000
+In this scenario, when E sub b equals E sub b, because they
+
+45
+00:02:41,000 --> 00:02:45,000
+are both Pauli operators we find the product is identity.
+
+46
+00:02:45,000 --> 00:02:48,000
+This then trivially shows us that
+
+47
+00:02:48,000 --> 00:02:53,000
+the non-deformation criterion is satisfied with d sub k
+
+48
+00:02:53,000 --> 00:02:54,000
+equal to 1.
+
+49
+00:02:54,000 --> 00:02:58,000
+Stabilizer codes thus give a very simple prescription
+
+50
+00:02:58,000 --> 00:03:01,000
+for checking for error correction criteria,
+
+51
+00:03:01,000 --> 00:03:05,000
+namely we check to see if an error anti-commutes
+
+52
+00:03:05,000 --> 00:03:07,000
+with a stabilizer element.
+
+53
+00:03:07,000 --> 00:03:10,000
+It is thus convenient to define for a given generator
+
+54
+00:03:10,000 --> 00:03:14,000
+set of a stabilizer, g sub 1 through g sub k,
+
+55
+00:03:14,000 --> 00:03:18,000
+and for error E, a error syndrome.
+
+56
+00:03:18,000 --> 00:03:22,000
+This is a bit string the size of the stabilizer generator
+
+57
+00:03:22,000 --> 00:03:26,000
+set where each bit is zero if the generator commutes
+
+58
+00:03:26,000 --> 00:03:32,000
+with an error and one otherwise, namely it anti-commutes.
+
+59
+00:03:32,000 --> 00:03:34,000
+This error syndrome bit string will
+
+60
+00:03:34,000 --> 00:03:37,000
+be used to determine where the error occurred
+
+61
+00:03:37,000 --> 00:03:39,000
+and what to do about the error.
+
+62
+00:03:39,000 --> 00:03:45,000
+And in the case when each error has a unique syndrome string,
+
+63
+00:03:45,000 --> 00:03:50,000
+the code will be known as a non-degenerate code.
+
+64
+00:03:50,000 --> 00:03:52,000
+Degenerate codes, on the other hand,
+
+65
+00:03:52,000 --> 00:03:54,000
+will have non-unique syndromes.
+
+66
+00:03:54,000 --> 00:03:58,000
+Let us look at some example stabilizer codes.
+
+67
+00:03:58,000 --> 00:04:01,000
+First, recall the 3-qubit qubit bit flip code
+
+68
+00:04:01,000 --> 00:04:06,000
+with stabilizer generators IZZ and ZZI.
+
+69
+00:04:06,000 --> 00:04:10,000
+If the error is, for example, a bit flip on the middle qubit,
+
+70
+00:04:10,000 --> 00:04:14,000
+than the syndrome will be one and one,
+
+71
+00:04:14,000 --> 00:04:18,000
+indicating that both generators anti-commute with the error.
+
+72
+00:04:18,000 --> 00:04:21,000
+What if the error were three bit flips?
+
+73
+00:04:21,000 --> 00:04:24,000
+All qubits being flipped, what would the syndrome be?
+
+74
+00:04:24,000 --> 00:04:26,000
+Well, go work this out for yourself,
+
+75
+00:04:26,000 --> 00:04:29,000
+but note something interesting.
+
+76
+00:04:29,000 --> 00:04:33,000
+This error does not anti-commute with any of the generators.
+
+77
+00:04:33,000 --> 00:04:36,000
+Let's look at another interesting example.
+
+78
+00:04:36,000 --> 00:04:39,000
+Suppose that the stabilizers were generated
+
+79
+00:04:39,000 --> 00:04:43,000
+by a single operator, XX.
+
+80
+00:04:43,000 --> 00:04:47,000
+In this case, the vector space stabilized, C of S,
+
+81
+00:04:47,000 --> 00:04:53,000
+the code word space, is spanned by 00 plus 11, and 01 plus 10.
+
+82
+00:04:53,000 --> 00:04:58,000
+Suppose the error were a single phase flip, IZ or ZI.
+
+83
+00:04:58,000 --> 00:05:00,000
+You have to be careful, in this case,
+
+84
+00:05:00,000 --> 00:05:02,000
+when computing the error syndrome
+
+85
+00:05:02,000 --> 00:05:06,000
+because actually, the product of the two errors is Z Z,
+
+86
+00:05:06,000 --> 00:05:12,000
+and this error, Z Z, commutes with X X, the stabilizer.
+
+87
+00:05:12,000 --> 00:05:16,000
+So in this case, what we have is an error detection code which
+
+88
+00:05:16,000 --> 00:05:22,000
+detects phase errors but cannot correct for the phase errors.
+
+89
+00:05:22,000 --> 00:05:26,000
+Here's a third example of a four qubit state
+
+90
+00:05:26,000 --> 00:05:31,000
+with four stabilizer generators, XZIZ
+
+91
+00:05:31,000 --> 00:05:37,000
+and its cyclic permutations, ZXZI, IZXZ, and ZIZX.
+
+92
+00:05:37,000 --> 00:05:40,000
+
+
+93
+00:05:40,000 --> 00:05:43,000
+Again, n is equal to 4 and k equals 0,
+
+94
+00:05:43,000 --> 00:05:47,000
+meaning it's a state and not a space.
+
+95
+00:05:47,000 --> 00:05:49,000
+What errors anti-commute with these generators?
+
+96
+00:05:49,000 --> 00:05:52,000
+It turns out that any single qubit
+
+97
+00:05:52,000 --> 00:05:57,000
+error does, but no qubit is encoded by this code
+
+98
+00:05:57,000 --> 00:05:59,000
+because k equals 0.
+
+99
+00:05:59,000 --> 00:06:04,000
+Now let us look at a important seven qubit code example.
+
+100
+00:06:04,000 --> 00:06:08,000
+You will see this code later in your problem set.
+
+101
+00:06:08,000 --> 00:06:12,000
+The stabilizer generators are constructed by a nice pattern.
+
+102
+00:06:12,000 --> 00:06:18,000
+Namely, we iterate from 1 through 7 by column, like this.
+
+103
+00:06:18,000 --> 00:06:24,000
+So we have binary 001 going all the way up to binary 111 with
+
+104
+00:06:24,000 --> 00:06:28,000
+X's and then with Z's.
+
+105
+00:06:28,000 --> 00:06:32,000
+This gives us a total of six generators labeled
+
+106
+00:06:32,000 --> 00:06:37,000
+g1 through g6, acting on the seven qubits
+
+107
+00:06:37,000 --> 00:06:40,000
+and therefore, we have one encoded qubit
+
+108
+00:06:40,000 --> 00:06:43,000
+in seven physical qubits.
+
+109
+00:06:43,000 --> 00:06:47,000
+It is straightforward and instructive to look at all 64
+
+110
+00:06:47,000 --> 00:06:50,000
+possible syndrome values resulting from single qubit
+
+111
+00:06:50,000 --> 00:06:56,000
+errors I, X, Y, or Z. This is to be contrasted
+
+112
+00:06:56,000 --> 00:06:59,000
+with the number of possible errors that could occur,
+
+113
+00:06:59,000 --> 00:07:03,000
+namely 22 possible errors.
+
+114
+00:07:03,000 --> 00:07:06,000
+This code is, of course, the famous 7,
+
+115
+00:07:06,000 --> 00:07:10,000
+1 Steane code where every single qubit
+
+116
+00:07:10,000 --> 00:07:14,000
+error has a unique syndrome and, by the stabilizer code theorem,
+
+117
+00:07:14,000 --> 00:07:16,000
+is correctable.
+
+118
+00:07:16,000 --> 00:07:19,000
+This shows that we have a beautiful description
+
+119
+00:07:19,000 --> 00:07:23,000
+of the Steane code as being a stabilizer code.
+
+120
+00:07:23,000 --> 00:07:26,000
+Here is, as a final example, a code
+
+121
+00:07:26,000 --> 00:07:30,000
+with n equal 5 qubits, with the stabilizer generators
+
+122
+00:07:30,000 --> 00:07:35,000
+XZZXI and its cyclic permutations, that
+
+123
+00:07:35,000 --> 00:07:43,000
+is, IXZZX, XIXZZ, and ZXIXZ.
+
+124
+00:07:43,000 --> 00:07:45,000
+Again, we have five physical qubits
+
+125
+00:07:45,000 --> 00:07:49,000
+encoding one logical qubit, giving us a 5, 1 quantum error
+
+126
+00:07:49,000 --> 00:07:50,000
+correction code.
+
+127
+00:07:50,000 --> 00:07:55,000
+This is a stabilizer code with some remarkable properties.
+
+128
+00:07:55,000 --> 00:07:59,000
+You can verify for yourself that for arbitrary single qubit
+
+129
+00:07:59,000 --> 00:08:03,000
+errors, such as X1, we get a unique set of syndrome
+
+130
+00:08:03,000 --> 00:08:07,000
+strings, written here in order of the generators listed above.
+
+131
+00:08:07,000 --> 00:08:11,000
+So for example, Z1 gives us 1010 and X2
+
+132
+00:08:11,000 --> 00:08:17,000
+gives us 1000, and so forth, for all possible single qubit
+
+133
+00:08:17,000 --> 00:08:18,000
+errors.
+
+134
+00:08:18,000 --> 00:08:22,000
+Just as for the Steane code, every single qubit error
+
+135
+00:08:22,000 --> 00:08:25,000
+has a unique error syndrome and thus,
+
+136
+00:08:25,000 --> 00:08:29,000
+this code, which has fewer qubits, five qubits,
+
+137
+00:08:29,000 --> 00:08:33,000
+can correct for an arbitrary single qubit error.
+
+138
+00:08:33,000 --> 00:08:39,000
+This is the perfect 5-qubit quantum error correction code.
+
+139
+00:08:39,000 --> 00:08:42,000
+In many ways, it is a particularly uniquely quantum
+
+140
+00:08:42,000 --> 00:08:46,000
+code in that it has no origin in a classical linear code,
+
+141
+00:08:46,000 --> 00:08:49,000
+unlike the Steane code, which has its origins in the 7-bit Hamming code.
+
+142
+00:08:49,000 --> 00:08:53,000
+
+

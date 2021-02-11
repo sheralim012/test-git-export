@@ -1,0 +1,10 @@
+<sequential display_name="Lectures M1.2b: Quantum norms and distances" due="&quot;2918-06-15T23:57:00+00:00&quot;" format="Concept" graceperiod="18000 seconds" graded="true" showanswer="closed" start="&quot;2017-09-06T00:00:00+00:00&quot;" attempts="10" tex_filename="./week2_lectures2b.tex" linenum="3" refnum="2">
+  <vertical url_name="Norms_and_distance_metrics_for_quantum_states"/>
+  <vertical url_name="CQ_Definition_of_a_norm"/>
+  <vertical url_name="Schatten_p-norms"/>
+  <vertical url_name="Schatten_p-norms_-_review"/>
+  <vertical url_name="Measurements_and_dual_norms"/>
+  <vertical url_name="Trace_norm"/>
+  <vertical url_name="Trace_distance_-_bound_on_distinguishability_of_states"/>
+  <vertical url_name="CQ_Properties_of_common_norms"/>
+</sequential>

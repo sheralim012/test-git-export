@@ -1,0 +1,53 @@
+<problem linenum="512" tex_filename="./week2_ps2.tex" attempts="10" display_name="QC1. Quantum channels (1 of 4)" max_attempts="10">
+  <p>
+Complete the following line of reasoning to show that any linear operator [mathjaxinline]\mathcal{N}[/mathjaxinline] from [mathjaxinline]L(\mathbb {C}^{d_1})[/mathjaxinline] to [mathjaxinline]L(\mathbb {C}^{d_2})[/mathjaxinline] can be written in a form like [mathjaxinline]\mathcal{N}(X) = \sum _ a A_ a X B_ a^\dagger[/mathjaxinline] for some matrices [mathjaxinline]A_ a,B_ a[/mathjaxinline]. </p>
+  <p>
+Let [mathjaxinline]\{ |{1}\rangle , \ldots , |{d_1}\rangle \}[/mathjaxinline] be an orthonormal basis for [mathjaxinline]\mathbb {C}^{d_1}[/mathjaxinline]. To understand the action of [mathjaxinline]\mathcal{N}[/mathjaxinline], it suffices to consider its action on a basis for [mathjaxinline]L(\mathbb {C}^{d_1})[/mathjaxinline]. A simple choice of basis is the matrices of the form [mathjaxinline]|{i}\rangle \langle {j}|[/mathjaxinline] for [mathjaxinline]i,j \in [d_1][/mathjaxinline]. </p>
+  <p>
+Define the complex coefficients [mathjaxinline]N_{ijkl}[/mathjaxinline] according to [mathjaxinline]\mathcal{N}(|{i}\rangle  \langle {j}|) = \sum _{kl} N_{ijkl} |{k}\rangle  \langle {l}|[/mathjaxinline]. We can write </p>
+  <span>
+    <customresponse>
+      <drag_and_drop_input img="/static/images/ps1b_qchan1/ps1b_qchan1_dnd.png" target_outline="false" one_per_target="true" no_labels="true" label_bg_color="rgb(222, 139, 238)">
+        <draggable id="done" icon="/static/images/ps1b_qchan1/ps1b_qchan1_dnd_label1.png" can_reuse="true"/>
+        <draggable id="dtwo" icon="/static/images/ps1b_qchan1/ps1b_qchan1_dnd_label2.png" can_reuse="true"/>
+        <draggable id="Nnmkl" icon="/static/images/ps1b_qchan1/ps1b_qchan1_dnd_label3.png" can_reuse="true"/>
+        <draggable id="Nmnkl" icon="/static/images/ps1b_qchan1/ps1b_qchan1_dnd_label4.png" can_reuse="true"/>
+        <draggable id="ketklanglem" icon="/static/images/ps1b_qchan1/ps1b_qchan1_dnd_label5.png" can_reuse="true"/>
+        <draggable id="langlemirangle" icon="/static/images/ps1b_qchan1/ps1b_qchan1_dnd_label6.png" can_reuse="true"/>
+        <draggable id="langlejirangle" icon="/static/images/ps1b_qchan1/ps1b_qchan1_dnd_label7.png" can_reuse="true"/>
+        <draggable id="langleijrangle" icon="/static/images/ps1b_qchan1/ps1b_qchan1_dnd_label8.png" can_reuse="true"/>
+        <draggable id="Nijkl" icon="/static/images/ps1b_qchan1/ps1b_qchan1_dnd_label9.png" can_reuse="true"/>
+        <draggable id="Njikl" icon="/static/images/ps1b_qchan1/ps1b_qchan1_dnd_label10.png" can_reuse="true"/>
+        <target id="6" x="266" y="1" w="189" h="71"/>
+        <target id="5" x="447" y="111" w="190" h="71"/>
+        <target id="4" x="266" y="225" w="189" h="71"/>
+        <target id="3" x="266" y="339" w="189" h="71"/>
+        <target id="14" x="385" y="640" w="189" h="72"/>
+        <target id="13" x="372" y="775" w="189" h="71"/>
+        <target id="2" x="286" y="956" w="189" h="72"/>
+        <target id="1" x="530" y="956" w="189" h="72"/>
+        <target id="12" x="286" y="1126" w="189" h="71"/>
+        <target id="11" x="530" y="1126" w="190" h="71"/>
+      </drag_and_drop_input>
+      <answer>
+caset = [{'Nijkl': '6'}, {'langlemirangle': '5'}, {'ketklanglem': '4'}, {'Nmnkl': '3'}, {'ketklanglem': '14'}, {'Nmnkl': '13'}, {'dtwo': '2'}, {'done': '1'}, {'dtwo': '12'}, {'done': '11'}]
+# custom checking for reusable labels - assumes all targets get some label
+import json
+ans = json.loads(submission[0])
+correct = ['correct']
+for rule in caset:
+    if rule not in ans:
+        correct = ['incorrect']
+        break
+
+# use this for debugging
+# messages = ['ans=%s' % submission[0]]
+</answer>
+    </customresponse>
+    <solution>
+      <img src="/static/images/ps1b_qchan1/ps1b_qchan1_dnd_sol_5OY2LM.png"/>
+    </solution>
+  </span>
+  <p>
+To describe the dimension of the matrices, use the convention that a linear map from [mathjaxinline]\mathbb {C}^{d_ A}[/mathjaxinline] to [mathjaxinline]\mathbb {C}^{d_ B}[/mathjaxinline] has dimension [mathjaxinline]d_ B \times d_ A[/mathjaxinline]. </p>
+</problem>

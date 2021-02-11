@@ -1,0 +1,696 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:02,000
+So let's give some examples.
+
+2
+00:00:02,000 --> 00:00:09,000
+So one of them I mentioned, which is N of rho is equal to,
+
+3
+00:00:09,000 --> 00:00:16,000
+let's say, U rho U dagger, just unitary evolution, right?
+
+4
+00:00:16,000 --> 00:00:19,000
+We should always make sure that these basic ones
+
+5
+00:00:19,000 --> 00:00:21,000
+fit within our model.
+
+6
+00:00:21,000 --> 00:00:36,000
+So here there's a single Kraus operator, which is U. Right?
+
+7
+00:00:36,000 --> 00:00:39,000
+And then you can check U dagger U is equal to identity.
+
+8
+00:00:39,000 --> 00:00:42,000
+So unitary evolution fits this model.
+
+9
+00:00:42,000 --> 00:00:46,000
+
+
+10
+00:00:46,000 --> 00:00:49,000
+OK, what about something a little bit more complicated?
+
+11
+00:00:49,000 --> 00:00:53,000
+
+
+12
+00:00:53,000 --> 00:00:58,000
+Suppose I have random unitary evolution.
+
+13
+00:00:58,000 --> 00:01:02,000
+So this was the type of noise considered in 8 370.
+
+14
+00:01:02,000 --> 00:01:06,000
+I apply a unitary, but I draw it from some probability
+
+15
+00:01:06,000 --> 00:01:07,000
+distribution.
+
+16
+00:01:07,000 --> 00:01:09,000
+So with some probability I apply U1, with some probability
+
+17
+00:01:09,000 --> 00:01:12,000
+I apply U2, et cetera.
+
+18
+00:01:12,000 --> 00:01:17,000
+So what are the Kraus operators in this case?
+
+19
+00:01:17,000 --> 00:01:17,000
+Right.
+
+20
+00:01:17,000 --> 00:01:27,000
+So now the Kraus operators are square root of p sub e times U
+
+21
+00:01:27,000 --> 00:01:29,000
+sub e.
+
+22
+00:01:29,000 --> 00:01:33,000
+When you put it into the sum, the U e dagger U e
+
+23
+00:01:33,000 --> 00:01:34,000
+just becomes identity.
+
+24
+00:01:34,000 --> 00:01:36,000
+And the crucial thing to remember
+
+25
+00:01:36,000 --> 00:01:39,000
+is that we have to have square root, because it
+
+26
+00:01:39,000 --> 00:01:39,000
+shows up twice.
+
+27
+00:01:39,000 --> 00:01:46,000
+So then we get sum over e of p sub e, which just adds up to 1.
+
+28
+00:01:46,000 --> 00:01:47,000
+OK, so I haven't fully erased this
+
+29
+00:01:47,000 --> 00:01:51,000
+for a reason, which is now it's time
+
+30
+00:01:51,000 --> 00:01:52,000
+to talk about partial trace.
+
+31
+00:01:52,000 --> 00:01:56,000
+
+
+32
+00:01:56,000 --> 00:02:02,000
+So if I trace out system b, then I've written this formula here.
+
+33
+00:02:02,000 --> 00:02:06,000
+And you'll notice this already has the Kraus form.
+
+34
+00:02:06,000 --> 00:02:07,000
+Right?
+
+35
+00:02:07,000 --> 00:02:09,000
+This partial trace, I've written it
+
+36
+00:02:09,000 --> 00:02:15,000
+as a sum over some set of a matrix on the left side
+
+37
+00:02:15,000 --> 00:02:18,000
+and the dagger of that matrix on the right-hand side.
+
+38
+00:02:18,000 --> 00:02:21,000
+OK, so already that that is in Kraus form.
+
+39
+00:02:21,000 --> 00:02:23,000
+The only thing to check--
+
+40
+00:02:23,000 --> 00:02:24,000
+let me erase this down here.
+
+41
+00:02:24,000 --> 00:02:28,000
+
+
+42
+00:02:28,000 --> 00:02:32,000
+So in other words, let me call it V sub b,
+
+43
+00:02:32,000 --> 00:02:37,000
+is identity tensor ket b.
+
+44
+00:02:37,000 --> 00:02:40,000
+This is identity on Alice.
+
+45
+00:02:40,000 --> 00:02:47,000
+So we can just check that sum over b of V b dagger V b
+
+46
+00:02:47,000 --> 00:02:50,000
+is equal to sum over b of--
+
+47
+00:02:50,000 --> 00:02:53,000
+
+
+48
+00:02:53,000 --> 00:02:54,000
+oh, whoa, sorry.
+
+49
+00:02:54,000 --> 00:03:00,000
+This is-- the V b acts on the left.
+
+50
+00:03:00,000 --> 00:03:01,000
+So this should be bra b.
+
+51
+00:03:01,000 --> 00:03:05,000
+
+
+52
+00:03:05,000 --> 00:03:10,000
+So this sum here is sum over b of identity, tensor ket
+
+53
+00:03:10,000 --> 00:03:16,000
+b [AUDIO OUT] b.
+
+54
+00:03:16,000 --> 00:03:18,000
+The sum also gives us the identity.
+
+55
+00:03:18,000 --> 00:03:25,000
+So what we're left with is identity on Alice,
+
+56
+00:03:25,000 --> 00:03:27,000
+tensor identity on Bob.
+
+57
+00:03:27,000 --> 00:03:31,000
+So we can check that the conditions here are satisfied
+
+58
+00:03:31,000 --> 00:03:35,000
+by these Kraus operators.
+
+59
+00:03:35,000 --> 00:03:39,000
+So this is something that you of course cannot render
+
+60
+00:03:39,000 --> 00:03:40,000
+as a mixture of unitaries.
+
+61
+00:03:40,000 --> 00:03:43,000
+It doesn't even preserve dimension.
+
+62
+00:03:43,000 --> 00:03:45,000
+But there are other ones that do preserve dimension that you
+
+63
+00:03:45,000 --> 00:03:49,000
+still cannot write as a mixture of unitaries.
+
+64
+00:03:49,000 --> 00:03:52,000
+One crucial feature about unitaries
+
+65
+00:03:52,000 --> 00:03:55,000
+is that if you act on the maximally mixed state, the one
+
+66
+00:03:55,000 --> 00:03:57,000
+proportional to identity, it leaves you
+
+67
+00:03:57,000 --> 00:03:59,000
+with the maximally mixed state.
+
+68
+00:03:59,000 --> 00:04:03,000
+And so that can be thought of as infinite temperature dynamics.
+
+69
+00:04:03,000 --> 00:04:04,000
+Right?
+
+70
+00:04:04,000 --> 00:04:05,000
+If I'm in counter--
+
+71
+00:04:05,000 --> 00:04:08,000
+if a bath has infinite temperature,
+
+72
+00:04:08,000 --> 00:04:12,000
+then every state is equally likely
+
+73
+00:04:12,000 --> 00:04:14,000
+when I am in counter with it.
+
+74
+00:04:14,000 --> 00:04:17,000
+And so if I thermalize with an infinite-temperature bath,
+
+75
+00:04:17,000 --> 00:04:19,000
+then I will thermalize to a state
+
+76
+00:04:19,000 --> 00:04:22,000
+where each energy level is equally likely.
+
+77
+00:04:22,000 --> 00:04:25,000
+But if I thermalize with a finite-temperature bath,
+
+78
+00:04:25,000 --> 00:04:26,000
+then the lower energy levels will
+
+79
+00:04:26,000 --> 00:04:29,000
+have more population in them than the higher energy levels.
+
+80
+00:04:29,000 --> 00:04:35,000
+So when I cool the water in this bottle,
+
+81
+00:04:35,000 --> 00:04:36,000
+hopefully there's more probability
+
+82
+00:04:36,000 --> 00:04:39,000
+of being in the lower energy states.
+
+83
+00:04:39,000 --> 00:04:43,000
+And a mixture of unitaries is not going to do that.
+
+84
+00:04:43,000 --> 00:04:45,000
+So one thing that's sort of the ultimate refrigerator
+
+85
+00:04:45,000 --> 00:04:48,000
+is to map everything to a pure state.
+
+86
+00:04:48,000 --> 00:04:50,000
+So let's consider that example.
+
+87
+00:04:50,000 --> 00:04:57,000
+N of rho is just the zero state.
+
+88
+00:04:57,000 --> 00:04:58,000
+So this is something which is far
+
+89
+00:04:58,000 --> 00:05:02,000
+from the mixture of unitaries paradigm,
+
+90
+00:05:02,000 --> 00:05:05,000
+but is crucial if we want to, say, initialize a quantum
+
+91
+00:05:05,000 --> 00:05:06,000
+computer.
+
+92
+00:05:06,000 --> 00:05:06,000
+Right?
+
+93
+00:05:06,000 --> 00:05:09,000
+So you get some qubits that come in, maybe hot,
+
+94
+00:05:09,000 --> 00:05:11,000
+you want to cool them down, put them all in the zero state--
+
+95
+00:05:11,000 --> 00:05:15,000
+that is the operation that you want to do.
+
+96
+00:05:15,000 --> 00:05:17,000
+So what are the Kraus operators for it?
+
+97
+00:05:17,000 --> 00:05:26,000
+Let's say that the input is a qubit,
+
+98
+00:05:26,000 --> 00:05:29,000
+then there are two Kraus operators.
+
+99
+00:05:29,000 --> 00:05:30,000
+Let's call them--
+
+100
+00:05:30,000 --> 00:05:37,000
+V0 is the ket 0 bra 0.
+
+101
+00:05:37,000 --> 00:05:43,000
+V1 is ket 0 bra 1.
+
+102
+00:05:43,000 --> 00:05:54,000
+And so you can check that V0 rho V0 dagger plus V1 rho V1
+
+103
+00:05:54,000 --> 00:05:56,000
+dagger--
+
+104
+00:05:56,000 --> 00:06:00,000
+you can verify that if you put these in you
+
+105
+00:06:00,000 --> 00:06:02,000
+will always get output 0, regardless
+
+106
+00:06:02,000 --> 00:06:05,000
+of the initial state.
+
+107
+00:06:05,000 --> 00:06:06,000
+I won't go through that calculation,
+
+108
+00:06:06,000 --> 00:06:10,000
+but it's worth doing yourself if you
+
+109
+00:06:10,000 --> 00:06:11,000
+want to solidify this concept.
+
+110
+00:06:11,000 --> 00:06:16,000
+
+
+111
+00:06:16,000 --> 00:06:19,000
+And there are others which I will put off
+
+112
+00:06:19,000 --> 00:06:20,000
+to the problem set.
+
+113
+00:06:20,000 --> 00:06:27,000
+
+
+114
+00:06:27,000 --> 00:06:30,000
+One very important channel is called
+
+115
+00:06:30,000 --> 00:06:33,000
+the depolarizing channel.
+
+116
+00:06:33,000 --> 00:06:37,000
+And this one you can write as a mixture of unitaries,
+
+117
+00:06:37,000 --> 00:06:41,000
+although I won't mention how to do it.
+
+118
+00:06:41,000 --> 00:06:53,000
+And in this one, you've taken a state which is a qubit state.
+
+119
+00:06:53,000 --> 00:06:55,000
+With probability p you do nothing.
+
+120
+00:06:55,000 --> 00:06:57,000
+You leave it alone.
+
+121
+00:06:57,000 --> 00:07:00,000
+And with probability p, you throw out the state
+
+122
+00:07:00,000 --> 00:07:03,000
+and replace it with a maximally mixed one.
+
+123
+00:07:03,000 --> 00:07:05,000
+So you can think of this as the simplest
+
+124
+00:07:05,000 --> 00:07:09,000
+model of kind of white noise affecting your qubit.
+
+125
+00:07:09,000 --> 00:07:11,000
+With probability p, your qubit is completely
+
+126
+00:07:11,000 --> 00:07:15,000
+destroyed and replaced by a totally random one.
+
+127
+00:07:15,000 --> 00:07:18,000
+So when we talk about correcting quantum errors,
+
+128
+00:07:18,000 --> 00:07:20,000
+this is not always the most physically realistic noise
+
+129
+00:07:20,000 --> 00:07:24,000
+model, but it's kind of the mathematically simplest one.
+
+130
+00:07:24,000 --> 00:07:27,000
+If you first worry about fixing depolarizing noise,
+
+131
+00:07:27,000 --> 00:07:30,000
+you're on your way to thinking about noise in general.
+
+132
+00:07:30,000 --> 00:07:34,000
+In real life, the noise is a little bit asymmetric.
+
+133
+00:07:34,000 --> 00:07:37,000
+So if the qubit levels are defined by energy levels,
+
+134
+00:07:37,000 --> 00:07:41,000
+you are more likely to have the phase information randomized
+
+135
+00:07:41,000 --> 00:07:43,000
+than which energy level being randomized.
+
+136
+00:07:43,000 --> 00:07:46,000
+So that means that z errors, in practice,
+
+137
+00:07:46,000 --> 00:07:49,000
+can be much more common than x errors.
+
+138
+00:07:49,000 --> 00:07:51,000
+But that's sort of a second order consideration.
+
+139
+00:07:51,000 --> 00:07:53,000
+So first, if you can fix depolarizing noise,
+
+140
+00:07:53,000 --> 00:07:54,000
+then you're happy.
+
+141
+00:07:54,000 --> 00:07:56,000
+Then later, you make things more efficient
+
+142
+00:07:56,000 --> 00:07:58,000
+and you focus on the fact that some errors
+
+143
+00:07:58,000 --> 00:07:59,000
+are more common than others.
+
+144
+00:07:59,000 --> 00:08:09,000
+
+
+145
+00:08:09,000 --> 00:08:11,000
+There's one more channel which I actually won't even
+
+146
+00:08:11,000 --> 00:08:13,000
+write down the definition of, I just want to mention.
+
+147
+00:08:13,000 --> 00:08:16,000
+And this will also be discussed on the homework-- is
+
+148
+00:08:16,000 --> 00:08:18,000
+the amplitude damping channel.
+
+149
+00:08:18,000 --> 00:08:22,000
+This one cannot be written as a mixture of unitaries.
+
+150
+00:08:22,000 --> 00:08:27,000
+And it corresponds-- you can think of it as corresponding
+
+151
+00:08:27,000 --> 00:08:32,000
+to an atom that's in a superposition of a ground
+
+152
+00:08:32,000 --> 00:08:34,000
+state and an excited state.
+
+153
+00:08:34,000 --> 00:08:36,000
+And this atom has a property that if it's in the ground
+
+154
+00:08:36,000 --> 00:08:38,000
+state, it just sits there.
+
+155
+00:08:38,000 --> 00:08:39,000
+That's what ground states do.
+
+156
+00:08:39,000 --> 00:08:41,000
+But if it's in the excited state,
+
+157
+00:08:41,000 --> 00:08:44,000
+then it will fall down to the ground state at some rate,
+
+158
+00:08:44,000 --> 00:08:46,000
+and in the process emit a photon.
+
+159
+00:08:46,000 --> 00:08:48,000
+So this is something that the environment will measure.
+
+160
+00:08:48,000 --> 00:08:51,000
+It will notice if a photon has been emitted.
+
+161
+00:08:51,000 --> 00:08:53,000
+And when that happens, you definitely
+
+162
+00:08:53,000 --> 00:08:55,000
+end up in the ground state.
+
+163
+00:08:55,000 --> 00:08:58,000
+And so this is something that, in the limit, if you apply it
+
+164
+00:08:58,000 --> 00:09:01,000
+for long enough, will always push you to the ground state.
+
+165
+00:09:01,000 --> 00:09:03,000
+But if you run it for a finite amount of time,
+
+166
+00:09:03,000 --> 00:09:04,000
+if you start in the excited state,
+
+167
+00:09:04,000 --> 00:09:07,000
+you'll still have some amplitude of remaining in the excited
+
+168
+00:09:07,000 --> 00:09:08,000
+state.
+
+169
+00:09:08,000 --> 00:09:10,000
+So it does not completely destroy the information.
+
+170
+00:09:10,000 --> 00:09:16,000
+And it's a physically very relevant form of noise.
+
+171
+00:09:16,000 --> 00:09:18,000
+And to model it, arguably Kraus operators
+
+172
+00:09:18,000 --> 00:09:22,000
+are one of the more natural ways of doing it.
+
+173
+00:09:22,000 --> 00:09:23,000
+
+

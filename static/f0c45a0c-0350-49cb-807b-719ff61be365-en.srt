@@ -1,0 +1,548 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:02,000
+I want to be a little bit more clear about errors
+
+2
+00:00:02,000 --> 00:00:05,000
+being correctable because this condition is a little bit
+
+3
+00:00:05,000 --> 00:00:06,000
+hard to check, right?
+
+4
+00:00:06,000 --> 00:00:10,000
+You might worry that in a classical code
+
+5
+00:00:10,000 --> 00:00:13,000
+it's pretty easy to check whether errors are correctable,
+
+6
+00:00:13,000 --> 00:00:15,000
+especially these low-weight errors.
+
+7
+00:00:15,000 --> 00:00:18,000
+I can just check how close are two code words.
+
+8
+00:00:18,000 --> 00:00:19,000
+And we saw on the classical case that
+
+9
+00:00:19,000 --> 00:00:24,000
+gave us a precise characterization of up to what
+
+10
+00:00:24,000 --> 00:00:26,000
+weight of errors I can correct.
+
+11
+00:00:26,000 --> 00:00:28,000
+Here, the only definition I've given
+
+12
+00:00:28,000 --> 00:00:30,000
+you is one where you have to come up with a decoding
+
+13
+00:00:30,000 --> 00:00:32,000
+map yourself.
+
+14
+00:00:32,000 --> 00:00:33,000
+And so at that point, by the time
+
+15
+00:00:33,000 --> 00:00:35,000
+you can come up with the decoding map you probably
+
+16
+00:00:35,000 --> 00:00:38,000
+already have a pretty good understanding of how
+
+17
+00:00:38,000 --> 00:00:39,000
+the code works.
+
+18
+00:00:39,000 --> 00:00:43,000
+So is there some more simple characterization we can give
+
+19
+00:00:43,000 --> 00:00:46,000
+of when the decoding map exists other
+
+20
+00:00:46,000 --> 00:00:50,000
+than it exists when you can find it and it works?
+
+21
+00:00:50,000 --> 00:00:51,000
+So that's what I want to talk about.
+
+22
+00:00:51,000 --> 00:00:58,000
+Now, these are called the quantum error correction
+
+23
+00:00:58,000 --> 00:01:00,000
+conditions.
+
+24
+00:01:00,000 --> 00:01:05,000
+And remember in the classical case
+
+25
+00:01:05,000 --> 00:01:08,000
+the conditions were basically if I have
+
+26
+00:01:08,000 --> 00:01:09,000
+some set of allowed errors--
+
+27
+00:01:09,000 --> 00:01:12,000
+let's say I flip up to l bits--
+
+28
+00:01:12,000 --> 00:01:15,000
+if I can map two codewords to the same points,
+
+29
+00:01:15,000 --> 00:01:16,000
+then I'm toast.
+
+30
+00:01:16,000 --> 00:01:18,000
+I cannot correct that error.
+
+31
+00:01:18,000 --> 00:01:22,000
+If I cannot map two codewords to the same place, I'm happy.
+
+32
+00:01:22,000 --> 00:01:24,000
+I can correct the errors.
+
+33
+00:01:24,000 --> 00:01:27,000
+So that's basically what will happen in the quantum case.
+
+34
+00:01:27,000 --> 00:01:29,000
+We just happen to be a little careful because these are now
+
+35
+00:01:29,000 --> 00:01:32,000
+vectors and not points.
+
+36
+00:01:32,000 --> 00:01:44,000
+So we say that s is correctable, or let me let me rephrase that.
+
+37
+00:01:44,000 --> 00:01:47,000
+
+
+38
+00:01:47,000 --> 00:02:02,000
+Code c corrects a set of errors s if and only if for any pair
+
+39
+00:02:02,000 --> 00:02:19,000
+of codewords and for any pair of errors they cannot be mapped
+
+40
+00:02:19,000 --> 00:02:20,000
+not only to the same point--
+
+41
+00:02:20,000 --> 00:02:22,000
+oh, sorry.
+
+42
+00:02:22,000 --> 00:02:27,000
+And let me start by demanding that code words be
+
+43
+00:02:27,000 --> 00:02:31,000
+orthogonal so they're perfectly distinguishable.
+
+44
+00:02:31,000 --> 00:02:36,000
+Then these errors should not only not
+
+45
+00:02:36,000 --> 00:02:40,000
+map them to the same point, they shouldn't even ruin their
+
+46
+00:02:40,000 --> 00:02:41,000
+they're orthogonality.
+
+47
+00:02:41,000 --> 00:02:44,000
+They shouldn't even map them to nonorthogonal vectors.
+
+48
+00:02:44,000 --> 00:02:46,000
+So if I have psi 1 and psi 2 like these, and e1 and e2
+
+49
+00:02:46,000 --> 00:02:50,000
+to are errors, states are orthogonal,
+
+50
+00:02:50,000 --> 00:02:53,000
+they should remain orthogonal after the errors strike.
+
+51
+00:02:53,000 --> 00:03:05,000
+So in other words, so this state is what psi 1 gets mapped to.
+
+52
+00:03:05,000 --> 00:03:09,000
+This is the bra of what psi 2 gets mapped to.
+
+53
+00:03:09,000 --> 00:03:11,000
+Those states should remain orthogonal.
+
+54
+00:03:11,000 --> 00:03:12,000
+I'm calling them states, by the way.
+
+55
+00:03:12,000 --> 00:03:14,000
+They could be sub-normalized, right?
+
+56
+00:03:14,000 --> 00:03:15,000
+These don't have to be unit vectors.
+
+57
+00:03:15,000 --> 00:03:17,000
+But whatever states they're proportional to
+
+58
+00:03:17,000 --> 00:03:20,000
+should be orthogonal.
+
+59
+00:03:20,000 --> 00:03:24,000
+OK it's just a quantum analog of--
+
+60
+00:03:24,000 --> 00:03:26,000
+if I'm perfectly distinguishable before,
+
+61
+00:03:26,000 --> 00:03:27,000
+I should remain perfectly distinguishable
+
+62
+00:03:27,000 --> 00:03:29,000
+after correctable noise.
+
+63
+00:03:29,000 --> 00:03:32,000
+
+
+64
+00:03:32,000 --> 00:03:34,000
+I'm making it sound intuitive, but this is a deeply
+
+65
+00:03:34,000 --> 00:03:36,000
+non-trivial statement.
+
+66
+00:03:36,000 --> 00:03:41,000
+
+
+67
+00:03:41,000 --> 00:03:44,000
+And I'm not going to prove it because a proof takes a while
+
+68
+00:03:44,000 --> 00:03:46,000
+and it was in 8370.
+
+69
+00:03:46,000 --> 00:03:47,000
+And I think you can understand codes
+
+70
+00:03:47,000 --> 00:03:50,000
+without knowing the proof.
+
+71
+00:03:50,000 --> 00:03:52,000
+But the proof is also an important thing to know.
+
+72
+00:03:52,000 --> 00:03:56,000
+So if you didn't take 8370 last year,
+
+73
+00:03:56,000 --> 00:03:59,000
+I would encourage that you look at the video from last year
+
+74
+00:03:59,000 --> 00:04:02,000
+and/or read the corresponding parts of Nielsen and Chuang,
+
+75
+00:04:02,000 --> 00:04:04,000
+which gives the proof of this.
+
+76
+00:04:04,000 --> 00:04:14,000
+So proof in 8370 or Nielsen and Chuang.
+
+77
+00:04:14,000 --> 00:04:16,000
+However, I'm not going to reference the proof
+
+78
+00:04:16,000 --> 00:04:17,000
+on problem sets.
+
+79
+00:04:17,000 --> 00:04:20,000
+It's not a thing we will directly make use of.
+
+80
+00:04:20,000 --> 00:04:23,000
+It uses the polar decomposition, some nice facts
+
+81
+00:04:23,000 --> 00:04:26,000
+about linear algebra.
+
+82
+00:04:26,000 --> 00:04:27,000
+But yeah.
+
+83
+00:04:27,000 --> 00:04:28,000
+I will not get into the proof further.
+
+84
+00:04:28,000 --> 00:04:31,000
+
+
+85
+00:04:31,000 --> 00:04:34,000
+I do want to give one equivalent way of thinking about this,
+
+86
+00:04:34,000 --> 00:04:38,000
+which maybe gives you a first step
+
+87
+00:04:38,000 --> 00:04:41,000
+in the direction of the proof.
+
+88
+00:04:41,000 --> 00:04:43,000
+I should say, what I mean by correct a set of errors
+
+89
+00:04:43,000 --> 00:04:47,000
+is there exists a decoding map that works, OK?
+
+90
+00:04:47,000 --> 00:04:48,000
+I should say this.
+
+91
+00:04:48,000 --> 00:05:01,000
+So correct means there exists decoding and recovery
+
+92
+00:05:01,000 --> 00:05:11,000
+maps that perfectly recover the original information, OK?
+
+93
+00:05:11,000 --> 00:05:14,000
+So what's nice about this condition
+
+94
+00:05:14,000 --> 00:05:18,000
+is that you can state it without any reference to decoding map.
+
+95
+00:05:18,000 --> 00:05:20,000
+Maybe it's not easy to check always.
+
+96
+00:05:20,000 --> 00:05:21,000
+That may or may not be true.
+
+97
+00:05:21,000 --> 00:05:23,000
+But you don't need to come up with a decoding map
+
+98
+00:05:23,000 --> 00:05:25,000
+in order to check this.
+
+99
+00:05:25,000 --> 00:05:28,000
+If the condition is satisfied, you know such a map exists.
+
+100
+00:05:28,000 --> 00:05:29,000
+And in fact, the proof even gives you
+
+101
+00:05:29,000 --> 00:05:31,000
+a prescription for finding it.
+
+102
+00:05:31,000 --> 00:05:37,000
+
+
+103
+00:05:37,000 --> 00:05:41,000
+So actually, there is one more thing
+
+104
+00:05:41,000 --> 00:05:44,000
+I want to say about these conditions, which is a little
+
+105
+00:05:44,000 --> 00:05:47,000
+bit subtle, which is, people often
+
+106
+00:05:47,000 --> 00:05:51,000
+talk about a code in saying oh, this error is
+
+107
+00:05:51,000 --> 00:05:53,000
+correctable by the code, and that error is not
+
+108
+00:05:53,000 --> 00:05:55,000
+corrected by the code.
+
+109
+00:05:55,000 --> 00:05:58,000
+And that is a dangerous way of thinking.
+
+110
+00:05:58,000 --> 00:06:01,000
+So suppose there's some error that
+
+111
+00:06:01,000 --> 00:06:05,000
+seems very hard to correct, like I flipped 17 qubits with x's
+
+112
+00:06:05,000 --> 00:06:08,000
+and I apply a bunch of z's to other qubits.
+
+113
+00:06:08,000 --> 00:06:11,000
+If it's any single unitary error,
+
+114
+00:06:11,000 --> 00:06:16,000
+if I knew what the error was, I could correct it, right?
+
+115
+00:06:16,000 --> 00:06:19,000
+The issue is really dealing with sets of errors.
+
+116
+00:06:19,000 --> 00:06:22,000
+So whenever I just say a code, correct something,
+
+117
+00:06:22,000 --> 00:06:25,000
+I'm always saying it corrects a set of possible errors.
+
+118
+00:06:25,000 --> 00:06:28,000
+And that's because if I knew what the particular error was,
+
+119
+00:06:28,000 --> 00:06:30,000
+I could tailor the decoding map to that,
+
+120
+00:06:30,000 --> 00:06:31,000
+and that would be cheating.
+
+121
+00:06:31,000 --> 00:06:34,000
+The decoding map has to work precisely
+
+122
+00:06:34,000 --> 00:06:36,000
+because I don't know what the error is.
+
+123
+00:06:36,000 --> 00:06:39,000
+And so that's why the order of quantifiers is,
+
+124
+00:06:39,000 --> 00:06:41,000
+I achieve my code first.
+
+125
+00:06:41,000 --> 00:06:43,000
+Then there's some set of errors.
+
+126
+00:06:43,000 --> 00:06:44,000
+And then I choose the decoding map
+
+127
+00:06:44,000 --> 00:06:46,000
+based on that set of errors.
+
+128
+00:06:46,000 --> 00:06:49,000
+And then I'm handed one particular realization
+
+129
+00:06:49,000 --> 00:06:53,000
+of errors from that set, and by decoding map has to handle it.
+
+130
+00:06:53,000 --> 00:06:59,000
+So as we go on, just remember that we talk about
+
+131
+00:06:59,000 --> 00:07:01,000
+whether a set of errors is correctable.
+
+132
+00:07:01,000 --> 00:07:04,000
+We might be sloppy and say, does this error lie
+
+133
+00:07:04,000 --> 00:07:07,000
+within the decorrectable set or not.
+
+134
+00:07:07,000 --> 00:07:08,000
+But that's only after we've already fixed
+
+135
+00:07:08,000 --> 00:07:11,000
+a particular correctable set.
+
+136
+00:07:11,000 --> 00:07:11,000
+
+

@@ -1,0 +1,30 @@
+<problem linenum="183" tex_filename="./week1_lectures1.tex" attempts="1" display_name="Example density matrices" max_attempts="1">
+  <p>
+This is a concept question, provided to check your understanding of the previous video clip. </p>
+  <p>
+Prof. Harrow presented some example density matrices in lecture; which of the following statements about such density matrices [mathjaxinline]\rho[/mathjaxinline] are true? </p>
+  <p>
+    <choiceresponse>
+      <checkboxgroup>
+        <choice correct="false" name="1">
+          <text>The diagonal entries [mathjaxinline]\rho _{kk}[/mathjaxinline] of [mathjaxinline]\rho[/mathjaxinline] represent probabilities of measurements resulting in the [mathjaxinline]k^{\rm th}[/mathjaxinline] eigenstate of [mathjaxinline]\rho[/mathjaxinline]</text>
+        </choice>
+        <choice correct="true" name="2">
+          <text>The diagonal entries [mathjaxinline]\rho _{kk}[/mathjaxinline] of [mathjaxinline]\rho[/mathjaxinline] represent the probabilities of measurements resulting basis element [mathjaxinline]|k\rangle[/mathjaxinline] of [mathjaxinline]\rho[/mathjaxinline]</text>
+        </choice>
+        <choice correct="false" name="3">
+          <text>The density matrix for a qubit is [mathjaxinline]2\times 2[/mathjaxinline] and has four real degrees of freedom</text>
+        </choice>
+        <choice correct="true" name="4">
+          <text>The density matrix for a qubit is [mathjaxinline]2\times 2[/mathjaxinline] and has three real degrees of freedom</text>
+        </choice>
+        <choice correct="true" name="5">
+          <text>The [mathjaxinline]2\times 2[/mathjaxinline] identity matrix (divided by two) is a qubit density matrix represented by a point at the center of the Bloch sphere</text>
+        </choice>
+        <choice correct="false" name="6">
+          <text>The [mathjaxinline]2\times 2[/mathjaxinline] identity matrix (divided by two) is a qubit density matrix represented by a point at the north pole of the Bloch sphere</text>
+        </choice>
+      </checkboxgroup>
+    </choiceresponse>
+  </p>
+</problem>

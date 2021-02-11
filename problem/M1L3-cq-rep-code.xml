@@ -1,0 +1,27 @@
+<problem linenum="35" tex_filename="./week3_lectures3.tex" attempts="1" display_name="Repetition codes" max_attempts="1">
+  <p>
+This is a concept question, provided to check your understanding of the previous video clip. </p>
+  <p>
+Check all the following which are true, regarding <a href="https://en.wikipedia.org/wiki/Repetition_code" target="_blank">classical repetition codes</a>: </p>
+  <p>
+    <choiceresponse>
+      <checkboxgroup>
+        <choice correct="false" name="1">
+          <text>For an [mathjaxinline]n=3[/mathjaxinline] bit repetition code, up to two arbitrary bit flip errors can be corrected.</text>
+        </choice>
+        <choice correct="true" name="2">
+          <text>For an [mathjaxinline]n=7[/mathjaxinline] bit repetition code, up to three arbitrary bit flip errors can be corrected.</text>
+        </choice>
+        <choice correct="true" name="3">
+          <text>Suppose the error is such that either three bits flip, or no bits flip; then for [mathjaxinline]n=4[/mathjaxinline], three bit flips can be corrected.</text>
+        </choice>
+        <choice correct="true" name="4">
+          <text>Decoding is accomplished by taking the majority function of the bits.</text>
+        </choice>
+        <choice correct="false" name="5">
+          <text>Decoding is done by taking the AND of the bits.</text>
+        </choice>
+      </checkboxgroup>
+    </choiceresponse>
+  </p>
+</problem>

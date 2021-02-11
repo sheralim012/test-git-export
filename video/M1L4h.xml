@@ -1,0 +1,8 @@
+<video youtube="1.00:8VCv1lGT1cI" url_name="M1L4h" sub="" transcripts="{&quot;en&quot;: &quot;9268c84e-9fa2-4a14-82bd-51f91aa50c3d-en.srt&quot;}" display_name="QEC example 1: classical codes" edx_video_id="9268c84e-9fa2-4a14-82bd-51f91aa50c3d" youtube_id_1_0="8VCv1lGT1cI">
+  <video_asset client_video_id="External Video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="9268c84e-9fa2-4a14-82bd-51f91aa50c3d-en.srt"/>
+</video>

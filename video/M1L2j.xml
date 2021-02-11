@@ -1,0 +1,8 @@
+<video youtube="1.00:TT2NpdiHEvE" url_name="M1L2j" sub="" transcripts="{&quot;en&quot;: &quot;d1d9e902-c6f6-45a2-bffc-3675b46c3753-en.srt&quot;}" display_name="Examples of quantum operations" edx_video_id="d1d9e902-c6f6-45a2-bffc-3675b46c3753" youtube_id_1_0="TT2NpdiHEvE">
+  <video_asset client_video_id="External Video" duration="0.0" image="">
+    <transcripts>
+      <transcript file_format="srt" language_code="en" provider="Custom"/>
+    </transcripts>
+  </video_asset>
+  <transcript language="en" src="d1d9e902-c6f6-45a2-bffc-3675b46c3753-en.srt"/>
+</video>

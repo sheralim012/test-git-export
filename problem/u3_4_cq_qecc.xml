@@ -1,0 +1,29 @@
+<problem linenum="358" tex_filename="./week3_review1.tex" attempts="1" display_name="Ideas behind the quantum error correction criteria" max_attempts="1">
+  <p>
+This is a concept question, provided to check your understanding of the previous video clip. </p>
+  <p>
+The quantum error correction criteria, as described in lecture, place conditions on errors [mathjaxinline]\{ E_ k\}[/mathjaxinline] to be correctable for a quantum code [mathjaxinline]C[/mathjaxinline], defined by its codeword states [mathjaxinline]\{ |\psi _\ell \rangle \}[/mathjaxinline]. </p>
+  <p>
+Which of the following statements about the quantum error correction criteria are correct? Check all that apply: </p>
+  <p>
+    <choiceresponse>
+      <checkboxgroup>
+        <choice correct="true" name="1">
+          <text>The orthogonality criterion is that [mathjaxinline]\langle \psi _\ell | E^\dagger _ j E_ k|\psi _\ell \rangle  = 0[/mathjaxinline] for all [mathjaxinline]j\neq k[/mathjaxinline] and for all [mathjaxinline]\ell[/mathjaxinline].</text>
+        </choice>
+        <choice correct="false" name="2">
+          <text>The orthogonality criterion is that [mathjaxinline]\langle \psi _\ell | E^\dagger _ j E_ k|\psi _\ell \rangle  = 0[/mathjaxinline] for [mathjaxinline]j=k[/mathjaxinline] and for all [mathjaxinline]\ell[/mathjaxinline].</text>
+        </choice>
+        <choice correct="false" name="3">
+          <text>The non-deformation criterion is that [mathjaxinline]\langle \psi _\ell | E^\dagger _ j E_ k|\psi _\ell \rangle  = d_\ell[/mathjaxinline] for all [mathjaxinline]j[/mathjaxinline] and [mathjaxinline]k[/mathjaxinline].</text>
+        </choice>
+        <choice correct="false" name="4">
+          <text>The non-deformation criterion is that [mathjaxinline]\langle \psi _\ell | E^\dagger _ j E_ k|\psi _\ell \rangle  = 0[/mathjaxinline] for all [mathjaxinline]j[/mathjaxinline] and [mathjaxinline]k[/mathjaxinline].</text>
+        </choice>
+        <choice correct="true" name="5">
+          <text>The non-deformation criterion is that [mathjaxinline]\langle \psi _\ell | E^\dagger _ j E_ k|\psi _\ell \rangle  = d_ k[/mathjaxinline] for all [mathjaxinline]j=k[/mathjaxinline] and for all [mathjaxinline]\ell[/mathjaxinline].</text>
+        </choice>
+      </checkboxgroup>
+    </choiceresponse>
+  </p>
+</problem>

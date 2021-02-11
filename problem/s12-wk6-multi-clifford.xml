@@ -1,0 +1,72 @@
+<problem linenum="135" tex_filename="./week4_5_ps2b.tex" attempts="10" display_name="Multi-qubit Clifford circuits" max_attempts="10">
+  <script>
+import qpython4
+qpython4.define_qpython4_globals(globals())
+
+
+</script>
+  <p>
+In seeking a systematic construction for arbitrary multi-qubit Clifford circuits, it is helpful to study the action of multi-qubit generalizations of the controlled-NOT gate, the [mathjaxinline]C(Z)[/mathjaxinline] gate, and the [mathjaxinline]C(Y)[/mathjaxinline] gate. </p>
+  <ol class="enumerate">
+    <li value="1">
+      <p>
+Recall that the two-qubit controlled-[mathjaxinline]Z[/mathjaxinline] gate [mathjaxinline]C(Z)[/mathjaxinline] and controlled-[mathjaxinline]Y[/mathjaxinline] gate [mathjaxinline]C(Y)[/mathjaxinline] can be composed from [mathjaxinline]C(X)[/mathjaxinline] (CNOT), [mathjaxinline]H[/mathjaxinline] (Hadamard), and [mathjaxinline]S[/mathjaxinline] (phase) gates. </p>
+      <p>
+A [mathjaxinline]n[/mathjaxinline]-qubit gate [mathjaxinline]C(g)[/mathjaxinline] can similarly be constructed from CNOT, [mathjaxinline]H[/mathjaxinline], and [mathjaxinline]S[/mathjaxinline] gates, where [mathjaxinline]g[/mathjaxinline] is an [mathjaxinline]n-1[/mathjaxinline] qubit Pauli operation (ie [mathjaxinline]g\in P_{n-1}[/mathjaxinline]). </p>
+      <p>
+For example, Give a three-qubit Clifford circuit for [mathjaxinline]C(ZX)[/mathjaxinline], where [mathjaxinline]ZX = Z\otimes X[/mathjaxinline] is a two-qubit Pauli operation. Input your answer as a list of gates, eg <tt class="tt">[H(1),CNOT(1,0)]</tt>, where the gates in the circuit are applied in the order listed, from left to right. You may use <tt class="tt">X</tt>, <tt class="tt">Y</tt>, <tt class="tt">Z</tt>, <tt class="tt">H</tt>, <tt class="tt">S</tt>, and <tt class="tt">CNOT</tt> gates. For <tt class="tt">CNOT(1,0)</tt>, qubit [mathjaxinline]1[/mathjaxinline] is the control, and qubit [mathjaxinline]0[/mathjaxinline] is the target. Let qubit [mathjaxinline]2[/mathjaxinline] be the control qubit for your gate, and let [mathjaxinline]ZX[/mathjaxinline] act on qubits [mathjaxinline]1[/mathjaxinline] and [mathjaxinline]0[/mathjaxinline], in that order, from left to right. </p>
+      <p>
+        <p style="display:inline">[mathjaxinline]C(ZX) =[/mathjaxinline]</p>
+        <span>
+          <customresponse cfn="cfn_wrap_b62d9cbb1f" inline="1" expect="$expect_wrap_b62d9cbb1f" options="nqubits=3" cfn_extra_args="options">
+            <textline size="60" correct_answer="$ans_b62d9cbb1f_1" inline="1"/>
+          </customresponse>
+          <script type="text/python" system_path="python_lib">
+
+import subtext2
+wrap_b62d9cbb1f = subtext2.Subtext(debug=True,sanitize_allow_lists=False)
+ans_b62d9cbb1f_1 = wrap_b62d9cbb1f.answer('''[H(1),CNOT(2,1),H(1),CNOT(2,0)]''')
+expect_wrap_b62d9cbb1f = wrap_b62d9cbb1f.answer('''[H(1),CNOT(2,1),H(1),CNOT(2,0)]''')
+
+@wrap_b62d9cbb1f.grader
+def cfn_wrap_b62d9cbb1f(expect, ans, **kwargs):
+    return check_clifford_circuit_eq(expect, ans, **kwargs)
+
+</script>
+        </span>
+      </p>
+      <p>
+        <solution>
+          <p>
+            <b>Solution:</b>
+          </p>
+          <span>Since [mathjaxinline]C(g)[/mathjaxinline] can be constructed from CNOT, [mathjaxinline]H[/mathjaxinline], and [mathjaxinline]S[/mathjaxinline], it follows that [mathjaxinline]C(g)[/mathjaxinline] is in the Clifford group. </span>
+        </solution>
+      </p>
+    </li>
+    <li value="2">
+      <p>
+What is the action of [mathjaxinline]C(g)[/mathjaxinline] on the Pauli group elements <tt class="tt">Xg</tt> = [mathjaxinline]X\otimes g[/mathjaxinline] and <tt class="tt">Zh</tt> = [mathjaxinline]Z\otimes h[/mathjaxinline], where [mathjaxinline]g,h\in P_{n-1}[/mathjaxinline], assuming that [mathjaxinline][g,h]=0[/mathjaxinline]? </p>
+      <p>
+Give each of your answers as a string of Pauli operators, eg <tt class="tt">XY</tt>: </p>
+      <ul class="itemize">
+        <li>
+          <p>
+            <p style="display:inline">[mathjaxinline]C(g) \left[ X\otimes g \right] C(g)^\dagger =[/mathjaxinline]</p>
+            <stringresponse answer="XI" type="" inline="1">
+              <textline size="20" inline="1"/>
+            </stringresponse>
+          </p>
+        </li>
+        <li>
+          <p>
+            <p style="display:inline">[mathjaxinline]C(g) \left[ Z\otimes h \right] C(g)^\dagger =[/mathjaxinline]</p>
+            <stringresponse answer="Zh" type="" inline="1">
+              <textline size="20" inline="1"/>
+            </stringresponse>
+          </p>
+        </li>
+      </ul>
+    </li>
+  </ol>
+</problem>

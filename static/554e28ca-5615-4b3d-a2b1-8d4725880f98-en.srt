@@ -1,0 +1,368 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:02,000
+This will lead us to something called the trace norm,
+
+2
+00:00:02,000 --> 00:00:06,000
+and it suggests that there is a-- the natural
+
+3
+00:00:06,000 --> 00:00:09,000
+metric on the set of states is the one norm,
+
+4
+00:00:09,000 --> 00:00:13,000
+whereas the natural metric on the set of measurements
+
+5
+00:00:13,000 --> 00:00:16,000
+is the Schatten infinity norm.
+
+6
+00:00:16,000 --> 00:00:21,000
+And so, the metric on the set of states
+
+7
+00:00:21,000 --> 00:00:24,000
+is sometimes called the trace norm.
+
+8
+00:00:24,000 --> 00:00:30,000
+And it's defined T, stands for trace norm,
+
+9
+00:00:30,000 --> 00:00:37,000
+and it's defined to be one half of the Schatten, one
+
+10
+00:00:37,000 --> 00:00:40,000
+distance between rho and sigma.
+
+11
+00:00:40,000 --> 00:00:42,000
+The one half is just convention.
+
+12
+00:00:42,000 --> 00:00:45,000
+You'll see on the problems set why it's a natural convention.
+
+13
+00:00:45,000 --> 00:00:46,000
+That's the way it's always between 0 and 1,
+
+14
+00:00:46,000 --> 00:00:48,000
+instead of being between 0 and 2.
+
+15
+00:00:48,000 --> 00:00:51,000
+
+
+16
+00:00:51,000 --> 00:00:55,000
+And the reason why this is the natural metric
+
+17
+00:00:55,000 --> 00:01:01,000
+to use for states is that for any measurement M,
+
+18
+00:01:01,000 --> 00:01:10,000
+we have that trace of M rho, minus trace of M sigma.
+
+19
+00:01:10,000 --> 00:01:13,000
+So this is the difference, if I measure rho,
+
+20
+00:01:13,000 --> 00:01:15,000
+or I measure sigma, the difference in the probability
+
+21
+00:01:15,000 --> 00:01:17,000
+of some outcome.
+
+22
+00:01:17,000 --> 00:01:21,000
+So essentially, it's how far away observable probabilities
+
+23
+00:01:21,000 --> 00:01:23,000
+can be from each other.
+
+24
+00:01:23,000 --> 00:01:31,000
+So I can write this as absolute value trace M rho minus sigma.
+
+25
+00:01:31,000 --> 00:01:39,000
+So by the duality relation, says that the maximum inner product
+
+26
+00:01:39,000 --> 00:01:46,000
+of M with rho minus sigma comes when I--
+
+27
+00:01:46,000 --> 00:01:48,000
+yeah, let me restate that.
+
+28
+00:01:48,000 --> 00:01:51,000
+This duality relation, you can rewrite
+
+29
+00:01:51,000 --> 00:01:55,000
+by saying that the norm of x star
+
+30
+00:01:55,000 --> 00:01:57,000
+is the maximum in a product that you get.
+
+31
+00:01:57,000 --> 00:02:00,000
+But what that means is that for any particular x and y,
+
+32
+00:02:00,000 --> 00:02:04,000
+their inner product is upper-bounded by their norms.
+
+33
+00:02:04,000 --> 00:02:15,000
+So just as an aside, so the duality relation
+
+34
+00:02:15,000 --> 00:02:17,000
+says that the inner product of x and y
+
+35
+00:02:17,000 --> 00:02:23,000
+is less than or equal to the norm of x in one norm,
+
+36
+00:02:23,000 --> 00:02:26,000
+and the norm of y in another norm.
+
+37
+00:02:26,000 --> 00:02:29,000
+So this kind of, like the Cauchy-Schwartz inequality
+
+38
+00:02:29,000 --> 00:02:31,000
+for Euclidean vectors, right?
+
+39
+00:02:31,000 --> 00:02:33,000
+For Euclidean vectors, their inner product
+
+40
+00:02:33,000 --> 00:02:37,000
+is at most the product of their two norms.
+
+41
+00:02:37,000 --> 00:02:39,000
+If you're using two different dual norms,
+
+42
+00:02:39,000 --> 00:02:42,000
+you can measure the form of one vector with one norm,
+
+43
+00:02:42,000 --> 00:02:44,000
+and the other vector with the other norm.
+
+44
+00:02:44,000 --> 00:02:48,000
+And that's kind of just rewriting this equation
+
+45
+00:02:48,000 --> 00:02:49,000
+with a max up here.
+
+46
+00:02:49,000 --> 00:02:50,000
+The maxium goes a little bit further
+
+47
+00:02:50,000 --> 00:02:53,000
+and says that if you hold x fixed,
+
+48
+00:02:53,000 --> 00:02:56,000
+there will be some choice of y that saturates this.
+
+49
+00:02:56,000 --> 00:03:00,000
+But even in general, this is always an inequality.
+
+50
+00:03:00,000 --> 00:03:02,000
+So that means that this quantity here
+
+51
+00:03:02,000 --> 00:03:12,000
+can be upper-bounded by the Schatten infinity norm of M,
+
+52
+00:03:12,000 --> 00:03:14,000
+and the Schatten one norm of rho minus sigma.
+
+53
+00:03:14,000 --> 00:03:17,000
+
+
+54
+00:03:17,000 --> 00:03:21,000
+And now you see, maybe, why it's useful to use duality and use
+
+55
+00:03:21,000 --> 00:03:22,000
+these norms.
+
+56
+00:03:22,000 --> 00:03:25,000
+I want to be measuring measurements in the S infinity
+
+57
+00:03:25,000 --> 00:03:27,000
+norm, and states in the S1 norm.
+
+58
+00:03:27,000 --> 00:03:29,000
+I don't want to, for example, just use the Euclidean norm
+
+59
+00:03:29,000 --> 00:03:30,000
+for both.
+
+60
+00:03:30,000 --> 00:03:32,000
+That would be very wasteful.
+
+61
+00:03:32,000 --> 00:03:33,000
+It would be very--
+
+62
+00:03:33,000 --> 00:03:35,000
+it'd be an inequality that would be true,
+
+63
+00:03:35,000 --> 00:03:36,000
+but it'd be very loose.
+
+64
+00:03:36,000 --> 00:03:38,000
+Whereas this thing is--
+
+65
+00:03:38,000 --> 00:03:40,000
+can generally be made tight, if I choose
+
+66
+00:03:40,000 --> 00:03:42,000
+the measurement the right way.
+
+67
+00:03:42,000 --> 00:03:46,000
+So now I can upper-bound this quantity by one, right?
+
+68
+00:03:46,000 --> 00:03:50,000
+Any measurement has Schatten infinity norm at most one.
+
+69
+00:03:50,000 --> 00:03:57,000
+And so I just get the S1 norm of rho minus sigma,
+
+70
+00:03:57,000 --> 00:04:04,000
+which is equal to twice the trace distance.
+
+71
+00:04:04,000 --> 00:04:07,000
+And so this gives you a sense of why the trace distance,
+
+72
+00:04:07,000 --> 00:04:12,000
+how it bounds the probability, the discrepancy
+
+73
+00:04:12,000 --> 00:04:14,000
+between any observable outcome.
+
+74
+00:04:14,000 --> 00:04:18,000
+Because if I change, if I replaced a rho with state sigma
+
+75
+00:04:18,000 --> 00:04:20,000
+and they're close in trace distance,
+
+76
+00:04:20,000 --> 00:04:21,000
+then the output of any measurement
+
+77
+00:04:21,000 --> 00:04:24,000
+will not change too much.
+
+78
+00:04:24,000 --> 00:04:27,000
+Let me just mention about this last derivation.
+
+79
+00:04:27,000 --> 00:04:33,000
+This 2 here, is not needed.
+
+80
+00:04:33,000 --> 00:04:36,000
+If I had done this derivation a little more carefully,
+
+81
+00:04:36,000 --> 00:04:38,000
+I could have done it without this factor of 2.
+
+82
+00:04:38,000 --> 00:04:44,000
+I wanted to kind of quickly show you why it's the case,
+
+83
+00:04:44,000 --> 00:04:47,000
+but if you go through it, actually on the piece
+
+84
+00:04:47,000 --> 00:04:49,000
+that you'll go through it in a way, that doesn't
+
+85
+00:04:49,000 --> 00:04:52,000
+have this factor of two.
+
+86
+00:04:52,000 --> 00:04:54,000
+This still contains, I think, the essential idea.
+
+87
+00:04:54,000 --> 00:04:56,000
+I just want to make sure that you, you know,
+
+88
+00:04:56,000 --> 00:04:58,000
+don't think this is the actual formula.
+
+89
+00:04:58,000 --> 00:05:00,000
+The actual formula lacks this factor of 2.
+
+90
+00:05:00,000 --> 00:05:02,000
+I mean, this is still true, right?
+
+91
+00:05:02,000 --> 00:05:05,000
+
+

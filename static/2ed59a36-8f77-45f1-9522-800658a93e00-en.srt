@@ -1,0 +1,412 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:02,000
+The thing that's at first a little daunting
+
+2
+00:00:02,000 --> 00:00:05,000
+about correcting noise, is that in the classical case
+
+3
+00:00:05,000 --> 00:00:08,000
+you can say, well, there's only so many patterns of bitflips
+
+4
+00:00:08,000 --> 00:00:09,000
+I have to deal with.
+
+5
+00:00:09,000 --> 00:00:12,000
+It's a finite number.
+
+6
+00:00:12,000 --> 00:00:14,000
+And in the case of linear codes, I don't even
+
+7
+00:00:14,000 --> 00:00:17,000
+have to worry about mapping from this string to that string,
+
+8
+00:00:17,000 --> 00:00:21,000
+I just have to worry about which bits are flipped, right.
+
+9
+00:00:21,000 --> 00:00:25,000
+That I can analyze independent of which bits I started with.
+
+10
+00:00:25,000 --> 00:00:27,000
+For channels, there is a continuously, infinite number
+
+11
+00:00:27,000 --> 00:00:28,000
+of these.
+
+12
+00:00:28,000 --> 00:00:32,000
+And so, I can't hope to identify all of them.
+
+13
+00:00:32,000 --> 00:00:35,000
+But the key idea of quantum error correction,
+
+14
+00:00:35,000 --> 00:00:38,000
+is to use linearity to benefit you.
+
+15
+00:00:38,000 --> 00:00:41,000
+And so we find that codes can usually
+
+16
+00:00:41,000 --> 00:00:46,000
+correct not just one channel, but the entire subspace
+
+17
+00:00:46,000 --> 00:00:48,000
+of channels.
+
+18
+00:00:48,000 --> 00:00:56,000
+Let's let s be the set of correctable errors.
+
+19
+00:00:56,000 --> 00:01:00,000
+
+
+20
+00:01:00,000 --> 00:01:04,000
+A key fact about quantum codes is
+
+21
+00:01:04,000 --> 00:01:15,000
+that this is a subspace of operators on N qubits.
+
+22
+00:01:15,000 --> 00:01:21,000
+This is a linear subspace.
+
+23
+00:01:21,000 --> 00:01:24,000
+
+
+24
+00:01:24,000 --> 00:01:26,000
+And this is what will allow us to deal
+
+25
+00:01:26,000 --> 00:01:28,000
+with a continuum of possible errors.
+
+26
+00:01:28,000 --> 00:01:32,000
+It says if I can correct error a and error b,
+
+27
+00:01:32,000 --> 00:01:35,000
+then I can also correct any linear combination of them.
+
+28
+00:01:35,000 --> 00:01:38,000
+And so that is what makes it tractable to--
+
+29
+00:01:38,000 --> 00:01:39,000
+you know why we don't have to worry
+
+30
+00:01:39,000 --> 00:01:42,000
+about the continuous range of possibilities.
+
+31
+00:01:42,000 --> 00:01:45,000
+OK, what does it mean to correct an error that's a matrix?
+
+32
+00:01:45,000 --> 00:01:48,000
+I said here that noise is a super operator.
+
+33
+00:01:48,000 --> 00:01:50,000
+Right, a quantum operation.
+
+34
+00:01:50,000 --> 00:01:51,000
+And these are--
+
+35
+00:01:51,000 --> 00:01:53,000
+I'm saying s it's just a matrix.
+
+36
+00:01:53,000 --> 00:01:56,000
+The connection is a quantum operation
+
+37
+00:01:56,000 --> 00:01:58,000
+has a collection of Kraus operators.
+
+38
+00:01:58,000 --> 00:02:03,000
+And we say that a quantum operation is correctable
+
+39
+00:02:03,000 --> 00:02:08,000
+if it's Kraus operators are in this set.
+
+40
+00:02:08,000 --> 00:02:16,000
+So in other words, N is correctable--
+
+41
+00:02:16,000 --> 00:02:24,000
+sorry, let me let me say suppose N of row
+
+42
+00:02:24,000 --> 00:02:26,000
+is equal to sum over i--
+
+43
+00:02:26,000 --> 00:02:29,000
+
+
+44
+00:02:29,000 --> 00:02:41,000
+let me call it let's say, Ei rho, Ei dagger, then
+
+45
+00:02:41,000 --> 00:02:57,000
+and is correctable if each Ei belong to this correctable set.
+
+46
+00:02:57,000 --> 00:03:00,000
+OK.
+
+47
+00:03:00,000 --> 00:03:04,000
+So this is the set of correctable Kraus operators.
+
+48
+00:03:04,000 --> 00:03:10,000
+And-- and so these conditions--
+
+49
+00:03:10,000 --> 00:03:12,000
+when I say it's correctable, I mean
+
+50
+00:03:12,000 --> 00:03:16,000
+that these conditions hold.
+
+51
+00:03:16,000 --> 00:03:21,000
+
+
+52
+00:03:21,000 --> 00:03:23,000
+So when I say and it's correctable,
+
+53
+00:03:23,000 --> 00:03:29,000
+I mean that the decoding map will correctly undo the noise.
+
+54
+00:03:29,000 --> 00:03:31,000
+The recovery map will correctly undo the noise.
+
+55
+00:03:31,000 --> 00:03:34,000
+
+
+56
+00:03:34,000 --> 00:03:37,000
+So this is material that was in eight 370,
+
+57
+00:03:37,000 --> 00:03:40,000
+so I'm not going to derive it in great detail.
+
+58
+00:03:40,000 --> 00:03:44,000
+But let me give you some argument why this is plausible
+
+59
+00:03:44,000 --> 00:03:46,000
+based on this picture of quantum operations
+
+60
+00:03:46,000 --> 00:03:48,000
+that we've just seen.
+
+61
+00:03:48,000 --> 00:03:51,000
+
+
+62
+00:03:51,000 --> 00:03:52,000
+We can encode an isometry.
+
+63
+00:03:52,000 --> 00:03:56,000
+And that's plausible because our code spaces are linear.
+
+64
+00:03:56,000 --> 00:04:00,000
+Again, you could imagine nonlinear encodings, right.
+
+65
+00:04:00,000 --> 00:04:02,000
+An encoding in principle doesn't have
+
+66
+00:04:02,000 --> 00:04:03,000
+to be physically realizable, it could just
+
+67
+00:04:03,000 --> 00:04:06,000
+be some mathematical operation.
+
+68
+00:04:06,000 --> 00:04:09,000
+But we almost-- that sort of expands the set of codes
+
+69
+00:04:09,000 --> 00:04:13,000
+to make it so general it's hard to make use of.
+
+70
+00:04:13,000 --> 00:04:15,000
+And in almost every case we care about,
+
+71
+00:04:15,000 --> 00:04:17,000
+we can do linear encoding.
+
+72
+00:04:17,000 --> 00:04:20,000
+But why should the decoding be a quantum operation?
+
+73
+00:04:20,000 --> 00:04:23,000
+Why can't this be--
+
+74
+00:04:23,000 --> 00:04:24,000
+you know, isometries are simple--
+
+75
+00:04:24,000 --> 00:04:26,000
+simpler than quantum operations.
+
+76
+00:04:26,000 --> 00:04:28,000
+Why do we need the quantum operation for decoding?
+
+77
+00:04:28,000 --> 00:04:32,000
+Why do we have to introduce non-unitarity and potentially
+
+78
+00:04:32,000 --> 00:04:34,000
+noise in our decoding map?
+
+79
+00:04:34,000 --> 00:04:37,000
+Can anyone-- can anyone say why?
+
+80
+00:04:37,000 --> 00:04:37,000
+[INAUDIBLE]
+
+81
+00:04:37,000 --> 00:04:38,000
+That's right.
+
+82
+00:04:38,000 --> 00:04:40,000
+So, if you do everything you unitarily,
+
+83
+00:04:40,000 --> 00:04:42,000
+you neither create nor destroy information.
+
+84
+00:04:42,000 --> 00:04:44,000
+The noise introduces some information.
+
+85
+00:04:44,000 --> 00:04:47,000
+For example, which noise process happened
+
+86
+00:04:47,000 --> 00:04:49,000
+will presumably leave some amount of information
+
+87
+00:04:49,000 --> 00:04:50,000
+in your system.
+
+88
+00:04:50,000 --> 00:04:52,000
+You want to get rid of that.
+
+89
+00:04:52,000 --> 00:04:57,000
+And so this is a way of discarding that information.
+
+90
+00:04:57,000 --> 00:04:59,000
+The other reason-- and that's true for the recovery
+
+91
+00:04:59,000 --> 00:05:01,000
+map and the decoding map.
+
+92
+00:05:01,000 --> 00:05:02,000
+At the level of the decoding map,
+
+93
+00:05:02,000 --> 00:05:05,000
+there's another reason, which is even more basic,
+
+94
+00:05:05,000 --> 00:05:08,000
+which is k is less than N, right.
+
+95
+00:05:08,000 --> 00:05:13,000
+I mean coding-- so this map is going from more N qubits
+
+96
+00:05:13,000 --> 00:05:13,000
+to a fewer qubits.
+
+97
+00:05:13,000 --> 00:05:15,000
+Down to k.
+
+98
+00:05:15,000 --> 00:05:17,000
+And so, that, inevitably, is going to lose information.
+
+99
+00:05:17,000 --> 00:05:19,000
+No matter what error correcting properties I want,
+
+100
+00:05:19,000 --> 00:05:23,000
+I'm just going to fewer qubits.
+
+101
+00:05:23,000 --> 00:05:24,000
+So I have to go--
+
+102
+00:05:24,000 --> 00:05:27,000
+
+

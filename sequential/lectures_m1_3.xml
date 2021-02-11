@@ -1,0 +1,13 @@
+<sequential display_name="Lectures M1.3: Classical Codes" due="&quot;2918-06-15T23:57:00+00:00&quot;" format="Concept" graceperiod="18000 seconds" graded="true" showanswer="closed" start="&quot;2017-09-06T00:00:00+00:00&quot;" attempts="10" tex_filename="./week3_lectures3.tex" linenum="3" refnum="1">
+  <vertical url_name="Classical_error_correction_codes_-_a_review"/>
+  <vertical url_name="Example_-_n-bit_repetition_code"/>
+  <vertical url_name="CQ_Repetition_codes"/>
+  <vertical url_name="General_classical_error_correction_codes"/>
+  <vertical url_name="Error_correction_code_distances_and_error_detection"/>
+  <vertical url_name="Code_distances_and_error_correction"/>
+  <vertical url_name="Classical_linear_error_correction_codes_-_field_F2"/>
+  <vertical url_name="Classical_linear_error_correction_codes_-_definition"/>
+  <vertical url_name="Linear_code_example_-_repetition_code"/>
+  <vertical url_name="Linear_codes_parity_check_matrices"/>
+  <vertical url_name="CQ_Linear_codes"/>
+</sequential>

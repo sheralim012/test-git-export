@@ -1,0 +1,24 @@
+<problem linenum="180" tex_filename="./week4_lectures6.tex" attempts="1" display_name="Trivial code" max_attempts="1">
+  <p>
+This is a concept question, provided to check your understanding of the previous lecture video clips. </p>
+  <p>
+Which of the following are true? </p>
+  <p>
+    <choiceresponse>
+      <checkboxgroup>
+        <choice correct="true" name="1">
+          <text>Span [mathjaxinline]\{ |00\rangle , |01\rangle \}[/mathjaxinline] has stabilizer group [mathjaxinline]\langle Z_1\rangle[/mathjaxinline] and is a trivial code.</text>
+        </choice>
+        <choice correct="false" name="2">
+          <text>Any one-dimensional subspace is a trivial code.</text>
+        </choice>
+        <choice correct="true" name="3">
+          <text>Any stabilizer code can be transformed to a trivial code by applying a unitary.</text>
+        </choice>
+        <choice correct="true" name="4">
+          <text>Swap is a Clifford operation.</text>
+        </choice>
+      </checkboxgroup>
+    </choiceresponse>
+  </p>
+</problem>

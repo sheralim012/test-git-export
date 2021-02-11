@@ -1,0 +1,166 @@
+{
+    "course/2T2018": {
+        "advanced_modules": [
+            "edx_sga",
+            "review",
+            "split_test"
+        ],
+        "allow_anonymous": false,
+        "allow_anonymous_to_peers": true,
+        "allow_unsupported_xblocks": true,
+        "cert_html_view_enabled": true,
+        "course_image": "course_image.jpg",
+        "days_early_for_beta": 24.0,
+        "discussion_blackouts": [
+            [
+                "2000-11-01T12:00",
+                "2012-11-05T06:30"
+            ],
+            [
+                "2013-01-10T09:00",
+                "2013-01-14T12:00"
+            ]
+        ],
+        "discussion_topics": {
+            "General": {
+                "id": "course"
+            },
+            "Lectures M1_1 Quantum states and operations": {
+                "id": "lectures_m1_1"
+            },
+            "Lectures M1_2 Quantum operations": {
+                "id": "lectures_m1_2"
+            },
+            "Lectures M1_2b Quantum norms and distances": {
+                "id": "lectures_m1_2b"
+            },
+            "Lectures M1_3 Classical Codes": {
+                "id": "lectures_m1_3"
+            },
+            "Lectures M1_4 Quantum Codes": {
+                "id": "lectures_m1_4"
+            },
+            "Lectures M1_5 Stabilizer codes": {
+                "id": "lectures_m1_5"
+            },
+            "Lectures M1_6 Stabilizer code examples and properties": {
+                "id": "lectures_m1_6"
+            },
+            "Lectures M1_7 The symplectic picture of the Clifford group": {
+                "id": "lectures_m1_7"
+            },
+            "PS#1 Quantum basics": {
+                "id": "ps1"
+            },
+            "PS#2 - Bipartite states and quantum channels": {
+                "id": "ps2"
+            },
+            "PS#3 - Quantum codes and stabilizers I": {
+                "id": "ps3"
+            },
+            "PS#4 - Clifford circuits": {
+                "id": "ps4"
+            },
+            "Review material density matrices": {
+                "id": "review_m1_1"
+            },
+            "Review material quantum error correction": {
+                "id": "review_m1_2"
+            },
+            "Supplemental material stabilizers and stabilizer_codes": {
+                "id": "review_m1_3"
+            }
+        },
+        "display_name": "Quantum Information Science II, Part 1 - Quantum states, noise and error correction",
+        "end": "2018-06-15T23:57:00Z",
+        "enrollment_end": null,
+        "enrollment_start": null,
+        "giturl": "git@github.com:sheralim012/test-git-export.git",
+        "graceperiod": "18300 seconds",
+        "language": "en",
+        "learning_info": [],
+        "lti_passports": [
+            "sglti:mitx:edx",
+            "graph_builder:any:any",
+            "wikipedia:any:any",
+            "google_chart:any:any",
+            "piazza:piazza.sandbox:test_only_secret",
+            "piazza_id:harvard.edu:piazza_sf3-2ks4",
+            "mit_ocw:any:any"
+        ],
+        "rerandomize": "once",
+        "showanswer": "finished",
+        "start": "2018-04-25T15:00:00Z",
+        "tabs": [
+            {
+                "course_staff_only": false,
+                "name": "Home",
+                "type": "course_info"
+            },
+            {
+                "course_staff_only": false,
+                "name": "Course",
+                "type": "courseware"
+            },
+            {
+                "course_staff_only": false,
+                "name": "Textbooks",
+                "type": "textbooks"
+            },
+            {
+                "course_staff_only": false,
+                "name": "Syllabus",
+                "type": "static_tab",
+                "url_slug": "syllabus"
+            },
+            {
+                "course_staff_only": false,
+                "name": "Discussion",
+                "type": "discussion"
+            },
+            {
+                "course_staff_only": false,
+                "is_hidden": true,
+                "name": "Wiki",
+                "type": "wiki"
+            },
+            {
+                "course_staff_only": false,
+                "name": "Progress",
+                "type": "progress"
+            }
+        ],
+        "user_partitions": [
+            {
+                "active": true,
+                "description": "This group configuration is used for the A/B test for Dillon Dumesnil's Spaced Review Experiment. The \"control\" group will not see any of the Review Problems and the \"review\" group will see them.",
+                "groups": [
+                    {
+                        "id": 0,
+                        "name": "Control",
+                        "version": 1
+                    },
+                    {
+                        "id": 1,
+                        "name": "Review",
+                        "version": 1
+                    }
+                ],
+                "id": 0,
+                "name": "Spaced Review Experiment",
+                "parameters": {},
+                "scheme": "random",
+                "version": 3
+            }
+        ],
+        "xml_attributes": {
+            "attempts": 10,
+            "filename": [
+                "course/2T2018.xml",
+                "course/2T2018.xml"
+            ],
+            "number": "8.371.1x",
+            "semester": "2T2018"
+        }
+    }
+}

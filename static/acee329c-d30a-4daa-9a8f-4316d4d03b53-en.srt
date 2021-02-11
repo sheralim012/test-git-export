@@ -1,0 +1,104 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:04,000
+What happens when you apply unitaries to density matrices?
+
+2
+00:00:04,000 --> 00:00:14,000
+Ensemble psi of i with probability p of i.
+
+3
+00:00:14,000 --> 00:00:25,000
+Apply u and you get u psi of i with probability p of i.
+
+4
+00:00:25,000 --> 00:00:28,000
+
+
+5
+00:00:28,000 --> 00:00:30,000
+And the density matrix here was row
+
+6
+00:00:30,000 --> 00:00:35,000
+equals summation p of i psi psi.
+
+7
+00:00:35,000 --> 00:00:39,000
+
+
+8
+00:00:39,000 --> 00:00:41,000
+And the density matrix here is going
+
+9
+00:00:41,000 --> 00:00:51,000
+to be rho tilda equals sum p of i.
+
+10
+00:00:51,000 --> 00:00:56,000
+Well, we now have u psi of i instead of psi of i.
+
+11
+00:00:56,000 --> 00:01:01,000
+So u psi of i, and now psi of i u dagger.
+
+12
+00:01:01,000 --> 00:01:07,000
+
+
+13
+00:01:07,000 --> 00:01:10,000
+Well, again, we use linearity.
+
+14
+00:01:10,000 --> 00:01:14,000
+And this is just summation.
+
+15
+00:01:14,000 --> 00:01:19,000
+p of i-- wait.
+
+16
+00:01:19,000 --> 00:01:21,000
+No.
+
+17
+00:01:21,000 --> 00:01:22,000
+What we want to do is we want to move
+
+18
+00:01:22,000 --> 00:01:24,000
+the u outside the summation.
+
+19
+00:01:24,000 --> 00:01:35,000
+So this gives u summation p of i psi of i,
+
+20
+00:01:35,000 --> 00:01:43,000
+or rather the projection onto psi of i, u dagger.
+
+21
+00:01:43,000 --> 00:01:44,000
+But this is row.
+
+22
+00:01:44,000 --> 00:01:49,000
+Equals u row u dagger.
+
+23
+00:01:49,000 --> 00:01:53,000
+So you apply a unitary to a density matrix,
+
+24
+00:01:53,000 --> 00:01:56,000
+you get u row u dagger.
+
+25
+00:01:56,000 --> 00:02:00,000
+
+

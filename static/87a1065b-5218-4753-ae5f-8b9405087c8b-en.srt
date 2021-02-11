@@ -1,0 +1,932 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:03,000
+The criteria for when it is possible to do a quantum
+
+2
+00:00:03,000 --> 00:00:07,000
+error correction or not is a set of algebraic equations.
+
+3
+00:00:07,000 --> 00:00:10,000
+And these are also known as MacLean-Laflamme equations
+
+4
+00:00:10,000 --> 00:00:14,000
+after Manny Neil and Raymond Laflamme, who
+
+5
+00:00:14,000 --> 00:00:16,000
+first documented them and wrote them
+
+6
+00:00:16,000 --> 00:00:20,000
+and described in a very beautiful way.
+
+7
+00:00:20,000 --> 00:00:24,000
+And what I'm going to do is to present the criteria to you
+
+8
+00:00:24,000 --> 00:00:28,000
+and explain why they exist in a more distilled way
+
+9
+00:00:28,000 --> 00:00:31,000
+than you'll find in the original paper,
+
+10
+00:00:31,000 --> 00:00:34,000
+building on just the limited scenario that we have described
+
+11
+00:00:34,000 --> 00:00:36,000
+in this course.
+
+12
+00:00:36,000 --> 00:00:38,000
+So here's the setting.
+
+13
+00:00:38,000 --> 00:00:42,000
+We have a channel between our two famous people, Alice
+
+14
+00:00:42,000 --> 00:00:44,000
+and Bob.
+
+15
+00:00:44,000 --> 00:00:47,000
+So this is the message that Bob receives
+
+16
+00:00:47,000 --> 00:00:51,000
+over a noisy channel, E. And we can write it,
+
+17
+00:00:51,000 --> 00:01:02,000
+in general, as this form of E sub k, Ro, E sub k, dagger.
+
+18
+00:01:02,000 --> 00:01:05,000
+You've only seen this in limited cases
+
+19
+00:01:05,000 --> 00:01:08,000
+where these E's are unitary.
+
+20
+00:01:08,000 --> 00:01:14,000
+For example, identity or X or Z for the bit flip and the phase
+
+21
+00:01:14,000 --> 00:01:15,000
+flip channel.
+
+22
+00:01:15,000 --> 00:01:19,000
+And in those cases, there is some probability
+
+23
+00:01:19,000 --> 00:01:20,000
+attached to them.
+
+24
+00:01:20,000 --> 00:01:21,000
+So there's 1 minus p.
+
+25
+00:01:21,000 --> 00:01:24,000
+
+
+26
+00:01:24,000 --> 00:01:33,000
+So we have 1 minus P times identity or P times x.
+
+27
+00:01:33,000 --> 00:01:35,000
+So you know that these are not unitary operators, but rather
+
+28
+00:01:35,000 --> 00:01:38,000
+shrunken unitary operators at the very least,
+
+29
+00:01:38,000 --> 00:01:43,000
+like P times X. It turns out that all you need to do
+
+30
+00:01:43,000 --> 00:01:47,000
+is to have a set of operators which satisfy
+
+31
+00:01:47,000 --> 00:01:52,000
+the fact that the sum of E sub k, dagger E sub k,
+
+32
+00:01:52,000 --> 00:01:55,000
+is equal to identity.
+
+33
+00:01:55,000 --> 00:01:58,000
+And that you don't need to have them be unitary or so forth,
+
+34
+00:01:58,000 --> 00:02:01,000
+but I'm not going to go through that argument about proof
+
+35
+00:02:01,000 --> 00:02:03,000
+today.
+
+36
+00:02:03,000 --> 00:02:06,000
+Given this channel, here's a theorem.
+
+37
+00:02:06,000 --> 00:02:09,000
+
+
+38
+00:02:09,000 --> 00:02:23,000
+Let C be a quantum code defined by the--
+
+39
+00:02:23,000 --> 00:02:24,000
+remember, for it to be a quantum code,
+
+40
+00:02:24,000 --> 00:02:28,000
+it just has to be a subspace of a Hilbert space.
+
+41
+00:02:28,000 --> 00:02:30,000
+So I have to define what that subspace is, and I'll
+
+42
+00:02:30,000 --> 00:02:33,000
+define that by giving its basis vectors,
+
+43
+00:02:33,000 --> 00:02:39,000
+so as defined by the orthonormal basis.
+
+44
+00:02:39,000 --> 00:02:45,000
+
+
+45
+00:02:45,000 --> 00:02:50,000
+of L.
+
+46
+00:02:50,000 --> 00:03:02,000
+And I claim that there exists a quantum operator recovering
+
+47
+00:03:02,000 --> 00:03:06,000
+So I need two things for there to be error correction.
+
+48
+00:03:06,000 --> 00:03:09,000
+I need to be able to show that we can measure the syndrome,
+
+49
+00:03:09,000 --> 00:03:11,000
+and then give a recovery operator based
+
+50
+00:03:11,000 --> 00:03:13,000
+on that syndrome.
+
+51
+00:03:13,000 --> 00:03:15,000
+And so the recovery operator here
+
+52
+00:03:15,000 --> 00:03:19,000
+will implicitly define the syndrome operator.
+
+53
+00:03:19,000 --> 00:03:25,000
+And I claim that this recovery operator corrects
+
+54
+00:03:25,000 --> 00:03:31,000
+some error, which will be one of these channel errors, E.
+
+55
+00:03:31,000 --> 00:03:38,000
+But only if and only if two conditions are met.
+
+56
+00:03:38,000 --> 00:03:40,000
+The first of these conditions is called
+
+57
+00:03:40,000 --> 00:03:42,000
+the orthogonality condition.
+
+58
+00:03:42,000 --> 00:03:48,000
+
+
+59
+00:03:48,000 --> 00:03:54,000
+And that is that if I have some code where size of L,
+
+60
+00:03:54,000 --> 00:03:58,000
+and some error, E sub j, it should take it
+
+61
+00:03:58,000 --> 00:04:03,000
+to a different state than a different error applied
+
+62
+00:04:03,000 --> 00:04:06,000
+to the same code word.
+
+63
+00:04:06,000 --> 00:04:09,000
+So that this inner product is equal to zero,
+
+64
+00:04:09,000 --> 00:04:16,000
+prof j not equal to k, and for all code words, like so.
+
+65
+00:04:16,000 --> 00:04:18,000
+So the picture behind this is that I
+
+66
+00:04:18,000 --> 00:04:27,000
+have a Hilbert space with some code
+
+67
+00:04:27,000 --> 00:04:31,000
+C, that's a subspace of the Hilbert space.
+
+68
+00:04:31,000 --> 00:04:35,000
+And I want the channel to have error operators that
+
+69
+00:04:35,000 --> 00:04:45,000
+take me to Hilbert spaces which don't overlap each other.
+
+70
+00:04:45,000 --> 00:04:51,000
+So they go apart, like this.
+
+71
+00:04:51,000 --> 00:04:55,000
+C prime and C double prime.
+
+72
+00:04:55,000 --> 00:05:00,000
+But we don't have some operator that goes and intersects
+
+73
+00:05:00,000 --> 00:05:03,000
+Hilbert spaces in some way, that would be no good because we
+
+74
+00:05:03,000 --> 00:05:07,000
+cannot distinguish the errors from each other.
+
+75
+00:05:07,000 --> 00:05:10,000
+And that's fairly simple.
+
+76
+00:05:10,000 --> 00:05:14,000
+The second condition is called the non-deformation condition.
+
+77
+00:05:14,000 --> 00:05:19,000
+
+
+78
+00:05:19,000 --> 00:05:23,000
+And that is that, mathematically,
+
+79
+00:05:23,000 --> 00:05:27,000
+if I have a set--
+
+80
+00:05:27,000 --> 00:05:37,000
+an error E sub k, acting on code words, size of L,
+
+81
+00:05:37,000 --> 00:05:42,000
+this should not distinguish one code word
+
+82
+00:05:42,000 --> 00:05:44,000
+from another code word.
+
+83
+00:05:44,000 --> 00:05:51,000
+So this should be all the same value, let's call this d sub k,
+
+84
+00:05:51,000 --> 00:05:53,000
+for all the code words.
+
+85
+00:05:53,000 --> 00:05:58,000
+That is, if identity did something to a qubit
+
+86
+00:05:58,000 --> 00:06:06,000
+and then an error, like an x error, changes it,
+
+87
+00:06:06,000 --> 00:06:09,000
+by a different amount, I say, because the probabilities
+
+88
+00:06:09,000 --> 00:06:13,000
+are different, then it's going to shrink one vector compared
+
+89
+00:06:13,000 --> 00:06:15,000
+with other vector.
+
+90
+00:06:15,000 --> 00:06:17,000
+So this is going to take a vector space that
+
+91
+00:06:17,000 --> 00:06:21,000
+looks like that into something that
+
+92
+00:06:21,000 --> 00:06:26,000
+might be a shrunken pancake.
+
+93
+00:06:26,000 --> 00:06:29,000
+That's no good because then you don't have a squared up Hilbert
+
+94
+00:06:29,000 --> 00:06:33,000
+space anymore, and so you can't correct it.
+
+95
+00:06:33,000 --> 00:06:35,000
+So these are the two conditions, orthogonality and
+
+96
+00:06:35,000 --> 00:06:37,000
+non-deformation.
+
+97
+00:06:37,000 --> 00:06:44,000
+And let me try to give you the proof of the statement.
+
+98
+00:06:44,000 --> 00:06:45,000
+The reason the proof is interesting
+
+99
+00:06:45,000 --> 00:06:47,000
+is because the proof is constructive.
+
+100
+00:06:47,000 --> 00:06:50,000
+The proof will actually tell you what the recovery operator
+
+101
+00:06:50,000 --> 00:06:52,000
+is going to be.
+
+102
+00:06:52,000 --> 00:06:55,000
+So you'll be able to see how to do it
+
+103
+00:06:55,000 --> 00:06:58,000
+and then you can believe that you can find
+
+104
+00:06:58,000 --> 00:07:00,000
+lots of error correction codes.
+
+105
+00:07:00,000 --> 00:07:04,000
+But what it belies is that in actual practice,
+
+106
+00:07:04,000 --> 00:07:07,000
+the Hilbert space has grown so large so fast
+
+107
+00:07:07,000 --> 00:07:10,000
+that it's actually hard to find good quantum codes just
+
+108
+00:07:10,000 --> 00:07:13,000
+by exhaustively searching for them.
+
+109
+00:07:13,000 --> 00:07:15,000
+Still, let's work through the proof
+
+110
+00:07:15,000 --> 00:07:18,000
+and then maybe you'll also see ways
+
+111
+00:07:18,000 --> 00:07:21,000
+of making them simpler on different kinds of states
+
+112
+00:07:21,000 --> 00:07:23,000
+that have specific patterns.
+
+113
+00:07:23,000 --> 00:07:30,000
+So let's define P as being the trajectory into the cold space.
+
+114
+00:07:30,000 --> 00:07:35,000
+
+
+115
+00:07:35,000 --> 00:07:39,000
+I often use this as a short cut notation for density matrices.
+
+116
+00:07:39,000 --> 00:07:44,000
+It's not an x if this is a [INAUDIBLE]
+
+117
+00:07:44,000 --> 00:07:54,000
+This is the projector onto the cold space C.
+
+118
+00:07:54,000 --> 00:07:58,000
+And I want to note a fact here, which is useful for us
+
+119
+00:07:58,000 --> 00:08:02,000
+algebraically as we go through the proof, that
+
+120
+00:08:02,000 --> 00:08:06,000
+is if I project a given error--
+
+121
+00:08:06,000 --> 00:08:14,000
+two errors, so I'm going to have a state that has error Ej,
+
+122
+00:08:14,000 --> 00:08:17,000
+and I have another state that has error E sub
+
+123
+00:08:17,000 --> 00:08:21,000
+k, if I look at the overlap of this thing,
+
+124
+00:08:21,000 --> 00:08:31,000
+then this is going to be equal to d sub k, delta J k P
+
+125
+00:08:31,000 --> 00:08:34,000
+by virtue of combining these two statements over here.
+
+126
+00:08:34,000 --> 00:08:38,000
+So the delta comes from this, so you only
+
+127
+00:08:38,000 --> 00:08:42,000
+get something that's non-zero when j is not equal to k.
+
+128
+00:08:42,000 --> 00:08:46,000
+And you get the same thing for all code words, D sub k,
+
+129
+00:08:46,000 --> 00:08:49,000
+from the non-deformation condition.
+
+130
+00:08:49,000 --> 00:08:52,000
+So this is a restatement of the theorem
+
+131
+00:08:52,000 --> 00:08:58,000
+over here in one very concise mathematical statement.
+
+132
+00:08:58,000 --> 00:09:03,000
+Also, a beautiful fact from matrix theory
+
+133
+00:09:03,000 --> 00:09:14,000
+known as the polar decomposition gives us
+
+134
+00:09:14,000 --> 00:09:19,000
+a way of taking some strange operator, matrix operator,
+
+135
+00:09:19,000 --> 00:09:22,000
+and decomposing that into a part, which is a rotation,
+
+136
+00:09:22,000 --> 00:09:27,000
+and a part which is like a shrinking part.
+
+137
+00:09:27,000 --> 00:09:30,000
+And so by the polar decomposition
+
+138
+00:09:30,000 --> 00:09:32,000
+of this particular operator, which
+
+139
+00:09:32,000 --> 00:09:36,000
+is E sub k P, will take an error,
+
+140
+00:09:36,000 --> 00:09:39,000
+E sub k is one of the errors in this notation up here,
+
+141
+00:09:39,000 --> 00:09:42,000
+so it might be a bit flip or phase flip, or something else,
+
+142
+00:09:42,000 --> 00:09:44,000
+if Y.
+
+143
+00:09:44,000 --> 00:09:47,000
+I can still describe this as some unitary part
+
+144
+00:09:47,000 --> 00:09:50,000
+and some non-unitary part.
+
+145
+00:09:50,000 --> 00:09:54,000
+I'll define the unitary part as U sub k,
+
+146
+00:09:54,000 --> 00:09:56,000
+and the recipe for the polar decomposition
+
+147
+00:09:56,000 --> 00:09:59,000
+states that I just square this and take its square root.
+
+148
+00:09:59,000 --> 00:10:09,000
+So p E sub k, dagger, E sub k P. But by this restatement
+
+149
+00:10:09,000 --> 00:10:12,000
+of the theorem here, we have that this is just
+
+150
+00:10:12,000 --> 00:10:20,000
+the square root of d sub k times U sub k P.
+
+151
+00:10:20,000 --> 00:10:27,000
+So here the kk gives you a 1 for the delta function,
+
+152
+00:10:27,000 --> 00:10:30,000
+and then the dk moves over like that.
+
+153
+00:10:30,000 --> 00:10:32,000
+So this is the rotation that an arrow causes.
+
+154
+00:10:32,000 --> 00:10:35,000
+This is the shrinkage that the error causes,
+
+155
+00:10:35,000 --> 00:10:39,000
+and we continue to project it into the cold space.
+
+156
+00:10:39,000 --> 00:10:44,000
+So now I can give you the two parts of the theorem
+
+157
+00:10:44,000 --> 00:10:46,000
+by constructing the syndrome measurement.
+
+158
+00:10:46,000 --> 00:10:50,000
+
+
+159
+00:10:50,000 --> 00:10:52,000
+And then the recovery operator.
+
+160
+00:10:52,000 --> 00:10:57,000
+So for the syndrome operation measurement,
+
+161
+00:10:57,000 --> 00:11:02,000
+let me define a projection into a specific rotated code space.
+
+162
+00:11:02,000 --> 00:11:07,000
+So the intuition is, I'm going to take the different color
+
+163
+00:11:07,000 --> 00:11:10,000
+spaces over here that are orthogonal to each other
+
+164
+00:11:10,000 --> 00:11:12,000
+because of this first condition, and I'm
+
+165
+00:11:12,000 --> 00:11:15,000
+going to rotate them all back into the same place.
+
+166
+00:11:15,000 --> 00:11:17,000
+So I take this one, I rotate it here,
+
+167
+00:11:17,000 --> 00:11:20,000
+I take another error operator version, I rotate it over here,
+
+168
+00:11:20,000 --> 00:11:20,000
+and so forth.
+
+169
+00:11:20,000 --> 00:11:23,000
+So they all fall on top of each other.
+
+170
+00:11:23,000 --> 00:11:29,000
+So that's U sub k P U sub k dagger.
+
+171
+00:11:29,000 --> 00:11:33,000
+This is the original cold space, and then this
+
+172
+00:11:33,000 --> 00:11:36,000
+is rotating it by the unitary rotation
+
+173
+00:11:36,000 --> 00:11:40,000
+part of each one of the errors.
+
+174
+00:11:40,000 --> 00:11:42,000
+And by plugging that in, I can rewrite
+
+175
+00:11:42,000 --> 00:11:45,000
+this in two different forms.
+
+176
+00:11:45,000 --> 00:11:50,000
+E sub k P over d sub k square root.
+
+177
+00:11:50,000 --> 00:11:53,000
+So this is taking P U sub k dagger,
+
+178
+00:11:53,000 --> 00:11:58,000
+so it's taking the U sub k P part over here.
+
+179
+00:11:58,000 --> 00:12:03,000
+Use sub k dagger, or I can take the second half of this
+
+180
+00:12:03,000 --> 00:12:08,000
+and it gives me U sub k P E sub k dagger
+
+181
+00:12:08,000 --> 00:12:10,000
+divided by d sub k square root.
+
+182
+00:12:10,000 --> 00:12:24,000
+
+
+183
+00:12:24,000 --> 00:12:25,000
+OK.
+
+184
+00:12:25,000 --> 00:12:36,000
+Now, by this statement up here, which I'll call star,
+
+185
+00:12:36,000 --> 00:12:41,000
+the P sub k are orthogonal.
+
+186
+00:12:41,000 --> 00:12:48,000
+
+
+187
+00:12:48,000 --> 00:12:52,000
+By this I mean that for all j not equal to k.
+
+188
+00:12:52,000 --> 00:12:58,000
+So two different errors instead of just the same error, P sub j
+
+189
+00:12:58,000 --> 00:13:01,000
+times P sub k is proportional to--
+
+190
+00:13:01,000 --> 00:13:05,000
+let's now just multiply this out together.
+
+191
+00:13:05,000 --> 00:13:14,000
+That's U sub k P E sub k, dagger, that's this term here,
+
+192
+00:13:14,000 --> 00:13:17,000
+taken with the U on the left-hand side
+
+193
+00:13:17,000 --> 00:13:19,000
+on this expression.
+
+194
+00:13:19,000 --> 00:13:31,000
+And then we'll take the j part over here, e sub j, P U sub j.
+
+195
+00:13:31,000 --> 00:13:37,000
+And then there's all over a d sub k.
+
+196
+00:13:37,000 --> 00:13:40,000
+But now we have from here that this
+
+197
+00:13:40,000 --> 00:13:45,000
+is orthogonal to each other by the same end of the theorem.
+
+198
+00:13:45,000 --> 00:13:47,000
+So this is equal to 0.
+
+199
+00:13:47,000 --> 00:13:57,000
+So the syndrome measurement is to just measure
+
+200
+00:13:57,000 --> 00:14:05,000
+P sub k and you obtain k.
+
+201
+00:14:05,000 --> 00:14:07,000
+k is just the syndrome operator.
+
+202
+00:14:07,000 --> 00:14:10,000
+I think we're almost done.
+
+203
+00:14:10,000 --> 00:14:21,000
+The recovery operator is going to be just U sub k dagger.
+
+204
+00:14:21,000 --> 00:14:25,000
+We take the unitary part of the error and you rotate it back.
+
+205
+00:14:25,000 --> 00:14:31,000
+And I claimed that this will fix what you want, fix the state.
+
+206
+00:14:31,000 --> 00:14:37,000
+So the recovery operator applied to some impedance matrix,
+
+207
+00:14:37,000 --> 00:14:45,000
+or be the sum over k of U sub k P sub k ro P sub k.
+
+208
+00:14:45,000 --> 00:14:47,000
+This is the syndrome measurement,
+
+209
+00:14:47,000 --> 00:14:49,000
+this is the unitary operator that you
+
+210
+00:14:49,000 --> 00:14:54,000
+apply based on the syndrome measurement, U sub k dagger.
+
+211
+00:14:54,000 --> 00:14:56,000
+And I'm going to work out this expression
+
+212
+00:14:56,000 --> 00:15:13,000
+and show that that's going to give you the result.
+
+213
+00:15:13,000 --> 00:15:14,000
+All I need is two lines of algebra.
+
+214
+00:15:14,000 --> 00:15:19,000
+
+
+215
+00:15:19,000 --> 00:15:23,000
+For a state that's a code word state,
+
+216
+00:15:23,000 --> 00:15:30,000
+then U sub k dagger P sub k E j side--
+
+217
+00:15:30,000 --> 00:15:32,000
+so an error applied to the code word state,
+
+218
+00:15:32,000 --> 00:15:38,000
+then projected and then rotated, is--
+
+219
+00:15:38,000 --> 00:15:40,000
+if you work out the algebra, the square root of D
+
+220
+00:15:40,000 --> 00:15:46,000
+sub k, delta j k times the original state.
+
+221
+00:15:46,000 --> 00:15:50,000
+And so if you plug this back into here,
+
+222
+00:15:50,000 --> 00:15:57,000
+you'll find that this is equal to the sum--
+
+223
+00:15:57,000 --> 00:16:00,000
+I'm just going to jump to the end here.
+
+224
+00:16:00,000 --> 00:16:11,000
+d sub k delta jk psi, psi.
+
+225
+00:16:11,000 --> 00:16:14,000
+The delta, I already sum.
+
+226
+00:16:14,000 --> 00:16:16,000
+
+
+227
+00:16:16,000 --> 00:16:18,000
+And it goes away.
+
+228
+00:16:18,000 --> 00:16:24,000
+Now, this is original state, but it shrunk by a little bit.
+
+229
+00:16:24,000 --> 00:16:30,000
+But this term is equal to 1 because these operators that we
+
+230
+00:16:30,000 --> 00:16:39,000
+had, sum over k, E sub k, dagger E sub k, is equal to identity.
+
+231
+00:16:39,000 --> 00:16:45,000
+So this is equal to the state the [INAUDIBLE] So that's
+
+232
+00:16:45,000 --> 00:16:47,000
+
+

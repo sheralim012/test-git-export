@@ -1,0 +1,320 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:01,000
+What does that look like if you have
+
+2
+00:00:01,000 --> 00:00:04,000
+three real numbers whose sum of their squares
+
+3
+00:00:04,000 --> 00:00:07,000
+adds up to at most 1.
+
+4
+00:00:07,000 --> 00:00:10,000
+That looks like the unit ball.
+
+5
+00:00:10,000 --> 00:00:13,000
+So we have a sphere.
+
+6
+00:00:13,000 --> 00:00:16,000
+
+
+7
+00:00:16,000 --> 00:00:20,000
+And at the origin is at 0.
+
+8
+00:00:20,000 --> 00:00:22,000
+And everything inside of this sphere--
+
+9
+00:00:22,000 --> 00:00:26,000
+
+
+10
+00:00:26,000 --> 00:00:29,000
+corresponds to a valid density matrix.
+
+11
+00:00:29,000 --> 00:00:30,000
+This is something called--
+
+12
+00:00:30,000 --> 00:00:33,000
+
+
+13
+00:00:33,000 --> 00:00:35,000
+the bloch ball.
+
+14
+00:00:35,000 --> 00:00:37,000
+And you may have previously come across the bloch sphere--
+
+15
+00:00:37,000 --> 00:00:47,000
+
+
+16
+00:00:47,000 --> 00:00:50,000
+which corresponds to the states where the norm of a is 1.
+
+17
+00:00:50,000 --> 00:00:52,000
+So the surface of the ball--
+
+18
+00:00:52,000 --> 00:00:54,000
+so the ball is all point for a has norm less than
+
+19
+00:00:54,000 --> 00:00:55,000
+or equal to 1.
+
+20
+00:00:55,000 --> 00:00:57,000
+Your distance to the origin is at most 1.
+
+21
+00:00:57,000 --> 00:00:59,000
+The sphere is where your distance to the origin
+
+22
+00:00:59,000 --> 00:01:01,000
+is exactly 1.
+
+23
+00:01:01,000 --> 00:01:05,000
+So the bloch sphere corresponds to these points.
+
+24
+00:01:05,000 --> 00:01:09,000
+And here when you plug in at the norm of a is 1,
+
+25
+00:01:09,000 --> 00:01:12,000
+you get the d eigenvalues are 0 and 1.
+
+26
+00:01:12,000 --> 00:01:23,000
+So these correspond-- to pure states.
+
+27
+00:01:23,000 --> 00:01:27,000
+For example, if you have I plus or minus--
+
+28
+00:01:27,000 --> 00:01:30,000
+
+
+29
+00:01:30,000 --> 00:01:33,000
+sigma 3 over 2.
+
+30
+00:01:33,000 --> 00:01:40,000
+Then this is 1--
+
+31
+00:01:40,000 --> 00:01:47,000
+1 plus or minus 1 minus 1 over 2.
+
+32
+00:01:47,000 --> 00:01:48,000
+And if you have the plus branch--
+
+33
+00:01:48,000 --> 00:01:51,000
+
+
+34
+00:01:51,000 --> 00:01:54,000
+this gives you a 1 in the upper left corner.
+
+35
+00:01:54,000 --> 00:01:57,000
+And the minus branch it's a 1 in the lower right corner.
+
+36
+00:01:57,000 --> 00:02:01,000
+So it's either the projector onto 0--
+
+37
+00:02:01,000 --> 00:02:04,000
+
+
+38
+00:02:04,000 --> 00:02:06,000
+or onto 1.
+
+39
+00:02:06,000 --> 00:02:10,000
+And if you remember in the bloch sphere,
+
+40
+00:02:10,000 --> 00:02:13,000
+0 is often the north pole--
+
+41
+00:02:13,000 --> 00:02:15,000
+1 is the south pole.
+
+42
+00:02:15,000 --> 00:02:18,000
+And that corresponds to what's happening geometrically here.
+
+43
+00:02:18,000 --> 00:02:22,000
+Because this plus or minus sigma 3 corresponds to the vectors
+
+44
+00:02:22,000 --> 00:02:24,000
+0, 0 plus or minus 1.
+
+45
+00:02:24,000 --> 00:02:26,000
+In other words, that unit vector pointing
+
+46
+00:02:26,000 --> 00:02:30,000
+at either up in the z direction or down in the z direction.
+
+47
+00:02:30,000 --> 00:02:34,000
+And you can do similar things in the x and y directions.
+
+48
+00:02:34,000 --> 00:02:37,000
+So you can take a unit vector pointing the x direction.
+
+49
+00:02:37,000 --> 00:02:39,000
+You get what's called the plus state which
+
+50
+00:02:39,000 --> 00:02:44,000
+is 0 plus 1 over root 2.
+
+51
+00:02:44,000 --> 00:02:51,000
+This way is the minus state to 0 minus 1 over root 2.
+
+52
+00:02:51,000 --> 00:02:53,000
+And these give you back all the familiar points
+
+53
+00:02:53,000 --> 00:02:55,000
+in the bloch sphere.
+
+54
+00:02:55,000 --> 00:02:57,000
+But you also get points in the interiors.
+
+55
+00:02:57,000 --> 00:03:02,000
+So this is how densely matrices generalize pure states.
+
+56
+00:03:02,000 --> 00:03:06,000
+One particular point that you get is if a is 0, right.
+
+57
+00:03:06,000 --> 00:03:10,000
+So a is anything less than or equal to 1-- could be 0.
+
+58
+00:03:10,000 --> 00:03:15,000
+And this corresponds to the center of the ball, the origin,
+
+59
+00:03:15,000 --> 00:03:16,000
+where there's no--
+
+60
+00:03:16,000 --> 00:03:18,000
+the things multiplied by the polys are just 0.
+
+61
+00:03:18,000 --> 00:03:21,000
+You're just left with identity over 2.
+
+62
+00:03:21,000 --> 00:03:22,000
+And so this is sometimes called--
+
+63
+00:03:22,000 --> 00:03:26,000
+
+
+64
+00:03:26,000 --> 00:03:31,000
+the maximally-- mixed state.
+
+65
+00:03:31,000 --> 00:03:45,000
+
+
+66
+00:03:45,000 --> 00:03:48,000
+And then we can interpolate between this
+
+67
+00:03:48,000 --> 00:03:49,000
+and any other state.
+
+68
+00:03:49,000 --> 00:03:51,000
+So along this line from the maximally mixed state to the 0
+
+69
+00:03:51,000 --> 00:03:53,000
+state, you can have a state where
+
+70
+00:03:53,000 --> 00:03:55,000
+there's some probability of being 0
+
+71
+00:03:55,000 --> 00:03:57,000
+and some probability of being 1.
+
+72
+00:03:57,000 --> 00:04:00,000
+And the maximally mixed state is the perfectly balanced point
+
+73
+00:04:00,000 --> 00:04:01,000
+where you could think of it as you
+
+74
+00:04:01,000 --> 00:04:02,000
+have a half probability of being 0
+
+75
+00:04:02,000 --> 00:04:04,000
+and half probability of being 1.
+
+76
+00:04:04,000 --> 00:04:06,000
+Or half probability of being plus--
+
+77
+00:04:06,000 --> 00:04:07,000
+half probability of being minus.
+
+78
+00:04:07,000 --> 00:04:12,000
+Or you can choose any other direction that you like.
+
+79
+00:04:12,000 --> 00:04:12,000
+
+

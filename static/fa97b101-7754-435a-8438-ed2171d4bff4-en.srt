@@ -1,0 +1,504 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:02,000
+So now I want to explain how we come up with this
+
+2
+00:00:02,000 --> 00:00:04,000
+and give you a formula for it.
+
+3
+00:00:04,000 --> 00:00:11,000
+Measure trace on a.
+
+4
+00:00:11,000 --> 00:00:17,000
+Measure a in-- well, it doesn't matter which basis
+
+5
+00:00:17,000 --> 00:00:18,000
+you measure a in.
+
+6
+00:00:18,000 --> 00:00:20,000
+But let's say canonical basis.
+
+7
+00:00:20,000 --> 00:00:24,000
+
+
+8
+00:00:24,000 --> 00:00:32,000
+And you get what you get when you measure
+
+9
+00:00:32,000 --> 00:00:36,000
+a in a canonical basis as you get probability
+
+10
+00:00:36,000 --> 00:00:41,000
+distribution on pure states.
+
+11
+00:00:41,000 --> 00:00:45,000
+
+
+12
+00:00:45,000 --> 00:00:51,000
+So here, I suppose I should have said we're assuming
+
+13
+00:00:51,000 --> 00:00:54,000
+you start with a pure state.
+
+14
+00:00:54,000 --> 00:00:57,000
+When you measure a in the canonical basis,
+
+15
+00:00:57,000 --> 00:00:59,000
+you get a probability distribution on pure states.
+
+16
+00:00:59,000 --> 00:01:00,000
+And this probability distribution
+
+17
+00:01:00,000 --> 00:01:05,000
+corresponds to a density matrix, which is exactly taking
+
+18
+00:01:05,000 --> 00:01:06,000
+the trace of the first qubit.
+
+19
+00:01:06,000 --> 00:01:19,000
+
+
+20
+00:01:19,000 --> 00:01:24,000
+So we can write psi sub ab as equal
+
+21
+00:01:24,000 --> 00:01:32,000
+to summation alpha i, e sub i.
+
+22
+00:01:32,000 --> 00:01:33,000
+This is the ith--
+
+23
+00:01:33,000 --> 00:01:39,000
+
+
+24
+00:01:39,000 --> 00:01:43,000
+this is the ith basis element, w sub i.
+
+25
+00:01:43,000 --> 00:01:48,000
+And this is whatever we get when we write psi ab like this.
+
+26
+00:01:48,000 --> 00:01:49,000
+Yeah?
+
+27
+00:01:49,000 --> 00:01:53,000
+So when you get these measurements,
+
+28
+00:01:53,000 --> 00:01:56,000
+you get a probability distribution on pure states.
+
+29
+00:01:56,000 --> 00:01:58,000
+And this corresponds to a diagonal density matrix, right?
+
+30
+00:01:58,000 --> 00:02:01,000
+
+
+31
+00:02:01,000 --> 00:02:01,000
+No.
+
+32
+00:02:01,000 --> 00:02:05,000
+
+
+33
+00:02:05,000 --> 00:02:08,000
+Maybe I should do a better example.
+
+34
+00:02:08,000 --> 00:02:10,000
+OK, let's make up an example.
+
+35
+00:02:10,000 --> 00:02:14,000
+
+
+36
+00:02:14,000 --> 00:02:22,000
+Let's say 1 over root 3, 0, 0 plus 0, 1 plus 1, 1.
+
+37
+00:02:22,000 --> 00:02:26,000
+
+
+38
+00:02:26,000 --> 00:02:28,000
+OK, measure first qubit.
+
+39
+00:02:28,000 --> 00:02:35,000
+
+
+40
+00:02:35,000 --> 00:02:40,000
+The measurement outcome-- well, we
+
+41
+00:02:40,000 --> 00:02:45,000
+get 0 with probability of 2/3.
+
+42
+00:02:45,000 --> 00:02:51,000
+And the residual state, if we get 0, is just 1
+
+43
+00:02:51,000 --> 00:02:54,000
+over root 2, 0 plus 1.
+
+44
+00:02:54,000 --> 00:03:03,000
+
+
+45
+00:03:03,000 --> 00:03:11,000
+And measure-- we get an outcome of 1 with a probability of 1/3.
+
+46
+00:03:11,000 --> 00:03:14,000
+And the state is just one in that case.
+
+47
+00:03:14,000 --> 00:03:36,000
+
+
+48
+00:03:36,000 --> 00:03:50,000
+So the density matrix is 2/3 times 1 over root 2, 0
+
+49
+00:03:50,000 --> 00:04:09,000
+plus 1, 0 plus 1 plus 1/3, 1, 1, which equals 2/3, 1, 1, 1, 1--
+
+50
+00:04:09,000 --> 00:04:11,000
+except I'd better put a 1/2 here--
+
+51
+00:04:11,000 --> 00:04:19,000
+
+
+52
+00:04:19,000 --> 00:04:26,000
+plus 1/3, 0, 0, 0, 1 is equal to--
+
+53
+00:04:26,000 --> 00:04:28,000
+let's see.
+
+54
+00:04:28,000 --> 00:04:33,000
+So that's 1/3, 1, 1, 2/3.
+
+55
+00:04:33,000 --> 00:04:38,000
+
+
+56
+00:04:38,000 --> 00:04:41,000
+Yeah, 1/3, 1/3, 2/3.
+
+57
+00:04:41,000 --> 00:04:45,000
+
+
+58
+00:04:45,000 --> 00:04:46,000
+OK.
+
+59
+00:04:46,000 --> 00:04:52,000
+
+
+60
+00:04:52,000 --> 00:05:02,000
+Now the density matrix of that thing is 1/3, 1, 1, 0, 1, 1, 1,
+
+61
+00:05:02,000 --> 00:05:10,000
+0, 1, 0, 0, 0, 0, 1, 1, 0, 1.
+
+62
+00:05:10,000 --> 00:05:21,000
+And we're tracing out the first qubit, which means
+
+63
+00:05:21,000 --> 00:05:29,000
+we need to add this plus this.
+
+64
+00:05:29,000 --> 00:05:38,000
+Trace A, you get 1, 1, 1, 2 because what you're doing
+
+65
+00:05:38,000 --> 00:05:43,000
+is you're just adding this matrix and this matrix.
+
+66
+00:05:43,000 --> 00:05:45,000
+
+
+67
+00:05:45,000 --> 00:05:51,000
+And let's put a 1/3 in for normalization.
+
+68
+00:05:51,000 --> 00:05:54,000
+So this is equal to that.
+
+69
+00:05:54,000 --> 00:05:55,000
+Yeah?
+
+70
+00:05:55,000 --> 00:05:57,000
+So when you say you're getting a probability
+
+71
+00:05:57,000 --> 00:06:01,000
+distribution on pure states, you mean pure states of A.
+
+72
+00:06:01,000 --> 00:06:05,000
+Well, if you trace out A, you're getting pure states of B.
+
+73
+00:06:05,000 --> 00:06:07,000
+But, yeah.
+
+74
+00:06:07,000 --> 00:06:09,000
+If you measure A, you get a probability distribution
+
+75
+00:06:09,000 --> 00:06:20,000
+on pure states of B because here we measured the first qubit.
+
+76
+00:06:20,000 --> 00:06:27,000
+And if we measured the first qubit as 0, we got this on B.
+
+77
+00:06:27,000 --> 00:06:30,000
+And if we measure the first qubit as 1, we got this on B.
+
+78
+00:06:30,000 --> 00:06:33,000
+But the top one's not a pure state of B.
+
+79
+00:06:33,000 --> 00:06:37,000
+No, a pure state of AB.
+
+80
+00:06:37,000 --> 00:06:41,000
+So you have a pure state of a joint system.
+
+81
+00:06:41,000 --> 00:06:44,000
+You measure one of the systems.
+
+82
+00:06:44,000 --> 00:06:46,000
+And this gives you a probability distribution
+
+83
+00:06:46,000 --> 00:06:49,000
+on the states of the other system.
+
+84
+00:06:49,000 --> 00:06:53,000
+And these pure states turn into a density matrix
+
+85
+00:06:53,000 --> 00:06:57,000
+in the way we make density matrices out
+
+86
+00:06:57,000 --> 00:07:00,000
+of probabilistic ensembles of pure states.
+
+87
+00:07:00,000 --> 00:07:06,000
+But they also correspond to this partial trace operation.
+
+88
+00:07:06,000 --> 00:07:11,000
+And here, I'm not going to trace B would
+
+89
+00:07:11,000 --> 00:07:15,000
+be equal to trace of this guy.
+
+90
+00:07:15,000 --> 00:07:16,000
+That's 2.
+
+91
+00:07:16,000 --> 00:07:25,000
+Trace of that guy, that's 1, 1, 1 with a 1/3 in front of it.
+
+92
+00:07:25,000 --> 00:07:33,000
+And if you look at that state, if you
+
+93
+00:07:33,000 --> 00:07:39,000
+interchange 1 and 0 and the two qubits, you get the same thing.
+
+94
+00:07:39,000 --> 00:07:43,000
+
+
+95
+00:07:43,000 --> 00:07:48,000
+So if you start with this and interchange the two qubits,
+
+96
+00:07:48,000 --> 00:07:50,000
+you get this.
+
+97
+00:07:50,000 --> 00:07:59,000
+So that would give you exactly the same calculation
+
+98
+00:07:59,000 --> 00:08:04,000
+for this with 0 and 1 changed.
+
+99
+00:08:04,000 --> 00:08:16,000
+
+
+100
+00:08:16,000 --> 00:08:20,000
+So this is what happens.
+
+101
+00:08:20,000 --> 00:08:22,000
+So psi sub A is equal to--
+
+102
+00:08:22,000 --> 00:08:28,000
+you can always write a state of two systems
+
+103
+00:08:28,000 --> 00:08:35,000
+as a probabilistic superimposition on ei,
+
+104
+00:08:35,000 --> 00:08:41,000
+the canonical basis in the one times some vector in the other.
+
+105
+00:08:41,000 --> 00:08:55,000
+And that's because that is equal to 1 over root 3, 0, 0 plus 1
+
+106
+00:08:55,000 --> 00:09:07,000
+over, I guess, root 2 over 3, 0 over root 2 plus 1 over root 3,
+
+107
+00:09:07,000 --> 00:09:11,000
+1 times 1.
+
+108
+00:09:11,000 --> 00:09:18,000
+So 0 and 1 are these e sub i.
+
+109
+00:09:18,000 --> 00:09:21,000
+And this and this are the w sub i.
+
+110
+00:09:21,000 --> 00:09:24,000
+And the probabilities are these things squared.
+
+111
+00:09:24,000 --> 00:09:26,000
+And those are the alpha i.
+
+112
+00:09:26,000 --> 00:09:30,000
+
+
+113
+00:09:30,000 --> 00:09:45,000
+So trace A on psi AB is equal to some alpha i squared w, i,
+
+114
+00:09:45,000 --> 00:09:46,000
+w, i.
+
+115
+00:09:46,000 --> 00:09:50,000
+
+
+116
+00:09:50,000 --> 00:09:58,000
+And w, i is equal to I guess partial inner product of e
+
+117
+00:09:58,000 --> 00:10:03,000
+sub i on A with psi AB.
+
+118
+00:10:03,000 --> 00:10:03,000
+Oh, wait.
+
+119
+00:10:03,000 --> 00:10:10,000
+No, I want to say alpha i, wi is this inner product
+
+120
+00:10:10,000 --> 00:10:14,000
+because it's not normalized.
+
+121
+00:10:14,000 --> 00:10:19,000
+So rho is going to be equal to summation
+
+122
+00:10:19,000 --> 00:10:22,000
+alpha i squared wi, wi.
+
+123
+00:10:22,000 --> 00:10:26,000
+I want to say this is summation over i,
+
+124
+00:10:26,000 --> 00:10:40,000
+e sub i, bra e sub i, ket psi bra psi ket e sub i.
+
+125
+00:10:40,000 --> 00:10:40,000
+
+

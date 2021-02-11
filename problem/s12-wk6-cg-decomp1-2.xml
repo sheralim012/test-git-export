@@ -1,0 +1,70 @@
+<problem linenum="518" tex_filename="./week4_5_ps2b.tex" attempts="10" display_name="Decomposition exercise: 2-qubit Clifford circuit II" max_attempts="10">
+  <script>
+import qpython4
+qpython4.define_qpython4_globals(globals())
+
+
+</script>
+  <p>
+Give a Clifford circuit for [mathjaxinline]V[/mathjaxinline], such that for [mathjaxinline]U_2 = V U_1[/mathjaxinline], </p>
+  <table id="a0000000018" class="eqnarray" cellspacing="0" cellpadding="7" width="100%" style="table-layout:auto">
+    <tr id="a0000000019">
+      <td style="width:40%; border:none"> </td>
+      <td style="vertical-align:middle;                                    text-align:right; border:none">
+	    [mathjaxinline]\displaystyle U_2 {\tt IX}\,  U_2^\dagger[/mathjaxinline]
+        </td>
+      <td style="vertical-align:middle;                                    text-align:center; border:none">
+	    [mathjaxinline]\displaystyle =[/mathjaxinline]
+        </td>
+      <td style="vertical-align:middle;                                    text-align:left; border:none">
+	    [mathjaxinline]\displaystyle  {\tt IX}[/mathjaxinline]
+        </td>
+      <td style="width:40%; border:none"> </td>
+      <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.14)</td>
+    </tr>
+    <tr id="a0000000020">
+      <td style="width:40%; border:none"> </td>
+      <td style="vertical-align:middle;                                    text-align:right; border:none">
+	    [mathjaxinline]\displaystyle U_2 {\tt IZ}\,  U_2^\dagger[/mathjaxinline]
+        </td>
+      <td style="vertical-align:middle;                                    text-align:center; border:none">
+	    [mathjaxinline]\displaystyle =[/mathjaxinline]
+        </td>
+      <td style="vertical-align:middle;                                    text-align:left; border:none">
+	    [mathjaxinline]\displaystyle  {\tt IZ} \, .[/mathjaxinline]
+        </td>
+      <td style="width:40%; border:none"> </td>
+      <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.15)</td>
+    </tr>
+  </table>
+  <p>
+Enter your answer as a list of gates, in the form <big class="xlarge"><tt class="tt">[H(0),SWAP(0,1)]</tt></big>. You may use CNOT, SWAP, [mathjaxinline]H[/mathjaxinline], and [mathjaxinline]S[/mathjaxinline]: </p>
+  <p>
+    <p style="display:inline">[mathjaxinline]V =[/mathjaxinline]</p>
+    <span>
+      <customresponse cfn="cfn_wrap_1d86fc26e8" inline="1" expect="$expect_wrap_1d86fc26e8" options="nqubits=2;precirc=[SWAP(1,0),S(0), H(0)];pset='-YY,IX:ZI,IZ'" cfn_extra_args="options">
+        <textline size="50" correct_answer="$ans_1d86fc26e8_1" inline="1"/>
+      </customresponse>
+      <script type="text/python" system_path="python_lib">
+
+import subtext2
+wrap_1d86fc26e8 = subtext2.Subtext(debug=True,sanitize_allow_lists=False)
+ans_1d86fc26e8_1 = wrap_1d86fc26e8.answer('''See solution''')
+expect_wrap_1d86fc26e8 = wrap_1d86fc26e8.answer('''See solution''')
+
+@wrap_1d86fc26e8.grader
+def cfn_wrap_1d86fc26e8(expect, ans, **kwargs):
+    return check_clifford_paulis(expect, ans, **kwargs)
+
+</script>
+    </span>
+  </p>
+  <p>
+    <solution>
+      <p>
+        <b>Solution:</b>
+      </p>
+      <span>An acceptable answer is <tt class="tt">[H(0), S(1), S(1), S(1), CNOT(0,1), S(1)]</tt>. This maps <table id="a0000000021" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto"><tr><td class="equation" style="width:80%; border:none">[mathjax]{\tt [YZ, IX, ZX, XX]} \longrightarrow {\tt [IX, IZ, ZI, XI]} \, .[/mathjax]</td><td class="eqnnum" style="width:20%; border:none;text-align:right">(1.16)</td></tr></table></span>
+    </solution>
+  </p>
+</problem>

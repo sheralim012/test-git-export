@@ -1,0 +1,19 @@
+<sequential display_name="Lectures M1.2: Quantum operations" due="&quot;2918-06-15T23:57:00+00:00&quot;" format="Concept" graceperiod="18000 seconds" graded="true" showanswer="closed" start="&quot;2017-09-06T00:00:00+00:00&quot;" attempts="10" tex_filename="./week2_lectures2.tex" linenum="3" refnum="1">
+  <vertical url_name="Overview_-_Three_representations_of_quantum_operations"/>
+  <vertical url_name="Steinspring_representation_of_quantum_operations"/>
+  <vertical url_name="The_physics_of_non-unitary_dynamics_in_a_unitary_world"/>
+  <vertical url_name="Quantum_operations_as_a_composition_of_isometries_and_partial_traces"/>
+  <vertical url_name="Quantum_operations_form_1_isometry___partial_trace"/>
+  <vertical url_name="CQ_Isometries_and_quantum_operations"/>
+  <vertical url_name="Composition_of_quantum_operations"/>
+  <vertical url_name="Quantum_opertions_form_2_Kraus_operator_picture"/>
+  <vertical url_name="Equivalence_of_forms_of_quantum_operations"/>
+  <vertical url_name="Examples_of_quantum_operations"/>
+  <vertical url_name="CQ_Kraus_operator_form_of_quantum_operations"/>
+  <vertical url_name="Axiomatic_definition_of_quantum_operations"/>
+  <vertical url_name="Trace-preserving_completely_positive_maps____Kraus_rep_trace_preservation"/>
+  <vertical url_name="Trace-preserving_completely_positive_maps____Kraus_rep_complete_positivity"/>
+  <vertical url_name="Measurements_as_quantum_operations"/>
+  <vertical url_name="Generalized_measurements_-_example_non-demolition_measurements"/>
+  <vertical url_name="CQ_Measurements_and_quantum_operations"/>
+</sequential>

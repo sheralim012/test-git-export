@@ -1,0 +1,44 @@
+<problem linenum="577" tex_filename="./week2_ps2.tex" attempts="10" display_name="QC2. Quantum channels (2 of 4)" max_attempts="10">
+  <p>
+When we write a channel in the Stinespring representation as [mathjaxinline]\mathcal{N}(\rho ) = {\rm Tr}_ E V\rho V^\dagger[/mathjaxinline], the outcome is the same if we perform a further isometry on system [mathjaxinline]E[/mathjaxinline] before tracing it out. What effect does this have on the Kraus operators? We will see that in general they change, and this will lead us to the conclusion that the Kraus representation of a channel is not unique. </p>
+  <p>
+Suppose [mathjaxinline]\dim E = d[/mathjaxinline]. Let [mathjaxinline]W[/mathjaxinline] be an isometry from [mathjaxinline]L(\mathbb {C}^{d})[/mathjaxinline] to [mathjaxinline]L(\mathbb {C}^{d'})[/mathjaxinline] mapping system [mathjaxinline]E[/mathjaxinline] to a [mathjaxinline]d'[/mathjaxinline] dimensional system [mathjaxinline]E'[/mathjaxinline] (with orthonormal basis [mathjaxinline]\{ |{1'}\rangle , \ldots , |{d'}\rangle \}[/mathjaxinline], for [mathjaxinline]d'\geq d[/mathjaxinline]). If we apply this after [mathjaxinline]V[/mathjaxinline] then we obtain the composed isometry [mathjaxinline](I_ B \otimes W)V[/mathjaxinline]. This yields a new set of Kraus operators [mathjaxinline]\{ Y_{j}\} _{j=1}^{d'}[/mathjaxinline] given by </p>
+  <span>
+    <customresponse>
+      <drag_and_drop_input img="/static/images/ps1b_qchan2/ps1b_qchan2_dnd.png" target_outline="false" one_per_target="true" no_labels="true" label_bg_color="rgb(222, 139, 238)">
+        <draggable id="ione" icon="/static/images/ps1b_qchan2/ps1b_qchan2_dnd_label1.png" can_reuse="true"/>
+        <draggable id="jone" icon="/static/images/ps1b_qchan2/ps1b_qchan2_dnd_label2.png" can_reuse="true"/>
+        <draggable id="d" icon="/static/images/ps1b_qchan2/ps1b_qchan2_dnd_label3.png" can_reuse="true"/>
+        <draggable id="dx" icon="/static/images/ps1b_qchan2/ps1b_qchan2_dnd_label4.png" can_reuse="true"/>
+        <draggable id="W" icon="/static/images/ps1b_qchan2/ps1b_qchan2_dnd_label5.png" can_reuse="true"/>
+        <draggable id="i" icon="/static/images/ps1b_qchan2/ps1b_qchan2_dnd_label6.png" can_reuse="true"/>
+        <draggable id="j" icon="/static/images/ps1b_qchan2/ps1b_qchan2_dnd_label7.png" can_reuse="true"/>
+        <draggable id="V" icon="/static/images/ps1b_qchan2/ps1b_qchan2_dnd_label8.png" can_reuse="true"/>
+        <target id="1" x="127" y="156" w="134" h="76"/>
+        <target id="2" x="127" y="1" w="134" h="76"/>
+        <target id="3" x="287" y="69" w="135" h="76"/>
+        <target id="5" x="443" y="123" w="134" h="76"/>
+        <target id="4" x="605" y="123" w="134" h="76"/>
+        <target id="6" x="127" y="268" w="134" h="76"/>
+        <target id="9" x="282" y="322" w="135" h="76"/>
+      </drag_and_drop_input>
+      <answer>
+caset = [{'ione': '1'}, {'d': '2'}, {'W': '3'}, {'j': '5'}, {'i': '4'}, {'V': '6'}, {'i': '9'}]
+# custom checking for reusable labels - assumes all targets get some label
+import json
+ans = json.loads(submission[0])
+correct = ['correct']
+for rule in caset:
+    if rule not in ans:
+        correct = ['incorrect']
+        break
+
+# use this for debugging
+# messages = ['ans=%s' % submission[0]]
+</answer>
+    </customresponse>
+    <solution>
+      <img src="/static/images/ps1b_qchan2/ps1b_qchan2_dnd_sol_M10CWX.png"/>
+    </solution>
+  </span>
+</problem>

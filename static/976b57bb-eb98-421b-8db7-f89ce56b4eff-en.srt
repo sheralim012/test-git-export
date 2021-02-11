@@ -1,0 +1,308 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:01,000
+I made this sound a little pessimistic
+
+2
+00:00:01,000 --> 00:00:05,000
+about it makes our life worse against the other type
+
+3
+00:00:05,000 --> 00:00:12,000
+of errors, because you could say this one improves or reduces
+
+4
+00:00:12,000 --> 00:00:15,000
+the rate of x errors and increases the rate of z errors.
+
+5
+00:00:15,000 --> 00:00:18,000
+But in the large range of parameters,
+
+6
+00:00:18,000 --> 00:00:21,000
+the improvement is worse than the penalty.
+
+7
+00:00:21,000 --> 00:00:27,000
+So if the error rate is P--
+
+8
+00:00:27,000 --> 00:00:30,000
+I know we're usually talking about worst case errors,
+
+9
+00:00:30,000 --> 00:00:32,000
+but I think thinking about it probabilistically
+
+10
+00:00:32,000 --> 00:00:34,000
+gives you the idea--
+
+11
+00:00:34,000 --> 00:00:46,000
+then the probability of a logical error--
+
+12
+00:00:46,000 --> 00:00:50,000
+
+
+13
+00:00:50,000 --> 00:00:58,000
+so it's going to be on the order of 3p squared, right?
+
+14
+00:00:58,000 --> 00:01:01,000
+So I have--
+
+15
+00:01:01,000 --> 00:01:03,000
+I'm flipping coins.
+
+16
+00:01:03,000 --> 00:01:06,000
+Each comes up heads with probability p.
+
+17
+00:01:06,000 --> 00:01:08,000
+And I'm going to get in trouble if two or three of them
+
+18
+00:01:08,000 --> 00:01:10,000
+come up heads.
+
+19
+00:01:10,000 --> 00:01:13,000
+And so that's going to be on the order of p squared.
+
+20
+00:01:13,000 --> 00:01:15,000
+But 3 is there's this combinatorial factor,
+
+21
+00:01:15,000 --> 00:01:21,000
+because it could be xxy, or xix, or ixx, right?
+
+22
+00:01:21,000 --> 00:01:27,000
+So these correspond to xxi, ixx, or xix.
+
+23
+00:01:27,000 --> 00:01:29,000
+
+
+24
+00:01:29,000 --> 00:01:32,000
+You mean you're discussing that special code.
+
+25
+00:01:32,000 --> 00:01:38,000
+Let's go back to this code.
+
+26
+00:01:38,000 --> 00:01:42,000
+Now, so the probability of logical x error.
+
+27
+00:01:42,000 --> 00:01:54,000
+So the probability of logical z error is on the order of 3p,
+
+28
+00:01:54,000 --> 00:01:54,000
+right?
+
+29
+00:01:54,000 --> 00:01:56,000
+Because an error in any one of the three
+
+30
+00:01:56,000 --> 00:01:59,000
+locations will get me in trouble.
+
+31
+00:01:59,000 --> 00:02:02,000
+I'm thinking about p, by the way, as small.
+
+32
+00:02:02,000 --> 00:02:04,000
+So I just take the leading order term.
+
+33
+00:02:04,000 --> 00:02:08,000
+
+
+34
+00:02:08,000 --> 00:02:12,000
+But so in both cases, I multiplied by 3.
+
+35
+00:02:12,000 --> 00:02:14,000
+In this case, I've gone from p to p squared.
+
+36
+00:02:14,000 --> 00:02:17,000
+But if p is very small, like 10 to the minus 4,
+
+37
+00:02:17,000 --> 00:02:21,000
+let's say, this improvement is much better than this, larger
+
+38
+00:02:21,000 --> 00:02:24,000
+than this penalty.
+
+39
+00:02:24,000 --> 00:02:27,000
+And so, in a sense, I've still made progress,
+
+40
+00:02:27,000 --> 00:02:32,000
+even though I've slipped behind a little bit in the z errors.
+
+41
+00:02:32,000 --> 00:02:37,000
+And so if I were to combine this type of code
+
+42
+00:02:37,000 --> 00:02:41,000
+with the Hadamard rotated version,
+
+43
+00:02:41,000 --> 00:02:43,000
+I could get this order p squared behavior
+
+44
+00:02:43,000 --> 00:02:46,000
+for both types of errors.
+
+45
+00:02:46,000 --> 00:02:51,000
+So if I could combine with the plus plus
+
+46
+00:02:51,000 --> 00:02:57,000
+plus minus minus minus code, so the 3-bit repetition code
+
+47
+00:02:57,000 --> 00:03:04,000
+in the x basis, then I've made the x error probability worse,
+
+48
+00:03:04,000 --> 00:03:13,000
+probability of logical x error goes to 9p squared.
+
+49
+00:03:13,000 --> 00:03:21,000
+And probability of logical z error,
+
+50
+00:03:21,000 --> 00:03:24,000
+now it's going to be 3 times this thing squared.
+
+51
+00:03:24,000 --> 00:03:29,000
+So it will be roughly 27p squared.
+
+52
+00:03:29,000 --> 00:03:32,000
+You can see the constants are growing.
+
+53
+00:03:32,000 --> 00:03:35,000
+But now at least I have constants times p squared.
+
+54
+00:03:35,000 --> 00:03:43,000
+So my probability of either type of error is order p squared.
+
+55
+00:03:43,000 --> 00:03:46,000
+And so that suggests that to get a logical error,
+
+56
+00:03:46,000 --> 00:03:50,000
+I need bad things to happen two different locations.
+
+57
+00:03:50,000 --> 00:03:54,000
+In other words, if things just happen in one location,
+
+58
+00:03:54,000 --> 00:03:55,000
+that's going to be correctable.
+
+59
+00:03:55,000 --> 00:03:59,000
+
+
+60
+00:03:59,000 --> 00:04:12,000
+And this is the idea of what's called the 9-qubit Shor code.
+
+61
+00:04:12,000 --> 00:04:14,000
+If you took 8370 from Peter Shor,
+
+62
+00:04:14,000 --> 00:04:16,000
+he would have just called it the 9-qubit code.
+
+63
+00:04:16,000 --> 00:04:19,000
+But most people call it the 9-qubit Shor code.
+
+64
+00:04:19,000 --> 00:04:21,000
+I think he also calls his--
+
+65
+00:04:21,000 --> 00:04:23,000
+Shor's algorithm, he called it the factoring algorithm.
+
+66
+00:04:23,000 --> 00:04:25,000
+You just have to remember who's speaking.
+
+67
+00:04:25,000 --> 00:04:29,000
+
+
+68
+00:04:29,000 --> 00:04:30,000
+And when you're out of this room,
+
+69
+00:04:30,000 --> 00:04:34,000
+actually, you should call p the Harrow p, 1, the Harrow--
+
+70
+00:04:34,000 --> 00:04:36,000
+never mind.
+
+71
+00:04:36,000 --> 00:04:43,000
+So this 9-qubit Shor code was the first example
+
+72
+00:04:43,000 --> 00:04:47,000
+of a code that corrects one error on any qubit
+
+73
+00:04:47,000 --> 00:04:49,000
+and one error of any type.
+
+74
+00:04:49,000 --> 00:04:52,000
+So this thing I wrote about low-weight errors, finally,
+
+75
+00:04:52,000 --> 00:04:57,000
+the Shor code is an example of something that does that.
+
+76
+00:04:57,000 --> 00:04:57,000
+
+

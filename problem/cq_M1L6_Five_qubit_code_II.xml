@@ -1,0 +1,24 @@
+<problem linenum="95" tex_filename="./week4_lectures6.tex" attempts="1" display_name="Five qubit code II" max_attempts="1">
+  <p>
+This is a concept question, provided to check your understanding of the previous lecture video clips. </p>
+  <p>
+Which of the following are true? </p>
+  <p>
+    <choiceresponse>
+      <checkboxgroup>
+        <choice correct="false" name="1">
+          <text>The five-qubit code can correct 2 physical errors because it has distance 3.</text>
+        </choice>
+        <choice correct="true" name="2">
+          <text>No error corresponds to the syndrome 00000.</text>
+        </choice>
+        <choice correct="true" name="3">
+          <text>Each correctable error in the five-qubit code corresponds to a unique syndrome.</text>
+        </choice>
+        <choice correct="false" name="4">
+          <text>There are 5 independent syndrome bits for this code.</text>
+        </choice>
+      </checkboxgroup>
+    </choiceresponse>
+  </p>
+</problem>

@@ -1,0 +1,9 @@
+<course advanced_modules="[&quot;edx_sga&quot;, &quot;review&quot;, &quot;split_test&quot;]" allow_anonymous="false" allow_anonymous_to_peers="true" allow_unsupported_xblocks="true" cert_html_view_enabled="true" course_image="course_image.jpg" days_early_for_beta="24.0" display_name="Quantum Information Science II, Part 1 - Quantum states, noise and error correction" end="&quot;2018-06-15T23:57:00+00:00&quot;" enrollment_end="null" enrollment_start="null" giturl="git@github.com:sheralim012/test-git-export.git" graceperiod="18300 seconds" language="en" learning_info="[]" lti_passports="[&quot;sglti:mitx:edx&quot;, &quot;graph_builder:any:any&quot;, &quot;wikipedia:any:any&quot;, &quot;google_chart:any:any&quot;, &quot;piazza:piazza.sandbox:test_only_secret&quot;, &quot;piazza_id:harvard.edu:piazza_sf3-2ks4&quot;, &quot;mit_ocw:any:any&quot;]" rerandomize="once" showanswer="finished" start="&quot;2018-04-25T15:00:00+00:00&quot;" user_partitions="[{&quot;scheme&quot;: &quot;random&quot;, &quot;parameters&quot;: {}, &quot;id&quot;: 0, &quot;version&quot;: 3, &quot;name&quot;: &quot;Spaced Review Experiment&quot;, &quot;description&quot;: &quot;This group configuration is used for the A/B test for Dillon Dumesnil's Spaced Review Experiment. The \&quot;control\&quot; group will not see any of the Review Problems and the \&quot;review\&quot; group will see them.&quot;, &quot;active&quot;: true, &quot;groups&quot;: [{&quot;version&quot;: 1, &quot;name&quot;: &quot;Control&quot;, &quot;id&quot;: 0}, {&quot;version&quot;: 1, &quot;name&quot;: &quot;Review&quot;, &quot;id&quot;: 1}]}]" attempts="10" semester="2T2018" number="8.371.1x">
+  <chapter url_name="welcome"/>
+  <chapter url_name="Week1"/>
+  <chapter url_name="Week2"/>
+  <chapter url_name="Week3"/>
+  <chapter url_name="Week4"/>
+  <chapter url_name="survey_exit"/>
+  <wiki slug="MITx.8.371.1x.2T2018"/>
+</course>

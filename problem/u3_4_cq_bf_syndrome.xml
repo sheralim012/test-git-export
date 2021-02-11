@@ -1,0 +1,27 @@
+<problem linenum="307" tex_filename="./week3_review1.tex" attempts="1" display_name="Syndrome measurement for the three-qubit bit-flip code" max_attempts="1">
+  <p>
+This is a concept question, provided to check your understanding of the previous video clip. </p>
+  <p>
+Prof. Chuang described in lecture how syndrome measurement for the three-qubit bit-flip code can be done by measuring the operators [mathjaxinline]U_1 = ZZI[/mathjaxinline] and [mathjaxinline]U_2 = IZZ[/mathjaxinline]. Which of the following statements about this syndrome measurement are correct? Check all that apply: </p>
+  <p>
+    <choiceresponse>
+      <checkboxgroup>
+        <choice correct="true" name="1">
+          <text>Just as effective for syndrome measurement would be measuring the two operators [mathjaxinline]U'_1 = ZZI[/mathjaxinline] and [mathjaxinline]U'_2 = ZIZ[/mathjaxinline].</text>
+        </choice>
+        <choice correct="false" name="2">
+          <text>Just as effective for syndrome measurement would be measuring the two operators [mathjaxinline]U'_1 = XXI[/mathjaxinline] and [mathjaxinline]U'_2 = IXX[/mathjaxinline].</text>
+        </choice>
+        <choice correct="false" name="3">
+          <text>Just as effective for syndrome measurement would be measuring just one operator [mathjaxinline]U'_1 = ZZZ[/mathjaxinline].</text>
+        </choice>
+        <choice correct="false" name="4">
+          <text>Just as effective for syndrome measurement would be measuring the two operators [mathjaxinline]U'_1 = ZZI[/mathjaxinline] and [mathjaxinline]U'_2 = ZZZ[/mathjaxinline].</text>
+        </choice>
+        <choice correct="true" name="5">
+          <text>Measuring the three operators [mathjaxinline]U_1 = ZZI[/mathjaxinline], [mathjaxinline]U_2 = IZZ[/mathjaxinline], [mathjaxinline]U_3 = ZIZ[/mathjaxinline] would also provide functional, albeit redundant, syndrome measurement.</text>
+        </choice>
+      </checkboxgroup>
+    </choiceresponse>
+  </p>
+</problem>

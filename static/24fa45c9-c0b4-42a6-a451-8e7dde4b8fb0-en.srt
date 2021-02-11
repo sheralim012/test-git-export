@@ -1,0 +1,332 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:02,000
+So what I've said about quantum codes is very general.
+
+2
+00:00:02,000 --> 00:00:04,000
+And we have a hard time, even with fully general
+
+3
+00:00:04,000 --> 00:00:05,000
+classical codes--
+
+4
+00:00:05,000 --> 00:00:08,000
+we have to retreat to linear codes, classically.
+
+5
+00:00:08,000 --> 00:00:10,000
+So quantumly, it's not surprising we also
+
+6
+00:00:10,000 --> 00:00:15,000
+want to look at an analog of linear codes.
+
+7
+00:00:15,000 --> 00:00:20,000
+Let's-- let me just first review what classical linear codes
+
+8
+00:00:20,000 --> 00:00:21,000
+are.
+
+9
+00:00:21,000 --> 00:00:29,000
+So a classical linear code we can
+
+10
+00:00:29,000 --> 00:00:35,000
+write as the image of some generator matrix,
+
+11
+00:00:35,000 --> 00:00:38,000
+or the kernel of some check matrix.
+
+12
+00:00:38,000 --> 00:00:41,000
+
+
+13
+00:00:41,000 --> 00:00:46,000
+And either way, it's a linear subspace of F_2 to the n.
+
+14
+00:00:46,000 --> 00:00:50,000
+These are two equivalent ways of describing it.
+
+15
+00:00:50,000 --> 00:00:51,000
+Neither one is fundamental.
+
+16
+00:00:51,000 --> 00:00:54,000
+Either one would work.
+
+17
+00:00:54,000 --> 00:01:05,000
+But what we will find is that this, the check operators,
+
+18
+00:01:05,000 --> 00:01:08,000
+will generalize nicely to the quantum case.
+
+19
+00:01:08,000 --> 00:01:11,000
+
+
+20
+00:01:11,000 --> 00:01:17,000
+This image of the generators is not the most natural thing
+
+21
+00:01:17,000 --> 00:01:18,000
+to generalize.
+
+22
+00:01:18,000 --> 00:01:20,000
+We'll see that some version of the generators
+
+23
+00:01:20,000 --> 00:01:23,000
+appears in the quantum case, but they're not the most useful way
+
+24
+00:01:23,000 --> 00:01:27,000
+of defining the code, whereas the kernel of the check matrix.
+
+25
+00:01:27,000 --> 00:01:30,000
+So let me just briefly explain how
+
+26
+00:01:30,000 --> 00:01:34,000
+to think about the kernel of the check matrix
+
+27
+00:01:34,000 --> 00:01:38,000
+in a way that could work for quantum codes.
+
+28
+00:01:38,000 --> 00:01:40,000
+And to do this, let me go back to thinking
+
+29
+00:01:40,000 --> 00:01:43,000
+about classical codes as quantum codes.
+
+30
+00:01:43,000 --> 00:01:45,000
+And just using the quantum formalism
+
+31
+00:01:45,000 --> 00:01:49,000
+to describe these classical codes that we already have.
+
+32
+00:01:49,000 --> 00:02:00,000
+So in other words, let me take C to be the span of all x
+
+33
+00:02:00,000 --> 00:02:02,000
+where x belongs to the classical code.
+
+34
+00:02:02,000 --> 00:02:06,000
+
+
+35
+00:02:06,000 --> 00:02:14,000
+All these x's satisfy H_x equals zero.
+
+36
+00:02:14,000 --> 00:02:15,000
+Right?
+
+37
+00:02:15,000 --> 00:02:18,000
+That's what it means to be the check matrix.
+
+38
+00:02:18,000 --> 00:02:23,000
+And we can reduce this to saying any column of H
+
+39
+00:02:23,000 --> 00:02:31,000
+or any linear combination of columns has inner product 0.
+
+40
+00:02:31,000 --> 00:02:38,000
+This is for any h in the image of capital H.
+
+41
+00:02:38,000 --> 00:02:40,000
+This is true for the columns.
+
+42
+00:02:40,000 --> 00:02:42,000
+It's also true for any linear combinations
+
+43
+00:02:42,000 --> 00:02:47,000
+that they are orthogonal to x in this F_2 sense.
+
+44
+00:02:47,000 --> 00:02:50,000
+
+
+45
+00:02:50,000 --> 00:02:51,000
+I want to write it like this.
+
+46
+00:02:51,000 --> 00:02:55,000
+So I can think of a quantum operator that will measure
+
+47
+00:02:55,000 --> 00:02:58,000
+whether this is the case.
+
+48
+00:02:58,000 --> 00:03:02,000
+And so to do this, let me define z to the h.
+
+49
+00:03:02,000 --> 00:03:04,000
+You have to be careful about this notation.
+
+50
+00:03:04,000 --> 00:03:06,000
+That could be a single cubit.
+
+51
+00:03:06,000 --> 00:03:13,000
+But if h is a vector, what that means is z_1 to the h_1, z_2
+
+52
+00:03:13,000 --> 00:03:16,000
+to the h_2, z_n to the h_n.
+
+53
+00:03:16,000 --> 00:03:19,000
+
+
+54
+00:03:19,000 --> 00:03:31,000
+So if we apply z_h to the vector x, what are we going to get?
+
+55
+00:03:31,000 --> 00:03:39,000
+We're going to get z_1 h_1 x_1 tensor z_n to the h_n x_n.
+
+56
+00:03:39,000 --> 00:03:43,000
+
+
+57
+00:03:43,000 --> 00:03:45,000
+Each one in each place, we're going
+
+58
+00:03:45,000 --> 00:03:47,000
+to get a phase of minus 1.
+
+59
+00:03:47,000 --> 00:03:51,000
+If h_1 is equal to 1 and x_1 is equal to 1.
+
+60
+00:03:51,000 --> 00:03:53,000
+Otherwise, we won't get any phase.
+
+61
+00:03:53,000 --> 00:03:58,000
+So we put this together, we get minus 1
+
+62
+00:03:58,000 --> 00:04:05,000
+to the inner product of h with x, at x.
+
+63
+00:04:05,000 --> 00:04:07,000
+And here, it's kind of nice because inner product
+
+64
+00:04:07,000 --> 00:04:09,000
+is mod 2, which goes really well with the fact
+
+65
+00:04:09,000 --> 00:04:12,000
+that we're doing minus 1 to this number.
+
+66
+00:04:12,000 --> 00:04:21,000
+And so now, I find that x is in the code if
+
+67
+00:04:21,000 --> 00:04:33,000
+and only if it's in the plus 1 eigenspace of all of these z_h.
+
+68
+00:04:33,000 --> 00:04:36,000
+
+
+69
+00:04:36,000 --> 00:04:41,000
+And so what I've done is I've written the code--
+
+70
+00:04:41,000 --> 00:04:44,000
+
+
+71
+00:04:44,000 --> 00:04:52,000
+the code space is now the set of states psi
+
+72
+00:04:52,000 --> 00:04:54,000
+that are plus 1 eigenstates of all
+
+73
+00:04:54,000 --> 00:04:58,000
+of these z to the h operators from all h
+
+74
+00:04:58,000 --> 00:05:02,000
+in the image of capital H.
+
+75
+00:05:02,000 --> 00:05:04,000
+So don't worry too much about what does is this set image
+
+76
+00:05:04,000 --> 00:05:09,000
+of capital H. The relevant thing to think about here is my code
+
+77
+00:05:09,000 --> 00:05:15,000
+space is the simultaneous plus 1 eigenspace of all of these
+
+78
+00:05:15,000 --> 00:05:18,000
+different operators, all of these z to the h's.
+
+79
+00:05:18,000 --> 00:05:24,000
+And so before, I had this F_2 linear algebra picture.
+
+80
+00:05:24,000 --> 00:05:27,000
+And what I'm saying is that if you move to polymatrices,
+
+81
+00:05:27,000 --> 00:05:28,000
+this is equivalent to being the plus 1
+
+82
+00:05:28,000 --> 00:05:32,000
+
+

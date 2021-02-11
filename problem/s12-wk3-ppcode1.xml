@@ -1,0 +1,101 @@
+<problem linenum="857" tex_filename="./week3_4_ps2a.tex" attempts="10" display_name="Topological QEC - A Projective Plane Code" max_attempts="10">
+  <script>
+import qpython4
+qpython4.define_qpython4_globals(globals())
+
+
+</script>
+  <p>
+Quantum error correction codes can be constructed using graphs on topological surfaces, where vertices and edges correspond to certain stabilizer operations, and the distance of the code is given by the shortest non-trivial topological chain of errors. In this problem, we explore a specific instance of such a construction, on a <a href="http://en.wikipedia.org/wiki/Projective_plane" target="_blank">projective plane</a>. </p>
+  <p>
+The projective plane in two dimensions, [mathjaxinline]\Re P^2[/mathjaxinline], can be drawn as a disc in which antipodal points on the boundary are identified. Recall that a cellulation [mathjaxinline]{\cal C}[/mathjaxinline] of a surface defines sets [mathjaxinline]F[/mathjaxinline], [mathjaxinline]E[/mathjaxinline], and [mathjaxinline]V[/mathjaxinline] of faces, edges, and vertices. For each [mathjaxinline]e\in E[/mathjaxinline], there corresponds a qubit on which [mathjaxinline]X_ e[/mathjaxinline] and [mathjaxinline]Z_ e[/mathjaxinline] are the Pauli [mathjaxinline]X[/mathjaxinline] and [mathjaxinline]Z[/mathjaxinline] operators. Let [mathjaxinline]E_ f \subset E[/mathjaxinline] be the set of edges around face [mathjaxinline]f\in F[/mathjaxinline], and let [mathjaxinline]E_ v \subset E[/mathjaxinline] be the set of edges attached to vertex [mathjaxinline]v\in V[/mathjaxinline]. For the set of all [mathjaxinline]f[/mathjaxinline] and [mathjaxinline]v[/mathjaxinline], we define </p>
+  <table id="a0000000020" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto">
+    <tr>
+      <td class="equation" style="width:80%; border:none">[mathjax]A_ f = \bigotimes _{e\in E_ f} Z_ e[/mathjax]</td>
+      <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.15)</td>
+    </tr>
+  </table>
+  <p>
+and </p>
+  <table id="a0000000021" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto">
+    <tr>
+      <td class="equation" style="width:80%; border:none">[mathjax]B_ v = \bigotimes _{e\in E_ v} X_ e \, .[/mathjax]</td>
+      <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.16)</td>
+    </tr>
+  </table>
+  <p>
+The set of all [mathjaxinline]A_ f[/mathjaxinline] and [mathjaxinline]B_ v[/mathjaxinline] is the stabilizer for the code. </p>
+  <p>
+Give a list of stabilizers (three [mathjaxinline]A_ f[/mathjaxinline] and the single unique [mathjaxinline]B_ v[/mathjaxinline]) for the cellulation: </p>
+  <p>
+    <center>
+      <img src="/static/images/pplane1.png" width="400"/>
+    </center>
+  </p>
+  <p>
+This code acts on four qubits ([mathjaxinline]|E|=4[/mathjaxinline]), corresponding to the four edges, labeled [mathjaxinline]1[/mathjaxinline] through [mathjaxinline]4[/mathjaxinline]. Note there are only three distinct faces, labeled [mathjaxinline]A[/mathjaxinline], [mathjaxinline]B[/mathjaxinline], and [mathjaxinline]C[/mathjaxinline]. Be sure to verify that the stabilizers you give commute with each other. </p>
+  <p>
+    <customresponse cfn="check_stabilizer_equality" expect="[IIZZ,ZZII,XXXX]">
+      <textline size="60" correct_answer="[IIZZ,ZZII,XXXX]"/>
+    </customresponse>
+  </p>
+  <p>
+    <solution>
+      <p>
+        <b>Solution:</b>
+      </p>
+      <span>
+        <p>
+(a) Our cellulation of [mathjaxinline]\Re P^2[/mathjaxinline] has 3 faces, 2 vertices and 4 edges. This gives stabilizers </p>
+        <table id="a0000000022" class="eqnarray" cellspacing="0" cellpadding="7" width="100%" style="table-layout:auto">
+          <tr id="a0000000023">
+            <td style="width:40%; border:none"> </td>
+            <td style="vertical-align:middle;                                    text-align:right; border:none">
+	    [mathjaxinline]\displaystyle A_\textrm {B}[/mathjaxinline]
+        </td>
+            <td style="vertical-align:middle;                                    text-align:center; border:none">
+	    [mathjaxinline]\displaystyle =[/mathjaxinline]
+        </td>
+            <td style="vertical-align:middle;                                    text-align:left; border:none">
+	    [mathjaxinline]\displaystyle  Z_1 Z_2 = {\tt IIZZ},[/mathjaxinline]
+        </td>
+            <td style="width:40%; border:none"> </td>
+            <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.17)</td>
+          </tr>
+          <tr id="a0000000024">
+            <td style="width:40%; border:none"> </td>
+            <td style="vertical-align:middle;                                    text-align:right; border:none">
+	    [mathjaxinline]\displaystyle B[/mathjaxinline]
+        </td>
+            <td style="vertical-align:middle;                                    text-align:center; border:none">
+	    [mathjaxinline]\displaystyle =[/mathjaxinline]
+        </td>
+            <td style="vertical-align:middle;                                    text-align:left; border:none">
+	    [mathjaxinline]\displaystyle  X_1 X_2 X_3 X_4 = {\tt XXXX},[/mathjaxinline]
+        </td>
+            <td style="width:40%; border:none"> </td>
+            <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.18)</td>
+          </tr>
+          <tr id="a0000000025">
+            <td style="width:40%; border:none"> </td>
+            <td style="vertical-align:middle;                                    text-align:right; border:none">
+	    [mathjaxinline]\displaystyle A_\textrm {C}[/mathjaxinline]
+        </td>
+            <td style="vertical-align:middle;                                    text-align:center; border:none">
+	    [mathjaxinline]\displaystyle =[/mathjaxinline]
+        </td>
+            <td style="vertical-align:middle;                                    text-align:left; border:none">
+	    [mathjaxinline]\displaystyle  Z_3 Z_4 = {\tt ZZII} \, ,[/mathjaxinline]
+        </td>
+            <td style="width:40%; border:none"> </td>
+            <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.19)</td>
+          </tr>
+        </table>
+        <p>
+and a redundant [mathjaxinline]A_\textrm {A} = Z_1 Z_2 Z_3 Z_4 = A_{\textrm{B}}A_{\textrm{C}}[/mathjaxinline]. </p>
+        <p>
+We thus have a code on four qubits with three stabilizers. This means the stabilized subspace is two-dimensional. </p>
+      </span>
+    </solution>
+  </p>
+</problem>

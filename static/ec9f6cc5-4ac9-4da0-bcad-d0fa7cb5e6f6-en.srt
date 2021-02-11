@@ -1,0 +1,308 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:09,000
+I want to mention a few special cases of density matrices.
+
+2
+00:00:09,000 --> 00:00:17,000
+
+
+3
+00:00:17,000 --> 00:00:20,000
+I claim that they generalize both quantum states
+
+4
+00:00:20,000 --> 00:00:22,000
+and probability distributions.
+
+5
+00:00:22,000 --> 00:00:24,000
+So I want to just briefly justify that.
+
+6
+00:00:24,000 --> 00:00:30,000
+So, one, pure states.
+
+7
+00:00:30,000 --> 00:00:35,000
+Two, probability distributions.
+
+8
+00:00:35,000 --> 00:00:38,000
+
+
+9
+00:00:38,000 --> 00:00:42,000
+And, third, I want to talk about the special case of qubits.
+
+10
+00:00:42,000 --> 00:00:46,000
+Because even though saying trace one and positive semidefinite,
+
+11
+00:00:46,000 --> 00:00:48,000
+I think, is helpful, it's way easier
+
+12
+00:00:48,000 --> 00:00:51,000
+than thinking about it as there exists some ensemble.
+
+13
+00:00:51,000 --> 00:00:53,000
+The case of qubits is yet simpler,
+
+14
+00:00:53,000 --> 00:00:54,000
+and that's one where you can really
+
+15
+00:00:54,000 --> 00:00:57,000
+visualize it and, I think, get some geometric intuition
+
+16
+00:00:57,000 --> 00:01:00,000
+for the space of density matrices.
+
+17
+00:01:00,000 --> 00:01:04,000
+So let me talk about these now.
+
+18
+00:01:04,000 --> 00:01:05,000
+Maybe I'll leave up--
+
+19
+00:01:05,000 --> 00:01:08,000
+
+
+20
+00:01:08,000 --> 00:01:11,000
+well, no, I'll erase this slide.
+
+21
+00:01:11,000 --> 00:01:17,000
+
+
+22
+00:01:17,000 --> 00:01:18,000
+I'll leave up only the URL.
+
+23
+00:01:18,000 --> 00:01:20,000
+You can get everything else from there.
+
+24
+00:01:20,000 --> 00:01:36,000
+
+
+25
+00:01:36,000 --> 00:01:39,000
+So-- OK.
+
+26
+00:01:39,000 --> 00:01:42,000
+So why do density matrices generalize both of these?
+
+27
+00:01:42,000 --> 00:01:49,000
+Let's talk first about pure states.
+
+28
+00:01:49,000 --> 00:01:53,000
+So I said that a pure state is one where you--
+
+29
+00:01:53,000 --> 00:01:54,000
+in the deterministic column, that
+
+30
+00:01:54,000 --> 00:01:56,000
+means you know what the quantum state is.
+
+31
+00:01:56,000 --> 00:01:58,000
+And when you first learn quantum mechanics,
+
+32
+00:01:58,000 --> 00:01:59,000
+this is almost implicit.
+
+33
+00:01:59,000 --> 00:01:59,000
+Right.
+
+34
+00:01:59,000 --> 00:02:02,000
+We talk about this-- the state of a harmonic oscillator,
+
+35
+00:02:02,000 --> 00:02:04,000
+you don't consider the possibility
+
+36
+00:02:04,000 --> 00:02:05,000
+you might not know the state.
+
+37
+00:02:05,000 --> 00:02:07,000
+So if you know the state, you can
+
+38
+00:02:07,000 --> 00:02:09,000
+think of that as an ensemble where
+
+39
+00:02:09,000 --> 00:02:12,000
+there's just one item that has probability of one.
+
+40
+00:02:12,000 --> 00:02:14,000
+Maybe some other things have probability zero.
+
+41
+00:02:14,000 --> 00:02:22,000
+But the distribution just looks like P1 is equal to one.
+
+42
+00:02:22,000 --> 00:02:24,000
+Si one is equal to some state Si.
+
+43
+00:02:24,000 --> 00:02:28,000
+And so RHO is equal to one.
+
+44
+00:02:28,000 --> 00:02:29,000
+Oh, I won't write the one.
+
+45
+00:02:29,000 --> 00:02:34,000
+It's just the outer product of Si with itself.
+
+46
+00:02:34,000 --> 00:02:35,000
+OK.
+
+47
+00:02:35,000 --> 00:02:37,000
+So it's just another way of writing in the pure state,
+
+48
+00:02:37,000 --> 00:02:43,000
+I write ket si bra si, instead of si by itself.
+
+49
+00:02:43,000 --> 00:02:46,000
+You might think this is a slightly wasteful way
+
+50
+00:02:46,000 --> 00:02:49,000
+of writing out a state, of writing down d square numbers
+
+51
+00:02:49,000 --> 00:02:52,000
+instead of d, but it has some nice properties.
+
+52
+00:02:52,000 --> 00:02:54,000
+Besides the fact that it generalizes to--
+
+53
+00:02:54,000 --> 00:02:57,000
+to other mixed density matrices where you don't exactly
+
+54
+00:02:57,000 --> 00:03:01,000
+know the state, it also gets rid of that annoying phase problem
+
+55
+00:03:01,000 --> 00:03:03,000
+that we always had with quantum states.
+
+56
+00:03:03,000 --> 00:03:05,000
+So we always had a phase ambiguity
+
+57
+00:03:05,000 --> 00:03:11,000
+that si is equivalent to e to the i thi si.
+
+58
+00:03:11,000 --> 00:03:13,000
+These are mathematically different objects,
+
+59
+00:03:13,000 --> 00:03:15,000
+but they describe the same quantum state.
+
+60
+00:03:15,000 --> 00:03:17,000
+You know, all measurements come out the same,
+
+61
+00:03:17,000 --> 00:03:20,000
+we treat them as physically the same object.
+
+62
+00:03:20,000 --> 00:03:23,000
+And here we see they correspond to the same density matrix,
+
+63
+00:03:23,000 --> 00:03:24,000
+right?
+
+64
+00:03:24,000 --> 00:03:26,000
+Because this e to the i fi corresponds
+
+65
+00:03:26,000 --> 00:03:33,000
+to e to the i fi si e to the minus i fi bra si,
+
+66
+00:03:33,000 --> 00:03:36,000
+and the phases cancel out.
+
+67
+00:03:36,000 --> 00:03:39,000
+And so this object is, in some ways,
+
+68
+00:03:39,000 --> 00:03:42,000
+nice because it gets rid of that phase ambiguity.
+
+69
+00:03:42,000 --> 00:03:44,000
+And it turns out this is generally true.
+
+70
+00:03:44,000 --> 00:03:46,000
+The degrees of freedom in the density matrix
+
+71
+00:03:46,000 --> 00:03:48,000
+are all physically observable.
+
+72
+00:03:48,000 --> 00:03:50,000
+If two density matrices are different,
+
+73
+00:03:50,000 --> 00:03:52,000
+there is a way to tell them apart.
+
+74
+00:03:52,000 --> 00:03:55,000
+So that's, in a sense, a sharper correspondence
+
+75
+00:03:55,000 --> 00:03:58,000
+between the mathematical and the physical objects.
+
+76
+00:03:58,000 --> 00:03:59,000
+
+

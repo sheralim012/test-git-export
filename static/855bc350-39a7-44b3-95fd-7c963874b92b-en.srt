@@ -1,0 +1,380 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:04,000
+Let me begin by reminding you about the Schatten p-norms.
+
+2
+00:00:04,000 --> 00:00:13,000
+Given a matrix, X, the singular value decomposition--
+
+3
+00:00:13,000 --> 00:00:16,000
+there are a few different ways we can write it.
+
+4
+00:00:16,000 --> 00:00:18,000
+They are all kind of equivalent.
+
+5
+00:00:18,000 --> 00:00:19,000
+The one I want to use is to write
+
+6
+00:00:19,000 --> 00:00:25,000
+that if X is U sigma V dagger where U and V are
+
+7
+00:00:25,000 --> 00:00:40,000
+isometries and sigma is a square diagonal matrix, where
+
+8
+00:00:40,000 --> 00:00:47,000
+the sigma i are non-negative numbers, non-negative reals.
+
+9
+00:00:47,000 --> 00:00:50,000
+So with this decomposition--
+
+10
+00:00:50,000 --> 00:00:53,000
+
+
+11
+00:00:53,000 --> 00:00:54,000
+and if you haven't seen the proof of it
+
+12
+00:00:54,000 --> 00:00:57,000
+before, you can prove it, once you believe
+
+13
+00:00:57,000 --> 00:00:59,000
+the spectral theorem, you can prove it
+
+14
+00:00:59,000 --> 00:01:05,000
+by doing the spectral decomposition of X dagger X.
+
+15
+00:01:05,000 --> 00:01:13,000
+So given this, we can define a norm on X to be--
+
+16
+00:01:13,000 --> 00:01:17,000
+
+
+17
+00:01:17,000 --> 00:01:21,000
+So the Schatten p-norm of X is the lp norm
+
+18
+00:01:21,000 --> 00:01:24,000
+of this vector of singular value, sigma 1 through sigma n.
+
+19
+00:01:24,000 --> 00:01:29,000
+In other words, the sum from i equals 1 to n,
+
+20
+00:01:29,000 --> 00:01:35,000
+sigma i to the p, to the 1 over p.
+
+21
+00:01:35,000 --> 00:01:36,000
+Last time I mentioned that a norm
+
+22
+00:01:36,000 --> 00:01:39,000
+should have various properties, like if you rescale X
+
+23
+00:01:39,000 --> 00:01:41,000
+by a scalar the norm should rescale.
+
+24
+00:01:41,000 --> 00:01:44,000
+That shouldn't be too hard to see here.
+
+25
+00:01:44,000 --> 00:01:48,000
+If the norm is zero that can only be because the matrix
+
+26
+00:01:48,000 --> 00:01:48,000
+was zero.
+
+27
+00:01:48,000 --> 00:01:51,000
+That also shouldn't be too hard to see.
+
+28
+00:01:51,000 --> 00:01:53,000
+The triangle inequality is a little less obvious.
+
+29
+00:01:53,000 --> 00:01:54,000
+I'm not going to prove that here.
+
+30
+00:01:54,000 --> 00:01:55,000
+But that is a non-trivial fact you'd
+
+31
+00:01:55,000 --> 00:01:57,000
+have to establish to show this is a norm.
+
+32
+00:01:57,000 --> 00:02:00,000
+
+
+33
+00:02:00,000 --> 00:02:01,000
+So I ask you to take my word for that.
+
+34
+00:02:01,000 --> 00:02:04,000
+Instead I'm going to talk about the application to the object
+
+35
+00:02:04,000 --> 00:02:05,000
+that we studied.
+
+36
+00:02:05,000 --> 00:02:14,000
+So if X is a positive semi-definite matrix then
+
+37
+00:02:14,000 --> 00:02:21,000
+the singular values of X are just the eigenvalues of X.
+
+38
+00:02:21,000 --> 00:02:25,000
+And so in that case the Schatten one norm is just
+
+39
+00:02:25,000 --> 00:02:26,000
+the sum of the eigenvalues.
+
+40
+00:02:26,000 --> 00:02:30,000
+
+
+41
+00:02:30,000 --> 00:02:33,000
+Meaning trace X. So I've just found
+
+42
+00:02:33,000 --> 00:02:35,000
+kind of a roundabout way of describing the trace.
+
+43
+00:02:35,000 --> 00:02:37,000
+So the Schatten one norm, you could say,
+
+44
+00:02:37,000 --> 00:02:39,000
+is an indirect way of describing the trace
+
+45
+00:02:39,000 --> 00:02:43,000
+of a positive semi-definite matrix.
+
+46
+00:02:43,000 --> 00:02:51,000
+So if I want to say that Rho is a density matrix,
+
+47
+00:02:51,000 --> 00:02:54,000
+an equivalent way of saying that is that Rho is positive
+
+48
+00:02:54,000 --> 00:03:01,000
+semi-definite and has a Schatten one norm equal to one.
+
+49
+00:03:01,000 --> 00:03:04,000
+
+
+50
+00:03:04,000 --> 00:03:10,000
+So you could say that the--
+
+51
+00:03:10,000 --> 00:03:12,000
+this you could call the unit sphere
+
+52
+00:03:12,000 --> 00:03:15,000
+in the Schatten one norm.
+
+53
+00:03:15,000 --> 00:03:20,000
+So it's hard to draw the unit sphere for the Schatten norms,
+
+54
+00:03:20,000 --> 00:03:24,000
+but I'll just describe them for the lp norms.
+
+55
+00:03:24,000 --> 00:03:32,000
+So the unit sphere means a set of points that has norm one.
+
+56
+00:03:32,000 --> 00:03:40,000
+So for l2 it's just the usual circle.
+
+57
+00:03:40,000 --> 00:03:42,000
+OK, this is in two dimensions.
+
+58
+00:03:42,000 --> 00:03:44,000
+We call it a sphere, but in two dimensions it's a circle.
+
+59
+00:03:44,000 --> 00:03:48,000
+So the l1 norm, it's the things whose absolute values add up
+
+60
+00:03:48,000 --> 00:03:49,000
+to one.
+
+61
+00:03:49,000 --> 00:03:57,000
+So that would be this little diamond inside the circle.
+
+62
+00:03:57,000 --> 00:04:01,000
+So the l infinity norm, it's the largest entry of the matrix--
+
+63
+00:04:01,000 --> 00:04:06,000
+I'm sorry, of the vector, after we take the absolute value.
+
+64
+00:04:06,000 --> 00:04:11,000
+So that's going to look like this square
+
+65
+00:04:11,000 --> 00:04:13,000
+on the outside of the circle.
+
+66
+00:04:13,000 --> 00:04:16,000
+So these are a few of the unit spheres in the lp norms.
+
+67
+00:04:16,000 --> 00:04:18,000
+They're just the vectors with norm one
+
+68
+00:04:18,000 --> 00:04:21,000
+according to whatever norm we're using to measure.
+
+69
+00:04:21,000 --> 00:04:22,000
+OK?
+
+70
+00:04:22,000 --> 00:04:26,000
+So the unit sphere in s1, if we take
+
+71
+00:04:26,000 --> 00:04:28,000
+the positive semi-definite part of that,
+
+72
+00:04:28,000 --> 00:04:29,000
+gives us density matrices.
+
+73
+00:04:29,000 --> 00:04:34,000
+
+
+74
+00:04:34,000 --> 00:04:37,000
+By the way, as a--
+
+75
+00:04:37,000 --> 00:04:39,000
+to see why this is--
+
+76
+00:04:39,000 --> 00:04:41,000
+you can think of this as natural,
+
+77
+00:04:41,000 --> 00:04:44,000
+what is the analog for probability distributions?
+
+78
+00:04:44,000 --> 00:04:47,000
+So probability distributions are vectors that are non-negative.
+
+79
+00:04:47,000 --> 00:04:51,000
+And they correspond to the unit sphere of which norm?
+
+80
+00:04:51,000 --> 00:04:52,000
+The l1 norm, exactly.
+
+81
+00:04:52,000 --> 00:04:56,000
+So probability distributions, their vectors are non-negative
+
+82
+00:04:56,000 --> 00:04:57,000
+and they sum to one.
+
+83
+00:04:57,000 --> 00:05:01,000
+So taking the absolute value does nothing.
+
+84
+00:05:01,000 --> 00:05:03,000
+So I could say that either they sum to one
+
+85
+00:05:03,000 --> 00:05:05,000
+or the sum of the absolute values of them sum to one.
+
+86
+00:05:05,000 --> 00:05:08,000
+The sum of the absolute values is the one norm,
+
+87
+00:05:08,000 --> 00:05:11,000
+when I set p equal to one here.
+
+88
+00:05:11,000 --> 00:05:14,000
+So when we go from probability distributions
+
+89
+00:05:14,000 --> 00:05:17,000
+to density matrices we go from a vector
+
+90
+00:05:17,000 --> 00:05:20,000
+with non-negative entries to a positive semi-definite matrix.
+
+91
+00:05:20,000 --> 00:05:24,000
+We go from the l1 norm to the Schatten norm.
+
+92
+00:05:24,000 --> 00:05:26,000
+So it's really-- you know, this is
+
+93
+00:05:26,000 --> 00:05:30,000
+why it is sort of like the matrix version of the l1 norm.
+
+94
+00:05:30,000 --> 00:05:30,000
+
+

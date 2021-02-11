@@ -1,0 +1,27 @@
+<problem linenum="86" tex_filename="./week3_review1.tex" attempts="1" display_name="The dephasing and depolarizing channels" max_attempts="1">
+  <p>
+This is a concept question, provided to check your understanding of the previous video clip. </p>
+  <p>
+Which of the following statements about the dephasing channel and the <a href="https://en.wikipedia.org/wiki/Quantum_depolarizing_channel" target="_blank">depolarizing channel</a> are correct? Check all that apply: </p>
+  <p>
+    <choiceresponse>
+      <checkboxgroup>
+        <choice correct="true" name="1">
+          <text>The dephasing channel shrinks qubit states towards the z-axis of the Bloch sphere, whereas the depolarizing channel shrinks states to the center of the sphere.</text>
+        </choice>
+        <choice correct="false" name="2">
+          <text>The dephasing channel and the depolarizing channel are identical up to a rotation of the qubit.</text>
+        </choice>
+        <choice correct="true" name="3">
+          <text>The depolarizing channel is essentially dephasing along three directions.</text>
+        </choice>
+        <choice correct="true" name="4">
+          <text>The depolarizing and dephasing channels are both models of what can happen to a single qubit.</text>
+        </choice>
+        <choice correct="true" name="5">
+          <text>The single-qubit fully mixed state [mathjaxinline]\rho =I/2[/mathjaxinline] is unchanged under both the depolarizing and the dephasing channels.</text>
+        </choice>
+      </checkboxgroup>
+    </choiceresponse>
+  </p>
+</problem>

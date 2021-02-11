@@ -1,0 +1,932 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:02,000
+We use F2 to understand linear codes.
+
+2
+00:00:02,000 --> 00:00:04,000
+And there's a few hints that it should also
+
+3
+00:00:04,000 --> 00:00:06,000
+be useful for stabilizer codes.
+
+4
+00:00:06,000 --> 00:00:09,000
+And so now I won't explore that in more detail.
+
+5
+00:00:09,000 --> 00:00:21,000
+I want to start by addressing the question of whether two
+
+6
+00:00:21,000 --> 00:00:22,000
+poly matrices commute.
+
+7
+00:00:22,000 --> 00:00:25,000
+
+
+8
+00:00:25,000 --> 00:00:27,000
+For single qubits this is not a very interesting question,
+
+9
+00:00:27,000 --> 00:00:28,000
+right?
+
+10
+00:00:28,000 --> 00:00:30,000
+The polys are the same.
+
+11
+00:00:30,000 --> 00:00:33,000
+Or if one of them is the identity, then they commute.
+
+12
+00:00:33,000 --> 00:00:36,000
+Otherwise if they're different in both non-identity,
+
+13
+00:00:36,000 --> 00:00:38,000
+they anti-commute.
+
+14
+00:00:38,000 --> 00:00:40,000
+End of discussion.
+
+15
+00:00:40,000 --> 00:00:42,000
+If you have a string of them, then you have to count.
+
+16
+00:00:42,000 --> 00:00:44,000
+How many of them commute?
+
+17
+00:00:44,000 --> 00:00:45,000
+How many them anti-commute?
+
+18
+00:00:45,000 --> 00:00:49,000
+And then if an even number of the entries anti-commute,
+
+19
+00:00:49,000 --> 00:00:50,000
+the whole thing commutes.
+
+20
+00:00:50,000 --> 00:00:53,000
+Otherwise the whole thing anti-commutes.
+
+21
+00:00:53,000 --> 00:00:56,000
+Sounds like a pretty simple rule.
+
+22
+00:00:56,000 --> 00:00:59,000
+But rephrasing it in linear algebra terms
+
+23
+00:00:59,000 --> 00:01:03,000
+can let us import a lot of the powerful machinery
+
+24
+00:01:03,000 --> 00:01:07,000
+of linear algebra and will let us understand these codes
+
+25
+00:01:07,000 --> 00:01:08,000
+in a more sophisticated way.
+
+26
+00:01:08,000 --> 00:01:12,000
+So that's our first hint that linear algebra is useful.
+
+27
+00:01:12,000 --> 00:01:15,000
+The other hint is when I talk about independence here.
+
+28
+00:01:15,000 --> 00:01:17,000
+And I said, it's a lot like linear independence.
+
+29
+00:01:17,000 --> 00:01:19,000
+I mean it really is linear independence.
+
+30
+00:01:19,000 --> 00:01:21,000
+And when we rephrased it that way,
+
+31
+00:01:21,000 --> 00:01:26,000
+again we can start to get access to some more useful things.
+
+32
+00:01:26,000 --> 00:01:31,000
+So let me start by talking about the commuting conditions.
+
+33
+00:01:31,000 --> 00:01:39,000
+Let's suppose I have two poly matrices,
+
+34
+00:01:39,000 --> 00:01:43,000
+and let me write them in this way.
+
+35
+00:01:43,000 --> 00:01:45,000
+They each look like minus 1 to the a.
+
+36
+00:01:45,000 --> 00:01:49,000
+
+
+37
+00:01:49,000 --> 00:01:54,000
+They're each in this form, minus 1 to some power, x to the b, z
+
+38
+00:01:54,000 --> 00:01:55,000
+to the c.
+
+39
+00:01:55,000 --> 00:01:58,000
+And this is deceptively simple notation,
+
+40
+00:01:58,000 --> 00:02:00,000
+when I write x to the b, you know
+
+41
+00:02:00,000 --> 00:02:05,000
+what I mean is x1 to the b1 through xn to the bn.
+
+42
+00:02:05,000 --> 00:02:06,000
+And so on.
+
+43
+00:02:06,000 --> 00:02:15,000
+So a belongs to f2, b and c belong to f2 to the f.
+
+44
+00:02:15,000 --> 00:02:20,000
+And let me also define p prime is equal minus 1
+
+45
+00:02:20,000 --> 00:02:28,000
+to the a prime, x to the b prime, z to the c prime.
+
+46
+00:02:28,000 --> 00:02:32,000
+So one very basic question is, do p
+
+47
+00:02:32,000 --> 00:02:35,000
+and p prime commute or anti-commute?
+
+48
+00:02:35,000 --> 00:02:37,000
+This is necessary for example, to figure out
+
+49
+00:02:37,000 --> 00:02:42,000
+if I can put them both into the same stabilizer subgroup.
+
+50
+00:02:42,000 --> 00:02:45,000
+So when I have a collection of stabilizers,
+
+51
+00:02:45,000 --> 00:02:49,000
+I guess I just erased this example of the short code,
+
+52
+00:02:49,000 --> 00:02:52,000
+but you always need a collection where everything in it
+
+53
+00:02:52,000 --> 00:02:53,000
+commutes.
+
+54
+00:02:53,000 --> 00:02:55,000
+Which means that they overlap.
+
+55
+00:02:55,000 --> 00:02:58,000
+The individual positions may anti-commute,
+
+56
+00:02:58,000 --> 00:03:01,000
+but it's always an even number of them that do for any pair.
+
+57
+00:03:01,000 --> 00:03:09,000
+So what does that look like when we write the polys this way?
+
+58
+00:03:09,000 --> 00:03:16,000
+So lets calculate p times p prime.
+
+59
+00:03:16,000 --> 00:03:17,000
+You can pull off the minus 1, this is minus 1
+
+60
+00:03:17,000 --> 00:03:20,000
+to the a plus a prime.
+
+61
+00:03:20,000 --> 00:03:28,000
+Then you have x to the a, z to the b, like this.
+
+62
+00:03:28,000 --> 00:03:29,000
+Right?
+
+63
+00:03:29,000 --> 00:03:34,000
+
+
+64
+00:03:34,000 --> 00:03:43,000
+Oh thanks, thanks, thanks, yeah, b c b c.
+
+65
+00:03:43,000 --> 00:03:45,000
+The a's are kind of irrelevant.
+
+66
+00:03:45,000 --> 00:03:47,000
+So I tend to forget them, but these
+
+67
+00:03:47,000 --> 00:03:52,000
+are b's and c's So let me try to write this in the standard form
+
+68
+00:03:52,000 --> 00:03:55,000
+that I used for the individual polys.
+
+69
+00:03:55,000 --> 00:04:00,000
+To do that I need to move this x past the z.
+
+70
+00:04:00,000 --> 00:04:02,000
+OK?
+
+71
+00:04:02,000 --> 00:04:06,000
+So how can I do that?
+
+72
+00:04:06,000 --> 00:04:11,000
+I can write z to the c, x to the b prime.
+
+73
+00:04:11,000 --> 00:04:12,000
+So let me expand that out.
+
+74
+00:04:12,000 --> 00:04:20,000
+That's z1 to the c1 through zn to the cn, x1 to the v1 prime
+
+75
+00:04:20,000 --> 00:04:24,000
+through xn to the bn prime.
+
+76
+00:04:24,000 --> 00:04:29,000
+And then on each individual qubit,
+
+77
+00:04:29,000 --> 00:04:35,000
+I can move the corresponding x past the corresponding z.
+
+78
+00:04:35,000 --> 00:04:35,000
+OK?
+
+79
+00:04:35,000 --> 00:04:40,000
+And in doing so, I may pick up a minus sign.
+
+80
+00:04:40,000 --> 00:04:43,000
+In fact, if there is both a z and an f present,
+
+81
+00:04:43,000 --> 00:04:45,000
+I will pick up a minus sign.
+
+82
+00:04:45,000 --> 00:04:48,000
+If they're both identity, or at least one of them is identity,
+
+83
+00:04:48,000 --> 00:04:50,000
+there will be no minus sign.
+
+84
+00:04:50,000 --> 00:04:56,000
+So when I move it past, I'm going to get x to the b prime,
+
+85
+00:04:56,000 --> 00:05:00,000
+z to the c, and then I pick up a minus sign
+
+86
+00:05:00,000 --> 00:05:02,000
+whenever they're both equal to 1.
+
+87
+00:05:02,000 --> 00:05:05,000
+So in other words, I have b1 prime times c1, 1,
+
+88
+00:05:05,000 --> 00:05:11,000
+plus dot, dot, dot, bn prime times cn prime.
+
+89
+00:05:11,000 --> 00:05:14,000
+Or I could just write this as minus 1
+
+90
+00:05:14,000 --> 00:05:20,000
+to the inner product of b prime with c, xb prime, z to the c.
+
+91
+00:05:20,000 --> 00:05:28,000
+
+
+92
+00:05:28,000 --> 00:05:31,000
+So the phase I get is the inner product of these vectors.
+
+93
+00:05:31,000 --> 00:05:32,000
+Mod two.
+
+94
+00:05:32,000 --> 00:05:37,000
+
+
+95
+00:05:37,000 --> 00:05:41,000
+I can go in the other direction as well, I can do p p prime.
+
+96
+00:05:41,000 --> 00:05:57,000
+And if I calculate this out, let me plug this in to pp prime
+
+97
+00:05:57,000 --> 00:05:58,000
+and then do it in the other order.
+
+98
+00:05:58,000 --> 00:06:02,000
+This is minus 1 to the a plus a prime,
+
+99
+00:06:02,000 --> 00:06:07,000
+plus this inner product, x to the b plus
+
+100
+00:06:07,000 --> 00:06:13,000
+b prime z to the c plus c prime.
+
+101
+00:06:13,000 --> 00:06:15,000
+So once I reverse the order of these,
+
+102
+00:06:15,000 --> 00:06:18,000
+this b prime just joins with x to the b.
+
+103
+00:06:18,000 --> 00:06:21,000
+You have x to the b times x to the b prime,
+
+104
+00:06:21,000 --> 00:06:23,000
+I would just get x to the b plus b prime.
+
+105
+00:06:23,000 --> 00:06:30,000
+Likewise, the z's combine, I get z to the c plus c prime,
+
+106
+00:06:30,000 --> 00:06:33,000
+and of course, the minus 1, the a plus a prime.
+
+107
+00:06:33,000 --> 00:06:35,000
+So in general, it looks like I just take the vectors a, b,
+
+108
+00:06:35,000 --> 00:06:39,000
+and c and I add them together, except there's this extra phase
+
+109
+00:06:39,000 --> 00:06:41,000
+term.
+
+110
+00:06:41,000 --> 00:06:43,000
+And that's kind of like when you multiply polys,
+
+111
+00:06:43,000 --> 00:06:46,000
+you can just keep track of the number x's and z's.
+
+112
+00:06:46,000 --> 00:06:51,000
+And those act as though they are abelian,
+
+113
+00:06:51,000 --> 00:06:56,000
+except there's this phase term that may be plus or minus.
+
+114
+00:06:56,000 --> 00:07:00,000
+So this extra phase term, depending
+
+115
+00:07:00,000 --> 00:07:03,000
+on the order that we multiply p and p prime in.
+
+116
+00:07:03,000 --> 00:07:07,000
+So if we do it in the other order, we do p prime p,
+
+117
+00:07:07,000 --> 00:07:10,000
+we can repeat the same calculation and we get minus 1
+
+118
+00:07:10,000 --> 00:07:13,000
+to the a plus a prime.
+
+119
+00:07:13,000 --> 00:07:15,000
+And now the inner product is going
+
+120
+00:07:15,000 --> 00:07:21,000
+to be between b and c prime.
+
+121
+00:07:21,000 --> 00:07:27,000
+And then we again get x to the b plus b prime, c to the c plus c
+
+122
+00:07:27,000 --> 00:07:29,000
+prime.
+
+123
+00:07:29,000 --> 00:07:42,000
+So we have these polys and we can represent them as vectors.
+
+124
+00:07:42,000 --> 00:07:46,000
+
+
+125
+00:07:46,000 --> 00:07:48,000
+And it's almost like we just add the two vectors together.
+
+126
+00:07:48,000 --> 00:07:49,000
+Right?
+
+127
+00:07:49,000 --> 00:07:51,000
+When you multiply these two polys,
+
+128
+00:07:51,000 --> 00:07:54,000
+it looks a lot like vector addition.
+
+129
+00:07:54,000 --> 00:07:58,000
+And if they completely commuted, you would have vector addition.
+
+130
+00:07:58,000 --> 00:07:59,000
+But they don't commute, and so you
+
+131
+00:07:59,000 --> 00:08:02,000
+have these extra phases here.
+
+132
+00:08:02,000 --> 00:08:07,000
+
+
+133
+00:08:07,000 --> 00:08:12,000
+OK, so we see that in p p prime you get one phase.
+
+134
+00:08:12,000 --> 00:08:14,000
+And p prime p, you get a different phase.
+
+135
+00:08:14,000 --> 00:08:18,000
+So to figure out whether p and p prime commute or anti-commute,
+
+136
+00:08:18,000 --> 00:08:19,000
+we should see whether these phases
+
+137
+00:08:19,000 --> 00:08:22,000
+are the same or different.
+
+138
+00:08:22,000 --> 00:08:32,000
+So if you calculate p times p prime,
+
+139
+00:08:32,000 --> 00:08:34,000
+let me think of how to put this.
+
+140
+00:08:34,000 --> 00:08:38,000
+
+
+141
+00:08:38,000 --> 00:08:39,000
+Right, so we can say that p times
+
+142
+00:08:39,000 --> 00:08:46,000
+p prime is equal to minus 1 to the b, this inner product.
+
+143
+00:08:46,000 --> 00:08:56,000
+
+
+144
+00:08:56,000 --> 00:09:02,000
+So let's compare these two terms, p p prime and p prime p,
+
+145
+00:09:02,000 --> 00:09:05,000
+they look almost the same except they differ in this phase term
+
+146
+00:09:05,000 --> 00:09:06,000
+here.
+
+147
+00:09:06,000 --> 00:09:08,000
+So this is what will tell us whether the p
+
+148
+00:09:08,000 --> 00:09:12,000
+and p prime commute or anti-commute.
+
+149
+00:09:12,000 --> 00:09:20,000
+So if this is zero, then they commute.
+
+150
+00:09:20,000 --> 00:09:24,000
+If it's 1, then they anti-commute.
+
+151
+00:09:24,000 --> 00:09:29,000
+
+
+152
+00:09:29,000 --> 00:09:32,000
+So it's kind of nice, we have it down
+
+153
+00:09:32,000 --> 00:09:35,000
+to a sum of two different inner products.
+
+154
+00:09:35,000 --> 00:09:40,000
+But there's a way to write this even as a single inner product.
+
+155
+00:09:40,000 --> 00:09:51,000
+So this sum of inner products here, b c prime plus c b prime,
+
+156
+00:09:51,000 --> 00:09:55,000
+I could also write it as b transpose c
+
+157
+00:09:55,000 --> 00:09:59,000
+transpose times this block matrix.
+
+158
+00:09:59,000 --> 00:10:09,000
+
+
+159
+00:10:09,000 --> 00:10:11,000
+So I have here the block vector b prime c
+
+160
+00:10:11,000 --> 00:10:14,000
+prime here b transpose c transpose, In the middle,
+
+161
+00:10:14,000 --> 00:10:17,000
+zero identity, identity zero.
+
+162
+00:10:17,000 --> 00:10:19,000
+And what this block matrix does, is
+
+163
+00:10:19,000 --> 00:10:23,000
+it makes the b here match up with the c prime,
+
+164
+00:10:23,000 --> 00:10:27,000
+and the c here, match up with the b prime.
+
+165
+00:10:27,000 --> 00:10:28,000
+OK?
+
+166
+00:10:28,000 --> 00:10:30,000
+So in this way I can write this as sort
+
+167
+00:10:30,000 --> 00:10:33,000
+of an inner product between the b c vector
+
+168
+00:10:33,000 --> 00:10:34,000
+and the b prime c prime vector.
+
+169
+00:10:34,000 --> 00:10:38,000
+
+
+170
+00:10:38,000 --> 00:10:44,000
+And this matrix in the middle, let me define it, lambda.
+
+171
+00:10:44,000 --> 00:10:47,000
+You could think of it as the matrix that
+
+172
+00:10:47,000 --> 00:10:50,000
+defines this inner product.
+
+173
+00:10:50,000 --> 00:10:52,000
+So let me write this one more time as,
+
+174
+00:10:52,000 --> 00:11:00,000
+bc transpose lambda b prime c prime.
+
+175
+00:11:00,000 --> 00:11:03,000
+So now this really just looks like a funny inner product
+
+176
+00:11:03,000 --> 00:11:07,000
+between the b c vector and the b prime c prime vector.
+
+177
+00:11:07,000 --> 00:11:12,000
+And again, if it's zero, if they're
+
+178
+00:11:12,000 --> 00:11:15,000
+orthogonal in this funny inner product, then they commute.
+
+179
+00:11:15,000 --> 00:11:19,000
+If it's 1, they anti-commute.
+
+180
+00:11:19,000 --> 00:11:23,000
+So this inner product is different than the usual one.
+
+181
+00:11:23,000 --> 00:11:25,000
+The usual one is, you just line up
+
+182
+00:11:25,000 --> 00:11:27,000
+the entries of one vector with the other one,
+
+183
+00:11:27,000 --> 00:11:32,000
+and you multiply each vector with its partner
+
+184
+00:11:32,000 --> 00:11:34,000
+entry in the other vector.
+
+185
+00:11:34,000 --> 00:11:38,000
+With this inner product we take the vectors in two blocks
+
+186
+00:11:38,000 --> 00:11:40,000
+and we switch the two blocks before doing
+
+187
+00:11:40,000 --> 00:11:41,000
+the regular inner product.
+
+188
+00:11:41,000 --> 00:11:46,000
+So the partner of each entry comes from the other block.
+
+189
+00:11:46,000 --> 00:11:53,000
+And this is called a symplectic inner product.
+
+190
+00:11:53,000 --> 00:11:56,000
+
+
+191
+00:11:56,000 --> 00:11:58,000
+The symplectic, I don't know where the word comes from,
+
+192
+00:11:58,000 --> 00:12:01,000
+but it means when you have this kind of block structure.
+
+193
+00:12:01,000 --> 00:12:04,000
+One place where this arises, if you
+
+194
+00:12:04,000 --> 00:12:06,000
+come from a physics background, is
+
+195
+00:12:06,000 --> 00:12:09,000
+in classical and quantum mechanics.
+
+196
+00:12:09,000 --> 00:12:13,000
+If the position and the momenta operators pair up in this way.
+
+197
+00:12:13,000 --> 00:12:15,000
+So position operators commute with each other.
+
+198
+00:12:15,000 --> 00:12:17,000
+momenta operators can move each other,
+
+199
+00:12:17,000 --> 00:12:21,000
+but they anti-commute in these similar sort
+
+200
+00:12:21,000 --> 00:12:26,000
+of pairs of the piece of i -th positioned coordinate
+
+201
+00:12:26,000 --> 00:12:29,000
+with the j-th momentum coordinate, get
+
+202
+00:12:29,000 --> 00:12:34,000
+matched up with a similar kind of symplectic inner product.
+
+203
+00:12:34,000 --> 00:12:35,000
+And if you come from a math background,
+
+204
+00:12:35,000 --> 00:12:37,000
+well you're probably fine with all sorts
+
+205
+00:12:37,000 --> 00:12:38,000
+of non-degenerate inner products.
+
+206
+00:12:38,000 --> 00:12:41,000
+So this is as good as any others.
+
+207
+00:12:41,000 --> 00:12:43,000
+And if you're from computer science,
+
+208
+00:12:43,000 --> 00:12:45,000
+I don't have anything good to say
+
+209
+00:12:45,000 --> 00:12:47,000
+about the symplectic inner product for you.
+
+210
+00:12:47,000 --> 00:12:48,000
+I'm sorry.
+
+211
+00:12:48,000 --> 00:12:50,000
+
+
+212
+00:12:50,000 --> 00:12:54,000
+Well, except it's with bits, so you should be happy.
+
+213
+00:12:54,000 --> 00:12:56,000
+So this inner product, it tells you
+
+214
+00:12:56,000 --> 00:13:02,000
+whether or not two things will commute or anti-commute.
+
+215
+00:13:02,000 --> 00:13:03,000
+Ah, good.
+
+216
+00:13:03,000 --> 00:13:06,000
+So usually when we say there's a symplectic inner product,
+
+217
+00:13:06,000 --> 00:13:08,000
+there's a minus i here.
+
+218
+00:13:08,000 --> 00:13:13,000
+And just to oblige you, I'll put a minus sign there.
+
+219
+00:13:13,000 --> 00:13:13,000
+What's that?
+
+220
+00:13:13,000 --> 00:13:19,000
+[INAUDIBLE]
+
+221
+00:13:19,000 --> 00:13:23,000
+Right, so this is f2, so plus and minus are the same.
+
+222
+00:13:23,000 --> 00:13:27,000
+But you're absolutely right in general symplectic form,
+
+223
+00:13:27,000 --> 00:13:29,000
+it has a minus sign.
+
+224
+00:13:29,000 --> 00:13:31,000
+And if you want to go to generalized
+
+225
+00:13:31,000 --> 00:13:34,000
+poly matrices to cue trips for example,
+
+226
+00:13:34,000 --> 00:13:39,000
+three-dimensional systems, then instead of minus 1 everywhere,
+
+227
+00:13:39,000 --> 00:13:40,000
+you get a third root of unity.
+
+228
+00:13:40,000 --> 00:13:42,000
+You know, the 2 pi i over 3.
+
+229
+00:13:42,000 --> 00:13:44,000
+And then you absolutely need the minus sign.
+
+230
+00:13:44,000 --> 00:13:50,000
+
+
+231
+00:13:50,000 --> 00:13:59,000
+If going beyond qubits, then you need this.
+
+232
+00:13:59,000 --> 00:14:00,000
+
+

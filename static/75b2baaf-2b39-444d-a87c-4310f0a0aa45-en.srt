@@ -1,0 +1,320 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:03,000
+Armed with this picture, we can now simplify it a little bit.
+
+2
+00:00:03,000 --> 00:00:07,000
+And we can move on to the Kraus operator picture.
+
+3
+00:00:07,000 --> 00:00:11,000
+So this isometry-- let's look at the isometry first.
+
+4
+00:00:11,000 --> 00:00:14,000
+The isometry map system A to B tensor E.
+
+5
+00:00:14,000 --> 00:00:29,000
+So let me fix a basis for system E, an orthonormal basis,
+
+6
+00:00:29,000 --> 00:00:30,000
+I should say.
+
+7
+00:00:30,000 --> 00:00:34,000
+
+
+8
+00:00:34,000 --> 00:00:37,000
+And in terms of this, let me partially
+
+9
+00:00:37,000 --> 00:00:42,000
+expand the isometry V. Let me write it as sum over e,
+
+10
+00:00:42,000 --> 00:00:49,000
+V e tensor cat e, where each V e is
+
+11
+00:00:49,000 --> 00:00:57,000
+a linear map from A to B. OK?
+
+12
+00:00:57,000 --> 00:01:09,000
+So I can write V as V1, V2, and so on.
+
+13
+00:01:09,000 --> 00:01:14,000
+Now, each are-- these are blocks,
+
+14
+00:01:14,000 --> 00:01:17,000
+sort of a block decomposition of V.
+
+15
+00:01:17,000 --> 00:01:21,000
+So what do we know about these blocks?
+
+16
+00:01:21,000 --> 00:01:23,000
+Well, the only thing we know about V
+
+17
+00:01:23,000 --> 00:01:24,000
+is that it's an isometry.
+
+18
+00:01:24,000 --> 00:01:25,000
+Right?
+
+19
+00:01:25,000 --> 00:01:27,000
+Otherwise it's completely arbitrary.
+
+20
+00:01:27,000 --> 00:01:30,000
+The isometry condition says identity
+
+21
+00:01:30,000 --> 00:01:33,000
+is equal to V dagger V. We can expand it out
+
+22
+00:01:33,000 --> 00:01:35,000
+in terms of this V sub e.
+
+23
+00:01:35,000 --> 00:01:46,000
+This is sum over e1, V e1 dagger, raw e1, sum e2, V
+
+24
+00:01:46,000 --> 00:01:49,000
+e 2 dagger cat e2.
+
+25
+00:01:49,000 --> 00:01:51,000
+We get a delta function on the e1, e2.
+
+26
+00:01:51,000 --> 00:01:54,000
+And so we get that identity is equal to sum over
+
+27
+00:01:54,000 --> 00:02:01,000
+e V e dagger V e.
+
+28
+00:02:01,000 --> 00:02:04,000
+
+
+29
+00:02:04,000 --> 00:02:08,000
+And so these are the conditions we have on the V sub e.
+
+30
+00:02:08,000 --> 00:02:18,000
+These are called the Kraus operator conditions.
+
+31
+00:02:18,000 --> 00:02:22,000
+And these V e can also be used to fully describe
+
+32
+00:02:22,000 --> 00:02:24,000
+how the channel acts.
+
+33
+00:02:24,000 --> 00:02:28,000
+So let's write down how this looks.
+
+34
+00:02:28,000 --> 00:02:33,000
+So remember, N of rho is trace over the environment of V rho V
+
+35
+00:02:33,000 --> 00:02:35,000
+dagger.
+
+36
+00:02:35,000 --> 00:02:39,000
+So we can write this out as partial trace of sum
+
+37
+00:02:39,000 --> 00:02:52,000
+over e1 e2 V e 1 rho V e 2 dagger tensor e1 e2.
+
+38
+00:02:52,000 --> 00:02:55,000
+
+
+39
+00:02:55,000 --> 00:02:57,000
+Now we can apply the partial trace.
+
+40
+00:02:57,000 --> 00:03:00,000
+Like the trace, the partial trace is linear,
+
+41
+00:03:00,000 --> 00:03:04,000
+and it acts only on the second system.
+
+42
+00:03:04,000 --> 00:03:11,000
+The partial trace here gives us [? raw ?] e2 times cat e1.
+
+43
+00:03:11,000 --> 00:03:15,000
+These are orthonormal, so it gives us a delta function.
+
+44
+00:03:15,000 --> 00:03:24,000
+So we obtain sum over e, V e rho V e dagger.
+
+45
+00:03:24,000 --> 00:03:26,000
+Let me write again, N of rho is equal to this.
+
+46
+00:03:26,000 --> 00:03:32,000
+
+
+47
+00:03:32,000 --> 00:03:35,000
+And this gives us a nice, simple way
+
+48
+00:03:35,000 --> 00:03:37,000
+of describing the action of a quantum channel.
+
+49
+00:03:37,000 --> 00:03:42,000
+
+
+50
+00:03:42,000 --> 00:03:45,000
+Let me call this actually description number
+
+51
+00:03:45,000 --> 00:03:51,000
+two, the Kraus operator decomposition of a channel.
+
+52
+00:03:51,000 --> 00:04:02,000
+And these V sub e are called Kraus operators.
+
+53
+00:04:02,000 --> 00:04:06,000
+There's a few things about this that are appealing.
+
+54
+00:04:06,000 --> 00:04:09,000
+One of the key ones is that, for the isometry picture,
+
+55
+00:04:09,000 --> 00:04:12,000
+we had to invoke this extra system, which then
+
+56
+00:04:12,000 --> 00:04:14,000
+got thrown away at the end.
+
+57
+00:04:14,000 --> 00:04:18,000
+Kraus operators, these V sub e, are just maps from A
+
+58
+00:04:18,000 --> 00:04:21,000
+to B. Kind of directly involving the systems
+
+59
+00:04:21,000 --> 00:04:23,000
+that you care about.
+
+60
+00:04:23,000 --> 00:04:28,000
+And the formula is also in a sense simpler.
+
+61
+00:04:28,000 --> 00:04:30,000
+It's almost the simplest thing you
+
+62
+00:04:30,000 --> 00:04:34,000
+could have after mapping rho to U rho U dagger.
+
+63
+00:04:34,000 --> 00:04:36,000
+This is what you get from unitary operations.
+
+64
+00:04:36,000 --> 00:04:39,000
+It says, it's just a sum over things
+
+65
+00:04:39,000 --> 00:04:40,000
+that have that basic form.
+
+66
+00:04:40,000 --> 00:04:43,000
+
+
+67
+00:04:43,000 --> 00:04:48,000
+The difference, of course, is that the isometry condition,
+
+68
+00:04:48,000 --> 00:04:50,000
+or the unitary condition, looks rather different.
+
+69
+00:04:50,000 --> 00:04:52,000
+If I have a single Kraus operator,
+
+70
+00:04:52,000 --> 00:04:55,000
+there was no sum in other words, if you would just
+
+71
+00:04:55,000 --> 00:04:58,000
+say that that Kraus operator is an isometry.
+
+72
+00:04:58,000 --> 00:05:00,000
+But if I have many of them, then the individual ones
+
+73
+00:05:00,000 --> 00:05:02,000
+do not have to be isometries.
+
+74
+00:05:02,000 --> 00:05:03,000
+In general, they will not be.
+
+75
+00:05:03,000 --> 00:05:07,000
+They don't even have to be full rank.
+
+76
+00:05:07,000 --> 00:05:09,000
+They can be whatever you like as long as they add up
+
+77
+00:05:09,000 --> 00:05:10,000
+to the identity.
+
+78
+00:05:10,000 --> 00:05:14,000
+So you have a lot of freedom in the individual Kraus operators,
+
+79
+00:05:14,000 --> 00:05:19,000
+
+

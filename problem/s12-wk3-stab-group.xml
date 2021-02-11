@@ -1,0 +1,86 @@
+<problem linenum="333" tex_filename="./week3_4_ps2a.tex" attempts="10" display_name="Groups and generators" max_attempts="10">
+  <script>
+import qpython4
+qpython4.define_qpython4_globals(globals())
+
+
+</script>
+  <script>
+#-----------------------------------------------------------------------------
+# symbolic quantum circuit checking using sympy.physics.quantum
+
+#import tutor.python_lib.qpython as qpython
+# from tutor.python_lib.qpython import check_stabilizer_state
+# from tutor.python_lib.qpython import check_stabilizer_equality
+# from tutor.python_lib.qpython import check_stabilizer_generators
+# from tutor.python_lib.qpython import check_graph_state_stabilizer
+# from tutor.python_lib.qpython import check_graph_state_stabilizer_given_amat
+# from tutor.python_lib.qpython import test_state_orthogonality
+# from tutor.python_lib.qpython import compare_stabilizer_set
+# from tutor.python_lib.qpython import check_stabilizer_equality_and_minimal
+# from tutor.python_lib.qpython import check_graph_isomorphism_amat
+# from tutor.python_lib.qpython import check_stabilizer_code_bad_error
+# from tutor.python_lib.qpython import check_stabilizer_normalizer
+# from tutor.python_lib.qpython import check_stabilizer_one_normalizer
+# from tutor.python_lib.qpython import check_stabilizer_bad_clifford
+# from tutor.python_lib.qpython import check_clifford_group_equivalence
+
+def test_stab_and_ortho(expect,ans,adict):
+    ret = check_stabilizer_state(expect,ans)
+    if not ret['ok']:
+        return ret
+    try:
+        s1s = adict['state1']
+    except Exception as err:
+        msg = '&lt;p&gt;Error %s' % err
+        msg += '&lt;br&gt;Failed to get your input for the state [mathjaxinline]|0_L\rangle[mathjaxinline] which should have been above'
+        return {'ok':False,'msg':msg}
+
+    return test_state_orthogonality(s1s,ans)
+
+</script>
+  <p>
+Stabilizers are a powerful way to describe quantum states and transformations. In this problem we explore some basic properties of stabilizer sets, which arise from the fact that a stabilizer is an <a href="http://en.wikipedia.org/wiki/Abelian_group" target="_blank">Abelian group</a>. </p>
+  <p>
+Recall that if an [mathjaxinline]n[/mathjaxinline]-qubit state [mathjaxinline]|\psi \rangle[/mathjaxinline] is stabilized by [mathjaxinline]{\cal S} = \langle  g_1, g_2, \ldots , g_ n \rangle[/mathjaxinline], then [mathjaxinline]g|\psi \rangle  = |\psi \rangle[/mathjaxinline] for all [mathjaxinline]g\in S[/mathjaxinline]. To verify that [mathjaxinline]{\cal S}[/mathjaxinline] is an abelian group, we can observe that: </p>
+  <ul class="itemize">
+    <li>
+      <p>
+[mathjaxinline]I^{\otimes n}[/mathjaxinline] is the identity element </p>
+    </li>
+    <li>
+      <p>
+[mathjaxinline]g[/mathjaxinline] has an inverse: [mathjaxinline]gg^\dagger = I^{\otimes n}[/mathjaxinline] (up to factors of [mathjaxinline]\pm 1[/mathjaxinline] and [mathjaxinline]\pm i[/mathjaxinline], [mathjaxinline]g^\dagger = g[/mathjaxinline]) </p>
+    </li>
+    <li>
+      <p>
+Multiplication of stabilizer elements is commutative and associative </p>
+    </li>
+    <li>
+      <p>
+The set is closed under multiplication </p>
+    </li>
+  </ul>
+  <p>
+ In fact, [mathjaxinline]{\cal S}[/mathjaxinline] is a subgroup of the Pauli group, distinguished by an important fact: all elements of the stabilizer must commute with each other. It is because of this that all of the elements may share simultaneous eigenvectors. </p>
+  <p>
+You are given that [mathjaxinline]{\cal S} = \{ {\tt XXIZ}, {\tt YXIY}, {\tt IZIX}, {\tt ZZII}, {\tt -YYIZ}, {\tt XYIY}, {\tt ZIIX}, {\tt IIII}\}[/mathjaxinline]. Give a minimal list of elements of [mathjaxinline]{\cal S}[/mathjaxinline] which can be combined by multiplication to produce all of the elements in [mathjaxinline]{\cal S}[/mathjaxinline]. We say that such a list is a set of <em>generators</em> of [mathjaxinline]{\cal S}[/mathjaxinline]: </p>
+  <p>
+    <customresponse cfn="check_stabilizer_equality_and_minimal" expect="See solutions" options="ngen=3;expect=[IIII, IZIX, XXIZ, YXIY, XYIY, -YYIZ, ZIIX, ZZII]" cfn_extra_args="options">
+      <textline size="60" correct_answer="See solutions"/>
+    </customresponse>
+  </p>
+  <p>
+    <solution>
+      <p>
+        <b>Solution:</b>
+      </p>
+      <span>
+        <p>
+[mathjaxinline]\log _2(|{\cal S}|)=3[/mathjaxinline], so in this case there should be three nontrivial (ie non-identity) elements in the generator set. For example, it suffices to choose <tt class="tt">[XXIZ, YXIY, IZIX]</tt>. </p>
+        <p>
+A good way to think about this is to understand that each generator splits the stabilizer space by half. </p>
+      </span>
+    </solution>
+  </p>
+</problem>

@@ -1,0 +1,27 @@
+<problem linenum="255" tex_filename="./week3_review1.tex" attempts="1" display_name="Quantum versus classical error correction" max_attempts="1">
+  <p>
+This is a concept question, provided to check your understanding of the previous video clip. </p>
+  <p>
+Prof. Chuang described in lecture three conceptual challenges faced by <a href="https://en.wikipedia.org/wiki/Quantum_error_correction" target="_blank">quantum error correction</a>. Which of the following statements comparing classical and quantum error correction, are correct? Check all that apply: </p>
+  <p>
+    <choiceresponse>
+      <checkboxgroup>
+        <choice correct="false" name="1">
+          <text>Quantum codes use repetition as the essential idea of error correction, encoding [mathjaxinline]|\psi \rangle[/mathjaxinline] as [mathjaxinline]|\psi \rangle |\psi \rangle |\psi \rangle[/mathjaxinline], just as is done with classical codes.</text>
+        </choice>
+        <choice correct="false" name="2">
+          <text>Any [mathjaxinline][n,k,d][/mathjaxinline] classical code can be used to construct a quantum [mathjaxinline][[n,k]][/mathjaxinline] code which corrects [mathjaxinline]d[/mathjaxinline] single qubit errors.</text>
+        </choice>
+        <choice correct="false" name="3">
+          <text>Quantum error correction codes only correct bit and phase flips, and not continuous rotation errors.</text>
+        </choice>
+        <choice correct="true" name="4">
+          <text>Quantum parity check measurements measure the error without gaining information about the encoded quantum state.</text>
+        </choice>
+        <choice correct="false" name="5">
+          <text>The three-qubit bit-flip code states [mathjaxinline]a|000\rangle +b|111\rangle[/mathjaxinline] are analogous to the classical repetition code, and are not entangled states.</text>
+        </choice>
+      </checkboxgroup>
+    </choiceresponse>
+  </p>
+</problem>

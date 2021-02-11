@@ -1,0 +1,316 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:00,000
+All right.
+
+2
+00:00:00,000 --> 00:00:02,000
+Let me begin by talking about classical codes.
+
+3
+00:00:02,000 --> 00:00:13,000
+The way they work is that there is an encoding map which,
+
+4
+00:00:13,000 --> 00:00:20,000
+let's say it takes k bits that you want to protect,
+
+5
+00:00:20,000 --> 00:00:22,000
+maps them into n bits that you're
+
+6
+00:00:22,000 --> 00:00:25,000
+going to use to encode them.
+
+7
+00:00:25,000 --> 00:00:28,000
+So usually, so ng bigger than k, because you're
+
+8
+00:00:28,000 --> 00:00:33,000
+adding some redundancy in order to protect the information,
+
+9
+00:00:33,000 --> 00:00:37,000
+then there'll be some noise process, which we
+
+10
+00:00:37,000 --> 00:00:39,000
+would like to protect against.
+
+11
+00:00:39,000 --> 00:00:42,000
+And there's a few different models for the noise.
+
+12
+00:00:42,000 --> 00:00:50,000
+So it could be one model is that the noise is random.
+
+13
+00:00:50,000 --> 00:00:54,000
+
+
+14
+00:00:54,000 --> 00:01:01,000
+So for example, we could flip each bit
+
+15
+00:01:01,000 --> 00:01:05,000
+with independent probability p.
+
+16
+00:01:05,000 --> 00:01:07,000
+So each bit, you know, is either probability
+
+17
+00:01:07,000 --> 00:01:10,000
+p flipped, 1 minus p left alone, do that independently
+
+18
+00:01:10,000 --> 00:01:15,000
+for each bit, or, we could also consider worst-case noise.
+
+19
+00:01:15,000 --> 00:01:17,000
+
+
+20
+00:01:17,000 --> 00:01:32,000
+So, for example, any error on, up to l positions.
+
+21
+00:01:32,000 --> 00:01:34,000
+So those are the types of noise that we'd
+
+22
+00:01:34,000 --> 00:01:35,000
+like to guard against.
+
+23
+00:01:35,000 --> 00:01:37,000
+
+
+24
+00:01:37,000 --> 00:01:52,000
+And then, in the end, we do a decoding map,
+
+25
+00:01:52,000 --> 00:01:57,000
+which takes our corrupted code word, so we have n bit string,
+
+26
+00:01:57,000 --> 00:01:59,000
+some noise happens to this n bit string,
+
+27
+00:01:59,000 --> 00:02:03,000
+we get an n bit string which has,
+
+28
+00:02:03,000 --> 00:02:06,000
+you know, the encoding plus noise.
+
+29
+00:02:06,000 --> 00:02:07,000
+And we'd like to decode it.
+
+30
+00:02:07,000 --> 00:02:10,000
+In other words, infer the original message.
+
+31
+00:02:10,000 --> 00:02:11,000
+OK?
+
+32
+00:02:11,000 --> 00:02:13,000
+So that's the structure of a classical error correcting
+
+33
+00:02:13,000 --> 00:02:14,000
+code.
+
+34
+00:02:14,000 --> 00:02:16,000
+
+
+35
+00:02:16,000 --> 00:02:23,000
+And you almost always have this model for a code.
+
+36
+00:02:23,000 --> 00:02:26,000
+Then, we would have liked to have some conditions.
+
+37
+00:02:26,000 --> 00:02:27,000
+We'd like to say that it does--
+
+38
+00:02:27,000 --> 00:02:29,000
+it has some properties.
+
+39
+00:02:29,000 --> 00:02:36,000
+Crucially, it should correct, depending on this model,
+
+40
+00:02:36,000 --> 00:02:44,000
+either most, or all errors, right?
+
+41
+00:02:44,000 --> 00:02:46,000
+So if you have random noise, like I
+
+42
+00:02:46,000 --> 00:02:50,000
+flip each bit with probability p, any pattern of bit flips
+
+43
+00:02:50,000 --> 00:02:51,000
+is possible.
+
+44
+00:02:51,000 --> 00:02:53,000
+But some are very unlikely.
+
+45
+00:02:53,000 --> 00:02:56,000
+So I would just like to correct the most likely patterns of bit
+
+46
+00:02:56,000 --> 00:02:57,000
+flips.
+
+47
+00:02:57,000 --> 00:02:59,000
+Maybe that the chance that there's an uncorrected error
+
+48
+00:02:59,000 --> 00:03:03,000
+should be less 10 to the minus 6, then I'm happy.
+
+49
+00:03:03,000 --> 00:03:05,000
+In the worst case model, I'm not modeling any probabilities.
+
+50
+00:03:05,000 --> 00:03:07,000
+I'm just saying, here's a set of errors.
+
+51
+00:03:07,000 --> 00:03:09,000
+I want to make sure if anything in the set happens,
+
+52
+00:03:09,000 --> 00:03:10,000
+I'm able to correct it.
+
+53
+00:03:10,000 --> 00:03:13,000
+In that case, you have to correct all errors in the set.
+
+54
+00:03:13,000 --> 00:03:14,000
+Right?
+
+55
+00:03:14,000 --> 00:03:18,000
+Whichever error happens, you can correct it.
+
+56
+00:03:18,000 --> 00:03:20,000
+So those are the basic requirements for a code.
+
+57
+00:03:20,000 --> 00:03:25,000
+
+
+58
+00:03:25,000 --> 00:03:28,000
+There are many optional extras that we'd like to consider.
+
+59
+00:03:28,000 --> 00:03:33,000
+
+
+60
+00:03:33,000 --> 00:03:35,000
+Computational efficiency is probably
+
+61
+00:03:35,000 --> 00:03:37,000
+one of the biggest ones, so we'd like
+
+62
+00:03:37,000 --> 00:03:40,000
+to be able to do the encoding in a computationally-efficient
+
+63
+00:03:40,000 --> 00:03:43,000
+way, do the decoding in an efficient way.
+
+64
+00:03:43,000 --> 00:03:46,000
+What efficient is might depend on our model, right?
+
+65
+00:03:46,000 --> 00:03:48,000
+So it depends, if we have a classical computer,
+
+66
+00:03:48,000 --> 00:03:50,000
+efficient might mean it doesn't run in too much time.
+
+67
+00:03:50,000 --> 00:03:53,000
+Later, we'll talk about quantum codes,
+
+68
+00:03:53,000 --> 00:03:56,000
+and efficient there might mean I only make local measurements.
+
+69
+00:03:56,000 --> 00:03:58,000
+I don't have to entangle them with acute bits,
+
+70
+00:03:58,000 --> 00:04:02,000
+the acute bits are very far away, in order to decode it.
+
+71
+00:04:02,000 --> 00:04:05,000
+So efficiency is a long story, which I will
+
+72
+00:04:05,000 --> 00:04:08,000
+I will not get into right now.
+
+73
+00:04:08,000 --> 00:04:13,000
+But it's definitely one other big consideration.
+
+74
+00:04:13,000 --> 00:04:16,000
+And, you know, it's a big field.
+
+75
+00:04:16,000 --> 00:04:17,000
+There are other considerations as well,
+
+76
+00:04:17,000 --> 00:04:21,000
+but this is kind of the very high-level picture
+
+77
+00:04:21,000 --> 00:04:23,000
+of classical codes.
+
+78
+00:04:23,000 --> 00:04:24,000
+
+

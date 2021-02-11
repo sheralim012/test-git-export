@@ -1,0 +1,27 @@
+<problem linenum="195" tex_filename="./week3_review1.tex" attempts="1" display_name="The nine-qubit quantum error correction code" max_attempts="1">
+  <p>
+This is a concept question, provided to check your understanding of the previous video clip. </p>
+  <p>
+Which of the following statements about the the <a href="https://en.wikipedia.org/wiki/Shor_code" target="_blank">nine-qubit Shor code</a> are correct? Check all that apply: </p>
+  <p>
+    <choiceresponse>
+      <checkboxgroup>
+        <choice correct="true" name="1">
+          <text>The nine-qubit code encodes one qubit and corrects both bit- and phase-flip errors on any single qubit.</text>
+        </choice>
+        <choice correct="true" name="2">
+          <text>The nine-qubit code is a concatenation of two three-qubit codes.</text>
+        </choice>
+        <choice correct="false" name="3">
+          <text>The nine-qubit code corrects bit- and phase-flip errors, but not both.</text>
+        </choice>
+        <choice correct="false" name="4">
+          <text>The nine-qubit code corrects bit- and phase-flip errors, but not arbitrary single qubit rotations.</text>
+        </choice>
+        <choice correct="true" name="5">
+          <text>The nine-qubit code corrects a single qubit depolarizing channel error.</text>
+        </choice>
+      </checkboxgroup>
+    </choiceresponse>
+  </p>
+</problem>

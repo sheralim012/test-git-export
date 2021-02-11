@@ -1,0 +1,228 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:07,000
+In 8.371, we're going to talk about how to think about noise.
+
+2
+00:00:07,000 --> 00:00:10,000
+So noise is fundamental for classical and quantum
+
+3
+00:00:10,000 --> 00:00:11,000
+computing.
+
+4
+00:00:11,000 --> 00:00:15,000
+If your cell phone sends a message to the cell tower,
+
+5
+00:00:15,000 --> 00:00:18,000
+then your cell phone is using error correcting codes
+
+6
+00:00:18,000 --> 00:00:20,000
+to protect the information.
+
+7
+00:00:20,000 --> 00:00:24,000
+For quantum computing, this is an even more necessary part
+
+8
+00:00:24,000 --> 00:00:27,000
+of building a quantum computer.
+
+9
+00:00:27,000 --> 00:00:31,000
+The reason why after quantum computers were proposed
+
+10
+00:00:31,000 --> 00:00:33,000
+and people have been working on it in the lab for a long time,
+
+11
+00:00:33,000 --> 00:00:35,000
+we still don't have them is because
+
+12
+00:00:35,000 --> 00:00:39,000
+of the difficulty of contending with noise and quantum systems.
+
+13
+00:00:39,000 --> 00:00:44,000
+So this is a central part of building
+
+14
+00:00:44,000 --> 00:00:47,000
+a quantum computer is dealing with noise,
+
+15
+00:00:47,000 --> 00:00:49,000
+and what you can do with quantum error
+
+16
+00:00:49,000 --> 00:00:53,000
+correcting codes also connects to many other interesting
+
+17
+00:00:53,000 --> 00:00:56,000
+fields, such as topological order in condensed matter
+
+18
+00:00:56,000 --> 00:01:00,000
+systems, understanding quantum key distribution,
+
+19
+00:01:00,000 --> 00:01:02,000
+a number of things where the connection is not
+
+20
+00:01:02,000 --> 00:01:04,000
+at all immediately obvious.
+
+21
+00:01:04,000 --> 00:01:15,000
+So we will talk about error correction in greater detail,
+
+22
+00:01:15,000 --> 00:01:22,000
+and fault tolerance, fault tolerant quantum computing.
+
+23
+00:01:22,000 --> 00:01:25,000
+
+
+24
+00:01:25,000 --> 00:01:33,000
+We will also study quantum complexity theory,
+
+25
+00:01:33,000 --> 00:01:36,000
+which is the study of which problems
+
+26
+00:01:36,000 --> 00:01:39,000
+are amenable to quantum speed up, and which problems are not.
+
+27
+00:01:39,000 --> 00:01:43,000
+One particular topic, which is becoming experimentally
+
+28
+00:01:43,000 --> 00:01:44,000
+relevant today which we'll cover,
+
+29
+00:01:44,000 --> 00:01:49,000
+is quantum supremacy, which is the goal of building a quantum
+
+30
+00:01:49,000 --> 00:01:52,000
+computer that can do something that no classical computer can,
+
+31
+00:01:52,000 --> 00:01:55,000
+and in a sense this is always the goal of quantum computing.
+
+32
+00:01:55,000 --> 00:01:58,000
+Quantum supremacy focuses on achieving this
+
+33
+00:01:58,000 --> 00:02:01,000
+with a circuit that may not be useful for anything else.
+
+34
+00:02:01,000 --> 00:02:06,000
+It's sort of the very first bar that a post classical computer
+
+35
+00:02:06,000 --> 00:02:08,000
+can achieve.
+
+36
+00:02:08,000 --> 00:02:10,000
+And complexity theory lets you achieve
+
+37
+00:02:10,000 --> 00:02:13,000
+this in a way that is, I think, rather surprising.
+
+38
+00:02:13,000 --> 00:02:17,000
+It let's make a somewhat indirect argument about why
+
+39
+00:02:17,000 --> 00:02:21,000
+some very near-term quantum circuits cannot be simulated.
+
+40
+00:02:21,000 --> 00:02:23,000
+So we'll talk about that next.
+
+41
+00:02:23,000 --> 00:02:29,000
+We'll talk about more advanced quantum algorithms.
+
+42
+00:02:29,000 --> 00:02:33,000
+So we'll talk about quantum walks, Hamiltonian simulation,
+
+43
+00:02:33,000 --> 00:02:39,000
+linear system of equations, and other quantum algorithms.
+
+44
+00:02:39,000 --> 00:02:47,000
+And finally, we'll talk about quantum information theory.
+
+45
+00:02:47,000 --> 00:02:50,000
+And so many of the breakthroughs of classical information
+
+46
+00:02:50,000 --> 00:02:52,000
+theory from Shannon, such as using entropy
+
+47
+00:02:52,000 --> 00:02:56,000
+to describe compression, and noisy channel coding,
+
+48
+00:02:56,000 --> 00:02:59,000
+all have quantum analogs, and these
+
+49
+00:02:59,000 --> 00:03:02,000
+are useful not only for dealing with quantum noise,
+
+50
+00:03:02,000 --> 00:03:05,000
+but also have connections to things like condensed matter
+
+51
+00:03:05,000 --> 00:03:08,000
+theory, understanding the holographic principle
+
+52
+00:03:08,000 --> 00:03:10,000
+for black holes.
+
+53
+00:03:10,000 --> 00:03:12,000
+There's increasingly wide ranging applications
+
+54
+00:03:12,000 --> 00:03:17,000
+of quantum information theory, which I will briefly allude to,
+
+55
+00:03:17,000 --> 00:03:19,000
+but mostly I'll give you the foundations of this field
+
+56
+00:03:19,000 --> 00:03:22,000
+
+

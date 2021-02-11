@@ -1,0 +1,82 @@
+<problem linenum="368" tex_filename="./week2_ps2.tex" attempts="10" display_name="TM1. TPCP maps are quantum operations (1 of 3)" max_attempts="10">
+  <p>
+In this problem we will show that if [mathjaxinline]\mathcal{N}[/mathjaxinline] is a trace-preserving (TP), completely positive (CP) linear map on [mathjaxinline]L(A)[/mathjaxinline] then it is a valid quantum operation (i.e. has a Kraus decomposition). </p>
+  <p>
+Let [mathjaxinline]d=\dim A[/mathjaxinline] and define another system [mathjaxinline]R[/mathjaxinline] (for “reference") also of dimension [mathjaxinline]d[/mathjaxinline]. Define [mathjaxinline]|{\Phi }\rangle  := \frac{1}{\sqrt{d}}\sum _{i=1}^{d} |{i}\rangle _ A \otimes |{i}\rangle _ R[/mathjaxinline] and write the corresponding density matrix as [mathjaxinline]\Phi = \left|\Phi \right\rangle \left\langle \Phi \right|[/mathjaxinline]. Define the Choi-Jamiołkowski state </p>
+  <table id="a0000000011" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto">
+    <tr>
+      <td class="equation" style="width:80%; border:none">[mathjax]J(\mathcal{N}) := (\mathcal{N}_ A \otimes {\rm id}_ R)(\Phi ).[/mathjax]</td>
+      <td class="eqnnum" style="width:20%; border:none;text-align:right">(1.4)</td>
+    </tr>
+  </table>
+  <p>
+We would like to show that if [mathjaxinline]\mathcal{N}[/mathjaxinline] is a TPCP linear map then [mathjaxinline]J(\mathcal{N})[/mathjaxinline] is a valid density matrix. The argument has two parts: first, [mathjaxinline]J(\mathcal{N})[/mathjaxinline] must have nonnegative eigenvalues. This argument is simple. </p>
+  <span>
+    <customresponse>
+      <drag_and_drop_input img="/static/images/ps1a_tcp1a2/ps1a_tcp1a2_dnd.png" target_outline="false" one_per_target="true" no_labels="true" label_bg_color="rgb(222, 139, 238)">
+        <draggable id="rmpositivesemidefinite" icon="/static/images/ps1a_tcp1a2/ps1a_tcp1a2_dnd_label1.png" can_reuse="true"/>
+        <draggable id="rmpositive" icon="/static/images/ps1a_tcp1a2/ps1a_tcp1a2_dnd_label2.png" can_reuse="true"/>
+        <draggable id="rmtracepreserving" icon="/static/images/ps1a_tcp1a2/ps1a_tcp1a2_dnd_label3.png" can_reuse="true"/>
+        <draggable id="rmlinear" icon="/static/images/ps1a_tcp1a2/ps1a_tcp1a2_dnd_label4.png" can_reuse="true"/>
+        <draggable id="rmcompletelypositive" icon="/static/images/ps1a_tcp1a2/ps1a_tcp1a2_dnd_label5.png" can_reuse="true"/>
+        <target id="2" x="307" y="0" w="251" h="62"/>
+        <target id="1" x="6" y="81" w="250" h="62"/>
+        <target id="6" x="555" y="81" w="251" h="62"/>
+      </drag_and_drop_input>
+      <answer>
+caset = [{'rmpositivesemidefinite': '2'}, {'rmcompletelypositive': '1'}, {'rmpositivesemidefinite': '6'}]
+# custom checking for reusable labels - assumes all targets get some label
+import json
+ans = json.loads(submission[0])
+correct = ['correct']
+for rule in caset:
+    if rule not in ans:
+        correct = ['incorrect']
+        break
+
+# use this for debugging
+# messages = ['ans=%s' % submission[0]]
+</answer>
+    </customresponse>
+    <solution>
+      <img src="/static/images/ps1a_tcp1a2/ps1a_tcp1a2_dnd_sol_XIJR1A.png"/>
+    </solution>
+  </span>
+  <p>
+Second, the trace of [mathjaxinline]J(\mathcal{N})[/mathjaxinline] must be one. Complete the following calculation to show that fact: </p>
+  <span>
+    <customresponse>
+      <drag_and_drop_input img="/static/images/ps1a_tcp1/ps1a_tcp1_dnd.png" target_outline="false" one_per_target="true" no_labels="true" label_bg_color="rgb(222, 139, 238)">
+        <draggable id="ketiAbrajA" icon="/static/images/ps1a_tcp1/ps1a_tcp1_dnd_label1.png" can_reuse="true"/>
+        <draggable id="ketiRbrajR" icon="/static/images/ps1a_tcp1/ps1a_tcp1_dnd_label2.png" can_reuse="true"/>
+        <draggable id="idR" icon="/static/images/ps1a_tcp1/ps1a_tcp1_dnd_label3.png" can_reuse="true"/>
+        <draggable id="cNA" icon="/static/images/ps1a_tcp1/ps1a_tcp1_dnd_label4.png" can_reuse="true"/>
+        <target id="2" x="248" y="47" w="110" h="63"/>
+        <target id="1" x="407" y="47" w="110" h="63"/>
+        <target id="5" x="248" y="147" w="110" h="62"/>
+        <target id="3" x="385" y="147" w="111" h="62"/>
+        <target id="4" x="554" y="147" w="111" h="62"/>
+        <target id="6" x="242" y="246" w="111" h="63"/>
+        <target id="7" x="380" y="246" w="110" h="63"/>
+        <target id="8" x="556" y="246" w="111" h="63"/>
+      </drag_and_drop_input>
+      <answer>
+caset = [{'cNA': '2'}, {'idR': '1'}, {'cNA': '5'}, {'ketiAbrajA': '3'}, {'ketiRbrajR': '4'}, {'cNA': '6'}, {'ketiAbrajA': '7'}, {'ketiRbrajR': '8'}]
+# custom checking for reusable labels - assumes all targets get some label
+import json
+ans = json.loads(submission[0])
+correct = ['correct']
+for rule in caset:
+    if rule not in ans:
+        correct = ['incorrect']
+        break
+
+# use this for debugging
+# messages = ['ans=%s' % submission[0]]
+</answer>
+    </customresponse>
+    <solution>
+      <img src="/static/images/ps1a_tcp1/ps1a_tcp1_dnd_sol_STR5C7.png"/>
+    </solution>
+  </span>
+</problem>

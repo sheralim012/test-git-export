@@ -1,0 +1,39 @@
+<problem linenum="108" tex_filename="./week2_ps2.tex" attempts="10" display_name="TD1. Trace distance (1 of 4)" max_attempts="10">
+  <p>
+Suppose that you are given one of two possible [mathjaxinline]d[/mathjaxinline]-dimensional states [mathjaxinline]\sigma _1[/mathjaxinline] or [mathjaxinline]\sigma _2[/mathjaxinline], with probabilities [mathjaxinline]p_1[/mathjaxinline] and [mathjaxinline]p_2=1-p_1[/mathjaxinline] respectively. Your task is to perform a two-outcome measurement and then try to guess which state you had been given, minimizing the probability of error. </p>
+  <p>
+If the measurement elements are nonnegative Hermitian matrices [mathjaxinline]M_1 = M[/mathjaxinline] and [mathjaxinline]M_2=I-M[/mathjaxinline] then the probability of guessing wrong is </p>
+  <table id="a0000000005" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto">
+    <tr>
+      <td class="equation" style="width:80%; border:none">[mathjax]P_{\text err} = p_1 {\rm Tr}(\sigma _1 M_2) + p_2 {\rm Tr}(\sigma _2 M_1).[/mathjax]</td>
+      <td class="eqnnum" style="width:20%; border:none"> </td>
+    </tr>
+  </table>
+  <p>
+Find an operator [mathjaxinline]\Delta[/mathjaxinline] such that </p>
+  <table id="a0000000006" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto">
+    <tr>
+      <td class="equation" style="width:80%; border:none">[mathjax]P_{\text err} = p_1 + {\rm Tr}[M\Delta ].[/mathjax]</td>
+      <td class="eqnnum" style="width:20%; border:none"> </td>
+    </tr>
+  </table>
+  <p>
+Please enter math symbols using <a href="http://asciimath.org/" target="_blank">asciimath-like conventions</a>, e.g. [mathjaxinline]\sigma _1[/mathjaxinline] as [mathjaxinline]{\tt sigma\_ 1}[/mathjaxinline]. Please make sure to explicitly denote multiplication operations, e.g. [mathjaxinline]x + 2y[/mathjaxinline] should be entered as [mathjaxinline]{\tt x + 2 * y}[/mathjaxinline], and [mathjaxinline]x(1-y)[/mathjaxinline] should be entered as [mathjaxinline]{\tt x * (1-y)}[/mathjaxinline]. </p>
+  <script>
+from sympy_check import *
+
+</script>
+  <script linenum="143" filename="./week2_ps2.tex" type="text/python" system_path="python_lib">
+
+def ps1a_td4_check(expect, ans, options=None):
+    newans = ans.replace("p_2", "(1-p_1)")
+    return sympy_check_quantum(expect, newans, options)
+
+</script>
+  <p>
+    <p style="display:inline">[mathjaxinline]\Delta =[/mathjaxinline]</p>
+    <customresponse cfn="ps1a_td4_check" inline="1" expect="(1-p_1) * sigma_2 - p_1 * sigma_1">
+      <textline correct_answer="(1-p_1) * sigma_2 - p_1 * sigma_1" inline="1" math="1"/>
+    </customresponse>
+  </p>
+</problem>

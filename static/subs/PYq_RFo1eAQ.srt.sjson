@@ -1,0 +1,38 @@
+{
+    "start": [
+        0, 
+        0, 
+        4000, 
+        7000, 
+        9000, 
+        18000, 
+        21000, 
+        33000, 
+        36000, 
+        42000
+    ], 
+    "end": [
+        0, 
+        4000, 
+        7000, 
+        9000, 
+        18000, 
+        21000, 
+        33000, 
+        36000, 
+        42000, 
+        48000
+    ], 
+    "text": [
+        "", 
+        "This now gives us a way of arguing that a certain quantum", 
+        "thing that a quantum computer can do cannot be done", 
+        "classically.", 
+        "So this gives rise to what you could call quantum supremacy.", 
+        "", 
+        "If l is bqp complete, then a quantum computer can solve it", 
+        "and a classical computer cannot.", 
+        "So then a quantum computer can solve l.", 
+        ""
+    ]
+}

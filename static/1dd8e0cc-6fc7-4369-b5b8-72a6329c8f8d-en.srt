@@ -1,0 +1,144 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:03,000
+OK so this can correct X errors, but not Z errors.
+
+2
+00:00:03,000 --> 00:00:07,000
+One thing we could do, so example 2
+
+3
+00:00:07,000 --> 00:00:15,000
+is, any classical code in the plus minus basis.
+
+4
+00:00:15,000 --> 00:00:19,000
+
+
+5
+00:00:19,000 --> 00:00:26,000
+So remember, by plus I mean 0 plus 1 over root 2, minus I
+
+6
+00:00:26,000 --> 00:00:30,000
+mean 0 minus 1 over root 2.
+
+7
+00:00:30,000 --> 00:00:36,000
+
+
+8
+00:00:36,000 --> 00:00:39,000
+These are the eigenstates of the x operator.
+
+9
+00:00:39,000 --> 00:00:44,000
+
+
+10
+00:00:44,000 --> 00:00:51,000
+And everything I said here goes through
+
+11
+00:00:51,000 --> 00:00:54,000
+but with X and Z swapped.
+
+12
+00:00:54,000 --> 00:01:10,000
+So if I write, and maybe the easiest way
+
+13
+00:01:10,000 --> 00:01:12,000
+to think about this is, I can write
+
+14
+00:01:12,000 --> 00:01:28,000
+C is the span of H tensor n c 1 through H tensor n c 2
+
+15
+00:01:28,000 --> 00:01:30,000
+to the k.
+
+16
+00:01:30,000 --> 00:01:34,000
+Here, H is the Hadamard matrix.
+
+17
+00:01:34,000 --> 00:01:42,000
+It has the property that H of 0 is plus and H applied to 1
+
+18
+00:01:42,000 --> 00:01:44,000
+is minus.
+
+19
+00:01:44,000 --> 00:01:46,000
+So if I have a string of 0's and 1's, it
+
+20
+00:01:46,000 --> 00:01:48,000
+will convert it to a string of pluses and minuses.
+
+21
+00:01:48,000 --> 00:01:51,000
+
+
+22
+00:01:51,000 --> 00:01:59,000
+It also is a property that HXH is equal to Z,
+
+23
+00:01:59,000 --> 00:02:06,000
+and HZH is equal to X, and H is equal to H dagger, which
+
+24
+00:02:06,000 --> 00:02:12,000
+is why I'm not bothering to write down daggers here.
+
+25
+00:02:12,000 --> 00:02:20,000
+So such a code will correct the set of up to d minus 1
+
+26
+00:02:20,000 --> 00:02:23,000
+over 2 Z errors.
+
+27
+00:02:23,000 --> 00:02:27,000
+
+
+28
+00:02:27,000 --> 00:02:29,000
+So before we did the Hadamards we corrected
+
+29
+00:02:29,000 --> 00:02:32,000
+X's, we apply Hadamards everywhere,
+
+30
+00:02:32,000 --> 00:02:37,000
+turning 1's into pluses and minuses and exchanging X and Z.
+
+31
+00:02:37,000 --> 00:02:40,000
+So it's not surprising that this way, we correct Zs.
+
+32
+00:02:40,000 --> 00:02:42,000
+Of course now we have the opposite problem,
+
+33
+00:02:42,000 --> 00:02:44,000
+we're no good against X's.
+
+34
+00:02:44,000 --> 00:02:48,000
+In fact, we make our life harder against X's, just like here we
+
+35
+00:02:48,000 --> 00:02:50,000
+
+

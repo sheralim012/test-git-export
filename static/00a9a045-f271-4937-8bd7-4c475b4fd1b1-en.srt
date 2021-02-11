@@ -1,0 +1,396 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:02,000
+So I'd like to take a few minutes to define a mechanism
+
+2
+00:00:02,000 --> 00:00:05,000
+known as operator measurement.
+
+3
+00:00:05,000 --> 00:00:09,000
+And this is what we will employ for measuring the syndromes
+
+4
+00:00:09,000 --> 00:00:12,000
+of these quantum codes.
+
+5
+00:00:12,000 --> 00:00:15,000
+The definition starts with this scenario,
+
+6
+00:00:15,000 --> 00:00:18,000
+that you're given a unitary matrix, U,
+
+7
+00:00:18,000 --> 00:00:38,000
+which has eigenvectors U plus minus with eigenvalues
+
+8
+00:00:38,000 --> 00:00:42,000
+corresponding to plus and minus 1.
+
+9
+00:00:42,000 --> 00:00:47,000
+Can somebody name an example of such a unitary matrix?
+
+10
+00:00:47,000 --> 00:00:48,000
+X.
+
+11
+00:00:48,000 --> 00:00:49,000
+X. Yes.
+
+12
+00:00:49,000 --> 00:00:53,000
+In fact, all the polymatrices are such Us.
+
+13
+00:00:53,000 --> 00:00:56,000
+But not just single qubit polymatrices--
+
+14
+00:00:56,000 --> 00:01:01,000
+also X tensored X or X tensored with Z.
+
+15
+00:01:01,000 --> 00:01:04,000
+So all the combinations of polymatrices
+
+16
+00:01:04,000 --> 00:01:10,000
+also satisfy this class of unitary matrices.
+
+17
+00:01:10,000 --> 00:01:19,000
+And then I define measuring U as being the execution
+
+18
+00:01:19,000 --> 00:01:22,000
+of the following circuit.
+
+19
+00:01:22,000 --> 00:01:26,000
+So I start with a 0 here, and then I'll
+
+20
+00:01:26,000 --> 00:01:30,000
+assume that my input state, psi, happens
+
+21
+00:01:30,000 --> 00:01:38,000
+to be some superposition C0 of U plus plus C1 of U minus.
+
+22
+00:01:38,000 --> 00:01:41,000
+And this comes in in the second qubit
+
+23
+00:01:41,000 --> 00:01:44,000
+or qubits register over here.
+
+24
+00:01:44,000 --> 00:01:46,000
+This may be more than one qubit.
+
+25
+00:01:46,000 --> 00:01:51,000
+It may be a three qubit state, it may be a 50 qubit state.
+
+26
+00:01:51,000 --> 00:01:55,000
+And what I'll do is I'll apply a controlled U
+
+27
+00:01:55,000 --> 00:02:00,000
+operation on this register of qubits
+
+28
+00:02:00,000 --> 00:02:04,000
+down here that's in some unknown superposition of the plus
+
+29
+00:02:04,000 --> 00:02:08,000
+and the minus U eigenstates.
+
+30
+00:02:08,000 --> 00:02:11,000
+I then perform a second Hadamard gate
+
+31
+00:02:11,000 --> 00:02:14,000
+after this, following the first Hadamard gate.
+
+32
+00:02:14,000 --> 00:02:16,000
+I measure.
+
+33
+00:02:16,000 --> 00:02:19,000
+And then we get some output state over here.
+
+34
+00:02:19,000 --> 00:02:21,000
+
+
+35
+00:02:21,000 --> 00:02:27,000
+Let's call this output stake psi.
+
+36
+00:02:27,000 --> 00:02:32,000
+And let's call this measurement result Z.
+
+37
+00:02:32,000 --> 00:02:36,000
+OK, so what happens when we do this operator measurement
+
+38
+00:02:36,000 --> 00:02:38,000
+circuit?
+
+39
+00:02:38,000 --> 00:02:41,000
+Let's label some of these states.
+
+40
+00:02:41,000 --> 00:02:49,000
+So if this is psi 1, let's say, and this is psi 2,
+
+41
+00:02:49,000 --> 00:02:55,000
+and then at the output here we have, let's call this psi 3,
+
+42
+00:02:55,000 --> 00:02:56,000
+before the measurement.
+
+43
+00:02:56,000 --> 00:03:00,000
+And work out what this is systematically.
+
+44
+00:03:00,000 --> 00:03:04,000
+So psi 1 is right after the Hadamard,
+
+45
+00:03:04,000 --> 00:03:09,000
+so we have 0 plus 1 divided by root 2.
+
+46
+00:03:09,000 --> 00:03:11,000
+I'm going to drop the normalizations
+
+47
+00:03:11,000 --> 00:03:12,000
+for just a moment.
+
+48
+00:03:12,000 --> 00:03:14,000
+They should be straightforward to figure out.
+
+49
+00:03:14,000 --> 00:03:15,000
+And then the initial state--
+
+50
+00:03:15,000 --> 00:03:22,000
+C 0 U plus plus C 1 U minus.
+
+51
+00:03:22,000 --> 00:03:29,000
+Psi 2 is the state after the controlled U operation,
+
+52
+00:03:29,000 --> 00:03:31,000
+right here.
+
+53
+00:03:31,000 --> 00:03:36,000
+So let's apply a controlled U. The control does nothing
+
+54
+00:03:36,000 --> 00:03:37,000
+when the first qubit is a 0.
+
+55
+00:03:37,000 --> 00:03:43,000
+
+
+56
+00:03:43,000 --> 00:03:46,000
+And then when the first qubit is a 1,
+
+57
+00:03:46,000 --> 00:03:50,000
+it applies the U operation.
+
+58
+00:03:50,000 --> 00:03:56,000
+So a U operation does nothing to U plus, because U plus
+
+59
+00:03:56,000 --> 00:03:59,000
+is the plus 1 eigenstate of U. But what does it
+
+60
+00:03:59,000 --> 00:04:02,000
+change U minus to?
+
+61
+00:04:02,000 --> 00:04:04,000
+Minus U minus.
+
+62
+00:04:04,000 --> 00:04:06,000
+So we get a minus C1 U minus.
+
+63
+00:04:06,000 --> 00:04:10,000
+
+
+64
+00:04:10,000 --> 00:04:19,000
+Psi 3 changes 0 to 0 plus 1, leaves that part alone,
+
+65
+00:04:19,000 --> 00:04:25,000
+changes 1 to 0 minus 1, like so.
+
+66
+00:04:25,000 --> 00:04:29,000
+But it's convenient to reorganize this and regroup it
+
+67
+00:04:29,000 --> 00:04:31,000
+by pulling out 0.
+
+68
+00:04:31,000 --> 00:04:37,000
+So if we pull out the 0 case, we get this plus this.
+
+69
+00:04:37,000 --> 00:04:40,000
+So the U minus terms cancel out.
+
+70
+00:04:40,000 --> 00:04:42,000
+And in fact, given the square root
+
+71
+00:04:42,000 --> 00:04:44,000
+of 2 normalizations and everything,
+
+72
+00:04:44,000 --> 00:04:47,000
+there are two square roots of 2 in the denominator.
+
+73
+00:04:47,000 --> 00:04:49,000
+There's a factor of 2 from adding these two terms.
+
+74
+00:04:49,000 --> 00:04:51,000
+Those cancel out.
+
+75
+00:04:51,000 --> 00:05:02,000
+So we actually get 0 C0 U minus, and then 1 C1 U plus.
+
+76
+00:05:02,000 --> 00:05:03,000
+And this is a U minus.
+
+77
+00:05:03,000 --> 00:05:05,000
+
+
+78
+00:05:05,000 --> 00:05:06,000
+OK?
+
+79
+00:05:06,000 --> 00:05:10,000
+So now, if we measure this state,
+
+80
+00:05:10,000 --> 00:05:12,000
+then we get something interesting and useful.
+
+81
+00:05:12,000 --> 00:05:15,000
+
+
+82
+00:05:15,000 --> 00:05:18,000
+When Z is equal to 0--
+
+83
+00:05:18,000 --> 00:05:21,000
+that's the measurement result of this first qubit--
+
+84
+00:05:21,000 --> 00:05:31,000
+then the output state, psi, is equal to U plus.
+
+85
+00:05:31,000 --> 00:05:33,000
+And with what probability does that happen?
+
+86
+00:05:33,000 --> 00:05:36,000
+
+
+87
+00:05:36,000 --> 00:05:38,000
+[INAUDIBLE] to C0 squared.
+
+88
+00:05:38,000 --> 00:05:39,000
+Yes.
+
+89
+00:05:39,000 --> 00:05:40,000
+C0 squared.
+
+90
+00:05:40,000 --> 00:05:45,000
+
+
+91
+00:05:45,000 --> 00:05:51,000
+And then, when Z is equal to 1, the measurement result is 1,
+
+92
+00:05:51,000 --> 00:05:58,000
+then we project the state into U minus.
+
+93
+00:05:58,000 --> 00:06:04,000
+And this happens with probability C1 squared.
+
+94
+00:06:04,000 --> 00:06:08,000
+So we have now a circuit which projects an unknown state
+
+95
+00:06:08,000 --> 00:06:11,000
+into the plus 1 eigenspace or the minus 1 eigenspace
+
+96
+00:06:11,000 --> 00:06:16,000
+of some unitary operator, which is kind of cool and very, very
+
+97
+00:06:16,000 --> 00:06:17,000
+useful.
+
+98
+00:06:17,000 --> 00:06:18,000
+
+

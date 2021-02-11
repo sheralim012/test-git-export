@@ -1,0 +1,508 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:02,000
+Now, we don't just have one bit.
+
+2
+00:00:02,000 --> 00:00:03,000
+We have a whole vector of them.
+
+3
+00:00:03,000 --> 00:00:08,000
+So the syndrome vector b, each entry of it
+
+4
+00:00:08,000 --> 00:00:12,000
+is the inner product of a row with some column vector.
+
+5
+00:00:12,000 --> 00:00:14,000
+So the first entry is--
+
+6
+00:00:14,000 --> 00:00:15,000
+maybe I should do it like this.
+
+7
+00:00:15,000 --> 00:00:17,000
+The first row times some column, then
+
+8
+00:00:17,000 --> 00:00:18,000
+the second row times some column,
+
+9
+00:00:18,000 --> 00:00:20,000
+the third row times some column.
+
+10
+00:00:20,000 --> 00:00:24,000
+So we can just package that up in matrix form,
+
+11
+00:00:24,000 --> 00:00:32,000
+and we can write that some matrix v times lambda times e,
+
+12
+00:00:32,000 --> 00:00:41,000
+where v is the matrix whose rows--
+
+13
+00:00:41,000 --> 00:00:43,000
+the rows of the matrix--
+
+14
+00:00:43,000 --> 00:00:45,000
+are the various vi's--
+
+15
+00:00:45,000 --> 00:00:48,000
+v1, v2, through vn minus k.
+
+16
+00:00:48,000 --> 00:00:51,000
+OK, so this is just a matrix version
+
+17
+00:00:51,000 --> 00:00:52,000
+of that equation for a single bit.
+
+18
+00:00:52,000 --> 00:00:57,000
+
+
+19
+00:00:57,000 --> 00:00:59,000
+And if you remember back to classical linear codes--
+
+20
+00:00:59,000 --> 00:01:03,000
+
+
+21
+00:01:03,000 --> 00:01:10,000
+so for classical linear codes, we have this check matrix H,
+
+22
+00:01:10,000 --> 00:01:17,000
+and the syndrome was just H times e.
+
+23
+00:01:17,000 --> 00:01:20,000
+So here the classical check matrix
+
+24
+00:01:20,000 --> 00:01:26,000
+has been replaced by the quantum list of stabilizers.
+
+25
+00:01:26,000 --> 00:01:29,000
+And then we've also inserted this lambda
+
+26
+00:01:29,000 --> 00:01:31,000
+to make it a symplectic inner product.
+
+27
+00:01:31,000 --> 00:01:34,000
+Otherwise, it's almost the same as for classical linear codes.
+
+28
+00:01:34,000 --> 00:01:46,000
+
+
+29
+00:01:46,000 --> 00:01:49,000
+So what do we get from this picture?
+
+30
+00:01:49,000 --> 00:01:51,000
+Now that we're trying to decode, this
+
+31
+00:01:51,000 --> 00:01:56,000
+tells us very precisely what the decoding problem is.
+
+32
+00:01:56,000 --> 00:02:04,000
+The decoding problem is, given our observation--
+
+33
+00:02:04,000 --> 00:02:06,000
+so our measurement outcome is b.
+
+34
+00:02:06,000 --> 00:02:09,000
+That's what we actually get to see.
+
+35
+00:02:09,000 --> 00:02:12,000
+We want to figure out which error that happened
+
+36
+00:02:12,000 --> 00:02:13,000
+so that we can reverse it.
+
+37
+00:02:13,000 --> 00:02:17,000
+
+
+38
+00:02:17,000 --> 00:02:20,000
+So we want to guess e.
+
+39
+00:02:20,000 --> 00:02:26,000
+And in general, e is going to be underdetermined.
+
+40
+00:02:26,000 --> 00:02:29,000
+
+
+41
+00:02:29,000 --> 00:02:37,000
+Because e, if you remember, the space is f2 to the 2n.
+
+42
+00:02:37,000 --> 00:02:37,000
+Right?
+
+43
+00:02:37,000 --> 00:02:41,000
+It describes a general poly and n qubits.
+
+44
+00:02:41,000 --> 00:02:45,000
+Whereas b is only n minus k bits.
+
+45
+00:02:45,000 --> 00:02:50,000
+So what we have is a linear system of equations
+
+46
+00:02:50,000 --> 00:02:52,000
+with 2n variables--
+
+47
+00:02:52,000 --> 00:02:57,000
+2n unknowns-- and n minus k equations.
+
+48
+00:02:57,000 --> 00:02:59,000
+So the solution of that is that we
+
+49
+00:02:59,000 --> 00:03:11,000
+know that e lies in some affine subspace of dimension, 2n
+
+50
+00:03:11,000 --> 00:03:13,000
+minus n minus k.
+
+51
+00:03:13,000 --> 00:03:17,000
+In other words, n plus k.
+
+52
+00:03:17,000 --> 00:03:20,000
+So we have not fully determined e.
+
+53
+00:03:20,000 --> 00:03:21,000
+Far from it.
+
+54
+00:03:21,000 --> 00:03:23,000
+But we have some information about it.
+
+55
+00:03:23,000 --> 00:03:25,000
+We've pinned it down to some affine subspace.
+
+56
+00:03:25,000 --> 00:03:30,000
+
+
+57
+00:03:30,000 --> 00:03:32,000
+And there always has to be some ambiguity, right?
+
+58
+00:03:32,000 --> 00:03:36,000
+Because if e acts with a stabilizer generator,
+
+59
+00:03:36,000 --> 00:03:38,000
+that's not going to show up in the syndrome.
+
+60
+00:03:38,000 --> 00:03:40,000
+If e acts through the logical operator,
+
+61
+00:03:40,000 --> 00:03:42,000
+that's not going to show up in the syndrome.
+
+62
+00:03:42,000 --> 00:03:45,000
+So we always have that level of ambiguity.
+
+63
+00:03:45,000 --> 00:03:51,000
+And now what we want to do is, within this affine subspace,
+
+64
+00:03:51,000 --> 00:03:54,000
+guess the most likely error.
+
+65
+00:03:54,000 --> 00:03:57,000
+And here is where the error model comes in.
+
+66
+00:03:57,000 --> 00:03:59,000
+Here is also where the computational difficulty
+
+67
+00:03:59,000 --> 00:04:01,000
+comes in.
+
+68
+00:04:01,000 --> 00:04:16,000
+So one approach is sort of the analog of maximum likelihood
+
+69
+00:04:16,000 --> 00:04:17,000
+decoding.
+
+70
+00:04:17,000 --> 00:04:19,000
+So classically, maximum likelihood decoding
+
+71
+00:04:19,000 --> 00:04:23,000
+says if you flip each bit with independent probability p,
+
+72
+00:04:23,000 --> 00:04:25,000
+then you try to guess the error string
+
+73
+00:04:25,000 --> 00:04:27,000
+compatible to your syndrome that was
+
+74
+00:04:27,000 --> 00:04:29,000
+most likely to have occurred.
+
+75
+00:04:29,000 --> 00:04:30,000
+So the quantum analog--
+
+76
+00:04:30,000 --> 00:04:35,000
+and to do that classically, you say
+
+77
+00:04:35,000 --> 00:04:38,000
+it's most likely that the fewest number of bits
+
+78
+00:04:38,000 --> 00:04:38,000
+have been flipped.
+
+79
+00:04:38,000 --> 00:04:40,000
+So I just try to find the way of fixing
+
+80
+00:04:40,000 --> 00:04:45,000
+the syndrome that reverses the fewest number of bit flips.
+
+81
+00:04:45,000 --> 00:04:56,000
+So the quantum analog of that is minimize the weight of e,
+
+82
+00:04:56,000 --> 00:05:00,000
+subject to this constraint.
+
+83
+00:05:00,000 --> 00:05:02,000
+v lambda e equals b.
+
+84
+00:05:02,000 --> 00:05:06,000
+
+
+85
+00:05:06,000 --> 00:05:09,000
+And by the weight of e, I mean the number
+
+86
+00:05:09,000 --> 00:05:18,000
+of non-identity positions.
+
+87
+00:05:18,000 --> 00:05:22,000
+
+
+88
+00:05:22,000 --> 00:05:26,000
+So remember we talked about weight l errors before, right?
+
+89
+00:05:26,000 --> 00:05:31,000
+How many non-identity polys do you have in a string?
+
+90
+00:05:31,000 --> 00:05:34,000
+And this is kind of like the Hamming weight of e,
+
+91
+00:05:34,000 --> 00:05:36,000
+but it's a little bit different.
+
+92
+00:05:36,000 --> 00:05:40,000
+Because if I have both an x and a z on the same poly,
+
+93
+00:05:40,000 --> 00:05:41,000
+that doesn't contribute weight two.
+
+94
+00:05:41,000 --> 00:05:43,000
+It only contributes weight one.
+
+95
+00:05:43,000 --> 00:05:46,000
+Because that's just a single y on that qubit.
+
+96
+00:05:46,000 --> 00:05:48,000
+So it's not quite the Hamming weight of e,
+
+97
+00:05:48,000 --> 00:05:50,000
+but it's kind of similar to it.
+
+98
+00:05:50,000 --> 00:05:56,000
+
+
+99
+00:05:56,000 --> 00:06:01,000
+So this now gives a very concrete decoding scheme.
+
+100
+00:06:01,000 --> 00:06:04,000
+Now, you might worry--
+
+101
+00:06:04,000 --> 00:06:07,000
+the number of vectors in this subspace is 2 to the n plus k.
+
+102
+00:06:07,000 --> 00:06:10,000
+If I just have to check all of those, that's a lot of vectors.
+
+103
+00:06:10,000 --> 00:06:15,000
+It sounds a little bit like an MP search problem.
+
+104
+00:06:15,000 --> 00:06:18,000
+And sometimes, when you have these large spaces
+
+105
+00:06:18,000 --> 00:06:21,000
+to search over, there's an efficient way of doing it.
+
+106
+00:06:21,000 --> 00:06:31,000
+But in this case, it's really MP complete in the worst case.
+
+107
+00:06:31,000 --> 00:06:33,000
+In other words, if someone just hands you
+
+108
+00:06:33,000 --> 00:06:35,000
+a stabilizer code with no-- and you
+
+109
+00:06:35,000 --> 00:06:36,000
+don't know any structure of it.
+
+110
+00:06:36,000 --> 00:06:39,000
+You just know the generators.
+
+111
+00:06:39,000 --> 00:06:44,000
+Solving this maximum likelihood decoding problem
+
+112
+00:06:44,000 --> 00:06:46,000
+is as hard as solving 3SAT.
+
+113
+00:06:46,000 --> 00:06:50,000
+So you're unlikely to be able to do it in polynomial time.
+
+114
+00:06:50,000 --> 00:06:51,000
+So to make further progress on this,
+
+115
+00:06:51,000 --> 00:06:54,000
+we have to choose the code with some structure
+
+116
+00:06:54,000 --> 00:06:56,000
+that we can make sense of.
+
+117
+00:06:56,000 --> 00:06:59,000
+Now, one option is the code is so small, you don't care.
+
+118
+00:06:59,000 --> 00:06:59,000
+Right?
+
+119
+00:06:59,000 --> 00:07:02,000
+For the five qubit code, you don't
+
+120
+00:07:02,000 --> 00:07:04,000
+care that this problem is sort of asymptotically
+
+121
+00:07:04,000 --> 00:07:05,000
+going to infinity.
+
+122
+00:07:05,000 --> 00:07:06,000
+You only have five qubits in front of you.
+
+123
+00:07:06,000 --> 00:07:08,000
+That's a finite problem.
+
+124
+00:07:08,000 --> 00:07:11,000
+But for larger code families, you
+
+125
+00:07:11,000 --> 00:07:13,000
+want to design them so that the decoding algorithm
+
+126
+00:07:13,000 --> 00:07:16,000
+
+

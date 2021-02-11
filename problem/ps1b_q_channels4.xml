@@ -1,0 +1,43 @@
+<problem linenum="624" tex_filename="./week2_ps2.tex" attempts="10" display_name="QC4. Quantum channels (4 of 4)" max_attempts="10">
+  <p>
+[mathjaxinline]{\rm Tr}_ C[/mathjaxinline] is a quantum channel from [mathjaxinline]B \otimes C[/mathjaxinline] to [mathjaxinline]B[/mathjaxinline]. Therefore [mathjaxinline]{\rm Tr}^\dagger _ C[/mathjaxinline] is a quantum channel from [mathjaxinline]V[/mathjaxinline] to [mathjaxinline]W[/mathjaxinline]. What spaces are [mathjaxinline]V[/mathjaxinline] and [mathjaxinline]W[/mathjaxinline]? </p>
+  <p>
+Let [mathjaxinline]X_ B[/mathjaxinline] be an arbitrary matrix in [mathjaxinline]L(B)[/mathjaxinline]. Write an expression for [mathjaxinline]{\rm Tr}_ C^\dagger [X_ B][/mathjaxinline]. </p>
+  <span>
+    <customresponse>
+      <drag_and_drop_input img="/static/images/ps1b_qchan4/ps1b_qchan4_dnd.png" target_outline="false" one_per_target="true" no_labels="true" label_bg_color="rgb(222, 139, 238)">
+        <draggable id="B" icon="/static/images/ps1b_qchan4/ps1b_qchan4_dnd_label1.png" can_reuse="true"/>
+        <draggable id="C" icon="/static/images/ps1b_qchan4/ps1b_qchan4_dnd_label2.png" can_reuse="true"/>
+        <draggable id="BotimesC" icon="/static/images/ps1b_qchan4/ps1b_qchan4_dnd_label3.png" can_reuse="true"/>
+        <draggable id="IC" icon="/static/images/ps1b_qchan4/ps1b_qchan4_dnd_label6.png" can_reuse="true"/>
+        <draggable id="IBotimesXC" icon="/static/images/ps1b_qchan4/ps1b_qchan4_dnd_label5.png" can_reuse="true"/>
+        <draggable id="XBotimesIC" icon="/static/images/ps1b_qchan4/ps1b_qchan4_dnd_label7.png" can_reuse="true"/>
+        <draggable id="CotimesB" icon="/static/images/ps1b_qchan4/ps1b_qchan4_dnd_label8.png" can_reuse="true"/>
+        <draggable id="XB" icon="/static/images/ps1b_qchan4/ps1b_qchan4_dnd_label9.png" can_reuse="true"/>
+        <draggable id="IB" icon="/static/images/ps1b_qchan4/ps1b_qchan4_dnd_label10.png" can_reuse="true"/>
+        <draggable id="rmTrBXB" icon="/static/images/ps1b_qchan4/ps1b_qchan4_dnd_label11.png" can_reuse="true"/>
+        <draggable id="XC" icon="/static/images/ps1b_qchan4/ps1b_qchan4_dnd_label12.png" can_reuse="true"/>
+        <target id="1" x="386" y="1" w="298" h="84"/>
+        <target id="2" x="391" y="160" w="298" h="84"/>
+        <target id="3" x="442" y="360" w="297" h="84"/>
+      </drag_and_drop_input>
+      <answer>
+caset = [{'B': '1'}, {'BotimesC': '2'}, {'XBotimesIC': '3'}]
+# custom checking for reusable labels - assumes all targets get some label
+import json
+ans = json.loads(submission[0])
+correct = ['correct']
+for rule in caset:
+    if rule not in ans:
+        correct = ['incorrect']
+        break
+
+# use this for debugging
+# messages = ['ans=%s' % submission[0]]
+</answer>
+    </customresponse>
+    <solution>
+      <img src="/static/images/ps1b_qchan4/ps1b_qchan4_dnd_sol_KBINN1.png"/>
+    </solution>
+  </span>
+</problem>

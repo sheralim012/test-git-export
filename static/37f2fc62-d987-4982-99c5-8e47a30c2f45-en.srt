@@ -1,0 +1,504 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:03,000
+There's a final way I want to talk about quantum operations,
+
+2
+00:00:03,000 --> 00:00:12,000
+which is what you could call the axiomatic approach, which is
+
+3
+00:00:12,000 --> 00:00:14,000
+to say, let's not think about--
+
+4
+00:00:14,000 --> 00:00:16,000
+we started off by saying, physically, we
+
+5
+00:00:16,000 --> 00:00:18,000
+have to shorten our equation and then some
+
+6
+00:00:18,000 --> 00:00:20,000
+changes in bookkeeping.
+
+7
+00:00:20,000 --> 00:00:22,000
+Another way of doing this is to say,
+
+8
+00:00:22,000 --> 00:00:24,000
+here's what a quantum state is.
+
+9
+00:00:24,000 --> 00:00:28,000
+A quantum operation is something that better preserve that,
+
+10
+00:00:28,000 --> 00:00:30,000
+and let's just see if we allow everything
+
+11
+00:00:30,000 --> 00:00:32,000
+that preserves quantum states.
+
+12
+00:00:32,000 --> 00:00:35,000
+That is, in a sense, the most generous possible version
+
+13
+00:00:35,000 --> 00:00:36,000
+of quantum operations.
+
+14
+00:00:36,000 --> 00:00:38,000
+So instead of just starting with a few things we can think of
+
+15
+00:00:38,000 --> 00:00:42,000
+and composing them, this tries to be exhaustive to say,
+
+16
+00:00:42,000 --> 00:00:44,000
+let's make sure we cover every possible thing we
+
+17
+00:00:44,000 --> 00:00:47,000
+can do to density matrices that will leave them
+
+18
+00:00:47,000 --> 00:00:48,000
+density matrices.
+
+19
+00:00:48,000 --> 00:00:50,000
+If we do this, we can be confident we have not
+
+20
+00:00:50,000 --> 00:00:54,000
+overlooked a possible quantum operation.
+
+21
+00:00:54,000 --> 00:00:57,000
+So to do this, we'll start by asking, what properties should
+
+22
+00:00:57,000 --> 00:00:58,000
+a quantum operation have?
+
+23
+00:00:58,000 --> 00:01:05,000
+
+
+24
+00:01:05,000 --> 00:01:09,000
+So the first one--
+
+25
+00:01:09,000 --> 00:01:14,000
+I guess I'll say, properties of a quantum operation N.
+
+26
+00:01:14,000 --> 00:01:16,000
+So the first one is that N should
+
+27
+00:01:16,000 --> 00:01:28,000
+be a linear, hermiticity-preserving map.
+
+28
+00:01:28,000 --> 00:01:31,000
+
+
+29
+00:01:31,000 --> 00:01:34,000
+Hermiticity-preserving is, maybe, uncontroversial.
+
+30
+00:01:34,000 --> 00:01:36,000
+If I put in a Hermitian density matrix,
+
+31
+00:01:36,000 --> 00:01:38,000
+the output had better be Hermitian.
+
+32
+00:01:38,000 --> 00:01:40,000
+Otherwise, nothing makes any sense.
+
+33
+00:01:40,000 --> 00:01:42,000
+Linear is something a little more basic,
+
+34
+00:01:42,000 --> 00:01:45,000
+and it comes back to quantum mechanics
+
+35
+00:01:45,000 --> 00:01:47,000
+being a linear theory.
+
+36
+00:01:47,000 --> 00:01:51,000
+But it also-- it's something that we already accepted when
+
+37
+00:01:51,000 --> 00:01:53,000
+we defined density matrices.
+
+38
+00:01:53,000 --> 00:01:54,000
+Remember, when we defined density matrices,
+
+39
+00:01:54,000 --> 00:01:58,000
+I said, all observables are linear functions
+
+40
+00:01:58,000 --> 00:02:02,000
+of ket psi, bra psi, so we don't need to write down
+
+41
+00:02:02,000 --> 00:02:03,000
+every property of an ensemble.
+
+42
+00:02:03,000 --> 00:02:06,000
+We can completely, and without loss of generality,
+
+43
+00:02:06,000 --> 00:02:10,000
+describe an ensemble in terms of it's density matrix.
+
+44
+00:02:10,000 --> 00:02:15,000
+And so everything we assumed from that definition--
+
+45
+00:02:15,000 --> 00:02:17,000
+everything we can measure-- is a linear function
+
+46
+00:02:17,000 --> 00:02:19,000
+of the density matrix.
+
+47
+00:02:19,000 --> 00:02:21,000
+And so that's why, if you mixed two states--
+
+48
+00:02:21,000 --> 00:02:23,000
+you take one state with probability 1/3,
+
+49
+00:02:23,000 --> 00:02:25,000
+the other state with probability 2/3--
+
+50
+00:02:25,000 --> 00:02:28,000
+you just do the same operation with the density matrix.
+
+51
+00:02:28,000 --> 00:02:31,000
+You take 1/3 times one density matrix plus 2/3 times
+
+52
+00:02:31,000 --> 00:02:33,000
+the other density matrix.
+
+53
+00:02:33,000 --> 00:02:37,000
+Linear operations respect this.
+
+54
+00:02:37,000 --> 00:02:41,000
+They say, if I drop the chalk with probability 1/3,
+
+55
+00:02:41,000 --> 00:02:43,000
+and I don't drop it with probability 2/3,
+
+56
+00:02:43,000 --> 00:02:44,000
+and I talk about the consequences--
+
+57
+00:02:44,000 --> 00:02:48,000
+those consequences also have probability 1/3, 2/3.
+
+58
+00:02:48,000 --> 00:02:49,000
+If you could do something nonlinear,
+
+59
+00:02:49,000 --> 00:02:52,000
+then you could, say, after having observed
+
+60
+00:02:52,000 --> 00:02:54,000
+that I had dropped the chalk, you
+
+61
+00:02:54,000 --> 00:02:57,000
+could figure out what the underlying probability was
+
+62
+00:02:57,000 --> 00:02:59,000
+of me doing it or not.
+
+63
+00:02:59,000 --> 00:03:02,000
+You could get a lot of really bizarre paradoxes.
+
+64
+00:03:02,000 --> 00:03:06,000
+So it's possible to get rid of the linear assumption,
+
+65
+00:03:06,000 --> 00:03:10,000
+but to do this you'd have to really go back quite far
+
+66
+00:03:10,000 --> 00:03:12,000
+and tear up a lot of what we've already accepted.
+
+67
+00:03:12,000 --> 00:03:18,000
+So for now, even though it's not 100% necessary,
+
+68
+00:03:18,000 --> 00:03:21,000
+I think we will stick with the linear assumption
+
+69
+00:03:21,000 --> 00:03:24,000
+because to do so otherwise would change
+
+70
+00:03:24,000 --> 00:03:27,000
+a lot of quantum mechanics.
+
+71
+00:03:27,000 --> 00:03:29,000
+So these are some basic ones.
+
+72
+00:03:29,000 --> 00:03:32,000
+Another one is that the operation
+
+73
+00:03:32,000 --> 00:03:42,000
+should be trace-preserving, which we'll abbreviate as TP.
+
+74
+00:03:42,000 --> 00:03:45,000
+So, in other words, trace of N of rho
+
+75
+00:03:45,000 --> 00:03:47,000
+is equal to trace of rho.
+
+76
+00:03:47,000 --> 00:03:50,000
+
+
+77
+00:03:50,000 --> 00:03:57,000
+Again, this should be a fairly uncontroversial assumption.
+
+78
+00:03:57,000 --> 00:04:00,000
+The final one is a little bit subtle.
+
+79
+00:04:00,000 --> 00:04:02,000
+So density matrices have trace 1,
+
+80
+00:04:02,000 --> 00:04:04,000
+and they're positive semidefinite.
+
+81
+00:04:04,000 --> 00:04:07,000
+So the output should also be positive semidefinite.
+
+82
+00:04:07,000 --> 00:04:10,000
+So you might think that the requirement on this channel
+
+83
+00:04:10,000 --> 00:04:16,000
+is something called positivity, which
+
+84
+00:04:16,000 --> 00:04:26,000
+is that if rho is positive semidefinite, then N of rho
+
+85
+00:04:26,000 --> 00:04:28,000
+is also positive semidefinite.
+
+86
+00:04:28,000 --> 00:04:31,000
+And it turns out, this is sufficient--
+
+87
+00:04:31,000 --> 00:04:34,000
+I'm sorry-- this is necessary, but not quite sufficient.
+
+88
+00:04:34,000 --> 00:04:37,000
+We need a little bit more than this.
+
+89
+00:04:37,000 --> 00:04:39,000
+We need to consider also the possibility
+
+90
+00:04:39,000 --> 00:04:43,000
+that our channel acts on part of an entangled system.
+
+91
+00:04:43,000 --> 00:04:45,000
+And it turns out--
+
+92
+00:04:45,000 --> 00:04:56,000
+so this is called complete positively, or C(P),
+
+93
+00:04:56,000 --> 00:05:01,000
+and the statement is that if rho is PSD,
+
+94
+00:05:01,000 --> 00:05:06,000
+then N tends to the identity superoperator--
+
+95
+00:05:06,000 --> 00:05:09,000
+
+
+96
+00:05:09,000 --> 00:05:11,000
+is also PSG.
+
+97
+00:05:11,000 --> 00:05:13,000
+So if you're completely positive,
+
+98
+00:05:13,000 --> 00:05:14,000
+you're definitely positive.
+
+99
+00:05:14,000 --> 00:05:17,000
+And it turns out, there are maps which are positive but not
+
+100
+00:05:17,000 --> 00:05:19,000
+completely positive.
+
+101
+00:05:19,000 --> 00:05:20,000
+And so those are things which would not
+
+102
+00:05:20,000 --> 00:05:21,000
+be valid quantum channels.
+
+103
+00:05:21,000 --> 00:05:26,000
+
+
+104
+00:05:26,000 --> 00:05:42,000
+So an example of positive but not CP is the transpose map.
+
+105
+00:05:42,000 --> 00:05:45,000
+So if I take a matrix, and I take its transpose,
+
+106
+00:05:45,000 --> 00:05:47,000
+that's a linear operation.
+
+107
+00:05:47,000 --> 00:05:50,000
+If I started off Hermitian, I will remain Hermitian.
+
+108
+00:05:50,000 --> 00:05:53,000
+And it turns out, if I started out positive semidefinite,
+
+109
+00:05:53,000 --> 00:05:55,000
+I'll remain positive semidefinite.
+
+110
+00:05:55,000 --> 00:05:58,000
+But if I apply this to half of the naturally entangled state,
+
+111
+00:05:58,000 --> 00:06:01,000
+I will get something that has some negative eigenvalues.
+
+112
+00:06:01,000 --> 00:06:05,000
+And so this is not valid quantum operation
+
+113
+00:06:05,000 --> 00:06:07,000
+because any physical operation we do
+
+114
+00:06:07,000 --> 00:06:09,000
+should make sense even if we apply it
+
+115
+00:06:09,000 --> 00:06:10,000
+to only part of the system.
+
+116
+00:06:10,000 --> 00:06:17,000
+
+
+117
+00:06:17,000 --> 00:06:20,000
+So if you put these together, you
+
+118
+00:06:20,000 --> 00:06:27,000
+get what are called TPCP maps.
+
+119
+00:06:27,000 --> 00:06:29,000
+Property one is taken for granted, and, then,
+
+120
+00:06:29,000 --> 00:06:31,000
+given that, we have trace-preserving completely
+
+121
+00:06:31,000 --> 00:06:32,000
+positive is TPCP.
+
+122
+00:06:32,000 --> 00:06:37,000
+
+
+123
+00:06:37,000 --> 00:06:42,000
+Try to be as general as possible.
+
+124
+00:06:42,000 --> 00:06:45,000
+If we satisfy these axioms, we really
+
+125
+00:06:45,000 --> 00:06:48,000
+
+

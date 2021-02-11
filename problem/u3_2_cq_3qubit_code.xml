@@ -1,0 +1,24 @@
+<problem linenum="136" tex_filename="./week3_review1.tex" attempts="1" display_name="Three-qubit quantum code versus three-bit classical code" max_attempts="1">
+  <p>
+This is a concept question, provided to check your understanding of the previous video clip. </p>
+  <p>
+Which of the following statements are correct about the <a href="https://en.wikipedia.org/wiki/Shor_code#The_bit_flip_code" target="_blank">three-qubit bit-flip code</a>, and the three-bit classical <a href="https://en.wikipedia.org/wiki/Repetition_code" target="_blank">repetition code</a>? Check all that apply: </p>
+  <p>
+    <choiceresponse>
+      <checkboxgroup>
+        <choice correct="false" name="1">
+          <text>The three-qubit bit-flip code is decoded just like majority voting, by measuring the three qubits and computing the majority.</text>
+        </choice>
+        <choice correct="true" name="2">
+          <text>The three-qubit bit flip code can also be used to correct phase flips, by applying Hadamard operators to the three qubits.</text>
+        </choice>
+        <choice correct="true" name="3">
+          <text>The three-qubit bit-flip code must be decoded without measuring the encoded qubit.</text>
+        </choice>
+        <choice correct="false" name="4">
+          <text>The three-qubit bit flip code can correct for single-qubit depolarizing errors.</text>
+        </choice>
+      </checkboxgroup>
+    </choiceresponse>
+  </p>
+</problem>

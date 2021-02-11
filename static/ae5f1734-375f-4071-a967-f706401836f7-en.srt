@@ -1,0 +1,372 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:07,000
+So, if I have rho of this form, the eigenvalues of rho
+
+2
+00:00:07,000 --> 00:00:13,000
+are just the vector of probabilities.
+
+3
+00:00:13,000 --> 00:00:17,000
+So when I demand that rho is positive semidefinite,
+
+4
+00:00:17,000 --> 00:00:19,000
+what does that say about P1 through Pd?
+
+5
+00:00:19,000 --> 00:00:22,000
+
+
+6
+00:00:22,000 --> 00:00:25,000
+What does that condition, that rho is positive semidefinite,
+
+7
+00:00:25,000 --> 00:00:27,000
+what does it imply about the P's?
+
+8
+00:00:27,000 --> 00:00:27,000
+Yeah?
+
+9
+00:00:27,000 --> 00:00:30,000
+[INAUDIBLE]
+
+10
+00:00:30,000 --> 00:00:30,000
+Right.
+
+11
+00:00:30,000 --> 00:00:36,000
+It implies, so rho positive semidefinite implies, in fact,
+
+12
+00:00:36,000 --> 00:00:41,000
+is equivalent to each Px being greater or equal to 0.
+
+13
+00:00:41,000 --> 00:00:43,000
+You mentioned another thing, which
+
+14
+00:00:43,000 --> 00:00:46,000
+is that they add up to 1, which is a property of probability
+
+15
+00:00:46,000 --> 00:00:48,000
+distributions.
+
+16
+00:00:48,000 --> 00:00:49,000
+But we need more than the fact that rho
+
+17
+00:00:49,000 --> 00:00:51,000
+is positive semidefinite to give that.
+
+18
+00:00:51,000 --> 00:00:52,000
+With trace 1.
+
+19
+00:00:52,000 --> 00:00:53,000
+We need there's trace 1.
+
+20
+00:00:53,000 --> 00:00:54,000
+Exactly.
+
+21
+00:00:54,000 --> 00:00:58,000
+So the trace of rho is just the sum of the diagonal entries.
+
+22
+00:00:58,000 --> 00:01:04,000
+
+
+23
+00:01:04,000 --> 00:01:06,000
+And of course, that should equal 1.
+
+24
+00:01:06,000 --> 00:01:08,000
+And this equation is a two-way street.
+
+25
+00:01:08,000 --> 00:01:10,000
+We could have started with the fact
+
+26
+00:01:10,000 --> 00:01:12,000
+that this is a probability distribution.
+
+27
+00:01:12,000 --> 00:01:15,000
+And then we know that's normalized,
+
+28
+00:01:15,000 --> 00:01:18,000
+so we derive that this is trace of rho is 1,
+
+29
+00:01:18,000 --> 00:01:20,000
+and thereby it's a valid density matrix.
+
+30
+00:01:20,000 --> 00:01:22,000
+We could have gone in the other direction, as well.
+
+31
+00:01:22,000 --> 00:01:26,000
+We could have said, suppose rho is a matrix of this form
+
+32
+00:01:26,000 --> 00:01:28,000
+and I claim that the entries correspond
+
+33
+00:01:28,000 --> 00:01:32,000
+to a valid probability distribution.
+
+34
+00:01:32,000 --> 00:01:34,000
+And that's because the trace of rho is 1.
+
+35
+00:01:34,000 --> 00:01:36,000
+So I know that these entries add up to 1.
+
+36
+00:01:36,000 --> 00:01:38,000
+And because of this previous fact,
+
+37
+00:01:38,000 --> 00:01:41,000
+I knew that they were non-negative.
+
+38
+00:01:41,000 --> 00:01:44,000
+so this is how probability distributions can
+
+39
+00:01:44,000 --> 00:01:45,000
+embed into density matrices.
+
+40
+00:01:45,000 --> 00:01:48,000
+
+
+41
+00:01:48,000 --> 00:01:57,000
+Now, one important aside is that this is for diagonal density
+
+42
+00:01:57,000 --> 00:02:00,000
+matrices rho.
+
+43
+00:02:00,000 --> 00:02:12,000
+But the eigenvalues of rho are always
+
+44
+00:02:12,000 --> 00:02:15,000
+probability distributions.
+
+45
+00:02:15,000 --> 00:02:16,000
+So why is that?
+
+46
+00:02:16,000 --> 00:02:19,000
+Essentially, it's the same argument.
+
+47
+00:02:19,000 --> 00:02:23,000
+If a matrix-- since rho is positive semidefinite,
+
+48
+00:02:23,000 --> 00:02:25,000
+its eigenvalues are always non-negative.
+
+49
+00:02:25,000 --> 00:02:27,000
+So that's one of the conditions to be a probability
+
+50
+00:02:27,000 --> 00:02:29,000
+distribution.
+
+51
+00:02:29,000 --> 00:02:31,000
+The entries are non-negative.
+
+52
+00:02:31,000 --> 00:02:35,000
+They also always add up to 1.
+
+53
+00:02:35,000 --> 00:02:39,000
+And this is because the trace is independent of basis.
+
+54
+00:02:39,000 --> 00:02:50,000
+So if the eigenvalues of rho are lambda 1 through lambda d,
+
+55
+00:02:50,000 --> 00:02:59,000
+then trace rho is the sum of these eigenvalues.
+
+56
+00:02:59,000 --> 00:03:01,000
+One way of seeing this is that we can always
+
+57
+00:03:01,000 --> 00:03:05,000
+choose to take the trace in the eigenbasis of rho.
+
+58
+00:03:05,000 --> 00:03:08,000
+So this was a fact about diagonal rho.
+
+59
+00:03:08,000 --> 00:03:10,000
+But if we diagonalize it, then you know, in the right basis,
+
+60
+00:03:10,000 --> 00:03:12,000
+everything looks diagonal.
+
+61
+00:03:12,000 --> 00:03:15,000
+Then for any density matrix, the trace
+
+62
+00:03:15,000 --> 00:03:18,000
+is equal to the sum of the eigenvalues.
+
+63
+00:03:18,000 --> 00:03:20,000
+And so the eigenvalues are always
+
+64
+00:03:20,000 --> 00:03:22,000
+non-negative and sum to 1.
+
+65
+00:03:22,000 --> 00:03:25,000
+So they always form a probability distribution.
+
+66
+00:03:25,000 --> 00:03:27,000
+And so, in a sense, that shouldn't be surprising.
+
+67
+00:03:27,000 --> 00:03:28,000
+All we had to do in order to get here
+
+68
+00:03:28,000 --> 00:03:31,000
+is choose some fixed orthonormal basis
+
+69
+00:03:31,000 --> 00:03:33,000
+and call that the canonical basis.
+
+70
+00:03:33,000 --> 00:03:37,000
+But we always could have chosen the eigenbasis of rho
+
+71
+00:03:37,000 --> 00:03:41,000
+and called it classical in that basis.
+
+72
+00:03:41,000 --> 00:03:43,000
+All we did, really, was--
+
+73
+00:03:43,000 --> 00:03:44,000
+I said fix a basis.
+
+74
+00:03:44,000 --> 00:03:47,000
+You could also say, get rid of superposition.
+
+75
+00:03:47,000 --> 00:03:51,000
+But superposition is sort of a mathematical construct, right?
+
+76
+00:03:51,000 --> 00:03:53,000
+States are just some vectors.
+
+77
+00:03:53,000 --> 00:03:55,000
+What we call superposition means we're
+
+78
+00:03:55,000 --> 00:03:58,000
+taking linear combinations of some chosen set of vectors.
+
+79
+00:03:58,000 --> 00:04:01,000
+So if we just choose our vectors in the first place
+
+80
+00:04:01,000 --> 00:04:04,000
+to the eigenbasis of rho, then at least for that state,
+
+81
+00:04:04,000 --> 00:04:06,000
+we've defined away superposition.
+
+82
+00:04:06,000 --> 00:04:08,000
+Of course, once you have multiple states or time
+
+83
+00:04:08,000 --> 00:04:12,000
+evolution, you can't ignore superposition forever.
+
+84
+00:04:12,000 --> 00:04:14,000
+But if you're looking at any one state,
+
+85
+00:04:14,000 --> 00:04:17,000
+you can always choose to look at it in its eigenbasis.
+
+86
+00:04:17,000 --> 00:04:21,000
+And in that basis, it looks essentially classical.
+
+87
+00:04:21,000 --> 00:04:24,000
+Even a pure state, if you look at it in the right basis,
+
+88
+00:04:24,000 --> 00:04:27,000
+just looks like a deterministic probability distribution.
+
+89
+00:04:27,000 --> 00:04:29,000
+You know, there's some basis of perfectly distinguishable
+
+90
+00:04:29,000 --> 00:04:31,000
+states, and we have one of them.
+
+91
+00:04:31,000 --> 00:04:33,000
+It's sort of not very interesting,
+
+92
+00:04:33,000 --> 00:04:36,000
+
+

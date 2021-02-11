@@ -1,0 +1,30 @@
+<problem linenum="73" tex_filename="./week2_lectures2.tex" attempts="1" display_name="Isometries and quantum operations" max_attempts="1">
+  <p>
+This is a concept question, provided to check your understanding of the previous video clip. </p>
+  <p>
+Based on the lecture by Prof. Harrow, and what you know about quantum mechanics, which of the following equations could possibly be true for <em>some</em> choice of isometry [mathjaxinline]V[/mathjaxinline] and <em>all</em> possible quantum states [mathjaxinline]|\psi \rangle[/mathjaxinline] or [mathjaxinline]\rho[/mathjaxinline]? </p>
+  <p>
+    <choiceresponse>
+      <checkboxgroup>
+        <choice correct="true" name="1">
+          <text>[mathjaxinline]V|\psi \rangle = |\psi \rangle \otimes |0\rangle[/mathjaxinline]</text>
+        </choice>
+        <choice correct="false" name="2">
+          <text>[mathjaxinline]V|\psi \rangle  = |\psi \rangle \otimes |\psi \rangle[/mathjaxinline]</text>
+        </choice>
+        <choice correct="false" name="3">
+          <text>[mathjaxinline]V|\psi \rangle  = |0 \rangle[/mathjaxinline]</text>
+        </choice>
+        <choice correct="false" name="4">
+          <text>[mathjaxinline]V\rho V^\dagger = -\rho[/mathjaxinline]</text>
+        </choice>
+        <choice correct="false" name="5">
+          <text>[mathjaxinline]V\rho V^\dagger = I[/mathjaxinline]</text>
+        </choice>
+        <choice correct="true" name="6">
+          <text>[mathjaxinline]V\rho V^\dagger = \rho \otimes |0\rangle \langle 0|[/mathjaxinline]</text>
+        </choice>
+      </checkboxgroup>
+    </choiceresponse>
+  </p>
+</problem>

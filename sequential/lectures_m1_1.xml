@@ -1,0 +1,18 @@
+<sequential display_name="Lectures M1.1: Quantum states and operations" due="&quot;2918-06-15T23:57:00+00:00&quot;" format="Concept" graceperiod="18000 seconds" graded="true" showanswer="closed" start="&quot;2017-09-06T00:00:00+00:00&quot;" attempts="10" tex_filename="./week1_lectures1.tex" linenum="3" refnum="1">
+  <vertical url_name="Introduction_to_quantum_information_science"/>
+  <vertical url_name="Topics_covered_in_this_8_371_course"/>
+  <vertical url_name="Quantum_states_and_operations_-_overview"/>
+  <vertical url_name="Density_matrices_and_ensembles"/>
+  <vertical url_name="Mathematical_definition_of_density_matrices"/>
+  <vertical url_name="CQ_Mathematical_criteria_satisfied_by_density_matrices"/>
+  <vertical url_name="Special_cases_of_density_matrices_-_pure_states"/>
+  <vertical url_name="Special_cases_of_density_matrices_-_probability_distributions"/>
+  <vertical url_name="Eigenvalues_of_density_matrices_specify_a_probability_distribution"/>
+  <vertical url_name="Special_cases_of_density_matrices_-_qubits"/>
+  <vertical url_name="The_Bloch_sphere"/>
+  <vertical url_name="CQ_Example_density_matrices"/>
+  <vertical url_name="Deterministic_classical_and_quantum_maps"/>
+  <vertical url_name="Classical_random_maps"/>
+  <vertical url_name="Introduction_to_quantum_operations"/>
+  <vertical url_name="CQ_Quantum_operations"/>
+</sequential>

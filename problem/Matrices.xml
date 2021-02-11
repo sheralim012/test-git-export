@@ -1,0 +1,39 @@
+<problem linenum="34" tex_filename="./week1_1_ps0.tex" attempts="10" display_name="Matrices" max_attempts="10">
+  <p>
+Let [mathjaxinline]|{\Phi }\rangle  = \frac{1}{\sqrt{d}}\sum _{i=1}^ d |{i}\rangle  \otimes |{i}\rangle[/mathjaxinline]. For any matrix [mathjaxinline]X[/mathjaxinline], there exists a matrix [mathjaxinline]Y[/mathjaxinline] such that </p>
+  <table id="a0000000002" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto">
+    <tr>
+      <td class="equation" style="width:80%; border:none">[mathjax](X \otimes I) |{\Phi }\rangle =(I \otimes Y) |{\Phi }\rangle .[/mathjax]</td>
+      <td class="eqnnum" style="width:20%; border:none"> </td>
+    </tr>
+  </table>
+  <p>
+What is [mathjaxinline]Y_{i,j}[/mathjaxinline] as a function of the entries of [mathjaxinline]X[/mathjaxinline]? </p>
+  <span>
+    <customresponse>
+      <drag_and_drop_input img="/static/images/ps0_p2/ps0_p2_dnd.png" target_outline="false" one_per_target="true" no_labels="true" label_bg_color="rgb(222, 139, 238)">
+        <draggable id="Phi" icon="/static/images/ps0_p2/ps0_p2_dnd_label1.png"/>
+        <draggable id="I" icon="/static/images/ps0_p2/ps0_p2_dnd_label2.png"/>
+        <draggable id="X" icon="/static/images/ps0_p2/ps0_p2_dnd_label3.png"/>
+        <draggable id="Y" icon="/static/images/ps0_p2/ps0_p2_dnd_label4.png"/>
+        <draggable id="d" icon="/static/images/ps0_p2/ps0_p2_dnd_label5.png"/>
+        <draggable id="i" icon="/static/images/ps0_p2/ps0_p2_dnd_label6.png"/>
+        <draggable id="j" icon="/static/images/ps0_p2/ps0_p2_dnd_label7.png"/>
+        <target id="1" x="110" y="1" w="121" h="85"/>
+        <target id="3" x="254" y="61" w="120" h="85"/>
+        <target id="2" x="406" y="61" w="120" h="85"/>
+      </drag_and_drop_input>
+      <answer>
+caset = [{'X': '1'}, {'j': '3'}, {'i': '2'}]
+ca = [ {"draggables": ca.keys(),"targets": ca.values(),"rule":"exact"} for ca in caset ]
+if draganddrop.grade(submission[0], ca):
+    correct = ["correct"]
+else:
+    correct = ["incorrect"]
+</answer>
+    </customresponse>
+    <solution>
+      <img src="/static/images/ps0_p2/ps0_p2_dnd_sol_4ZDN4A.png"/>
+    </solution>
+  </span>
+</problem>

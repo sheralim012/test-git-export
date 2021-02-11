@@ -1,0 +1,312 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:01,000
+I want to give you one more way of looking
+
+2
+00:00:01,000 --> 00:00:04,000
+at this projector in a way that I
+
+3
+00:00:04,000 --> 00:00:07,000
+think gives some more insight into what these stabilizers are
+
+4
+00:00:07,000 --> 00:00:08,000
+doing.
+
+5
+00:00:08,000 --> 00:00:10,000
+And the way I like to think about the stabilizers
+
+6
+00:00:10,000 --> 00:00:11,000
+is they're really--
+
+7
+00:00:11,000 --> 00:00:14,000
+you know, each one is adding a new constraint, just
+
+8
+00:00:14,000 --> 00:00:16,000
+like that for the classical linear codes.
+
+9
+00:00:16,000 --> 00:00:18,000
+We're imposing these parity constraints.
+
+10
+00:00:18,000 --> 00:00:23,000
+Every stabilizer generator is imposing a new fresh constraint
+
+11
+00:00:23,000 --> 00:00:26,000
+on your quantum state.
+
+12
+00:00:26,000 --> 00:00:30,000
+And this formula up here for pi s is very beautiful,
+
+13
+00:00:30,000 --> 00:00:32,000
+and in some cases very nice to use,
+
+14
+00:00:32,000 --> 00:00:35,000
+but it doesn't really get across that constraint picture,
+
+15
+00:00:35,000 --> 00:00:36,000
+because it just looks like I'm averaging
+
+16
+00:00:36,000 --> 00:00:38,000
+over a bunch of things, each one of which
+
+17
+00:00:38,000 --> 00:00:41,000
+is rotating in a different way, and somehow the good vectors
+
+18
+00:00:41,000 --> 00:00:44,000
+are unaffected by it and the bad vectors cancel out.
+
+19
+00:00:44,000 --> 00:00:46,000
+I don't really see the constraint in that.
+
+20
+00:00:46,000 --> 00:00:48,000
+So let me rephrase it in a way that
+
+21
+00:00:48,000 --> 00:00:52,000
+looks like I'm applying a bunch of independent constraints.
+
+22
+00:00:52,000 --> 00:00:55,000
+So once I have a bunch of generators,
+
+23
+00:00:55,000 --> 00:01:02,000
+I can write pi s as 1 over 2 to the l, sum over a.
+
+24
+00:01:02,000 --> 00:01:04,000
+And I said that a is 0, 1, but I could also
+
+25
+00:01:04,000 --> 00:01:11,000
+say F 2 to the l, because once I have the value 2,
+
+26
+00:01:11,000 --> 00:01:14,000
+that's as good as having 0.
+
+27
+00:01:14,000 --> 00:01:20,000
+s1 to the a1, through sl to the al.
+
+28
+00:01:20,000 --> 00:01:24,000
+So now I'm summing over a vector of l entries
+
+29
+00:01:24,000 --> 00:01:27,000
+and a product over l things.
+
+30
+00:01:27,000 --> 00:01:28,000
+And 1 over 2 to the l--
+
+31
+00:01:28,000 --> 00:01:35,000
+I can break this up as a product from i through 1 through l,
+
+32
+00:01:35,000 --> 00:01:45,000
+sum over ai in F2 of si to the ai over 2.
+
+33
+00:01:45,000 --> 00:01:48,000
+
+
+34
+00:01:48,000 --> 00:01:51,000
+I'm just rearranging this sum.
+
+35
+00:01:51,000 --> 00:01:53,000
+And then this inner thing--
+
+36
+00:01:53,000 --> 00:01:55,000
+maybe I can write it again without the summation.
+
+37
+00:01:55,000 --> 00:01:59,000
+This is product over i equals 1 to l.
+
+38
+00:01:59,000 --> 00:02:04,000
+Identity plus si over 2.
+
+39
+00:02:04,000 --> 00:02:07,000
+
+
+40
+00:02:07,000 --> 00:02:11,000
+And now what's this?
+
+41
+00:02:11,000 --> 00:02:12,000
+This thing in parentheses--
+
+42
+00:02:12,000 --> 00:02:14,000
+what eigenvalues does it have?
+
+43
+00:02:14,000 --> 00:02:21,000
+
+
+44
+00:02:21,000 --> 00:02:27,000
+So I heard plus minus 1, but those are the eigenvalues
+
+45
+00:02:27,000 --> 00:02:29,000
+of a Pauli matrix, right?
+
+46
+00:02:29,000 --> 00:02:31,000
+What about this thing?
+
+47
+00:02:31,000 --> 00:02:32,000
+Yeah?
+
+48
+00:02:32,000 --> 00:02:33,000
+0, 1.
+
+49
+00:02:33,000 --> 00:02:35,000
+Right. si's going to be plus minus 1.
+
+50
+00:02:35,000 --> 00:02:37,000
+Add 1, 0, 2.
+
+51
+00:02:37,000 --> 00:02:39,000
+Divide by 2, 0, 1.
+
+52
+00:02:39,000 --> 00:02:42,000
+So these are projectors.
+
+53
+00:02:42,000 --> 00:02:47,000
+And they're projectors where half the space has eigenvalue 1
+
+54
+00:02:47,000 --> 00:02:49,000
+and half the space has eigenvalue 0.
+
+55
+00:02:49,000 --> 00:02:51,000
+And the space that has eigenvalue 1--
+
+56
+00:02:51,000 --> 00:02:54,000
+that's the same as the part where si has eigenvalue 1.
+
+57
+00:02:54,000 --> 00:02:56,000
+So we're just projecting onto the plus 1 eigenspace--
+
+58
+00:02:56,000 --> 00:02:58,000
+
+
+59
+00:02:58,000 --> 00:03:06,000
+projector onto the plus one eigenspace of si.
+
+60
+00:03:06,000 --> 00:03:08,000
+And these projectors all commute,
+
+61
+00:03:08,000 --> 00:03:10,000
+because the sis commute.
+
+62
+00:03:10,000 --> 00:03:13,000
+So what we're doing is, each one of these generators
+
+63
+00:03:13,000 --> 00:03:15,000
+corresponds to an independent constraint.
+
+64
+00:03:15,000 --> 00:03:18,000
+And we just impose, one after another,
+
+65
+00:03:18,000 --> 00:03:20,000
+each one of these constraints.
+
+66
+00:03:20,000 --> 00:03:24,000
+And then that leaves us with our overall projector, pi sub s.
+
+67
+00:03:24,000 --> 00:03:27,000
+OK, so just to give you a little example of what this looks
+
+68
+00:03:27,000 --> 00:03:28,000
+like for one qubit.
+
+69
+00:03:28,000 --> 00:03:31,000
+
+
+70
+00:03:31,000 --> 00:03:39,000
+Identity plus Z over 2 projects onto the 0 state.
+
+71
+00:03:39,000 --> 00:03:45,000
+Identity minus Z over 2 projects onto the 1 state, et cetera.
+
+72
+00:03:45,000 --> 00:03:49,000
+You know, these projectors just single out
+
+73
+00:03:49,000 --> 00:03:54,000
+the plus 1 eigenspace of the respective Pauli operator.
+
+74
+00:03:54,000 --> 00:04:03,000
+F2 just means numbers 0 and 1 with addition modulo 2.
+
+75
+00:04:03,000 --> 00:04:07,000
+
+
+76
+00:04:07,000 --> 00:04:08,000
+I talked about it more when we were
+
+77
+00:04:08,000 --> 00:04:11,000
+
+

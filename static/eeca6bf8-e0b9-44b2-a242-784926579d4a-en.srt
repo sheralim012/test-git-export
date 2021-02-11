@@ -1,0 +1,452 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:03,000
+Today we're going to cover the concepts of the error
+
+2
+00:00:03,000 --> 00:00:06,000
+correction criteria for quantum codes.
+
+3
+00:00:06,000 --> 00:00:08,000
+And the way I'd like to do that is
+
+4
+00:00:08,000 --> 00:00:10,000
+to begin with a brief review of what
+
+5
+00:00:10,000 --> 00:00:13,000
+we have learned for classical coding and quantum
+
+6
+00:00:13,000 --> 00:00:17,000
+coding so that I can tie all these threads together and use
+
+7
+00:00:17,000 --> 00:00:20,000
+a single piece of language to describe
+
+8
+00:00:20,000 --> 00:00:23,000
+the entire set of concepts in the field.
+
+9
+00:00:23,000 --> 00:00:26,000
+And so I'll rapidly move from classical
+
+10
+00:00:26,000 --> 00:00:30,000
+to quantum using the same examples that you have seen.
+
+11
+00:00:30,000 --> 00:00:35,000
+Then I will introduce a new terminology-- a new mechanism--
+
+12
+00:00:35,000 --> 00:00:37,000
+known as operator measurement.
+
+13
+00:00:37,000 --> 00:00:38,000
+And using operator measurement, we'll
+
+14
+00:00:38,000 --> 00:00:43,000
+be able to see a operationalized version of syndrome
+
+15
+00:00:43,000 --> 00:00:46,000
+measurement; and then the step after syndrome measurement,
+
+16
+00:00:46,000 --> 00:00:49,000
+which you haven't explicitly seen so far, which is something
+
+17
+00:00:49,000 --> 00:00:51,000
+called the recovery operation.
+
+18
+00:00:51,000 --> 00:00:53,000
+And then based on that recovery operation,
+
+19
+00:00:53,000 --> 00:00:57,000
+we'll be able to formalize what the criteria are for when you
+
+20
+00:00:57,000 --> 00:01:00,000
+can correct errors and when you cannot correct errors.
+
+21
+00:01:00,000 --> 00:01:03,000
+And this is a beautiful, phenomenal thing
+
+22
+00:01:03,000 --> 00:01:06,000
+to know about in quantum error correction.
+
+23
+00:01:06,000 --> 00:01:09,000
+Questions before I go on?
+
+24
+00:01:09,000 --> 00:01:09,000
+OK.
+
+25
+00:01:09,000 --> 00:01:12,000
+So let's begin with a little bit of review.
+
+26
+00:01:12,000 --> 00:01:23,000
+
+
+27
+00:01:23,000 --> 00:01:25,000
+You may remember that the scenario
+
+28
+00:01:25,000 --> 00:01:32,000
+for the classical coding began with this notion
+
+29
+00:01:32,000 --> 00:01:34,000
+of having a noisy channel.
+
+30
+00:01:34,000 --> 00:01:38,000
+The noisy channel was one in which you would have an input
+
+31
+00:01:38,000 --> 00:01:42,000
+0 that would stay 0 with a certain probability 1 minus P.
+
+32
+00:01:42,000 --> 00:01:46,000
+But with a probability of error of P, 0 would turn into a 1,
+
+33
+00:01:46,000 --> 00:01:49,000
+and this was symmetric, so that 1 could turn into a 0,
+
+34
+00:01:49,000 --> 00:01:52,000
+or stay unchanged with the same probability of error.
+
+35
+00:01:52,000 --> 00:01:54,000
+So P is the probability of error.
+
+36
+00:01:54,000 --> 00:01:59,000
+
+
+37
+00:01:59,000 --> 00:02:02,000
+Now this is called the binary symmetric channel.
+
+38
+00:02:02,000 --> 00:02:04,000
+And we apply the binary symmetric channel
+
+39
+00:02:04,000 --> 00:02:06,000
+to a variety of codes.
+
+40
+00:02:06,000 --> 00:02:10,000
+And then we show that by doing something basic, which
+
+41
+00:02:10,000 --> 00:02:13,000
+was repetition, we were able to correct for this kind of error,
+
+42
+00:02:13,000 --> 00:02:15,000
+and other kinds of errors.
+
+43
+00:02:15,000 --> 00:02:18,000
+And this is also known as a bit-flip error,
+
+44
+00:02:18,000 --> 00:02:21,000
+when you have a 0 going to a 1 and vise versa.
+
+45
+00:02:21,000 --> 00:02:24,000
+So what we did not do was to define
+
+46
+00:02:24,000 --> 00:02:25,000
+what a classical code was.
+
+47
+00:02:25,000 --> 00:02:29,000
+And I'd like to summarize that for you right now.
+
+48
+00:02:29,000 --> 00:02:38,000
+Let me define a classical code with some parameters--
+
+49
+00:02:38,000 --> 00:02:41,000
+n, k, and d.
+
+50
+00:02:41,000 --> 00:02:44,000
+
+
+51
+00:02:44,000 --> 00:02:47,000
+And this will be a very simple conceptual definition.
+
+52
+00:02:47,000 --> 00:02:49,000
+This is exceedingly general.
+
+53
+00:02:49,000 --> 00:02:51,000
+It's not meant to actually be very useful.
+
+54
+00:02:51,000 --> 00:02:54,000
+And the reason I give you this kind of definition
+
+55
+00:02:54,000 --> 00:02:56,000
+is because I want you to see the parallel of this definition
+
+56
+00:02:56,000 --> 00:02:58,000
+with the quantum version of it.
+
+57
+00:02:58,000 --> 00:03:03,000
+So a classical n, k, d code with three parameters
+
+58
+00:03:03,000 --> 00:03:11,000
+is defined as a set of 2 to the k n bit
+
+59
+00:03:11,000 --> 00:03:18,000
+strings in the set of all binary strings,
+
+60
+00:03:18,000 --> 00:03:21,000
+with a certain property--
+
+61
+00:03:21,000 --> 00:03:32,000
+with minimum Hamming distance between any code words
+
+62
+00:03:32,000 --> 00:03:38,000
+in this set of bit strings d.
+
+63
+00:03:38,000 --> 00:03:40,000
+So I'm not implying any structure
+
+64
+00:03:40,000 --> 00:03:42,000
+on this set of bit strings.
+
+65
+00:03:42,000 --> 00:03:46,000
+For it to be a code, you don't have to have that structure.
+
+66
+00:03:46,000 --> 00:03:48,000
+But remember that what you saw in lecture
+
+67
+00:03:48,000 --> 00:03:52,000
+was Professor Shor giving you a very special set of such bit
+
+68
+00:03:52,000 --> 00:03:54,000
+strings, which were generated by a matrix, that
+
+69
+00:03:54,000 --> 00:03:56,000
+generated a matrix.
+
+70
+00:03:56,000 --> 00:03:59,000
+And these were called linear classical codes.
+
+71
+00:03:59,000 --> 00:04:01,000
+And it's very nice to have families of codes like that.
+
+72
+00:04:01,000 --> 00:04:05,000
+But just for the definition of what a code is in principle,
+
+73
+00:04:05,000 --> 00:04:09,000
+you don't need to have that kind of a specific definition.
+
+74
+00:04:09,000 --> 00:04:14,000
+So in order to use this definition, one thing we need
+
+75
+00:04:14,000 --> 00:04:16,000
+is the Hamming distance.
+
+76
+00:04:16,000 --> 00:04:19,000
+And I want to make sure you all remember this.
+
+77
+00:04:19,000 --> 00:04:23,000
+The Hamming distance d between two [INAUDIBLE] x and y,
+
+78
+00:04:23,000 --> 00:04:31,000
+is the weight of x plus y, where this is the Hamming weight.
+
+79
+00:04:31,000 --> 00:04:34,000
+That's the number of 1s.
+
+80
+00:04:34,000 --> 00:04:42,000
+And this here is an bitwise exclusive or between the two
+
+81
+00:04:42,000 --> 00:04:44,000
+strings x and y.
+
+82
+00:04:44,000 --> 00:04:48,000
+And for linear codes, when Professor Shor described this,
+
+83
+00:04:48,000 --> 00:04:49,000
+there was this just an addition sign there.
+
+84
+00:04:49,000 --> 00:04:53,000
+And what he meant was for it to be modular, too, in the sum.
+
+85
+00:04:53,000 --> 00:04:55,000
+And when you're using general bit-string codes
+
+86
+00:04:55,000 --> 00:05:00,000
+like I have here, this is the more general way to look at it.
+
+87
+00:05:00,000 --> 00:05:03,000
+So let's give an example.
+
+88
+00:05:03,000 --> 00:05:07,000
+
+
+89
+00:05:07,000 --> 00:05:11,000
+Suppose I encode with three 0s as being
+
+90
+00:05:11,000 --> 00:05:15,000
+a representation of a logical 0, and three 1s as
+
+91
+00:05:15,000 --> 00:05:20,000
+being the representation of a logical 1.
+
+92
+00:05:20,000 --> 00:05:22,000
+What are n, k, and d?
+
+93
+00:05:22,000 --> 00:05:26,000
+
+
+94
+00:05:26,000 --> 00:05:27,000
+Anyone?
+
+95
+00:05:27,000 --> 00:05:29,000
+
+
+96
+00:05:29,000 --> 00:05:31,000
+n is equal to--
+
+97
+00:05:31,000 --> 00:05:34,000
+
+
+98
+00:05:34,000 --> 00:05:36,000
+this is an easy one.
+
+99
+00:05:36,000 --> 00:05:36,000
+3?
+
+100
+00:05:36,000 --> 00:05:37,000
+OK.
+
+101
+00:05:37,000 --> 00:05:40,000
+What's k?
+
+102
+00:05:40,000 --> 00:05:41,000
+[INAUDIBLE]
+
+103
+00:05:41,000 --> 00:05:44,000
+I heard somebody say 2, though.
+
+104
+00:05:44,000 --> 00:05:46,000
+So you can see that the reason it's 1
+
+105
+00:05:46,000 --> 00:05:50,000
+is because there's only one bit encoded using three bits.
+
+106
+00:05:50,000 --> 00:05:52,000
+Now what is d?
+
+107
+00:05:52,000 --> 00:05:53,000
+[INAUDIBLE]
+
+108
+00:05:53,000 --> 00:05:55,000
+3.
+
+109
+00:05:55,000 --> 00:05:56,000
+And why is it 3?
+
+110
+00:05:56,000 --> 00:06:00,000
+It's because you need to flip three bits to go from one word
+
+111
+00:06:00,000 --> 00:06:01,000
+to the other word.
+
+112
+00:06:01,000 --> 00:06:05,000
+
+

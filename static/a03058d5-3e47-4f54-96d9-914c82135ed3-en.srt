@@ -1,0 +1,452 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:02,000
+Let's look at a quantum code and use
+
+2
+00:00:02,000 --> 00:00:04,000
+that as an example to illustrate some
+
+3
+00:00:04,000 --> 00:00:06,000
+of these ideas and definitions.
+
+4
+00:00:06,000 --> 00:00:13,000
+
+
+5
+00:00:13,000 --> 00:00:17,000
+Remember the quantum bit flip code.
+
+6
+00:00:17,000 --> 00:00:21,000
+So now in order to understand the code let's
+
+7
+00:00:21,000 --> 00:00:23,000
+first look at the noise model.
+
+8
+00:00:23,000 --> 00:00:26,000
+What I just erased here was the classical noise model
+
+9
+00:00:26,000 --> 00:00:28,000
+of the binary symmetric channel.
+
+10
+00:00:28,000 --> 00:00:30,000
+In the quantum case, what we have
+
+11
+00:00:30,000 --> 00:00:33,000
+is a map that says that some input density
+
+12
+00:00:33,000 --> 00:00:38,000
+matrix goes to sum output density matrix e of row.
+
+13
+00:00:38,000 --> 00:00:40,000
+This is a notation that's commonly
+
+14
+00:00:40,000 --> 00:00:42,000
+used in the community, which I'll
+
+15
+00:00:42,000 --> 00:00:49,000
+start to use today, which was with some probability 1 minus p
+
+16
+00:00:49,000 --> 00:00:52,000
+the original density matrix that comes in.
+
+17
+00:00:52,000 --> 00:00:54,000
+You can think of this as a pure state if you wish.
+
+18
+00:00:54,000 --> 00:00:59,000
+With some probability 1 minus p nothing happens to the state.
+
+19
+00:00:59,000 --> 00:01:02,000
+But I'll have a stochastic combination.
+
+20
+00:01:02,000 --> 00:01:05,000
+So with probability p, I'll have some error.
+
+21
+00:01:05,000 --> 00:01:09,000
+And in this case, the error is x row x.
+
+22
+00:01:09,000 --> 00:01:11,000
+And remember, we conjugate.
+
+23
+00:01:11,000 --> 00:01:15,000
+We put the unitary operation on both sides of a density matrix.
+
+24
+00:01:15,000 --> 00:01:17,000
+If this were a pure state, this would
+
+25
+00:01:17,000 --> 00:01:20,000
+be something like psi psi, and then it
+
+26
+00:01:20,000 --> 00:01:25,000
+would have u and u dagger on either side like this.
+
+27
+00:01:25,000 --> 00:01:30,000
+So think of that as you see a term which describes an error.
+
+28
+00:01:30,000 --> 00:01:32,000
+I'm not going to describe in formal ways
+
+29
+00:01:32,000 --> 00:01:35,000
+all the ways that a density matrix can involve,
+
+30
+00:01:35,000 --> 00:01:37,000
+but this is the noise model.
+
+31
+00:01:37,000 --> 00:01:38,000
+And this is called the bit flip channel.
+
+32
+00:01:38,000 --> 00:01:44,000
+
+
+33
+00:01:44,000 --> 00:01:49,000
+And we encoded a single qubit for this code
+
+34
+00:01:49,000 --> 00:01:53,000
+where we defined the logical 0 as being
+
+35
+00:01:53,000 --> 00:01:58,000
+three zeros and the logical 1 as being three ones.
+
+36
+00:01:58,000 --> 00:02:01,000
+
+
+37
+00:02:01,000 --> 00:02:05,000
+So another thing that's useful to keep in mind
+
+38
+00:02:05,000 --> 00:02:08,000
+is the picture behind this.
+
+39
+00:02:08,000 --> 00:02:11,000
+What we have is two parties that are trying to communicate.
+
+40
+00:02:11,000 --> 00:02:14,000
+And these are probably the two most famous people
+
+41
+00:02:14,000 --> 00:02:19,000
+in the field after Peter Shore, Alice and Bob.
+
+42
+00:02:19,000 --> 00:02:22,000
+So Alice had some state row.
+
+43
+00:02:22,000 --> 00:02:25,000
+And she's communicating with Bob over a channel
+
+44
+00:02:25,000 --> 00:02:27,000
+which I'll call e or epsilon.
+
+45
+00:02:27,000 --> 00:02:32,000
+And Bob receives e of row like this.
+
+46
+00:02:32,000 --> 00:02:35,000
+So that's the physical picture behind what I'm drawing.
+
+47
+00:02:35,000 --> 00:02:36,000
+Right.
+
+48
+00:02:36,000 --> 00:02:38,000
+And Bob wants to be able to recover the information
+
+49
+00:02:38,000 --> 00:02:43,000
+that Alice has sent, despite what Eve might do.
+
+50
+00:02:43,000 --> 00:02:45,000
+Eve being the environment that's causing the errors,
+
+51
+00:02:45,000 --> 00:02:50,000
+otherwise known as e or epsilon in this diagram.
+
+52
+00:02:50,000 --> 00:02:53,000
+So Eve is probably the fourth most famous person
+
+53
+00:02:53,000 --> 00:02:55,000
+in quantum information.
+
+54
+00:02:55,000 --> 00:02:57,000
+The way we're doing this can be defined
+
+55
+00:02:57,000 --> 00:02:59,000
+in a much more formal way by giving you
+
+56
+00:02:59,000 --> 00:03:02,000
+an analogous definition to the classical codes,
+
+57
+00:03:02,000 --> 00:03:03,000
+but for quantum codes.
+
+58
+00:03:03,000 --> 00:03:06,000
+So let me define that for you.
+
+59
+00:03:06,000 --> 00:03:21,000
+A quantum code with parameters n, k, and d.
+
+60
+00:03:21,000 --> 00:03:22,000
+Excuse me.
+
+61
+00:03:22,000 --> 00:03:25,000
+I'm going to leave out distances for now.
+
+62
+00:03:25,000 --> 00:03:27,000
+So a quantum n, k code--
+
+63
+00:03:27,000 --> 00:03:29,000
+and the convention in the community
+
+64
+00:03:29,000 --> 00:03:31,000
+is to use double brackets for quantum
+
+65
+00:03:31,000 --> 00:03:35,000
+codes versus single brackets for classical codes--
+
+66
+00:03:35,000 --> 00:03:56,000
+is defined as a k qubit subspace of an n qubit Hilbert space.
+
+67
+00:03:56,000 --> 00:04:01,000
+
+
+68
+00:04:01,000 --> 00:04:01,000
+Period.
+
+69
+00:04:01,000 --> 00:04:04,000
+
+
+70
+00:04:04,000 --> 00:04:06,000
+There's no more to the definition.
+
+71
+00:04:06,000 --> 00:04:10,000
+That is, it's just some subspace of a Hilbert space.
+
+72
+00:04:10,000 --> 00:04:12,000
+Just like for classical codes I told you
+
+73
+00:04:12,000 --> 00:04:16,000
+the classical code was a set of bit strings.
+
+74
+00:04:16,000 --> 00:04:20,000
+Now, OK, it's a subspace instead of just a set of vectors.
+
+75
+00:04:20,000 --> 00:04:24,000
+But the set of vectors happens to be orthonormal to each other
+
+76
+00:04:24,000 --> 00:04:27,000
+and defines a Hilbert subspace.
+
+77
+00:04:27,000 --> 00:04:31,000
+So the reason I've left out distances and so forth
+
+78
+00:04:31,000 --> 00:04:33,000
+is because they're a little hard to define
+
+79
+00:04:33,000 --> 00:04:37,000
+until I give you the analogous quantity to a Hamming weight
+
+80
+00:04:37,000 --> 00:04:39,000
+and Hamming distance.
+
+81
+00:04:39,000 --> 00:04:41,000
+And I'm not going to do that in this class.
+
+82
+00:04:41,000 --> 00:04:45,000
+But you can rest assure that it does exist
+
+83
+00:04:45,000 --> 00:04:49,000
+and is a very powerful thing in the field.
+
+84
+00:04:49,000 --> 00:04:51,000
+So let's get an example.
+
+85
+00:04:51,000 --> 00:04:54,000
+
+
+86
+00:04:54,000 --> 00:05:00,000
+Again, 0 0 0 and 1 1 1 is the logical codewords.
+
+87
+00:05:00,000 --> 00:05:05,000
+Here are k equals 1, n equals 3.
+
+88
+00:05:05,000 --> 00:05:11,000
+Now, compare this with what you might
+
+89
+00:05:11,000 --> 00:05:15,000
+do if you are a classical coding theorist in 1995.
+
+90
+00:05:15,000 --> 00:05:21,000
+You might have said if Alice has stated
+
+91
+00:05:21,000 --> 00:05:25,000
+that she wants to transmit row, then
+
+92
+00:05:25,000 --> 00:05:34,000
+she should transmit psi, psi, psi.
+
+93
+00:05:34,000 --> 00:05:37,000
+
+
+94
+00:05:37,000 --> 00:05:40,000
+Why can't she do that?
+
+95
+00:05:40,000 --> 00:05:43,000
+Well, if she doesn't know how to produce psi
+
+96
+00:05:43,000 --> 00:05:46,000
+but she was just giving it, then, first of all,
+
+97
+00:05:46,000 --> 00:05:48,000
+she has no way to clone that unknown state
+
+98
+00:05:48,000 --> 00:05:51,000
+to get three copies of it.
+
+99
+00:05:51,000 --> 00:05:56,000
+Secondly, you'll find that even if you did create it and send
+
+100
+00:05:56,000 --> 00:06:00,000
+it across like this, you can't measure that state to find out
+
+101
+00:06:00,000 --> 00:06:02,000
+what errors occurred on it.
+
+102
+00:06:02,000 --> 00:06:07,000
+So although we showed you how this works,
+
+103
+00:06:07,000 --> 00:06:09,000
+there is an enormous conceptual leap
+
+104
+00:06:09,000 --> 00:06:13,000
+that went to creating this instead of that
+
+105
+00:06:13,000 --> 00:06:16,000
+that I want you to appreciate.
+
+106
+00:06:16,000 --> 00:06:18,000
+And this is not how quantum codes work.
+
+107
+00:06:18,000 --> 00:06:21,000
+This is how quantum codes work.
+
+108
+00:06:21,000 --> 00:06:23,000
+This is the obvious way to make quantum codes
+
+109
+00:06:23,000 --> 00:06:26,000
+that we've just forgotten about because it doesn't work.
+
+110
+00:06:26,000 --> 00:06:29,000
+And there is something very non-intuitive about doing it
+
+111
+00:06:29,000 --> 00:06:32,000
+this way until you get your mind rearranged like a quantum
+
+112
+00:06:32,000 --> 00:06:34,000
+
+

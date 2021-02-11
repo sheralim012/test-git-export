@@ -1,0 +1,284 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:03,000
+Why is it true that this is all we need to consider?
+
+2
+00:00:03,000 --> 00:00:04,000
+Because, technically, we should be looking
+
+3
+00:00:04,000 --> 00:00:07,000
+at compositions of these.
+
+4
+00:00:07,000 --> 00:00:11,000
+If you allow me to do isometry then partial trace,
+
+5
+00:00:11,000 --> 00:00:13,000
+isometry, partial trace, isometry, partial
+
+6
+00:00:13,000 --> 00:00:15,000
+trace, over and over again.
+
+7
+00:00:15,000 --> 00:00:16,000
+Then you should believe that I can
+
+8
+00:00:16,000 --> 00:00:19,000
+get all possible compositions of the three elements.
+
+9
+00:00:19,000 --> 00:00:22,000
+But here I'm saying I only do it once.
+
+10
+00:00:22,000 --> 00:00:23,000
+And the reason is--
+
+11
+00:00:23,000 --> 00:00:25,000
+let's just consider if we do it twice.
+
+12
+00:00:25,000 --> 00:00:33,000
+So let's consider n2 composed with n1.
+
+13
+00:00:33,000 --> 00:00:41,000
+We start with a system a, we do some isometry v1,
+
+14
+00:00:41,000 --> 00:00:52,000
+we get output b, and e1 goes into the trash can.
+
+15
+00:00:52,000 --> 00:00:59,000
+And then we feed it to a second isometry, v2, as output c.
+
+16
+00:00:59,000 --> 00:01:04,000
+
+
+17
+00:01:04,000 --> 00:01:07,000
+e2 gets discarded.
+
+18
+00:01:07,000 --> 00:01:09,000
+So this is what the combination of these two channels
+
+19
+00:01:09,000 --> 00:01:10,000
+looks like.
+
+20
+00:01:10,000 --> 00:01:18,000
+And I claim-- so the key thing about this is,
+
+21
+00:01:18,000 --> 00:01:19,000
+these discardings--
+
+22
+00:01:19,000 --> 00:01:21,000
+after I discard a system, by definition
+
+23
+00:01:21,000 --> 00:01:23,000
+I never look at it again.
+
+24
+00:01:23,000 --> 00:01:25,000
+The photon leaves my lab or otherwise becomes
+
+25
+00:01:25,000 --> 00:01:26,000
+inaccessible to me.
+
+26
+00:01:26,000 --> 00:01:28,000
+Or maybe it's still there, but I just promise never
+
+27
+00:01:28,000 --> 00:01:29,000
+to touch it again.
+
+28
+00:01:29,000 --> 00:01:32,000
+Either way, I'm not going to act on it ever again.
+
+29
+00:01:32,000 --> 00:01:34,000
+So it doesn't matter if I discard it right away
+
+30
+00:01:34,000 --> 00:01:37,000
+or I keep it around and I discarded at end.
+
+31
+00:01:37,000 --> 00:01:44,000
+So if I write this as a goes into the composition of v2
+
+32
+00:01:44,000 --> 00:01:47,000
+with v1, then what do I get?
+
+33
+00:01:47,000 --> 00:01:52,000
+I get output c e1 e2.
+
+34
+00:01:52,000 --> 00:01:55,000
+Then I can push all the discarding to the end.
+
+35
+00:01:55,000 --> 00:02:01,000
+So now I trace out both e1 and e2,
+
+36
+00:02:01,000 --> 00:02:04,000
+and I get back to the same map.
+
+37
+00:02:04,000 --> 00:02:07,000
+So you may have heard of the principle
+
+38
+00:02:07,000 --> 00:02:09,000
+of deferred measurement which says
+
+39
+00:02:09,000 --> 00:02:11,000
+I can always push measurements to the end of a quantum
+
+40
+00:02:11,000 --> 00:02:12,000
+computation.
+
+41
+00:02:12,000 --> 00:02:13,000
+This is similar.
+
+42
+00:02:13,000 --> 00:02:16,000
+You could call it a principle of deferred partial trace.
+
+43
+00:02:16,000 --> 00:02:18,000
+If I do a partial trace in the middle,
+
+44
+00:02:18,000 --> 00:02:20,000
+I could have always done it at the end as well.
+
+45
+00:02:20,000 --> 00:02:31,000
+So partial trace can always be delayed.
+
+46
+00:02:31,000 --> 00:02:34,000
+In fact, because partial trace is only a bookkeeping device,
+
+47
+00:02:34,000 --> 00:02:36,000
+I can delay it forever.
+
+48
+00:02:36,000 --> 00:02:41,000
+So there's a philosophy called the Church of the Larger
+
+49
+00:02:41,000 --> 00:02:53,000
+Hilbert Space, which says if I'm only going to consider, let's
+
+50
+00:02:53,000 --> 00:02:58,000
+say, a measurement on system c, I could have traced out e1
+
+51
+00:02:58,000 --> 00:03:01,000
+and e2, or I could have kept them around
+
+52
+00:03:01,000 --> 00:03:04,000
+and considered myself to have an overall pure state.
+
+53
+00:03:04,000 --> 00:03:06,000
+And that means, in other words, looking at my system
+
+54
+00:03:06,000 --> 00:03:09,000
+as living in a larger Hilbert Space.
+
+55
+00:03:09,000 --> 00:03:11,000
+And it's just as good.
+
+56
+00:03:11,000 --> 00:03:14,000
+I can describe measurements on c just as well.
+
+57
+00:03:14,000 --> 00:03:17,000
+In some cases it's more convenient to trace out
+
+58
+00:03:17,000 --> 00:03:20,000
+e1 and e2 and just consider the reduced state on system c.
+
+59
+00:03:20,000 --> 00:03:23,000
+In some cases, it's more convenient to consider
+
+60
+00:03:23,000 --> 00:03:26,000
+the overall pure state that includes the environment.
+
+61
+00:03:26,000 --> 00:03:28,000
+And these are both equally valid ways of doing it.
+
+62
+00:03:28,000 --> 00:03:30,000
+The only tiebreaker between them should
+
+63
+00:03:30,000 --> 00:03:33,000
+be convenience and simplicity of the calculation.
+
+64
+00:03:33,000 --> 00:03:38,000
+But physically, they describe the same system.
+
+65
+00:03:38,000 --> 00:03:40,000
+So because I can always defer partial trace, any sequence
+
+66
+00:03:40,000 --> 00:03:42,000
+of isometries in partial trace, I
+
+67
+00:03:42,000 --> 00:03:44,000
+can represent as a single isometry followed
+
+68
+00:03:44,000 --> 00:03:46,000
+by a single partial trace.
+
+69
+00:03:46,000 --> 00:03:49,000
+And so that justifies why this is a valid description
+
+70
+00:03:49,000 --> 00:03:52,000
+
+

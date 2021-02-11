@@ -1,0 +1,352 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:01,000
+We have this nice, simple description
+
+2
+00:00:01,000 --> 00:00:04,000
+of the parameters of the code, but there's
+
+3
+00:00:04,000 --> 00:00:07,000
+something a little unsatisfactory which is--
+
+4
+00:00:07,000 --> 00:00:09,000
+oh and also, we got rid of the encoding and decoding maps.
+
+5
+00:00:09,000 --> 00:00:10,000
+Right?
+
+6
+00:00:10,000 --> 00:00:13,000
+A code is just a subset of strings.
+
+7
+00:00:13,000 --> 00:00:16,000
+But there's something a little unsatisfactory about that,
+
+8
+00:00:16,000 --> 00:00:20,000
+which is there's a lot of strings of length n,
+
+9
+00:00:20,000 --> 00:00:23,000
+and there's a lot of subsets of those strings of length n.
+
+10
+00:00:23,000 --> 00:00:24,000
+Right?
+
+11
+00:00:24,000 --> 00:00:28,000
+So to describe a code seems to require
+
+12
+00:00:28,000 --> 00:00:31,000
+a vast number of parameters, and these are still
+
+13
+00:00:31,000 --> 00:00:34,000
+extremely general objects.
+
+14
+00:00:34,000 --> 00:00:37,000
+So even apart from efficiency, just to describe them
+
+15
+00:00:37,000 --> 00:00:39,000
+efficiently we would like to kind of simplify
+
+16
+00:00:39,000 --> 00:00:41,000
+the situation a little bit.
+
+17
+00:00:41,000 --> 00:00:44,000
+And it turns out, there's a vast simplification
+
+18
+00:00:44,000 --> 00:00:48,000
+we can make that turns out to not give up too much error
+
+19
+00:00:48,000 --> 00:00:49,000
+correction power.
+
+20
+00:00:49,000 --> 00:00:51,000
+It's kind of a nice--
+
+21
+00:00:51,000 --> 00:00:54,000
+the universe did not have to give us linear codes,
+
+22
+00:00:54,000 --> 00:00:57,000
+but it did, and so we should take advantage of that.
+
+23
+00:00:57,000 --> 00:01:07,000
+And so this simplification is called linear algebra,
+
+24
+00:01:07,000 --> 00:01:13,000
+and we'll use linear algebra not over the reals or the complexes
+
+25
+00:01:13,000 --> 00:01:15,000
+but over a finite field.
+
+26
+00:01:15,000 --> 00:01:20,000
+So I'm going to do a brief review of what that is,
+
+27
+00:01:20,000 --> 00:01:23,000
+if you haven't seen it before.
+
+28
+00:01:23,000 --> 00:01:27,000
+We'll do linear algebra over the field F2.
+
+29
+00:01:27,000 --> 00:01:29,000
+OK, I'll tell you in a minute what a field is.
+
+30
+00:01:29,000 --> 00:01:36,000
+F2 is just the set of two numbers, 0 and 1,
+
+31
+00:01:36,000 --> 00:01:40,000
+but it's a set that comes with operations defined on it.
+
+32
+00:01:40,000 --> 00:01:42,000
+Think, if you know object-oriented programming,
+
+33
+00:01:42,000 --> 00:01:44,000
+it's not that it's just the data structure.
+
+34
+00:01:44,000 --> 00:01:47,000
+You have the methods also that [? get ?] overwritten,
+
+35
+00:01:47,000 --> 00:01:52,000
+and so we have plus and times defined on this set,
+
+36
+00:01:52,000 --> 00:01:57,000
+and we define them mod 2.
+
+37
+00:01:57,000 --> 00:01:57,000
+OK?
+
+38
+00:01:57,000 --> 00:02:04,000
+So the way addition works, here is the addition table.
+
+39
+00:02:04,000 --> 00:02:05,000
+Those parts look the same.
+
+40
+00:02:05,000 --> 00:02:08,000
+If these were ordinary integers, you'd put 2 here,
+
+41
+00:02:08,000 --> 00:02:09,000
+but I'm doing everything mod 2.
+
+42
+00:02:09,000 --> 00:02:19,000
+So 2 gets replaced with 0, and times just looks the same
+
+43
+00:02:19,000 --> 00:02:20,000
+as ordinary integers.
+
+44
+00:02:20,000 --> 00:02:25,000
+
+
+45
+00:02:25,000 --> 00:02:29,000
+So what is the value of doing this?
+
+46
+00:02:29,000 --> 00:02:32,000
+
+
+47
+00:02:32,000 --> 00:02:38,000
+So unlike just taking 0 and 1 with ordinary addition
+
+48
+00:02:38,000 --> 00:02:47,000
+and multiplication, F2 is closed under addition
+
+49
+00:02:47,000 --> 00:02:48,000
+and multiplication.
+
+50
+00:02:48,000 --> 00:02:48,000
+Right?
+
+51
+00:02:48,000 --> 00:02:52,000
+So if I just had the times and plus
+
+52
+00:02:52,000 --> 00:02:56,000
+table for regular addition, I would have a 2 here,
+
+53
+00:02:56,000 --> 00:02:57,000
+and my set would not be closed.
+
+54
+00:02:57,000 --> 00:02:59,000
+Then, I would have to put in 2 if I wanted
+
+55
+00:02:59,000 --> 00:03:02,000
+to make it closed, but then I'd have 3 and 4 showing up,
+
+56
+00:03:02,000 --> 00:03:03,000
+et cetera.
+
+57
+00:03:03,000 --> 00:03:06,000
+So by doing it with mod 2, 0 and 1
+
+58
+00:03:06,000 --> 00:03:10,000
+becomes closed under these operations.
+
+59
+00:03:10,000 --> 00:03:13,000
+Now, we've seen already a set which
+
+60
+00:03:13,000 --> 00:03:18,000
+is closed under addition and multiplication,
+
+61
+00:03:18,000 --> 00:03:19,000
+and that's just the integers.
+
+62
+00:03:19,000 --> 00:03:22,000
+Keep all the integers, then plus and times
+
+63
+00:03:22,000 --> 00:03:24,000
+will always give you more integers,
+
+64
+00:03:24,000 --> 00:03:28,000
+but the integers do not have division.
+
+65
+00:03:28,000 --> 00:03:36,000
+So F2 has division, otherwise known
+
+66
+00:03:36,000 --> 00:03:38,000
+as a multiplicative inverse.
+
+67
+00:03:38,000 --> 00:03:41,000
+So the multiplicative identity is 1.
+
+68
+00:03:41,000 --> 00:03:45,000
+I multiply 1 by anything, I get back that number.
+
+69
+00:03:45,000 --> 00:03:48,000
+The multiplicative inverse is something,
+
+70
+00:03:48,000 --> 00:03:50,000
+whatever x is, its inverse should be something
+
+71
+00:03:50,000 --> 00:03:54,000
+I multiply by x to get 1.
+
+72
+00:03:54,000 --> 00:03:57,000
+And in a field, every number, except for 0,
+
+73
+00:03:57,000 --> 00:03:58,000
+should have an inverse.
+
+74
+00:03:58,000 --> 00:04:01,000
+So for the real numbers, any non-zero number,
+
+75
+00:04:01,000 --> 00:04:03,000
+I can take 1 over that number.
+
+76
+00:04:03,000 --> 00:04:04,000
+That's the definition.
+
+77
+00:04:04,000 --> 00:04:06,000
+That's something I need for a field.
+
+78
+00:04:06,000 --> 00:04:09,000
+For F2, it's not too hard to achieve that,
+
+79
+00:04:09,000 --> 00:04:12,000
+because there's only one non-zero number, and it's 1.
+
+80
+00:04:12,000 --> 00:04:15,000
+And its inverse is also 1 and 1 times 1 equals 1.
+
+81
+00:04:15,000 --> 00:04:18,000
+That satisfies the condition.
+
+82
+00:04:18,000 --> 00:04:22,000
+So not too hard to satisfy, but we get useful things from it.
+
+83
+00:04:22,000 --> 00:04:32,000
+So if we have these properties, in addition to some other ones
+
+84
+00:04:32,000 --> 00:04:34,000
+that we take for granted about plus and times,
+
+85
+00:04:34,000 --> 00:04:37,000
+like distributive and associative and so on,
+
+86
+00:04:37,000 --> 00:04:40,000
+then we say that F2 is a field.
+
+87
+00:04:40,000 --> 00:04:41,000
+
+

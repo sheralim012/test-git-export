@@ -1,0 +1,488 @@
+0
+00:00:00,000 --> 00:00:00,000
+
+
+1
+00:00:00,000 --> 00:00:02,000
+Let me use this as the definition.
+
+2
+00:00:02,000 --> 00:00:10,000
+So definition one of quantum operations
+
+3
+00:00:10,000 --> 00:00:24,000
+is a composition of unitaries, adding
+
+4
+00:00:24,000 --> 00:00:32,000
+a system, and partial trace.
+
+5
+00:00:32,000 --> 00:00:35,000
+
+
+6
+00:00:35,000 --> 00:00:38,000
+So this is a reasonable definition.
+
+7
+00:00:38,000 --> 00:00:40,000
+This is what I call an operational definition
+
+8
+00:00:40,000 --> 00:00:46,000
+because it's intuitive what is allowed in this system.
+
+9
+00:00:46,000 --> 00:00:51,000
+But it's pretty complicated because these two can change
+
+10
+00:00:51,000 --> 00:00:54,000
+dimension, and I'm allowed any arbitrary composition
+
+11
+00:00:54,000 --> 00:00:56,000
+of any number of these maps.
+
+12
+00:00:56,000 --> 00:00:59,000
+To say what belongs to this set seems very complicated.
+
+13
+00:00:59,000 --> 00:01:03,000
+So let's try and simplify it, now, a little bit.
+
+14
+00:01:03,000 --> 00:01:04,000
+Well, actually, before I simplify,
+
+15
+00:01:04,000 --> 00:01:07,000
+any questions about this set of operations?
+
+16
+00:01:07,000 --> 00:01:12,000
+
+
+17
+00:01:12,000 --> 00:01:17,000
+So to simplify it, I want to introduce one
+
+18
+00:01:17,000 --> 00:01:19,000
+more mathematical object, which is
+
+19
+00:01:19,000 --> 00:01:22,000
+a generalization of unitaries called an isometry.
+
+20
+00:01:22,000 --> 00:01:28,000
+
+
+21
+00:01:28,000 --> 00:01:31,000
+An isometry is a map--
+
+22
+00:01:31,000 --> 00:01:32,000
+let's call it V--
+
+23
+00:01:32,000 --> 00:01:36,000
+
+
+24
+00:01:36,000 --> 00:01:41,000
+from A dimensions to B dimensions--
+
+25
+00:01:41,000 --> 00:01:44,000
+sorry-- from system phase A to system B
+
+26
+00:01:44,000 --> 00:01:46,000
+where the dimensions are dA and dB,
+
+27
+00:01:46,000 --> 00:01:49,000
+and the output dimension should be at least as large
+
+28
+00:01:49,000 --> 00:01:51,000
+as the input dimension.
+
+29
+00:01:51,000 --> 00:01:57,000
+And it has the property that V dagger
+
+30
+00:01:57,000 --> 00:02:02,000
+V is equal to the identity on system A.
+
+31
+00:02:02,000 --> 00:02:05,000
+What this means-- this is equivalent to saying
+
+32
+00:02:05,000 --> 00:02:07,000
+that it preserves length.
+
+33
+00:02:07,000 --> 00:02:13,000
+So in other words, the norm of an input, psi,
+
+34
+00:02:13,000 --> 00:02:22,000
+is equal for any vector in the input space,
+
+35
+00:02:22,000 --> 00:02:25,000
+the norm of the output is equal to the norm of the input.
+
+36
+00:02:25,000 --> 00:02:27,000
+So this is one where the name really
+
+37
+00:02:27,000 --> 00:02:29,000
+describes it pretty well.
+
+38
+00:02:29,000 --> 00:02:31,000
+"Iso" means same.
+
+39
+00:02:31,000 --> 00:02:32,000
+"Metry" is like metric--
+
+40
+00:02:32,000 --> 00:02:32,000
+like length.
+
+41
+00:02:32,000 --> 00:02:37,000
+So "isometry" really just means same length.
+
+42
+00:02:37,000 --> 00:02:40,000
+This looks a lot like unitaries, but for unitaries
+
+43
+00:02:40,000 --> 00:02:42,000
+you also have the property that V V dagger is
+
+44
+00:02:42,000 --> 00:02:44,000
+equal to the identity.
+
+45
+00:02:44,000 --> 00:02:51,000
+And here, V V dagger is equal to identity
+
+46
+00:02:51,000 --> 00:02:56,000
+if and only if the dimensions are equal.
+
+47
+00:02:56,000 --> 00:02:59,000
+So if the dimensions are equal, these are just unitary maps,
+
+48
+00:02:59,000 --> 00:03:02,000
+but I've expanded them to allow the possibility of increasing
+
+49
+00:03:02,000 --> 00:03:03,000
+the dimension.
+
+50
+00:03:03,000 --> 00:03:07,000
+
+
+51
+00:03:07,000 --> 00:03:09,000
+And it's perfectly possible to increase
+
+52
+00:03:09,000 --> 00:03:12,000
+the dimension of something and preserve all the lengths.
+
+53
+00:03:12,000 --> 00:03:14,000
+For example, take this sheet of paper.
+
+54
+00:03:14,000 --> 00:03:19,000
+I describe a vector on it by a two-dimensional vector.
+
+55
+00:03:19,000 --> 00:03:21,000
+I can embed this into three-dimensional space,
+
+56
+00:03:21,000 --> 00:03:25,000
+and, now, that embedding maps 2D vectors to 3D vectors,
+
+57
+00:03:25,000 --> 00:03:29,000
+and it certainly preserves their length, but it's not unitary.
+
+58
+00:03:29,000 --> 00:03:31,000
+I've increased the dimension.
+
+59
+00:03:31,000 --> 00:03:34,000
+
+
+60
+00:03:34,000 --> 00:03:36,000
+So that's one example of an isometry.
+
+61
+00:03:36,000 --> 00:03:39,000
+Another one, which is the classic one
+
+62
+00:03:39,000 --> 00:03:41,000
+for quantum channels--
+
+63
+00:03:41,000 --> 00:03:46,000
+
+
+64
+00:03:46,000 --> 00:03:48,000
+and you'll see, now, why this is relevant--
+
+65
+00:03:48,000 --> 00:03:52,000
+
+
+66
+00:03:52,000 --> 00:03:54,000
+is to tensor on another system.
+
+67
+00:03:54,000 --> 00:03:57,000
+
+
+68
+00:03:57,000 --> 00:04:06,000
+So suppose that the output has twice the dimension
+
+69
+00:04:06,000 --> 00:04:10,000
+of the input, then we could tensor on another qubit
+
+70
+00:04:10,000 --> 00:04:12,000
+and initialize that qubit into the zero state.
+
+71
+00:04:12,000 --> 00:04:15,000
+
+
+72
+00:04:15,000 --> 00:04:16,000
+This is an isometry.
+
+73
+00:04:16,000 --> 00:04:17,000
+If I start with a unit vector, the output
+
+74
+00:04:17,000 --> 00:04:20,000
+is still a unit vector.
+
+75
+00:04:20,000 --> 00:04:23,000
+But it's not a unitary because it's not even a square matrix.
+
+76
+00:04:23,000 --> 00:04:24,000
+It's a rectangular matrix.
+
+77
+00:04:24,000 --> 00:04:28,000
+It increases dimension, and it's one of these maps.
+
+78
+00:04:28,000 --> 00:04:32,000
+This is one of these adding system maps.
+
+79
+00:04:32,000 --> 00:04:42,000
+And so we can see that isometries include,
+
+80
+00:04:42,000 --> 00:04:44,000
+basically, parts a and b here--
+
+81
+00:04:44,000 --> 00:04:48,000
+
+
+82
+00:04:48,000 --> 00:04:55,000
+in other words, performing unitaries
+
+83
+00:04:55,000 --> 00:04:57,000
+and adding new systems in a pure state.
+
+84
+00:04:57,000 --> 00:05:00,000
+
+
+85
+00:05:00,000 --> 00:05:11,000
+And they have the nice property that they
+
+86
+00:05:11,000 --> 00:05:14,000
+are closed under composition.
+
+87
+00:05:14,000 --> 00:05:15,000
+So we knew this for unitaries.
+
+88
+00:05:15,000 --> 00:05:18,000
+If I do one unitary map, then another unitary map,
+
+89
+00:05:18,000 --> 00:05:21,000
+their product is also unitary.
+
+90
+00:05:21,000 --> 00:05:23,000
+Same is true for isometry.
+
+91
+00:05:23,000 --> 00:05:27,000
+It's acting with-- one isometry preserves length,
+
+92
+00:05:27,000 --> 00:05:29,000
+and then a second one also preserves length,
+
+93
+00:05:29,000 --> 00:05:32,000
+then their product preserves length as well.
+
+94
+00:05:32,000 --> 00:05:35,000
+So if I compose isometries, I get another isometry.
+
+95
+00:05:35,000 --> 00:05:41,000
+And so isometries are a set of operations that include a and b
+
+96
+00:05:41,000 --> 00:05:44,000
+and are closed under composition.
+
+97
+00:05:44,000 --> 00:05:47,000
+So I've gone a long way to classifying what these quantum
+
+98
+00:05:47,000 --> 00:05:47,000
+operations are.
+
+99
+00:05:47,000 --> 00:05:50,000
+
+
+100
+00:05:50,000 --> 00:05:54,000
+I'm sweeping one little detail under the rug here, which is--
+
+101
+00:05:54,000 --> 00:05:57,000
+it looks, here, like I'm only adding pure states.
+
+102
+00:05:57,000 --> 00:05:58,000
+And I've said, maybe I could even
+
+103
+00:05:58,000 --> 00:06:00,000
+add a system in a mixed state-- sigma.
+
+104
+00:06:00,000 --> 00:06:06,000
+
+
+105
+00:06:06,000 --> 00:06:08,000
+I'm not going to address that, but you
+
+106
+00:06:08,000 --> 00:06:11,000
+can come back to it later after we include the partial trace.
+
+107
+00:06:11,000 --> 00:06:14,000
+
+
+108
+00:06:14,000 --> 00:06:17,000
+Any other questions about isometries
+
+109
+00:06:17,000 --> 00:06:20,000
+or how they address part of what a quantum operation does?
+
+110
+00:06:20,000 --> 00:06:26,000
+
+
+111
+00:06:26,000 --> 00:06:34,000
+So let me add, actually, that they--
+
+112
+00:06:34,000 --> 00:06:37,000
+
+
+113
+00:06:37,000 --> 00:06:39,000
+this is how they act on pure states.
+
+114
+00:06:39,000 --> 00:06:46,000
+
+
+115
+00:06:46,000 --> 00:06:52,000
+Let me add that for density matrices,
+
+116
+00:06:52,000 --> 00:06:54,000
+you write them down the same way that you would the unitaries.
+
+117
+00:06:54,000 --> 00:06:57,000
+Rho gets mapped to V rho V dagger.
+
+118
+00:06:57,000 --> 00:07:02,000
+
+
+119
+00:07:02,000 --> 00:07:07,000
+So for this example here, where psi is mapped to psi tensor 0,
+
+120
+00:07:07,000 --> 00:07:16,000
+we have V rho V dagger is equal to rho tensor ket 0 bra 0.
+
+121
+00:07:16,000 --> 00:07:16,000
+
+

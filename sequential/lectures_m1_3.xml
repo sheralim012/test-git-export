@@ -1,4 +1,4 @@
-<sequential display_name="Lectures M1.3: Classical Codes" due="&quot;2918-06-15T23:57:00+00:00&quot;" format="Concept" graceperiod="18000 seconds" graded="true" showanswer="closed" start="&quot;2017-09-06T00:00:00+00:00&quot;" attempts="10" tex_filename="./week3_lectures3.tex" refnum="1" linenum="3">
+<sequential display_name="Lectures M1.3: Classical Codes" due="&quot;2918-06-15T23:57:00+00:00&quot;" format="Concept" graceperiod="18000 seconds" graded="true" showanswer="closed" start="&quot;2017-09-06T00:00:00+00:00&quot;" linenum="3" refnum="1" tex_filename="./week3_lectures3.tex" attempts="10">
   <vertical url_name="Classical_error_correction_codes_-_a_review"/>
   <vertical url_name="Example_-_n-bit_repetition_code"/>
   <vertical url_name="CQ_Repetition_codes"/>

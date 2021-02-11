@@ -1,4 +1,4 @@
-<sequential display_name="Lectures M1.1: Quantum states and operations" due="&quot;2918-06-15T23:57:00+00:00&quot;" format="Concept" graceperiod="18000 seconds" graded="true" showanswer="closed" start="&quot;2017-09-06T00:00:00+00:00&quot;" attempts="10" tex_filename="./week1_lectures1.tex" refnum="1" linenum="3">
+<sequential display_name="Lectures M1.1: Quantum states and operations" due="&quot;2918-06-15T23:57:00+00:00&quot;" format="Concept" graceperiod="18000 seconds" graded="true" showanswer="closed" start="&quot;2017-09-06T00:00:00+00:00&quot;" linenum="3" refnum="1" tex_filename="./week1_lectures1.tex" attempts="10">
   <vertical url_name="Introduction_to_quantum_information_science"/>
   <vertical url_name="Topics_covered_in_this_8_371_course"/>
   <vertical url_name="Quantum_states_and_operations_-_overview"/>

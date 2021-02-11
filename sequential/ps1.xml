@@ -1,4 +1,4 @@
-<sequential display_name="PS#1: Quantum basics" due="&quot;2918-06-15T23:57:00+00:00&quot;" format="PS" graceperiod="18000 seconds" graded="true" showanswer="closed" start="&quot;2017-09-06T00:00:00+00:00&quot;" attempts="10" tex_filename="./week1_1_ps0.tex" refnum="3" linenum="1">
+<sequential display_name="PS#1: Quantum basics" due="&quot;2918-06-15T23:57:00+00:00&quot;" format="PS" graceperiod="18000 seconds" graded="true" showanswer="closed" start="&quot;2017-09-06T00:00:00+00:00&quot;" linenum="1" refnum="3" tex_filename="./week1_1_ps0.tex" attempts="10">
   <vertical url_name="Quantum_basics_I"/>
   <vertical url_name="Quantum_basics_II"/>
   <vertical url_name="Density_matrices_and_unravelings"/>

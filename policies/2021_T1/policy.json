@@ -6,7 +6,7 @@
                 "id": "course"
             }
         },
-        "display_name": "Test Course 01",
+        "display_name": "TC 01",
         "giturl": "git@github.com:sheralim012/test-git-export.git",
         "language": "en",
         "start": "2030-01-01T00:00:00Z",

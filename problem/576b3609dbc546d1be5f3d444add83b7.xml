@@ -1,0 +1,42 @@
+<problem markdown="null"><a href="http://www.eclemma.org/installation.html">Install EclEmma</a> in Eclipse.
+
+<p>Then create a new Java class called Hailstone.java containing this code:</p>
+
+<pre class="code">
+public class Hailstone {
+    public static void main(String[] args) {
+        int n = 3;
+        while (n != 1) {
+            if (n % 2 == 0) {
+                n = n / 2;
+            } else {
+                n = 3 * n + 1;
+            }
+        }
+    }
+}
+</pre>
+
+
+
+<p>Run this class with EclEmma code coverage highlighting turned on, by choosing Run / Coverage As / Java Application.</p>
+
+<p>By changing the initial value of n, you can observe how EclEmma highlights different lines of code differently.</p>
+
+<p>When n=3 initially, what color is the line n = n/2 after execution?</p>
+<optionresponse><optioninput options="('green','yellow','red','white')" correct="green"/></optionresponse>
+
+<solution><div class="detailed-solution"><p>Explanation</p><p>Run EclEmma and find out!</p><p>If it's hard to perceive the difference between the red and green highlighting, you can change the color of the coverage highlighting by going to Preferences / General / Appearance / Editors / Text Editors / Annotations.  The annotations to change are called Full Coverage, Partial Coverage, and No Coverage.  You might, for example, make Full Coverage white, Partial Coverage light gray, and No Coverage dark gray.</p></div></solution>
+
+<p>When n=16 initially, what color is the line n = 3 * n + 1 after execution?</p>
+<optionresponse><optioninput options="('green','yellow','red','white')" correct="red"/></optionresponse>
+
+<solution><div class="detailed-solution"><p>Explanation</p><p>Run EclEmma and find out!</p></div></solution>
+
+<p>What initial value of n would make the line while (n != 1) yellow after execution?</p>
+
+<numericalresponse answer="1"><formulaequationinput/></numericalresponse>
+
+<solution><div class="detailed-solution"><p>Explanation</p><p>Yellow is used for a line that contains a branch (e.g., an if or while predicate) that is only taken in one direction during the program -- either the predicate is false every time the program gets there, or the predicate is true every time.  In this case, the way to make the while predicate yellow is to make n != 1 false, so that the predicate executes just once and the loop is skipped entirely.  n=1 does that.</p></div></solution>
+
+</problem>
